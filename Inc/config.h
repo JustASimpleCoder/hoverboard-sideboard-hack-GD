@@ -31,6 +31,8 @@
   // #define VARIANT_HOVERCAR                 // Variant for using the side-boards connected to the Hoverboard mainboard
   // #define VARIANT_HOVERBOARD               // Variant for using the side-boards connected to the Hoverboard mainboard
 #endif
+#define VARIANT_HOVERBOARD
+
 
 /* ==================================== DO NOT TOUCH SETTINGS ==================================== */
 #define MPU6050                               // [-] Define IMU sensor type

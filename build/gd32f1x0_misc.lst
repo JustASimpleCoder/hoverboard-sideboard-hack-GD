@@ -1,0 +1,593 @@
+ARM GAS  /tmp/cc4SaFca.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f1x0_misc.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.nvic_priority_group_set,"ax",%progbits
+  16              		.align	1
+  17              		.global	nvic_priority_group_set
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	nvic_priority_group_set:
+  25              	.LVL0:
+  26              	.LFB56:
+  27              		.file 1 "Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c"
+   1:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** /*!
+   2:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \file  gd32f1x0_misc.c
+   3:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \brief MISC driver
+   4:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** */
+   5:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** 
+   6:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** /*
+   7:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     Copyright (C) 2017 GigaDevice
+   8:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** 
+   9:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     2014-12-26, V1.0.0, platform GD32F1x0(x=3,5)
+  10:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     2016-01-15, V2.0.0, platform GD32F1x0(x=3,5,7,9)
+  11:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     2016-04-30, V3.0.0, firmware update for GD32F1x0(x=3,5,7,9)
+  12:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     2017-06-19, V3.1.0, firmware update for GD32F1x0(x=3,5,7,9)
+  13:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** */
+  14:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** 
+  15:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** #include "gd32f1x0_misc.h"
+  16:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** 
+  17:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** /*!
+  18:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \brief      set the priority group
+  19:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[in]  nvic_prigroup: the NVIC priority group
+  20:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****       \arg        NVIC_PRIGROUP_PRE0_SUB4:0 bits for pre-emption priority 4 bits for subpriority
+  21:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****       \arg        NVIC_PRIGROUP_PRE1_SUB3:1 bits for pre-emption priority 3 bits for subpriority
+  22:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****       \arg        NVIC_PRIGROUP_PRE2_SUB2:2 bits for pre-emption priority 2 bits for subpriority
+  23:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****       \arg        NVIC_PRIGROUP_PRE3_SUB1:3 bits for pre-emption priority 1 bits for subpriority
+  24:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****       \arg        NVIC_PRIGROUP_PRE4_SUB0:4 bits for pre-emption priority 0 bits for subpriority
+  25:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[out] none
+  26:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \retval     none
+  27:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** */
+  28:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** void nvic_priority_group_set(uint32_t nvic_prigroup)
+  29:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** {
+  28              		.loc 1 29 1 view -0
+  29              		.cfi_startproc
+ARM GAS  /tmp/cc4SaFca.s 			page 2
+
+
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  30:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     /* set the priority group value */
+  31:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     SCB->AIRCR = NVIC_AIRCR_VECTKEY_MASK | nvic_prigroup;
+  33              		.loc 1 31 5 view .LVU1
+  34              		.loc 1 31 16 is_stmt 0 view .LVU2
+  35 0000 034B     		ldr	r3, .L2
+  36              		.loc 1 31 42 view .LVU3
+  37 0002 40F0BF60 		orr	r0, r0, #100139008
+  38              	.LVL1:
+  39              		.loc 1 31 42 view .LVU4
+  40 0006 40F40030 		orr	r0, r0, #131072
+  41              		.loc 1 31 16 view .LVU5
+  42 000a D860     		str	r0, [r3, #12]
+  32:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** }
+  43              		.loc 1 32 1 view .LVU6
+  44 000c 7047     		bx	lr
+  45              	.L3:
+  46 000e 00BF     		.align	2
+  47              	.L2:
+  48 0010 00ED00E0 		.word	-536810240
+  49              		.cfi_endproc
+  50              	.LFE56:
+  52              		.section	.text.nvic_irq_enable,"ax",%progbits
+  53              		.align	1
+  54              		.global	nvic_irq_enable
+  55              		.syntax unified
+  56              		.thumb
+  57              		.thumb_func
+  58              		.fpu softvfp
+  60              	nvic_irq_enable:
+  61              	.LVL2:
+  62              	.LFB57:
+  33:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** 
+  34:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** /*!
+  35:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \brief      enable NVIC request
+  36:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[in]  nvic_irq: the NVIC interrupt request, detailed in IRQn_Type
+  37:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[in]  nvic_irq_pre_priority: the pre-emption priority needed to set
+  38:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[in]  nvic_irq_sub_priority: the subpriority needed to set
+  39:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[out] none
+  40:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \retval     none
+  41:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** */
+  42:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** void nvic_irq_enable(uint8_t nvic_irq, uint8_t nvic_irq_pre_priority, 
+  43:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****                      uint8_t nvic_irq_sub_priority)
+  44:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** {
+  63              		.loc 1 44 1 is_stmt 1 view -0
+  64              		.cfi_startproc
+  65              		@ args = 0, pretend = 0, frame = 0
+  66              		@ frame_needed = 0, uses_anonymous_args = 0
+  45:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     uint32_t temp_priority = 0x00U, temp_pre = 0x00U, temp_sub = 0x00U;
+  67              		.loc 1 45 5 view .LVU8
+  46:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     /* use the priority group value to get the temp_pre and the temp_sub */
+  47:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     if(((SCB->AIRCR) & (uint32_t)0x700)==NVIC_PRIGROUP_PRE0_SUB4){
+  68              		.loc 1 47 5 view .LVU9
+  44:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     uint32_t temp_priority = 0x00U, temp_pre = 0x00U, temp_sub = 0x00U;
+  69              		.loc 1 44 1 is_stmt 0 view .LVU10
+ARM GAS  /tmp/cc4SaFca.s 			page 3
+
+
+  70 0000 30B5     		push	{r4, r5, lr}
+  71              	.LCFI0:
+  72              		.cfi_def_cfa_offset 12
+  73              		.cfi_offset 4, -12
+  74              		.cfi_offset 5, -8
+  75              		.cfi_offset 14, -4
+  76              		.loc 1 47 13 view .LVU11
+  77 0002 234C     		ldr	r4, .L11
+  78 0004 E368     		ldr	r3, [r4, #12]
+  79              		.loc 1 47 22 view .LVU12
+  80 0006 03F4E063 		and	r3, r3, #1792
+  81              		.loc 1 47 7 view .LVU13
+  82 000a B3F5E06F 		cmp	r3, #1792
+  83 000e 32D0     		beq	.L6
+  48:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_pre = 0U;
+  49:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_sub = 0x4U;
+  50:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     }else if(((SCB->AIRCR) & (uint32_t)0x700)==NVIC_PRIGROUP_PRE1_SUB3){
+  84              		.loc 1 50 11 is_stmt 1 view .LVU14
+  85              		.loc 1 50 19 is_stmt 0 view .LVU15
+  86 0010 E368     		ldr	r3, [r4, #12]
+  87              		.loc 1 50 28 view .LVU16
+  88 0012 03F4E063 		and	r3, r3, #1792
+  89              		.loc 1 50 13 view .LVU17
+  90 0016 B3F5C06F 		cmp	r3, #1536
+  91 001a 2FD0     		beq	.L7
+  51:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_pre = 1U;
+  52:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_sub = 0x3U;
+  53:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     }else if(((SCB->AIRCR) & (uint32_t)0x700)==NVIC_PRIGROUP_PRE2_SUB2){
+  92              		.loc 1 53 11 is_stmt 1 view .LVU18
+  93              		.loc 1 53 19 is_stmt 0 view .LVU19
+  94 001c E368     		ldr	r3, [r4, #12]
+  95              		.loc 1 53 28 view .LVU20
+  96 001e 03F4E063 		and	r3, r3, #1792
+  97              		.loc 1 53 13 view .LVU21
+  98 0022 B3F5A06F 		cmp	r3, #1280
+  99 0026 2CD0     		beq	.L8
+  54:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_pre = 2U;
+  55:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_sub = 0x2U;
+  56:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     }else if(((SCB->AIRCR) & (uint32_t)0x700)==NVIC_PRIGROUP_PRE3_SUB1){
+ 100              		.loc 1 56 11 is_stmt 1 view .LVU22
+ 101              		.loc 1 56 19 is_stmt 0 view .LVU23
+ 102 0028 E368     		ldr	r3, [r4, #12]
+ 103              		.loc 1 56 28 view .LVU24
+ 104 002a 03F4E063 		and	r3, r3, #1792
+ 105              		.loc 1 56 13 view .LVU25
+ 106 002e B3F5806F 		cmp	r3, #1024
+ 107 0032 29D0     		beq	.L9
+  57:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_pre = 3U;
+  58:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_sub = 0x1U;
+  59:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     }else if(((SCB->AIRCR) & (uint32_t)0x700)==NVIC_PRIGROUP_PRE4_SUB0){
+ 108              		.loc 1 59 11 is_stmt 1 view .LVU26
+ 109              		.loc 1 59 19 is_stmt 0 view .LVU27
+ 110 0034 E368     		ldr	r3, [r4, #12]
+  60:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_pre = 4U;
+  61:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_sub = 0x0U;
+ 111              		.loc 1 61 18 view .LVU28
+ 112 0036 0024     		movs	r4, #0
+ARM GAS  /tmp/cc4SaFca.s 			page 4
+
+
+  59:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_pre = 4U;
+ 113              		.loc 1 59 28 view .LVU29
+ 114 0038 03F4E063 		and	r3, r3, #1792
+  59:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_pre = 4U;
+ 115              		.loc 1 59 13 view .LVU30
+ 116 003c B3F5407F 		cmp	r3, #768
+ 117 0040 20D1     		bne	.L10
+  60:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_pre = 4U;
+ 118              		.loc 1 60 18 view .LVU31
+ 119 0042 0425     		movs	r5, #4
+ 120              	.L5:
+ 121              	.LVL3:
+  62:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     }else{
+  63:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     }
+ 122              		.loc 1 63 5 is_stmt 1 view .LVU32
+  64:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     /* get the temp_priority to fill the NVIC->IP register */
+  65:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     temp_priority = (uint32_t)nvic_irq_pre_priority << (0x4U - temp_pre);
+ 123              		.loc 1 65 5 view .LVU33
+  66:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     temp_priority |= nvic_irq_sub_priority &(0x0FU >> (0x4U - temp_sub));
+ 124              		.loc 1 66 52 is_stmt 0 view .LVU34
+ 125 0044 0F23     		movs	r3, #15
+ 126              		.loc 1 66 61 view .LVU35
+ 127 0046 C4F10404 		rsb	r4, r4, #4
+ 128              	.LVL4:
+  65:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     temp_priority |= nvic_irq_sub_priority &(0x0FU >> (0x4U - temp_sub));
+ 129              		.loc 1 65 62 view .LVU36
+ 130 004a C5F10405 		rsb	r5, r5, #4
+ 131              	.LVL5:
+ 132              		.loc 1 66 52 view .LVU37
+ 133 004e E340     		lsrs	r3, r3, r4
+  65:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     temp_priority |= nvic_irq_sub_priority &(0x0FU >> (0x4U - temp_sub));
+ 134              		.loc 1 65 19 view .LVU38
+ 135 0050 01FA05F5 		lsl	r5, r1, r5
+ 136              	.LVL6:
+ 137              		.loc 1 66 5 is_stmt 1 view .LVU39
+ 138              		.loc 1 66 44 is_stmt 0 view .LVU40
+ 139 0054 1340     		ands	r3, r3, r2
+ 140              		.loc 1 66 19 view .LVU41
+ 141 0056 2B43     		orrs	r3, r3, r5
+ 142              	.LVL7:
+  67:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     temp_priority = temp_priority << 0x04U;
+ 143              		.loc 1 67 5 is_stmt 1 view .LVU42
+  68:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     NVIC->IP[nvic_irq] = (uint8_t)temp_priority;
+ 144              		.loc 1 68 5 view .LVU43
+ 145              		.loc 1 68 24 is_stmt 0 view .LVU44
+ 146 0058 0E4A     		ldr	r2, .L11+4
+ 147              	.LVL8:
+  67:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     temp_priority = temp_priority << 0x04U;
+ 148              		.loc 1 67 19 view .LVU45
+ 149 005a 1B01     		lsls	r3, r3, #4
+ 150              	.LVL9:
+ 151              		.loc 1 68 24 view .LVU46
+ 152 005c 1118     		adds	r1, r2, r0
+ 153              	.LVL10:
+ 154              		.loc 1 68 26 view .LVU47
+ 155 005e DBB2     		uxtb	r3, r3
+ 156              	.LVL11:
+ARM GAS  /tmp/cc4SaFca.s 			page 5
+
+
+ 157              		.loc 1 68 24 view .LVU48
+ 158 0060 81F80033 		strb	r3, [r1, #768]
+  69:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     /* enable the selected IRQ */
+  70:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     NVIC->ISER[nvic_irq >> 0x05] = (uint32_t)0x01 << (nvic_irq & (uint8_t)0x1F);
+ 159              		.loc 1 70 5 is_stmt 1 view .LVU49
+ 160              		.loc 1 70 51 is_stmt 0 view .LVU50
+ 161 0064 0123     		movs	r3, #1
+ 162              		.loc 1 70 25 view .LVU51
+ 163 0066 4109     		lsrs	r1, r0, #5
+ 164              		.loc 1 70 64 view .LVU52
+ 165 0068 00F01F00 		and	r0, r0, #31
+ 166              	.LVL12:
+ 167              		.loc 1 70 51 view .LVU53
+ 168 006c 03FA00F0 		lsl	r0, r3, r0
+ 169              		.loc 1 70 34 view .LVU54
+ 170 0070 42F82100 		str	r0, [r2, r1, lsl #2]
+  71:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** }
+ 171              		.loc 1 71 1 view .LVU55
+ 172 0074 30BD     		pop	{r4, r5, pc}
+ 173              	.LVL13:
+ 174              	.L6:
+  49:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     }else if(((SCB->AIRCR) & (uint32_t)0x700)==NVIC_PRIGROUP_PRE1_SUB3){
+ 175              		.loc 1 49 18 view .LVU56
+ 176 0076 0424     		movs	r4, #4
+  48:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_sub = 0x4U;
+ 177              		.loc 1 48 18 view .LVU57
+ 178 0078 0025     		movs	r5, #0
+ 179 007a E3E7     		b	.L5
+ 180              	.L7:
+  52:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     }else if(((SCB->AIRCR) & (uint32_t)0x700)==NVIC_PRIGROUP_PRE2_SUB2){
+ 181              		.loc 1 52 18 view .LVU58
+ 182 007c 0324     		movs	r4, #3
+  51:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_sub = 0x3U;
+ 183              		.loc 1 51 18 view .LVU59
+ 184 007e 0125     		movs	r5, #1
+ 185 0080 E0E7     		b	.L5
+ 186              	.L8:
+  55:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     }else if(((SCB->AIRCR) & (uint32_t)0x700)==NVIC_PRIGROUP_PRE3_SUB1){
+ 187              		.loc 1 55 18 view .LVU60
+ 188 0082 0224     		movs	r4, #2
+ 189              	.L10:
+  45:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     /* use the priority group value to get the temp_pre and the temp_sub */
+ 190              		.loc 1 45 37 view .LVU61
+ 191 0084 2546     		mov	r5, r4
+ 192 0086 DDE7     		b	.L5
+ 193              	.L9:
+  58:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     }else if(((SCB->AIRCR) & (uint32_t)0x700)==NVIC_PRIGROUP_PRE4_SUB0){
+ 194              		.loc 1 58 18 view .LVU62
+ 195 0088 0124     		movs	r4, #1
+  57:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_sub = 0x1U;
+ 196              		.loc 1 57 18 view .LVU63
+ 197 008a 0325     		movs	r5, #3
+ 198 008c DAE7     		b	.L5
+ 199              	.L12:
+ 200 008e 00BF     		.align	2
+ 201              	.L11:
+ 202 0090 00ED00E0 		.word	-536810240
+ARM GAS  /tmp/cc4SaFca.s 			page 6
+
+
+ 203 0094 00E100E0 		.word	-536813312
+ 204              		.cfi_endproc
+ 205              	.LFE57:
+ 207              		.section	.text.nvic_irq_disable,"ax",%progbits
+ 208              		.align	1
+ 209              		.global	nvic_irq_disable
+ 210              		.syntax unified
+ 211              		.thumb
+ 212              		.thumb_func
+ 213              		.fpu softvfp
+ 215              	nvic_irq_disable:
+ 216              	.LVL14:
+ 217              	.LFB58:
+  72:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** 
+  73:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** /*!
+  74:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \brief      disable NVIC request
+  75:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[in]  nvic_irq: the NVIC interrupt request, detailed in IRQn_Type
+  76:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[out] none
+  77:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \retval     none
+  78:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** */
+  79:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** void nvic_irq_disable(uint8_t nvic_irq)
+  80:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** {
+ 218              		.loc 1 80 1 is_stmt 1 view -0
+ 219              		.cfi_startproc
+ 220              		@ args = 0, pretend = 0, frame = 0
+ 221              		@ frame_needed = 0, uses_anonymous_args = 0
+ 222              		@ link register save eliminated.
+  81:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     /* disable the selected IRQ.*/
+  82:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     NVIC->ICER[nvic_irq >> 0x05] = (uint32_t)0x01 << (nvic_irq & (uint8_t)0x1F);
+ 223              		.loc 1 82 5 view .LVU65
+ 224              		.loc 1 82 51 is_stmt 0 view .LVU66
+ 225 0000 0122     		movs	r2, #1
+ 226              		.loc 1 82 25 view .LVU67
+ 227 0002 4309     		lsrs	r3, r0, #5
+ 228              		.loc 1 82 64 view .LVU68
+ 229 0004 00F01F00 		and	r0, r0, #31
+ 230              	.LVL15:
+ 231              		.loc 1 82 51 view .LVU69
+ 232 0008 02FA00F0 		lsl	r0, r2, r0
+ 233              		.loc 1 82 34 view .LVU70
+ 234 000c 024A     		ldr	r2, .L14
+ 235 000e 2033     		adds	r3, r3, #32
+ 236 0010 42F82300 		str	r0, [r2, r3, lsl #2]
+  83:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** }
+ 237              		.loc 1 83 1 view .LVU71
+ 238 0014 7047     		bx	lr
+ 239              	.L15:
+ 240 0016 00BF     		.align	2
+ 241              	.L14:
+ 242 0018 00E100E0 		.word	-536813312
+ 243              		.cfi_endproc
+ 244              	.LFE58:
+ 246              		.section	.text.nvic_vector_table_set,"ax",%progbits
+ 247              		.align	1
+ 248              		.global	nvic_vector_table_set
+ 249              		.syntax unified
+ 250              		.thumb
+ARM GAS  /tmp/cc4SaFca.s 			page 7
+
+
+ 251              		.thumb_func
+ 252              		.fpu softvfp
+ 254              	nvic_vector_table_set:
+ 255              	.LVL16:
+ 256              	.LFB59:
+  84:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** 
+  85:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** /*!
+  86:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \brief      set the NVIC vector table base address
+  87:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[in]  nvic_vict_tab: the RAM or FLASH base address
+  88:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****       \arg        NVIC_VECTTAB_RAM: RAM base address
+  89:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****       \are        NVIC_VECTTAB_FLASH: Flash base address
+  90:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[in]  offset: Vector Table offset
+  91:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[out] none
+  92:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \retval     none
+  93:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** */
+  94:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** void nvic_vector_table_set(uint32_t nvic_vict_tab, uint32_t offset)
+  95:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** {
+ 257              		.loc 1 95 1 is_stmt 1 view -0
+ 258              		.cfi_startproc
+ 259              		@ args = 0, pretend = 0, frame = 0
+ 260              		@ frame_needed = 0, uses_anonymous_args = 0
+ 261              		@ link register save eliminated.
+  96:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     SCB->VTOR = nvic_vict_tab | (offset & NVIC_VECTTAB_OFFSET_MASK);
+ 262              		.loc 1 96 5 view .LVU73
+ 263              		.loc 1 96 41 is_stmt 0 view .LVU74
+ 264 0000 21F06041 		bic	r1, r1, #-536870912
+ 265              	.LVL17:
+ 266              		.loc 1 96 15 view .LVU75
+ 267 0004 024B     		ldr	r3, .L17
+ 268              		.loc 1 96 41 view .LVU76
+ 269 0006 21F07F01 		bic	r1, r1, #127
+ 270              		.loc 1 96 31 view .LVU77
+ 271 000a 0143     		orrs	r1, r1, r0
+ 272              		.loc 1 96 15 view .LVU78
+ 273 000c 9960     		str	r1, [r3, #8]
+  97:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** }
+ 274              		.loc 1 97 1 view .LVU79
+ 275 000e 7047     		bx	lr
+ 276              	.L18:
+ 277              		.align	2
+ 278              	.L17:
+ 279 0010 00ED00E0 		.word	-536810240
+ 280              		.cfi_endproc
+ 281              	.LFE59:
+ 283              		.section	.text.system_lowpower_set,"ax",%progbits
+ 284              		.align	1
+ 285              		.global	system_lowpower_set
+ 286              		.syntax unified
+ 287              		.thumb
+ 288              		.thumb_func
+ 289              		.fpu softvfp
+ 291              	system_lowpower_set:
+ 292              	.LVL18:
+ 293              	.LFB60:
+  98:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** 
+  99:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** /*!
+ 100:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \brief      set the state of the low power mode
+ARM GAS  /tmp/cc4SaFca.s 			page 8
+
+
+ 101:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[in]  lowpower_mode: the low power mode state
+ 102:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****       \arg        SCB_LPM_SLEEP_EXIT_ISR: if chose this para, the system always enter low power 
+ 103:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****                     mode by exiting from ISR
+ 104:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****       \arg        SCB_LPM_DEEPSLEEP: if chose this para, the system will enter the DEEPSLEEP mode
+ 105:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****       \arg        SCB_LPM_WAKE_BY_ALL_INT: if chose this para, the lowpower mode can be woke up 
+ 106:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****                     by all the enable and disable interrupts
+ 107:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[out] none
+ 108:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \retval     none
+ 109:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** */
+ 110:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** void system_lowpower_set(uint8_t lowpower_mode)
+ 111:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** {
+ 294              		.loc 1 111 1 is_stmt 1 view -0
+ 295              		.cfi_startproc
+ 296              		@ args = 0, pretend = 0, frame = 0
+ 297              		@ frame_needed = 0, uses_anonymous_args = 0
+ 298              		@ link register save eliminated.
+ 112:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     SCB->SCR |= (uint32_t)lowpower_mode;
+ 299              		.loc 1 112 5 view .LVU81
+ 300              		.loc 1 112 14 is_stmt 0 view .LVU82
+ 301 0000 024B     		ldr	r3, .L20
+ 302 0002 1A69     		ldr	r2, [r3, #16]
+ 303 0004 1043     		orrs	r0, r0, r2
+ 304              	.LVL19:
+ 305              		.loc 1 112 14 view .LVU83
+ 306 0006 1861     		str	r0, [r3, #16]
+ 113:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** }
+ 307              		.loc 1 113 1 view .LVU84
+ 308 0008 7047     		bx	lr
+ 309              	.L21:
+ 310 000a 00BF     		.align	2
+ 311              	.L20:
+ 312 000c 00ED00E0 		.word	-536810240
+ 313              		.cfi_endproc
+ 314              	.LFE60:
+ 316              		.section	.text.system_lowpower_reset,"ax",%progbits
+ 317              		.align	1
+ 318              		.global	system_lowpower_reset
+ 319              		.syntax unified
+ 320              		.thumb
+ 321              		.thumb_func
+ 322              		.fpu softvfp
+ 324              	system_lowpower_reset:
+ 325              	.LVL20:
+ 326              	.LFB61:
+ 114:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** 
+ 115:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** /*!
+ 116:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \brief      reset the state of the low power mode
+ 117:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[in]  lowpower_mode: the low power mode state
+ 118:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****       \arg        SCB_LPM_SLEEP_EXIT_ISR: if chose this para, the system will exit low power 
+ 119:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****                     mode by exiting from ISR
+ 120:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****       \arg        SCB_LPM_DEEPSLEEP: if chose this para, the system will enter the SLEEP mode
+ 121:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****       \arg        SCB_LPM_WAKE_BY_ALL_INT: if chose this para, the lowpower mode only can be 
+ 122:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****                     woke up by the enable interrupts
+ 123:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[out] none
+ 124:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \retval     none
+ 125:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** */
+ 126:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** void system_lowpower_reset(uint8_t lowpower_mode)
+ARM GAS  /tmp/cc4SaFca.s 			page 9
+
+
+ 127:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** {
+ 327              		.loc 1 127 1 is_stmt 1 view -0
+ 328              		.cfi_startproc
+ 329              		@ args = 0, pretend = 0, frame = 0
+ 330              		@ frame_needed = 0, uses_anonymous_args = 0
+ 331              		@ link register save eliminated.
+ 128:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     SCB->SCR &= (~(uint32_t)lowpower_mode);
+ 332              		.loc 1 128 5 view .LVU86
+ 333              		.loc 1 128 14 is_stmt 0 view .LVU87
+ 334 0000 024A     		ldr	r2, .L23
+ 335 0002 1369     		ldr	r3, [r2, #16]
+ 336 0004 23EA0003 		bic	r3, r3, r0
+ 337 0008 1361     		str	r3, [r2, #16]
+ 129:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** }
+ 338              		.loc 1 129 1 view .LVU88
+ 339 000a 7047     		bx	lr
+ 340              	.L24:
+ 341              		.align	2
+ 342              	.L23:
+ 343 000c 00ED00E0 		.word	-536810240
+ 344              		.cfi_endproc
+ 345              	.LFE61:
+ 347              		.section	.text.systick_clksource_set,"ax",%progbits
+ 348              		.align	1
+ 349              		.global	systick_clksource_set
+ 350              		.syntax unified
+ 351              		.thumb
+ 352              		.thumb_func
+ 353              		.fpu softvfp
+ 355              	systick_clksource_set:
+ 356              	.LVL21:
+ 357              	.LFB62:
+ 130:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** 
+ 131:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** /*!
+ 132:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \brief      set the systick clock source
+ 133:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[in]  systick_clksource: the systick clock source needed to choose
+ 134:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****       \arg        SYSTICK_CLKSOURCE_HCLK: systick clock source is from HCLK
+ 135:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****       \arg        SYSTICK_CLKSOURCE_HCLK_DIV8: systick clock source is from HCLK/8
+ 136:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[out] none
+ 137:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \retval     none
+ 138:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** */
+ 139:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** 
+ 140:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** void systick_clksource_set(uint32_t systick_clksource)
+ 141:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** {
+ 358              		.loc 1 141 1 is_stmt 1 view -0
+ 359              		.cfi_startproc
+ 360              		@ args = 0, pretend = 0, frame = 0
+ 361              		@ frame_needed = 0, uses_anonymous_args = 0
+ 362              		@ link register save eliminated.
+ 142:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     if(SYSTICK_CLKSOURCE_HCLK == systick_clksource ){
+ 363              		.loc 1 142 5 view .LVU90
+ 364 0000 4FF0E023 		mov	r3, #-536813568
+ 143:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         /* set the systick clock source from HCLK */
+ 144:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         SysTick->CTRL |= SYSTICK_CLKSOURCE_HCLK;
+ 365              		.loc 1 144 23 is_stmt 0 view .LVU91
+ 366 0004 1A69     		ldr	r2, [r3, #16]
+ 367              		.loc 1 144 9 is_stmt 1 view .LVU92
+ARM GAS  /tmp/cc4SaFca.s 			page 10
+
+
+ 142:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     if(SYSTICK_CLKSOURCE_HCLK == systick_clksource ){
+ 368              		.loc 1 142 7 is_stmt 0 view .LVU93
+ 369 0006 0428     		cmp	r0, #4
+ 370              		.loc 1 144 23 view .LVU94
+ 371 0008 0CBF     		ite	eq
+ 372 000a 42F00402 		orreq	r2, r2, #4
+ 145:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     }else{
+ 146:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         /* set the systick clock source from HCLK/8 */
+ 147:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         SysTick->CTRL &= SYSTICK_CLKSOURCE_HCLK_DIV8;
+ 373              		.loc 1 147 9 is_stmt 1 view .LVU95
+ 374              		.loc 1 147 23 is_stmt 0 view .LVU96
+ 375 000e 22F00402 		bicne	r2, r2, #4
+ 376 0012 1A61     		str	r2, [r3, #16]
+ 148:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     }
+ 149:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** }
+ 377              		.loc 1 149 1 view .LVU97
+ 378 0014 7047     		bx	lr
+ 379              		.cfi_endproc
+ 380              	.LFE62:
+ 382              		.text
+ 383              	.Letext0:
+ 384              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
+ 385              		.file 3 "Drivers/CMSIS/core_cm3.h"
+ARM GAS  /tmp/cc4SaFca.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32f1x0_misc.c
+     /tmp/cc4SaFca.s:16     .text.nvic_priority_group_set:0000000000000000 $t
+     /tmp/cc4SaFca.s:24     .text.nvic_priority_group_set:0000000000000000 nvic_priority_group_set
+     /tmp/cc4SaFca.s:48     .text.nvic_priority_group_set:0000000000000010 $d
+     /tmp/cc4SaFca.s:53     .text.nvic_irq_enable:0000000000000000 $t
+     /tmp/cc4SaFca.s:60     .text.nvic_irq_enable:0000000000000000 nvic_irq_enable
+     /tmp/cc4SaFca.s:202    .text.nvic_irq_enable:0000000000000090 $d
+     /tmp/cc4SaFca.s:208    .text.nvic_irq_disable:0000000000000000 $t
+     /tmp/cc4SaFca.s:215    .text.nvic_irq_disable:0000000000000000 nvic_irq_disable
+     /tmp/cc4SaFca.s:242    .text.nvic_irq_disable:0000000000000018 $d
+     /tmp/cc4SaFca.s:247    .text.nvic_vector_table_set:0000000000000000 $t
+     /tmp/cc4SaFca.s:254    .text.nvic_vector_table_set:0000000000000000 nvic_vector_table_set
+     /tmp/cc4SaFca.s:279    .text.nvic_vector_table_set:0000000000000010 $d
+     /tmp/cc4SaFca.s:284    .text.system_lowpower_set:0000000000000000 $t
+     /tmp/cc4SaFca.s:291    .text.system_lowpower_set:0000000000000000 system_lowpower_set
+     /tmp/cc4SaFca.s:312    .text.system_lowpower_set:000000000000000c $d
+     /tmp/cc4SaFca.s:317    .text.system_lowpower_reset:0000000000000000 $t
+     /tmp/cc4SaFca.s:324    .text.system_lowpower_reset:0000000000000000 system_lowpower_reset
+     /tmp/cc4SaFca.s:343    .text.system_lowpower_reset:000000000000000c $d
+     /tmp/cc4SaFca.s:348    .text.systick_clksource_set:0000000000000000 $t
+     /tmp/cc4SaFca.s:355    .text.systick_clksource_set:0000000000000000 systick_clksource_set
+
+NO UNDEFINED SYMBOLS

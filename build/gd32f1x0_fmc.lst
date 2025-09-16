@@ -1,0 +1,2654 @@
+ARM GAS  /tmp/cc8MuCQG.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f1x0_fmc.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.fmc_unlock,"ax",%progbits
+  16              		.align	1
+  17              		.global	fmc_unlock
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	fmc_unlock:
+  25              	.LFB56:
+  26              		.file 1 "Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c"
+   1:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+   2:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \file  gd32f1x0_fmc.c
+   3:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief FMC driver
+   4:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+   5:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+   6:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*
+   7:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     Copyright (C) 2017 GigaDevice
+   8:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+   9:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     2014-12-26, V1.0.0, platform GD32F1x0(x=3,5)
+  10:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     2016-01-15, V2.0.0, platform GD32F1x0(x=3,5,7,9)
+  11:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     2016-04-30, V3.0.0, firmware update for GD32F1x0(x=3,5,7,9)
+  12:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     2017-06-19, V3.1.0, firmware update for GD32F1x0(x=3,5,7,9)
+  13:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+  14:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+  15:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** #include "gd32f1x0_fmc.h"
+  16:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+  17:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /* FMC main memory programming functions */
+  18:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+  19:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+  20:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      unlock the main FMC operation
+  21:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 it is better to used in pairs with fmc_lock
+  22:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  none
+  23:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+  24:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     none
+  25:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+  26:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** void fmc_unlock(void)
+  27:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+  27              		.loc 1 27 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+ARM GAS  /tmp/cc8MuCQG.s 			page 2
+
+
+  28:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if((RESET != (FMC_CTL & FMC_CTL_LK))){
+  32              		.loc 1 28 5 view .LVU1
+  33              		.loc 1 28 19 is_stmt 0 view .LVU2
+  34 0000 044B     		ldr	r3, .L6
+  35 0002 1A69     		ldr	r2, [r3, #16]
+  36              		.loc 1 28 7 view .LVU3
+  37 0004 1206     		lsls	r2, r2, #24
+  29:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* write the FMC key */
+  30:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_KEY = UNLOCK_KEY0;
+  38              		.loc 1 30 9 is_stmt 1 view .LVU4
+  39              		.loc 1 30 17 is_stmt 0 view .LVU5
+  40 0006 41BF     		itttt	mi
+  41 0008 034A     		ldrmi	r2, .L6+4
+  42 000a 5A60     		strmi	r2, [r3, #4]
+  31:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_KEY = UNLOCK_KEY1;
+  43              		.loc 1 31 9 is_stmt 1 view .LVU6
+  44              		.loc 1 31 17 is_stmt 0 view .LVU7
+  45 000c 02F18832 		addmi	r2, r2, #-2004318072
+  46 0010 5A60     		strmi	r2, [r3, #4]
+  32:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+  33:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+  47              		.loc 1 33 1 view .LVU8
+  48 0012 7047     		bx	lr
+  49              	.L7:
+  50              		.align	2
+  51              	.L6:
+  52 0014 00200240 		.word	1073881088
+  53 0018 23016745 		.word	1164378403
+  54              		.cfi_endproc
+  55              	.LFE56:
+  57              		.section	.text.fmc_lock,"ax",%progbits
+  58              		.align	1
+  59              		.global	fmc_lock
+  60              		.syntax unified
+  61              		.thumb
+  62              		.thumb_func
+  63              		.fpu softvfp
+  65              	fmc_lock:
+  66              	.LFB57:
+  34:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+  35:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+  36:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      lock the main FMC operation
+  37:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 it is better to used in pairs with fmc_unlock after an operation
+  38:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  none
+  39:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+  40:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     none
+  41:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+  42:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** void fmc_lock(void)
+  43:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+  67              		.loc 1 43 1 is_stmt 1 view -0
+  68              		.cfi_startproc
+  69              		@ args = 0, pretend = 0, frame = 0
+  70              		@ frame_needed = 0, uses_anonymous_args = 0
+  71              		@ link register save eliminated.
+  44:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* set the LK bit*/
+  45:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     FMC_CTL |= FMC_CTL_LK;
+  72              		.loc 1 45 5 view .LVU10
+ARM GAS  /tmp/cc8MuCQG.s 			page 3
+
+
+  73              		.loc 1 45 13 is_stmt 0 view .LVU11
+  74 0000 024A     		ldr	r2, .L9
+  75 0002 1369     		ldr	r3, [r2, #16]
+  76 0004 43F08003 		orr	r3, r3, #128
+  77 0008 1361     		str	r3, [r2, #16]
+  46:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+  78              		.loc 1 46 1 view .LVU12
+  79 000a 7047     		bx	lr
+  80              	.L10:
+  81              		.align	2
+  82              	.L9:
+  83 000c 00200240 		.word	1073881088
+  84              		.cfi_endproc
+  85              	.LFE57:
+  87              		.section	.text.fmc_wscnt_set,"ax",%progbits
+  88              		.align	1
+  89              		.global	fmc_wscnt_set
+  90              		.syntax unified
+  91              		.thumb
+  92              		.thumb_func
+  93              		.fpu softvfp
+  95              	fmc_wscnt_set:
+  96              	.LVL0:
+  97              	.LFB58:
+  47:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+  48:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+  49:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      set the wait state counter value
+  50:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  wscnt: wait state counter value
+  51:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        WS_WSCNT_0: 0 wait state added
+  52:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        WS_WSCNT_1: 1 wait state added
+  53:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        WS_WSCNT_2: 2 wait state added
+  54:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+  55:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     none
+  56:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+  57:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** void fmc_wscnt_set(uint8_t wscnt)
+  58:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+  98              		.loc 1 58 1 is_stmt 1 view -0
+  99              		.cfi_startproc
+ 100              		@ args = 0, pretend = 0, frame = 0
+ 101              		@ frame_needed = 0, uses_anonymous_args = 0
+ 102              		@ link register save eliminated.
+  59:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     uint32_t reg;
+ 103              		.loc 1 59 5 view .LVU14
+  60:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+  61:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     reg = FMC_WS;
+ 104              		.loc 1 61 5 view .LVU15
+ 105              		.loc 1 61 9 is_stmt 0 view .LVU16
+ 106 0000 034A     		ldr	r2, .L12
+ 107 0002 1368     		ldr	r3, [r2]
+ 108              	.LVL1:
+  62:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* set the wait state counter value */
+  63:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     reg &= ~FMC_WS_WSCNT;
+ 109              		.loc 1 63 5 is_stmt 1 view .LVU17
+  64:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     FMC_WS = (reg | wscnt);
+ 110              		.loc 1 64 5 view .LVU18
+  63:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     FMC_WS = (reg | wscnt);
+ 111              		.loc 1 63 9 is_stmt 0 view .LVU19
+ARM GAS  /tmp/cc8MuCQG.s 			page 4
+
+
+ 112 0004 23F00703 		bic	r3, r3, #7
+ 113              	.LVL2:
+ 114              		.loc 1 64 19 view .LVU20
+ 115 0008 0343     		orrs	r3, r3, r0
+ 116              	.LVL3:
+ 117              		.loc 1 64 12 view .LVU21
+ 118 000a 1360     		str	r3, [r2]
+  65:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 119              		.loc 1 65 1 view .LVU22
+ 120 000c 7047     		bx	lr
+ 121              	.L13:
+ 122 000e 00BF     		.align	2
+ 123              	.L12:
+ 124 0010 00200240 		.word	1073881088
+ 125              		.cfi_endproc
+ 126              	.LFE58:
+ 128              		.section	.text.fmc_wait_state_enable,"ax",%progbits
+ 129              		.align	1
+ 130              		.global	fmc_wait_state_enable
+ 131              		.syntax unified
+ 132              		.thumb
+ 133              		.thumb_func
+ 134              		.fpu softvfp
+ 136              	fmc_wait_state_enable:
+ 137              	.LFB59:
+  66:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+  67:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+  68:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      fmc wait state enable
+  69:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  none
+  70:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+  71:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     none
+  72:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+  73:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** void fmc_wait_state_enable(void)
+  74:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 138              		.loc 1 74 1 is_stmt 1 view -0
+ 139              		.cfi_startproc
+ 140              		@ args = 0, pretend = 0, frame = 0
+ 141              		@ frame_needed = 0, uses_anonymous_args = 0
+  75:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* unlock the main flash */
+  76:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_unlock();
+ 142              		.loc 1 76 5 view .LVU24
+  74:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* unlock the main flash */
+ 143              		.loc 1 74 1 is_stmt 0 view .LVU25
+ 144 0000 08B5     		push	{r3, lr}
+ 145              	.LCFI0:
+ 146              		.cfi_def_cfa_offset 8
+ 147              		.cfi_offset 3, -8
+ 148              		.cfi_offset 14, -4
+ 149              		.loc 1 76 5 view .LVU26
+ 150 0002 FFF7FEFF 		bl	fmc_unlock
+ 151              	.LVL4:
+  77:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+  78:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* set the WSEN bit in register FMC_WSEN */
+  79:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     FMC_WSEN |= FMC_WSEN_WSEN;
+ 152              		.loc 1 79 5 is_stmt 1 view .LVU27
+ 153              		.loc 1 79 14 is_stmt 0 view .LVU28
+ 154 0006 054A     		ldr	r2, .L15
+ARM GAS  /tmp/cc8MuCQG.s 			page 5
+
+
+ 155 0008 D2F8FC30 		ldr	r3, [r2, #252]
+ 156 000c 43F00103 		orr	r3, r3, #1
+ 157 0010 C2F8FC30 		str	r3, [r2, #252]
+  80:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+  81:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* lock the main flash after operation */
+  82:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_lock();
+ 158              		.loc 1 82 5 is_stmt 1 view .LVU29
+  83:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 159              		.loc 1 83 1 is_stmt 0 view .LVU30
+ 160 0014 BDE80840 		pop	{r3, lr}
+ 161              	.LCFI1:
+ 162              		.cfi_restore 14
+ 163              		.cfi_restore 3
+ 164              		.cfi_def_cfa_offset 0
+  82:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 165              		.loc 1 82 5 view .LVU31
+ 166 0018 FFF7FEBF 		b	fmc_lock
+ 167              	.LVL5:
+ 168              	.L16:
+ 169              		.align	2
+ 170              	.L15:
+ 171 001c 00200240 		.word	1073881088
+ 172              		.cfi_endproc
+ 173              	.LFE59:
+ 175              		.section	.text.fmc_wait_state_disable,"ax",%progbits
+ 176              		.align	1
+ 177              		.global	fmc_wait_state_disable
+ 178              		.syntax unified
+ 179              		.thumb
+ 180              		.thumb_func
+ 181              		.fpu softvfp
+ 183              	fmc_wait_state_disable:
+ 184              	.LFB60:
+  84:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+  85:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+  86:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      fmc wait state disable
+  87:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  none
+  88:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+  89:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     none
+  90:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+  91:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** void fmc_wait_state_disable(void)
+  92:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 185              		.loc 1 92 1 is_stmt 1 view -0
+ 186              		.cfi_startproc
+ 187              		@ args = 0, pretend = 0, frame = 0
+ 188              		@ frame_needed = 0, uses_anonymous_args = 0
+  93:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* unlock the main flash */
+  94:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_unlock();
+ 189              		.loc 1 94 5 view .LVU33
+  92:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* unlock the main flash */
+ 190              		.loc 1 92 1 is_stmt 0 view .LVU34
+ 191 0000 08B5     		push	{r3, lr}
+ 192              	.LCFI2:
+ 193              		.cfi_def_cfa_offset 8
+ 194              		.cfi_offset 3, -8
+ 195              		.cfi_offset 14, -4
+ 196              		.loc 1 94 5 view .LVU35
+ARM GAS  /tmp/cc8MuCQG.s 			page 6
+
+
+ 197 0002 FFF7FEFF 		bl	fmc_unlock
+ 198              	.LVL6:
+  95:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+  96:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* reset the WSEN bit in register FMC_WSEN */
+  97:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     FMC_WSEN &= ~FMC_WSEN_WSEN;
+ 199              		.loc 1 97 5 is_stmt 1 view .LVU36
+ 200              		.loc 1 97 14 is_stmt 0 view .LVU37
+ 201 0006 054A     		ldr	r2, .L18
+ 202 0008 D2F8FC30 		ldr	r3, [r2, #252]
+ 203 000c 23F00103 		bic	r3, r3, #1
+ 204 0010 C2F8FC30 		str	r3, [r2, #252]
+  98:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+  99:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* lock the main flash after operation */
+ 100:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_lock();
+ 205              		.loc 1 100 5 is_stmt 1 view .LVU38
+ 101:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 206              		.loc 1 101 1 is_stmt 0 view .LVU39
+ 207 0014 BDE80840 		pop	{r3, lr}
+ 208              	.LCFI3:
+ 209              		.cfi_restore 14
+ 210              		.cfi_restore 3
+ 211              		.cfi_def_cfa_offset 0
+ 100:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 212              		.loc 1 100 5 view .LVU40
+ 213 0018 FFF7FEBF 		b	fmc_lock
+ 214              	.LVL7:
+ 215              	.L19:
+ 216              		.align	2
+ 217              	.L18:
+ 218 001c 00200240 		.word	1073881088
+ 219              		.cfi_endproc
+ 220              	.LFE60:
+ 222              		.section	.text.ob_unlock,"ax",%progbits
+ 223              		.align	1
+ 224              		.global	ob_unlock
+ 225              		.syntax unified
+ 226              		.thumb
+ 227              		.thumb_func
+ 228              		.fpu softvfp
+ 230              	ob_unlock:
+ 231              	.LFB65:
+ 102:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 103:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 104:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      erase page
+ 105:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  page_address: target page start address
+ 106:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 107:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     fmc_state
+ 108:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 109:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** fmc_state_enum fmc_page_erase(uint32_t page_address)
+ 110:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 111:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 112:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 113:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if(FMC_READY == fmc_state){ 
+ 114:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* start page erase */
+ 115:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_PER;
+ 116:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_ADDR = page_address;
+ 117:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_START;
+ARM GAS  /tmp/cc8MuCQG.s 			page 7
+
+
+ 118:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 119:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* wait for the FMC ready */
+ 120:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 121:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 122:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* reset the PER bit */
+ 123:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL &= ~FMC_CTL_PER;
+ 124:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 125:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 126:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* return the FMC state  */
+ 127:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return fmc_state;
+ 128:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 129:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 130:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 131:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      erase whole chip
+ 132:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  none
+ 133:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 134:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     fmc_state
+ 135:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 136:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** fmc_state_enum fmc_mass_erase(void)
+ 137:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 138:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 139:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 140:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if(FMC_READY == fmc_state){ 
+ 141:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* start chip erase */
+ 142:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_MER; 
+ 143:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_START;
+ 144:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 145:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* wait for the FMC ready */
+ 146:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 147:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 148:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* reset the MER bit */
+ 149:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL &= ~FMC_CTL_MER;
+ 150:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 151:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 152:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* return the fmc state  */
+ 153:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return fmc_state;
+ 154:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 155:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 156:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 157:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      program a word at the corresponding address
+ 158:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  address: address to program
+ 159:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  data: word to program
+ 160:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 161:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     fmc_state
+ 162:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 163:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** fmc_state_enum fmc_word_program(uint32_t address, uint32_t data)
+ 164:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 165:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 166:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 167:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if(FMC_READY == fmc_state){ 
+ 168:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* set the PG bit to start program */
+ 169:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_PG; 
+ 170:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 171:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         REG32(address) = data;
+ 172:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 173:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* wait for the FMC ready */
+ 174:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ARM GAS  /tmp/cc8MuCQG.s 			page 8
+
+
+ 175:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 176:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* reset the PG bit */
+ 177:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL &= ~FMC_CTL_PG; 
+ 178:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     } 
+ 179:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 180:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* return the FMC state */
+ 181:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return fmc_state;
+ 182:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 183:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 184:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 185:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      program a half word at the corresponding address
+ 186:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  address: address to program
+ 187:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  data: word to program
+ 188:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 189:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     fmc_state
+ 190:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 191:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** fmc_state_enum fmc_halfword_program(uint32_t address, uint16_t data)
+ 192:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 193:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 194:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 195:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if(FMC_READY == fmc_state){ 
+ 196:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* set the PG bit to start program */
+ 197:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_PG; 
+ 198:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 199:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         REG16(address) = data;
+ 200:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 201:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* wait for the FMC ready */
+ 202:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 203:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 204:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* reset the PG bit */
+ 205:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL &= ~FMC_CTL_PG; 
+ 206:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     } 
+ 207:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 208:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* return the FMC state */
+ 209:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return fmc_state;
+ 210:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 211:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 212:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** #ifdef GD32F170_190
+ 213:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 214:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      program a word at the corresponding address without erasing
+ 215:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  address: address to program
+ 216:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  data: word to program
+ 217:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 218:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     fmc_state
+ 219:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 220:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** fmc_state_enum fmc_word_reprogram(uint32_t address, uint32_t data)
+ 221:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 222:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 223:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     FMC_WSEN |= FMC_WSEN_BPEN;
+ 224:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 225:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if(FMC_READY == fmc_state){
+ 226:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* set the PG bit to start program */
+ 227:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_PG;
+ 228:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 229:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         REG32(address) = data;
+ 230:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 231:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* wait for the FMC ready */
+ARM GAS  /tmp/cc8MuCQG.s 			page 9
+
+
+ 232:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 233:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 234:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* reset the PG bit */
+ 235:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL &= ~FMC_CTL_PG;
+ 236:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 237:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 238:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* return the FMC state */
+ 239:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return fmc_state;
+ 240:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 241:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** #endif /* GD32F170_190 */
+ 242:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 243:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /* FMC option bytes programming functions */
+ 244:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 245:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 246:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      unlock the option byte operation
+ 247:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 it is better to used in pairs with ob_lock
+ 248:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  none
+ 249:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 250:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     none
+ 251:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 252:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** void ob_unlock(void)
+ 253:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 232              		.loc 1 253 1 is_stmt 1 view -0
+ 233              		.cfi_startproc
+ 234              		@ args = 0, pretend = 0, frame = 0
+ 235              		@ frame_needed = 0, uses_anonymous_args = 0
+ 236              		@ link register save eliminated.
+ 254:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if(RESET == (FMC_CTL & FMC_CTL_OBWEN)){
+ 237              		.loc 1 254 5 view .LVU42
+ 238              		.loc 1 254 18 is_stmt 0 view .LVU43
+ 239 0000 044B     		ldr	r3, .L22
+ 240 0002 1A69     		ldr	r2, [r3, #16]
+ 241              		.loc 1 254 7 view .LVU44
+ 242 0004 9205     		lsls	r2, r2, #22
+ 255:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* write the FMC key */
+ 256:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_OBKEY = UNLOCK_KEY0;
+ 243              		.loc 1 256 9 is_stmt 1 view .LVU45
+ 244              		.loc 1 256 19 is_stmt 0 view .LVU46
+ 245 0006 5FBF     		itttt	pl
+ 246 0008 034A     		ldrpl	r2, .L22+4
+ 247 000a 9A60     		strpl	r2, [r3, #8]
+ 257:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_OBKEY = UNLOCK_KEY1;
+ 248              		.loc 1 257 9 is_stmt 1 view .LVU47
+ 249              		.loc 1 257 19 is_stmt 0 view .LVU48
+ 250 000c 02F18832 		addpl	r2, r2, #-2004318072
+ 251 0010 9A60     		strpl	r2, [r3, #8]
+ 258:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 259:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 252              		.loc 1 259 1 view .LVU49
+ 253 0012 7047     		bx	lr
+ 254              	.L23:
+ 255              		.align	2
+ 256              	.L22:
+ 257 0014 00200240 		.word	1073881088
+ 258 0018 23016745 		.word	1164378403
+ 259              		.cfi_endproc
+ 260              	.LFE65:
+ARM GAS  /tmp/cc8MuCQG.s 			page 10
+
+
+ 262              		.section	.text.ob_lock,"ax",%progbits
+ 263              		.align	1
+ 264              		.global	ob_lock
+ 265              		.syntax unified
+ 266              		.thumb
+ 267              		.thumb_func
+ 268              		.fpu softvfp
+ 270              	ob_lock:
+ 271              	.LFB66:
+ 260:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 261:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 262:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      lock the option byte operation
+ 263:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 it is better to used in pairs with ob_unlock after an operation
+ 264:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  none
+ 265:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 266:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     none
+ 267:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 268:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** void ob_lock(void)
+ 269:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 272              		.loc 1 269 1 is_stmt 1 view -0
+ 273              		.cfi_startproc
+ 274              		@ args = 0, pretend = 0, frame = 0
+ 275              		@ frame_needed = 0, uses_anonymous_args = 0
+ 276              		@ link register save eliminated.
+ 270:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* reset the OBWE bit */
+ 271:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     FMC_CTL &= ~FMC_CTL_OBWEN;
+ 277              		.loc 1 271 5 view .LVU51
+ 278              		.loc 1 271 13 is_stmt 0 view .LVU52
+ 279 0000 024A     		ldr	r2, .L25
+ 280 0002 1369     		ldr	r3, [r2, #16]
+ 281 0004 23F40073 		bic	r3, r3, #512
+ 282 0008 1361     		str	r3, [r2, #16]
+ 272:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 283              		.loc 1 272 1 view .LVU53
+ 284 000a 7047     		bx	lr
+ 285              	.L26:
+ 286              		.align	2
+ 287              	.L25:
+ 288 000c 00200240 		.word	1073881088
+ 289              		.cfi_endproc
+ 290              	.LFE66:
+ 292              		.section	.text.ob_reset,"ax",%progbits
+ 293              		.align	1
+ 294              		.global	ob_reset
+ 295              		.syntax unified
+ 296              		.thumb
+ 297              		.thumb_func
+ 298              		.fpu softvfp
+ 300              	ob_reset:
+ 301              	.LFB67:
+ 273:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 274:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 275:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      reload the option byte and generate a system reset
+ 276:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  none
+ 277:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 278:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     none
+ 279:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ARM GAS  /tmp/cc8MuCQG.s 			page 11
+
+
+ 280:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** void ob_reset(void)
+ 281:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 302              		.loc 1 281 1 is_stmt 1 view -0
+ 303              		.cfi_startproc
+ 304              		@ args = 0, pretend = 0, frame = 0
+ 305              		@ frame_needed = 0, uses_anonymous_args = 0
+ 306              		@ link register save eliminated.
+ 282:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* set the OBRLD bit */
+ 283:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     FMC_CTL |= FMC_CTL_OBRLD;
+ 307              		.loc 1 283 5 view .LVU55
+ 308              		.loc 1 283 13 is_stmt 0 view .LVU56
+ 309 0000 024A     		ldr	r2, .L28
+ 310 0002 1369     		ldr	r3, [r2, #16]
+ 311 0004 43F40053 		orr	r3, r3, #8192
+ 312 0008 1361     		str	r3, [r2, #16]
+ 284:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 313              		.loc 1 284 1 view .LVU57
+ 314 000a 7047     		bx	lr
+ 315              	.L29:
+ 316              		.align	2
+ 317              	.L28:
+ 318 000c 00200240 		.word	1073881088
+ 319              		.cfi_endproc
+ 320              	.LFE67:
+ 322              		.section	.text.ob_user_get,"ax",%progbits
+ 323              		.align	1
+ 324              		.global	ob_user_get
+ 325              		.syntax unified
+ 326              		.thumb
+ 327              		.thumb_func
+ 328              		.fpu softvfp
+ 330              	ob_user_get:
+ 331              	.LFB73:
+ 285:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 286:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 287:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      erase the option byte
+ 288:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 programmer must ensure FMC & option byte are both unlocked before calling this func
+ 289:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  none
+ 290:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 291:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     fmc_state
+ 292:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 293:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** fmc_state_enum ob_erase(void)
+ 294:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 295:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     uint16_t fmc_spc;
+ 296:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     uint32_t fmc_plevel = ob_obstat_plevel_get();
+ 297:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 298:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 299:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* get the original option byte security protection code */
+ 300:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if(OB_OBSTAT_PLEVEL_NO == fmc_plevel){
+ 301:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_spc = FMC_NSPC;
+ 302:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }else if(OB_OBSTAT_PLEVEL_LOW == fmc_plevel){
+ 303:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_spc = FMC_LSPC;
+ 304:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }else{
+ 305:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_spc   = FMC_HSPC;
+ 306:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_state = FMC_OB_HSPC;
+ 307:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 308:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ARM GAS  /tmp/cc8MuCQG.s 			page 12
+
+
+ 309:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if(FMC_READY == fmc_state){
+ 310:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* start erase the option byte */
+ 311:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_OBER;
+ 312:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_START;
+ 313:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 314:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* wait for the FMC ready */
+ 315:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 316:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 317:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         if(FMC_READY == fmc_state){
+ 318:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* reset the OBER bit */
+ 319:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             FMC_CTL &= ~FMC_CTL_OBER;
+ 320:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****        
+ 321:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* set the OBPG bit */
+ 322:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             FMC_CTL |= FMC_CTL_OBPG;
+ 323:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 324:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* restore the last get option byte security protection code */
+ 325:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             OB_SPC = fmc_spc;
+ 326:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 327:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* wait for the FMC ready */
+ 328:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 329:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****  
+ 330:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             if(FMC_TOERR != fmc_state){
+ 331:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 /* reset the OBPG bit */
+ 332:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 FMC_CTL &= ~FMC_CTL_OBPG;
+ 333:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             }
+ 334:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }else{
+ 335:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             if(FMC_TOERR != fmc_state){
+ 336:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 /* reset the OBPG bit */
+ 337:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 FMC_CTL &= ~FMC_CTL_OBPG;
+ 338:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             }
+ 339:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }  
+ 340:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 341:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* return the FMC state */
+ 342:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return fmc_state;
+ 343:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 344:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 345:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 346:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      enable option byte write protection (OB_WP)
+ 347:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  ob_wp: write protection configuration data
+ 348:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 349:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     fmc_state
+ 350:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 351:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** fmc_state_enum ob_write_protection_enable(uint32_t ob_wp)
+ 352:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 353:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     uint16_t ob_wrp0, ob_wrp1;
+ 354:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 355:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 356:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 357:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     ob_wp   = (uint32_t)(~ob_wp);
+ 358:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     ob_wrp0 = (uint16_t)(ob_wp & OB_LWP);
+ 359:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     ob_wrp1 = (uint16_t)((ob_wp & OB_HWP) >> 8);
+ 360:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 361:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if(FMC_READY == fmc_state){
+ 362:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* set the OBPG bit*/
+ 363:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_OBPG;
+ 364:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 365:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         if(0xFFU != ob_wrp0){
+ARM GAS  /tmp/cc8MuCQG.s 			page 13
+
+
+ 366:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             OB_WP0 = ob_wrp0;
+ 367:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 368:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* wait for the FMC ready */
+ 369:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 370:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 371:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         if((FMC_READY == fmc_state) && (0xFFU != ob_wrp1)){
+ 372:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             OB_WP1 = ob_wrp1;
+ 373:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       
+ 374:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* wait for the FMC ready */
+ 375:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 376:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 377:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         if(FMC_TOERR != fmc_state){
+ 378:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* reset the OBPG bit */
+ 379:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             FMC_CTL &= ~FMC_CTL_OBPG;
+ 380:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 381:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     } 
+ 382:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* return the FMC state */
+ 383:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return fmc_state;
+ 384:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 385:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 386:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 387:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      configure security protection
+ 388:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  ob_spc: specify security protection code
+ 389:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        FMC_NSPC: no security protection
+ 390:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        FMC_LSPC: low security protection
+ 391:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        FMC_HSPC: high security protection
+ 392:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 393:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     fmc_state
+ 394:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 395:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** fmc_state_enum ob_security_protection_config(uint8_t ob_spc)
+ 396:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 397:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 398:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 399:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* the OB_SPC byte cannot be reprogrammed if protection level is high */
+ 400:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if(OB_OBSTAT_PLEVEL_HIGH == ob_obstat_plevel_get()){
+ 401:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_state = FMC_OB_HSPC;
+ 402:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 403:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 404:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if(FMC_READY == fmc_state){
+ 405:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* start erase the option byte */
+ 406:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_OBER;
+ 407:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_START;
+ 408:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 409:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* wait for the FMC ready */
+ 410:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 411:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 412:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         if(FMC_READY == fmc_state){
+ 413:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         
+ 414:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* reset the OBER bit */
+ 415:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             FMC_CTL &= ~FMC_CTL_OBER;
+ 416:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       
+ 417:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* enable the option bytes programming */
+ 418:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             FMC_CTL |= FMC_CTL_OBPG;
+ 419:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****        
+ 420:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             OB_SPC = ob_spc;
+ 421:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 422:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* wait for the FMC ready */
+ARM GAS  /tmp/cc8MuCQG.s 			page 14
+
+
+ 423:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT); 
+ 424:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 425:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             if(FMC_TOERR != fmc_state){
+ 426:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 /* reset the OBPG bit */
+ 427:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 FMC_CTL &= ~FMC_CTL_OBPG;
+ 428:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             }
+ 429:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }else{
+ 430:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             if(FMC_TOERR != fmc_state){
+ 431:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 /* reset the OBER bit */
+ 432:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 FMC_CTL &= ~FMC_CTL_OBER;
+ 433:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             }
+ 434:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 435:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 436:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* return the FMC state */
+ 437:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return fmc_state;
+ 438:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 439:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 440:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 441:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      program the FMC user option byte
+ 442:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  ob_user: user option byte
+ 443:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        OB_FWDGT_SW: software free watchdog timer
+ 444:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        OB_FWDGT_HW: hardware free watchdog timer
+ 445:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        OB_DEEPSLEEP_NRST: generate a reset instead of entering deepsleep mode
+ 446:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        OB_DEEPSLEEP_RST: no reset when entering deepsleep mode
+ 447:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        OB_STDBY_NRST: generate a reset instead of entering standby mode
+ 448:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        OB_STDBY_RST: no reset when entering deepsleep mode
+ 449:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        OB_BOOT1_SET_1: BOOT1 bit is 1
+ 450:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        OB_BOOT1_SET_0: BOOT1 bit is 0
+ 451:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        OB_VDDA_DISABLE: disable VDDA monitor
+ 452:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        OB_VDDA_ENABLE: enable VDDA monitor
+ 453:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        OB_SRAM_PARITY_DISABLE: disable sram parity check
+ 454:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        OB_SRAM_PARITY_ENABLE: enable sram parity check
+ 455:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 456:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     fmc_state
+ 457:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 458:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** fmc_state_enum ob_user_write(uint8_t ob_user)
+ 459:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 460:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 461:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 462:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if(FMC_READY == fmc_state){
+ 463:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* set the OBPG bit */
+ 464:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_OBPG; 
+ 465:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 466:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         OB_USER = (uint8_t)(ob_user | OB_USER_MASK);
+ 467:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 468:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* wait for the FMC ready */
+ 469:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 470:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 471:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         if(FMC_TOERR != fmc_state){
+ 472:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* reset the OBPG bit */
+ 473:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             FMC_CTL &= ~FMC_CTL_OBPG;
+ 474:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 475:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 476:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* return the FMC state */
+ 477:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return fmc_state;
+ 478:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 479:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ARM GAS  /tmp/cc8MuCQG.s 			page 15
+
+
+ 480:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 481:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      program the FMC data option byte
+ 482:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  address: OB_DATA_ADDR0 or OB_DATA_ADDR1
+ 483:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        OB_DATA_ADDR0: option byte data address 0
+ 484:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        OB_DATA_ADDR1: option byte data address 1
+ 485:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  data: the byte to be programmed
+ 486:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 487:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     fmc_state
+ 488:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 489:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** fmc_state_enum ob_data_program(uint32_t address, uint8_t data)
+ 490:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 491:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 492:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 493:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if(FMC_READY == fmc_state){
+ 494:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* set the OBPG bit */
+ 495:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_OBPG; 
+ 496:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         REG16(address) = data;
+ 497:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 498:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* wait for the FMC ready */
+ 499:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 500:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 501:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         if(FMC_TOERR != fmc_state){
+ 502:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* reset the OBPG bit */
+ 503:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             FMC_CTL &= ~FMC_CTL_OBPG;
+ 504:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 505:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 506:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* return the FMC state */
+ 507:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return fmc_state;
+ 508:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 509:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 510:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 511:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      get OB_USER in register FMC_OBSTAT
+ 512:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  none
+ 513:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 514:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     ob_user
+ 515:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 516:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** uint8_t ob_user_get(void)
+ 517:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 332              		.loc 1 517 1 is_stmt 1 view -0
+ 333              		.cfi_startproc
+ 334              		@ args = 0, pretend = 0, frame = 0
+ 335              		@ frame_needed = 0, uses_anonymous_args = 0
+ 336              		@ link register save eliminated.
+ 518:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return (uint8_t)(FMC_OBSTAT >> 8);
+ 337              		.loc 1 518 5 view .LVU59
+ 338              		.loc 1 518 22 is_stmt 0 view .LVU60
+ 339 0000 024B     		ldr	r3, .L31
+ 340 0002 D869     		ldr	r0, [r3, #28]
+ 519:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 341              		.loc 1 519 1 view .LVU61
+ 342 0004 C0F30720 		ubfx	r0, r0, #8, #8
+ 343 0008 7047     		bx	lr
+ 344              	.L32:
+ 345 000a 00BF     		.align	2
+ 346              	.L31:
+ 347 000c 00200240 		.word	1073881088
+ 348              		.cfi_endproc
+ARM GAS  /tmp/cc8MuCQG.s 			page 16
+
+
+ 349              	.LFE73:
+ 351              		.section	.text.ob_data_get,"ax",%progbits
+ 352              		.align	1
+ 353              		.global	ob_data_get
+ 354              		.syntax unified
+ 355              		.thumb
+ 356              		.thumb_func
+ 357              		.fpu softvfp
+ 359              	ob_data_get:
+ 360              	.LFB74:
+ 520:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 521:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 522:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      get OB_DATA in register FMC_OBSTAT
+ 523:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  none
+ 524:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 525:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     ob_data
+ 526:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 527:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** uint16_t ob_data_get(void)
+ 528:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 361              		.loc 1 528 1 is_stmt 1 view -0
+ 362              		.cfi_startproc
+ 363              		@ args = 0, pretend = 0, frame = 0
+ 364              		@ frame_needed = 0, uses_anonymous_args = 0
+ 365              		@ link register save eliminated.
+ 529:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return (uint16_t)(FMC_OBSTAT >> 16);
+ 366              		.loc 1 529 5 view .LVU63
+ 367              		.loc 1 529 23 is_stmt 0 view .LVU64
+ 368 0000 014B     		ldr	r3, .L34
+ 369 0002 D869     		ldr	r0, [r3, #28]
+ 530:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 370              		.loc 1 530 1 view .LVU65
+ 371 0004 000C     		lsrs	r0, r0, #16
+ 372 0006 7047     		bx	lr
+ 373              	.L35:
+ 374              		.align	2
+ 375              	.L34:
+ 376 0008 00200240 		.word	1073881088
+ 377              		.cfi_endproc
+ 378              	.LFE74:
+ 380              		.section	.text.ob_write_protection_get,"ax",%progbits
+ 381              		.align	1
+ 382              		.global	ob_write_protection_get
+ 383              		.syntax unified
+ 384              		.thumb
+ 385              		.thumb_func
+ 386              		.fpu softvfp
+ 388              	ob_write_protection_get:
+ 389              	.LFB75:
+ 531:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 532:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 533:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      get the FMC option byte write protection (OB_WP) in register FMC_WP
+ 534:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  none
+ 535:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 536:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     OB_WP
+ 537:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 538:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** uint16_t ob_write_protection_get(void)
+ 539:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ARM GAS  /tmp/cc8MuCQG.s 			page 17
+
+
+ 390              		.loc 1 539 1 is_stmt 1 view -0
+ 391              		.cfi_startproc
+ 392              		@ args = 0, pretend = 0, frame = 0
+ 393              		@ frame_needed = 0, uses_anonymous_args = 0
+ 394              		@ link register save eliminated.
+ 540:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return (uint16_t)(FMC_WP);
+ 395              		.loc 1 540 5 view .LVU67
+ 396              		.loc 1 540 23 is_stmt 0 view .LVU68
+ 397 0000 014B     		ldr	r3, .L37
+ 398 0002 186A     		ldr	r0, [r3, #32]
+ 541:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 399              		.loc 1 541 1 view .LVU69
+ 400 0004 80B2     		uxth	r0, r0
+ 401 0006 7047     		bx	lr
+ 402              	.L38:
+ 403              		.align	2
+ 404              	.L37:
+ 405 0008 00200240 		.word	1073881088
+ 406              		.cfi_endproc
+ 407              	.LFE75:
+ 409              		.section	.text.ob_obstat_plevel_get,"ax",%progbits
+ 410              		.align	1
+ 411              		.global	ob_obstat_plevel_get
+ 412              		.syntax unified
+ 413              		.thumb
+ 414              		.thumb_func
+ 415              		.fpu softvfp
+ 417              	ob_obstat_plevel_get:
+ 418              	.LFB76:
+ 542:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 543:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 544:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      get the value of FMC option byte security protection level (PLEVEL) in FMC_OBSTAT r
+ 545:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  none
+ 546:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 547:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     the value of PLEVEL
+ 548:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 549:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** uint32_t ob_obstat_plevel_get(void)
+ 550:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 419              		.loc 1 550 1 is_stmt 1 view -0
+ 420              		.cfi_startproc
+ 421              		@ args = 0, pretend = 0, frame = 0
+ 422              		@ frame_needed = 0, uses_anonymous_args = 0
+ 423              		@ link register save eliminated.
+ 551:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return (FMC_OBSTAT & (FMC_OBSTAT_PLVL_BIT0 | FMC_OBSTAT_PLVL_BIT1));
+ 424              		.loc 1 551 5 view .LVU71
+ 425              		.loc 1 551 24 is_stmt 0 view .LVU72
+ 426 0000 024B     		ldr	r3, .L40
+ 427 0002 D869     		ldr	r0, [r3, #28]
+ 552:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 428              		.loc 1 552 1 view .LVU73
+ 429 0004 00F00600 		and	r0, r0, #6
+ 430 0008 7047     		bx	lr
+ 431              	.L41:
+ 432 000a 00BF     		.align	2
+ 433              	.L40:
+ 434 000c 00200240 		.word	1073881088
+ 435              		.cfi_endproc
+ARM GAS  /tmp/cc8MuCQG.s 			page 18
+
+
+ 436              	.LFE76:
+ 438              		.section	.text.fmc_interrupt_enable,"ax",%progbits
+ 439              		.align	1
+ 440              		.global	fmc_interrupt_enable
+ 441              		.syntax unified
+ 442              		.thumb
+ 443              		.thumb_func
+ 444              		.fpu softvfp
+ 446              	fmc_interrupt_enable:
+ 447              	.LVL8:
+ 448              	.LFB77:
+ 553:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 554:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /* FMC interrupts and flags management functions */
+ 555:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 556:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      enable FMC interrupt
+ 557:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  interrupt: the FMC interrupt source
+ 558:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        FMC_INTEN_END: FMC end of operation interrupt
+ 559:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        FMC_INTEN_ERR: FMC error interrupt
+ 560:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 561:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     none
+ 562:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 563:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** void fmc_interrupt_enable(uint32_t interrupt)
+ 564:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 449              		.loc 1 564 1 is_stmt 1 view -0
+ 450              		.cfi_startproc
+ 451              		@ args = 0, pretend = 0, frame = 0
+ 452              		@ frame_needed = 0, uses_anonymous_args = 0
+ 453              		@ link register save eliminated.
+ 565:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     FMC_CTL |= interrupt;
+ 454              		.loc 1 565 5 view .LVU75
+ 455              		.loc 1 565 13 is_stmt 0 view .LVU76
+ 456 0000 024A     		ldr	r2, .L43
+ 457 0002 1369     		ldr	r3, [r2, #16]
+ 458 0004 0343     		orrs	r3, r3, r0
+ 459 0006 1361     		str	r3, [r2, #16]
+ 566:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 460              		.loc 1 566 1 view .LVU77
+ 461 0008 7047     		bx	lr
+ 462              	.L44:
+ 463 000a 00BF     		.align	2
+ 464              	.L43:
+ 465 000c 00200240 		.word	1073881088
+ 466              		.cfi_endproc
+ 467              	.LFE77:
+ 469              		.section	.text.fmc_interrupt_disable,"ax",%progbits
+ 470              		.align	1
+ 471              		.global	fmc_interrupt_disable
+ 472              		.syntax unified
+ 473              		.thumb
+ 474              		.thumb_func
+ 475              		.fpu softvfp
+ 477              	fmc_interrupt_disable:
+ 478              	.LVL9:
+ 479              	.LFB78:
+ 567:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 568:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 569:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      disable FMC interrupt
+ARM GAS  /tmp/cc8MuCQG.s 			page 19
+
+
+ 570:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  interrupt: the FMC interrupt source
+ 571:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        FMC_INTEN_END: FMC end of operation interrupt
+ 572:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        FMC_INTEN_ERR: FMC error interrupt
+ 573:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 574:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     none
+ 575:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 576:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** void fmc_interrupt_disable(uint32_t interrupt)
+ 577:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 480              		.loc 1 577 1 is_stmt 1 view -0
+ 481              		.cfi_startproc
+ 482              		@ args = 0, pretend = 0, frame = 0
+ 483              		@ frame_needed = 0, uses_anonymous_args = 0
+ 484              		@ link register save eliminated.
+ 578:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     FMC_CTL &= ~(uint32_t)interrupt;
+ 485              		.loc 1 578 5 view .LVU79
+ 486              		.loc 1 578 13 is_stmt 0 view .LVU80
+ 487 0000 024A     		ldr	r2, .L46
+ 488 0002 1369     		ldr	r3, [r2, #16]
+ 489 0004 23EA0003 		bic	r3, r3, r0
+ 490 0008 1361     		str	r3, [r2, #16]
+ 579:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 491              		.loc 1 579 1 view .LVU81
+ 492 000a 7047     		bx	lr
+ 493              	.L47:
+ 494              		.align	2
+ 495              	.L46:
+ 496 000c 00200240 		.word	1073881088
+ 497              		.cfi_endproc
+ 498              	.LFE78:
+ 500              		.section	.text.fmc_flag_get,"ax",%progbits
+ 501              		.align	1
+ 502              		.global	fmc_flag_get
+ 503              		.syntax unified
+ 504              		.thumb
+ 505              		.thumb_func
+ 506              		.fpu softvfp
+ 508              	fmc_flag_get:
+ 509              	.LVL10:
+ 510              	.LFB79:
+ 580:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 581:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 582:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      get flag set or reset
+ 583:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  flag: check FMC flag
+ 584:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        FMC_FLAG_BUSY: FMC busy flag
+ 585:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        FMC_FLAG_PGERR: FMC programming error flag
+ 586:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        FMC_FLAG_WPERR: FMC write protection error flag
+ 587:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        FMC_FLAG_END: FMC end of programming flag
+ 588:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 589:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     FlagStatus: SET or RESET
+ 590:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 591:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** FlagStatus fmc_flag_get(uint32_t flag)
+ 592:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 511              		.loc 1 592 1 is_stmt 1 view -0
+ 512              		.cfi_startproc
+ 513              		@ args = 0, pretend = 0, frame = 0
+ 514              		@ frame_needed = 0, uses_anonymous_args = 0
+ 515              		@ link register save eliminated.
+ARM GAS  /tmp/cc8MuCQG.s 			page 20
+
+
+ 593:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     FlagStatus status = RESET;
+ 516              		.loc 1 593 5 view .LVU83
+ 594:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 595:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if(FMC_STAT & flag){
+ 517              		.loc 1 595 5 view .LVU84
+ 518              		.loc 1 595 8 is_stmt 0 view .LVU85
+ 519 0000 034B     		ldr	r3, .L49
+ 520 0002 DB68     		ldr	r3, [r3, #12]
+ 521              	.LVL11:
+ 596:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         status = SET;
+ 597:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 598:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* return the state of corresponding FMC flag */
+ 599:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return status; 
+ 522              		.loc 1 599 5 is_stmt 1 view .LVU86
+ 595:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         status = SET;
+ 523              		.loc 1 595 7 is_stmt 0 view .LVU87
+ 524 0004 0342     		tst	r3, r0
+ 600:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 525              		.loc 1 600 1 view .LVU88
+ 526 0006 14BF     		ite	ne
+ 527 0008 0120     		movne	r0, #1
+ 528              	.LVL12:
+ 529              		.loc 1 600 1 view .LVU89
+ 530 000a 0020     		moveq	r0, #0
+ 531 000c 7047     		bx	lr
+ 532              	.L50:
+ 533 000e 00BF     		.align	2
+ 534              	.L49:
+ 535 0010 00200240 		.word	1073881088
+ 536              		.cfi_endproc
+ 537              	.LFE79:
+ 539              		.section	.text.fmc_flag_clear,"ax",%progbits
+ 540              		.align	1
+ 541              		.global	fmc_flag_clear
+ 542              		.syntax unified
+ 543              		.thumb
+ 544              		.thumb_func
+ 545              		.fpu softvfp
+ 547              	fmc_flag_clear:
+ 548              	.LVL13:
+ 549              	.LFB80:
+ 601:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 602:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 603:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      clear the FMC pending flag by writing 1
+ 604:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  flag: clear FMC flag
+ 605:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        FMC_FLAG_PGERR: FMC programming error flag
+ 606:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        FMC_FLAG_WPERR: FMC write protection error flag
+ 607:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       \arg        FMC_FLAG_END: fmc end of programming flag
+ 608:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 609:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     none
+ 610:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 611:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** void fmc_flag_clear(uint32_t flag)
+ 612:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 550              		.loc 1 612 1 is_stmt 1 view -0
+ 551              		.cfi_startproc
+ 552              		@ args = 0, pretend = 0, frame = 0
+ 553              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/cc8MuCQG.s 			page 21
+
+
+ 554              		@ link register save eliminated.
+ 613:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* clear the flags */
+ 614:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     FMC_STAT = flag;
+ 555              		.loc 1 614 5 view .LVU91
+ 556              		.loc 1 614 14 is_stmt 0 view .LVU92
+ 557 0000 014B     		ldr	r3, .L52
+ 558 0002 D860     		str	r0, [r3, #12]
+ 615:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 559              		.loc 1 615 1 view .LVU93
+ 560 0004 7047     		bx	lr
+ 561              	.L53:
+ 562 0006 00BF     		.align	2
+ 563              	.L52:
+ 564 0008 00200240 		.word	1073881088
+ 565              		.cfi_endproc
+ 566              	.LFE80:
+ 568              		.section	.text.fmc_state_get,"ax",%progbits
+ 569              		.align	1
+ 570              		.global	fmc_state_get
+ 571              		.syntax unified
+ 572              		.thumb
+ 573              		.thumb_func
+ 574              		.fpu softvfp
+ 576              	fmc_state_get:
+ 577              	.LFB81:
+ 616:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 617:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 618:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      get the FMC state
+ 619:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  none
+ 620:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 621:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     fmc_state
+ 622:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 623:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** fmc_state_enum fmc_state_get(void)
+ 624:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 578              		.loc 1 624 1 is_stmt 1 view -0
+ 579              		.cfi_startproc
+ 580              		@ args = 0, pretend = 0, frame = 0
+ 581              		@ frame_needed = 0, uses_anonymous_args = 0
+ 582              		@ link register save eliminated.
+ 625:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = FMC_READY;
+ 583              		.loc 1 625 5 view .LVU95
+ 584              	.LVL14:
+ 626:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 627:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if((uint32_t)0x00U != (FMC_STAT & FMC_STAT_BUSY)){
+ 585              		.loc 1 627 5 view .LVU96
+ 586              		.loc 1 627 28 is_stmt 0 view .LVU97
+ 587 0000 084B     		ldr	r3, .L59
+ 588 0002 DA68     		ldr	r2, [r3, #12]
+ 589              		.loc 1 627 7 view .LVU98
+ 590 0004 D107     		lsls	r1, r2, #31
+ 591 0006 09D4     		bmi	.L56
+ 628:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_state = FMC_BUSY;
+ 629:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }else{
+ 630:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         if((uint32_t)0x00U != (FMC_STAT & FMC_STAT_WPERR)){
+ 592              		.loc 1 630 9 is_stmt 1 view .LVU99
+ 593              		.loc 1 630 32 is_stmt 0 view .LVU100
+ 594 0008 DA68     		ldr	r2, [r3, #12]
+ARM GAS  /tmp/cc8MuCQG.s 			page 22
+
+
+ 595              		.loc 1 630 11 view .LVU101
+ 596 000a D206     		lsls	r2, r2, #27
+ 597 000c 08D4     		bmi	.L57
+ 598              	.LBB8:
+ 599              	.LBI8:
+ 623:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 600              		.loc 1 623 16 is_stmt 1 view .LVU102
+ 601              	.LBB9:
+ 631:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             fmc_state = FMC_WPERR;
+ 632:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }else{
+ 633:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             if((uint32_t)0x00U != (FMC_STAT & FMC_STAT_PGERR)){
+ 602              		.loc 1 633 13 view .LVU103
+ 603              		.loc 1 633 36 is_stmt 0 view .LVU104
+ 604 000e DB68     		ldr	r3, [r3, #12]
+ 634:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 fmc_state = FMC_PGERR; 
+ 605              		.loc 1 634 27 view .LVU105
+ 606 0010 13F0040F 		tst	r3, #4
+ 607 0014 0CBF     		ite	eq
+ 608 0016 0020     		moveq	r0, #0
+ 609 0018 0220     		movne	r0, #2
+ 610 001a 7047     		bx	lr
+ 611              	.L56:
+ 612              	.LBE9:
+ 613              	.LBE8:
+ 628:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }else{
+ 614              		.loc 1 628 19 view .LVU106
+ 615 001c 0120     		movs	r0, #1
+ 616 001e 7047     		bx	lr
+ 617              	.L57:
+ 631:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             fmc_state = FMC_WPERR;
+ 618              		.loc 1 631 23 view .LVU107
+ 619 0020 0320     		movs	r0, #3
+ 620              	.LVL15:
+ 635:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             }
+ 636:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 637:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 638:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* return the FMC state */
+ 639:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return fmc_state;
+ 621              		.loc 1 639 5 is_stmt 1 view .LVU108
+ 640:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 622              		.loc 1 640 1 is_stmt 0 view .LVU109
+ 623 0022 7047     		bx	lr
+ 624              	.L60:
+ 625              		.align	2
+ 626              	.L59:
+ 627 0024 00200240 		.word	1073881088
+ 628              		.cfi_endproc
+ 629              	.LFE81:
+ 631              		.section	.text.fmc_ready_wait,"ax",%progbits
+ 632              		.align	1
+ 633              		.global	fmc_ready_wait
+ 634              		.syntax unified
+ 635              		.thumb
+ 636              		.thumb_func
+ 637              		.fpu softvfp
+ 639              	fmc_ready_wait:
+ 640              	.LVL16:
+ARM GAS  /tmp/cc8MuCQG.s 			page 23
+
+
+ 641              	.LFB82:
+ 641:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 642:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** /*!
+ 643:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \brief      check whether FMC is ready or not
+ 644:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[in]  timeout: timeout count
+ 645:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \param[out] none
+ 646:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     \retval     fmc_state
+ 647:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** */
+ 648:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** fmc_state_enum fmc_ready_wait(uint32_t timeout)
+ 649:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 642              		.loc 1 649 1 is_stmt 1 view -0
+ 643              		.cfi_startproc
+ 644              		@ args = 0, pretend = 0, frame = 0
+ 645              		@ frame_needed = 0, uses_anonymous_args = 0
+ 646              		.loc 1 649 1 is_stmt 0 view .LVU111
+ 647 0000 10B5     		push	{r4, lr}
+ 648              	.LCFI4:
+ 649              		.cfi_def_cfa_offset 8
+ 650              		.cfi_offset 4, -8
+ 651              		.cfi_offset 14, -4
+ 652 0002 0446     		mov	r4, r0
+ 650:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = FMC_BUSY;
+ 653              		.loc 1 650 5 is_stmt 1 view .LVU112
+ 654              	.LVL17:
+ 655              	.L63:
+ 651:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 652:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* wait for FMC ready */
+ 653:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     do{
+ 656              		.loc 1 653 5 discriminator 2 view .LVU113
+ 654:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* get FMC state */
+ 655:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_state = fmc_state_get();
+ 657              		.loc 1 655 9 discriminator 2 view .LVU114
+ 658              		.loc 1 655 21 is_stmt 0 discriminator 2 view .LVU115
+ 659 0004 FFF7FEFF 		bl	fmc_state_get
+ 660              	.LVL18:
+ 656:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         timeout--;
+ 661              		.loc 1 656 9 is_stmt 1 discriminator 2 view .LVU116
+ 657:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }while((FMC_BUSY == fmc_state) && (0U != timeout));
+ 662              		.loc 1 657 5 is_stmt 0 discriminator 2 view .LVU117
+ 663 0008 0128     		cmp	r0, #1
+ 656:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         timeout--;
+ 664              		.loc 1 656 16 discriminator 2 view .LVU118
+ 665 000a 04F1FF34 		add	r4, r4, #-1
+ 666              	.LVL19:
+ 667              		.loc 1 657 11 is_stmt 1 discriminator 2 view .LVU119
+ 668              		.loc 1 657 5 is_stmt 0 discriminator 2 view .LVU120
+ 669 000e 02D1     		bne	.L62
+ 670              		.loc 1 657 36 discriminator 1 view .LVU121
+ 671 0010 002C     		cmp	r4, #0
+ 672 0012 F7D1     		bne	.L63
+ 658:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 659:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     if(FMC_BUSY == fmc_state){
+ 660:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_state = FMC_TOERR;
+ 673              		.loc 1 660 19 view .LVU122
+ 674 0014 0420     		movs	r0, #4
+ 675              	.LVL20:
+ 676              	.L62:
+ARM GAS  /tmp/cc8MuCQG.s 			page 24
+
+
+ 661:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 662:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     /* return the FMC state */
+ 663:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     return fmc_state;
+ 677              		.loc 1 663 5 is_stmt 1 view .LVU123
+ 664:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 678              		.loc 1 664 1 is_stmt 0 view .LVU124
+ 679 0016 10BD     		pop	{r4, pc}
+ 680              		.loc 1 664 1 view .LVU125
+ 681              		.cfi_endproc
+ 682              	.LFE82:
+ 684              		.section	.text.fmc_page_erase,"ax",%progbits
+ 685              		.align	1
+ 686              		.global	fmc_page_erase
+ 687              		.syntax unified
+ 688              		.thumb
+ 689              		.thumb_func
+ 690              		.fpu softvfp
+ 692              	fmc_page_erase:
+ 693              	.LVL21:
+ 694              	.LFB61:
+ 110:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 695              		.loc 1 110 1 is_stmt 1 view -0
+ 696              		.cfi_startproc
+ 697              		@ args = 0, pretend = 0, frame = 0
+ 698              		@ frame_needed = 0, uses_anonymous_args = 0
+ 111:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 699              		.loc 1 111 5 view .LVU127
+ 110:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 700              		.loc 1 110 1 is_stmt 0 view .LVU128
+ 701 0000 38B5     		push	{r3, r4, r5, lr}
+ 702              	.LCFI5:
+ 703              		.cfi_def_cfa_offset 16
+ 704              		.cfi_offset 3, -16
+ 705              		.cfi_offset 4, -12
+ 706              		.cfi_offset 5, -8
+ 707              		.cfi_offset 14, -4
+ 110:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 708              		.loc 1 110 1 view .LVU129
+ 709 0002 0546     		mov	r5, r0
+ 111:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 710              		.loc 1 111 32 view .LVU130
+ 711 0004 4FF47020 		mov	r0, #983040
+ 712              	.LVL22:
+ 111:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 713              		.loc 1 111 32 view .LVU131
+ 714 0008 FFF7FEFF 		bl	fmc_ready_wait
+ 715              	.LVL23:
+ 113:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* start page erase */
+ 716              		.loc 1 113 5 is_stmt 1 view .LVU132
+ 113:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* start page erase */
+ 717              		.loc 1 113 7 is_stmt 0 view .LVU133
+ 718 000c 88B9     		cbnz	r0, .L66
+ 115:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_ADDR = page_address;
+ 719              		.loc 1 115 9 is_stmt 1 view .LVU134
+ 115:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_ADDR = page_address;
+ 720              		.loc 1 115 17 is_stmt 0 view .LVU135
+ 721 000e 094C     		ldr	r4, .L67
+ARM GAS  /tmp/cc8MuCQG.s 			page 25
+
+
+ 120:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 722              		.loc 1 120 21 view .LVU136
+ 723 0010 4FF47020 		mov	r0, #983040
+ 724              	.LVL24:
+ 115:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_ADDR = page_address;
+ 725              		.loc 1 115 17 view .LVU137
+ 726 0014 2369     		ldr	r3, [r4, #16]
+ 727 0016 43F00203 		orr	r3, r3, #2
+ 728 001a 2361     		str	r3, [r4, #16]
+ 116:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_START;
+ 729              		.loc 1 116 9 is_stmt 1 view .LVU138
+ 116:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_START;
+ 730              		.loc 1 116 18 is_stmt 0 view .LVU139
+ 731 001c 6561     		str	r5, [r4, #20]
+ 117:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 732              		.loc 1 117 9 is_stmt 1 view .LVU140
+ 117:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 733              		.loc 1 117 17 is_stmt 0 view .LVU141
+ 734 001e 2369     		ldr	r3, [r4, #16]
+ 735 0020 43F04003 		orr	r3, r3, #64
+ 736 0024 2361     		str	r3, [r4, #16]
+ 120:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 737              		.loc 1 120 9 is_stmt 1 view .LVU142
+ 120:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 738              		.loc 1 120 21 is_stmt 0 view .LVU143
+ 739 0026 FFF7FEFF 		bl	fmc_ready_wait
+ 740              	.LVL25:
+ 123:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 741              		.loc 1 123 9 is_stmt 1 view .LVU144
+ 123:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 742              		.loc 1 123 17 is_stmt 0 view .LVU145
+ 743 002a 2369     		ldr	r3, [r4, #16]
+ 744 002c 23F00203 		bic	r3, r3, #2
+ 745 0030 2361     		str	r3, [r4, #16]
+ 746              	.L66:
+ 127:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 747              		.loc 1 127 5 is_stmt 1 view .LVU146
+ 128:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 748              		.loc 1 128 1 is_stmt 0 view .LVU147
+ 749 0032 38BD     		pop	{r3, r4, r5, pc}
+ 750              	.LVL26:
+ 751              	.L68:
+ 128:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 752              		.loc 1 128 1 view .LVU148
+ 753              		.align	2
+ 754              	.L67:
+ 755 0034 00200240 		.word	1073881088
+ 756              		.cfi_endproc
+ 757              	.LFE61:
+ 759              		.section	.text.fmc_mass_erase,"ax",%progbits
+ 760              		.align	1
+ 761              		.global	fmc_mass_erase
+ 762              		.syntax unified
+ 763              		.thumb
+ 764              		.thumb_func
+ 765              		.fpu softvfp
+ 767              	fmc_mass_erase:
+ARM GAS  /tmp/cc8MuCQG.s 			page 26
+
+
+ 768              	.LFB62:
+ 137:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 769              		.loc 1 137 1 is_stmt 1 view -0
+ 770              		.cfi_startproc
+ 771              		@ args = 0, pretend = 0, frame = 0
+ 772              		@ frame_needed = 0, uses_anonymous_args = 0
+ 138:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 773              		.loc 1 138 5 view .LVU150
+ 137:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 774              		.loc 1 137 1 is_stmt 0 view .LVU151
+ 775 0000 10B5     		push	{r4, lr}
+ 776              	.LCFI6:
+ 777              		.cfi_def_cfa_offset 8
+ 778              		.cfi_offset 4, -8
+ 779              		.cfi_offset 14, -4
+ 138:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 780              		.loc 1 138 32 view .LVU152
+ 781 0002 4FF47020 		mov	r0, #983040
+ 782 0006 FFF7FEFF 		bl	fmc_ready_wait
+ 783              	.LVL27:
+ 140:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* start chip erase */
+ 784              		.loc 1 140 5 is_stmt 1 view .LVU153
+ 140:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* start chip erase */
+ 785              		.loc 1 140 7 is_stmt 0 view .LVU154
+ 786 000a 80B9     		cbnz	r0, .L70
+ 142:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_START;
+ 787              		.loc 1 142 9 is_stmt 1 view .LVU155
+ 142:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_START;
+ 788              		.loc 1 142 17 is_stmt 0 view .LVU156
+ 789 000c 084C     		ldr	r4, .L71
+ 146:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 790              		.loc 1 146 21 view .LVU157
+ 791 000e 4FF47020 		mov	r0, #983040
+ 792              	.LVL28:
+ 142:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_START;
+ 793              		.loc 1 142 17 view .LVU158
+ 794 0012 2369     		ldr	r3, [r4, #16]
+ 795 0014 43F00403 		orr	r3, r3, #4
+ 796 0018 2361     		str	r3, [r4, #16]
+ 143:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 797              		.loc 1 143 9 is_stmt 1 view .LVU159
+ 143:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 798              		.loc 1 143 17 is_stmt 0 view .LVU160
+ 799 001a 2369     		ldr	r3, [r4, #16]
+ 800 001c 43F04003 		orr	r3, r3, #64
+ 801 0020 2361     		str	r3, [r4, #16]
+ 146:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 802              		.loc 1 146 9 is_stmt 1 view .LVU161
+ 146:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 803              		.loc 1 146 21 is_stmt 0 view .LVU162
+ 804 0022 FFF7FEFF 		bl	fmc_ready_wait
+ 805              	.LVL29:
+ 149:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 806              		.loc 1 149 9 is_stmt 1 view .LVU163
+ 149:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 807              		.loc 1 149 17 is_stmt 0 view .LVU164
+ 808 0026 2369     		ldr	r3, [r4, #16]
+ARM GAS  /tmp/cc8MuCQG.s 			page 27
+
+
+ 809 0028 23F00403 		bic	r3, r3, #4
+ 810 002c 2361     		str	r3, [r4, #16]
+ 811              	.L70:
+ 153:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 812              		.loc 1 153 5 is_stmt 1 view .LVU165
+ 154:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 813              		.loc 1 154 1 is_stmt 0 view .LVU166
+ 814 002e 10BD     		pop	{r4, pc}
+ 815              	.L72:
+ 816              		.align	2
+ 817              	.L71:
+ 818 0030 00200240 		.word	1073881088
+ 819              		.cfi_endproc
+ 820              	.LFE62:
+ 822              		.section	.text.fmc_word_program,"ax",%progbits
+ 823              		.align	1
+ 824              		.global	fmc_word_program
+ 825              		.syntax unified
+ 826              		.thumb
+ 827              		.thumb_func
+ 828              		.fpu softvfp
+ 830              	fmc_word_program:
+ 831              	.LVL30:
+ 832              	.LFB63:
+ 164:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 833              		.loc 1 164 1 is_stmt 1 view -0
+ 834              		.cfi_startproc
+ 835              		@ args = 0, pretend = 0, frame = 0
+ 836              		@ frame_needed = 0, uses_anonymous_args = 0
+ 165:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 837              		.loc 1 165 5 view .LVU168
+ 164:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 838              		.loc 1 164 1 is_stmt 0 view .LVU169
+ 839 0000 70B5     		push	{r4, r5, r6, lr}
+ 840              	.LCFI7:
+ 841              		.cfi_def_cfa_offset 16
+ 842              		.cfi_offset 4, -16
+ 843              		.cfi_offset 5, -12
+ 844              		.cfi_offset 6, -8
+ 845              		.cfi_offset 14, -4
+ 164:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 846              		.loc 1 164 1 view .LVU170
+ 847 0002 0546     		mov	r5, r0
+ 165:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 848              		.loc 1 165 32 view .LVU171
+ 849 0004 4FF47020 		mov	r0, #983040
+ 850              	.LVL31:
+ 164:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 851              		.loc 1 164 1 view .LVU172
+ 852 0008 0E46     		mov	r6, r1
+ 165:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 853              		.loc 1 165 32 view .LVU173
+ 854 000a FFF7FEFF 		bl	fmc_ready_wait
+ 855              	.LVL32:
+ 167:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* set the PG bit to start program */
+ 856              		.loc 1 167 5 is_stmt 1 view .LVU174
+ 167:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* set the PG bit to start program */
+ARM GAS  /tmp/cc8MuCQG.s 			page 28
+
+
+ 857              		.loc 1 167 7 is_stmt 0 view .LVU175
+ 858 000e 68B9     		cbnz	r0, .L74
+ 169:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 859              		.loc 1 169 9 is_stmt 1 view .LVU176
+ 169:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 860              		.loc 1 169 17 is_stmt 0 view .LVU177
+ 861 0010 074C     		ldr	r4, .L75
+ 174:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 862              		.loc 1 174 21 view .LVU178
+ 863 0012 4FF47020 		mov	r0, #983040
+ 864              	.LVL33:
+ 169:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 865              		.loc 1 169 17 view .LVU179
+ 866 0016 2369     		ldr	r3, [r4, #16]
+ 867 0018 43F00103 		orr	r3, r3, #1
+ 868 001c 2361     		str	r3, [r4, #16]
+ 171:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 869              		.loc 1 171 9 is_stmt 1 view .LVU180
+ 171:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 870              		.loc 1 171 24 is_stmt 0 view .LVU181
+ 871 001e 2E60     		str	r6, [r5]
+ 174:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 872              		.loc 1 174 9 is_stmt 1 view .LVU182
+ 174:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 873              		.loc 1 174 21 is_stmt 0 view .LVU183
+ 874 0020 FFF7FEFF 		bl	fmc_ready_wait
+ 875              	.LVL34:
+ 177:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     } 
+ 876              		.loc 1 177 9 is_stmt 1 view .LVU184
+ 177:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     } 
+ 877              		.loc 1 177 17 is_stmt 0 view .LVU185
+ 878 0024 2369     		ldr	r3, [r4, #16]
+ 879 0026 23F00103 		bic	r3, r3, #1
+ 880 002a 2361     		str	r3, [r4, #16]
+ 881              	.L74:
+ 181:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 882              		.loc 1 181 5 is_stmt 1 view .LVU186
+ 182:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 883              		.loc 1 182 1 is_stmt 0 view .LVU187
+ 884 002c 70BD     		pop	{r4, r5, r6, pc}
+ 885              	.LVL35:
+ 886              	.L76:
+ 182:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 887              		.loc 1 182 1 view .LVU188
+ 888 002e 00BF     		.align	2
+ 889              	.L75:
+ 890 0030 00200240 		.word	1073881088
+ 891              		.cfi_endproc
+ 892              	.LFE63:
+ 894              		.section	.text.fmc_halfword_program,"ax",%progbits
+ 895              		.align	1
+ 896              		.global	fmc_halfword_program
+ 897              		.syntax unified
+ 898              		.thumb
+ 899              		.thumb_func
+ 900              		.fpu softvfp
+ 902              	fmc_halfword_program:
+ARM GAS  /tmp/cc8MuCQG.s 			page 29
+
+
+ 903              	.LVL36:
+ 904              	.LFB64:
+ 192:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 905              		.loc 1 192 1 is_stmt 1 view -0
+ 906              		.cfi_startproc
+ 907              		@ args = 0, pretend = 0, frame = 0
+ 908              		@ frame_needed = 0, uses_anonymous_args = 0
+ 193:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 909              		.loc 1 193 5 view .LVU190
+ 192:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 910              		.loc 1 192 1 is_stmt 0 view .LVU191
+ 911 0000 70B5     		push	{r4, r5, r6, lr}
+ 912              	.LCFI8:
+ 913              		.cfi_def_cfa_offset 16
+ 914              		.cfi_offset 4, -16
+ 915              		.cfi_offset 5, -12
+ 916              		.cfi_offset 6, -8
+ 917              		.cfi_offset 14, -4
+ 192:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 918              		.loc 1 192 1 view .LVU192
+ 919 0002 0546     		mov	r5, r0
+ 193:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 920              		.loc 1 193 32 view .LVU193
+ 921 0004 4FF47020 		mov	r0, #983040
+ 922              	.LVL37:
+ 192:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 923              		.loc 1 192 1 view .LVU194
+ 924 0008 0E46     		mov	r6, r1
+ 193:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 925              		.loc 1 193 32 view .LVU195
+ 926 000a FFF7FEFF 		bl	fmc_ready_wait
+ 927              	.LVL38:
+ 195:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* set the PG bit to start program */
+ 928              		.loc 1 195 5 is_stmt 1 view .LVU196
+ 195:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* set the PG bit to start program */
+ 929              		.loc 1 195 7 is_stmt 0 view .LVU197
+ 930 000e 68B9     		cbnz	r0, .L78
+ 197:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 931              		.loc 1 197 9 is_stmt 1 view .LVU198
+ 197:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 932              		.loc 1 197 17 is_stmt 0 view .LVU199
+ 933 0010 074C     		ldr	r4, .L79
+ 202:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 934              		.loc 1 202 21 view .LVU200
+ 935 0012 4FF47020 		mov	r0, #983040
+ 936              	.LVL39:
+ 197:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 937              		.loc 1 197 17 view .LVU201
+ 938 0016 2369     		ldr	r3, [r4, #16]
+ 939 0018 43F00103 		orr	r3, r3, #1
+ 940 001c 2361     		str	r3, [r4, #16]
+ 199:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 941              		.loc 1 199 9 is_stmt 1 view .LVU202
+ 199:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 942              		.loc 1 199 24 is_stmt 0 view .LVU203
+ 943 001e 2E80     		strh	r6, [r5]	@ movhi
+ 202:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ARM GAS  /tmp/cc8MuCQG.s 			page 30
+
+
+ 944              		.loc 1 202 9 is_stmt 1 view .LVU204
+ 202:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 945              		.loc 1 202 21 is_stmt 0 view .LVU205
+ 946 0020 FFF7FEFF 		bl	fmc_ready_wait
+ 947              	.LVL40:
+ 205:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     } 
+ 948              		.loc 1 205 9 is_stmt 1 view .LVU206
+ 205:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     } 
+ 949              		.loc 1 205 17 is_stmt 0 view .LVU207
+ 950 0024 2369     		ldr	r3, [r4, #16]
+ 951 0026 23F00103 		bic	r3, r3, #1
+ 952 002a 2361     		str	r3, [r4, #16]
+ 953              	.L78:
+ 209:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 954              		.loc 1 209 5 is_stmt 1 view .LVU208
+ 210:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 955              		.loc 1 210 1 is_stmt 0 view .LVU209
+ 956 002c 70BD     		pop	{r4, r5, r6, pc}
+ 957              	.LVL41:
+ 958              	.L80:
+ 210:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 959              		.loc 1 210 1 view .LVU210
+ 960 002e 00BF     		.align	2
+ 961              	.L79:
+ 962 0030 00200240 		.word	1073881088
+ 963              		.cfi_endproc
+ 964              	.LFE64:
+ 966              		.section	.text.ob_erase,"ax",%progbits
+ 967              		.align	1
+ 968              		.global	ob_erase
+ 969              		.syntax unified
+ 970              		.thumb
+ 971              		.thumb_func
+ 972              		.fpu softvfp
+ 974              	ob_erase:
+ 975              	.LFB68:
+ 294:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     uint16_t fmc_spc;
+ 976              		.loc 1 294 1 is_stmt 1 view -0
+ 977              		.cfi_startproc
+ 978              		@ args = 0, pretend = 0, frame = 0
+ 979              		@ frame_needed = 0, uses_anonymous_args = 0
+ 295:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     uint32_t fmc_plevel = ob_obstat_plevel_get();
+ 980              		.loc 1 295 5 view .LVU212
+ 296:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 981              		.loc 1 296 5 view .LVU213
+ 982              	.LBB10:
+ 983              	.LBI10:
+ 549:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 984              		.loc 1 549 10 view .LVU214
+ 985              	.LBB11:
+ 551:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 986              		.loc 1 551 5 view .LVU215
+ 987              	.LBE11:
+ 988              	.LBE10:
+ 294:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     uint16_t fmc_spc;
+ 989              		.loc 1 294 1 is_stmt 0 view .LVU216
+ 990 0000 38B5     		push	{r3, r4, r5, lr}
+ARM GAS  /tmp/cc8MuCQG.s 			page 31
+
+
+ 991              	.LCFI9:
+ 992              		.cfi_def_cfa_offset 16
+ 993              		.cfi_offset 3, -16
+ 994              		.cfi_offset 4, -12
+ 995              		.cfi_offset 5, -8
+ 996              		.cfi_offset 14, -4
+ 997              	.LBB14:
+ 998              	.LBB12:
+ 551:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 999              		.loc 1 551 24 view .LVU217
+ 1000 0002 194C     		ldr	r4, .L95
+ 1001              	.LBE12:
+ 1002              	.LBE14:
+ 297:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1003              		.loc 1 297 32 view .LVU218
+ 1004 0004 4FF47020 		mov	r0, #983040
+ 1005              	.LBB15:
+ 1006              	.LBB13:
+ 551:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 1007              		.loc 1 551 24 view .LVU219
+ 1008 0008 E569     		ldr	r5, [r4, #28]
+ 1009 000a 05F00605 		and	r5, r5, #6
+ 1010              	.LVL42:
+ 551:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 1011              		.loc 1 551 24 view .LVU220
+ 1012              	.LBE13:
+ 1013              	.LBE15:
+ 297:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1014              		.loc 1 297 5 is_stmt 1 view .LVU221
+ 297:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1015              		.loc 1 297 32 is_stmt 0 view .LVU222
+ 1016 000e FFF7FEFF 		bl	fmc_ready_wait
+ 1017              	.LVL43:
+ 300:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_spc = FMC_NSPC;
+ 1018              		.loc 1 300 5 is_stmt 1 view .LVU223
+ 300:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_spc = FMC_NSPC;
+ 1019              		.loc 1 300 7 is_stmt 0 view .LVU224
+ 1020 0012 2DB3     		cbz	r5, .L85
+ 302:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_spc = FMC_LSPC;
+ 1021              		.loc 1 302 11 is_stmt 1 view .LVU225
+ 302:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_spc = FMC_LSPC;
+ 1022              		.loc 1 302 13 is_stmt 0 view .LVU226
+ 1023 0014 022D     		cmp	r5, #2
+ 1024 0016 25D1     		bne	.L86
+ 303:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }else{
+ 1025              		.loc 1 303 17 view .LVU227
+ 1026 0018 BB25     		movs	r5, #187
+ 1027              	.LVL44:
+ 1028              	.L82:
+ 309:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* start erase the option byte */
+ 1029              		.loc 1 309 5 is_stmt 1 view .LVU228
+ 309:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* start erase the option byte */
+ 1030              		.loc 1 309 7 is_stmt 0 view .LVU229
+ 1031 001a 00BB     		cbnz	r0, .L83
+ 311:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_START;
+ 1032              		.loc 1 311 9 is_stmt 1 view .LVU230
+ 311:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_START;
+ARM GAS  /tmp/cc8MuCQG.s 			page 32
+
+
+ 1033              		.loc 1 311 17 is_stmt 0 view .LVU231
+ 1034 001c 2369     		ldr	r3, [r4, #16]
+ 315:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1035              		.loc 1 315 21 view .LVU232
+ 1036 001e 4FF47020 		mov	r0, #983040
+ 1037              	.LVL45:
+ 311:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_START;
+ 1038              		.loc 1 311 17 view .LVU233
+ 1039 0022 43F02003 		orr	r3, r3, #32
+ 1040 0026 2361     		str	r3, [r4, #16]
+ 312:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1041              		.loc 1 312 9 is_stmt 1 view .LVU234
+ 312:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1042              		.loc 1 312 17 is_stmt 0 view .LVU235
+ 1043 0028 2369     		ldr	r3, [r4, #16]
+ 1044 002a 43F04003 		orr	r3, r3, #64
+ 1045 002e 2361     		str	r3, [r4, #16]
+ 315:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1046              		.loc 1 315 9 is_stmt 1 view .LVU236
+ 315:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1047              		.loc 1 315 21 is_stmt 0 view .LVU237
+ 1048 0030 FFF7FEFF 		bl	fmc_ready_wait
+ 1049              	.LVL46:
+ 317:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* reset the OBER bit */
+ 1050              		.loc 1 317 9 is_stmt 1 view .LVU238
+ 317:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* reset the OBER bit */
+ 1051              		.loc 1 317 11 is_stmt 0 view .LVU239
+ 1052 0034 68B9     		cbnz	r0, .L84
+ 319:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****        
+ 1053              		.loc 1 319 13 is_stmt 1 view .LVU240
+ 319:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****        
+ 1054              		.loc 1 319 21 is_stmt 0 view .LVU241
+ 1055 0036 2369     		ldr	r3, [r4, #16]
+ 328:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****  
+ 1056              		.loc 1 328 25 view .LVU242
+ 1057 0038 4FF47020 		mov	r0, #983040
+ 1058              	.LVL47:
+ 319:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****        
+ 1059              		.loc 1 319 21 view .LVU243
+ 1060 003c 23F02003 		bic	r3, r3, #32
+ 1061 0040 2361     		str	r3, [r4, #16]
+ 322:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1062              		.loc 1 322 13 is_stmt 1 view .LVU244
+ 322:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1063              		.loc 1 322 21 is_stmt 0 view .LVU245
+ 1064 0042 2369     		ldr	r3, [r4, #16]
+ 1065 0044 43F01003 		orr	r3, r3, #16
+ 1066 0048 2361     		str	r3, [r4, #16]
+ 325:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1067              		.loc 1 325 13 is_stmt 1 view .LVU246
+ 325:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1068              		.loc 1 325 20 is_stmt 0 view .LVU247
+ 1069 004a 084B     		ldr	r3, .L95+4
+ 1070 004c 1D80     		strh	r5, [r3]	@ movhi
+ 328:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****  
+ 1071              		.loc 1 328 13 is_stmt 1 view .LVU248
+ 328:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****  
+ARM GAS  /tmp/cc8MuCQG.s 			page 33
+
+
+ 1072              		.loc 1 328 25 is_stmt 0 view .LVU249
+ 1073 004e FFF7FEFF 		bl	fmc_ready_wait
+ 1074              	.LVL48:
+ 330:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 /* reset the OBPG bit */
+ 1075              		.loc 1 330 13 is_stmt 1 view .LVU250
+ 1076              	.L84:
+ 335:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 /* reset the OBPG bit */
+ 1077              		.loc 1 335 13 view .LVU251
+ 335:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 /* reset the OBPG bit */
+ 1078              		.loc 1 335 15 is_stmt 0 view .LVU252
+ 1079 0052 0428     		cmp	r0, #4
+ 1080 0054 03D0     		beq	.L83
+ 337:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             }
+ 1081              		.loc 1 337 17 is_stmt 1 view .LVU253
+ 337:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             }
+ 1082              		.loc 1 337 25 is_stmt 0 view .LVU254
+ 1083 0056 2369     		ldr	r3, [r4, #16]
+ 1084 0058 23F01003 		bic	r3, r3, #16
+ 1085 005c 2361     		str	r3, [r4, #16]
+ 1086              	.LVL49:
+ 1087              	.L83:
+ 342:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 1088              		.loc 1 342 5 is_stmt 1 view .LVU255
+ 343:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1089              		.loc 1 343 1 is_stmt 0 view .LVU256
+ 1090 005e 38BD     		pop	{r3, r4, r5, pc}
+ 1091              	.LVL50:
+ 1092              	.L85:
+ 301:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }else if(OB_OBSTAT_PLEVEL_LOW == fmc_plevel){
+ 1093              		.loc 1 301 17 view .LVU257
+ 1094 0060 A525     		movs	r5, #165
+ 1095              	.LVL51:
+ 301:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }else if(OB_OBSTAT_PLEVEL_LOW == fmc_plevel){
+ 1096              		.loc 1 301 17 view .LVU258
+ 1097 0062 DAE7     		b	.L82
+ 1098              	.LVL52:
+ 1099              	.L86:
+ 306:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 1100              		.loc 1 306 19 view .LVU259
+ 1101 0064 0520     		movs	r0, #5
+ 1102              	.LVL53:
+ 306:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 1103              		.loc 1 306 19 view .LVU260
+ 1104 0066 FAE7     		b	.L83
+ 1105              	.L96:
+ 1106              		.align	2
+ 1107              	.L95:
+ 1108 0068 00200240 		.word	1073881088
+ 1109 006c 00F8FF1F 		.word	536868864
+ 1110              		.cfi_endproc
+ 1111              	.LFE68:
+ 1113              		.section	.text.ob_write_protection_enable,"ax",%progbits
+ 1114              		.align	1
+ 1115              		.global	ob_write_protection_enable
+ 1116              		.syntax unified
+ 1117              		.thumb
+ 1118              		.thumb_func
+ARM GAS  /tmp/cc8MuCQG.s 			page 34
+
+
+ 1119              		.fpu softvfp
+ 1121              	ob_write_protection_enable:
+ 1122              	.LVL54:
+ 1123              	.LFB69:
+ 352:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     uint16_t ob_wrp0, ob_wrp1;
+ 1124              		.loc 1 352 1 is_stmt 1 view -0
+ 1125              		.cfi_startproc
+ 1126              		@ args = 0, pretend = 0, frame = 0
+ 1127              		@ frame_needed = 0, uses_anonymous_args = 0
+ 353:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1128              		.loc 1 353 5 view .LVU262
+ 355:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1129              		.loc 1 355 5 view .LVU263
+ 352:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     uint16_t ob_wrp0, ob_wrp1;
+ 1130              		.loc 1 352 1 is_stmt 0 view .LVU264
+ 1131 0000 10B5     		push	{r4, lr}
+ 1132              	.LCFI10:
+ 1133              		.cfi_def_cfa_offset 8
+ 1134              		.cfi_offset 4, -8
+ 1135              		.cfi_offset 14, -4
+ 352:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     uint16_t ob_wrp0, ob_wrp1;
+ 1136              		.loc 1 352 1 view .LVU265
+ 1137 0002 0446     		mov	r4, r0
+ 355:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1138              		.loc 1 355 32 view .LVU266
+ 1139 0004 4FF47020 		mov	r0, #983040
+ 1140              	.LVL55:
+ 355:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1141              		.loc 1 355 32 view .LVU267
+ 1142 0008 FFF7FEFF 		bl	fmc_ready_wait
+ 1143              	.LVL56:
+ 357:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     ob_wrp0 = (uint16_t)(ob_wp & OB_LWP);
+ 1144              		.loc 1 357 5 is_stmt 1 view .LVU268
+ 358:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     ob_wrp1 = (uint16_t)((ob_wp & OB_HWP) >> 8);
+ 1145              		.loc 1 358 5 view .LVU269
+ 359:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1146              		.loc 1 359 5 view .LVU270
+ 361:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* set the OBPG bit*/
+ 1147              		.loc 1 361 5 view .LVU271
+ 361:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* set the OBPG bit*/
+ 1148              		.loc 1 361 7 is_stmt 0 view .LVU272
+ 1149 000c E8B9     		cbnz	r0, .L98
+ 357:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     ob_wrp0 = (uint16_t)(ob_wp & OB_LWP);
+ 1150              		.loc 1 357 13 view .LVU273
+ 1151 000e E443     		mvns	r4, r4
+ 1152              	.LVL57:
+ 363:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1153              		.loc 1 363 17 view .LVU274
+ 1154 0010 1249     		ldr	r1, .L111
+ 358:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     ob_wrp1 = (uint16_t)((ob_wp & OB_HWP) >> 8);
+ 1155              		.loc 1 358 13 view .LVU275
+ 1156 0012 E2B2     		uxtb	r2, r4
+ 363:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1157              		.loc 1 363 9 is_stmt 1 view .LVU276
+ 363:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1158              		.loc 1 363 17 is_stmt 0 view .LVU277
+ 1159 0014 0B69     		ldr	r3, [r1, #16]
+ARM GAS  /tmp/cc8MuCQG.s 			page 35
+
+
+ 365:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             OB_WP0 = ob_wrp0;
+ 1160              		.loc 1 365 11 view .LVU278
+ 1161 0016 FF2A     		cmp	r2, #255
+ 363:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1162              		.loc 1 363 17 view .LVU279
+ 1163 0018 43F01003 		orr	r3, r3, #16
+ 1164 001c 0B61     		str	r3, [r1, #16]
+ 365:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             OB_WP0 = ob_wrp0;
+ 1165              		.loc 1 365 9 is_stmt 1 view .LVU280
+ 365:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             OB_WP0 = ob_wrp0;
+ 1166              		.loc 1 365 11 is_stmt 0 view .LVU281
+ 1167 001e 0AD1     		bne	.L99
+ 1168              	.L102:
+ 359:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1169              		.loc 1 359 13 view .LVU282
+ 1170 0020 C4F30724 		ubfx	r4, r4, #8, #8
+ 1171              	.LVL58:
+ 371:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             OB_WP1 = ob_wrp1;
+ 1172              		.loc 1 371 37 view .LVU283
+ 1173 0024 FF2C     		cmp	r4, #255
+ 1174 0026 11D1     		bne	.L100
+ 1175 0028 0020     		movs	r0, #0
+ 1176              	.L101:
+ 379:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 1177              		.loc 1 379 13 is_stmt 1 view .LVU284
+ 379:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 1178              		.loc 1 379 21 is_stmt 0 view .LVU285
+ 1179 002a 0C4A     		ldr	r2, .L111
+ 1180 002c 1369     		ldr	r3, [r2, #16]
+ 1181 002e 23F01003 		bic	r3, r3, #16
+ 1182 0032 1361     		str	r3, [r2, #16]
+ 1183 0034 09E0     		b	.L98
+ 1184              	.LVL59:
+ 1185              	.L99:
+ 366:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1186              		.loc 1 366 13 is_stmt 1 view .LVU286
+ 366:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1187              		.loc 1 366 20 is_stmt 0 view .LVU287
+ 1188 0036 0A4B     		ldr	r3, .L111+4
+ 369:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 1189              		.loc 1 369 25 view .LVU288
+ 1190 0038 4FF47020 		mov	r0, #983040
+ 1191              	.LVL60:
+ 366:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1192              		.loc 1 366 20 view .LVU289
+ 1193 003c 1A81     		strh	r2, [r3, #8]	@ movhi
+ 369:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 1194              		.loc 1 369 13 is_stmt 1 view .LVU290
+ 369:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 1195              		.loc 1 369 25 is_stmt 0 view .LVU291
+ 1196 003e FFF7FEFF 		bl	fmc_ready_wait
+ 1197              	.LVL61:
+ 371:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             OB_WP1 = ob_wrp1;
+ 1198              		.loc 1 371 9 is_stmt 1 view .LVU292
+ 371:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             OB_WP1 = ob_wrp1;
+ 1199              		.loc 1 371 11 is_stmt 0 view .LVU293
+ 1200 0042 0028     		cmp	r0, #0
+ARM GAS  /tmp/cc8MuCQG.s 			page 36
+
+
+ 1201 0044 ECD0     		beq	.L102
+ 1202              	.LVL62:
+ 1203              	.L103:
+ 377:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* reset the OBPG bit */
+ 1204              		.loc 1 377 9 is_stmt 1 view .LVU294
+ 377:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* reset the OBPG bit */
+ 1205              		.loc 1 377 11 is_stmt 0 view .LVU295
+ 1206 0046 0428     		cmp	r0, #4
+ 1207 0048 EFD1     		bne	.L101
+ 1208              	.LVL63:
+ 1209              	.L98:
+ 383:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 1210              		.loc 1 383 5 is_stmt 1 view .LVU296
+ 384:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1211              		.loc 1 384 1 is_stmt 0 view .LVU297
+ 1212 004a 10BD     		pop	{r4, pc}
+ 1213              	.LVL64:
+ 1214              	.L100:
+ 372:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       
+ 1215              		.loc 1 372 13 is_stmt 1 view .LVU298
+ 372:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       
+ 1216              		.loc 1 372 20 is_stmt 0 view .LVU299
+ 1217 004c 044B     		ldr	r3, .L111+4
+ 375:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 1218              		.loc 1 375 25 view .LVU300
+ 1219 004e 4FF47020 		mov	r0, #983040
+ 372:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       
+ 1220              		.loc 1 372 20 view .LVU301
+ 1221 0052 5C81     		strh	r4, [r3, #10]	@ movhi
+ 375:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 1222              		.loc 1 375 13 is_stmt 1 view .LVU302
+ 375:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 1223              		.loc 1 375 25 is_stmt 0 view .LVU303
+ 1224 0054 FFF7FEFF 		bl	fmc_ready_wait
+ 1225              	.LVL65:
+ 375:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 1226              		.loc 1 375 25 view .LVU304
+ 1227 0058 F5E7     		b	.L103
+ 1228              	.L112:
+ 1229 005a 00BF     		.align	2
+ 1230              	.L111:
+ 1231 005c 00200240 		.word	1073881088
+ 1232 0060 00F8FF1F 		.word	536868864
+ 1233              		.cfi_endproc
+ 1234              	.LFE69:
+ 1236              		.section	.text.ob_security_protection_config,"ax",%progbits
+ 1237              		.align	1
+ 1238              		.global	ob_security_protection_config
+ 1239              		.syntax unified
+ 1240              		.thumb
+ 1241              		.thumb_func
+ 1242              		.fpu softvfp
+ 1244              	ob_security_protection_config:
+ 1245              	.LVL66:
+ 1246              	.LFB70:
+ 396:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 1247              		.loc 1 396 1 is_stmt 1 view -0
+ARM GAS  /tmp/cc8MuCQG.s 			page 37
+
+
+ 1248              		.cfi_startproc
+ 1249              		@ args = 0, pretend = 0, frame = 0
+ 1250              		@ frame_needed = 0, uses_anonymous_args = 0
+ 397:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1251              		.loc 1 397 5 view .LVU306
+ 396:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 1252              		.loc 1 396 1 is_stmt 0 view .LVU307
+ 1253 0000 38B5     		push	{r3, r4, r5, lr}
+ 1254              	.LCFI11:
+ 1255              		.cfi_def_cfa_offset 16
+ 1256              		.cfi_offset 3, -16
+ 1257              		.cfi_offset 4, -12
+ 1258              		.cfi_offset 5, -8
+ 1259              		.cfi_offset 14, -4
+ 1260              	.LBB16:
+ 1261              	.LBB17:
+ 551:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 1262              		.loc 1 551 24 view .LVU308
+ 1263 0002 1B4C     		ldr	r4, .L124
+ 1264              	.LBE17:
+ 1265              	.LBE16:
+ 396:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 1266              		.loc 1 396 1 view .LVU309
+ 1267 0004 0546     		mov	r5, r0
+ 397:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1268              		.loc 1 397 32 view .LVU310
+ 1269 0006 4FF47020 		mov	r0, #983040
+ 1270              	.LVL67:
+ 397:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1271              		.loc 1 397 32 view .LVU311
+ 1272 000a FFF7FEFF 		bl	fmc_ready_wait
+ 1273              	.LVL68:
+ 400:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_state = FMC_OB_HSPC;
+ 1274              		.loc 1 400 5 is_stmt 1 view .LVU312
+ 1275              	.LBB19:
+ 1276              	.LBI16:
+ 549:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** {
+ 1277              		.loc 1 549 10 view .LVU313
+ 1278              	.LBB18:
+ 551:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 1279              		.loc 1 551 5 view .LVU314
+ 551:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 1280              		.loc 1 551 24 is_stmt 0 view .LVU315
+ 1281 000e E369     		ldr	r3, [r4, #28]
+ 1282 0010 03F00603 		and	r3, r3, #6
+ 1283              	.LBE18:
+ 1284              	.LBE19:
+ 400:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         fmc_state = FMC_OB_HSPC;
+ 1285              		.loc 1 400 7 view .LVU316
+ 1286 0014 062B     		cmp	r3, #6
+ 1287 0016 29D0     		beq	.L116
+ 404:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* start erase the option byte */
+ 1288              		.loc 1 404 5 is_stmt 1 view .LVU317
+ 404:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* start erase the option byte */
+ 1289              		.loc 1 404 7 is_stmt 0 view .LVU318
+ 1290 0018 08BB     		cbnz	r0, .L114
+ 406:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_START;
+ARM GAS  /tmp/cc8MuCQG.s 			page 38
+
+
+ 1291              		.loc 1 406 9 is_stmt 1 view .LVU319
+ 406:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_START;
+ 1292              		.loc 1 406 17 is_stmt 0 view .LVU320
+ 1293 001a 2369     		ldr	r3, [r4, #16]
+ 410:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1294              		.loc 1 410 21 view .LVU321
+ 1295 001c 4FF47020 		mov	r0, #983040
+ 1296              	.LVL69:
+ 406:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         FMC_CTL |= FMC_CTL_START;
+ 1297              		.loc 1 406 17 view .LVU322
+ 1298 0020 43F02003 		orr	r3, r3, #32
+ 1299 0024 2361     		str	r3, [r4, #16]
+ 407:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1300              		.loc 1 407 9 is_stmt 1 view .LVU323
+ 407:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1301              		.loc 1 407 17 is_stmt 0 view .LVU324
+ 1302 0026 2369     		ldr	r3, [r4, #16]
+ 1303 0028 43F04003 		orr	r3, r3, #64
+ 1304 002c 2361     		str	r3, [r4, #16]
+ 410:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1305              		.loc 1 410 9 is_stmt 1 view .LVU325
+ 410:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1306              		.loc 1 410 21 is_stmt 0 view .LVU326
+ 1307 002e FFF7FEFF 		bl	fmc_ready_wait
+ 1308              	.LVL70:
+ 412:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         
+ 1309              		.loc 1 412 9 is_stmt 1 view .LVU327
+ 412:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         
+ 1310              		.loc 1 412 11 is_stmt 0 view .LVU328
+ 1311 0032 A8B9     		cbnz	r0, .L115
+ 415:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       
+ 1312              		.loc 1 415 13 is_stmt 1 view .LVU329
+ 415:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       
+ 1313              		.loc 1 415 21 is_stmt 0 view .LVU330
+ 1314 0034 2369     		ldr	r3, [r4, #16]
+ 420:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1315              		.loc 1 420 20 view .LVU331
+ 1316 0036 ADB2     		uxth	r5, r5
+ 415:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****       
+ 1317              		.loc 1 415 21 view .LVU332
+ 1318 0038 23F02003 		bic	r3, r3, #32
+ 1319 003c 2361     		str	r3, [r4, #16]
+ 418:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****        
+ 1320              		.loc 1 418 13 is_stmt 1 view .LVU333
+ 418:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****        
+ 1321              		.loc 1 418 21 is_stmt 0 view .LVU334
+ 1322 003e 2369     		ldr	r3, [r4, #16]
+ 423:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1323              		.loc 1 423 25 view .LVU335
+ 1324 0040 4FF47020 		mov	r0, #983040
+ 1325              	.LVL71:
+ 418:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****        
+ 1326              		.loc 1 418 21 view .LVU336
+ 1327 0044 43F01003 		orr	r3, r3, #16
+ 1328 0048 2361     		str	r3, [r4, #16]
+ 420:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1329              		.loc 1 420 13 is_stmt 1 view .LVU337
+ARM GAS  /tmp/cc8MuCQG.s 			page 39
+
+
+ 420:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1330              		.loc 1 420 20 is_stmt 0 view .LVU338
+ 1331 004a 0A4B     		ldr	r3, .L124+4
+ 1332 004c 1D80     		strh	r5, [r3]	@ movhi
+ 423:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1333              		.loc 1 423 13 is_stmt 1 view .LVU339
+ 423:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1334              		.loc 1 423 25 is_stmt 0 view .LVU340
+ 1335 004e FFF7FEFF 		bl	fmc_ready_wait
+ 1336              	.LVL72:
+ 425:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 /* reset the OBPG bit */
+ 1337              		.loc 1 425 13 is_stmt 1 view .LVU341
+ 425:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 /* reset the OBPG bit */
+ 1338              		.loc 1 425 15 is_stmt 0 view .LVU342
+ 1339 0052 0428     		cmp	r0, #4
+ 1340 0054 03D0     		beq	.L114
+ 427:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             }
+ 1341              		.loc 1 427 17 is_stmt 1 view .LVU343
+ 427:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             }
+ 1342              		.loc 1 427 25 is_stmt 0 view .LVU344
+ 1343 0056 2369     		ldr	r3, [r4, #16]
+ 1344 0058 23F01003 		bic	r3, r3, #16
+ 1345              	.L123:
+ 432:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             }
+ 1346              		.loc 1 432 25 view .LVU345
+ 1347 005c 2361     		str	r3, [r4, #16]
+ 1348              	.LVL73:
+ 1349              	.L114:
+ 437:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 1350              		.loc 1 437 5 is_stmt 1 view .LVU346
+ 438:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1351              		.loc 1 438 1 is_stmt 0 view .LVU347
+ 1352 005e 38BD     		pop	{r3, r4, r5, pc}
+ 1353              	.L115:
+ 430:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 /* reset the OBER bit */
+ 1354              		.loc 1 430 13 is_stmt 1 view .LVU348
+ 430:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****                 /* reset the OBER bit */
+ 1355              		.loc 1 430 15 is_stmt 0 view .LVU349
+ 1356 0060 0428     		cmp	r0, #4
+ 1357 0062 FCD0     		beq	.L114
+ 432:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             }
+ 1358              		.loc 1 432 17 is_stmt 1 view .LVU350
+ 432:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             }
+ 1359              		.loc 1 432 25 is_stmt 0 view .LVU351
+ 1360 0064 2369     		ldr	r3, [r4, #16]
+ 1361 0066 23F02003 		bic	r3, r3, #32
+ 1362 006a F7E7     		b	.L123
+ 1363              	.L116:
+ 401:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 1364              		.loc 1 401 19 view .LVU352
+ 1365 006c 0520     		movs	r0, #5
+ 1366              	.LVL74:
+ 401:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     }
+ 1367              		.loc 1 401 19 view .LVU353
+ 1368 006e F6E7     		b	.L114
+ 1369              	.L125:
+ 1370              		.align	2
+ARM GAS  /tmp/cc8MuCQG.s 			page 40
+
+
+ 1371              	.L124:
+ 1372 0070 00200240 		.word	1073881088
+ 1373 0074 00F8FF1F 		.word	536868864
+ 1374              		.cfi_endproc
+ 1375              	.LFE70:
+ 1377              		.section	.text.ob_user_write,"ax",%progbits
+ 1378              		.align	1
+ 1379              		.global	ob_user_write
+ 1380              		.syntax unified
+ 1381              		.thumb
+ 1382              		.thumb_func
+ 1383              		.fpu softvfp
+ 1385              	ob_user_write:
+ 1386              	.LVL75:
+ 1387              	.LFB71:
+ 459:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 1388              		.loc 1 459 1 is_stmt 1 view -0
+ 1389              		.cfi_startproc
+ 1390              		@ args = 0, pretend = 0, frame = 0
+ 1391              		@ frame_needed = 0, uses_anonymous_args = 0
+ 460:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1392              		.loc 1 460 5 view .LVU355
+ 459:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 1393              		.loc 1 459 1 is_stmt 0 view .LVU356
+ 1394 0000 38B5     		push	{r3, r4, r5, lr}
+ 1395              	.LCFI12:
+ 1396              		.cfi_def_cfa_offset 16
+ 1397              		.cfi_offset 3, -16
+ 1398              		.cfi_offset 4, -12
+ 1399              		.cfi_offset 5, -8
+ 1400              		.cfi_offset 14, -4
+ 459:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 1401              		.loc 1 459 1 view .LVU357
+ 1402 0002 0446     		mov	r4, r0
+ 460:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1403              		.loc 1 460 32 view .LVU358
+ 1404 0004 4FF47020 		mov	r0, #983040
+ 1405              	.LVL76:
+ 460:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1406              		.loc 1 460 32 view .LVU359
+ 1407 0008 FFF7FEFF 		bl	fmc_ready_wait
+ 1408              	.LVL77:
+ 462:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* set the OBPG bit */
+ 1409              		.loc 1 462 5 is_stmt 1 view .LVU360
+ 462:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* set the OBPG bit */
+ 1410              		.loc 1 462 7 is_stmt 0 view .LVU361
+ 1411 000c 90B9     		cbnz	r0, .L127
+ 464:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1412              		.loc 1 464 9 is_stmt 1 view .LVU362
+ 464:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1413              		.loc 1 464 17 is_stmt 0 view .LVU363
+ 1414 000e 0A4D     		ldr	r5, .L131
+ 466:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 1415              		.loc 1 466 19 view .LVU364
+ 1416 0010 44F08804 		orr	r4, r4, #136
+ 464:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1417              		.loc 1 464 17 view .LVU365
+ARM GAS  /tmp/cc8MuCQG.s 			page 41
+
+
+ 1418 0014 2B69     		ldr	r3, [r5, #16]
+ 469:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1419              		.loc 1 469 21 view .LVU366
+ 1420 0016 4FF47020 		mov	r0, #983040
+ 1421              	.LVL78:
+ 464:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1422              		.loc 1 464 17 view .LVU367
+ 1423 001a 43F01003 		orr	r3, r3, #16
+ 1424 001e 2B61     		str	r3, [r5, #16]
+ 466:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 1425              		.loc 1 466 9 is_stmt 1 view .LVU368
+ 466:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****   
+ 1426              		.loc 1 466 17 is_stmt 0 view .LVU369
+ 1427 0020 064B     		ldr	r3, .L131+4
+ 1428 0022 5C80     		strh	r4, [r3, #2]	@ movhi
+ 469:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1429              		.loc 1 469 9 is_stmt 1 view .LVU370
+ 469:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1430              		.loc 1 469 21 is_stmt 0 view .LVU371
+ 1431 0024 FFF7FEFF 		bl	fmc_ready_wait
+ 1432              	.LVL79:
+ 471:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* reset the OBPG bit */
+ 1433              		.loc 1 471 9 is_stmt 1 view .LVU372
+ 471:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* reset the OBPG bit */
+ 1434              		.loc 1 471 11 is_stmt 0 view .LVU373
+ 1435 0028 0428     		cmp	r0, #4
+ 473:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 1436              		.loc 1 473 13 is_stmt 1 view .LVU374
+ 473:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 1437              		.loc 1 473 21 is_stmt 0 view .LVU375
+ 1438 002a 1EBF     		ittt	ne
+ 1439 002c 2B69     		ldrne	r3, [r5, #16]
+ 1440 002e 23F01003 		bicne	r3, r3, #16
+ 1441 0032 2B61     		strne	r3, [r5, #16]
+ 1442              	.L127:
+ 477:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 1443              		.loc 1 477 5 is_stmt 1 view .LVU376
+ 478:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1444              		.loc 1 478 1 is_stmt 0 view .LVU377
+ 1445 0034 38BD     		pop	{r3, r4, r5, pc}
+ 1446              	.L132:
+ 1447 0036 00BF     		.align	2
+ 1448              	.L131:
+ 1449 0038 00200240 		.word	1073881088
+ 1450 003c 00F8FF1F 		.word	536868864
+ 1451              		.cfi_endproc
+ 1452              	.LFE71:
+ 1454              		.section	.text.ob_data_program,"ax",%progbits
+ 1455              		.align	1
+ 1456              		.global	ob_data_program
+ 1457              		.syntax unified
+ 1458              		.thumb
+ 1459              		.thumb_func
+ 1460              		.fpu softvfp
+ 1462              	ob_data_program:
+ 1463              	.LVL80:
+ 1464              	.LFB72:
+ARM GAS  /tmp/cc8MuCQG.s 			page 42
+
+
+ 490:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 1465              		.loc 1 490 1 is_stmt 1 view -0
+ 1466              		.cfi_startproc
+ 1467              		@ args = 0, pretend = 0, frame = 0
+ 1468              		@ frame_needed = 0, uses_anonymous_args = 0
+ 491:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1469              		.loc 1 491 5 view .LVU379
+ 490:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 1470              		.loc 1 490 1 is_stmt 0 view .LVU380
+ 1471 0000 70B5     		push	{r4, r5, r6, lr}
+ 1472              	.LCFI13:
+ 1473              		.cfi_def_cfa_offset 16
+ 1474              		.cfi_offset 4, -16
+ 1475              		.cfi_offset 5, -12
+ 1476              		.cfi_offset 6, -8
+ 1477              		.cfi_offset 14, -4
+ 490:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 1478              		.loc 1 490 1 view .LVU381
+ 1479 0002 0646     		mov	r6, r0
+ 491:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1480              		.loc 1 491 32 view .LVU382
+ 1481 0004 4FF47020 		mov	r0, #983040
+ 1482              	.LVL81:
+ 490:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     fmc_state_enum fmc_state = fmc_ready_wait(FMC_TIMEOUT_COUNT);
+ 1483              		.loc 1 490 1 view .LVU383
+ 1484 0008 0C46     		mov	r4, r1
+ 491:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1485              		.loc 1 491 32 view .LVU384
+ 1486 000a FFF7FEFF 		bl	fmc_ready_wait
+ 1487              	.LVL82:
+ 493:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* set the OBPG bit */
+ 1488              		.loc 1 493 5 is_stmt 1 view .LVU385
+ 493:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         /* set the OBPG bit */
+ 1489              		.loc 1 493 7 is_stmt 0 view .LVU386
+ 1490 000e 80B9     		cbnz	r0, .L134
+ 495:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         REG16(address) = data;
+ 1491              		.loc 1 495 9 is_stmt 1 view .LVU387
+ 495:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         REG16(address) = data;
+ 1492              		.loc 1 495 17 is_stmt 0 view .LVU388
+ 1493 0010 084D     		ldr	r5, .L138
+ 496:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1494              		.loc 1 496 24 view .LVU389
+ 1495 0012 A4B2     		uxth	r4, r4
+ 495:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         REG16(address) = data;
+ 1496              		.loc 1 495 17 view .LVU390
+ 1497 0014 2B69     		ldr	r3, [r5, #16]
+ 499:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1498              		.loc 1 499 21 view .LVU391
+ 1499 0016 4FF47020 		mov	r0, #983040
+ 1500              	.LVL83:
+ 495:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         REG16(address) = data;
+ 1501              		.loc 1 495 17 view .LVU392
+ 1502 001a 43F01003 		orr	r3, r3, #16
+ 1503 001e 2B61     		str	r3, [r5, #16]
+ 496:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1504              		.loc 1 496 9 is_stmt 1 view .LVU393
+ 496:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ARM GAS  /tmp/cc8MuCQG.s 			page 43
+
+
+ 1505              		.loc 1 496 24 is_stmt 0 view .LVU394
+ 1506 0020 3480     		strh	r4, [r6]	@ movhi
+ 499:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1507              		.loc 1 499 9 is_stmt 1 view .LVU395
+ 499:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****     
+ 1508              		.loc 1 499 21 is_stmt 0 view .LVU396
+ 1509 0022 FFF7FEFF 		bl	fmc_ready_wait
+ 1510              	.LVL84:
+ 501:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* reset the OBPG bit */
+ 1511              		.loc 1 501 9 is_stmt 1 view .LVU397
+ 501:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****             /* reset the OBPG bit */
+ 1512              		.loc 1 501 11 is_stmt 0 view .LVU398
+ 1513 0026 0428     		cmp	r0, #4
+ 503:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 1514              		.loc 1 503 13 is_stmt 1 view .LVU399
+ 503:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c ****         }
+ 1515              		.loc 1 503 21 is_stmt 0 view .LVU400
+ 1516 0028 1EBF     		ittt	ne
+ 1517 002a 2B69     		ldrne	r3, [r5, #16]
+ 1518 002c 23F01003 		bicne	r3, r3, #16
+ 1519 0030 2B61     		strne	r3, [r5, #16]
+ 1520              	.L134:
+ 507:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** }
+ 1521              		.loc 1 507 5 is_stmt 1 view .LVU401
+ 508:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1522              		.loc 1 508 1 is_stmt 0 view .LVU402
+ 1523 0032 70BD     		pop	{r4, r5, r6, pc}
+ 1524              	.LVL85:
+ 1525              	.L139:
+ 508:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_fmc.c **** 
+ 1526              		.loc 1 508 1 view .LVU403
+ 1527              		.align	2
+ 1528              	.L138:
+ 1529 0034 00200240 		.word	1073881088
+ 1530              		.cfi_endproc
+ 1531              	.LFE72:
+ 1533              		.text
+ 1534              	.Letext0:
+ 1535              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
+ 1536              		.file 3 "Drivers/CMSIS/Include/gd32f1x0.h"
+ 1537              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_fmc.h"
+ARM GAS  /tmp/cc8MuCQG.s 			page 44
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32f1x0_fmc.c
+     /tmp/cc8MuCQG.s:16     .text.fmc_unlock:0000000000000000 $t
+     /tmp/cc8MuCQG.s:24     .text.fmc_unlock:0000000000000000 fmc_unlock
+     /tmp/cc8MuCQG.s:52     .text.fmc_unlock:0000000000000014 $d
+     /tmp/cc8MuCQG.s:58     .text.fmc_lock:0000000000000000 $t
+     /tmp/cc8MuCQG.s:65     .text.fmc_lock:0000000000000000 fmc_lock
+     /tmp/cc8MuCQG.s:83     .text.fmc_lock:000000000000000c $d
+     /tmp/cc8MuCQG.s:88     .text.fmc_wscnt_set:0000000000000000 $t
+     /tmp/cc8MuCQG.s:95     .text.fmc_wscnt_set:0000000000000000 fmc_wscnt_set
+     /tmp/cc8MuCQG.s:124    .text.fmc_wscnt_set:0000000000000010 $d
+     /tmp/cc8MuCQG.s:129    .text.fmc_wait_state_enable:0000000000000000 $t
+     /tmp/cc8MuCQG.s:136    .text.fmc_wait_state_enable:0000000000000000 fmc_wait_state_enable
+     /tmp/cc8MuCQG.s:171    .text.fmc_wait_state_enable:000000000000001c $d
+     /tmp/cc8MuCQG.s:176    .text.fmc_wait_state_disable:0000000000000000 $t
+     /tmp/cc8MuCQG.s:183    .text.fmc_wait_state_disable:0000000000000000 fmc_wait_state_disable
+     /tmp/cc8MuCQG.s:218    .text.fmc_wait_state_disable:000000000000001c $d
+     /tmp/cc8MuCQG.s:223    .text.ob_unlock:0000000000000000 $t
+     /tmp/cc8MuCQG.s:230    .text.ob_unlock:0000000000000000 ob_unlock
+     /tmp/cc8MuCQG.s:257    .text.ob_unlock:0000000000000014 $d
+     /tmp/cc8MuCQG.s:263    .text.ob_lock:0000000000000000 $t
+     /tmp/cc8MuCQG.s:270    .text.ob_lock:0000000000000000 ob_lock
+     /tmp/cc8MuCQG.s:288    .text.ob_lock:000000000000000c $d
+     /tmp/cc8MuCQG.s:293    .text.ob_reset:0000000000000000 $t
+     /tmp/cc8MuCQG.s:300    .text.ob_reset:0000000000000000 ob_reset
+     /tmp/cc8MuCQG.s:318    .text.ob_reset:000000000000000c $d
+     /tmp/cc8MuCQG.s:323    .text.ob_user_get:0000000000000000 $t
+     /tmp/cc8MuCQG.s:330    .text.ob_user_get:0000000000000000 ob_user_get
+     /tmp/cc8MuCQG.s:347    .text.ob_user_get:000000000000000c $d
+     /tmp/cc8MuCQG.s:352    .text.ob_data_get:0000000000000000 $t
+     /tmp/cc8MuCQG.s:359    .text.ob_data_get:0000000000000000 ob_data_get
+     /tmp/cc8MuCQG.s:376    .text.ob_data_get:0000000000000008 $d
+     /tmp/cc8MuCQG.s:381    .text.ob_write_protection_get:0000000000000000 $t
+     /tmp/cc8MuCQG.s:388    .text.ob_write_protection_get:0000000000000000 ob_write_protection_get
+     /tmp/cc8MuCQG.s:405    .text.ob_write_protection_get:0000000000000008 $d
+     /tmp/cc8MuCQG.s:410    .text.ob_obstat_plevel_get:0000000000000000 $t
+     /tmp/cc8MuCQG.s:417    .text.ob_obstat_plevel_get:0000000000000000 ob_obstat_plevel_get
+     /tmp/cc8MuCQG.s:434    .text.ob_obstat_plevel_get:000000000000000c $d
+     /tmp/cc8MuCQG.s:439    .text.fmc_interrupt_enable:0000000000000000 $t
+     /tmp/cc8MuCQG.s:446    .text.fmc_interrupt_enable:0000000000000000 fmc_interrupt_enable
+     /tmp/cc8MuCQG.s:465    .text.fmc_interrupt_enable:000000000000000c $d
+     /tmp/cc8MuCQG.s:470    .text.fmc_interrupt_disable:0000000000000000 $t
+     /tmp/cc8MuCQG.s:477    .text.fmc_interrupt_disable:0000000000000000 fmc_interrupt_disable
+     /tmp/cc8MuCQG.s:496    .text.fmc_interrupt_disable:000000000000000c $d
+     /tmp/cc8MuCQG.s:501    .text.fmc_flag_get:0000000000000000 $t
+     /tmp/cc8MuCQG.s:508    .text.fmc_flag_get:0000000000000000 fmc_flag_get
+     /tmp/cc8MuCQG.s:535    .text.fmc_flag_get:0000000000000010 $d
+     /tmp/cc8MuCQG.s:540    .text.fmc_flag_clear:0000000000000000 $t
+     /tmp/cc8MuCQG.s:547    .text.fmc_flag_clear:0000000000000000 fmc_flag_clear
+     /tmp/cc8MuCQG.s:564    .text.fmc_flag_clear:0000000000000008 $d
+     /tmp/cc8MuCQG.s:569    .text.fmc_state_get:0000000000000000 $t
+     /tmp/cc8MuCQG.s:576    .text.fmc_state_get:0000000000000000 fmc_state_get
+     /tmp/cc8MuCQG.s:627    .text.fmc_state_get:0000000000000024 $d
+     /tmp/cc8MuCQG.s:632    .text.fmc_ready_wait:0000000000000000 $t
+     /tmp/cc8MuCQG.s:639    .text.fmc_ready_wait:0000000000000000 fmc_ready_wait
+     /tmp/cc8MuCQG.s:685    .text.fmc_page_erase:0000000000000000 $t
+     /tmp/cc8MuCQG.s:692    .text.fmc_page_erase:0000000000000000 fmc_page_erase
+ARM GAS  /tmp/cc8MuCQG.s 			page 45
+
+
+     /tmp/cc8MuCQG.s:755    .text.fmc_page_erase:0000000000000034 $d
+     /tmp/cc8MuCQG.s:760    .text.fmc_mass_erase:0000000000000000 $t
+     /tmp/cc8MuCQG.s:767    .text.fmc_mass_erase:0000000000000000 fmc_mass_erase
+     /tmp/cc8MuCQG.s:818    .text.fmc_mass_erase:0000000000000030 $d
+     /tmp/cc8MuCQG.s:823    .text.fmc_word_program:0000000000000000 $t
+     /tmp/cc8MuCQG.s:830    .text.fmc_word_program:0000000000000000 fmc_word_program
+     /tmp/cc8MuCQG.s:890    .text.fmc_word_program:0000000000000030 $d
+     /tmp/cc8MuCQG.s:895    .text.fmc_halfword_program:0000000000000000 $t
+     /tmp/cc8MuCQG.s:902    .text.fmc_halfword_program:0000000000000000 fmc_halfword_program
+     /tmp/cc8MuCQG.s:962    .text.fmc_halfword_program:0000000000000030 $d
+     /tmp/cc8MuCQG.s:967    .text.ob_erase:0000000000000000 $t
+     /tmp/cc8MuCQG.s:974    .text.ob_erase:0000000000000000 ob_erase
+     /tmp/cc8MuCQG.s:1108   .text.ob_erase:0000000000000068 $d
+     /tmp/cc8MuCQG.s:1114   .text.ob_write_protection_enable:0000000000000000 $t
+     /tmp/cc8MuCQG.s:1121   .text.ob_write_protection_enable:0000000000000000 ob_write_protection_enable
+     /tmp/cc8MuCQG.s:1231   .text.ob_write_protection_enable:000000000000005c $d
+     /tmp/cc8MuCQG.s:1237   .text.ob_security_protection_config:0000000000000000 $t
+     /tmp/cc8MuCQG.s:1244   .text.ob_security_protection_config:0000000000000000 ob_security_protection_config
+     /tmp/cc8MuCQG.s:1372   .text.ob_security_protection_config:0000000000000070 $d
+     /tmp/cc8MuCQG.s:1378   .text.ob_user_write:0000000000000000 $t
+     /tmp/cc8MuCQG.s:1385   .text.ob_user_write:0000000000000000 ob_user_write
+     /tmp/cc8MuCQG.s:1449   .text.ob_user_write:0000000000000038 $d
+     /tmp/cc8MuCQG.s:1455   .text.ob_data_program:0000000000000000 $t
+     /tmp/cc8MuCQG.s:1462   .text.ob_data_program:0000000000000000 ob_data_program
+     /tmp/cc8MuCQG.s:1529   .text.ob_data_program:0000000000000034 $d
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,1152 @@
+ARM GAS  /tmp/cco2egur.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f1x0_gpio.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.gpio_deinit,"ax",%progbits
+  16              		.align	1
+  17              		.global	gpio_deinit
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	gpio_deinit:
+  25              	.LVL0:
+  26              	.LFB56:
+  27              		.file 1 "Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c"
+   1:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*!
+   2:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \file  gd32f1x0_gpio.c
+   3:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \brief GPIO driver
+   4:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
+   5:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+   6:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*
+   7:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     Copyright (C) 2017 GigaDevice
+   8:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+   9:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     2014-12-26, V1.0.0, platform for GD32F1x0(x=3,5)
+  10:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     2016-01-15, V2.0.0, platform for GD32F1x0(x=3,5,7,9)
+  11:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     2016-04-30, V3.0.0, firmware update for GD32F1x0(x=3,5,7,9)
+  12:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     2017-06-19, V3.1.0, firmware update for GD32F1x0(x=3,5,7,9)
+  13:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
+  14:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+  15:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** #include "gd32f1x0_gpio.h"
+  16:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+  17:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*!
+  18:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \brief      reset GPIO port
+  19:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,F)
+  20:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[out] none
+  21:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \retval     none
+  22:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
+  23:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** void gpio_deinit(uint32_t gpio_periph)
+  24:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** {
+  28              		.loc 1 24 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  25:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     switch(gpio_periph){
+  32              		.loc 1 25 5 view .LVU1
+  24:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     switch(gpio_periph){
+ARM GAS  /tmp/cco2egur.s 			page 2
+
+
+  33              		.loc 1 24 1 is_stmt 0 view .LVU2
+  34 0000 08B5     		push	{r3, lr}
+  35              	.LCFI0:
+  36              		.cfi_def_cfa_offset 8
+  37              		.cfi_offset 3, -8
+  38              		.cfi_offset 14, -4
+  39              		.loc 1 25 5 view .LVU3
+  40 0002 1C4B     		ldr	r3, .L10
+  41 0004 9842     		cmp	r0, r3
+  42 0006 27D0     		beq	.L2
+  43 0008 07D8     		bhi	.L3
+  44 000a B0F1904F 		cmp	r0, #1207959552
+  45 000e 12D0     		beq	.L4
+  46 0010 A3F58063 		sub	r3, r3, #1024
+  47 0014 9842     		cmp	r0, r3
+  48 0016 18D0     		beq	.L5
+  49              	.L1:
+  26:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     case GPIOA:
+  27:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         /* reset GPIOA */
+  28:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOARST);
+  29:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOARST);
+  30:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         break;
+  31:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     case GPIOB:
+  32:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         /* reset GPIOB */
+  33:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOBRST);
+  34:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOBRST);
+  35:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         break;
+  36:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     case GPIOC:
+  37:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         /* reset GPIOC */
+  38:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOCRST);
+  39:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOCRST);
+  40:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         break;
+  41:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     case GPIOD:
+  42:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         /* reset GPIOD */
+  43:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_enable(RCU_GPIODRST);
+  44:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIODRST);
+  45:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         break;
+  46:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     case GPIOF:
+  47:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         /* reset GPIOF */
+  48:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOFRST);
+  49:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOFRST);
+  50:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         break;
+  51:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     default:
+  52:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         break;
+  53:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }
+  54:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** }
+  50              		.loc 1 54 1 view .LVU4
+  51 0018 08BD     		pop	{r3, pc}
+  52              	.L3:
+  25:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     case GPIOA:
+  53              		.loc 1 25 5 view .LVU5
+  54 001a 174B     		ldr	r3, .L10+4
+  55 001c 9842     		cmp	r0, r3
+  56 001e 22D0     		beq	.L7
+  57 0020 03F50063 		add	r3, r3, #2048
+  58 0024 9842     		cmp	r0, r3
+  59 0026 F7D1     		bne	.L1
+ARM GAS  /tmp/cco2egur.s 			page 3
+
+
+  48:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOFRST);
+  60              		.loc 1 48 9 is_stmt 1 view .LVU6
+  61 0028 40F61620 		movw	r0, #2582
+  62              	.LVL1:
+  48:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOFRST);
+  63              		.loc 1 48 9 is_stmt 0 view .LVU7
+  64 002c FFF7FEFF 		bl	rcu_periph_reset_enable
+  65              	.LVL2:
+  49:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         break;
+  66              		.loc 1 49 9 is_stmt 1 view .LVU8
+  67 0030 40F61620 		movw	r0, #2582
+  68 0034 05E0     		b	.L9
+  69              	.LVL3:
+  70              	.L4:
+  28:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOARST);
+  71              		.loc 1 28 9 view .LVU9
+  72 0036 40F61120 		movw	r0, #2577
+  73              	.LVL4:
+  28:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOARST);
+  74              		.loc 1 28 9 is_stmt 0 view .LVU10
+  75 003a FFF7FEFF 		bl	rcu_periph_reset_enable
+  76              	.LVL5:
+  29:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         break;
+  77              		.loc 1 29 9 is_stmt 1 view .LVU11
+  78 003e 40F61120 		movw	r0, #2577
+  79              	.L9:
+  80              		.loc 1 54 1 is_stmt 0 view .LVU12
+  81 0042 BDE80840 		pop	{r3, lr}
+  82              	.LCFI1:
+  83              		.cfi_remember_state
+  84              		.cfi_restore 14
+  85              		.cfi_restore 3
+  86              		.cfi_def_cfa_offset 0
+  49:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         break;
+  87              		.loc 1 49 9 view .LVU13
+  88 0046 FFF7FEBF 		b	rcu_periph_reset_disable
+  89              	.LVL6:
+  90              	.L5:
+  91              	.LCFI2:
+  92              		.cfi_restore_state
+  33:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOBRST);
+  93              		.loc 1 33 9 is_stmt 1 view .LVU14
+  94 004a 40F61220 		movw	r0, #2578
+  95              	.LVL7:
+  33:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOBRST);
+  96              		.loc 1 33 9 is_stmt 0 view .LVU15
+  97 004e FFF7FEFF 		bl	rcu_periph_reset_enable
+  98              	.LVL8:
+  34:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         break;
+  99              		.loc 1 34 9 is_stmt 1 view .LVU16
+ 100 0052 40F61220 		movw	r0, #2578
+ 101 0056 F4E7     		b	.L9
+ 102              	.LVL9:
+ 103              	.L2:
+  38:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOCRST);
+ 104              		.loc 1 38 9 view .LVU17
+ 105 0058 40F61320 		movw	r0, #2579
+ARM GAS  /tmp/cco2egur.s 			page 4
+
+
+ 106              	.LVL10:
+  38:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOCRST);
+ 107              		.loc 1 38 9 is_stmt 0 view .LVU18
+ 108 005c FFF7FEFF 		bl	rcu_periph_reset_enable
+ 109              	.LVL11:
+  39:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         break;
+ 110              		.loc 1 39 9 is_stmt 1 view .LVU19
+ 111 0060 40F61320 		movw	r0, #2579
+ 112 0064 EDE7     		b	.L9
+ 113              	.LVL12:
+ 114              	.L7:
+  43:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIODRST);
+ 115              		.loc 1 43 9 view .LVU20
+ 116 0066 40F61420 		movw	r0, #2580
+ 117              	.LVL13:
+  43:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIODRST);
+ 118              		.loc 1 43 9 is_stmt 0 view .LVU21
+ 119 006a FFF7FEFF 		bl	rcu_periph_reset_enable
+ 120              	.LVL14:
+  44:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         break;
+ 121              		.loc 1 44 9 is_stmt 1 view .LVU22
+ 122 006e 40F61420 		movw	r0, #2580
+ 123 0072 E6E7     		b	.L9
+ 124              	.L11:
+ 125              		.align	2
+ 126              	.L10:
+ 127 0074 00080048 		.word	1207961600
+ 128 0078 000C0048 		.word	1207962624
+ 129              		.cfi_endproc
+ 130              	.LFE56:
+ 132              		.section	.text.gpio_mode_set,"ax",%progbits
+ 133              		.align	1
+ 134              		.global	gpio_mode_set
+ 135              		.syntax unified
+ 136              		.thumb
+ 137              		.thumb_func
+ 138              		.fpu softvfp
+ 140              	gpio_mode_set:
+ 141              	.LVL15:
+ 142              	.LFB57:
+  55:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+  56:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*!
+  57:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \brief      set GPIO output mode
+  58:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,F) 
+  59:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  mode: gpio pin mode
+  60:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_MODE_INPUT: input mode
+  61:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_MODE_OUTPUT: output mode
+  62:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_MODE_AF: alternate function mode
+  63:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_MODE_ANALOG: analog mode
+  64:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  pull_up_down: gpio pin with pull-up or pull-down resistor
+  65:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_PUPD_NONE: without weak pull-up and pull-down resistors
+  66:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_PUPD_PULLUP: with weak pull-up resistor
+  67:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_PUPD_PULLDOWN:with weak pull-down resistor
+  68:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+  69:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[out] none
+  70:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \retval     none
+  71:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
+ARM GAS  /tmp/cco2egur.s 			page 5
+
+
+  72:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** void gpio_mode_set(uint32_t gpio_periph,uint32_t mode,uint32_t pull_up_down,uint32_t pin)
+  73:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** {
+ 143              		.loc 1 73 1 view -0
+ 144              		.cfi_startproc
+ 145              		@ args = 0, pretend = 0, frame = 0
+ 146              		@ frame_needed = 0, uses_anonymous_args = 0
+  74:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     uint16_t i;
+ 147              		.loc 1 74 5 view .LVU24
+  75:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     uint32_t ctl, pupd;
+ 148              		.loc 1 75 5 view .LVU25
+  76:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+  77:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     ctl = GPIO_CTL(gpio_periph);
+ 149              		.loc 1 77 5 view .LVU26
+  73:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     uint16_t i;
+ 150              		.loc 1 73 1 is_stmt 0 view .LVU27
+ 151 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
+ 152              	.LCFI3:
+ 153              		.cfi_def_cfa_offset 28
+ 154              		.cfi_offset 4, -28
+ 155              		.cfi_offset 5, -24
+ 156              		.cfi_offset 6, -20
+ 157              		.cfi_offset 7, -16
+ 158              		.cfi_offset 8, -12
+ 159              		.cfi_offset 9, -8
+ 160              		.cfi_offset 14, -4
+  78:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     pupd = GPIO_PUD(gpio_periph);
+ 161              		.loc 1 78 10 view .LVU28
+ 162 0004 0026     		movs	r6, #0
+  79:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+  80:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     for (i = 0U; i < 16U; i++){
+  81:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 163              		.loc 1 81 16 view .LVU29
+ 164 0006 4FF0010E 		mov	lr, #1
+  82:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin mode bits */
+  83:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             ctl &= ~GPIO_MODE_MASK(i);
+ 165              		.loc 1 83 21 view .LVU30
+ 166 000a 4FF00308 		mov	r8, #3
+  77:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     pupd = GPIO_PUD(gpio_periph);
+ 167              		.loc 1 77 9 view .LVU31
+ 168 000e 0568     		ldr	r5, [r0]
+ 169              	.LVL16:
+  78:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 170              		.loc 1 78 5 is_stmt 1 view .LVU32
+  78:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 171              		.loc 1 78 10 is_stmt 0 view .LVU33
+ 172 0010 C468     		ldr	r4, [r0, #12]
+ 173              	.LVL17:
+  80:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 174              		.loc 1 80 5 is_stmt 1 view .LVU34
+  80:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 175              		.loc 1 80 18 view .LVU35
+ 176              	.L14:
+  81:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin mode bits */
+ 177              		.loc 1 81 9 view .LVU36
+  81:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin mode bits */
+ 178              		.loc 1 81 16 is_stmt 0 view .LVU37
+ 179 0012 0EFA06F7 		lsl	r7, lr, r6
+ARM GAS  /tmp/cco2egur.s 			page 6
+
+
+  81:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin mode bits */
+ 180              		.loc 1 81 11 view .LVU38
+ 181 0016 1F42     		tst	r7, r3
+ 182 0018 0DD0     		beq	.L13
+ 183              		.loc 1 83 13 is_stmt 1 view .LVU39
+ 184 001a 7700     		lsls	r7, r6, #1
+ 185              		.loc 1 83 21 is_stmt 0 view .LVU40
+ 186 001c 08FA07FC 		lsl	ip, r8, r7
+  84:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* set the specified pin mode bits */
+  85:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             ctl |= GPIO_MODE_SET(i, mode);
+ 187              		.loc 1 85 20 view .LVU41
+ 188 0020 01FA07F9 		lsl	r9, r1, r7
+  83:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* set the specified pin mode bits */
+ 189              		.loc 1 83 17 view .LVU42
+ 190 0024 25EA0C05 		bic	r5, r5, ip
+ 191              	.LVL18:
+ 192              		.loc 1 85 13 is_stmt 1 view .LVU43
+  86:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+  87:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin pupd bits */
+  88:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             pupd &= ~GPIO_PUPD_MASK(i);
+ 193              		.loc 1 88 18 is_stmt 0 view .LVU44
+ 194 0028 24EA0C04 		bic	r4, r4, ip
+ 195              	.LVL19:
+  89:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* set the specified pin pupd bits */
+  90:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             pupd |= GPIO_PUPD_SET(i, pull_up_down);
+ 196              		.loc 1 90 21 view .LVU45
+ 197 002c 02FA07F7 		lsl	r7, r2, r7
+  85:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 198              		.loc 1 85 17 view .LVU46
+ 199 0030 49EA0505 		orr	r5, r9, r5
+ 200              	.LVL20:
+  88:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* set the specified pin pupd bits */
+ 201              		.loc 1 88 13 is_stmt 1 view .LVU47
+ 202              		.loc 1 90 13 view .LVU48
+ 203              		.loc 1 90 18 is_stmt 0 view .LVU49
+ 204 0034 3C43     		orrs	r4, r4, r7
+ 205              	.LVL21:
+ 206              	.L13:
+  80:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 207              		.loc 1 80 27 is_stmt 1 discriminator 2 view .LVU50
+  80:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 208              		.loc 1 80 18 discriminator 2 view .LVU51
+  80:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 209              		.loc 1 80 5 is_stmt 0 discriminator 2 view .LVU52
+ 210 0036 0136     		adds	r6, r6, #1
+ 211              	.LVL22:
+  80:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 212              		.loc 1 80 5 discriminator 2 view .LVU53
+ 213 0038 102E     		cmp	r6, #16
+ 214 003a EAD1     		bne	.L14
+  91:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         }
+  92:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }
+  93:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+  94:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     GPIO_CTL(gpio_periph) = ctl;
+ 215              		.loc 1 94 5 is_stmt 1 view .LVU54
+ 216              		.loc 1 94 27 is_stmt 0 view .LVU55
+ 217 003c 0560     		str	r5, [r0]
+ARM GAS  /tmp/cco2egur.s 			page 7
+
+
+  95:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     GPIO_PUD(gpio_periph) = pupd;
+ 218              		.loc 1 95 5 is_stmt 1 view .LVU56
+ 219              		.loc 1 95 27 is_stmt 0 view .LVU57
+ 220 003e C460     		str	r4, [r0, #12]
+  96:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** }
+ 221              		.loc 1 96 1 view .LVU58
+ 222 0040 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 223              		.loc 1 96 1 view .LVU59
+ 224              		.cfi_endproc
+ 225              	.LFE57:
+ 227              		.section	.text.gpio_output_options_set,"ax",%progbits
+ 228              		.align	1
+ 229              		.global	gpio_output_options_set
+ 230              		.syntax unified
+ 231              		.thumb
+ 232              		.thumb_func
+ 233              		.fpu softvfp
+ 235              	gpio_output_options_set:
+ 236              	.LVL23:
+ 237              	.LFB58:
+  97:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+  98:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*!
+  99:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \brief      set GPIO output type and speed
+ 100:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,F) 
+ 101:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  otype: gpio pin output mode
+ 102:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_OTYPE_PP: push pull mode
+ 103:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_OTYPE_OD: open drain mode
+ 104:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  speed
+ 105:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_OSPEED_2MHZ: output max speed 2M 
+ 106:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_OSPEED_10MHZ: output max speed 10M 
+ 107:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_OSPEED_50MHZ: output max speed 50M 
+ 108:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 109:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[out] none
+ 110:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \retval     none
+ 111:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
+ 112:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** void gpio_output_options_set(uint32_t gpio_periph,uint8_t otype,uint32_t speed,uint32_t pin)
+ 113:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** {
+ 238              		.loc 1 113 1 is_stmt 1 view -0
+ 239              		.cfi_startproc
+ 240              		@ args = 0, pretend = 0, frame = 0
+ 241              		@ frame_needed = 0, uses_anonymous_args = 0
+ 114:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     uint16_t i;
+ 242              		.loc 1 114 5 view .LVU61
+ 115:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     uint32_t ospeedr;
+ 243              		.loc 1 115 5 view .LVU62
+ 116:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 117:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     if(0x1U == otype){
+ 244              		.loc 1 117 5 view .LVU63
+ 113:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     uint16_t i;
+ 245              		.loc 1 113 1 is_stmt 0 view .LVU64
+ 246 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 247              	.LCFI4:
+ 248              		.cfi_def_cfa_offset 20
+ 249              		.cfi_offset 4, -20
+ 250              		.cfi_offset 5, -16
+ 251              		.cfi_offset 6, -12
+ 252              		.cfi_offset 7, -8
+ARM GAS  /tmp/cco2egur.s 			page 8
+
+
+ 253              		.cfi_offset 14, -4
+ 118:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         GPIO_OMODE(gpio_periph) |= (uint32_t)pin;
+ 119:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }else{
+ 120:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         GPIO_OMODE(gpio_periph) &= (uint32_t)(~pin);
+ 121:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }
+ 122:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 123:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     /* get the specified pin output speed bits value */
+ 124:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     ospeedr = GPIO_OSPD(gpio_periph);
+ 254              		.loc 1 124 13 view .LVU65
+ 255 0002 0024     		movs	r4, #0
+ 125:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 126:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     for(i = 0U;i < 16U;i++){
+ 127:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 256              		.loc 1 127 16 view .LVU66
+ 257 0004 0126     		movs	r6, #1
+ 128:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin output speed bits */
+ 129:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             ospeedr &= ~GPIO_OSPEED_MASK(i);
+ 258              		.loc 1 129 25 view .LVU67
+ 259 0006 0327     		movs	r7, #3
+ 117:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         GPIO_OMODE(gpio_periph) |= (uint32_t)pin;
+ 260              		.loc 1 117 7 view .LVU68
+ 261 0008 0129     		cmp	r1, #1
+ 118:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }else{
+ 262              		.loc 1 118 33 view .LVU69
+ 263 000a 4168     		ldr	r1, [r0, #4]
+ 264              	.LVL24:
+ 118:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }else{
+ 265              		.loc 1 118 9 is_stmt 1 view .LVU70
+ 118:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }else{
+ 266              		.loc 1 118 33 is_stmt 0 view .LVU71
+ 267 000c 0CBF     		ite	eq
+ 268 000e 1943     		orreq	r1, r1, r3
+ 120:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }
+ 269              		.loc 1 120 9 is_stmt 1 view .LVU72
+ 120:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }
+ 270              		.loc 1 120 33 is_stmt 0 view .LVU73
+ 271 0010 9943     		bicne	r1, r1, r3
+ 272 0012 4160     		str	r1, [r0, #4]
+ 124:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 273              		.loc 1 124 5 is_stmt 1 view .LVU74
+ 124:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 274              		.loc 1 124 13 is_stmt 0 view .LVU75
+ 275 0014 8168     		ldr	r1, [r0, #8]
+ 276              	.LVL25:
+ 126:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 277              		.loc 1 126 5 is_stmt 1 view .LVU76
+ 126:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 278              		.loc 1 126 16 view .LVU77
+ 279              	.L23:
+ 127:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin output speed bits */
+ 280              		.loc 1 127 9 view .LVU78
+ 127:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin output speed bits */
+ 281              		.loc 1 127 16 is_stmt 0 view .LVU79
+ 282 0016 06FA04F5 		lsl	r5, r6, r4
+ 127:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin output speed bits */
+ 283              		.loc 1 127 11 view .LVU80
+ 284 001a 1D42     		tst	r5, r3
+ARM GAS  /tmp/cco2egur.s 			page 9
+
+
+ 285 001c 07D0     		beq	.L22
+ 286              		.loc 1 129 13 is_stmt 1 view .LVU81
+ 287 001e 6500     		lsls	r5, r4, #1
+ 288              		.loc 1 129 25 is_stmt 0 view .LVU82
+ 289 0020 07FA05FC 		lsl	ip, r7, r5
+ 290              		.loc 1 129 21 view .LVU83
+ 291 0024 21EA0C01 		bic	r1, r1, ip
+ 292              	.LVL26:
+ 130:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* set the specified pin output speed bits */
+ 131:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             ospeedr |= GPIO_OSPEED_SET(i,speed);
+ 293              		.loc 1 131 13 is_stmt 1 view .LVU84
+ 294              		.loc 1 131 24 is_stmt 0 view .LVU85
+ 295 0028 02FA05F5 		lsl	r5, r2, r5
+ 296              		.loc 1 131 21 view .LVU86
+ 297 002c 2943     		orrs	r1, r1, r5
+ 298              	.LVL27:
+ 299              	.L22:
+ 126:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 300              		.loc 1 126 24 is_stmt 1 discriminator 2 view .LVU87
+ 126:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 301              		.loc 1 126 16 discriminator 2 view .LVU88
+ 126:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 302              		.loc 1 126 5 is_stmt 0 discriminator 2 view .LVU89
+ 303 002e 0134     		adds	r4, r4, #1
+ 304              	.LVL28:
+ 126:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 305              		.loc 1 126 5 discriminator 2 view .LVU90
+ 306 0030 102C     		cmp	r4, #16
+ 307 0032 F0D1     		bne	.L23
+ 132:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         }
+ 133:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }
+ 134:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     GPIO_OSPD(gpio_periph) = ospeedr;
+ 308              		.loc 1 134 5 is_stmt 1 view .LVU91
+ 309              		.loc 1 134 28 is_stmt 0 view .LVU92
+ 310 0034 8160     		str	r1, [r0, #8]
+ 135:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** }
+ 311              		.loc 1 135 1 view .LVU93
+ 312 0036 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 313              		.cfi_endproc
+ 314              	.LFE58:
+ 316              		.section	.text.gpio_bit_set,"ax",%progbits
+ 317              		.align	1
+ 318              		.global	gpio_bit_set
+ 319              		.syntax unified
+ 320              		.thumb
+ 321              		.thumb_func
+ 322              		.fpu softvfp
+ 324              	gpio_bit_set:
+ 325              	.LVL29:
+ 326              	.LFB59:
+ 136:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 137:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*!
+ 138:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \brief      set GPIO pin
+ 139:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,F) 
+ 140:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 141:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[out] none
+ 142:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \retval     none
+ARM GAS  /tmp/cco2egur.s 			page 10
+
+
+ 143:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
+ 144:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** void gpio_bit_set(uint32_t gpio_periph,uint32_t pin)
+ 145:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** {
+ 327              		.loc 1 145 1 is_stmt 1 view -0
+ 328              		.cfi_startproc
+ 329              		@ args = 0, pretend = 0, frame = 0
+ 330              		@ frame_needed = 0, uses_anonymous_args = 0
+ 331              		@ link register save eliminated.
+ 146:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     GPIO_BOP(gpio_periph) = (uint32_t)pin;
+ 332              		.loc 1 146 5 view .LVU95
+ 333              		.loc 1 146 27 is_stmt 0 view .LVU96
+ 334 0000 8161     		str	r1, [r0, #24]
+ 147:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** }
+ 335              		.loc 1 147 1 view .LVU97
+ 336 0002 7047     		bx	lr
+ 337              		.cfi_endproc
+ 338              	.LFE59:
+ 340              		.section	.text.gpio_bit_reset,"ax",%progbits
+ 341              		.align	1
+ 342              		.global	gpio_bit_reset
+ 343              		.syntax unified
+ 344              		.thumb
+ 345              		.thumb_func
+ 346              		.fpu softvfp
+ 348              	gpio_bit_reset:
+ 349              	.LVL30:
+ 350              	.LFB60:
+ 148:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 149:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*!
+ 150:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \brief      reset GPIO pin
+ 151:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,F) 
+ 152:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 153:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[out] none
+ 154:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \retval     none
+ 155:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
+ 156:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** void gpio_bit_reset(uint32_t gpio_periph,uint32_t pin)
+ 157:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** {
+ 351              		.loc 1 157 1 is_stmt 1 view -0
+ 352              		.cfi_startproc
+ 353              		@ args = 0, pretend = 0, frame = 0
+ 354              		@ frame_needed = 0, uses_anonymous_args = 0
+ 355              		@ link register save eliminated.
+ 158:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     GPIO_BC(gpio_periph) = (uint32_t)pin;
+ 356              		.loc 1 158 5 view .LVU99
+ 357              		.loc 1 158 26 is_stmt 0 view .LVU100
+ 358 0000 8162     		str	r1, [r0, #40]
+ 159:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** }
+ 359              		.loc 1 159 1 view .LVU101
+ 360 0002 7047     		bx	lr
+ 361              		.cfi_endproc
+ 362              	.LFE60:
+ 364              		.section	.text.gpio_bit_write,"ax",%progbits
+ 365              		.align	1
+ 366              		.global	gpio_bit_write
+ 367              		.syntax unified
+ 368              		.thumb
+ 369              		.thumb_func
+ARM GAS  /tmp/cco2egur.s 			page 11
+
+
+ 370              		.fpu softvfp
+ 372              	gpio_bit_write:
+ 373              	.LVL31:
+ 374              	.LFB61:
+ 160:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 161:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*!
+ 162:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \brief      write data to the specified GPIO pin
+ 163:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,F) 
+ 164:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 165:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  bit_value: SET or RESET
+ 166:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        RESET: clear the port pin
+ 167:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        SET: set the port pin
+ 168:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[out] none
+ 169:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \retval     none
+ 170:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
+ 171:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** void gpio_bit_write(uint32_t gpio_periph,uint32_t pin,bit_status bit_value)
+ 172:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** {
+ 375              		.loc 1 172 1 is_stmt 1 view -0
+ 376              		.cfi_startproc
+ 377              		@ args = 0, pretend = 0, frame = 0
+ 378              		@ frame_needed = 0, uses_anonymous_args = 0
+ 379              		@ link register save eliminated.
+ 173:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     if(RESET != bit_value){
+ 380              		.loc 1 173 5 view .LVU103
+ 381              		.loc 1 173 7 is_stmt 0 view .LVU104
+ 382 0000 0AB1     		cbz	r2, .L32
+ 174:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         GPIO_BOP(gpio_periph) = (uint32_t)pin;
+ 383              		.loc 1 174 9 is_stmt 1 view .LVU105
+ 384              		.loc 1 174 31 is_stmt 0 view .LVU106
+ 385 0002 8161     		str	r1, [r0, #24]
+ 386 0004 7047     		bx	lr
+ 387              	.L32:
+ 175:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }else{
+ 176:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         GPIO_BC(gpio_periph) = (uint32_t)pin;
+ 388              		.loc 1 176 9 is_stmt 1 view .LVU107
+ 389              		.loc 1 176 30 is_stmt 0 view .LVU108
+ 390 0006 8162     		str	r1, [r0, #40]
+ 177:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }
+ 178:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** }
+ 391              		.loc 1 178 1 view .LVU109
+ 392 0008 7047     		bx	lr
+ 393              		.cfi_endproc
+ 394              	.LFE61:
+ 396              		.section	.text.gpio_port_write,"ax",%progbits
+ 397              		.align	1
+ 398              		.global	gpio_port_write
+ 399              		.syntax unified
+ 400              		.thumb
+ 401              		.thumb_func
+ 402              		.fpu softvfp
+ 404              	gpio_port_write:
+ 405              	.LVL32:
+ 406              	.LFB62:
+ 179:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 180:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*!
+ 181:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \brief      write data to the specified GPIO port
+ 182:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,F) 
+ARM GAS  /tmp/cco2egur.s 			page 12
+
+
+ 183:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  data: specify the value to be written to the port output control register
+ 184:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[out] none
+ 185:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \retval     none
+ 186:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
+ 187:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** void gpio_port_write(uint32_t gpio_periph,uint16_t data)
+ 188:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** {
+ 407              		.loc 1 188 1 is_stmt 1 view -0
+ 408              		.cfi_startproc
+ 409              		@ args = 0, pretend = 0, frame = 0
+ 410              		@ frame_needed = 0, uses_anonymous_args = 0
+ 411              		@ link register save eliminated.
+ 189:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     GPIO_OCTL(gpio_periph) = (uint32_t)data;
+ 412              		.loc 1 189 5 view .LVU111
+ 413              		.loc 1 189 28 is_stmt 0 view .LVU112
+ 414 0000 4161     		str	r1, [r0, #20]
+ 190:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** }
+ 415              		.loc 1 190 1 view .LVU113
+ 416 0002 7047     		bx	lr
+ 417              		.cfi_endproc
+ 418              	.LFE62:
+ 420              		.section	.text.gpio_input_bit_get,"ax",%progbits
+ 421              		.align	1
+ 422              		.global	gpio_input_bit_get
+ 423              		.syntax unified
+ 424              		.thumb
+ 425              		.thumb_func
+ 426              		.fpu softvfp
+ 428              	gpio_input_bit_get:
+ 429              	.LVL33:
+ 430              	.LFB63:
+ 191:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 192:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*!
+ 193:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \brief      get GPIO pin input status
+ 194:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,F) 
+ 195:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 196:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[out] none
+ 197:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \retval     input state of gpio pin: SET or RESET
+ 198:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
+ 199:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** FlagStatus gpio_input_bit_get(uint32_t gpio_periph,uint32_t pin)
+ 200:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** {
+ 431              		.loc 1 200 1 is_stmt 1 view -0
+ 432              		.cfi_startproc
+ 433              		@ args = 0, pretend = 0, frame = 0
+ 434              		@ frame_needed = 0, uses_anonymous_args = 0
+ 435              		@ link register save eliminated.
+ 201:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     if((uint32_t)RESET != (GPIO_ISTAT(gpio_periph)&(pin))){
+ 436              		.loc 1 201 5 view .LVU115
+ 437              		.loc 1 201 28 is_stmt 0 view .LVU116
+ 438 0000 0369     		ldr	r3, [r0, #16]
+ 439              		.loc 1 201 7 view .LVU117
+ 440 0002 0B42     		tst	r3, r1
+ 202:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         return SET; 
+ 203:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }else{
+ 204:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         return RESET;
+ 205:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }
+ 206:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** }
+ 441              		.loc 1 206 1 view .LVU118
+ARM GAS  /tmp/cco2egur.s 			page 13
+
+
+ 442 0004 14BF     		ite	ne
+ 443 0006 0120     		movne	r0, #1
+ 444              	.LVL34:
+ 445              		.loc 1 206 1 view .LVU119
+ 446 0008 0020     		moveq	r0, #0
+ 447 000a 7047     		bx	lr
+ 448              		.cfi_endproc
+ 449              	.LFE63:
+ 451              		.section	.text.gpio_input_port_get,"ax",%progbits
+ 452              		.align	1
+ 453              		.global	gpio_input_port_get
+ 454              		.syntax unified
+ 455              		.thumb
+ 456              		.thumb_func
+ 457              		.fpu softvfp
+ 459              	gpio_input_port_get:
+ 460              	.LVL35:
+ 461              	.LFB64:
+ 207:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 208:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*!
+ 209:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \brief      get GPIO all pins input status
+ 210:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,F) 
+ 211:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[out] none
+ 212:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \retval     input state of gpio all pins
+ 213:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
+ 214:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** uint16_t gpio_input_port_get(uint32_t gpio_periph)
+ 215:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** {
+ 462              		.loc 1 215 1 is_stmt 1 view -0
+ 463              		.cfi_startproc
+ 464              		@ args = 0, pretend = 0, frame = 0
+ 465              		@ frame_needed = 0, uses_anonymous_args = 0
+ 466              		@ link register save eliminated.
+ 216:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     return (uint16_t)(GPIO_ISTAT(gpio_periph));
+ 467              		.loc 1 216 5 view .LVU121
+ 468              		.loc 1 216 23 is_stmt 0 view .LVU122
+ 469 0000 0069     		ldr	r0, [r0, #16]
+ 470              	.LVL36:
+ 217:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** }
+ 471              		.loc 1 217 1 view .LVU123
+ 472 0002 80B2     		uxth	r0, r0
+ 473 0004 7047     		bx	lr
+ 474              		.cfi_endproc
+ 475              	.LFE64:
+ 477              		.section	.text.gpio_output_bit_get,"ax",%progbits
+ 478              		.align	1
+ 479              		.global	gpio_output_bit_get
+ 480              		.syntax unified
+ 481              		.thumb
+ 482              		.thumb_func
+ 483              		.fpu softvfp
+ 485              	gpio_output_bit_get:
+ 486              	.LVL37:
+ 487              	.LFB65:
+ 218:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 219:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*!
+ 220:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \brief      get GPIO pin output status
+ 221:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,F) 
+ARM GAS  /tmp/cco2egur.s 			page 14
+
+
+ 222:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 223:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[out] none
+ 224:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \retval     output state of gpio pin: SET or RESET
+ 225:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
+ 226:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** FlagStatus gpio_output_bit_get(uint32_t gpio_periph,uint32_t pin)
+ 227:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** {
+ 488              		.loc 1 227 1 is_stmt 1 view -0
+ 489              		.cfi_startproc
+ 490              		@ args = 0, pretend = 0, frame = 0
+ 491              		@ frame_needed = 0, uses_anonymous_args = 0
+ 492              		@ link register save eliminated.
+ 228:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     if((uint32_t)RESET !=(GPIO_OCTL(gpio_periph)&(pin))){
+ 493              		.loc 1 228 5 view .LVU125
+ 494              		.loc 1 228 27 is_stmt 0 view .LVU126
+ 495 0000 4369     		ldr	r3, [r0, #20]
+ 496              		.loc 1 228 7 view .LVU127
+ 497 0002 0B42     		tst	r3, r1
+ 229:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         return SET;
+ 230:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }else{
+ 231:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         return RESET;
+ 232:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }
+ 233:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** }
+ 498              		.loc 1 233 1 view .LVU128
+ 499 0004 14BF     		ite	ne
+ 500 0006 0120     		movne	r0, #1
+ 501              	.LVL38:
+ 502              		.loc 1 233 1 view .LVU129
+ 503 0008 0020     		moveq	r0, #0
+ 504 000a 7047     		bx	lr
+ 505              		.cfi_endproc
+ 506              	.LFE65:
+ 508              		.section	.text.gpio_output_port_get,"ax",%progbits
+ 509              		.align	1
+ 510              		.global	gpio_output_port_get
+ 511              		.syntax unified
+ 512              		.thumb
+ 513              		.thumb_func
+ 514              		.fpu softvfp
+ 516              	gpio_output_port_get:
+ 517              	.LVL39:
+ 518              	.LFB66:
+ 234:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 235:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*!
+ 236:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \brief      get GPIO all pins output status
+ 237:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,F) 
+ 238:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[out] none
+ 239:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \retval     output state of gpio all pins
+ 240:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
+ 241:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** uint16_t gpio_output_port_get(uint32_t gpio_periph)
+ 242:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** {
+ 519              		.loc 1 242 1 is_stmt 1 view -0
+ 520              		.cfi_startproc
+ 521              		@ args = 0, pretend = 0, frame = 0
+ 522              		@ frame_needed = 0, uses_anonymous_args = 0
+ 523              		@ link register save eliminated.
+ 243:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     return ((uint16_t)GPIO_OCTL(gpio_periph));
+ 524              		.loc 1 243 5 view .LVU131
+ARM GAS  /tmp/cco2egur.s 			page 15
+
+
+ 525              		.loc 1 243 23 is_stmt 0 view .LVU132
+ 526 0000 4069     		ldr	r0, [r0, #20]
+ 527              	.LVL40:
+ 244:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** }
+ 528              		.loc 1 244 1 view .LVU133
+ 529 0002 80B2     		uxth	r0, r0
+ 530 0004 7047     		bx	lr
+ 531              		.cfi_endproc
+ 532              	.LFE66:
+ 534              		.section	.text.gpio_af_set,"ax",%progbits
+ 535              		.align	1
+ 536              		.global	gpio_af_set
+ 537              		.syntax unified
+ 538              		.thumb
+ 539              		.thumb_func
+ 540              		.fpu softvfp
+ 542              	gpio_af_set:
+ 543              	.LVL41:
+ 544              	.LFB67:
+ 245:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 246:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*!
+ 247:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \brief      set GPIO alternate function
+ 248:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,F) 
+ 249:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  alt_func_num: gpio pin af function, please refer to specific device datasheet
+ 250:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_AF_0: TIMER2, TIMER13, TIMER14, TIMER16, SPI0, I2S0, SPI1, SPI2, I2S2, CK_OU
+ 251:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****                             SWDIO, SWCLK, USART0, CEC, IFRP, I2C0, I2C1, TSI, EVENTOUT
+ 252:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_AF_1: USART0, USART1, IFRP, CEC, TIMER2, TIMER14, I2C0, I2C1, I2C2, EVENTOUT
+ 253:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_AF_2: TIMER0, TIMER1, TIMER15, TIMER16, EVENTOUT
+ 254:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_AF_3: TSI, I2C0, TIMER14, EVENTOUT
+ 255:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_AF_4(port A,B only): TIMER13, I2C0, I2C1, I2C2, USART1
+ 256:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_AF_5(port A,B only): TIMER15, TIMER16, SPI2, I2S2, I2C0, I2C1
+ 257:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_AF_6(port A,B only): SPI1, EVENTOUT 
+ 258:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_AF_7(port A,B only): CMP0, CMP1
+ 259:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_AF_9(port A,B only): CAN0, CAN1 (for GD32F170xx and GD32F190xx devices)
+ 260:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****       \arg        GPIO_AF_11: SLCD (for GD32F170xx and GD32F190xx devices)
+ 261:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 262:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[out] none    
+ 263:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \retval     none
+ 264:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
+ 265:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** void gpio_af_set(uint32_t gpio_periph,uint32_t alt_func_num,uint32_t pin)
+ 266:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** {
+ 545              		.loc 1 266 1 is_stmt 1 view -0
+ 546              		.cfi_startproc
+ 547              		@ args = 0, pretend = 0, frame = 0
+ 548              		@ frame_needed = 0, uses_anonymous_args = 0
+ 267:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     uint16_t i;
+ 549              		.loc 1 267 5 view .LVU135
+ 268:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     uint32_t afrl, afrh;
+ 550              		.loc 1 268 5 view .LVU136
+ 269:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 270:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     afrl = GPIO_AFSEL0(gpio_periph);
+ 551              		.loc 1 270 5 view .LVU137
+ 266:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     uint16_t i;
+ 552              		.loc 1 266 1 is_stmt 0 view .LVU138
+ 553 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 554              	.LCFI5:
+ 555              		.cfi_def_cfa_offset 20
+ARM GAS  /tmp/cco2egur.s 			page 16
+
+
+ 556              		.cfi_offset 4, -20
+ 557              		.cfi_offset 5, -16
+ 558              		.cfi_offset 6, -12
+ 559              		.cfi_offset 7, -8
+ 560              		.cfi_offset 14, -4
+ 271:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     afrh = GPIO_AFSEL1(gpio_periph);
+ 561              		.loc 1 271 10 view .LVU139
+ 562 0002 0023     		movs	r3, #0
+ 272:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 273:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     for (i = 0U; i < 8U; i++){
+ 274:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 563              		.loc 1 274 16 view .LVU140
+ 564 0004 4FF0010C 		mov	ip, #1
+ 275:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin alternate function bits */
+ 276:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             afrl &= ~GPIO_AFR_MASK(i);
+ 565              		.loc 1 276 22 view .LVU141
+ 566 0008 4FF00F0E 		mov	lr, #15
+ 270:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     afrh = GPIO_AFSEL1(gpio_periph);
+ 567              		.loc 1 270 10 view .LVU142
+ 568 000c 076A     		ldr	r7, [r0, #32]
+ 569              	.LVL42:
+ 271:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 570              		.loc 1 271 5 is_stmt 1 view .LVU143
+ 271:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 571              		.loc 1 271 10 is_stmt 0 view .LVU144
+ 572 000e 466A     		ldr	r6, [r0, #36]
+ 573              	.LVL43:
+ 273:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 574              		.loc 1 273 5 is_stmt 1 view .LVU145
+ 273:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 575              		.loc 1 273 18 view .LVU146
+ 576              	.L41:
+ 274:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin alternate function bits */
+ 577              		.loc 1 274 9 view .LVU147
+ 274:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin alternate function bits */
+ 578              		.loc 1 274 16 is_stmt 0 view .LVU148
+ 579 0010 0CFA03F4 		lsl	r4, ip, r3
+ 274:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin alternate function bits */
+ 580              		.loc 1 274 11 view .LVU149
+ 581 0014 1442     		tst	r4, r2
+ 582 0016 07D0     		beq	.L40
+ 583              		.loc 1 276 13 is_stmt 1 view .LVU150
+ 584 0018 9D00     		lsls	r5, r3, #2
+ 585              		.loc 1 276 22 is_stmt 0 view .LVU151
+ 586 001a 0EFA05F4 		lsl	r4, lr, r5
+ 587              		.loc 1 276 18 view .LVU152
+ 588 001e 27EA0407 		bic	r7, r7, r4
+ 589              	.LVL44:
+ 277:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             afrl |= GPIO_AFR_SET(i,alt_func_num);
+ 590              		.loc 1 277 13 is_stmt 1 view .LVU153
+ 591              		.loc 1 277 21 is_stmt 0 view .LVU154
+ 592 0022 01FA05F5 		lsl	r5, r1, r5
+ 593              		.loc 1 277 18 view .LVU155
+ 594 0026 2F43     		orrs	r7, r7, r5
+ 595              	.LVL45:
+ 596              	.L40:
+ 273:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ARM GAS  /tmp/cco2egur.s 			page 17
+
+
+ 597              		.loc 1 273 26 is_stmt 1 discriminator 2 view .LVU156
+ 273:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 598              		.loc 1 273 18 discriminator 2 view .LVU157
+ 273:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 599              		.loc 1 273 5 is_stmt 0 discriminator 2 view .LVU158
+ 600 0028 0133     		adds	r3, r3, #1
+ 601              	.LVL46:
+ 273:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 602              		.loc 1 273 5 discriminator 2 view .LVU159
+ 603 002a 082B     		cmp	r3, #8
+ 604 002c F0D1     		bne	.L41
+ 273:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 605              		.loc 1 273 5 discriminator 2 view .LVU160
+ 606 002e 0023     		movs	r3, #0
+ 278:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         }
+ 279:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }
+ 280:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 281:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     for (i = 8U; i < 16U; i++){
+ 282:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 607              		.loc 1 282 16 view .LVU161
+ 608 0030 4FF0010C 		mov	ip, #1
+ 283:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin alternate function bits */
+ 284:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             afrh &= ~GPIO_AFR_MASK(i - 8U);
+ 609              		.loc 1 284 22 view .LVU162
+ 610 0034 4FF00F0E 		mov	lr, #15
+ 611              	.L43:
+ 612              	.LVL47:
+ 282:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin alternate function bits */
+ 613              		.loc 1 282 9 is_stmt 1 view .LVU163
+ 282:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin alternate function bits */
+ 614              		.loc 1 282 16 is_stmt 0 view .LVU164
+ 615 0038 03F10804 		add	r4, r3, #8
+ 616 003c 0CFA04F4 		lsl	r4, ip, r4
+ 282:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin alternate function bits */
+ 617              		.loc 1 282 11 view .LVU165
+ 618 0040 1442     		tst	r4, r2
+ 619 0042 07D0     		beq	.L42
+ 620              		.loc 1 284 13 is_stmt 1 view .LVU166
+ 621 0044 9C00     		lsls	r4, r3, #2
+ 622              		.loc 1 284 22 is_stmt 0 view .LVU167
+ 623 0046 0EFA04F5 		lsl	r5, lr, r4
+ 624              		.loc 1 284 18 view .LVU168
+ 625 004a 26EA0506 		bic	r6, r6, r5
+ 626              	.LVL48:
+ 285:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             afrh |= GPIO_AFR_SET(i - 8U,alt_func_num);
+ 627              		.loc 1 285 13 is_stmt 1 view .LVU169
+ 628              		.loc 1 285 21 is_stmt 0 view .LVU170
+ 629 004e 01FA04F4 		lsl	r4, r1, r4
+ 630              		.loc 1 285 18 view .LVU171
+ 631 0052 2643     		orrs	r6, r6, r4
+ 632              	.LVL49:
+ 633              	.L42:
+ 281:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 634              		.loc 1 281 27 is_stmt 1 discriminator 2 view .LVU172
+ 281:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 635              		.loc 1 281 18 discriminator 2 view .LVU173
+ 281:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ARM GAS  /tmp/cco2egur.s 			page 18
+
+
+ 636              		.loc 1 281 5 is_stmt 0 discriminator 2 view .LVU174
+ 637 0054 0133     		adds	r3, r3, #1
+ 638              	.LVL50:
+ 281:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
+ 639              		.loc 1 281 5 discriminator 2 view .LVU175
+ 640 0056 082B     		cmp	r3, #8
+ 641 0058 EED1     		bne	.L43
+ 286:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         }
+ 287:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }
+ 288:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 289:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     GPIO_AFSEL0(gpio_periph) = afrl;
+ 642              		.loc 1 289 5 is_stmt 1 view .LVU176
+ 643              		.loc 1 289 30 is_stmt 0 view .LVU177
+ 644 005a 0762     		str	r7, [r0, #32]
+ 290:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     GPIO_AFSEL1(gpio_periph) = afrh;
+ 645              		.loc 1 290 5 is_stmt 1 view .LVU178
+ 646              		.loc 1 290 30 is_stmt 0 view .LVU179
+ 647 005c 4662     		str	r6, [r0, #36]
+ 291:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** }
+ 648              		.loc 1 291 1 view .LVU180
+ 649 005e F0BD     		pop	{r4, r5, r6, r7, pc}
+ 650              		.loc 1 291 1 view .LVU181
+ 651              		.cfi_endproc
+ 652              	.LFE67:
+ 654              		.section	.text.gpio_pin_lock,"ax",%progbits
+ 655              		.align	1
+ 656              		.global	gpio_pin_lock
+ 657              		.syntax unified
+ 658              		.thumb
+ 659              		.thumb_func
+ 660              		.fpu softvfp
+ 662              	gpio_pin_lock:
+ 663              	.LVL51:
+ 664              	.LFB68:
+ 292:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ 293:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*!
+ 294:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \brief      lock GPIO pin
+ 295:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B) 
+ 296:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 297:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[out] none
+ 298:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \retval     none
+ 299:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
+ 300:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** void gpio_pin_lock(uint32_t gpio_periph,uint32_t pin)
+ 301:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** {
+ 665              		.loc 1 301 1 is_stmt 1 view -0
+ 666              		.cfi_startproc
+ 667              		@ args = 0, pretend = 0, frame = 0
+ 668              		@ frame_needed = 0, uses_anonymous_args = 0
+ 669              		@ link register save eliminated.
+ 302:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     uint32_t lock = 0x00010000U;
+ 670              		.loc 1 302 5 view .LVU183
+ 303:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     lock |= pin;
+ 671              		.loc 1 303 5 view .LVU184
+ 672              		.loc 1 303 10 is_stmt 0 view .LVU185
+ 673 0000 41F48033 		orr	r3, r1, #65536
+ 674              	.LVL52:
+ 304:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
+ARM GAS  /tmp/cco2egur.s 			page 19
+
+
+ 305:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     /* lock key writing sequence: write 1->write 0->write 1-> read 0-> read 1 */
+ 306:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     GPIO_LOCK(gpio_periph) = (uint32_t)lock;
+ 675              		.loc 1 306 5 is_stmt 1 view .LVU186
+ 676              		.loc 1 306 28 is_stmt 0 view .LVU187
+ 677 0004 C361     		str	r3, [r0, #28]
+ 307:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     GPIO_LOCK(gpio_periph) = (uint32_t)pin;
+ 678              		.loc 1 307 5 is_stmt 1 view .LVU188
+ 679              		.loc 1 307 28 is_stmt 0 view .LVU189
+ 680 0006 C161     		str	r1, [r0, #28]
+ 308:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     GPIO_LOCK(gpio_periph) = (uint32_t)lock;
+ 681              		.loc 1 308 5 is_stmt 1 view .LVU190
+ 682              		.loc 1 308 28 is_stmt 0 view .LVU191
+ 683 0008 C361     		str	r3, [r0, #28]
+ 309:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     lock = GPIO_LOCK(gpio_periph);
+ 684              		.loc 1 309 5 is_stmt 1 view .LVU192
+ 685              		.loc 1 309 10 is_stmt 0 view .LVU193
+ 686 000a C369     		ldr	r3, [r0, #28]
+ 687              	.LVL53:
+ 310:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     lock = GPIO_LOCK(gpio_periph);
+ 688              		.loc 1 310 5 is_stmt 1 view .LVU194
+ 689              		.loc 1 310 10 is_stmt 0 view .LVU195
+ 690 000c C369     		ldr	r3, [r0, #28]
+ 311:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** }
+ 691              		.loc 1 311 1 view .LVU196
+ 692 000e 7047     		bx	lr
+ 693              		.cfi_endproc
+ 694              	.LFE68:
+ 696              		.text
+ 697              	.Letext0:
+ 698              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
+ 699              		.file 3 "Drivers/CMSIS/Include/gd32f1x0.h"
+ 700              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
+ 701              		.file 5 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_gpio.h"
+ARM GAS  /tmp/cco2egur.s 			page 20
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32f1x0_gpio.c
+     /tmp/cco2egur.s:16     .text.gpio_deinit:0000000000000000 $t
+     /tmp/cco2egur.s:24     .text.gpio_deinit:0000000000000000 gpio_deinit
+     /tmp/cco2egur.s:127    .text.gpio_deinit:0000000000000074 $d
+     /tmp/cco2egur.s:133    .text.gpio_mode_set:0000000000000000 $t
+     /tmp/cco2egur.s:140    .text.gpio_mode_set:0000000000000000 gpio_mode_set
+     /tmp/cco2egur.s:228    .text.gpio_output_options_set:0000000000000000 $t
+     /tmp/cco2egur.s:235    .text.gpio_output_options_set:0000000000000000 gpio_output_options_set
+     /tmp/cco2egur.s:317    .text.gpio_bit_set:0000000000000000 $t
+     /tmp/cco2egur.s:324    .text.gpio_bit_set:0000000000000000 gpio_bit_set
+     /tmp/cco2egur.s:341    .text.gpio_bit_reset:0000000000000000 $t
+     /tmp/cco2egur.s:348    .text.gpio_bit_reset:0000000000000000 gpio_bit_reset
+     /tmp/cco2egur.s:365    .text.gpio_bit_write:0000000000000000 $t
+     /tmp/cco2egur.s:372    .text.gpio_bit_write:0000000000000000 gpio_bit_write
+     /tmp/cco2egur.s:397    .text.gpio_port_write:0000000000000000 $t
+     /tmp/cco2egur.s:404    .text.gpio_port_write:0000000000000000 gpio_port_write
+     /tmp/cco2egur.s:421    .text.gpio_input_bit_get:0000000000000000 $t
+     /tmp/cco2egur.s:428    .text.gpio_input_bit_get:0000000000000000 gpio_input_bit_get
+     /tmp/cco2egur.s:452    .text.gpio_input_port_get:0000000000000000 $t
+     /tmp/cco2egur.s:459    .text.gpio_input_port_get:0000000000000000 gpio_input_port_get
+     /tmp/cco2egur.s:478    .text.gpio_output_bit_get:0000000000000000 $t
+     /tmp/cco2egur.s:485    .text.gpio_output_bit_get:0000000000000000 gpio_output_bit_get
+     /tmp/cco2egur.s:509    .text.gpio_output_port_get:0000000000000000 $t
+     /tmp/cco2egur.s:516    .text.gpio_output_port_get:0000000000000000 gpio_output_port_get
+     /tmp/cco2egur.s:535    .text.gpio_af_set:0000000000000000 $t
+     /tmp/cco2egur.s:542    .text.gpio_af_set:0000000000000000 gpio_af_set
+     /tmp/cco2egur.s:655    .text.gpio_pin_lock:0000000000000000 $t
+     /tmp/cco2egur.s:662    .text.gpio_pin_lock:0000000000000000 gpio_pin_lock
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable

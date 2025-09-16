@@ -1,0 +1,1409 @@
+ARM GAS  /tmp/ccfzvmHv.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f1x0_pmu.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.pmu_deinit,"ax",%progbits
+  16              		.align	1
+  17              		.global	pmu_deinit
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	pmu_deinit:
+  25              	.LFB56:
+  26              		.file 1 "Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c"
+   1:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** /*!
+   2:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \file  gd32f1x0_pmu.c
+   3:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \brief PMU driver
+   4:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** */
+   5:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+   6:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** /*
+   7:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     Copyright (C) 2017 GigaDevice
+   8:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+   9:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     2014-12-26, V1.0.0, platform GD32F1x0(x=3,5)
+  10:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     2016-01-15, V2.0.0, platform GD32F1x0(x=3,5,7,9)
+  11:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     2016-04-30, V3.0.0, firmware update for GD32F1x0(x=3,5,7,9)
+  12:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     2017-06-19, V3.1.0, firmware update for GD32F1x0(x=3,5,7,9)
+  13:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** */
+  14:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+  15:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** #include "gd32f1x0_pmu.h"
+  16:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+  17:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** /*!
+  18:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \brief      reset PMU register
+  19:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[in]  none
+  20:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[out] none
+  21:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \retval     none
+  22:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** */
+  23:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** void pmu_deinit(void)
+  24:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** {
+  27              		.loc 1 24 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  25:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* reset PMU */
+  26:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     rcu_periph_reset_enable(RCU_PMURST);
+  31              		.loc 1 26 5 view .LVU1
+  24:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* reset PMU */
+ARM GAS  /tmp/ccfzvmHv.s 			page 2
+
+
+  32              		.loc 1 24 1 is_stmt 0 view .LVU2
+  33 0000 08B5     		push	{r3, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 3, -8
+  37              		.cfi_offset 14, -4
+  38              		.loc 1 26 5 view .LVU3
+  39 0002 40F21C40 		movw	r0, #1052
+  40 0006 FFF7FEFF 		bl	rcu_periph_reset_enable
+  41              	.LVL0:
+  27:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     rcu_periph_reset_disable(RCU_PMURST);
+  42              		.loc 1 27 5 is_stmt 1 view .LVU4
+  28:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** }
+  43              		.loc 1 28 1 is_stmt 0 view .LVU5
+  44 000a BDE80840 		pop	{r3, lr}
+  45              	.LCFI1:
+  46              		.cfi_restore 14
+  47              		.cfi_restore 3
+  48              		.cfi_def_cfa_offset 0
+  27:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     rcu_periph_reset_disable(RCU_PMURST);
+  49              		.loc 1 27 5 view .LVU6
+  50 000e 40F21C40 		movw	r0, #1052
+  51 0012 FFF7FEBF 		b	rcu_periph_reset_disable
+  52              	.LVL1:
+  53              		.cfi_endproc
+  54              	.LFE56:
+  56              		.section	.text.pmu_lvd_select,"ax",%progbits
+  57              		.align	1
+  58              		.global	pmu_lvd_select
+  59              		.syntax unified
+  60              		.thumb
+  61              		.thumb_func
+  62              		.fpu softvfp
+  64              	pmu_lvd_select:
+  65              	.LVL2:
+  66              	.LFB57:
+  29:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+  30:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** /*!
+  31:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \brief      select low voltage detector threshold
+  32:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[in]  lvdt_n:
+  33:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_LVDT_0: voltage threshold is 2.2V (GD32F130_150) or 2.4V (GD32F170_190)
+  34:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_LVDT_1: voltage threshold is 2.3V (GD32F130_150) or 2.7V (GD32F170_190)
+  35:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_LVDT_2: voltage threshold is 2.4V (GD32F130_150) or 3.0V (GD32F170_190)
+  36:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_LVDT_3: voltage threshold is 2.5V (GD32F130_150) or 3.3V (GD32F170_190)
+  37:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_LVDT_4: voltage threshold is 2.6V (GD32F130_150) or 3.6V (GD32F170_190)
+  38:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_LVDT_5: voltage threshold is 2.7V (GD32F130_150) or 3.9V (GD32F170_190)
+  39:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_LVDT_6: voltage threshold is 2.8V (GD32F130_150) or 4.2V (GD32F170_190)
+  40:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_LVDT_7: voltage threshold is 2.9V (GD32F130_150) or 4.5V (GD32F170_190)
+  41:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[out] none
+  42:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \retval     none
+  43:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** */
+  44:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** void pmu_lvd_select(uint32_t lvdt_n)
+  45:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** {
+  67              		.loc 1 45 1 is_stmt 1 view -0
+  68              		.cfi_startproc
+  69              		@ args = 0, pretend = 0, frame = 0
+  70              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccfzvmHv.s 			page 3
+
+
+  71              		@ link register save eliminated.
+  46:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* disable LVD */
+  47:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     PMU_CTL &= ~PMU_CTL_LVDEN;
+  72              		.loc 1 47 5 view .LVU8
+  73              		.loc 1 47 13 is_stmt 0 view .LVU9
+  74 0000 084B     		ldr	r3, .L3
+  75 0002 1968     		ldr	r1, [r3]
+  76 0004 21F01001 		bic	r1, r1, #16
+  77 0008 1960     		str	r1, [r3]
+  48:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* clear LVDT bits */
+  49:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     PMU_CTL &= ~PMU_CTL_LVDT;
+  78              		.loc 1 49 5 is_stmt 1 view .LVU10
+  79              		.loc 1 49 13 is_stmt 0 view .LVU11
+  80 000a 1968     		ldr	r1, [r3]
+  81 000c 21F0E001 		bic	r1, r1, #224
+  82 0010 1960     		str	r1, [r3]
+  50:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* set LVDT bits according to lvdt_n */
+  51:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     PMU_CTL |= lvdt_n;
+  83              		.loc 1 51 5 is_stmt 1 view .LVU12
+  84              		.loc 1 51 13 is_stmt 0 view .LVU13
+  85 0012 1A68     		ldr	r2, [r3]
+  86 0014 0243     		orrs	r2, r2, r0
+  87 0016 1A60     		str	r2, [r3]
+  52:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* enable LVD */
+  53:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     PMU_CTL |= PMU_CTL_LVDEN;
+  88              		.loc 1 53 5 is_stmt 1 view .LVU14
+  89              		.loc 1 53 13 is_stmt 0 view .LVU15
+  90 0018 1A68     		ldr	r2, [r3]
+  91 001a 42F01002 		orr	r2, r2, #16
+  92 001e 1A60     		str	r2, [r3]
+  54:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+  55:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** }
+  93              		.loc 1 55 1 view .LVU16
+  94 0020 7047     		bx	lr
+  95              	.L4:
+  96 0022 00BF     		.align	2
+  97              	.L3:
+  98 0024 00700040 		.word	1073770496
+  99              		.cfi_endproc
+ 100              	.LFE57:
+ 102              		.section	.text.pmu_lvd_disable,"ax",%progbits
+ 103              		.align	1
+ 104              		.global	pmu_lvd_disable
+ 105              		.syntax unified
+ 106              		.thumb
+ 107              		.thumb_func
+ 108              		.fpu softvfp
+ 110              	pmu_lvd_disable:
+ 111              	.LFB58:
+  56:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+  57:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** /*!
+  58:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \brief      PMU lvd disable
+  59:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[in]  none
+  60:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[out] none
+  61:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \retval     none
+  62:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** */
+  63:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** void pmu_lvd_disable(void)
+ARM GAS  /tmp/ccfzvmHv.s 			page 4
+
+
+  64:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** {
+ 112              		.loc 1 64 1 is_stmt 1 view -0
+ 113              		.cfi_startproc
+ 114              		@ args = 0, pretend = 0, frame = 0
+ 115              		@ frame_needed = 0, uses_anonymous_args = 0
+ 116              		@ link register save eliminated.
+  65:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* disable LVD */
+  66:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     PMU_CTL &= ~PMU_CTL_LVDEN;
+ 117              		.loc 1 66 5 view .LVU18
+ 118              		.loc 1 66 13 is_stmt 0 view .LVU19
+ 119 0000 024A     		ldr	r2, .L6
+ 120 0002 1368     		ldr	r3, [r2]
+ 121 0004 23F01003 		bic	r3, r3, #16
+ 122 0008 1360     		str	r3, [r2]
+  67:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** }
+ 123              		.loc 1 67 1 view .LVU20
+ 124 000a 7047     		bx	lr
+ 125              	.L7:
+ 126              		.align	2
+ 127              	.L6:
+ 128 000c 00700040 		.word	1073770496
+ 129              		.cfi_endproc
+ 130              	.LFE58:
+ 132              		.section	.text.pmu_to_sleepmode,"ax",%progbits
+ 133              		.align	1
+ 134              		.global	pmu_to_sleepmode
+ 135              		.syntax unified
+ 136              		.thumb
+ 137              		.thumb_func
+ 138              		.fpu softvfp
+ 140              	pmu_to_sleepmode:
+ 141              	.LVL3:
+ 142              	.LFB59:
+  68:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+  69:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** /*!
+  70:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \brief      PMU work at sleep mode
+  71:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[in]  sleepmodecmd:
+  72:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        WFI_CMD:  use WFI command
+  73:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        WFE_CMD:  use WFE command
+  74:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[out] none
+  75:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \retval     none
+  76:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** */
+  77:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** void pmu_to_sleepmode(uint8_t sleepmodecmd)
+  78:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** {
+ 143              		.loc 1 78 1 is_stmt 1 view -0
+ 144              		.cfi_startproc
+ 145              		@ args = 0, pretend = 0, frame = 0
+ 146              		@ frame_needed = 0, uses_anonymous_args = 0
+ 147              		@ link register save eliminated.
+  79:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* clear sleepdeep bit of Cortex-M3 system control register */
+  80:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     SCB->SCR &= ~((uint32_t)SCB_SCR_SLEEPDEEP_Msk);
+ 148              		.loc 1 80 5 view .LVU22
+ 149              		.loc 1 80 14 is_stmt 0 view .LVU23
+ 150 0000 044A     		ldr	r2, .L11
+ 151 0002 1369     		ldr	r3, [r2, #16]
+ 152 0004 23F00403 		bic	r3, r3, #4
+ 153 0008 1361     		str	r3, [r2, #16]
+ARM GAS  /tmp/ccfzvmHv.s 			page 5
+
+
+  81:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     
+  82:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* select WFI or WFE command to enter sleep mode */
+  83:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     if(WFI_CMD == sleepmodecmd){
+ 154              		.loc 1 83 5 is_stmt 1 view .LVU24
+ 155              		.loc 1 83 7 is_stmt 0 view .LVU25
+ 156 000a 08B9     		cbnz	r0, .L9
+  84:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         __WFI();
+ 157              		.loc 1 84 9 is_stmt 1 view .LVU26
+ 158              	.LBB18:
+ 159              	.LBI18:
+ 160              		.file 2 "Drivers/CMSIS/core_cmInstr.h"
+   1:Drivers/CMSIS/core_cmInstr.h **** /**************************************************************************//**
+   2:Drivers/CMSIS/core_cmInstr.h ****  * @file     core_cmInstr.h
+   3:Drivers/CMSIS/core_cmInstr.h ****  * @brief    CMSIS Cortex-M Core Instruction Access Header File
+   4:Drivers/CMSIS/core_cmInstr.h ****  * @version  V3.20
+   5:Drivers/CMSIS/core_cmInstr.h ****  * @date     05. March 2013
+   6:Drivers/CMSIS/core_cmInstr.h ****  *
+   7:Drivers/CMSIS/core_cmInstr.h ****  * @note
+   8:Drivers/CMSIS/core_cmInstr.h ****  *
+   9:Drivers/CMSIS/core_cmInstr.h ****  ******************************************************************************/
+  10:Drivers/CMSIS/core_cmInstr.h **** /* Copyright (c) 2009 - 2013 ARM LIMITED
+  11:Drivers/CMSIS/core_cmInstr.h **** 
+  12:Drivers/CMSIS/core_cmInstr.h ****    All rights reserved.
+  13:Drivers/CMSIS/core_cmInstr.h ****    Redistribution and use in source and binary forms, with or without
+  14:Drivers/CMSIS/core_cmInstr.h ****    modification, are permitted provided that the following conditions are met:
+  15:Drivers/CMSIS/core_cmInstr.h ****    - Redistributions of source code must retain the above copyright
+  16:Drivers/CMSIS/core_cmInstr.h ****      notice, this list of conditions and the following disclaimer.
+  17:Drivers/CMSIS/core_cmInstr.h ****    - Redistributions in binary form must reproduce the above copyright
+  18:Drivers/CMSIS/core_cmInstr.h ****      notice, this list of conditions and the following disclaimer in the
+  19:Drivers/CMSIS/core_cmInstr.h ****      documentation and/or other materials provided with the distribution.
+  20:Drivers/CMSIS/core_cmInstr.h ****    - Neither the name of ARM nor the names of its contributors may be used
+  21:Drivers/CMSIS/core_cmInstr.h ****      to endorse or promote products derived from this software without
+  22:Drivers/CMSIS/core_cmInstr.h ****      specific prior written permission.
+  23:Drivers/CMSIS/core_cmInstr.h ****    *
+  24:Drivers/CMSIS/core_cmInstr.h ****    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  25:Drivers/CMSIS/core_cmInstr.h ****    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  26:Drivers/CMSIS/core_cmInstr.h ****    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  27:Drivers/CMSIS/core_cmInstr.h ****    ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS BE
+  28:Drivers/CMSIS/core_cmInstr.h ****    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  29:Drivers/CMSIS/core_cmInstr.h ****    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  30:Drivers/CMSIS/core_cmInstr.h ****    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  31:Drivers/CMSIS/core_cmInstr.h ****    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  32:Drivers/CMSIS/core_cmInstr.h ****    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  33:Drivers/CMSIS/core_cmInstr.h ****    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  34:Drivers/CMSIS/core_cmInstr.h ****    POSSIBILITY OF SUCH DAMAGE.
+  35:Drivers/CMSIS/core_cmInstr.h ****    ---------------------------------------------------------------------------*/
+  36:Drivers/CMSIS/core_cmInstr.h **** 
+  37:Drivers/CMSIS/core_cmInstr.h **** 
+  38:Drivers/CMSIS/core_cmInstr.h **** #ifndef __CORE_CMINSTR_H
+  39:Drivers/CMSIS/core_cmInstr.h **** #define __CORE_CMINSTR_H
+  40:Drivers/CMSIS/core_cmInstr.h **** 
+  41:Drivers/CMSIS/core_cmInstr.h **** 
+  42:Drivers/CMSIS/core_cmInstr.h **** /* ##########################  Core Instruction Access  ######################### */
+  43:Drivers/CMSIS/core_cmInstr.h **** /** \defgroup CMSIS_Core_InstructionInterface CMSIS Core Instruction Interface
+  44:Drivers/CMSIS/core_cmInstr.h ****   Access to dedicated instructions
+  45:Drivers/CMSIS/core_cmInstr.h ****   @{
+  46:Drivers/CMSIS/core_cmInstr.h **** */
+ARM GAS  /tmp/ccfzvmHv.s 			page 6
+
+
+  47:Drivers/CMSIS/core_cmInstr.h **** 
+  48:Drivers/CMSIS/core_cmInstr.h **** #if   defined ( __CC_ARM ) /*------------------RealView Compiler -----------------*/
+  49:Drivers/CMSIS/core_cmInstr.h **** /* ARM armcc specific functions */
+  50:Drivers/CMSIS/core_cmInstr.h **** 
+  51:Drivers/CMSIS/core_cmInstr.h **** #if (__ARMCC_VERSION < 400677)
+  52:Drivers/CMSIS/core_cmInstr.h ****   #error "Please use ARM Compiler Toolchain V4.0.677 or later!"
+  53:Drivers/CMSIS/core_cmInstr.h **** #endif
+  54:Drivers/CMSIS/core_cmInstr.h **** 
+  55:Drivers/CMSIS/core_cmInstr.h **** 
+  56:Drivers/CMSIS/core_cmInstr.h **** /** \brief  No Operation
+  57:Drivers/CMSIS/core_cmInstr.h **** 
+  58:Drivers/CMSIS/core_cmInstr.h ****     No Operation does nothing. This instruction can be used for code alignment purposes.
+  59:Drivers/CMSIS/core_cmInstr.h ****  */
+  60:Drivers/CMSIS/core_cmInstr.h **** #define __NOP                             __nop
+  61:Drivers/CMSIS/core_cmInstr.h **** 
+  62:Drivers/CMSIS/core_cmInstr.h **** 
+  63:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Wait For Interrupt
+  64:Drivers/CMSIS/core_cmInstr.h **** 
+  65:Drivers/CMSIS/core_cmInstr.h ****     Wait For Interrupt is a hint instruction that suspends execution
+  66:Drivers/CMSIS/core_cmInstr.h ****     until one of a number of events occurs.
+  67:Drivers/CMSIS/core_cmInstr.h ****  */
+  68:Drivers/CMSIS/core_cmInstr.h **** #define __WFI                             __wfi
+  69:Drivers/CMSIS/core_cmInstr.h **** 
+  70:Drivers/CMSIS/core_cmInstr.h **** 
+  71:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Wait For Event
+  72:Drivers/CMSIS/core_cmInstr.h **** 
+  73:Drivers/CMSIS/core_cmInstr.h ****     Wait For Event is a hint instruction that permits the processor to enter
+  74:Drivers/CMSIS/core_cmInstr.h ****     a low-power state until one of a number of events occurs.
+  75:Drivers/CMSIS/core_cmInstr.h ****  */
+  76:Drivers/CMSIS/core_cmInstr.h **** #define __WFE                             __wfe
+  77:Drivers/CMSIS/core_cmInstr.h **** 
+  78:Drivers/CMSIS/core_cmInstr.h **** 
+  79:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Send Event
+  80:Drivers/CMSIS/core_cmInstr.h **** 
+  81:Drivers/CMSIS/core_cmInstr.h ****     Send Event is a hint instruction. It causes an event to be signaled to the CPU.
+  82:Drivers/CMSIS/core_cmInstr.h ****  */
+  83:Drivers/CMSIS/core_cmInstr.h **** #define __SEV                             __sev
+  84:Drivers/CMSIS/core_cmInstr.h **** 
+  85:Drivers/CMSIS/core_cmInstr.h **** 
+  86:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Instruction Synchronization Barrier
+  87:Drivers/CMSIS/core_cmInstr.h **** 
+  88:Drivers/CMSIS/core_cmInstr.h ****     Instruction Synchronization Barrier flushes the pipeline in the processor,
+  89:Drivers/CMSIS/core_cmInstr.h ****     so that all instructions following the ISB are fetched from cache or
+  90:Drivers/CMSIS/core_cmInstr.h ****     memory, after the instruction has been completed.
+  91:Drivers/CMSIS/core_cmInstr.h ****  */
+  92:Drivers/CMSIS/core_cmInstr.h **** #define __ISB()                           __isb(0xF)
+  93:Drivers/CMSIS/core_cmInstr.h **** 
+  94:Drivers/CMSIS/core_cmInstr.h **** 
+  95:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Data Synchronization Barrier
+  96:Drivers/CMSIS/core_cmInstr.h **** 
+  97:Drivers/CMSIS/core_cmInstr.h ****     This function acts as a special kind of Data Memory Barrier.
+  98:Drivers/CMSIS/core_cmInstr.h ****     It completes when all explicit memory accesses before this instruction complete.
+  99:Drivers/CMSIS/core_cmInstr.h ****  */
+ 100:Drivers/CMSIS/core_cmInstr.h **** #define __DSB()                           __dsb(0xF)
+ 101:Drivers/CMSIS/core_cmInstr.h **** 
+ 102:Drivers/CMSIS/core_cmInstr.h **** 
+ 103:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Data Memory Barrier
+ARM GAS  /tmp/ccfzvmHv.s 			page 7
+
+
+ 104:Drivers/CMSIS/core_cmInstr.h **** 
+ 105:Drivers/CMSIS/core_cmInstr.h ****     This function ensures the apparent order of the explicit memory operations before
+ 106:Drivers/CMSIS/core_cmInstr.h ****     and after the instruction, without ensuring their completion.
+ 107:Drivers/CMSIS/core_cmInstr.h ****  */
+ 108:Drivers/CMSIS/core_cmInstr.h **** #define __DMB()                           __dmb(0xF)
+ 109:Drivers/CMSIS/core_cmInstr.h **** 
+ 110:Drivers/CMSIS/core_cmInstr.h **** 
+ 111:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Reverse byte order (32 bit)
+ 112:Drivers/CMSIS/core_cmInstr.h **** 
+ 113:Drivers/CMSIS/core_cmInstr.h ****     This function reverses the byte order in integer value.
+ 114:Drivers/CMSIS/core_cmInstr.h **** 
+ 115:Drivers/CMSIS/core_cmInstr.h ****     \param [in]    value  Value to reverse
+ 116:Drivers/CMSIS/core_cmInstr.h ****     \return               Reversed value
+ 117:Drivers/CMSIS/core_cmInstr.h ****  */
+ 118:Drivers/CMSIS/core_cmInstr.h **** #define __REV                             __rev
+ 119:Drivers/CMSIS/core_cmInstr.h **** 
+ 120:Drivers/CMSIS/core_cmInstr.h **** 
+ 121:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Reverse byte order (16 bit)
+ 122:Drivers/CMSIS/core_cmInstr.h **** 
+ 123:Drivers/CMSIS/core_cmInstr.h ****     This function reverses the byte order in two unsigned short values.
+ 124:Drivers/CMSIS/core_cmInstr.h **** 
+ 125:Drivers/CMSIS/core_cmInstr.h ****     \param [in]    value  Value to reverse
+ 126:Drivers/CMSIS/core_cmInstr.h ****     \return               Reversed value
+ 127:Drivers/CMSIS/core_cmInstr.h ****  */
+ 128:Drivers/CMSIS/core_cmInstr.h **** #ifndef __NO_EMBEDDED_ASM
+ 129:Drivers/CMSIS/core_cmInstr.h **** __attribute__((section(".rev16_text"))) __STATIC_INLINE __ASM uint32_t __REV16(uint32_t value)
+ 130:Drivers/CMSIS/core_cmInstr.h **** {
+ 131:Drivers/CMSIS/core_cmInstr.h ****   rev16 r0, r0
+ 132:Drivers/CMSIS/core_cmInstr.h ****   bx lr
+ 133:Drivers/CMSIS/core_cmInstr.h **** }
+ 134:Drivers/CMSIS/core_cmInstr.h **** #endif
+ 135:Drivers/CMSIS/core_cmInstr.h **** 
+ 136:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Reverse byte order in signed short value
+ 137:Drivers/CMSIS/core_cmInstr.h **** 
+ 138:Drivers/CMSIS/core_cmInstr.h ****     This function reverses the byte order in a signed short value with sign extension to integer.
+ 139:Drivers/CMSIS/core_cmInstr.h **** 
+ 140:Drivers/CMSIS/core_cmInstr.h ****     \param [in]    value  Value to reverse
+ 141:Drivers/CMSIS/core_cmInstr.h ****     \return               Reversed value
+ 142:Drivers/CMSIS/core_cmInstr.h ****  */
+ 143:Drivers/CMSIS/core_cmInstr.h **** #ifndef __NO_EMBEDDED_ASM
+ 144:Drivers/CMSIS/core_cmInstr.h **** __attribute__((section(".revsh_text"))) __STATIC_INLINE __ASM int32_t __REVSH(int32_t value)
+ 145:Drivers/CMSIS/core_cmInstr.h **** {
+ 146:Drivers/CMSIS/core_cmInstr.h ****   revsh r0, r0
+ 147:Drivers/CMSIS/core_cmInstr.h ****   bx lr
+ 148:Drivers/CMSIS/core_cmInstr.h **** }
+ 149:Drivers/CMSIS/core_cmInstr.h **** #endif
+ 150:Drivers/CMSIS/core_cmInstr.h **** 
+ 151:Drivers/CMSIS/core_cmInstr.h **** 
+ 152:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Rotate Right in unsigned value (32 bit)
+ 153:Drivers/CMSIS/core_cmInstr.h **** 
+ 154:Drivers/CMSIS/core_cmInstr.h ****     This function Rotate Right (immediate) provides the value of the contents of a register rotated
+ 155:Drivers/CMSIS/core_cmInstr.h **** 
+ 156:Drivers/CMSIS/core_cmInstr.h ****     \param [in]    value  Value to rotate
+ 157:Drivers/CMSIS/core_cmInstr.h ****     \param [in]    value  Number of Bits to rotate
+ 158:Drivers/CMSIS/core_cmInstr.h ****     \return               Rotated value
+ 159:Drivers/CMSIS/core_cmInstr.h ****  */
+ 160:Drivers/CMSIS/core_cmInstr.h **** #define __ROR                             __ror
+ARM GAS  /tmp/ccfzvmHv.s 			page 8
+
+
+ 161:Drivers/CMSIS/core_cmInstr.h **** 
+ 162:Drivers/CMSIS/core_cmInstr.h **** 
+ 163:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Breakpoint
+ 164:Drivers/CMSIS/core_cmInstr.h **** 
+ 165:Drivers/CMSIS/core_cmInstr.h ****     This function causes the processor to enter Debug state.
+ 166:Drivers/CMSIS/core_cmInstr.h ****     Debug tools can use this to investigate system state when the instruction at a particular addre
+ 167:Drivers/CMSIS/core_cmInstr.h **** 
+ 168:Drivers/CMSIS/core_cmInstr.h ****     \param [in]    value  is ignored by the processor.
+ 169:Drivers/CMSIS/core_cmInstr.h ****                    If required, a debugger can use it to store additional information about the bre
+ 170:Drivers/CMSIS/core_cmInstr.h ****  */
+ 171:Drivers/CMSIS/core_cmInstr.h **** #define __BKPT(value)                       __breakpoint(value)
+ 172:Drivers/CMSIS/core_cmInstr.h **** 
+ 173:Drivers/CMSIS/core_cmInstr.h **** 
+ 174:Drivers/CMSIS/core_cmInstr.h **** #if       (__CORTEX_M >= 0x03)
+ 175:Drivers/CMSIS/core_cmInstr.h **** 
+ 176:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Reverse bit order of value
+ 177:Drivers/CMSIS/core_cmInstr.h **** 
+ 178:Drivers/CMSIS/core_cmInstr.h ****     This function reverses the bit order of the given value.
+ 179:Drivers/CMSIS/core_cmInstr.h **** 
+ 180:Drivers/CMSIS/core_cmInstr.h ****     \param [in]    value  Value to reverse
+ 181:Drivers/CMSIS/core_cmInstr.h ****     \return               Reversed value
+ 182:Drivers/CMSIS/core_cmInstr.h ****  */
+ 183:Drivers/CMSIS/core_cmInstr.h **** #define __RBIT                            __rbit
+ 184:Drivers/CMSIS/core_cmInstr.h **** 
+ 185:Drivers/CMSIS/core_cmInstr.h **** 
+ 186:Drivers/CMSIS/core_cmInstr.h **** /** \brief  LDR Exclusive (8 bit)
+ 187:Drivers/CMSIS/core_cmInstr.h **** 
+ 188:Drivers/CMSIS/core_cmInstr.h ****     This function performs a exclusive LDR command for 8 bit value.
+ 189:Drivers/CMSIS/core_cmInstr.h **** 
+ 190:Drivers/CMSIS/core_cmInstr.h ****     \param [in]    ptr  Pointer to data
+ 191:Drivers/CMSIS/core_cmInstr.h ****     \return             value of type uint8_t at (*ptr)
+ 192:Drivers/CMSIS/core_cmInstr.h ****  */
+ 193:Drivers/CMSIS/core_cmInstr.h **** #define __LDREXB(ptr)                     ((uint8_t ) __ldrex(ptr))
+ 194:Drivers/CMSIS/core_cmInstr.h **** 
+ 195:Drivers/CMSIS/core_cmInstr.h **** 
+ 196:Drivers/CMSIS/core_cmInstr.h **** /** \brief  LDR Exclusive (16 bit)
+ 197:Drivers/CMSIS/core_cmInstr.h **** 
+ 198:Drivers/CMSIS/core_cmInstr.h ****     This function performs a exclusive LDR command for 16 bit values.
+ 199:Drivers/CMSIS/core_cmInstr.h **** 
+ 200:Drivers/CMSIS/core_cmInstr.h ****     \param [in]    ptr  Pointer to data
+ 201:Drivers/CMSIS/core_cmInstr.h ****     \return        value of type uint16_t at (*ptr)
+ 202:Drivers/CMSIS/core_cmInstr.h ****  */
+ 203:Drivers/CMSIS/core_cmInstr.h **** #define __LDREXH(ptr)                     ((uint16_t) __ldrex(ptr))
+ 204:Drivers/CMSIS/core_cmInstr.h **** 
+ 205:Drivers/CMSIS/core_cmInstr.h **** 
+ 206:Drivers/CMSIS/core_cmInstr.h **** /** \brief  LDR Exclusive (32 bit)
+ 207:Drivers/CMSIS/core_cmInstr.h **** 
+ 208:Drivers/CMSIS/core_cmInstr.h ****     This function performs a exclusive LDR command for 32 bit values.
+ 209:Drivers/CMSIS/core_cmInstr.h **** 
+ 210:Drivers/CMSIS/core_cmInstr.h ****     \param [in]    ptr  Pointer to data
+ 211:Drivers/CMSIS/core_cmInstr.h ****     \return        value of type uint32_t at (*ptr)
+ 212:Drivers/CMSIS/core_cmInstr.h ****  */
+ 213:Drivers/CMSIS/core_cmInstr.h **** #define __LDREXW(ptr)                     ((uint32_t ) __ldrex(ptr))
+ 214:Drivers/CMSIS/core_cmInstr.h **** 
+ 215:Drivers/CMSIS/core_cmInstr.h **** 
+ 216:Drivers/CMSIS/core_cmInstr.h **** /** \brief  STR Exclusive (8 bit)
+ 217:Drivers/CMSIS/core_cmInstr.h **** 
+ARM GAS  /tmp/ccfzvmHv.s 			page 9
+
+
+ 218:Drivers/CMSIS/core_cmInstr.h ****     This function performs a exclusive STR command for 8 bit values.
+ 219:Drivers/CMSIS/core_cmInstr.h **** 
+ 220:Drivers/CMSIS/core_cmInstr.h ****     \param [in]  value  Value to store
+ 221:Drivers/CMSIS/core_cmInstr.h ****     \param [in]    ptr  Pointer to location
+ 222:Drivers/CMSIS/core_cmInstr.h ****     \return          0  Function succeeded
+ 223:Drivers/CMSIS/core_cmInstr.h ****     \return          1  Function failed
+ 224:Drivers/CMSIS/core_cmInstr.h ****  */
+ 225:Drivers/CMSIS/core_cmInstr.h **** #define __STREXB(value, ptr)              __strex(value, ptr)
+ 226:Drivers/CMSIS/core_cmInstr.h **** 
+ 227:Drivers/CMSIS/core_cmInstr.h **** 
+ 228:Drivers/CMSIS/core_cmInstr.h **** /** \brief  STR Exclusive (16 bit)
+ 229:Drivers/CMSIS/core_cmInstr.h **** 
+ 230:Drivers/CMSIS/core_cmInstr.h ****     This function performs a exclusive STR command for 16 bit values.
+ 231:Drivers/CMSIS/core_cmInstr.h **** 
+ 232:Drivers/CMSIS/core_cmInstr.h ****     \param [in]  value  Value to store
+ 233:Drivers/CMSIS/core_cmInstr.h ****     \param [in]    ptr  Pointer to location
+ 234:Drivers/CMSIS/core_cmInstr.h ****     \return          0  Function succeeded
+ 235:Drivers/CMSIS/core_cmInstr.h ****     \return          1  Function failed
+ 236:Drivers/CMSIS/core_cmInstr.h ****  */
+ 237:Drivers/CMSIS/core_cmInstr.h **** #define __STREXH(value, ptr)              __strex(value, ptr)
+ 238:Drivers/CMSIS/core_cmInstr.h **** 
+ 239:Drivers/CMSIS/core_cmInstr.h **** 
+ 240:Drivers/CMSIS/core_cmInstr.h **** /** \brief  STR Exclusive (32 bit)
+ 241:Drivers/CMSIS/core_cmInstr.h **** 
+ 242:Drivers/CMSIS/core_cmInstr.h ****     This function performs a exclusive STR command for 32 bit values.
+ 243:Drivers/CMSIS/core_cmInstr.h **** 
+ 244:Drivers/CMSIS/core_cmInstr.h ****     \param [in]  value  Value to store
+ 245:Drivers/CMSIS/core_cmInstr.h ****     \param [in]    ptr  Pointer to location
+ 246:Drivers/CMSIS/core_cmInstr.h ****     \return          0  Function succeeded
+ 247:Drivers/CMSIS/core_cmInstr.h ****     \return          1  Function failed
+ 248:Drivers/CMSIS/core_cmInstr.h ****  */
+ 249:Drivers/CMSIS/core_cmInstr.h **** #define __STREXW(value, ptr)              __strex(value, ptr)
+ 250:Drivers/CMSIS/core_cmInstr.h **** 
+ 251:Drivers/CMSIS/core_cmInstr.h **** 
+ 252:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Remove the exclusive lock
+ 253:Drivers/CMSIS/core_cmInstr.h **** 
+ 254:Drivers/CMSIS/core_cmInstr.h ****     This function removes the exclusive lock which is created by LDREX.
+ 255:Drivers/CMSIS/core_cmInstr.h **** 
+ 256:Drivers/CMSIS/core_cmInstr.h ****  */
+ 257:Drivers/CMSIS/core_cmInstr.h **** #define __CLREX                           __clrex
+ 258:Drivers/CMSIS/core_cmInstr.h **** 
+ 259:Drivers/CMSIS/core_cmInstr.h **** 
+ 260:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Signed Saturate
+ 261:Drivers/CMSIS/core_cmInstr.h **** 
+ 262:Drivers/CMSIS/core_cmInstr.h ****     This function saturates a signed value.
+ 263:Drivers/CMSIS/core_cmInstr.h **** 
+ 264:Drivers/CMSIS/core_cmInstr.h ****     \param [in]  value  Value to be saturated
+ 265:Drivers/CMSIS/core_cmInstr.h ****     \param [in]    sat  Bit position to saturate to (1..32)
+ 266:Drivers/CMSIS/core_cmInstr.h ****     \return             Saturated value
+ 267:Drivers/CMSIS/core_cmInstr.h ****  */
+ 268:Drivers/CMSIS/core_cmInstr.h **** #define __SSAT                            __ssat
+ 269:Drivers/CMSIS/core_cmInstr.h **** 
+ 270:Drivers/CMSIS/core_cmInstr.h **** 
+ 271:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Unsigned Saturate
+ 272:Drivers/CMSIS/core_cmInstr.h **** 
+ 273:Drivers/CMSIS/core_cmInstr.h ****     This function saturates an unsigned value.
+ 274:Drivers/CMSIS/core_cmInstr.h **** 
+ARM GAS  /tmp/ccfzvmHv.s 			page 10
+
+
+ 275:Drivers/CMSIS/core_cmInstr.h ****     \param [in]  value  Value to be saturated
+ 276:Drivers/CMSIS/core_cmInstr.h ****     \param [in]    sat  Bit position to saturate to (0..31)
+ 277:Drivers/CMSIS/core_cmInstr.h ****     \return             Saturated value
+ 278:Drivers/CMSIS/core_cmInstr.h ****  */
+ 279:Drivers/CMSIS/core_cmInstr.h **** #define __USAT                            __usat
+ 280:Drivers/CMSIS/core_cmInstr.h **** 
+ 281:Drivers/CMSIS/core_cmInstr.h **** 
+ 282:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Count leading zeros
+ 283:Drivers/CMSIS/core_cmInstr.h **** 
+ 284:Drivers/CMSIS/core_cmInstr.h ****     This function counts the number of leading zeros of a data value.
+ 285:Drivers/CMSIS/core_cmInstr.h **** 
+ 286:Drivers/CMSIS/core_cmInstr.h ****     \param [in]  value  Value to count the leading zeros
+ 287:Drivers/CMSIS/core_cmInstr.h ****     \return             number of leading zeros in value
+ 288:Drivers/CMSIS/core_cmInstr.h ****  */
+ 289:Drivers/CMSIS/core_cmInstr.h **** #define __CLZ                             __clz
+ 290:Drivers/CMSIS/core_cmInstr.h **** 
+ 291:Drivers/CMSIS/core_cmInstr.h **** #endif /* (__CORTEX_M >= 0x03) */
+ 292:Drivers/CMSIS/core_cmInstr.h **** 
+ 293:Drivers/CMSIS/core_cmInstr.h **** 
+ 294:Drivers/CMSIS/core_cmInstr.h **** 
+ 295:Drivers/CMSIS/core_cmInstr.h **** #elif defined ( __ICCARM__ ) /*------------------ ICC Compiler -------------------*/
+ 296:Drivers/CMSIS/core_cmInstr.h **** /* IAR iccarm specific functions */
+ 297:Drivers/CMSIS/core_cmInstr.h **** 
+ 298:Drivers/CMSIS/core_cmInstr.h **** #include <cmsis_iar.h>
+ 299:Drivers/CMSIS/core_cmInstr.h **** 
+ 300:Drivers/CMSIS/core_cmInstr.h **** 
+ 301:Drivers/CMSIS/core_cmInstr.h **** #elif defined ( __TMS470__ ) /*---------------- TI CCS Compiler ------------------*/
+ 302:Drivers/CMSIS/core_cmInstr.h **** /* TI CCS specific functions */
+ 303:Drivers/CMSIS/core_cmInstr.h **** 
+ 304:Drivers/CMSIS/core_cmInstr.h **** #include <cmsis_ccs.h>
+ 305:Drivers/CMSIS/core_cmInstr.h **** 
+ 306:Drivers/CMSIS/core_cmInstr.h **** 
+ 307:Drivers/CMSIS/core_cmInstr.h **** #elif defined ( __GNUC__ ) /*------------------ GNU Compiler ---------------------*/
+ 308:Drivers/CMSIS/core_cmInstr.h **** /* GNU gcc specific functions */
+ 309:Drivers/CMSIS/core_cmInstr.h **** 
+ 310:Drivers/CMSIS/core_cmInstr.h **** /* Define macros for porting to both thumb1 and thumb2.
+ 311:Drivers/CMSIS/core_cmInstr.h ****  * For thumb1, use low register (r0-r7), specified by constrant "l"
+ 312:Drivers/CMSIS/core_cmInstr.h ****  * Otherwise, use general registers, specified by constrant "r" */
+ 313:Drivers/CMSIS/core_cmInstr.h **** #if defined (__thumb__) && !defined (__thumb2__)
+ 314:Drivers/CMSIS/core_cmInstr.h **** #define __CMSIS_GCC_OUT_REG(r) "=l" (r)
+ 315:Drivers/CMSIS/core_cmInstr.h **** #define __CMSIS_GCC_USE_REG(r) "l" (r)
+ 316:Drivers/CMSIS/core_cmInstr.h **** #else
+ 317:Drivers/CMSIS/core_cmInstr.h **** #define __CMSIS_GCC_OUT_REG(r) "=r" (r)
+ 318:Drivers/CMSIS/core_cmInstr.h **** #define __CMSIS_GCC_USE_REG(r) "r" (r)
+ 319:Drivers/CMSIS/core_cmInstr.h **** #endif
+ 320:Drivers/CMSIS/core_cmInstr.h **** 
+ 321:Drivers/CMSIS/core_cmInstr.h **** /** \brief  No Operation
+ 322:Drivers/CMSIS/core_cmInstr.h **** 
+ 323:Drivers/CMSIS/core_cmInstr.h ****     No Operation does nothing. This instruction can be used for code alignment purposes.
+ 324:Drivers/CMSIS/core_cmInstr.h ****  */
+ 325:Drivers/CMSIS/core_cmInstr.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __NOP(void)
+ 326:Drivers/CMSIS/core_cmInstr.h **** {
+ 327:Drivers/CMSIS/core_cmInstr.h ****   __ASM volatile ("nop");
+ 328:Drivers/CMSIS/core_cmInstr.h **** }
+ 329:Drivers/CMSIS/core_cmInstr.h **** 
+ 330:Drivers/CMSIS/core_cmInstr.h **** 
+ 331:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Wait For Interrupt
+ARM GAS  /tmp/ccfzvmHv.s 			page 11
+
+
+ 332:Drivers/CMSIS/core_cmInstr.h **** 
+ 333:Drivers/CMSIS/core_cmInstr.h ****     Wait For Interrupt is a hint instruction that suspends execution
+ 334:Drivers/CMSIS/core_cmInstr.h ****     until one of a number of events occurs.
+ 335:Drivers/CMSIS/core_cmInstr.h ****  */
+ 336:Drivers/CMSIS/core_cmInstr.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __WFI(void)
+ 161              		.loc 2 336 57 view .LVU27
+ 162              	.LBB19:
+ 337:Drivers/CMSIS/core_cmInstr.h **** {
+ 338:Drivers/CMSIS/core_cmInstr.h ****   __ASM volatile ("wfi");
+ 163              		.loc 2 338 3 view .LVU28
+ 164              		.syntax unified
+ 165              	@ 338 "Drivers/CMSIS/core_cmInstr.h" 1
+ 166 000c 30BF     		wfi
+ 167              	@ 0 "" 2
+ 339:Drivers/CMSIS/core_cmInstr.h **** }
+ 168              		.loc 2 339 1 is_stmt 0 view .LVU29
+ 169              		.thumb
+ 170              		.syntax unified
+ 171 000e 7047     		bx	lr
+ 172              	.L9:
+ 173              	.LBE19:
+ 174              	.LBE18:
+  85:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     }else{
+  86:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         __WFE();
+ 175              		.loc 1 86 9 is_stmt 1 view .LVU30
+ 176              	.LBB20:
+ 177              	.LBI20:
+ 340:Drivers/CMSIS/core_cmInstr.h **** 
+ 341:Drivers/CMSIS/core_cmInstr.h **** 
+ 342:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Wait For Event
+ 343:Drivers/CMSIS/core_cmInstr.h **** 
+ 344:Drivers/CMSIS/core_cmInstr.h ****     Wait For Event is a hint instruction that permits the processor to enter
+ 345:Drivers/CMSIS/core_cmInstr.h ****     a low-power state until one of a number of events occurs.
+ 346:Drivers/CMSIS/core_cmInstr.h ****  */
+ 347:Drivers/CMSIS/core_cmInstr.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __WFE(void)
+ 178              		.loc 2 347 57 view .LVU31
+ 179              	.LBB21:
+ 348:Drivers/CMSIS/core_cmInstr.h **** {
+ 349:Drivers/CMSIS/core_cmInstr.h ****   __ASM volatile ("wfe");
+ 180              		.loc 2 349 3 view .LVU32
+ 181              		.syntax unified
+ 182              	@ 349 "Drivers/CMSIS/core_cmInstr.h" 1
+ 183 0010 20BF     		wfe
+ 184              	@ 0 "" 2
+ 185              		.thumb
+ 186              		.syntax unified
+ 187              	.LBE21:
+ 188              	.LBE20:
+  87:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     }
+  88:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** }
+ 189              		.loc 1 88 1 is_stmt 0 view .LVU33
+ 190 0012 7047     		bx	lr
+ 191              	.L12:
+ 192              		.align	2
+ 193              	.L11:
+ 194 0014 00ED00E0 		.word	-536810240
+ 195              		.cfi_endproc
+ARM GAS  /tmp/ccfzvmHv.s 			page 12
+
+
+ 196              	.LFE59:
+ 198              		.section	.text.pmu_to_deepsleepmode,"ax",%progbits
+ 199              		.align	1
+ 200              		.global	pmu_to_deepsleepmode
+ 201              		.syntax unified
+ 202              		.thumb
+ 203              		.thumb_func
+ 204              		.fpu softvfp
+ 206              	pmu_to_deepsleepmode:
+ 207              	.LVL4:
+ 208              	.LFB60:
+  89:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+  90:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** /*!
+  91:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \brief      PMU work at deepsleep mode
+  92:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[in]  ldo
+  93:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_LDO_NORMAL: LDO normal work when pmu enter deepsleep mode
+  94:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_LDO_LOWPOWER: LDO work at low power mode when pmu enter deepsleep mode
+  95:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[in]  deepsleepmodecmd: 
+  96:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        WFI_CMD: use WFI command
+  97:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        WFE_CMD: use WFE command
+  98:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[out] none
+  99:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \retval     none
+ 100:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** */
+ 101:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** void pmu_to_deepsleepmode(uint32_t ldo,uint8_t deepsleepmodecmd)
+ 102:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** {
+ 209              		.loc 1 102 1 is_stmt 1 view -0
+ 210              		.cfi_startproc
+ 211              		@ args = 0, pretend = 0, frame = 0
+ 212              		@ frame_needed = 0, uses_anonymous_args = 0
+ 103:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     static uint32_t reg_snap[ 4 ];
+ 213              		.loc 1 103 5 view .LVU35
+ 104:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* clear stbmod and ldolp bits */
+ 105:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     PMU_CTL &= ~((uint32_t)(PMU_CTL_STBMOD | PMU_CTL_LDOLP));
+ 214              		.loc 1 105 5 view .LVU36
+ 215              		.loc 1 105 13 is_stmt 0 view .LVU37
+ 216 0000 214B     		ldr	r3, .L16
+ 102:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     static uint32_t reg_snap[ 4 ];
+ 217              		.loc 1 102 1 view .LVU38
+ 218 0002 10B5     		push	{r4, lr}
+ 219              	.LCFI2:
+ 220              		.cfi_def_cfa_offset 8
+ 221              		.cfi_offset 4, -8
+ 222              		.cfi_offset 14, -4
+ 223              		.loc 1 105 13 view .LVU39
+ 224 0004 1C68     		ldr	r4, [r3]
+ 225 0006 24F00304 		bic	r4, r4, #3
+ 226 000a 1C60     		str	r4, [r3]
+ 106:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     
+ 107:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* set ldolp bit according to pmu_ldo */
+ 108:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     PMU_CTL |= ldo;
+ 227              		.loc 1 108 5 is_stmt 1 view .LVU40
+ 228              		.loc 1 108 13 is_stmt 0 view .LVU41
+ 229 000c 1A68     		ldr	r2, [r3]
+ 230 000e 0243     		orrs	r2, r2, r0
+ 231 0010 1A60     		str	r2, [r3]
+ 109:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     
+ 110:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* set sleepdeep bit of Cortex-M3 system control register */
+ARM GAS  /tmp/ccfzvmHv.s 			page 13
+
+
+ 111:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
+ 232              		.loc 1 111 5 is_stmt 1 view .LVU42
+ 233              		.loc 1 111 14 is_stmt 0 view .LVU43
+ 234 0012 1E4A     		ldr	r2, .L16+4
+ 235 0014 1369     		ldr	r3, [r2, #16]
+ 236 0016 43F00403 		orr	r3, r3, #4
+ 237 001a 1361     		str	r3, [r2, #16]
+ 112:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     
+ 113:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     reg_snap[ 0 ] = REG32( 0xE000E010 );
+ 238              		.loc 1 113 5 is_stmt 1 view .LVU44
+ 239              		.loc 1 113 21 is_stmt 0 view .LVU45
+ 240 001c 4FF0E023 		mov	r3, #-536813568
+ 241              		.loc 1 113 19 view .LVU46
+ 242 0020 1B4A     		ldr	r2, .L16+8
+ 243              		.loc 1 113 21 view .LVU47
+ 244 0022 1869     		ldr	r0, [r3, #16]
+ 245              	.LVL5:
+ 246              		.loc 1 113 19 view .LVU48
+ 247 0024 1060     		str	r0, [r2]
+ 114:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     reg_snap[ 1 ] = REG32( 0xE000E100 );
+ 248              		.loc 1 114 5 is_stmt 1 view .LVU49
+ 249              		.loc 1 114 21 is_stmt 0 view .LVU50
+ 250 0026 D3F80001 		ldr	r0, [r3, #256]
+ 251              		.loc 1 114 19 view .LVU51
+ 252 002a 5060     		str	r0, [r2, #4]
+ 115:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     reg_snap[ 2 ] = REG32( 0xE000E104 );
+ 253              		.loc 1 115 5 is_stmt 1 view .LVU52
+ 254              		.loc 1 115 21 is_stmt 0 view .LVU53
+ 255 002c D3F80401 		ldr	r0, [r3, #260]
+ 256              		.loc 1 115 19 view .LVU54
+ 257 0030 9060     		str	r0, [r2, #8]
+ 116:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     reg_snap[ 3 ] = REG32( 0xE000E108 );
+ 258              		.loc 1 116 5 is_stmt 1 view .LVU55
+ 259              		.loc 1 116 21 is_stmt 0 view .LVU56
+ 260 0032 D3F80801 		ldr	r0, [r3, #264]
+ 261              		.loc 1 116 19 view .LVU57
+ 262 0036 D060     		str	r0, [r2, #12]
+ 117:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     
+ 118:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     REG32( 0xE000E010 ) &= 0x00010004;
+ 263              		.loc 1 118 5 is_stmt 1 view .LVU58
+ 264              		.loc 1 118 25 is_stmt 0 view .LVU59
+ 265 0038 1C69     		ldr	r4, [r3, #16]
+ 266 003a 1648     		ldr	r0, .L16+12
+ 267 003c 2040     		ands	r0, r0, r4
+ 268 003e 1861     		str	r0, [r3, #16]
+ 119:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     REG32( 0xE000E180 )  = 0XB7FFEF19;
+ 269              		.loc 1 119 5 is_stmt 1 view .LVU60
+ 270              		.loc 1 119 26 is_stmt 0 view .LVU61
+ 271 0040 1548     		ldr	r0, .L16+16
+ 272 0042 C3F88001 		str	r0, [r3, #384]
+ 120:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     REG32( 0xE000E184 )  = 0XFFFFFBFF;
+ 273              		.loc 1 120 5 is_stmt 1 view .LVU62
+ 274              		.loc 1 120 26 is_stmt 0 view .LVU63
+ 275 0046 6FF48060 		mvn	r0, #1024
+ 276 004a C3F88401 		str	r0, [r3, #388]
+ 121:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     REG32( 0xE000E188 )  = 0xFFFFFFFF;
+ 277              		.loc 1 121 5 is_stmt 1 view .LVU64
+ARM GAS  /tmp/ccfzvmHv.s 			page 14
+
+
+ 278              		.loc 1 121 26 is_stmt 0 view .LVU65
+ 279 004e 4FF0FF30 		mov	r0, #-1
+ 280 0052 C3F88801 		str	r0, [r3, #392]
+ 122:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     
+ 123:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****      /* select WFI or WFE command to enter deepsleep mode */
+ 124:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     if(WFI_CMD == deepsleepmodecmd){
+ 281              		.loc 1 124 5 is_stmt 1 view .LVU66
+ 282              		.loc 1 124 7 is_stmt 0 view .LVU67
+ 283 0056 99B9     		cbnz	r1, .L14
+ 125:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         __WFI();
+ 284              		.loc 1 125 9 is_stmt 1 view .LVU68
+ 285              	.LBB22:
+ 286              	.LBI22:
+ 336:Drivers/CMSIS/core_cmInstr.h **** {
+ 287              		.loc 2 336 57 view .LVU69
+ 288              	.LBB23:
+ 338:Drivers/CMSIS/core_cmInstr.h **** }
+ 289              		.loc 2 338 3 view .LVU70
+ 290              		.syntax unified
+ 291              	@ 338 "Drivers/CMSIS/core_cmInstr.h" 1
+ 292 0058 30BF     		wfi
+ 293              	@ 0 "" 2
+ 294              		.thumb
+ 295              		.syntax unified
+ 296              	.L15:
+ 297              	.LBE23:
+ 298              	.LBE22:
+ 126:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     }else{
+ 127:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         __SEV();
+ 128:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         __WFE();
+ 129:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         __WFE();
+ 130:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     }
+ 131:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     
+ 132:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     REG32( 0xE000E010 ) = reg_snap[ 0 ] ; 
+ 299              		.loc 1 132 5 view .LVU71
+ 300              		.loc 1 132 25 is_stmt 0 view .LVU72
+ 301 005a 4FF0E023 		mov	r3, #-536813568
+ 302              		.loc 1 132 35 view .LVU73
+ 303 005e 1168     		ldr	r1, [r2]
+ 304              	.LVL6:
+ 305              		.loc 1 132 25 view .LVU74
+ 306 0060 1961     		str	r1, [r3, #16]
+ 133:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     REG32( 0xE000E100 ) = reg_snap[ 1 ] ;
+ 307              		.loc 1 133 5 is_stmt 1 view .LVU75
+ 308              		.loc 1 133 35 is_stmt 0 view .LVU76
+ 309 0062 5168     		ldr	r1, [r2, #4]
+ 310              		.loc 1 133 25 view .LVU77
+ 311 0064 C3F80011 		str	r1, [r3, #256]
+ 134:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     REG32( 0xE000E104 ) = reg_snap[ 2 ] ;
+ 312              		.loc 1 134 5 is_stmt 1 view .LVU78
+ 313              		.loc 1 134 35 is_stmt 0 view .LVU79
+ 314 0068 9168     		ldr	r1, [r2, #8]
+ 315              		.loc 1 134 25 view .LVU80
+ 316 006a C3F80411 		str	r1, [r3, #260]
+ 135:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     REG32( 0xE000E108 ) = reg_snap[ 3 ] ;   
+ 317              		.loc 1 135 5 is_stmt 1 view .LVU81
+ 318              		.loc 1 135 35 is_stmt 0 view .LVU82
+ARM GAS  /tmp/ccfzvmHv.s 			page 15
+
+
+ 319 006e D268     		ldr	r2, [r2, #12]
+ 320              		.loc 1 135 25 view .LVU83
+ 321 0070 C3F80821 		str	r2, [r3, #264]
+ 136:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     
+ 137:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* reset sleepdeep bit of Cortex-M3 system control register */
+ 138:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     SCB->SCR &= ~((uint32_t)SCB_SCR_SLEEPDEEP_Msk);
+ 322              		.loc 1 138 5 is_stmt 1 view .LVU84
+ 323              		.loc 1 138 14 is_stmt 0 view .LVU85
+ 324 0074 054A     		ldr	r2, .L16+4
+ 325 0076 1369     		ldr	r3, [r2, #16]
+ 326 0078 23F00403 		bic	r3, r3, #4
+ 327 007c 1361     		str	r3, [r2, #16]
+ 139:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** }
+ 328              		.loc 1 139 1 view .LVU86
+ 329 007e 10BD     		pop	{r4, pc}
+ 330              	.LVL7:
+ 331              	.L14:
+ 127:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         __WFE();
+ 332              		.loc 1 127 9 is_stmt 1 view .LVU87
+ 333              	.LBB24:
+ 334              	.LBI24:
+ 350:Drivers/CMSIS/core_cmInstr.h **** }
+ 351:Drivers/CMSIS/core_cmInstr.h **** 
+ 352:Drivers/CMSIS/core_cmInstr.h **** 
+ 353:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Send Event
+ 354:Drivers/CMSIS/core_cmInstr.h **** 
+ 355:Drivers/CMSIS/core_cmInstr.h ****     Send Event is a hint instruction. It causes an event to be signaled to the CPU.
+ 356:Drivers/CMSIS/core_cmInstr.h ****  */
+ 357:Drivers/CMSIS/core_cmInstr.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __SEV(void)
+ 335              		.loc 2 357 57 view .LVU88
+ 336              	.LBB25:
+ 358:Drivers/CMSIS/core_cmInstr.h **** {
+ 359:Drivers/CMSIS/core_cmInstr.h ****   __ASM volatile ("sev");
+ 337              		.loc 2 359 3 view .LVU89
+ 338              		.syntax unified
+ 339              	@ 359 "Drivers/CMSIS/core_cmInstr.h" 1
+ 340 0080 40BF     		sev
+ 341              	@ 0 "" 2
+ 342              		.thumb
+ 343              		.syntax unified
+ 344              	.LBE25:
+ 345              	.LBE24:
+ 128:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         __WFE();
+ 346              		.loc 1 128 9 view .LVU90
+ 347              	.LBB26:
+ 348              	.LBI26:
+ 347:Drivers/CMSIS/core_cmInstr.h **** {
+ 349              		.loc 2 347 57 view .LVU91
+ 350              	.LBB27:
+ 349:Drivers/CMSIS/core_cmInstr.h **** }
+ 351              		.loc 2 349 3 view .LVU92
+ 352              		.syntax unified
+ 353              	@ 349 "Drivers/CMSIS/core_cmInstr.h" 1
+ 354 0082 20BF     		wfe
+ 355              	@ 0 "" 2
+ 356              		.thumb
+ 357              		.syntax unified
+ARM GAS  /tmp/ccfzvmHv.s 			page 16
+
+
+ 358              	.LBE27:
+ 359              	.LBE26:
+ 129:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     }
+ 360              		.loc 1 129 9 view .LVU93
+ 361              	.LBB28:
+ 362              	.LBI28:
+ 347:Drivers/CMSIS/core_cmInstr.h **** {
+ 363              		.loc 2 347 57 view .LVU94
+ 364              	.LBB29:
+ 349:Drivers/CMSIS/core_cmInstr.h **** }
+ 365              		.loc 2 349 3 view .LVU95
+ 366              		.syntax unified
+ 367              	@ 349 "Drivers/CMSIS/core_cmInstr.h" 1
+ 368 0084 20BF     		wfe
+ 369              	@ 0 "" 2
+ 350:Drivers/CMSIS/core_cmInstr.h **** 
+ 370              		.loc 2 350 1 is_stmt 0 view .LVU96
+ 371              		.thumb
+ 372              		.syntax unified
+ 373 0086 E8E7     		b	.L15
+ 374              	.L17:
+ 375              		.align	2
+ 376              	.L16:
+ 377 0088 00700040 		.word	1073770496
+ 378 008c 00ED00E0 		.word	-536810240
+ 379 0090 00000000 		.word	.LANCHOR0
+ 380 0094 04000100 		.word	65540
+ 381 0098 19EFFFB7 		.word	-1207963879
+ 382              	.LBE29:
+ 383              	.LBE28:
+ 384              		.cfi_endproc
+ 385              	.LFE60:
+ 387              		.section	.text.pmu_to_standbymode,"ax",%progbits
+ 388              		.align	1
+ 389              		.global	pmu_to_standbymode
+ 390              		.syntax unified
+ 391              		.thumb
+ 392              		.thumb_func
+ 393              		.fpu softvfp
+ 395              	pmu_to_standbymode:
+ 396              	.LVL8:
+ 397              	.LFB61:
+ 140:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+ 141:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** /*!
+ 142:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \brief      pmu work at standby mode
+ 143:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[in]  standbymodecmd:
+ 144:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        WFI_CMD: use WFI command
+ 145:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        WFE_CMD: use WFE command
+ 146:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[out] none
+ 147:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \retval     none
+ 148:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** */
+ 149:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** void pmu_to_standbymode(uint8_t standbymodecmd)
+ 150:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** {
+ 398              		.loc 1 150 1 is_stmt 1 view -0
+ 399              		.cfi_startproc
+ 400              		@ args = 0, pretend = 0, frame = 0
+ 401              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccfzvmHv.s 			page 17
+
+
+ 402              		@ link register save eliminated.
+ 151:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* set sleepdeep bit of Cortex-M3 system control register */
+ 152:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
+ 403              		.loc 1 152 5 view .LVU98
+ 404              		.loc 1 152 14 is_stmt 0 view .LVU99
+ 405 0000 094A     		ldr	r2, .L21
+ 406 0002 1369     		ldr	r3, [r2, #16]
+ 407 0004 43F00403 		orr	r3, r3, #4
+ 408 0008 1361     		str	r3, [r2, #16]
+ 153:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+ 154:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* set stbmod bit */
+ 155:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     PMU_CTL |= PMU_CTL_STBMOD;
+ 409              		.loc 1 155 5 is_stmt 1 view .LVU100
+ 410              		.loc 1 155 13 is_stmt 0 view .LVU101
+ 411 000a 084B     		ldr	r3, .L21+4
+ 412 000c 1A68     		ldr	r2, [r3]
+ 413 000e 42F00202 		orr	r2, r2, #2
+ 414 0012 1A60     		str	r2, [r3]
+ 156:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         
+ 157:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* reset wakeup flag */
+ 158:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     PMU_CTL |= PMU_CTL_WURST;
+ 415              		.loc 1 158 5 is_stmt 1 view .LVU102
+ 416              		.loc 1 158 13 is_stmt 0 view .LVU103
+ 417 0014 1A68     		ldr	r2, [r3]
+ 418 0016 42F00402 		orr	r2, r2, #4
+ 419 001a 1A60     		str	r2, [r3]
+ 159:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     
+ 160:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* select WFI or WFE command to enter standby mode */
+ 161:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     if(WFI_CMD == standbymodecmd){
+ 420              		.loc 1 161 5 is_stmt 1 view .LVU104
+ 421              		.loc 1 161 7 is_stmt 0 view .LVU105
+ 422 001c 08B9     		cbnz	r0, .L19
+ 162:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         __WFI();
+ 423              		.loc 1 162 9 is_stmt 1 view .LVU106
+ 424              	.LBB30:
+ 425              	.LBI30:
+ 336:Drivers/CMSIS/core_cmInstr.h **** {
+ 426              		.loc 2 336 57 view .LVU107
+ 427              	.LBB31:
+ 338:Drivers/CMSIS/core_cmInstr.h **** }
+ 428              		.loc 2 338 3 view .LVU108
+ 429              		.syntax unified
+ 430              	@ 338 "Drivers/CMSIS/core_cmInstr.h" 1
+ 431 001e 30BF     		wfi
+ 432              	@ 0 "" 2
+ 339:Drivers/CMSIS/core_cmInstr.h **** 
+ 433              		.loc 2 339 1 is_stmt 0 view .LVU109
+ 434              		.thumb
+ 435              		.syntax unified
+ 436 0020 7047     		bx	lr
+ 437              	.L19:
+ 438              	.LBE31:
+ 439              	.LBE30:
+ 163:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     }else{
+ 164:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         __WFE();
+ 440              		.loc 1 164 9 is_stmt 1 view .LVU110
+ 441              	.LBB32:
+ARM GAS  /tmp/ccfzvmHv.s 			page 18
+
+
+ 442              	.LBI32:
+ 347:Drivers/CMSIS/core_cmInstr.h **** {
+ 443              		.loc 2 347 57 view .LVU111
+ 444              	.LBB33:
+ 349:Drivers/CMSIS/core_cmInstr.h **** }
+ 445              		.loc 2 349 3 view .LVU112
+ 446              		.syntax unified
+ 447              	@ 349 "Drivers/CMSIS/core_cmInstr.h" 1
+ 448 0022 20BF     		wfe
+ 449              	@ 0 "" 2
+ 450              		.thumb
+ 451              		.syntax unified
+ 452              	.LBE33:
+ 453              	.LBE32:
+ 165:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     }
+ 166:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** }
+ 454              		.loc 1 166 1 is_stmt 0 view .LVU113
+ 455 0024 7047     		bx	lr
+ 456              	.L22:
+ 457 0026 00BF     		.align	2
+ 458              	.L21:
+ 459 0028 00ED00E0 		.word	-536810240
+ 460 002c 00700040 		.word	1073770496
+ 461              		.cfi_endproc
+ 462              	.LFE61:
+ 464              		.section	.text.pmu_flag_clear,"ax",%progbits
+ 465              		.align	1
+ 466              		.global	pmu_flag_clear
+ 467              		.syntax unified
+ 468              		.thumb
+ 469              		.thumb_func
+ 470              		.fpu softvfp
+ 472              	pmu_flag_clear:
+ 473              	.LVL9:
+ 474              	.LFB62:
+ 167:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+ 168:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** /*!
+ 169:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \brief      clear flag bit
+ 170:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[in]  flag_reset:
+ 171:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_FLAG_RESET_WAKEUP: reset wakeup flag
+ 172:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_FLAG_RESET_STANDBY: reset standby flag
+ 173:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[out] none
+ 174:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \retval     none
+ 175:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** */
+ 176:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** void pmu_flag_clear(uint32_t flag_reset)
+ 177:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** {
+ 475              		.loc 1 177 1 is_stmt 1 view -0
+ 476              		.cfi_startproc
+ 477              		@ args = 0, pretend = 0, frame = 0
+ 478              		@ frame_needed = 0, uses_anonymous_args = 0
+ 479              		@ link register save eliminated.
+ 178:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     switch(flag_reset){
+ 480              		.loc 1 178 5 view .LVU115
+ 481 0000 10B1     		cbz	r0, .L24
+ 482 0002 0128     		cmp	r0, #1
+ 483 0004 06D0     		beq	.L25
+ 484 0006 7047     		bx	lr
+ARM GAS  /tmp/ccfzvmHv.s 			page 19
+
+
+ 485              	.L24:
+ 179:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     case PMU_FLAG_RESET_WAKEUP:
+ 180:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         /* reset wakeup flag */
+ 181:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         PMU_CTL |= PMU_CTL_WURST;
+ 486              		.loc 1 181 9 view .LVU116
+ 487              		.loc 1 181 17 is_stmt 0 view .LVU117
+ 488 0008 054A     		ldr	r2, .L28
+ 489 000a 1368     		ldr	r3, [r2]
+ 490 000c 43F00403 		orr	r3, r3, #4
+ 491              	.L27:
+ 182:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         break;
+ 183:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     case PMU_FLAG_RESET_STANDBY:
+ 184:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         /* reset standby flag */
+ 185:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         PMU_CTL |= PMU_CTL_STBRST;
+ 492              		.loc 1 185 17 view .LVU118
+ 493 0010 1360     		str	r3, [r2]
+ 186:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         break;
+ 494              		.loc 1 186 9 is_stmt 1 view .LVU119
+ 187:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     default :
+ 188:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         break;
+ 189:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     }
+ 190:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** }
+ 495              		.loc 1 190 1 is_stmt 0 view .LVU120
+ 496 0012 7047     		bx	lr
+ 497              	.L25:
+ 185:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         break;
+ 498              		.loc 1 185 9 is_stmt 1 view .LVU121
+ 185:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         break;
+ 499              		.loc 1 185 17 is_stmt 0 view .LVU122
+ 500 0014 024A     		ldr	r2, .L28
+ 501 0016 1368     		ldr	r3, [r2]
+ 502 0018 43F00803 		orr	r3, r3, #8
+ 503 001c F8E7     		b	.L27
+ 504              	.L29:
+ 505 001e 00BF     		.align	2
+ 506              	.L28:
+ 507 0020 00700040 		.word	1073770496
+ 508              		.cfi_endproc
+ 509              	.LFE62:
+ 511              		.section	.text.pmu_flag_get,"ax",%progbits
+ 512              		.align	1
+ 513              		.global	pmu_flag_get
+ 514              		.syntax unified
+ 515              		.thumb
+ 516              		.thumb_func
+ 517              		.fpu softvfp
+ 519              	pmu_flag_get:
+ 520              	.LVL10:
+ 521              	.LFB63:
+ 191:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+ 192:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** /*!
+ 193:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \brief      get flag state
+ 194:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[in]  flag:         
+ 195:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_FLAG_WAKEUP: wakeup flag 
+ 196:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_FLAG_STANDBY: standby flag 
+ 197:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_FLAG_LVD: lvd flag 
+ 198:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[out] none
+ARM GAS  /tmp/ccfzvmHv.s 			page 20
+
+
+ 199:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \retval     FlagStatus SET or RESET
+ 200:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** */
+ 201:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** FlagStatus pmu_flag_get(uint32_t flag )
+ 202:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** {
+ 522              		.loc 1 202 1 is_stmt 1 view -0
+ 523              		.cfi_startproc
+ 524              		@ args = 0, pretend = 0, frame = 0
+ 525              		@ frame_needed = 0, uses_anonymous_args = 0
+ 526              		@ link register save eliminated.
+ 203:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     if(PMU_CS & flag){
+ 527              		.loc 1 203 5 view .LVU124
+ 528              		.loc 1 203 8 is_stmt 0 view .LVU125
+ 529 0000 034B     		ldr	r3, .L31
+ 530 0002 5B68     		ldr	r3, [r3, #4]
+ 531              		.loc 1 203 7 view .LVU126
+ 532 0004 0342     		tst	r3, r0
+ 204:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         return  SET;
+ 205:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     }else{
+ 206:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         return  RESET;
+ 207:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     }
+ 208:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** }
+ 533              		.loc 1 208 1 view .LVU127
+ 534 0006 14BF     		ite	ne
+ 535 0008 0120     		movne	r0, #1
+ 536              	.LVL11:
+ 537              		.loc 1 208 1 view .LVU128
+ 538 000a 0020     		moveq	r0, #0
+ 539 000c 7047     		bx	lr
+ 540              	.L32:
+ 541 000e 00BF     		.align	2
+ 542              	.L31:
+ 543 0010 00700040 		.word	1073770496
+ 544              		.cfi_endproc
+ 545              	.LFE63:
+ 547              		.section	.text.pmu_backup_write_enable,"ax",%progbits
+ 548              		.align	1
+ 549              		.global	pmu_backup_write_enable
+ 550              		.syntax unified
+ 551              		.thumb
+ 552              		.thumb_func
+ 553              		.fpu softvfp
+ 555              	pmu_backup_write_enable:
+ 556              	.LFB64:
+ 209:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+ 210:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** /*!
+ 211:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \brief      backup domain write enable
+ 212:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[in]  none
+ 213:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[out] none
+ 214:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \retval     none
+ 215:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** */
+ 216:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** void pmu_backup_write_enable(void)
+ 217:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** {
+ 557              		.loc 1 217 1 is_stmt 1 view -0
+ 558              		.cfi_startproc
+ 559              		@ args = 0, pretend = 0, frame = 0
+ 560              		@ frame_needed = 0, uses_anonymous_args = 0
+ 561              		@ link register save eliminated.
+ARM GAS  /tmp/ccfzvmHv.s 			page 21
+
+
+ 218:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     PMU_CTL |= PMU_CTL_BKPWEN;
+ 562              		.loc 1 218 5 view .LVU130
+ 563              		.loc 1 218 13 is_stmt 0 view .LVU131
+ 564 0000 024A     		ldr	r2, .L34
+ 565 0002 1368     		ldr	r3, [r2]
+ 566 0004 43F48073 		orr	r3, r3, #256
+ 567 0008 1360     		str	r3, [r2]
+ 219:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** }
+ 568              		.loc 1 219 1 view .LVU132
+ 569 000a 7047     		bx	lr
+ 570              	.L35:
+ 571              		.align	2
+ 572              	.L34:
+ 573 000c 00700040 		.word	1073770496
+ 574              		.cfi_endproc
+ 575              	.LFE64:
+ 577              		.section	.text.pmu_backup_write_disable,"ax",%progbits
+ 578              		.align	1
+ 579              		.global	pmu_backup_write_disable
+ 580              		.syntax unified
+ 581              		.thumb
+ 582              		.thumb_func
+ 583              		.fpu softvfp
+ 585              	pmu_backup_write_disable:
+ 586              	.LFB65:
+ 220:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+ 221:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** /*!
+ 222:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \brief      backup domain write disable
+ 223:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[in]  none
+ 224:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[out] none
+ 225:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \retval     none
+ 226:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** */
+ 227:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** void pmu_backup_write_disable(void)
+ 228:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** {
+ 587              		.loc 1 228 1 is_stmt 1 view -0
+ 588              		.cfi_startproc
+ 589              		@ args = 0, pretend = 0, frame = 0
+ 590              		@ frame_needed = 0, uses_anonymous_args = 0
+ 591              		@ link register save eliminated.
+ 229:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     PMU_CTL &= ~PMU_CTL_BKPWEN;
+ 592              		.loc 1 229 5 view .LVU134
+ 593              		.loc 1 229 13 is_stmt 0 view .LVU135
+ 594 0000 024A     		ldr	r2, .L37
+ 595 0002 1368     		ldr	r3, [r2]
+ 596 0004 23F48073 		bic	r3, r3, #256
+ 597 0008 1360     		str	r3, [r2]
+ 230:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** }
+ 598              		.loc 1 230 1 view .LVU136
+ 599 000a 7047     		bx	lr
+ 600              	.L38:
+ 601              		.align	2
+ 602              	.L37:
+ 603 000c 00700040 		.word	1073770496
+ 604              		.cfi_endproc
+ 605              	.LFE65:
+ 607              		.section	.text.pmu_wakeup_pin_enable,"ax",%progbits
+ 608              		.align	1
+ARM GAS  /tmp/ccfzvmHv.s 			page 22
+
+
+ 609              		.global	pmu_wakeup_pin_enable
+ 610              		.syntax unified
+ 611              		.thumb
+ 612              		.thumb_func
+ 613              		.fpu softvfp
+ 615              	pmu_wakeup_pin_enable:
+ 616              	.LVL12:
+ 617              	.LFB66:
+ 231:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+ 232:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** /*!
+ 233:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \brief      wakeup pin enable
+ 234:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[in]  wakeup_pin:
+ 235:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_WAKEUP_PIN0: wakeup pin 0
+ 236:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_WAKEUP_PIN1: wakeup pin 1
+ 237:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[out] none
+ 238:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \retval     none
+ 239:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** */
+ 240:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** void pmu_wakeup_pin_enable(uint32_t wakeup_pin )
+ 241:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** {
+ 618              		.loc 1 241 1 is_stmt 1 view -0
+ 619              		.cfi_startproc
+ 620              		@ args = 0, pretend = 0, frame = 0
+ 621              		@ frame_needed = 0, uses_anonymous_args = 0
+ 622              		@ link register save eliminated.
+ 242:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     PMU_CS |= wakeup_pin;
+ 623              		.loc 1 242 5 view .LVU138
+ 624              		.loc 1 242 12 is_stmt 0 view .LVU139
+ 625 0000 024A     		ldr	r2, .L40
+ 626 0002 5368     		ldr	r3, [r2, #4]
+ 627 0004 0343     		orrs	r3, r3, r0
+ 628 0006 5360     		str	r3, [r2, #4]
+ 243:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** }
+ 629              		.loc 1 243 1 view .LVU140
+ 630 0008 7047     		bx	lr
+ 631              	.L41:
+ 632 000a 00BF     		.align	2
+ 633              	.L40:
+ 634 000c 00700040 		.word	1073770496
+ 635              		.cfi_endproc
+ 636              	.LFE66:
+ 638              		.section	.text.pmu_wakeup_pin_disable,"ax",%progbits
+ 639              		.align	1
+ 640              		.global	pmu_wakeup_pin_disable
+ 641              		.syntax unified
+ 642              		.thumb
+ 643              		.thumb_func
+ 644              		.fpu softvfp
+ 646              	pmu_wakeup_pin_disable:
+ 647              	.LVL13:
+ 648              	.LFB67:
+ 244:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+ 245:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** /*!
+ 246:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \brief      wakeup pin disable
+ 247:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[in]  wakeup_pin:
+ 248:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_WAKEUP_PIN0: wakeup pin 0
+ 249:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_WAKEUP_PIN1: wakeup pin 1
+ 250:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[out] none
+ARM GAS  /tmp/ccfzvmHv.s 			page 23
+
+
+ 251:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \retval     none
+ 252:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** */
+ 253:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** void pmu_wakeup_pin_disable(uint32_t wakeup_pin )
+ 254:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** {
+ 649              		.loc 1 254 1 is_stmt 1 view -0
+ 650              		.cfi_startproc
+ 651              		@ args = 0, pretend = 0, frame = 0
+ 652              		@ frame_needed = 0, uses_anonymous_args = 0
+ 653              		@ link register save eliminated.
+ 255:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     PMU_CS &= ~wakeup_pin;
+ 654              		.loc 1 255 5 view .LVU142
+ 655              		.loc 1 255 12 is_stmt 0 view .LVU143
+ 656 0000 024A     		ldr	r2, .L43
+ 657 0002 5368     		ldr	r3, [r2, #4]
+ 658 0004 23EA0003 		bic	r3, r3, r0
+ 659 0008 5360     		str	r3, [r2, #4]
+ 256:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** 
+ 257:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** }
+ 660              		.loc 1 257 1 view .LVU144
+ 661 000a 7047     		bx	lr
+ 662              	.L44:
+ 663              		.align	2
+ 664              	.L43:
+ 665 000c 00700040 		.word	1073770496
+ 666              		.cfi_endproc
+ 667              	.LFE67:
+ 669              		.section	.bss.reg_snap.0,"aw",%nobits
+ 670              		.align	2
+ 671              		.set	.LANCHOR0,. + 0
+ 674              	reg_snap.0:
+ 675 0000 00000000 		.space	16
+ 675      00000000 
+ 675      00000000 
+ 675      00000000 
+ 676              		.text
+ 677              	.Letext0:
+ 678              		.file 3 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
+ 679              		.file 4 "Drivers/CMSIS/core_cm3.h"
+ 680              		.file 5 "Drivers/CMSIS/Include/gd32f1x0.h"
+ 681              		.file 6 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
+ARM GAS  /tmp/ccfzvmHv.s 			page 24
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32f1x0_pmu.c
+     /tmp/ccfzvmHv.s:16     .text.pmu_deinit:0000000000000000 $t
+     /tmp/ccfzvmHv.s:24     .text.pmu_deinit:0000000000000000 pmu_deinit
+     /tmp/ccfzvmHv.s:57     .text.pmu_lvd_select:0000000000000000 $t
+     /tmp/ccfzvmHv.s:64     .text.pmu_lvd_select:0000000000000000 pmu_lvd_select
+     /tmp/ccfzvmHv.s:98     .text.pmu_lvd_select:0000000000000024 $d
+     /tmp/ccfzvmHv.s:103    .text.pmu_lvd_disable:0000000000000000 $t
+     /tmp/ccfzvmHv.s:110    .text.pmu_lvd_disable:0000000000000000 pmu_lvd_disable
+     /tmp/ccfzvmHv.s:128    .text.pmu_lvd_disable:000000000000000c $d
+     /tmp/ccfzvmHv.s:133    .text.pmu_to_sleepmode:0000000000000000 $t
+     /tmp/ccfzvmHv.s:140    .text.pmu_to_sleepmode:0000000000000000 pmu_to_sleepmode
+     /tmp/ccfzvmHv.s:194    .text.pmu_to_sleepmode:0000000000000014 $d
+     /tmp/ccfzvmHv.s:199    .text.pmu_to_deepsleepmode:0000000000000000 $t
+     /tmp/ccfzvmHv.s:206    .text.pmu_to_deepsleepmode:0000000000000000 pmu_to_deepsleepmode
+     /tmp/ccfzvmHv.s:377    .text.pmu_to_deepsleepmode:0000000000000088 $d
+     /tmp/ccfzvmHv.s:388    .text.pmu_to_standbymode:0000000000000000 $t
+     /tmp/ccfzvmHv.s:395    .text.pmu_to_standbymode:0000000000000000 pmu_to_standbymode
+     /tmp/ccfzvmHv.s:459    .text.pmu_to_standbymode:0000000000000028 $d
+     /tmp/ccfzvmHv.s:465    .text.pmu_flag_clear:0000000000000000 $t
+     /tmp/ccfzvmHv.s:472    .text.pmu_flag_clear:0000000000000000 pmu_flag_clear
+     /tmp/ccfzvmHv.s:507    .text.pmu_flag_clear:0000000000000020 $d
+     /tmp/ccfzvmHv.s:512    .text.pmu_flag_get:0000000000000000 $t
+     /tmp/ccfzvmHv.s:519    .text.pmu_flag_get:0000000000000000 pmu_flag_get
+     /tmp/ccfzvmHv.s:543    .text.pmu_flag_get:0000000000000010 $d
+     /tmp/ccfzvmHv.s:548    .text.pmu_backup_write_enable:0000000000000000 $t
+     /tmp/ccfzvmHv.s:555    .text.pmu_backup_write_enable:0000000000000000 pmu_backup_write_enable
+     /tmp/ccfzvmHv.s:573    .text.pmu_backup_write_enable:000000000000000c $d
+     /tmp/ccfzvmHv.s:578    .text.pmu_backup_write_disable:0000000000000000 $t
+     /tmp/ccfzvmHv.s:585    .text.pmu_backup_write_disable:0000000000000000 pmu_backup_write_disable
+     /tmp/ccfzvmHv.s:603    .text.pmu_backup_write_disable:000000000000000c $d
+     /tmp/ccfzvmHv.s:608    .text.pmu_wakeup_pin_enable:0000000000000000 $t
+     /tmp/ccfzvmHv.s:615    .text.pmu_wakeup_pin_enable:0000000000000000 pmu_wakeup_pin_enable
+     /tmp/ccfzvmHv.s:634    .text.pmu_wakeup_pin_enable:000000000000000c $d
+     /tmp/ccfzvmHv.s:639    .text.pmu_wakeup_pin_disable:0000000000000000 $t
+     /tmp/ccfzvmHv.s:646    .text.pmu_wakeup_pin_disable:0000000000000000 pmu_wakeup_pin_disable
+     /tmp/ccfzvmHv.s:665    .text.pmu_wakeup_pin_disable:000000000000000c $d
+     /tmp/ccfzvmHv.s:670    .bss.reg_snap.0:0000000000000000 $d
+     /tmp/ccfzvmHv.s:674    .bss.reg_snap.0:0000000000000000 reg_snap.0
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable

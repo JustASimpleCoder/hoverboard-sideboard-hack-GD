@@ -1,0 +1,616 @@
+ARM GAS  /tmp/cclndPE4.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f1x0_it.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.NMI_Handler,"ax",%progbits
+  16              		.align	1
+  17              		.global	NMI_Handler
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	NMI_Handler:
+  25              	.LFB56:
+  26              		.file 1 "Src/gd32f1x0_it.c"
+   1:Src/gd32f1x0_it.c **** /*!
+   2:Src/gd32f1x0_it.c ****     \file  gd32f1x0_it.h
+   3:Src/gd32f1x0_it.c ****     \brief the header file of the ISR
+   4:Src/gd32f1x0_it.c **** */
+   5:Src/gd32f1x0_it.c **** 
+   6:Src/gd32f1x0_it.c **** /*
+   7:Src/gd32f1x0_it.c ****     Copyright (C) 2017 GigaDevice
+   8:Src/gd32f1x0_it.c **** 
+   9:Src/gd32f1x0_it.c ****     2014-12-26, V1.0.0, platform GD32F1x0(x=3,5)
+  10:Src/gd32f1x0_it.c ****     2016-01-15, V2.0.0, platform GD32F1x0(x=3,5,7,9)
+  11:Src/gd32f1x0_it.c ****     2016-04-30, V3.0.0, firmware update for GD32F1x0(x=3,5,7,9)
+  12:Src/gd32f1x0_it.c ****     2017-06-19, V3.1.0, firmware update for GD32F1x0(x=3,5,7,9)
+  13:Src/gd32f1x0_it.c **** */
+  14:Src/gd32f1x0_it.c **** 
+  15:Src/gd32f1x0_it.c **** #include "gd32f1x0_it.h"
+  16:Src/gd32f1x0_it.c **** #include "systick.h"
+  17:Src/gd32f1x0_it.c **** #include "i2c_it.h"
+  18:Src/gd32f1x0_it.c **** #include "config.h"
+  19:Src/gd32f1x0_it.c **** #include "util.h"
+  20:Src/gd32f1x0_it.c **** 
+  21:Src/gd32f1x0_it.c **** /*!
+  22:Src/gd32f1x0_it.c ****     \brief      this function handles NMI exception
+  23:Src/gd32f1x0_it.c ****     \param[in]  none
+  24:Src/gd32f1x0_it.c ****     \param[out] none
+  25:Src/gd32f1x0_it.c ****     \retval     none
+  26:Src/gd32f1x0_it.c **** */
+  27:Src/gd32f1x0_it.c **** void NMI_Handler(void)
+  28:Src/gd32f1x0_it.c **** {
+  27              		.loc 1 28 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/cclndPE4.s 			page 2
+
+
+  31              		@ link register save eliminated.
+  29:Src/gd32f1x0_it.c **** }
+  32              		.loc 1 29 1 view .LVU1
+  33 0000 7047     		bx	lr
+  34              		.cfi_endproc
+  35              	.LFE56:
+  37              		.section	.text.HardFault_Handler,"ax",%progbits
+  38              		.align	1
+  39              		.global	HardFault_Handler
+  40              		.syntax unified
+  41              		.thumb
+  42              		.thumb_func
+  43              		.fpu softvfp
+  45              	HardFault_Handler:
+  46              	.LFB57:
+  30:Src/gd32f1x0_it.c **** 
+  31:Src/gd32f1x0_it.c **** /*!
+  32:Src/gd32f1x0_it.c ****     \brief      this function handles HardFault exception
+  33:Src/gd32f1x0_it.c ****     \param[in]  none
+  34:Src/gd32f1x0_it.c ****     \param[out] none
+  35:Src/gd32f1x0_it.c ****     \retval     none
+  36:Src/gd32f1x0_it.c **** */
+  37:Src/gd32f1x0_it.c **** void HardFault_Handler(void)
+  38:Src/gd32f1x0_it.c **** {
+  47              		.loc 1 38 1 view -0
+  48              		.cfi_startproc
+  49              		@ Volatile: function does not return.
+  50              		@ args = 0, pretend = 0, frame = 0
+  51              		@ frame_needed = 0, uses_anonymous_args = 0
+  52              		@ link register save eliminated.
+  53              	.L3:
+  39:Src/gd32f1x0_it.c ****     /* if Hard Fault exception occurs, go to infinite loop */
+  40:Src/gd32f1x0_it.c ****     while (1){
+  54              		.loc 1 40 5 discriminator 1 view .LVU3
+  41:Src/gd32f1x0_it.c ****     }
+  55              		.loc 1 41 5 discriminator 1 view .LVU4
+  40:Src/gd32f1x0_it.c ****     }
+  56              		.loc 1 40 11 discriminator 1 view .LVU5
+  57 0000 FEE7     		b	.L3
+  58              		.cfi_endproc
+  59              	.LFE57:
+  61              		.section	.text.MemManage_Handler,"ax",%progbits
+  62              		.align	1
+  63              		.global	MemManage_Handler
+  64              		.syntax unified
+  65              		.thumb
+  66              		.thumb_func
+  67              		.fpu softvfp
+  69              	MemManage_Handler:
+  70              	.LFB58:
+  42:Src/gd32f1x0_it.c **** }
+  43:Src/gd32f1x0_it.c **** 
+  44:Src/gd32f1x0_it.c **** /*!
+  45:Src/gd32f1x0_it.c ****     \brief      this function handles MemManage exception
+  46:Src/gd32f1x0_it.c ****     \param[in]  none
+  47:Src/gd32f1x0_it.c ****     \param[out] none
+  48:Src/gd32f1x0_it.c ****     \retval     none
+ARM GAS  /tmp/cclndPE4.s 			page 3
+
+
+  49:Src/gd32f1x0_it.c **** */
+  50:Src/gd32f1x0_it.c **** void MemManage_Handler(void)
+  51:Src/gd32f1x0_it.c **** {
+  71              		.loc 1 51 1 view -0
+  72              		.cfi_startproc
+  73              		@ Volatile: function does not return.
+  74              		@ args = 0, pretend = 0, frame = 0
+  75              		@ frame_needed = 0, uses_anonymous_args = 0
+  76              		@ link register save eliminated.
+  77              	.L5:
+  52:Src/gd32f1x0_it.c ****     /* if Memory Manage exception occurs, go to infinite loop */
+  53:Src/gd32f1x0_it.c ****     while (1){
+  78              		.loc 1 53 5 discriminator 1 view .LVU7
+  54:Src/gd32f1x0_it.c ****     }
+  79              		.loc 1 54 5 discriminator 1 view .LVU8
+  53:Src/gd32f1x0_it.c ****     }
+  80              		.loc 1 53 11 discriminator 1 view .LVU9
+  81 0000 FEE7     		b	.L5
+  82              		.cfi_endproc
+  83              	.LFE58:
+  85              		.section	.text.BusFault_Handler,"ax",%progbits
+  86              		.align	1
+  87              		.global	BusFault_Handler
+  88              		.syntax unified
+  89              		.thumb
+  90              		.thumb_func
+  91              		.fpu softvfp
+  93              	BusFault_Handler:
+  94              	.LFB59:
+  55:Src/gd32f1x0_it.c **** }
+  56:Src/gd32f1x0_it.c **** 
+  57:Src/gd32f1x0_it.c **** /*!
+  58:Src/gd32f1x0_it.c ****     \brief      this function handles BusFault exception
+  59:Src/gd32f1x0_it.c ****     \param[in]  none
+  60:Src/gd32f1x0_it.c ****     \param[out] none
+  61:Src/gd32f1x0_it.c ****     \retval     none
+  62:Src/gd32f1x0_it.c **** */
+  63:Src/gd32f1x0_it.c **** void BusFault_Handler(void)
+  64:Src/gd32f1x0_it.c **** {
+  95              		.loc 1 64 1 view -0
+  96              		.cfi_startproc
+  97              		@ Volatile: function does not return.
+  98              		@ args = 0, pretend = 0, frame = 0
+  99              		@ frame_needed = 0, uses_anonymous_args = 0
+ 100              		@ link register save eliminated.
+ 101              	.L7:
+  65:Src/gd32f1x0_it.c ****     /* if Bus Fault exception occurs, go to infinite loop */
+  66:Src/gd32f1x0_it.c ****     while (1){
+ 102              		.loc 1 66 5 discriminator 1 view .LVU11
+  67:Src/gd32f1x0_it.c ****     }
+ 103              		.loc 1 67 5 discriminator 1 view .LVU12
+  66:Src/gd32f1x0_it.c ****     }
+ 104              		.loc 1 66 11 discriminator 1 view .LVU13
+ 105 0000 FEE7     		b	.L7
+ 106              		.cfi_endproc
+ 107              	.LFE59:
+ 109              		.section	.text.UsageFault_Handler,"ax",%progbits
+ARM GAS  /tmp/cclndPE4.s 			page 4
+
+
+ 110              		.align	1
+ 111              		.global	UsageFault_Handler
+ 112              		.syntax unified
+ 113              		.thumb
+ 114              		.thumb_func
+ 115              		.fpu softvfp
+ 117              	UsageFault_Handler:
+ 118              	.LFB60:
+  68:Src/gd32f1x0_it.c **** }
+  69:Src/gd32f1x0_it.c **** 
+  70:Src/gd32f1x0_it.c **** /*!
+  71:Src/gd32f1x0_it.c ****     \brief      this function handles UsageFault exception
+  72:Src/gd32f1x0_it.c ****     \param[in]  none
+  73:Src/gd32f1x0_it.c ****     \param[out] none
+  74:Src/gd32f1x0_it.c ****     \retval     none
+  75:Src/gd32f1x0_it.c **** */
+  76:Src/gd32f1x0_it.c **** void UsageFault_Handler(void)
+  77:Src/gd32f1x0_it.c **** {
+ 119              		.loc 1 77 1 view -0
+ 120              		.cfi_startproc
+ 121              		@ Volatile: function does not return.
+ 122              		@ args = 0, pretend = 0, frame = 0
+ 123              		@ frame_needed = 0, uses_anonymous_args = 0
+ 124              		@ link register save eliminated.
+ 125              	.L9:
+  78:Src/gd32f1x0_it.c ****     /* if Usage Fault exception occurs, go to infinite loop */
+  79:Src/gd32f1x0_it.c ****     while (1){
+ 126              		.loc 1 79 5 discriminator 1 view .LVU15
+  80:Src/gd32f1x0_it.c ****     }
+ 127              		.loc 1 80 5 discriminator 1 view .LVU16
+  79:Src/gd32f1x0_it.c ****     }
+ 128              		.loc 1 79 11 discriminator 1 view .LVU17
+ 129 0000 FEE7     		b	.L9
+ 130              		.cfi_endproc
+ 131              	.LFE60:
+ 133              		.section	.text.SVC_Handler,"ax",%progbits
+ 134              		.align	1
+ 135              		.global	SVC_Handler
+ 136              		.syntax unified
+ 137              		.thumb
+ 138              		.thumb_func
+ 139              		.fpu softvfp
+ 141              	SVC_Handler:
+ 142              	.LFB70:
+ 143              		.cfi_startproc
+ 144              		@ args = 0, pretend = 0, frame = 0
+ 145              		@ frame_needed = 0, uses_anonymous_args = 0
+ 146              		@ link register save eliminated.
+ 147 0000 7047     		bx	lr
+ 148              		.cfi_endproc
+ 149              	.LFE70:
+ 151              		.section	.text.DebugMon_Handler,"ax",%progbits
+ 152              		.align	1
+ 153              		.global	DebugMon_Handler
+ 154              		.syntax unified
+ 155              		.thumb
+ 156              		.thumb_func
+ARM GAS  /tmp/cclndPE4.s 			page 5
+
+
+ 157              		.fpu softvfp
+ 159              	DebugMon_Handler:
+ 160              	.LFB72:
+ 161              		.cfi_startproc
+ 162              		@ args = 0, pretend = 0, frame = 0
+ 163              		@ frame_needed = 0, uses_anonymous_args = 0
+ 164              		@ link register save eliminated.
+ 165 0000 7047     		bx	lr
+ 166              		.cfi_endproc
+ 167              	.LFE72:
+ 169              		.section	.text.PendSV_Handler,"ax",%progbits
+ 170              		.align	1
+ 171              		.global	PendSV_Handler
+ 172              		.syntax unified
+ 173              		.thumb
+ 174              		.thumb_func
+ 175              		.fpu softvfp
+ 177              	PendSV_Handler:
+ 178              	.LFB74:
+ 179              		.cfi_startproc
+ 180              		@ args = 0, pretend = 0, frame = 0
+ 181              		@ frame_needed = 0, uses_anonymous_args = 0
+ 182              		@ link register save eliminated.
+ 183 0000 7047     		bx	lr
+ 184              		.cfi_endproc
+ 185              	.LFE74:
+ 187              		.section	.text.SysTick_Handler,"ax",%progbits
+ 188              		.align	1
+ 189              		.global	SysTick_Handler
+ 190              		.syntax unified
+ 191              		.thumb
+ 192              		.thumb_func
+ 193              		.fpu softvfp
+ 195              	SysTick_Handler:
+ 196              	.LFB64:
+  81:Src/gd32f1x0_it.c **** }
+  82:Src/gd32f1x0_it.c **** 
+  83:Src/gd32f1x0_it.c **** /*!
+  84:Src/gd32f1x0_it.c ****     \brief      this function handles SVC exception
+  85:Src/gd32f1x0_it.c ****     \param[in]  none
+  86:Src/gd32f1x0_it.c ****     \param[out] none
+  87:Src/gd32f1x0_it.c ****     \retval     none
+  88:Src/gd32f1x0_it.c **** */
+  89:Src/gd32f1x0_it.c **** void SVC_Handler(void)
+  90:Src/gd32f1x0_it.c **** {
+  91:Src/gd32f1x0_it.c **** }
+  92:Src/gd32f1x0_it.c **** 
+  93:Src/gd32f1x0_it.c **** /*!
+  94:Src/gd32f1x0_it.c ****     \brief      this function handles DebugMon exception
+  95:Src/gd32f1x0_it.c ****     \param[in]  none
+  96:Src/gd32f1x0_it.c ****     \param[out] none
+  97:Src/gd32f1x0_it.c ****     \retval     none
+  98:Src/gd32f1x0_it.c **** */
+  99:Src/gd32f1x0_it.c **** void DebugMon_Handler(void)
+ 100:Src/gd32f1x0_it.c **** {
+ 101:Src/gd32f1x0_it.c **** }
+ 102:Src/gd32f1x0_it.c **** 
+ARM GAS  /tmp/cclndPE4.s 			page 6
+
+
+ 103:Src/gd32f1x0_it.c **** /*!
+ 104:Src/gd32f1x0_it.c ****     \brief      this function handles PendSV exception
+ 105:Src/gd32f1x0_it.c ****     \param[in]  none
+ 106:Src/gd32f1x0_it.c ****     \param[out] none
+ 107:Src/gd32f1x0_it.c ****     \retval     none
+ 108:Src/gd32f1x0_it.c **** */
+ 109:Src/gd32f1x0_it.c **** void PendSV_Handler(void)
+ 110:Src/gd32f1x0_it.c **** {
+ 111:Src/gd32f1x0_it.c **** }
+ 112:Src/gd32f1x0_it.c **** 
+ 113:Src/gd32f1x0_it.c **** /*!
+ 114:Src/gd32f1x0_it.c ****     \brief      this function handles SysTick exception
+ 115:Src/gd32f1x0_it.c ****     \param[in]  none
+ 116:Src/gd32f1x0_it.c ****     \param[out] none
+ 117:Src/gd32f1x0_it.c ****     \retval     none
+ 118:Src/gd32f1x0_it.c **** */
+ 119:Src/gd32f1x0_it.c **** void SysTick_Handler(void)
+ 120:Src/gd32f1x0_it.c **** {
+ 197              		.loc 1 120 1 view -0
+ 198              		.cfi_startproc
+ 199              		@ args = 0, pretend = 0, frame = 0
+ 200              		@ frame_needed = 0, uses_anonymous_args = 0
+ 121:Src/gd32f1x0_it.c ****     tick_count_increment();
+ 201              		.loc 1 121 5 view .LVU19
+ 120:Src/gd32f1x0_it.c ****     tick_count_increment();
+ 202              		.loc 1 120 1 is_stmt 0 view .LVU20
+ 203 0000 08B5     		push	{r3, lr}
+ 204              	.LCFI0:
+ 205              		.cfi_def_cfa_offset 8
+ 206              		.cfi_offset 3, -8
+ 207              		.cfi_offset 14, -4
+ 208              		.loc 1 121 5 view .LVU21
+ 209 0002 FFF7FEFF 		bl	tick_count_increment
+ 210              	.LVL0:
+ 122:Src/gd32f1x0_it.c ****     delay_decrement();
+ 211              		.loc 1 122 5 is_stmt 1 view .LVU22
+ 123:Src/gd32f1x0_it.c **** }
+ 212              		.loc 1 123 1 is_stmt 0 view .LVU23
+ 213 0006 BDE80840 		pop	{r3, lr}
+ 214              	.LCFI1:
+ 215              		.cfi_restore 14
+ 216              		.cfi_restore 3
+ 217              		.cfi_def_cfa_offset 0
+ 122:Src/gd32f1x0_it.c ****     delay_decrement();
+ 218              		.loc 1 122 5 view .LVU24
+ 219 000a FFF7FEBF 		b	delay_decrement
+ 220              	.LVL1:
+ 221              		.cfi_endproc
+ 222              	.LFE64:
+ 224              		.section	.text.USART0_IRQHandler,"ax",%progbits
+ 225              		.align	1
+ 226              		.global	USART0_IRQHandler
+ 227              		.syntax unified
+ 228              		.thumb
+ 229              		.thumb_func
+ 230              		.fpu softvfp
+ 232              	USART0_IRQHandler:
+ARM GAS  /tmp/cclndPE4.s 			page 7
+
+
+ 233              	.LFB65:
+ 124:Src/gd32f1x0_it.c **** 
+ 125:Src/gd32f1x0_it.c **** /*!
+ 126:Src/gd32f1x0_it.c ****     \brief      this function handles the USART0 interrupt request
+ 127:Src/gd32f1x0_it.c ****     \param[in]  none
+ 128:Src/gd32f1x0_it.c ****     \param[out] none
+ 129:Src/gd32f1x0_it.c ****     \retval     none
+ 130:Src/gd32f1x0_it.c **** */
+ 131:Src/gd32f1x0_it.c **** void USART0_IRQHandler(void)
+ 132:Src/gd32f1x0_it.c **** {
+ 234              		.loc 1 132 1 is_stmt 1 view -0
+ 235              		.cfi_startproc
+ 236              		@ args = 0, pretend = 0, frame = 0
+ 237              		@ frame_needed = 0, uses_anonymous_args = 0
+ 133:Src/gd32f1x0_it.c ****     if(RESET != usart_interrupt_flag_get(USART0, USART_INT_FLAG_IDLE)) {    // Check for IDLE line 
+ 238              		.loc 1 133 5 view .LVU26
+ 132:Src/gd32f1x0_it.c ****     if(RESET != usart_interrupt_flag_get(USART0, USART_INT_FLAG_IDLE)) {    // Check for IDLE line 
+ 239              		.loc 1 132 1 is_stmt 0 view .LVU27
+ 240 0000 08B5     		push	{r3, lr}
+ 241              	.LCFI2:
+ 242              		.cfi_def_cfa_offset 8
+ 243              		.cfi_offset 3, -8
+ 244              		.cfi_offset 14, -4
+ 245              		.loc 1 133 17 view .LVU28
+ 246 0002 0749     		ldr	r1, .L16
+ 247 0004 0748     		ldr	r0, .L16+4
+ 248 0006 FFF7FEFF 		bl	usart_interrupt_flag_get
+ 249              	.LVL2:
+ 250              		.loc 1 133 7 view .LVU29
+ 251 000a 40B1     		cbz	r0, .L14
+ 134:Src/gd32f1x0_it.c ****         usart_flag_clear(USART0, USART_FLAG_IDLE);                          // Clear IDLE line flag
+ 252              		.loc 1 134 9 is_stmt 1 view .LVU30
+ 253 000c 40F20471 		movw	r1, #1796
+ 254 0010 0448     		ldr	r0, .L16+4
+ 255 0012 FFF7FEFF 		bl	usart_flag_clear
+ 256              	.LVL3:
+ 135:Src/gd32f1x0_it.c ****         usart0_rx_check();                                                  // Check for data to pr
+ 257              		.loc 1 135 9 view .LVU31
+ 136:Src/gd32f1x0_it.c ****     }
+ 137:Src/gd32f1x0_it.c **** }
+ 258              		.loc 1 137 1 is_stmt 0 view .LVU32
+ 259 0016 BDE80840 		pop	{r3, lr}
+ 260              	.LCFI3:
+ 261              		.cfi_remember_state
+ 262              		.cfi_restore 14
+ 263              		.cfi_restore 3
+ 264              		.cfi_def_cfa_offset 0
+ 135:Src/gd32f1x0_it.c ****         usart0_rx_check();                                                  // Check for data to pr
+ 265              		.loc 1 135 9 view .LVU33
+ 266 001a FFF7FEBF 		b	usart0_rx_check
+ 267              	.LVL4:
+ 268              	.L14:
+ 269              	.LCFI4:
+ 270              		.cfi_restore_state
+ 271              		.loc 1 137 1 view .LVU34
+ 272 001e 08BD     		pop	{r3, pc}
+ 273              	.L17:
+ARM GAS  /tmp/cclndPE4.s 			page 8
+
+
+ 274              		.align	2
+ 275              	.L16:
+ 276 0020 04000407 		.word	117702660
+ 277 0024 00380140 		.word	1073821696
+ 278              		.cfi_endproc
+ 279              	.LFE65:
+ 281              		.section	.text.USART1_IRQHandler,"ax",%progbits
+ 282              		.align	1
+ 283              		.global	USART1_IRQHandler
+ 284              		.syntax unified
+ 285              		.thumb
+ 286              		.thumb_func
+ 287              		.fpu softvfp
+ 289              	USART1_IRQHandler:
+ 290              	.LFB66:
+ 138:Src/gd32f1x0_it.c **** 
+ 139:Src/gd32f1x0_it.c **** /*!
+ 140:Src/gd32f1x0_it.c ****     \brief      this function handles the USART1 interrupt request
+ 141:Src/gd32f1x0_it.c ****     \param[in]  none
+ 142:Src/gd32f1x0_it.c ****     \param[out] none
+ 143:Src/gd32f1x0_it.c ****     \retval     none
+ 144:Src/gd32f1x0_it.c **** */
+ 145:Src/gd32f1x0_it.c **** void USART1_IRQHandler(void)
+ 146:Src/gd32f1x0_it.c **** {
+ 291              		.loc 1 146 1 is_stmt 1 view -0
+ 292              		.cfi_startproc
+ 293              		@ args = 0, pretend = 0, frame = 0
+ 294              		@ frame_needed = 0, uses_anonymous_args = 0
+ 147:Src/gd32f1x0_it.c ****     if(RESET != usart_interrupt_flag_get(USART1, USART_INT_FLAG_IDLE)) {    // Check for IDLE line 
+ 295              		.loc 1 147 5 view .LVU36
+ 146:Src/gd32f1x0_it.c ****     if(RESET != usart_interrupt_flag_get(USART1, USART_INT_FLAG_IDLE)) {    // Check for IDLE line 
+ 296              		.loc 1 146 1 is_stmt 0 view .LVU37
+ 297 0000 08B5     		push	{r3, lr}
+ 298              	.LCFI5:
+ 299              		.cfi_def_cfa_offset 8
+ 300              		.cfi_offset 3, -8
+ 301              		.cfi_offset 14, -4
+ 302              		.loc 1 147 17 view .LVU38
+ 303 0002 0749     		ldr	r1, .L20
+ 304 0004 0748     		ldr	r0, .L20+4
+ 305 0006 FFF7FEFF 		bl	usart_interrupt_flag_get
+ 306              	.LVL5:
+ 307              		.loc 1 147 7 view .LVU39
+ 308 000a 40B1     		cbz	r0, .L18
+ 148:Src/gd32f1x0_it.c ****         usart_flag_clear(USART1, USART_FLAG_IDLE);                          // Clear IDLE line flag
+ 309              		.loc 1 148 9 is_stmt 1 view .LVU40
+ 310 000c 40F20471 		movw	r1, #1796
+ 311 0010 0448     		ldr	r0, .L20+4
+ 312 0012 FFF7FEFF 		bl	usart_flag_clear
+ 313              	.LVL6:
+ 149:Src/gd32f1x0_it.c ****         usart1_rx_check();                                                  // Check for data to pr
+ 314              		.loc 1 149 9 view .LVU41
+ 150:Src/gd32f1x0_it.c ****     }
+ 151:Src/gd32f1x0_it.c **** }
+ 315              		.loc 1 151 1 is_stmt 0 view .LVU42
+ 316 0016 BDE80840 		pop	{r3, lr}
+ 317              	.LCFI6:
+ARM GAS  /tmp/cclndPE4.s 			page 9
+
+
+ 318              		.cfi_remember_state
+ 319              		.cfi_restore 14
+ 320              		.cfi_restore 3
+ 321              		.cfi_def_cfa_offset 0
+ 149:Src/gd32f1x0_it.c ****         usart1_rx_check();                                                  // Check for data to pr
+ 322              		.loc 1 149 9 view .LVU43
+ 323 001a FFF7FEBF 		b	usart1_rx_check
+ 324              	.LVL7:
+ 325              	.L18:
+ 326              	.LCFI7:
+ 327              		.cfi_restore_state
+ 328              		.loc 1 151 1 view .LVU44
+ 329 001e 08BD     		pop	{r3, pc}
+ 330              	.L21:
+ 331              		.align	2
+ 332              	.L20:
+ 333 0020 04000407 		.word	117702660
+ 334 0024 00440040 		.word	1073759232
+ 335              		.cfi_endproc
+ 336              	.LFE66:
+ 338              		.section	.text.I2C0_EV_IRQHandler,"ax",%progbits
+ 339              		.align	1
+ 340              		.global	I2C0_EV_IRQHandler
+ 341              		.syntax unified
+ 342              		.thumb
+ 343              		.thumb_func
+ 344              		.fpu softvfp
+ 346              	I2C0_EV_IRQHandler:
+ 347              	.LFB67:
+ 152:Src/gd32f1x0_it.c **** 
+ 153:Src/gd32f1x0_it.c **** /*!
+ 154:Src/gd32f1x0_it.c ****     \brief      this function handles I2C0 event interrupt request exception
+ 155:Src/gd32f1x0_it.c ****     \param[in]  none
+ 156:Src/gd32f1x0_it.c ****     \param[out] none
+ 157:Src/gd32f1x0_it.c ****     \retval     none
+ 158:Src/gd32f1x0_it.c **** */
+ 159:Src/gd32f1x0_it.c **** void I2C0_EV_IRQHandler(void)
+ 160:Src/gd32f1x0_it.c **** {
+ 348              		.loc 1 160 1 is_stmt 1 view -0
+ 349              		.cfi_startproc
+ 350              		@ args = 0, pretend = 0, frame = 0
+ 351              		@ frame_needed = 0, uses_anonymous_args = 0
+ 352              		@ link register save eliminated.
+ 161:Src/gd32f1x0_it.c ****     I2C0_EventIRQ_Handler();
+ 353              		.loc 1 161 5 view .LVU46
+ 354 0000 FFF7FEBF 		b	I2C0_EventIRQ_Handler
+ 355              	.LVL8:
+ 356              		.cfi_endproc
+ 357              	.LFE67:
+ 359              		.section	.text.I2C0_ER_IRQHandler,"ax",%progbits
+ 360              		.align	1
+ 361              		.global	I2C0_ER_IRQHandler
+ 362              		.syntax unified
+ 363              		.thumb
+ 364              		.thumb_func
+ 365              		.fpu softvfp
+ 367              	I2C0_ER_IRQHandler:
+ARM GAS  /tmp/cclndPE4.s 			page 10
+
+
+ 368              	.LFB68:
+ 162:Src/gd32f1x0_it.c **** }
+ 163:Src/gd32f1x0_it.c **** 
+ 164:Src/gd32f1x0_it.c **** /*!
+ 165:Src/gd32f1x0_it.c ****     \brief      this function handles I2C0 error interrupt request exception
+ 166:Src/gd32f1x0_it.c ****     \param[in]  none
+ 167:Src/gd32f1x0_it.c ****     \param[out] none
+ 168:Src/gd32f1x0_it.c ****     \retval     none
+ 169:Src/gd32f1x0_it.c **** */
+ 170:Src/gd32f1x0_it.c **** void I2C0_ER_IRQHandler(void)
+ 171:Src/gd32f1x0_it.c **** {
+ 369              		.loc 1 171 1 view -0
+ 370              		.cfi_startproc
+ 371              		@ args = 0, pretend = 0, frame = 0
+ 372              		@ frame_needed = 0, uses_anonymous_args = 0
+ 373              		@ link register save eliminated.
+ 172:Src/gd32f1x0_it.c ****     I2C0_ErrorIRQ_Handler();
+ 374              		.loc 1 172 5 view .LVU48
+ 375 0000 FFF7FEBF 		b	I2C0_ErrorIRQ_Handler
+ 376              	.LVL9:
+ 377              		.cfi_endproc
+ 378              	.LFE68:
+ 380              		.text
+ 381              	.Letext0:
+ 382              		.file 2 "Drivers/CMSIS/Include/gd32f1x0.h"
+ 383              		.file 3 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_usart.h"
+ 384              		.file 4 "Inc/i2c_it.h"
+ 385              		.file 5 "Inc/util.h"
+ 386              		.file 6 "Inc/systick.h"
+ 387              		.file 7 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
+ARM GAS  /tmp/cclndPE4.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32f1x0_it.c
+     /tmp/cclndPE4.s:16     .text.NMI_Handler:0000000000000000 $t
+     /tmp/cclndPE4.s:24     .text.NMI_Handler:0000000000000000 NMI_Handler
+     /tmp/cclndPE4.s:38     .text.HardFault_Handler:0000000000000000 $t
+     /tmp/cclndPE4.s:45     .text.HardFault_Handler:0000000000000000 HardFault_Handler
+     /tmp/cclndPE4.s:62     .text.MemManage_Handler:0000000000000000 $t
+     /tmp/cclndPE4.s:69     .text.MemManage_Handler:0000000000000000 MemManage_Handler
+     /tmp/cclndPE4.s:86     .text.BusFault_Handler:0000000000000000 $t
+     /tmp/cclndPE4.s:93     .text.BusFault_Handler:0000000000000000 BusFault_Handler
+     /tmp/cclndPE4.s:110    .text.UsageFault_Handler:0000000000000000 $t
+     /tmp/cclndPE4.s:117    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
+     /tmp/cclndPE4.s:134    .text.SVC_Handler:0000000000000000 $t
+     /tmp/cclndPE4.s:141    .text.SVC_Handler:0000000000000000 SVC_Handler
+     /tmp/cclndPE4.s:152    .text.DebugMon_Handler:0000000000000000 $t
+     /tmp/cclndPE4.s:159    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
+     /tmp/cclndPE4.s:170    .text.PendSV_Handler:0000000000000000 $t
+     /tmp/cclndPE4.s:177    .text.PendSV_Handler:0000000000000000 PendSV_Handler
+     /tmp/cclndPE4.s:188    .text.SysTick_Handler:0000000000000000 $t
+     /tmp/cclndPE4.s:195    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+     /tmp/cclndPE4.s:225    .text.USART0_IRQHandler:0000000000000000 $t
+     /tmp/cclndPE4.s:232    .text.USART0_IRQHandler:0000000000000000 USART0_IRQHandler
+     /tmp/cclndPE4.s:276    .text.USART0_IRQHandler:0000000000000020 $d
+     /tmp/cclndPE4.s:282    .text.USART1_IRQHandler:0000000000000000 $t
+     /tmp/cclndPE4.s:289    .text.USART1_IRQHandler:0000000000000000 USART1_IRQHandler
+     /tmp/cclndPE4.s:333    .text.USART1_IRQHandler:0000000000000020 $d
+     /tmp/cclndPE4.s:339    .text.I2C0_EV_IRQHandler:0000000000000000 $t
+     /tmp/cclndPE4.s:346    .text.I2C0_EV_IRQHandler:0000000000000000 I2C0_EV_IRQHandler
+     /tmp/cclndPE4.s:360    .text.I2C0_ER_IRQHandler:0000000000000000 $t
+     /tmp/cclndPE4.s:367    .text.I2C0_ER_IRQHandler:0000000000000000 I2C0_ER_IRQHandler
+
+UNDEFINED SYMBOLS
+tick_count_increment
+delay_decrement
+usart_interrupt_flag_get
+usart_flag_clear
+usart0_rx_check
+usart1_rx_check
+I2C0_EventIRQ_Handler
+I2C0_ErrorIRQ_Handler

@@ -1,0 +1,2007 @@
+ARM GAS  /tmp/cckUpySH.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f1x0_spi.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.spi_i2s_deinit,"ax",%progbits
+  16              		.align	1
+  17              		.global	spi_i2s_deinit
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	spi_i2s_deinit:
+  25              	.LVL0:
+  26              	.LFB56:
+  27              		.file 1 "Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c"
+   1:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+   2:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \file  gd32f1x0_spi.c
+   3:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief SPI driver
+   4:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+   5:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+   6:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*
+   7:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     Copyright (C) 2017 GigaDevice
+   8:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+   9:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     2014-12-26, V1.0.0, platform GD32F1x0(x=3,5)
+  10:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     2016-01-15, V2.0.0, platform GD32F1x0(x=3,5,7,9)
+  11:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     2016-04-30, V3.0.0, firmware update for GD32F1x0(x=3,5,7,9)
+  12:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     2017-06-19, V3.1.0, firmware update for GD32F1x0(x=3,5,7,9)
+  13:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+  14:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+  15:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** #include "gd32f1x0_spi.h"
+  16:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+  17:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** #define SPI_INIT_MASK                   ((uint32_t)0x00003040U)
+  18:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** #define I2S_INIT_MASK                   ((uint32_t)0x0000F047U)
+  19:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** #define SPI_I2SPSC_RESET                ((uint32_t)0x00000002U)  /*!< I2S clock prescaler register 
+  20:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+  21:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+  22:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      reset SPI and I2S 
+  23:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+  24:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+  25:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+  26:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+  27:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_i2s_deinit(uint32_t spi_periph)
+  28:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+  28              		.loc 1 28 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/cckUpySH.s 			page 2
+
+
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  29:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     switch(spi_periph){
+  32              		.loc 1 29 5 view .LVU1
+  28:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     switch(spi_periph){
+  33              		.loc 1 28 1 is_stmt 0 view .LVU2
+  34 0000 08B5     		push	{r3, lr}
+  35              	.LCFI0:
+  36              		.cfi_def_cfa_offset 8
+  37              		.cfi_offset 3, -8
+  38              		.cfi_offset 14, -4
+  39              		.loc 1 29 5 view .LVU3
+  40 0002 124B     		ldr	r3, .L8
+  41 0004 9842     		cmp	r0, r3
+  42 0006 18D0     		beq	.L2
+  43 0008 03F57443 		add	r3, r3, #62464
+  44 000c 9842     		cmp	r0, r3
+  45 000e 0AD0     		beq	.L3
+  46 0010 A3F57843 		sub	r3, r3, #63488
+  47 0014 9842     		cmp	r0, r3
+  48 0016 17D1     		bne	.L6
+  30:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     case SPI0:
+  31:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         /* reset SPI0 and I2S0 */
+  32:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         rcu_periph_reset_enable(RCU_SPI0RST);
+  33:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         rcu_periph_reset_disable(RCU_SPI0RST);
+  34:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+  35:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     case SPI1:
+  36:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         /* reset SPI1 */
+  37:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         rcu_periph_reset_enable(RCU_SPI1RST);
+  49              		.loc 1 37 9 is_stmt 1 view .LVU4
+  50 0018 40F20E40 		movw	r0, #1038
+  51              	.LVL1:
+  52              		.loc 1 37 9 is_stmt 0 view .LVU5
+  53 001c FFF7FEFF 		bl	rcu_periph_reset_enable
+  54              	.LVL2:
+  38:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         rcu_periph_reset_disable(RCU_SPI1RST);
+  55              		.loc 1 38 9 is_stmt 1 view .LVU6
+  56 0020 40F20E40 		movw	r0, #1038
+  57 0024 05E0     		b	.L7
+  58              	.LVL3:
+  59              	.L3:
+  32:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         rcu_periph_reset_disable(RCU_SPI0RST);
+  60              		.loc 1 32 9 view .LVU7
+  61 0026 4FF44370 		mov	r0, #780
+  62              	.LVL4:
+  32:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         rcu_periph_reset_disable(RCU_SPI0RST);
+  63              		.loc 1 32 9 is_stmt 0 view .LVU8
+  64 002a FFF7FEFF 		bl	rcu_periph_reset_enable
+  65              	.LVL5:
+  33:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+  66              		.loc 1 33 9 is_stmt 1 view .LVU9
+  67 002e 4FF44370 		mov	r0, #780
+  68              	.L7:
+  39:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+  40:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     case SPI2:
+  41:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         /* reset SPI2 and I2S2 */
+  42:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         rcu_periph_reset_enable(RCU_SPI2RST);
+  43:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         rcu_periph_reset_disable(RCU_SPI2RST);
+ARM GAS  /tmp/cckUpySH.s 			page 3
+
+
+  44:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+  45:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     default :
+  46:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+  47:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+  48:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+  69              		.loc 1 48 1 is_stmt 0 view .LVU10
+  70 0032 BDE80840 		pop	{r3, lr}
+  71              	.LCFI1:
+  72              		.cfi_remember_state
+  73              		.cfi_restore 14
+  74              		.cfi_restore 3
+  75              		.cfi_def_cfa_offset 0
+  43:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+  76              		.loc 1 43 9 view .LVU11
+  77 0036 FFF7FEBF 		b	rcu_periph_reset_disable
+  78              	.LVL6:
+  79              	.L2:
+  80              	.LCFI2:
+  81              		.cfi_restore_state
+  42:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         rcu_periph_reset_disable(RCU_SPI2RST);
+  82              		.loc 1 42 9 is_stmt 1 view .LVU12
+  83 003a 40F20F40 		movw	r0, #1039
+  84              	.LVL7:
+  42:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         rcu_periph_reset_disable(RCU_SPI2RST);
+  85              		.loc 1 42 9 is_stmt 0 view .LVU13
+  86 003e FFF7FEFF 		bl	rcu_periph_reset_enable
+  87              	.LVL8:
+  43:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+  88              		.loc 1 43 9 is_stmt 1 view .LVU14
+  89 0042 40F20F40 		movw	r0, #1039
+  90 0046 F4E7     		b	.L7
+  91              	.LVL9:
+  92              	.L6:
+  93              		.loc 1 48 1 is_stmt 0 view .LVU15
+  94 0048 08BD     		pop	{r3, pc}
+  95              	.L9:
+  96 004a 00BF     		.align	2
+  97              	.L8:
+  98 004c 003C0040 		.word	1073757184
+  99              		.cfi_endproc
+ 100              	.LFE56:
+ 102              		.section	.text.spi_init,"ax",%progbits
+ 103              		.align	1
+ 104              		.global	spi_init
+ 105              		.syntax unified
+ 106              		.thumb
+ 107              		.thumb_func
+ 108              		.fpu softvfp
+ 110              	spi_init:
+ 111              	.LVL10:
+ 112              	.LFB57:
+  49:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+  50:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+  51:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      initialize SPI parameter
+  52:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+  53:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_struct: SPI parameter initialization stuct members of the structure
+  54:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 	                        and  the member values are shown as below:
+ARM GAS  /tmp/cckUpySH.s 			page 4
+
+
+  55:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****                   device_mode   : SPI_MASTER, SPI_SLAVE.
+  56:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****                   trans_mode    : SPI_TRANSMODE_FULLDUPLEX, SPI_TRANSMODE_RECEIVEONLY,
+  57:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****                                   SPI_TRANSMODE_BDRECEIVE, SPI_TRANSMODE_BDTRANSMIT
+  58:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****                   frame_size    : SPI_FRAMESIZE_16BIT, SPI_FRAMESIZE_8BIT
+  59:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****                   nss           : SPI_NSS_SOFT, SPI_NSS_HARD
+  60:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****                   endian        : SPI_ENDIAN_MSB, SPI_ENDIAN_LSB
+  61:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****                   clock_polarity_phase  : SPI_CK_PL_LOW_PH_1EDGE, SPI_CK_PL_HIGH_PH_1EDGE
+  62:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****                                   SPI_CK_PL_LOW_PH_2EDGE, SPI_CK_PL_HIGH_PH_2EDGE
+  63:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****                   prescale      : SPI_PSC_n (n=2,4,8,16,32,64,128,256)
+  64:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+  65:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+  66:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+  67:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_init(uint32_t spi_periph,spi_parameter_struct* spi_struct)
+  68:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {   
+ 113              		.loc 1 68 1 is_stmt 1 view -0
+ 114              		.cfi_startproc
+ 115              		@ args = 0, pretend = 0, frame = 0
+ 116              		@ frame_needed = 0, uses_anonymous_args = 0
+  69:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     uint32_t reg = 0U;
+ 117              		.loc 1 69 5 view .LVU17
+  70:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     
+  71:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg = SPI_CTL0(spi_periph);
+ 118              		.loc 1 71 5 view .LVU18
+  68:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     uint32_t reg = 0U;
+ 119              		.loc 1 68 1 is_stmt 0 view .LVU19
+ 120 0000 10B5     		push	{r4, lr}
+ 121              	.LCFI3:
+ 122              		.cfi_def_cfa_offset 8
+ 123              		.cfi_offset 4, -8
+ 124              		.cfi_offset 14, -4
+  72:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg &= SPI_INIT_MASK;
+  73:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select SPI as master or slave */
+  74:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg |=spi_struct->device_mode;
+  75:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select SPI transfer mode */
+  76:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg |=spi_struct->trans_mode;
+  77:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select SPI frame size */
+  78:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg |=spi_struct->frame_size;
+  79:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select SPI NSS use hardware or software */
+  80:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg |=spi_struct->nss;
+  81:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select SPI LSB or MSB */
+  82:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg |=spi_struct->endian;
+  83:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select SPI polarity and phase */
+  84:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg |=spi_struct->clock_polarity_phase;
+  85:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select SPI prescale to adjust transmit speed */
+  86:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg |= spi_struct->prescale;
+ 125              		.loc 1 86 9 view .LVU20
+ 126 0002 D1E90034 		ldrd	r3, r4, [r1]
+ 127 0006 2343     		orrs	r3, r3, r4
+ 128 0008 8C68     		ldr	r4, [r1, #8]
+  71:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg &= SPI_INIT_MASK;
+ 129              		.loc 1 71 9 view .LVU21
+ 130 000a 0268     		ldr	r2, [r0]
+ 131              	.LVL11:
+  72:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg &= SPI_INIT_MASK;
+ 132              		.loc 1 72 5 is_stmt 1 view .LVU22
+ 133              		.loc 1 86 9 is_stmt 0 view .LVU23
+ 134 000c 2343     		orrs	r3, r3, r4
+ARM GAS  /tmp/cckUpySH.s 			page 5
+
+
+ 135 000e CC68     		ldr	r4, [r1, #12]
+  72:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg &= SPI_INIT_MASK;
+ 136              		.loc 1 72 9 view .LVU24
+ 137 0010 02F44152 		and	r2, r2, #12352
+ 138              	.LVL12:
+  74:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select SPI transfer mode */
+ 139              		.loc 1 74 5 is_stmt 1 view .LVU25
+  76:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select SPI frame size */
+ 140              		.loc 1 76 5 view .LVU26
+  78:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select SPI NSS use hardware or software */
+ 141              		.loc 1 78 5 view .LVU27
+  80:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select SPI LSB or MSB */
+ 142              		.loc 1 80 5 view .LVU28
+  82:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select SPI polarity and phase */
+ 143              		.loc 1 82 5 view .LVU29
+  84:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select SPI prescale to adjust transmit speed */
+ 144              		.loc 1 84 5 view .LVU30
+ 145              		.loc 1 86 5 view .LVU31
+ 146              		.loc 1 86 9 is_stmt 0 view .LVU32
+ 147 0014 2343     		orrs	r3, r3, r4
+ 148 0016 0C69     		ldr	r4, [r1, #16]
+ 149              	.LVL13:
+ 150              		.loc 1 86 9 view .LVU33
+ 151 0018 2343     		orrs	r3, r3, r4
+ 152 001a 4C69     		ldr	r4, [r1, #20]
+ 153 001c 8969     		ldr	r1, [r1, #24]
+ 154              	.LVL14:
+ 155              		.loc 1 86 9 view .LVU34
+ 156 001e 2343     		orrs	r3, r3, r4
+ 157 0020 0B43     		orrs	r3, r3, r1
+ 158 0022 1343     		orrs	r3, r3, r2
+ 159              	.LVL15:
+  87:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+  88:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* write to SPI_CTL0 register */
+  89:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_CTL0(spi_periph) = (uint32_t)reg;
+ 160              		.loc 1 89 5 is_stmt 1 view .LVU35
+ 161              		.loc 1 89 26 is_stmt 0 view .LVU36
+ 162 0024 0360     		str	r3, [r0]
+  90:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+  91:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select SPI mode */
+  92:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_I2SCTL(spi_periph) &= (uint32_t)(~SPI_I2SCTL_I2SSEL);
+ 163              		.loc 1 92 5 is_stmt 1 view .LVU37
+ 164              		.loc 1 92 28 is_stmt 0 view .LVU38
+ 165 0026 C369     		ldr	r3, [r0, #28]
+ 166              	.LVL16:
+ 167              		.loc 1 92 28 view .LVU39
+ 168 0028 23F40063 		bic	r3, r3, #2048
+ 169 002c C361     		str	r3, [r0, #28]
+ 170              	.LVL17:
+  93:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 171              		.loc 1 93 1 view .LVU40
+ 172 002e 10BD     		pop	{r4, pc}
+ 173              		.cfi_endproc
+ 174              	.LFE57:
+ 176              		.section	.text.spi_enable,"ax",%progbits
+ 177              		.align	1
+ 178              		.global	spi_enable
+ARM GAS  /tmp/cckUpySH.s 			page 6
+
+
+ 179              		.syntax unified
+ 180              		.thumb
+ 181              		.thumb_func
+ 182              		.fpu softvfp
+ 184              	spi_enable:
+ 185              	.LVL18:
+ 186              	.LFB58:
+  94:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+  95:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+  96:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      enable SPI
+  97:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+  98:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+  99:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 100:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 101:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_enable(uint32_t spi_periph)
+ 102:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 187              		.loc 1 102 1 is_stmt 1 view -0
+ 188              		.cfi_startproc
+ 189              		@ args = 0, pretend = 0, frame = 0
+ 190              		@ frame_needed = 0, uses_anonymous_args = 0
+ 191              		@ link register save eliminated.
+ 103:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_CTL0(spi_periph) |= (uint32_t)SPI_CTL0_SPIEN;
+ 192              		.loc 1 103 5 view .LVU42
+ 193              		.loc 1 103 26 is_stmt 0 view .LVU43
+ 194 0000 0368     		ldr	r3, [r0]
+ 195 0002 43F04003 		orr	r3, r3, #64
+ 196 0006 0360     		str	r3, [r0]
+ 104:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 197              		.loc 1 104 1 view .LVU44
+ 198 0008 7047     		bx	lr
+ 199              		.cfi_endproc
+ 200              	.LFE58:
+ 202              		.section	.text.spi_disable,"ax",%progbits
+ 203              		.align	1
+ 204              		.global	spi_disable
+ 205              		.syntax unified
+ 206              		.thumb
+ 207              		.thumb_func
+ 208              		.fpu softvfp
+ 210              	spi_disable:
+ 211              	.LVL19:
+ 212              	.LFB59:
+ 105:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 106:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 107:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      disable SPI 
+ 108:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 109:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 110:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 111:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 112:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_disable(uint32_t spi_periph)
+ 113:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 213              		.loc 1 113 1 is_stmt 1 view -0
+ 214              		.cfi_startproc
+ 215              		@ args = 0, pretend = 0, frame = 0
+ 216              		@ frame_needed = 0, uses_anonymous_args = 0
+ 217              		@ link register save eliminated.
+ 114:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_CTL0(spi_periph) &= (uint32_t)(~SPI_CTL0_SPIEN);
+ARM GAS  /tmp/cckUpySH.s 			page 7
+
+
+ 218              		.loc 1 114 5 view .LVU46
+ 219              		.loc 1 114 26 is_stmt 0 view .LVU47
+ 220 0000 0368     		ldr	r3, [r0]
+ 221 0002 23F04003 		bic	r3, r3, #64
+ 222 0006 0360     		str	r3, [r0]
+ 115:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 223              		.loc 1 115 1 view .LVU48
+ 224 0008 7047     		bx	lr
+ 225              		.cfi_endproc
+ 226              	.LFE59:
+ 228              		.section	.text.i2s_psc_config,"ax",%progbits
+ 229              		.align	1
+ 230              		.global	i2s_psc_config
+ 231              		.syntax unified
+ 232              		.thumb
+ 233              		.thumb_func
+ 234              		.fpu softvfp
+ 236              	i2s_psc_config:
+ 237              	.LVL20:
+ 238              	.LFB60:
+ 116:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 117:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 118:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      configure I2S prescaler 
+ 119:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(only x=0,2)
+ 120:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  audiosample: I2S audio sample rate
+ 121:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_AUDIOSAMPLE_8K: audio sample rate is 8KHz
+ 122:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_AUDIOSAMPLE_11K: audio sample rate is 11KHz
+ 123:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_AUDIOSAMPLE_16K: audio sample rate is 16KHz
+ 124:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_AUDIOSAMPLE_22K: audio sample rate is 22KHz
+ 125:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_AUDIOSAMPLE_32K: audio sample rate is 32KHz
+ 126:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_AUDIOSAMPLE_44K: audio sample rate is 44KHz
+ 127:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_AUDIOSAMPLE_48K: audio sample rate is 48KHz
+ 128:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_AUDIOSAMPLE_96K: audio sample rate is 96KHz
+ 129:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_AUDIOSAMPLE_192K: audio sample rate is 192KHz
+ 130:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  frameformat: I2S data length and channel length
+ 131:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_FRAMEFORMAT_DT16B_CH16B: I2S data length is 16 bit and channel length is 16 b
+ 132:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_FRAMEFORMAT_DT16B_CH32B: I2S data length is 16 bit and channel length is 32 b
+ 133:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_FRAMEFORMAT_DT24B_CH32B: I2S data length is 24 bit and channel length is 32 b
+ 134:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_FRAMEFORMAT_DT32B_CH32B: I2S data length is 32 bit and channel length is 32 b
+ 135:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  mckout: I2S master clock output
+ 136:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_MCKOUT_ENABLE: I2S master clock output enable
+ 137:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_MCKOUT_DISABLE: I2S master clock output disable
+ 138:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 139:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 140:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 141:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void i2s_psc_config(uint32_t spi_periph,uint32_t audiosample,uint32_t frameformat,uint32_t mckout)
+ 142:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 239              		.loc 1 142 1 is_stmt 1 view -0
+ 240              		.cfi_startproc
+ 241              		@ args = 0, pretend = 0, frame = 0
+ 242              		@ frame_needed = 0, uses_anonymous_args = 0
+ 143:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     uint32_t i2sdiv = 2U, i2sof = 0U;
+ 243              		.loc 1 143 5 view .LVU50
+ 144:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     uint32_t clks = 0U;
+ 244              		.loc 1 144 5 view .LVU51
+ 145:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     uint32_t i2sclock = 0U;
+ 245              		.loc 1 145 5 view .LVU52
+ARM GAS  /tmp/cckUpySH.s 			page 8
+
+
+ 146:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 147:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* deinit SPI_I2SPSC register */
+ 148:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_I2SPSC(spi_periph) = SPI_I2SPSC_RESET;
+ 246              		.loc 1 148 5 view .LVU53
+ 142:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     uint32_t i2sdiv = 2U, i2sof = 0U;
+ 247              		.loc 1 142 1 is_stmt 0 view .LVU54
+ 248 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 249              	.LCFI4:
+ 250              		.cfi_def_cfa_offset 24
+ 251              		.cfi_offset 3, -24
+ 252              		.cfi_offset 4, -20
+ 253              		.cfi_offset 5, -16
+ 254              		.cfi_offset 6, -12
+ 255              		.cfi_offset 7, -8
+ 256              		.cfi_offset 14, -4
+ 142:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     uint32_t i2sdiv = 2U, i2sof = 0U;
+ 257              		.loc 1 142 1 view .LVU55
+ 258 0002 1F46     		mov	r7, r3
+ 259              		.loc 1 148 28 view .LVU56
+ 260 0004 0223     		movs	r3, #2
+ 261              	.LVL21:
+ 142:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     uint32_t i2sdiv = 2U, i2sof = 0U;
+ 262              		.loc 1 142 1 view .LVU57
+ 263 0006 0546     		mov	r5, r0
+ 264              		.loc 1 148 28 view .LVU58
+ 265 0008 0362     		str	r3, [r0, #32]
+ 149:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 150:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* get system clock */
+ 151:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     i2sclock =rcu_clock_freq_get(CK_SYS);    
+ 266              		.loc 1 151 5 is_stmt 1 view .LVU59
+ 267              		.loc 1 151 15 is_stmt 0 view .LVU60
+ 268 000a 0020     		movs	r0, #0
+ 269              	.LVL22:
+ 142:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     uint32_t i2sdiv = 2U, i2sof = 0U;
+ 270              		.loc 1 142 1 view .LVU61
+ 271 000c 0C46     		mov	r4, r1
+ 272 000e 1646     		mov	r6, r2
+ 273              		.loc 1 151 15 view .LVU62
+ 274 0010 FFF7FEFF 		bl	rcu_clock_freq_get
+ 275              	.LVL23:
+ 152:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* config the prescaler depending on the mclk output state, the frame format and audio sample r
+ 153:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     if(I2S_MCKOUT_ENABLE == mckout){
+ 276              		.loc 1 153 5 is_stmt 1 view .LVU63
+ 277              		.loc 1 153 7 is_stmt 0 view .LVU64
+ 278 0014 B7F5007F 		cmp	r7, #512
+ 279 0018 4FF00A01 		mov	r1, #10
+ 280 001c 1BD1     		bne	.L14
+ 154:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         clks = (uint32_t)(((i2sclock / 256U) * 10U) / audiosample);
+ 281              		.loc 1 154 9 is_stmt 1 view .LVU65
+ 282              		.loc 1 154 38 is_stmt 0 view .LVU66
+ 283 001e 000A     		lsrs	r0, r0, #8
+ 284              	.LVL24:
+ 285              	.L19:
+ 155:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }else{
+ 156:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         if(I2S_FRAMEFORMAT_DT16B_CH16B == frameformat){
+ 157:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****             clks = (uint32_t)(((i2sclock / 32U) *10U ) / audiosample);
+ 158:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         }else{
+ARM GAS  /tmp/cckUpySH.s 			page 9
+
+
+ 159:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****             clks = (uint32_t)(((i2sclock / 64U) *10U ) / audiosample);
+ 286              		.loc 1 159 49 view .LVU67
+ 287 0020 4843     		muls	r0, r1, r0
+ 288              		.loc 1 159 18 view .LVU68
+ 289 0022 B0FBF4F4 		udiv	r4, r0, r4
+ 290              	.LVL25:
+ 160:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         }
+ 161:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 162:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* remove the flaoting point */
+ 163:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     clks = (clks+5U)/10U;
+ 291              		.loc 1 163 5 is_stmt 1 view .LVU69
+ 292              		.loc 1 163 10 is_stmt 0 view .LVU70
+ 293 0026 0A23     		movs	r3, #10
+ 294              		.loc 1 163 17 view .LVU71
+ 295 0028 0534     		adds	r4, r4, #5
+ 296              	.LVL26:
+ 297              		.loc 1 163 10 view .LVU72
+ 298 002a B4FBF3F4 		udiv	r4, r4, r3
+ 299              	.LVL27:
+ 164:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     i2sof = (clks & 0x00000001U);
+ 300              		.loc 1 164 5 is_stmt 1 view .LVU73
+ 301              		.loc 1 164 11 is_stmt 0 view .LVU74
+ 302 002e 04F00103 		and	r3, r4, #1
+ 303              	.LVL28:
+ 165:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     i2sdiv = ((clks - i2sof)/2U);
+ 304              		.loc 1 165 5 is_stmt 1 view .LVU75
+ 305              		.loc 1 165 12 is_stmt 0 view .LVU76
+ 306 0032 6408     		lsrs	r4, r4, #1
+ 307              	.LVL29:
+ 166:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     i2sof = (i2sof << 8U);
+ 308              		.loc 1 166 5 is_stmt 1 view .LVU77
+ 167:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****      
+ 168:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* set the default values */
+ 169:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     if((i2sdiv<2U) || (i2sdiv>255U)){
+ 309              		.loc 1 169 5 view .LVU78
+ 310              		.loc 1 169 20 is_stmt 0 view .LVU79
+ 311 0034 A21E     		subs	r2, r4, #2
+ 312              		.loc 1 169 7 view .LVU80
+ 313 0036 FD2A     		cmp	r2, #253
+ 170:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         i2sdiv = 2U;
+ 171:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         i2sof = 0U;
+ 314              		.loc 1 171 15 view .LVU81
+ 315 0038 86BF     		itte	hi
+ 316 003a 0023     		movhi	r3, #0
+ 317              	.LVL30:
+ 170:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         i2sdiv = 2U;
+ 318              		.loc 1 170 16 view .LVU82
+ 319 003c 0224     		movhi	r4, #2
+ 320              	.LVL31:
+ 166:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****      
+ 321              		.loc 1 166 11 view .LVU83
+ 322 003e 1B02     		lslls	r3, r3, #8
+ 323              	.LVL32:
+ 172:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 173:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* configure SPI_I2SPSC */
+ 174:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_I2SPSC(spi_periph) = (uint32_t)(i2sdiv | i2sof | mckout);
+ 324              		.loc 1 174 5 is_stmt 1 view .LVU84
+ARM GAS  /tmp/cckUpySH.s 			page 10
+
+
+ 325              		.loc 1 174 48 is_stmt 0 view .LVU85
+ 326 0040 1C43     		orrs	r4, r4, r3
+ 327              	.LVL33:
+ 328              		.loc 1 174 56 view .LVU86
+ 329 0042 3C43     		orrs	r4, r4, r7
+ 330              		.loc 1 174 28 view .LVU87
+ 331 0044 2C62     		str	r4, [r5, #32]
+ 175:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****    /* clear SPI_I2SCTL_DTLEN and SPI_I2SCTL_CHLEN bits */
+ 176:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_I2SCTL(spi_periph) &= (uint32_t)(~(SPI_I2SCTL_DTLEN | SPI_I2SCTL_CHLEN));
+ 332              		.loc 1 176 5 is_stmt 1 view .LVU88
+ 333              		.loc 1 176 28 is_stmt 0 view .LVU89
+ 334 0046 EB69     		ldr	r3, [r5, #28]
+ 335              	.LVL34:
+ 336              		.loc 1 176 28 view .LVU90
+ 337 0048 23F00703 		bic	r3, r3, #7
+ 338 004c EB61     		str	r3, [r5, #28]
+ 177:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* configure data frame format */
+ 178:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_I2SCTL(spi_periph) |= (uint32_t)frameformat;
+ 339              		.loc 1 178 5 is_stmt 1 view .LVU91
+ 340              		.loc 1 178 28 is_stmt 0 view .LVU92
+ 341 004e EA69     		ldr	r2, [r5, #28]
+ 342              	.LVL35:
+ 343              		.loc 1 178 28 view .LVU93
+ 344 0050 1643     		orrs	r6, r6, r2
+ 345              	.LVL36:
+ 346              		.loc 1 178 28 view .LVU94
+ 347 0052 EE61     		str	r6, [r5, #28]
+ 179:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 348              		.loc 1 179 1 view .LVU95
+ 349 0054 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 350              	.LVL37:
+ 351              	.L14:
+ 156:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****             clks = (uint32_t)(((i2sclock / 32U) *10U ) / audiosample);
+ 352              		.loc 1 156 9 is_stmt 1 view .LVU96
+ 156:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****             clks = (uint32_t)(((i2sclock / 32U) *10U ) / audiosample);
+ 353              		.loc 1 156 11 is_stmt 0 view .LVU97
+ 354 0056 0EB9     		cbnz	r6, .L16
+ 157:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         }else{
+ 355              		.loc 1 157 13 is_stmt 1 view .LVU98
+ 157:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         }else{
+ 356              		.loc 1 157 42 is_stmt 0 view .LVU99
+ 357 0058 4009     		lsrs	r0, r0, #5
+ 358              	.LVL38:
+ 157:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         }else{
+ 359              		.loc 1 157 42 view .LVU100
+ 360 005a E1E7     		b	.L19
+ 361              	.LVL39:
+ 362              	.L16:
+ 159:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         }
+ 363              		.loc 1 159 13 is_stmt 1 view .LVU101
+ 159:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         }
+ 364              		.loc 1 159 42 is_stmt 0 view .LVU102
+ 365 005c 8009     		lsrs	r0, r0, #6
+ 366              	.LVL40:
+ 159:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         }
+ 367              		.loc 1 159 42 view .LVU103
+ 368 005e DFE7     		b	.L19
+ARM GAS  /tmp/cckUpySH.s 			page 11
+
+
+ 369              		.cfi_endproc
+ 370              	.LFE60:
+ 372              		.section	.text.i2s_init,"ax",%progbits
+ 373              		.align	1
+ 374              		.global	i2s_init
+ 375              		.syntax unified
+ 376              		.thumb
+ 377              		.thumb_func
+ 378              		.fpu softvfp
+ 380              	i2s_init:
+ 381              	.LVL41:
+ 382              	.LFB61:
+ 180:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 181:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 182:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      initialize I2S parameter 
+ 183:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(only x=0,2)
+ 184:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  mode: I2S operation mode 
+ 185:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_MODE_SLAVETX : I2S slave transmit mode
+ 186:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_MODE_SLAVERX : I2S slave receive mode
+ 187:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_MODE_MASTERTX : I2S master transmit mode
+ 188:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_MODE_MASTERRX : I2S master receive mode
+ 189:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  standard: I2S standard 
+ 190:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_STD_PHILLIPS : I2S phillips standard  
+ 191:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_STD_MSB : I2S MSB standard
+ 192:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_STD_LSB : I2S LSB standard
+ 193:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_STD_PCMSHORT : I2S PCM short standard
+ 194:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_STD_PCMLONG : I2S PCM long standard
+ 195:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  ckpl: I2S idle state clock polarity 
+ 196:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_CKPL_LOW : I2S clock polarity low level
+ 197:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_CKPL_HIGH : I2S clock polarity high level
+ 198:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 199:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 200:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 201:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void i2s_init(uint32_t spi_periph,uint32_t mode,uint32_t standard,uint32_t ckpl)
+ 202:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 383              		.loc 1 202 1 is_stmt 1 view -0
+ 384              		.cfi_startproc
+ 385              		@ args = 0, pretend = 0, frame = 0
+ 386              		@ frame_needed = 0, uses_anonymous_args = 0
+ 203:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     uint32_t reg= 0U;
+ 387              		.loc 1 203 5 view .LVU105
+ 204:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg= SPI_I2SCTL(spi_periph);
+ 388              		.loc 1 204 5 view .LVU106
+ 202:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     uint32_t reg= 0U;
+ 389              		.loc 1 202 1 is_stmt 0 view .LVU107
+ 390 0000 10B5     		push	{r4, lr}
+ 391              	.LCFI5:
+ 392              		.cfi_def_cfa_offset 8
+ 393              		.cfi_offset 4, -8
+ 394              		.cfi_offset 14, -4
+ 395              		.loc 1 204 8 view .LVU108
+ 396 0002 C469     		ldr	r4, [r0, #28]
+ 397              	.LVL42:
+ 205:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg &= I2S_INIT_MASK;
+ 398              		.loc 1 205 5 is_stmt 1 view .LVU109
+ 206:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     
+ 207:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* enable I2S */
+ARM GAS  /tmp/cckUpySH.s 			page 12
+
+
+ 208:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg |= (uint32_t)SPI_I2SCTL_I2SSEL; 
+ 399              		.loc 1 208 5 view .LVU110
+ 209:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select I2S mode */
+ 210:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg |= (uint32_t)mode;
+ 400              		.loc 1 210 5 view .LVU111
+ 211:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select I2S standard */
+ 212:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg |= (uint32_t)standard;
+ 401              		.loc 1 212 5 view .LVU112
+ 205:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     
+ 402              		.loc 1 205 9 is_stmt 0 view .LVU113
+ 403 0004 24F47B64 		bic	r4, r4, #4016
+ 404              	.LVL43:
+ 205:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     
+ 405              		.loc 1 205 9 view .LVU114
+ 406 0008 24F00804 		bic	r4, r4, #8
+ 407 000c 2404     		lsls	r4, r4, #16
+ 408 000e 240C     		lsrs	r4, r4, #16
+ 409 0010 1C43     		orrs	r4, r4, r3
+ 410 0012 1443     		orrs	r4, r4, r2
+ 411 0014 0C43     		orrs	r4, r4, r1
+ 213:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* select I2S polarity */
+ 214:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     reg |= (uint32_t)ckpl;
+ 412              		.loc 1 214 5 is_stmt 1 view .LVU115
+ 413              		.loc 1 214 9 is_stmt 0 view .LVU116
+ 414 0016 44F40064 		orr	r4, r4, #2048
+ 415              	.LVL44:
+ 215:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* write to SPI_I2SCTL register */
+ 216:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_I2SCTL(spi_periph) = (uint32_t)reg;
+ 416              		.loc 1 216 5 is_stmt 1 view .LVU117
+ 417              		.loc 1 216 28 is_stmt 0 view .LVU118
+ 418 001a C461     		str	r4, [r0, #28]
+ 217:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 419              		.loc 1 217 1 view .LVU119
+ 420 001c 10BD     		pop	{r4, pc}
+ 421              		.loc 1 217 1 view .LVU120
+ 422              		.cfi_endproc
+ 423              	.LFE61:
+ 425              		.section	.text.i2s_enable,"ax",%progbits
+ 426              		.align	1
+ 427              		.global	i2s_enable
+ 428              		.syntax unified
+ 429              		.thumb
+ 430              		.thumb_func
+ 431              		.fpu softvfp
+ 433              	i2s_enable:
+ 434              	.LVL45:
+ 435              	.LFB62:
+ 218:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 219:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 220:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      I2S enable
+ 221:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,2)
+ 222:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 223:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 224:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 225:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void i2s_enable(uint32_t spi_periph)
+ 226:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 436              		.loc 1 226 1 is_stmt 1 view -0
+ARM GAS  /tmp/cckUpySH.s 			page 13
+
+
+ 437              		.cfi_startproc
+ 438              		@ args = 0, pretend = 0, frame = 0
+ 439              		@ frame_needed = 0, uses_anonymous_args = 0
+ 440              		@ link register save eliminated.
+ 227:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_I2SCTL(spi_periph) |= (uint32_t)SPI_I2SCTL_I2SEN;
+ 441              		.loc 1 227 5 view .LVU122
+ 442              		.loc 1 227 28 is_stmt 0 view .LVU123
+ 443 0000 C369     		ldr	r3, [r0, #28]
+ 444 0002 43F48063 		orr	r3, r3, #1024
+ 445 0006 C361     		str	r3, [r0, #28]
+ 228:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 446              		.loc 1 228 1 view .LVU124
+ 447 0008 7047     		bx	lr
+ 448              		.cfi_endproc
+ 449              	.LFE62:
+ 451              		.section	.text.i2s_disable,"ax",%progbits
+ 452              		.align	1
+ 453              		.global	i2s_disable
+ 454              		.syntax unified
+ 455              		.thumb
+ 456              		.thumb_func
+ 457              		.fpu softvfp
+ 459              	i2s_disable:
+ 460              	.LVL46:
+ 461              	.LFB63:
+ 229:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 230:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 231:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      I2S disable
+ 232:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,2)
+ 233:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 234:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 235:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 236:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void i2s_disable(uint32_t spi_periph)
+ 237:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 462              		.loc 1 237 1 is_stmt 1 view -0
+ 463              		.cfi_startproc
+ 464              		@ args = 0, pretend = 0, frame = 0
+ 465              		@ frame_needed = 0, uses_anonymous_args = 0
+ 466              		@ link register save eliminated.
+ 238:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_I2SCTL(spi_periph) &= (uint32_t)(~SPI_I2SCTL_I2SEN);
+ 467              		.loc 1 238 5 view .LVU126
+ 468              		.loc 1 238 28 is_stmt 0 view .LVU127
+ 469 0000 C369     		ldr	r3, [r0, #28]
+ 470 0002 23F48063 		bic	r3, r3, #1024
+ 471 0006 C361     		str	r3, [r0, #28]
+ 239:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 472              		.loc 1 239 1 view .LVU128
+ 473 0008 7047     		bx	lr
+ 474              		.cfi_endproc
+ 475              	.LFE63:
+ 477              		.section	.text.spi_nss_output_enable,"ax",%progbits
+ 478              		.align	1
+ 479              		.global	spi_nss_output_enable
+ 480              		.syntax unified
+ 481              		.thumb
+ 482              		.thumb_func
+ 483              		.fpu softvfp
+ARM GAS  /tmp/cckUpySH.s 			page 14
+
+
+ 485              	spi_nss_output_enable:
+ 486              	.LVL47:
+ 487              	.LFB64:
+ 240:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 241:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 242:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      SPI NSS output enable
+ 243:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 244:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 245:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 246:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 247:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_nss_output_enable(uint32_t spi_periph)
+ 248:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 488              		.loc 1 248 1 is_stmt 1 view -0
+ 489              		.cfi_startproc
+ 490              		@ args = 0, pretend = 0, frame = 0
+ 491              		@ frame_needed = 0, uses_anonymous_args = 0
+ 492              		@ link register save eliminated.
+ 249:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_CTL1(spi_periph) |= (uint32_t)SPI_CTL1_NSSDRV;
+ 493              		.loc 1 249 5 view .LVU130
+ 494              		.loc 1 249 26 is_stmt 0 view .LVU131
+ 495 0000 4368     		ldr	r3, [r0, #4]
+ 496 0002 43F00403 		orr	r3, r3, #4
+ 497 0006 4360     		str	r3, [r0, #4]
+ 250:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 498              		.loc 1 250 1 view .LVU132
+ 499 0008 7047     		bx	lr
+ 500              		.cfi_endproc
+ 501              	.LFE64:
+ 503              		.section	.text.spi_nss_output_disable,"ax",%progbits
+ 504              		.align	1
+ 505              		.global	spi_nss_output_disable
+ 506              		.syntax unified
+ 507              		.thumb
+ 508              		.thumb_func
+ 509              		.fpu softvfp
+ 511              	spi_nss_output_disable:
+ 512              	.LVL48:
+ 513              	.LFB65:
+ 251:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 252:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 253:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      SPI NSS output disable
+ 254:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 255:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 256:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 257:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 258:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_nss_output_disable(uint32_t spi_periph)
+ 259:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 514              		.loc 1 259 1 is_stmt 1 view -0
+ 515              		.cfi_startproc
+ 516              		@ args = 0, pretend = 0, frame = 0
+ 517              		@ frame_needed = 0, uses_anonymous_args = 0
+ 518              		@ link register save eliminated.
+ 260:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_CTL1(spi_periph) &= (uint32_t)(~SPI_CTL1_NSSDRV);
+ 519              		.loc 1 260 5 view .LVU134
+ 520              		.loc 1 260 26 is_stmt 0 view .LVU135
+ 521 0000 4368     		ldr	r3, [r0, #4]
+ 522 0002 23F00403 		bic	r3, r3, #4
+ARM GAS  /tmp/cckUpySH.s 			page 15
+
+
+ 523 0006 4360     		str	r3, [r0, #4]
+ 261:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 524              		.loc 1 261 1 view .LVU136
+ 525 0008 7047     		bx	lr
+ 526              		.cfi_endproc
+ 527              	.LFE65:
+ 529              		.section	.text.spi_nss_internal_high,"ax",%progbits
+ 530              		.align	1
+ 531              		.global	spi_nss_internal_high
+ 532              		.syntax unified
+ 533              		.thumb
+ 534              		.thumb_func
+ 535              		.fpu softvfp
+ 537              	spi_nss_internal_high:
+ 538              	.LVL49:
+ 539              	.LFB66:
+ 262:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 263:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 264:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      SPI NSS pin high level in software mode
+ 265:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 266:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 267:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 268:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 269:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_nss_internal_high(uint32_t spi_periph)
+ 270:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 540              		.loc 1 270 1 is_stmt 1 view -0
+ 541              		.cfi_startproc
+ 542              		@ args = 0, pretend = 0, frame = 0
+ 543              		@ frame_needed = 0, uses_anonymous_args = 0
+ 544              		@ link register save eliminated.
+ 271:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_CTL0(spi_periph) |= (uint32_t)SPI_CTL0_SWNSS;
+ 545              		.loc 1 271 5 view .LVU138
+ 546              		.loc 1 271 26 is_stmt 0 view .LVU139
+ 547 0000 0368     		ldr	r3, [r0]
+ 548 0002 43F48073 		orr	r3, r3, #256
+ 549 0006 0360     		str	r3, [r0]
+ 272:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 550              		.loc 1 272 1 view .LVU140
+ 551 0008 7047     		bx	lr
+ 552              		.cfi_endproc
+ 553              	.LFE66:
+ 555              		.section	.text.spi_nss_internal_low,"ax",%progbits
+ 556              		.align	1
+ 557              		.global	spi_nss_internal_low
+ 558              		.syntax unified
+ 559              		.thumb
+ 560              		.thumb_func
+ 561              		.fpu softvfp
+ 563              	spi_nss_internal_low:
+ 564              	.LVL50:
+ 565              	.LFB67:
+ 273:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 274:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 275:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      SPI NSS pin low level in software mode
+ 276:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 277:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 278:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ARM GAS  /tmp/cckUpySH.s 			page 16
+
+
+ 279:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 280:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_nss_internal_low(uint32_t spi_periph)
+ 281:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 566              		.loc 1 281 1 is_stmt 1 view -0
+ 567              		.cfi_startproc
+ 568              		@ args = 0, pretend = 0, frame = 0
+ 569              		@ frame_needed = 0, uses_anonymous_args = 0
+ 570              		@ link register save eliminated.
+ 282:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_CTL0(spi_periph) &= (uint32_t)(~SPI_CTL0_SWNSS);
+ 571              		.loc 1 282 5 view .LVU142
+ 572              		.loc 1 282 26 is_stmt 0 view .LVU143
+ 573 0000 0368     		ldr	r3, [r0]
+ 574 0002 23F48073 		bic	r3, r3, #256
+ 575 0006 0360     		str	r3, [r0]
+ 283:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 576              		.loc 1 283 1 view .LVU144
+ 577 0008 7047     		bx	lr
+ 578              		.cfi_endproc
+ 579              	.LFE67:
+ 581              		.section	.text.spi_dma_enable,"ax",%progbits
+ 582              		.align	1
+ 583              		.global	spi_dma_enable
+ 584              		.syntax unified
+ 585              		.thumb
+ 586              		.thumb_func
+ 587              		.fpu softvfp
+ 589              	spi_dma_enable:
+ 590              	.LVL51:
+ 591              	.LFB68:
+ 284:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 285:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 286:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      enable SPI DMA send or receive 
+ 287:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 288:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  dma: SPI DMA mode 
+ 289:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_DMA_TRANSMIT: SPI transmit data use DMA
+ 290:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_DMA_RECEIVE: SPI receive data use DMA
+ 291:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 292:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 293:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 294:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_dma_enable(uint32_t spi_periph,uint8_t dma)
+ 295:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 592              		.loc 1 295 1 is_stmt 1 view -0
+ 593              		.cfi_startproc
+ 594              		@ args = 0, pretend = 0, frame = 0
+ 595              		@ frame_needed = 0, uses_anonymous_args = 0
+ 596              		@ link register save eliminated.
+ 296:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     if(SPI_DMA_TRANSMIT == dma){
+ 597              		.loc 1 296 5 view .LVU146
+ 297:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         SPI_CTL1(spi_periph) |= (uint32_t)SPI_CTL1_DMATEN;
+ 598              		.loc 1 297 30 is_stmt 0 view .LVU147
+ 599 0000 4368     		ldr	r3, [r0, #4]
+ 296:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     if(SPI_DMA_TRANSMIT == dma){
+ 600              		.loc 1 296 7 view .LVU148
+ 601 0002 19B9     		cbnz	r1, .L28
+ 602              		.loc 1 297 9 is_stmt 1 view .LVU149
+ 603              		.loc 1 297 30 is_stmt 0 view .LVU150
+ 604 0004 43F00203 		orr	r3, r3, #2
+ARM GAS  /tmp/cckUpySH.s 			page 17
+
+
+ 605              	.L30:
+ 298:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }else{
+ 299:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         SPI_CTL1(spi_periph) |= (uint32_t)SPI_CTL1_DMAREN;
+ 606              		.loc 1 299 30 view .LVU151
+ 607 0008 4360     		str	r3, [r0, #4]
+ 300:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 301:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 608              		.loc 1 301 1 view .LVU152
+ 609 000a 7047     		bx	lr
+ 610              	.L28:
+ 299:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 611              		.loc 1 299 9 is_stmt 1 view .LVU153
+ 299:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 612              		.loc 1 299 30 is_stmt 0 view .LVU154
+ 613 000c 43F00103 		orr	r3, r3, #1
+ 614 0010 FAE7     		b	.L30
+ 615              		.cfi_endproc
+ 616              	.LFE68:
+ 618              		.section	.text.spi_dma_disable,"ax",%progbits
+ 619              		.align	1
+ 620              		.global	spi_dma_disable
+ 621              		.syntax unified
+ 622              		.thumb
+ 623              		.thumb_func
+ 624              		.fpu softvfp
+ 626              	spi_dma_disable:
+ 627              	.LVL52:
+ 628              	.LFB69:
+ 302:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 303:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 304:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      disable SPI DMA send or receive 
+ 305:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 306:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  dma: SPI DMA mode 
+ 307:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_DMA_TRANSMIT: SPI transmit data use DMA
+ 308:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_DMA_RECEIVE: SPI receive data use DMA
+ 309:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 310:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 311:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 312:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_dma_disable(uint32_t spi_periph,uint8_t dma)
+ 313:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 629              		.loc 1 313 1 is_stmt 1 view -0
+ 630              		.cfi_startproc
+ 631              		@ args = 0, pretend = 0, frame = 0
+ 632              		@ frame_needed = 0, uses_anonymous_args = 0
+ 633              		@ link register save eliminated.
+ 314:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     if(SPI_DMA_TRANSMIT == dma){
+ 634              		.loc 1 314 5 view .LVU156
+ 315:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         SPI_CTL1(spi_periph) &= (uint32_t)(~SPI_CTL1_DMATEN);
+ 635              		.loc 1 315 30 is_stmt 0 view .LVU157
+ 636 0000 4368     		ldr	r3, [r0, #4]
+ 314:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     if(SPI_DMA_TRANSMIT == dma){
+ 637              		.loc 1 314 7 view .LVU158
+ 638 0002 19B9     		cbnz	r1, .L32
+ 639              		.loc 1 315 9 is_stmt 1 view .LVU159
+ 640              		.loc 1 315 30 is_stmt 0 view .LVU160
+ 641 0004 23F00203 		bic	r3, r3, #2
+ 642              	.L34:
+ARM GAS  /tmp/cckUpySH.s 			page 18
+
+
+ 316:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }else{
+ 317:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         SPI_CTL1(spi_periph) &= (uint32_t)(~SPI_CTL1_DMAREN);
+ 643              		.loc 1 317 30 view .LVU161
+ 644 0008 4360     		str	r3, [r0, #4]
+ 318:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 319:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 645              		.loc 1 319 1 view .LVU162
+ 646 000a 7047     		bx	lr
+ 647              	.L32:
+ 317:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 648              		.loc 1 317 9 is_stmt 1 view .LVU163
+ 317:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 649              		.loc 1 317 30 is_stmt 0 view .LVU164
+ 650 000c 23F00103 		bic	r3, r3, #1
+ 651 0010 FAE7     		b	.L34
+ 652              		.cfi_endproc
+ 653              	.LFE69:
+ 655              		.section	.text.spi_i2s_data_frame_format_config,"ax",%progbits
+ 656              		.align	1
+ 657              		.global	spi_i2s_data_frame_format_config
+ 658              		.syntax unified
+ 659              		.thumb
+ 660              		.thumb_func
+ 661              		.fpu softvfp
+ 663              	spi_i2s_data_frame_format_config:
+ 664              	.LVL53:
+ 665              	.LFB70:
+ 320:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 321:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 322:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      configure SPI/I2S data frame format
+ 323:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 324:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  frame_format: SPI frame size
+ 325:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_FRAMESIZE_16BIT: SPI frame size is 16 bits
+ 326:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_FRAMESIZE_8BIT: SPI frame size is 8 bits
+ 327:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 328:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 329:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 330:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_i2s_data_frame_format_config(uint32_t spi_periph, uint16_t frame_format)
+ 331:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 666              		.loc 1 331 1 is_stmt 1 view -0
+ 667              		.cfi_startproc
+ 668              		@ args = 0, pretend = 0, frame = 0
+ 669              		@ frame_needed = 0, uses_anonymous_args = 0
+ 670              		@ link register save eliminated.
+ 332:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* clear SPI_CTL0_FF16 bit */
+ 333:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_CTL0(spi_periph) &= (uint32_t)(~SPI_CTL0_FF16);
+ 671              		.loc 1 333 5 view .LVU166
+ 672              		.loc 1 333 26 is_stmt 0 view .LVU167
+ 673 0000 0368     		ldr	r3, [r0]
+ 674 0002 23F40063 		bic	r3, r3, #2048
+ 675 0006 0360     		str	r3, [r0]
+ 334:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* configure SPI_CTL0_FF16 bit */
+ 335:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_CTL0(spi_periph) |= (uint32_t)frame_format;
+ 676              		.loc 1 335 5 is_stmt 1 view .LVU168
+ 677              		.loc 1 335 26 is_stmt 0 view .LVU169
+ 678 0008 0368     		ldr	r3, [r0]
+ 679 000a 1943     		orrs	r1, r1, r3
+ARM GAS  /tmp/cckUpySH.s 			page 19
+
+
+ 680              	.LVL54:
+ 681              		.loc 1 335 26 view .LVU170
+ 682 000c 0160     		str	r1, [r0]
+ 336:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 683              		.loc 1 336 1 view .LVU171
+ 684 000e 7047     		bx	lr
+ 685              		.cfi_endproc
+ 686              	.LFE70:
+ 688              		.section	.text.spi_i2s_data_transmit,"ax",%progbits
+ 689              		.align	1
+ 690              		.global	spi_i2s_data_transmit
+ 691              		.syntax unified
+ 692              		.thumb
+ 693              		.thumb_func
+ 694              		.fpu softvfp
+ 696              	spi_i2s_data_transmit:
+ 697              	.LVL55:
+ 698              	.LFB71:
+ 337:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 338:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 339:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      SPI transmit data
+ 340:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 341:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  data: 16-bit data
+ 342:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 343:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 344:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 345:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_i2s_data_transmit(uint32_t spi_periph,uint16_t data)
+ 346:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 699              		.loc 1 346 1 is_stmt 1 view -0
+ 700              		.cfi_startproc
+ 701              		@ args = 0, pretend = 0, frame = 0
+ 702              		@ frame_needed = 0, uses_anonymous_args = 0
+ 703              		@ link register save eliminated.
+ 347:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_DATA(spi_periph) = (uint32_t)data;
+ 704              		.loc 1 347 5 view .LVU173
+ 705              		.loc 1 347 26 is_stmt 0 view .LVU174
+ 706 0000 C160     		str	r1, [r0, #12]
+ 348:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 707              		.loc 1 348 1 view .LVU175
+ 708 0002 7047     		bx	lr
+ 709              		.cfi_endproc
+ 710              	.LFE71:
+ 712              		.section	.text.spi_i2s_data_receive,"ax",%progbits
+ 713              		.align	1
+ 714              		.global	spi_i2s_data_receive
+ 715              		.syntax unified
+ 716              		.thumb
+ 717              		.thumb_func
+ 718              		.fpu softvfp
+ 720              	spi_i2s_data_receive:
+ 721              	.LVL56:
+ 722              	.LFB72:
+ 349:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 350:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 351:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      SPI receive data
+ 352:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 353:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ARM GAS  /tmp/cckUpySH.s 			page 20
+
+
+ 354:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     16-bit data
+ 355:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 356:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** uint16_t spi_i2s_data_receive(uint32_t spi_periph)
+ 357:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 723              		.loc 1 357 1 is_stmt 1 view -0
+ 724              		.cfi_startproc
+ 725              		@ args = 0, pretend = 0, frame = 0
+ 726              		@ frame_needed = 0, uses_anonymous_args = 0
+ 727              		@ link register save eliminated.
+ 358:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     return ((uint16_t)SPI_DATA(spi_periph));
+ 728              		.loc 1 358 5 view .LVU177
+ 729              		.loc 1 358 23 is_stmt 0 view .LVU178
+ 730 0000 C068     		ldr	r0, [r0, #12]
+ 731              	.LVL57:
+ 359:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 732              		.loc 1 359 1 view .LVU179
+ 733 0002 80B2     		uxth	r0, r0
+ 734 0004 7047     		bx	lr
+ 735              		.cfi_endproc
+ 736              	.LFE72:
+ 738              		.section	.text.spi_bidirectional_transfer_config,"ax",%progbits
+ 739              		.align	1
+ 740              		.global	spi_bidirectional_transfer_config
+ 741              		.syntax unified
+ 742              		.thumb
+ 743              		.thumb_func
+ 744              		.fpu softvfp
+ 746              	spi_bidirectional_transfer_config:
+ 747              	.LVL58:
+ 748              	.LFB73:
+ 360:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 361:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 362:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      configure SPI bidirectional transfer direction
+ 363:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 364:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  transfer_direction: SPI transfer direction
+ 365:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_BIDIRECTIONAL_TRANSMIT: SPI work in transmit-only mode
+ 366:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_BIDIRECTIONAL_RECEIVE: SPI work in receive-only mode
+ 367:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 368:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 369:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_bidirectional_transfer_config(uint32_t spi_periph, uint32_t transfer_direction)
+ 370:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 749              		.loc 1 370 1 is_stmt 1 view -0
+ 750              		.cfi_startproc
+ 751              		@ args = 0, pretend = 0, frame = 0
+ 752              		@ frame_needed = 0, uses_anonymous_args = 0
+ 753              		@ link register save eliminated.
+ 371:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     if(SPI_BIDIRECTIONAL_TRANSMIT == transfer_direction){
+ 754              		.loc 1 371 5 view .LVU181
+ 372:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         /* set the transmit only mode */
+ 373:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         SPI_CTL0(spi_periph) |= (uint32_t)SPI_BIDIRECTIONAL_TRANSMIT;
+ 755              		.loc 1 373 30 is_stmt 0 view .LVU182
+ 756 0000 0368     		ldr	r3, [r0]
+ 371:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     if(SPI_BIDIRECTIONAL_TRANSMIT == transfer_direction){
+ 757              		.loc 1 371 7 view .LVU183
+ 758 0002 B1F5804F 		cmp	r1, #16384
+ 759              		.loc 1 373 9 is_stmt 1 view .LVU184
+ 760              		.loc 1 373 30 is_stmt 0 view .LVU185
+ARM GAS  /tmp/cckUpySH.s 			page 21
+
+
+ 761 0006 0CBF     		ite	eq
+ 762 0008 43F48043 		orreq	r3, r3, #16384
+ 374:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }else{
+ 375:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         /* set the receive only mode */
+ 376:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         SPI_CTL0(spi_periph) &= SPI_BIDIRECTIONAL_RECEIVE;
+ 763              		.loc 1 376 9 is_stmt 1 view .LVU186
+ 764              		.loc 1 376 30 is_stmt 0 view .LVU187
+ 765 000c 23F48043 		bicne	r3, r3, #16384
+ 766 0010 0360     		str	r3, [r0]
+ 377:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 378:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 767              		.loc 1 378 1 view .LVU188
+ 768 0012 7047     		bx	lr
+ 769              		.cfi_endproc
+ 770              	.LFE73:
+ 772              		.section	.text.spi_i2s_interrupt_enable,"ax",%progbits
+ 773              		.align	1
+ 774              		.global	spi_i2s_interrupt_enable
+ 775              		.syntax unified
+ 776              		.thumb
+ 777              		.thumb_func
+ 778              		.fpu softvfp
+ 780              	spi_i2s_interrupt_enable:
+ 781              	.LVL59:
+ 782              	.LFB74:
+ 379:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 380:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 381:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      enable SPI and I2S interrupt 
+ 382:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 383:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  interrupt:
+ 384:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_I2S_INT_TBE: transmit buffer empty interrupt.
+ 385:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_I2S_INT_RBNE: receive buffer not empty interrupt.
+ 386:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_I2S_INT_ERR: CRC error,configuration error,reception overrun error           
+ 387:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 388:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 389:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 390:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_i2s_interrupt_enable(uint32_t spi_periph,uint8_t interrupt)
+ 391:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 783              		.loc 1 391 1 is_stmt 1 view -0
+ 784              		.cfi_startproc
+ 785              		@ args = 0, pretend = 0, frame = 0
+ 786              		@ frame_needed = 0, uses_anonymous_args = 0
+ 787              		@ link register save eliminated.
+ 392:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     switch(interrupt){
+ 788              		.loc 1 392 5 view .LVU190
+ 789 0000 0129     		cmp	r1, #1
+ 790 0002 07D0     		beq	.L43
+ 791 0004 0229     		cmp	r1, #2
+ 792 0006 09D0     		beq	.L44
+ 793 0008 19B9     		cbnz	r1, .L42
+ 393:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* SPI/I2S transmit buffer empty interrupt */
+ 394:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     case SPI_I2S_INT_TBE :
+ 395:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         SPI_CTL1(spi_periph) |= (uint32_t)SPI_CTL1_TBEIE;
+ 794              		.loc 1 395 9 view .LVU191
+ 795              		.loc 1 395 30 is_stmt 0 view .LVU192
+ 796 000a 4368     		ldr	r3, [r0, #4]
+ 797 000c 43F08003 		orr	r3, r3, #128
+ARM GAS  /tmp/cckUpySH.s 			page 22
+
+
+ 798              	.L46:
+ 396:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 397:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* SPI/I2S receive buffer not empty interrupt */
+ 398:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     case SPI_I2S_INT_RBNE :
+ 399:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         SPI_CTL1(spi_periph) |= (uint32_t)SPI_CTL1_RBNEIE;
+ 400:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 401:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* SPI/I2S error */
+ 402:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     case SPI_I2S_INT_ERR :
+ 403:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         SPI_CTL1(spi_periph) |= (uint32_t)SPI_CTL1_ERRIE;
+ 799              		.loc 1 403 30 view .LVU193
+ 800 0010 4360     		str	r3, [r0, #4]
+ 404:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 801              		.loc 1 404 9 is_stmt 1 view .LVU194
+ 802              	.L42:
+ 405:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     default :
+ 406:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 407:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 408:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 803              		.loc 1 408 1 is_stmt 0 view .LVU195
+ 804 0012 7047     		bx	lr
+ 805              	.L43:
+ 399:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 806              		.loc 1 399 9 is_stmt 1 view .LVU196
+ 399:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 807              		.loc 1 399 30 is_stmt 0 view .LVU197
+ 808 0014 4368     		ldr	r3, [r0, #4]
+ 809 0016 43F04003 		orr	r3, r3, #64
+ 810 001a F9E7     		b	.L46
+ 811              	.L44:
+ 403:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 812              		.loc 1 403 9 is_stmt 1 view .LVU198
+ 403:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 813              		.loc 1 403 30 is_stmt 0 view .LVU199
+ 814 001c 4368     		ldr	r3, [r0, #4]
+ 815 001e 43F02003 		orr	r3, r3, #32
+ 816 0022 F5E7     		b	.L46
+ 817              		.cfi_endproc
+ 818              	.LFE74:
+ 820              		.section	.text.spi_i2s_interrupt_disable,"ax",%progbits
+ 821              		.align	1
+ 822              		.global	spi_i2s_interrupt_disable
+ 823              		.syntax unified
+ 824              		.thumb
+ 825              		.thumb_func
+ 826              		.fpu softvfp
+ 828              	spi_i2s_interrupt_disable:
+ 829              	.LVL60:
+ 830              	.LFB75:
+ 409:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 410:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 411:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      disable SPI and I2S interrupt 
+ 412:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 413:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  interrupt:
+ 414:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_I2S_INT_TBE: transmit buffer empty interrupt.
+ 415:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_I2S_INT_RBNE: receive buffer not empty interrupt.
+ 416:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_I2S_INT_ERR: CRC error,configuration error,reception overrun error
+ 417:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ARM GAS  /tmp/cckUpySH.s 			page 23
+
+
+ 418:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 419:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 420:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_i2s_interrupt_disable(uint32_t spi_periph,uint8_t interrupt)
+ 421:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 831              		.loc 1 421 1 is_stmt 1 view -0
+ 832              		.cfi_startproc
+ 833              		@ args = 0, pretend = 0, frame = 0
+ 834              		@ frame_needed = 0, uses_anonymous_args = 0
+ 835              		@ link register save eliminated.
+ 422:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     switch(interrupt){
+ 836              		.loc 1 422 5 view .LVU201
+ 837 0000 0129     		cmp	r1, #1
+ 838 0002 07D0     		beq	.L48
+ 839 0004 0229     		cmp	r1, #2
+ 840 0006 09D0     		beq	.L49
+ 841 0008 19B9     		cbnz	r1, .L47
+ 423:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* SPI/I2S transmit buffer empty interrupt */
+ 424:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     case SPI_I2S_INT_TBE :
+ 425:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         SPI_CTL1(spi_periph) &= (uint32_t)(~SPI_CTL1_TBEIE);
+ 842              		.loc 1 425 9 view .LVU202
+ 843              		.loc 1 425 30 is_stmt 0 view .LVU203
+ 844 000a 4368     		ldr	r3, [r0, #4]
+ 845 000c 23F08003 		bic	r3, r3, #128
+ 846              	.L51:
+ 426:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 427:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* SPI/I2S receive buffer not empty interrupt */
+ 428:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     case SPI_I2S_INT_RBNE :
+ 429:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         SPI_CTL1(spi_periph) &= (uint32_t)(~SPI_CTL1_RBNEIE);
+ 430:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 431:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* SPI/I2S error */
+ 432:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     case SPI_I2S_INT_ERR :
+ 433:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         SPI_CTL1(spi_periph) &= (uint32_t)(~SPI_CTL1_ERRIE);
+ 847              		.loc 1 433 30 view .LVU204
+ 848 0010 4360     		str	r3, [r0, #4]
+ 434:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 849              		.loc 1 434 9 is_stmt 1 view .LVU205
+ 850              	.L47:
+ 435:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     default :
+ 436:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 437:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 438:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 851              		.loc 1 438 1 is_stmt 0 view .LVU206
+ 852 0012 7047     		bx	lr
+ 853              	.L48:
+ 429:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 854              		.loc 1 429 9 is_stmt 1 view .LVU207
+ 429:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 855              		.loc 1 429 30 is_stmt 0 view .LVU208
+ 856 0014 4368     		ldr	r3, [r0, #4]
+ 857 0016 23F04003 		bic	r3, r3, #64
+ 858 001a F9E7     		b	.L51
+ 859              	.L49:
+ 433:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 860              		.loc 1 433 9 is_stmt 1 view .LVU209
+ 433:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 861              		.loc 1 433 30 is_stmt 0 view .LVU210
+ 862 001c 4368     		ldr	r3, [r0, #4]
+ARM GAS  /tmp/cckUpySH.s 			page 24
+
+
+ 863 001e 23F02003 		bic	r3, r3, #32
+ 864 0022 F5E7     		b	.L51
+ 865              		.cfi_endproc
+ 866              	.LFE75:
+ 868              		.section	.text.spi_i2s_interrupt_flag_get,"ax",%progbits
+ 869              		.align	1
+ 870              		.global	spi_i2s_interrupt_flag_get
+ 871              		.syntax unified
+ 872              		.thumb
+ 873              		.thumb_func
+ 874              		.fpu softvfp
+ 876              	spi_i2s_interrupt_flag_get:
+ 877              	.LVL61:
+ 878              	.LFB76:
+ 439:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 440:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      get SPI and I2S interrupt flag status
+ 441:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 442:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  interrupt: SPI/I2S interrupt flag status
+ 443:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_I2S_INT_FLAG_TBE: transmit buffer empty interrupt.
+ 444:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_I2S_INT_FLAG_RBNE: receive buffer not empty interrupt.
+ 445:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_I2S_INT_FLAG_RXORERR: overrun interrupt.
+ 446:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_INT_FLAG_CONFERR: config error interrupt.
+ 447:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_INT_FLAG_CRCERR: CRC error interrupt.
+ 448:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_INT_FLAG_TXURERR: underrun error interrupt.
+ 449:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 450:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     FlagStatus: SET or RESET
+ 451:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 452:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** FlagStatus spi_i2s_interrupt_flag_get(uint32_t spi_periph,uint8_t interrupt)
+ 453:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 879              		.loc 1 453 1 is_stmt 1 view -0
+ 880              		.cfi_startproc
+ 881              		@ args = 0, pretend = 0, frame = 0
+ 882              		@ frame_needed = 0, uses_anonymous_args = 0
+ 883              		@ link register save eliminated.
+ 454:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     uint32_t reg1 = SPI_STAT(spi_periph);
+ 884              		.loc 1 454 5 view .LVU212
+ 453:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     uint32_t reg1 = SPI_STAT(spi_periph);
+ 885              		.loc 1 453 1 is_stmt 0 view .LVU213
+ 886 0000 0346     		mov	r3, r0
+ 887              		.loc 1 454 14 view .LVU214
+ 888 0002 8068     		ldr	r0, [r0, #8]
+ 889              	.LVL62:
+ 455:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     uint32_t reg2 = SPI_CTL1(spi_periph);
+ 890              		.loc 1 455 5 is_stmt 1 view .LVU215
+ 891              		.loc 1 455 14 is_stmt 0 view .LVU216
+ 892 0004 5B68     		ldr	r3, [r3, #4]
+ 893              	.LVL63:
+ 456:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 457:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     switch(interrupt){
+ 894              		.loc 1 457 5 is_stmt 1 view .LVU217
+ 895 0006 0529     		cmp	r1, #5
+ 896 0008 08D8     		bhi	.L53
+ 897 000a DFE801F0 		tbb	[pc, r1]
+ 898              	.L55:
+ 899 000e 03       		.byte	(.L60-.L55)/2
+ 900 000f 0C       		.byte	(.L59-.L55)/2
+ 901 0010 11       		.byte	(.L58-.L55)/2
+ARM GAS  /tmp/cckUpySH.s 			page 25
+
+
+ 902 0011 16       		.byte	(.L57-.L55)/2
+ 903 0012 19       		.byte	(.L56-.L55)/2
+ 904 0013 1C       		.byte	(.L54-.L55)/2
+ 905              		.p2align 1
+ 906              	.L60:
+ 458:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* SPI/I2S transmit buffer empty interrupt */
+ 459:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     case SPI_I2S_INT_FLAG_TBE:
+ 460:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg1 = reg1 & SPI_STAT_TBE;
+ 907              		.loc 1 460 9 view .LVU218
+ 908              		.loc 1 460 14 is_stmt 0 view .LVU219
+ 909 0014 00F00200 		and	r0, r0, #2
+ 910              	.LVL64:
+ 461:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_TBEIE;
+ 911              		.loc 1 461 9 is_stmt 1 view .LVU220
+ 912              		.loc 1 461 14 is_stmt 0 view .LVU221
+ 913 0018 03F08003 		and	r3, r3, #128
+ 914              	.LVL65:
+ 462:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 915              		.loc 1 462 9 is_stmt 1 view .LVU222
+ 916              	.L53:
+ 463:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* SPI/I2S receive buffer not empty interrupt */
+ 464:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     case SPI_I2S_INT_FLAG_RBNE:
+ 465:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg1 = reg1 & SPI_STAT_RBNE;
+ 466:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_RBNEIE;
+ 467:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 468:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* SPI/I2S overrun interrupt */
+ 469:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     case SPI_I2S_INT_FLAG_RXORERR:
+ 470:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg1 = reg1 & SPI_STAT_RXORERR;
+ 471:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_ERRIE;
+ 472:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 473:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* SPI config error interrupt */
+ 474:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     case SPI_INT_FLAG_CONFERR:
+ 475:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg1 = reg1 & SPI_STAT_CONFERR;
+ 476:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_ERRIE;
+ 477:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 478:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* SPI CRC error interrupt */
+ 479:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     case SPI_INT_FLAG_CRCERR:
+ 480:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg1 = reg1 & SPI_STAT_CRCERR;
+ 481:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_ERRIE;
+ 482:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 483:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* I2S underrun error interrupt */
+ 484:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     case I2S_INT_FLAG_TXURERR:
+ 485:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg1 = reg1 & SPI_STAT_TXURERR;
+ 486:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_ERRIE;
+ 487:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 488:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     default :
+ 489:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 490:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 491:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /*get SPI/I2S interrupt flag status */
+ 492:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     if(reg1 && reg2){
+ 917              		.loc 1 492 5 view .LVU223
+ 918              		.loc 1 492 7 is_stmt 0 view .LVU224
+ 919 001c 10B1     		cbz	r0, .L61
+ 493:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         return SET;
+ 494:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }else{
+ 495:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         return RESET;
+ 920              		.loc 1 495 16 discriminator 1 view .LVU225
+ARM GAS  /tmp/cckUpySH.s 			page 26
+
+
+ 921 001e 181E     		subs	r0, r3, #0
+ 922              	.LVL66:
+ 923              		.loc 1 495 16 discriminator 1 view .LVU226
+ 924 0020 18BF     		it	ne
+ 925 0022 0120     		movne	r0, #1
+ 926              	.L61:
+ 496:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 497:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 927              		.loc 1 497 1 view .LVU227
+ 928 0024 7047     		bx	lr
+ 929              	.LVL67:
+ 930              	.L59:
+ 465:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_RBNEIE;
+ 931              		.loc 1 465 9 is_stmt 1 view .LVU228
+ 465:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_RBNEIE;
+ 932              		.loc 1 465 14 is_stmt 0 view .LVU229
+ 933 0026 00F00100 		and	r0, r0, #1
+ 934              	.LVL68:
+ 466:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 935              		.loc 1 466 9 is_stmt 1 view .LVU230
+ 466:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 936              		.loc 1 466 14 is_stmt 0 view .LVU231
+ 937 002a 03F04003 		and	r3, r3, #64
+ 938              	.LVL69:
+ 467:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* SPI/I2S overrun interrupt */
+ 939              		.loc 1 467 9 is_stmt 1 view .LVU232
+ 940 002e F5E7     		b	.L53
+ 941              	.L58:
+ 470:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_ERRIE;
+ 942              		.loc 1 470 9 view .LVU233
+ 470:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_ERRIE;
+ 943              		.loc 1 470 14 is_stmt 0 view .LVU234
+ 944 0030 00F04000 		and	r0, r0, #64
+ 945              	.LVL70:
+ 471:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 946              		.loc 1 471 9 is_stmt 1 view .LVU235
+ 947              	.L63:
+ 486:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 948              		.loc 1 486 9 view .LVU236
+ 486:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 949              		.loc 1 486 14 is_stmt 0 view .LVU237
+ 950 0034 03F02003 		and	r3, r3, #32
+ 951              	.LVL71:
+ 487:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     default :
+ 952              		.loc 1 487 9 is_stmt 1 view .LVU238
+ 953 0038 F0E7     		b	.L53
+ 954              	.L57:
+ 475:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_ERRIE;
+ 955              		.loc 1 475 9 view .LVU239
+ 475:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_ERRIE;
+ 956              		.loc 1 475 14 is_stmt 0 view .LVU240
+ 957 003a 00F02000 		and	r0, r0, #32
+ 958              	.LVL72:
+ 476:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 959              		.loc 1 476 9 is_stmt 1 view .LVU241
+ 960 003e F9E7     		b	.L63
+ 961              	.L56:
+ARM GAS  /tmp/cckUpySH.s 			page 27
+
+
+ 480:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_ERRIE;
+ 962              		.loc 1 480 9 view .LVU242
+ 480:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_ERRIE;
+ 963              		.loc 1 480 14 is_stmt 0 view .LVU243
+ 964 0040 00F01000 		and	r0, r0, #16
+ 965              	.LVL73:
+ 481:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         break;
+ 966              		.loc 1 481 9 is_stmt 1 view .LVU244
+ 967 0044 F6E7     		b	.L63
+ 968              	.L54:
+ 485:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_ERRIE;
+ 969              		.loc 1 485 9 view .LVU245
+ 485:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_ERRIE;
+ 970              		.loc 1 485 14 is_stmt 0 view .LVU246
+ 971 0046 00F00800 		and	r0, r0, #8
+ 972              	.LVL74:
+ 485:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         reg2 = reg2 & SPI_CTL1_ERRIE;
+ 973              		.loc 1 485 14 view .LVU247
+ 974 004a F3E7     		b	.L63
+ 975              		.cfi_endproc
+ 976              	.LFE76:
+ 978              		.section	.text.spi_i2s_flag_get,"ax",%progbits
+ 979              		.align	1
+ 980              		.global	spi_i2s_flag_get
+ 981              		.syntax unified
+ 982              		.thumb
+ 983              		.thumb_func
+ 984              		.fpu softvfp
+ 986              	spi_i2s_flag_get:
+ 987              	.LVL75:
+ 988              	.LFB77:
+ 498:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 499:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 500:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      get SPI and I2S flag status
+ 501:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 502:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  flag: SPI/I2S flag status
+ 503:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_FLAG_TBE: transmit buffer empty flag.
+ 504:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_FLAG_RBNE: receive buffer not empty flag.
+ 505:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_FLAG_TRANS: transmit on-going flag.
+ 506:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_FLAG_RXORERR: receive overrun error flag.
+ 507:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_FLAG_CONFERR: mode config error flag.
+ 508:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_FLAG_CRCERR: CRC error flag.
+ 509:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_FLAG_TBE: transmit buffer empty flag.
+ 510:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_FLAG_RBNE: receive buffer not empty flag.
+ 511:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_FLAG_TRANS: transmit on-going flag.
+ 512:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_FLAG_RXORERR: overrun error flag.
+ 513:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_FLAG_TXURERR: underrun error flag.
+ 514:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        I2S_FLAG_CH: channel side flag.
+ 515:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 516:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     FlagStatus: SET or RESET
+ 517:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 518:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** FlagStatus spi_i2s_flag_get(uint32_t spi_periph,uint32_t flag)
+ 519:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 989              		.loc 1 519 1 is_stmt 1 view -0
+ 990              		.cfi_startproc
+ 991              		@ args = 0, pretend = 0, frame = 0
+ 992              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/cckUpySH.s 			page 28
+
+
+ 993              		@ link register save eliminated.
+ 520:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     if(SPI_STAT(spi_periph) & flag){
+ 994              		.loc 1 520 5 view .LVU249
+ 995              		.loc 1 520 8 is_stmt 0 view .LVU250
+ 996 0000 8368     		ldr	r3, [r0, #8]
+ 997              		.loc 1 520 7 view .LVU251
+ 998 0002 0B42     		tst	r3, r1
+ 521:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         return SET;
+ 522:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }else{
+ 523:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         return RESET;
+ 524:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 525:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 999              		.loc 1 525 1 view .LVU252
+ 1000 0004 14BF     		ite	ne
+ 1001 0006 0120     		movne	r0, #1
+ 1002              	.LVL76:
+ 1003              		.loc 1 525 1 view .LVU253
+ 1004 0008 0020     		moveq	r0, #0
+ 1005 000a 7047     		bx	lr
+ 1006              		.cfi_endproc
+ 1007              	.LFE77:
+ 1009              		.section	.text.spi_crc_error_clear,"ax",%progbits
+ 1010              		.align	1
+ 1011              		.global	spi_crc_error_clear
+ 1012              		.syntax unified
+ 1013              		.thumb
+ 1014              		.thumb_func
+ 1015              		.fpu softvfp
+ 1017              	spi_crc_error_clear:
+ 1018              	.LVL77:
+ 1019              	.LFB78:
+ 526:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 527:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 528:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      clear SPI CRC error flag status
+ 529:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 530:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 531:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 532:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 533:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_crc_error_clear(uint32_t spi_periph)
+ 534:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 1020              		.loc 1 534 1 is_stmt 1 view -0
+ 1021              		.cfi_startproc
+ 1022              		@ args = 0, pretend = 0, frame = 0
+ 1023              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1024              		@ link register save eliminated.
+ 535:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_STAT(spi_periph) &= (uint32_t)(~SPI_FLAG_CRCERR);
+ 1025              		.loc 1 535 5 view .LVU255
+ 1026              		.loc 1 535 26 is_stmt 0 view .LVU256
+ 1027 0000 8368     		ldr	r3, [r0, #8]
+ 1028 0002 23F01003 		bic	r3, r3, #16
+ 1029 0006 8360     		str	r3, [r0, #8]
+ 536:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 1030              		.loc 1 536 1 view .LVU257
+ 1031 0008 7047     		bx	lr
+ 1032              		.cfi_endproc
+ 1033              	.LFE78:
+ 1035              		.section	.text.spi_crc_on,"ax",%progbits
+ARM GAS  /tmp/cckUpySH.s 			page 29
+
+
+ 1036              		.align	1
+ 1037              		.global	spi_crc_on
+ 1038              		.syntax unified
+ 1039              		.thumb
+ 1040              		.thumb_func
+ 1041              		.fpu softvfp
+ 1043              	spi_crc_on:
+ 1044              	.LVL78:
+ 1045              	.LFB79:
+ 537:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 538:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 539:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      turn on CRC function 
+ 540:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 541:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 542:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 543:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 544:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_crc_on(uint32_t spi_periph)
+ 545:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 1046              		.loc 1 545 1 is_stmt 1 view -0
+ 1047              		.cfi_startproc
+ 1048              		@ args = 0, pretend = 0, frame = 0
+ 1049              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1050              		@ link register save eliminated.
+ 546:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_CTL0(spi_periph) |= (uint32_t)SPI_CTL0_CRCEN;
+ 1051              		.loc 1 546 5 view .LVU259
+ 1052              		.loc 1 546 26 is_stmt 0 view .LVU260
+ 1053 0000 0368     		ldr	r3, [r0]
+ 1054 0002 43F40053 		orr	r3, r3, #8192
+ 1055 0006 0360     		str	r3, [r0]
+ 547:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 1056              		.loc 1 547 1 view .LVU261
+ 1057 0008 7047     		bx	lr
+ 1058              		.cfi_endproc
+ 1059              	.LFE79:
+ 1061              		.section	.text.spi_crc_off,"ax",%progbits
+ 1062              		.align	1
+ 1063              		.global	spi_crc_off
+ 1064              		.syntax unified
+ 1065              		.thumb
+ 1066              		.thumb_func
+ 1067              		.fpu softvfp
+ 1069              	spi_crc_off:
+ 1070              	.LVL79:
+ 1071              	.LFB80:
+ 548:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 549:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 550:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      turn off CRC function 
+ 551:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 552:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 553:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 554:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 555:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_crc_off(uint32_t spi_periph)
+ 556:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 1072              		.loc 1 556 1 is_stmt 1 view -0
+ 1073              		.cfi_startproc
+ 1074              		@ args = 0, pretend = 0, frame = 0
+ 1075              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/cckUpySH.s 			page 30
+
+
+ 1076              		@ link register save eliminated.
+ 557:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_CTL0(spi_periph) &= (uint32_t)(~SPI_CTL0_CRCEN);
+ 1077              		.loc 1 557 5 view .LVU263
+ 1078              		.loc 1 557 26 is_stmt 0 view .LVU264
+ 1079 0000 0368     		ldr	r3, [r0]
+ 1080 0002 23F40053 		bic	r3, r3, #8192
+ 1081 0006 0360     		str	r3, [r0]
+ 558:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 1082              		.loc 1 558 1 view .LVU265
+ 1083 0008 7047     		bx	lr
+ 1084              		.cfi_endproc
+ 1085              	.LFE80:
+ 1087              		.section	.text.spi_crc_polynomial_set,"ax",%progbits
+ 1088              		.align	1
+ 1089              		.global	spi_crc_polynomial_set
+ 1090              		.syntax unified
+ 1091              		.thumb
+ 1092              		.thumb_func
+ 1093              		.fpu softvfp
+ 1095              	spi_crc_polynomial_set:
+ 1096              	.LVL80:
+ 1097              	.LFB81:
+ 559:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 560:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 561:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      set CRC polynomial 
+ 562:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 563:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  crc_poly: CRC polynomial value
+ 564:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 565:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 566:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 567:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_crc_polynomial_set(uint32_t spi_periph,uint16_t crc_poly)
+ 568:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 1098              		.loc 1 568 1 is_stmt 1 view -0
+ 1099              		.cfi_startproc
+ 1100              		@ args = 0, pretend = 0, frame = 0
+ 1101              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1102              		@ link register save eliminated.
+ 569:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     /* set SPI CRC polynomial */
+ 570:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_CRCPOLY(spi_periph) = (uint32_t)crc_poly;
+ 1103              		.loc 1 570 5 view .LVU267
+ 1104              		.loc 1 570 29 is_stmt 0 view .LVU268
+ 1105 0000 0161     		str	r1, [r0, #16]
+ 571:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 1106              		.loc 1 571 1 view .LVU269
+ 1107 0002 7047     		bx	lr
+ 1108              		.cfi_endproc
+ 1109              	.LFE81:
+ 1111              		.section	.text.spi_crc_polynomial_get,"ax",%progbits
+ 1112              		.align	1
+ 1113              		.global	spi_crc_polynomial_get
+ 1114              		.syntax unified
+ 1115              		.thumb
+ 1116              		.thumb_func
+ 1117              		.fpu softvfp
+ 1119              	spi_crc_polynomial_get:
+ 1120              	.LVL81:
+ 1121              	.LFB82:
+ARM GAS  /tmp/cckUpySH.s 			page 31
+
+
+ 572:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 573:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 574:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      get SPI CRC polynomial 
+ 575:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 576:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 577:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     16-bit CRC polynomial
+ 578:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 579:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** uint16_t spi_crc_polynomial_get(uint32_t spi_periph)
+ 580:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 1122              		.loc 1 580 1 is_stmt 1 view -0
+ 1123              		.cfi_startproc
+ 1124              		@ args = 0, pretend = 0, frame = 0
+ 1125              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1126              		@ link register save eliminated.
+ 581:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     return ((uint16_t)SPI_CRCPOLY(spi_periph));
+ 1127              		.loc 1 581 5 view .LVU271
+ 1128              		.loc 1 581 23 is_stmt 0 view .LVU272
+ 1129 0000 0069     		ldr	r0, [r0, #16]
+ 1130              	.LVL82:
+ 582:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 1131              		.loc 1 582 1 view .LVU273
+ 1132 0002 80B2     		uxth	r0, r0
+ 1133 0004 7047     		bx	lr
+ 1134              		.cfi_endproc
+ 1135              	.LFE82:
+ 1137              		.section	.text.spi_crc_next,"ax",%progbits
+ 1138              		.align	1
+ 1139              		.global	spi_crc_next
+ 1140              		.syntax unified
+ 1141              		.thumb
+ 1142              		.thumb_func
+ 1143              		.fpu softvfp
+ 1145              	spi_crc_next:
+ 1146              	.LVL83:
+ 1147              	.LFB83:
+ 583:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 584:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 585:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      SPI next data is CRC value
+ 586:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 587:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 588:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     none
+ 589:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 590:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** void spi_crc_next(uint32_t spi_periph)
+ 591:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 1148              		.loc 1 591 1 is_stmt 1 view -0
+ 1149              		.cfi_startproc
+ 1150              		@ args = 0, pretend = 0, frame = 0
+ 1151              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1152              		@ link register save eliminated.
+ 592:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     SPI_CTL0(spi_periph) |= (uint32_t)SPI_CTL0_CRCNT;
+ 1153              		.loc 1 592 5 view .LVU275
+ 1154              		.loc 1 592 26 is_stmt 0 view .LVU276
+ 1155 0000 0368     		ldr	r3, [r0]
+ 1156 0002 43F48053 		orr	r3, r3, #4096
+ 1157 0006 0360     		str	r3, [r0]
+ 593:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 1158              		.loc 1 593 1 view .LVU277
+ARM GAS  /tmp/cckUpySH.s 			page 32
+
+
+ 1159 0008 7047     		bx	lr
+ 1160              		.cfi_endproc
+ 1161              	.LFE83:
+ 1163              		.section	.text.spi_crc_get,"ax",%progbits
+ 1164              		.align	1
+ 1165              		.global	spi_crc_get
+ 1166              		.syntax unified
+ 1167              		.thumb
+ 1168              		.thumb_func
+ 1169              		.fpu softvfp
+ 1171              	spi_crc_get:
+ 1172              	.LVL84:
+ 1173              	.LFB84:
+ 594:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** 
+ 595:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** /*!
+ 596:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \brief      get SPI CRC send value or receive value
+ 597:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  spi_periph: SPIx(x=0,1,2)
+ 598:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[in]  crc: SPI CRC value
+ 599:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_CRC_TX: get transmit CRC value  
+ 600:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****       \arg        SPI_CRC_RX: get receive CRC value
+ 601:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \param[out] none
+ 602:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     \retval     16-bit CRC value
+ 603:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** */
+ 604:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** uint16_t spi_crc_get(uint32_t spi_periph,uint8_t crc)
+ 605:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** {
+ 1174              		.loc 1 605 1 is_stmt 1 view -0
+ 1175              		.cfi_startproc
+ 1176              		@ args = 0, pretend = 0, frame = 0
+ 1177              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1178              		@ link register save eliminated.
+ 606:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     if(SPI_CRC_TX == crc){
+ 1179              		.loc 1 606 5 view .LVU279
+ 1180              		.loc 1 606 7 is_stmt 0 view .LVU280
+ 1181 0000 11B9     		cbnz	r1, .L72
+ 607:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         return ((uint16_t)(SPI_TCRC(spi_periph)));
+ 1182              		.loc 1 607 9 is_stmt 1 view .LVU281
+ 1183              		.loc 1 607 28 is_stmt 0 view .LVU282
+ 1184 0002 8069     		ldr	r0, [r0, #24]
+ 1185              	.LVL85:
+ 1186              	.L74:
+ 608:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }else{
+ 609:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****         return ((uint16_t)(SPI_RCRC(spi_periph)));
+ 1187              		.loc 1 609 17 view .LVU283
+ 1188 0004 80B2     		uxth	r0, r0
+ 610:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 611:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c **** }
+ 1189              		.loc 1 611 1 view .LVU284
+ 1190 0006 7047     		bx	lr
+ 1191              	.LVL86:
+ 1192              	.L72:
+ 609:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 1193              		.loc 1 609 9 is_stmt 1 view .LVU285
+ 609:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ 1194              		.loc 1 609 28 is_stmt 0 view .LVU286
+ 1195 0008 4069     		ldr	r0, [r0, #20]
+ 1196              	.LVL87:
+ 609:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_spi.c ****     }
+ARM GAS  /tmp/cckUpySH.s 			page 33
+
+
+ 1197              		.loc 1 609 28 view .LVU287
+ 1198 000a FBE7     		b	.L74
+ 1199              		.cfi_endproc
+ 1200              	.LFE84:
+ 1202              		.text
+ 1203              	.Letext0:
+ 1204              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
+ 1205              		.file 3 "Drivers/CMSIS/Include/gd32f1x0.h"
+ 1206              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
+ 1207              		.file 5 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_spi.h"
+ARM GAS  /tmp/cckUpySH.s 			page 34
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32f1x0_spi.c
+     /tmp/cckUpySH.s:16     .text.spi_i2s_deinit:0000000000000000 $t
+     /tmp/cckUpySH.s:24     .text.spi_i2s_deinit:0000000000000000 spi_i2s_deinit
+     /tmp/cckUpySH.s:98     .text.spi_i2s_deinit:000000000000004c $d
+     /tmp/cckUpySH.s:103    .text.spi_init:0000000000000000 $t
+     /tmp/cckUpySH.s:110    .text.spi_init:0000000000000000 spi_init
+     /tmp/cckUpySH.s:177    .text.spi_enable:0000000000000000 $t
+     /tmp/cckUpySH.s:184    .text.spi_enable:0000000000000000 spi_enable
+     /tmp/cckUpySH.s:203    .text.spi_disable:0000000000000000 $t
+     /tmp/cckUpySH.s:210    .text.spi_disable:0000000000000000 spi_disable
+     /tmp/cckUpySH.s:229    .text.i2s_psc_config:0000000000000000 $t
+     /tmp/cckUpySH.s:236    .text.i2s_psc_config:0000000000000000 i2s_psc_config
+     /tmp/cckUpySH.s:373    .text.i2s_init:0000000000000000 $t
+     /tmp/cckUpySH.s:380    .text.i2s_init:0000000000000000 i2s_init
+     /tmp/cckUpySH.s:426    .text.i2s_enable:0000000000000000 $t
+     /tmp/cckUpySH.s:433    .text.i2s_enable:0000000000000000 i2s_enable
+     /tmp/cckUpySH.s:452    .text.i2s_disable:0000000000000000 $t
+     /tmp/cckUpySH.s:459    .text.i2s_disable:0000000000000000 i2s_disable
+     /tmp/cckUpySH.s:478    .text.spi_nss_output_enable:0000000000000000 $t
+     /tmp/cckUpySH.s:485    .text.spi_nss_output_enable:0000000000000000 spi_nss_output_enable
+     /tmp/cckUpySH.s:504    .text.spi_nss_output_disable:0000000000000000 $t
+     /tmp/cckUpySH.s:511    .text.spi_nss_output_disable:0000000000000000 spi_nss_output_disable
+     /tmp/cckUpySH.s:530    .text.spi_nss_internal_high:0000000000000000 $t
+     /tmp/cckUpySH.s:537    .text.spi_nss_internal_high:0000000000000000 spi_nss_internal_high
+     /tmp/cckUpySH.s:556    .text.spi_nss_internal_low:0000000000000000 $t
+     /tmp/cckUpySH.s:563    .text.spi_nss_internal_low:0000000000000000 spi_nss_internal_low
+     /tmp/cckUpySH.s:582    .text.spi_dma_enable:0000000000000000 $t
+     /tmp/cckUpySH.s:589    .text.spi_dma_enable:0000000000000000 spi_dma_enable
+     /tmp/cckUpySH.s:619    .text.spi_dma_disable:0000000000000000 $t
+     /tmp/cckUpySH.s:626    .text.spi_dma_disable:0000000000000000 spi_dma_disable
+     /tmp/cckUpySH.s:656    .text.spi_i2s_data_frame_format_config:0000000000000000 $t
+     /tmp/cckUpySH.s:663    .text.spi_i2s_data_frame_format_config:0000000000000000 spi_i2s_data_frame_format_config
+     /tmp/cckUpySH.s:689    .text.spi_i2s_data_transmit:0000000000000000 $t
+     /tmp/cckUpySH.s:696    .text.spi_i2s_data_transmit:0000000000000000 spi_i2s_data_transmit
+     /tmp/cckUpySH.s:713    .text.spi_i2s_data_receive:0000000000000000 $t
+     /tmp/cckUpySH.s:720    .text.spi_i2s_data_receive:0000000000000000 spi_i2s_data_receive
+     /tmp/cckUpySH.s:739    .text.spi_bidirectional_transfer_config:0000000000000000 $t
+     /tmp/cckUpySH.s:746    .text.spi_bidirectional_transfer_config:0000000000000000 spi_bidirectional_transfer_config
+     /tmp/cckUpySH.s:773    .text.spi_i2s_interrupt_enable:0000000000000000 $t
+     /tmp/cckUpySH.s:780    .text.spi_i2s_interrupt_enable:0000000000000000 spi_i2s_interrupt_enable
+     /tmp/cckUpySH.s:821    .text.spi_i2s_interrupt_disable:0000000000000000 $t
+     /tmp/cckUpySH.s:828    .text.spi_i2s_interrupt_disable:0000000000000000 spi_i2s_interrupt_disable
+     /tmp/cckUpySH.s:869    .text.spi_i2s_interrupt_flag_get:0000000000000000 $t
+     /tmp/cckUpySH.s:876    .text.spi_i2s_interrupt_flag_get:0000000000000000 spi_i2s_interrupt_flag_get
+     /tmp/cckUpySH.s:899    .text.spi_i2s_interrupt_flag_get:000000000000000e $d
+     /tmp/cckUpySH.s:905    .text.spi_i2s_interrupt_flag_get:0000000000000014 $t
+     /tmp/cckUpySH.s:979    .text.spi_i2s_flag_get:0000000000000000 $t
+     /tmp/cckUpySH.s:986    .text.spi_i2s_flag_get:0000000000000000 spi_i2s_flag_get
+     /tmp/cckUpySH.s:1010   .text.spi_crc_error_clear:0000000000000000 $t
+     /tmp/cckUpySH.s:1017   .text.spi_crc_error_clear:0000000000000000 spi_crc_error_clear
+     /tmp/cckUpySH.s:1036   .text.spi_crc_on:0000000000000000 $t
+     /tmp/cckUpySH.s:1043   .text.spi_crc_on:0000000000000000 spi_crc_on
+     /tmp/cckUpySH.s:1062   .text.spi_crc_off:0000000000000000 $t
+     /tmp/cckUpySH.s:1069   .text.spi_crc_off:0000000000000000 spi_crc_off
+     /tmp/cckUpySH.s:1088   .text.spi_crc_polynomial_set:0000000000000000 $t
+     /tmp/cckUpySH.s:1095   .text.spi_crc_polynomial_set:0000000000000000 spi_crc_polynomial_set
+ARM GAS  /tmp/cckUpySH.s 			page 35
+
+
+     /tmp/cckUpySH.s:1112   .text.spi_crc_polynomial_get:0000000000000000 $t
+     /tmp/cckUpySH.s:1119   .text.spi_crc_polynomial_get:0000000000000000 spi_crc_polynomial_get
+     /tmp/cckUpySH.s:1138   .text.spi_crc_next:0000000000000000 $t
+     /tmp/cckUpySH.s:1145   .text.spi_crc_next:0000000000000000 spi_crc_next
+     /tmp/cckUpySH.s:1164   .text.spi_crc_get:0000000000000000 $t
+     /tmp/cckUpySH.s:1171   .text.spi_crc_get:0000000000000000 spi_crc_get
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable
+rcu_clock_freq_get

@@ -1,0 +1,1963 @@
+ARM GAS  /tmp/cc1XCVhl.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f1x0_tsi.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.tsi_deinit,"ax",%progbits
+  16              		.align	1
+  17              		.global	tsi_deinit
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	tsi_deinit:
+  25              	.LFB56:
+  26              		.file 1 "Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c"
+   1:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+   2:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \file  gd32f1x0_tsi.c
+   3:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief TSI driver
+   4:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+   5:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+   6:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*
+   7:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     Copyright (C) 2017 GigaDevice
+   8:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+   9:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     2014-12-26, V1.0.0, platform GD32F1x0(x=3,5)
+  10:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     2016-01-15, V2.0.0, platform GD32F1x0(x=3,5,7,9)
+  11:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     2016-04-30, V3.0.0, firmware update for GD32F1x0(x=3,5,7,9)
+  12:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     2017-06-19, V3.1.0, firmware update for GD32F1x0(x=3,5,7,9)
+  13:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+  14:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+  15:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** #include "gd32f1x0_tsi.h"
+  16:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** #include "gd32f1x0_rcu.h"
+  17:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+  18:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+  19:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      reset TSI peripheral
+  20:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  none
+  21:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+  22:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+  23:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+  24:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_deinit(void)
+  25:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+  27              		.loc 1 25 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  26:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     rcu_periph_reset_enable(RCU_TSIRST);
+  31              		.loc 1 26 5 view .LVU1
+  25:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     rcu_periph_reset_enable(RCU_TSIRST);
+ARM GAS  /tmp/cc1XCVhl.s 			page 2
+
+
+  32              		.loc 1 25 1 is_stmt 0 view .LVU2
+  33 0000 08B5     		push	{r3, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 3, -8
+  37              		.cfi_offset 14, -4
+  38              		.loc 1 26 5 view .LVU3
+  39 0002 40F61820 		movw	r0, #2584
+  40 0006 FFF7FEFF 		bl	rcu_periph_reset_enable
+  41              	.LVL0:
+  27:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     rcu_periph_reset_disable(RCU_TSIRST);
+  42              		.loc 1 27 5 is_stmt 1 view .LVU4
+  28:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+  43              		.loc 1 28 1 is_stmt 0 view .LVU5
+  44 000a BDE80840 		pop	{r3, lr}
+  45              	.LCFI1:
+  46              		.cfi_restore 14
+  47              		.cfi_restore 3
+  48              		.cfi_def_cfa_offset 0
+  27:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     rcu_periph_reset_disable(RCU_TSIRST);
+  49              		.loc 1 27 5 view .LVU6
+  50 000e 40F61820 		movw	r0, #2584
+  51 0012 FFF7FEBF 		b	rcu_periph_reset_disable
+  52              	.LVL1:
+  53              		.cfi_endproc
+  54              	.LFE56:
+  56              		.section	.text.tsi_init,"ax",%progbits
+  57              		.align	1
+  58              		.global	tsi_init
+  59              		.syntax unified
+  60              		.thumb
+  61              		.thumb_func
+  62              		.fpu softvfp
+  64              	tsi_init:
+  65              	.LVL2:
+  66              	.LFB57:
+  29:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+  30:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+  31:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      initialize TSI plus prescaler,charge plus,transfer plus,max cycle number
+  32:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  prescaler: CTCLK clock division factor
+  33:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV1:   fCTCLK = fHCLK
+  34:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV2:   fCTCLK = fHCLK/2
+  35:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV4:   fCTCLK = fHCLK/4
+  36:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV8:   fCTCLK = fHCLK/8
+  37:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV16:  fCTCLK = fHCLK/16
+  38:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV32:  fCTCLK = fHCLK/32
+  39:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV64:  fCTCLK = fHCLK/64
+  40:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV128: fCTCLK = fHCLK/128
+  41:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  charge_duration: charge state duration time
+  42:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CHARGE_1CTCLK(x=1..16): the duration time of charge state is x CTCLK
+  43:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  transfer_duration: charge transfer state duration time
+  44:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_TRANSFER_xCTCLK(x=1..16): the duration time of transfer state is x CTCLK
+  45:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  max_number: max cycle number
+  46:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM255:   the max cycle number of a sequence is 255
+  47:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM511:   the max cycle number of a sequence is 511
+  48:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM1023:  the max cycle number of a sequence is 1023
+  49:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM2047:  the max cycle number of a sequence is 2047
+ARM GAS  /tmp/cc1XCVhl.s 			page 3
+
+
+  50:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM4095:  the max cycle number of a sequence is 4095
+  51:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM8191:  the max cycle number of a sequence is 8191
+  52:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM16383: the max cycle number of a sequence is 16383
+  53:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+  54:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none
+  55:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+  56:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_init(uint32_t prescaler,uint32_t charge_duration,uint32_t transfer_duration,uint32_t max_n
+  57:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+  67              		.loc 1 57 1 is_stmt 1 view -0
+  68              		.cfi_startproc
+  69              		@ args = 0, pretend = 0, frame = 0
+  70              		@ frame_needed = 0, uses_anonymous_args = 0
+  58:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     if(RESET == (TSI_CTL & TSI_CTL_TSIS)){
+  71              		.loc 1 58 5 view .LVU8
+  57:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     if(RESET == (TSI_CTL & TSI_CTL_TSIS)){
+  72              		.loc 1 57 1 is_stmt 0 view .LVU9
+  73 0000 70B5     		push	{r4, r5, r6, lr}
+  74              	.LCFI2:
+  75              		.cfi_def_cfa_offset 16
+  76              		.cfi_offset 4, -16
+  77              		.cfi_offset 5, -12
+  78              		.cfi_offset 6, -8
+  79              		.cfi_offset 14, -4
+  80              		.loc 1 58 18 view .LVU10
+  81 0002 064D     		ldr	r5, .L4
+  82 0004 2C68     		ldr	r4, [r5]
+  83              		.loc 1 58 7 view .LVU11
+  84 0006 A407     		lsls	r4, r4, #30
+  85 0008 07D4     		bmi	.L2
+  86              	.LBB2:
+  59:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         uint32_t ctl;
+  87              		.loc 1 59 9 is_stmt 1 view .LVU12
+  60:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         ctl = TSI_CTL;
+  88              		.loc 1 60 9 view .LVU13
+  89              		.loc 1 60 13 is_stmt 0 view .LVU14
+  90 000a 2E68     		ldr	r6, [r5]
+  91              	.LVL3:
+  61:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         /*configure TSI clock division factor,charge state duration time,charge transfer state dura
+  62:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         ctl &= ~(TSI_CTL_CTCDIV|TSI_CTL_CTDT|TSI_CTL_CDT|TSI_CTL_MCN);
+  92              		.loc 1 62 9 is_stmt 1 view .LVU15
+  63:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         ctl |= (prescaler|charge_duration|transfer_duration|max_number);
+  93              		.loc 1 63 9 view .LVU16
+  62:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         ctl |= (prescaler|charge_duration|transfer_duration|max_number);
+  94              		.loc 1 62 13 is_stmt 0 view .LVU17
+  95 000c 044C     		ldr	r4, .L4+4
+  96 000e 3440     		ands	r4, r4, r6
+  97              	.LVL4:
+  62:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         ctl |= (prescaler|charge_duration|transfer_duration|max_number);
+  98              		.loc 1 62 13 view .LVU18
+  99 0010 1C43     		orrs	r4, r4, r3
+ 100              	.LVL5:
+  62:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         ctl |= (prescaler|charge_duration|transfer_duration|max_number);
+ 101              		.loc 1 62 13 view .LVU19
+ 102 0012 1443     		orrs	r4, r4, r2
+ 103 0014 2143     		orrs	r1, r1, r4
+ 104              	.LVL6:
+ 105              		.loc 1 63 13 view .LVU20
+ARM GAS  /tmp/cc1XCVhl.s 			page 4
+
+
+ 106 0016 0843     		orrs	r0, r0, r1
+ 107              	.LVL7:
+  64:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         TSI_CTL = ctl;
+ 108              		.loc 1 64 9 is_stmt 1 view .LVU21
+ 109              		.loc 1 64 17 is_stmt 0 view .LVU22
+ 110 0018 2860     		str	r0, [r5]
+ 111              	.LVL8:
+ 112              	.L2:
+ 113              		.loc 1 64 17 view .LVU23
+ 114              	.LBE2:
+  65:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     }
+  66:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 115              		.loc 1 66 1 view .LVU24
+ 116 001a 70BD     		pop	{r4, r5, r6, pc}
+ 117              	.L5:
+ 118              		.align	2
+ 119              	.L4:
+ 120 001c 00400240 		.word	1073889280
+ 121 0020 1F8FFF00 		.word	16748319
+ 122              		.cfi_endproc
+ 123              	.LFE57:
+ 125              		.section	.text.tsi_sample_pin_enable,"ax",%progbits
+ 126              		.align	1
+ 127              		.global	tsi_sample_pin_enable
+ 128              		.syntax unified
+ 129              		.thumb
+ 130              		.thumb_func
+ 131              		.fpu softvfp
+ 133              	tsi_sample_pin_enable:
+ 134              	.LVL9:
+ 135              	.LFB58:
+  67:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+  68:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+  69:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      enable sample pin 
+  70:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  sample: sample pin
+  71:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_SAMPCFG_GxPy( x=0..5,y=0..3):pin y of group x is sample pin     
+  72:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+  73:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+  74:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+  75:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_sample_pin_enable(uint32_t sample)
+  76:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** { 
+ 136              		.loc 1 76 1 is_stmt 1 view -0
+ 137              		.cfi_startproc
+ 138              		@ args = 0, pretend = 0, frame = 0
+ 139              		@ frame_needed = 0, uses_anonymous_args = 0
+ 140              		@ link register save eliminated.
+  77:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     if(RESET == (TSI_CTL & TSI_CTL_TSIS)){
+ 141              		.loc 1 77 5 view .LVU26
+ 142              		.loc 1 77 18 is_stmt 0 view .LVU27
+ 143 0000 034B     		ldr	r3, .L8
+ 144 0002 1A68     		ldr	r2, [r3]
+ 145              		.loc 1 77 7 view .LVU28
+ 146 0004 9207     		lsls	r2, r2, #30
+  78:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         TSI_SAMPCFG |= sample;
+ 147              		.loc 1 78 9 is_stmt 1 view .LVU29
+ 148              		.loc 1 78 21 is_stmt 0 view .LVU30
+ 149 0006 5EBF     		ittt	pl
+ARM GAS  /tmp/cc1XCVhl.s 			page 5
+
+
+ 150 0008 1A6A     		ldrpl	r2, [r3, #32]
+ 151 000a 1043     		orrpl	r0, r0, r2
+ 152              	.LVL10:
+ 153              		.loc 1 78 21 view .LVU31
+ 154 000c 1862     		strpl	r0, [r3, #32]
+  79:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     }
+  80:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 155              		.loc 1 80 1 view .LVU32
+ 156 000e 7047     		bx	lr
+ 157              	.L9:
+ 158              		.align	2
+ 159              	.L8:
+ 160 0010 00400240 		.word	1073889280
+ 161              		.cfi_endproc
+ 162              	.LFE58:
+ 164              		.section	.text.tsi_sample_pin_disable,"ax",%progbits
+ 165              		.align	1
+ 166              		.global	tsi_sample_pin_disable
+ 167              		.syntax unified
+ 168              		.thumb
+ 169              		.thumb_func
+ 170              		.fpu softvfp
+ 172              	tsi_sample_pin_disable:
+ 173              	.LVL11:
+ 174              	.LFB59:
+  81:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+  82:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+  83:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      disable sample pin 
+  84:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  sample: sample pin
+  85:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_SAMPCFG_GxPy( x=0..5,y=0..3): pin y of group x is sample pin     
+  86:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+  87:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+  88:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+  89:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_sample_pin_disable(uint32_t sample)
+  90:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** { 
+ 175              		.loc 1 90 1 is_stmt 1 view -0
+ 176              		.cfi_startproc
+ 177              		@ args = 0, pretend = 0, frame = 0
+ 178              		@ frame_needed = 0, uses_anonymous_args = 0
+ 179              		@ link register save eliminated.
+  91:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     if(RESET == (TSI_CTL & TSI_CTL_TSIS)){
+ 180              		.loc 1 91 5 view .LVU34
+ 181              		.loc 1 91 18 is_stmt 0 view .LVU35
+ 182 0000 044B     		ldr	r3, .L12
+ 183 0002 1A68     		ldr	r2, [r3]
+ 184              		.loc 1 91 7 view .LVU36
+ 185 0004 9207     		lsls	r2, r2, #30
+  92:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         TSI_SAMPCFG &=  ~sample;
+ 186              		.loc 1 92 9 is_stmt 1 view .LVU37
+ 187              		.loc 1 92 21 is_stmt 0 view .LVU38
+ 188 0006 5EBF     		ittt	pl
+ 189 0008 1A6A     		ldrpl	r2, [r3, #32]
+ 190 000a 22EA0000 		bicpl	r0, r2, r0
+ 191              	.LVL12:
+ 192              		.loc 1 92 21 view .LVU39
+ 193 000e 1862     		strpl	r0, [r3, #32]
+  93:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     }
+ARM GAS  /tmp/cc1XCVhl.s 			page 6
+
+
+  94:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 194              		.loc 1 94 1 view .LVU40
+ 195 0010 7047     		bx	lr
+ 196              	.L13:
+ 197 0012 00BF     		.align	2
+ 198              	.L12:
+ 199 0014 00400240 		.word	1073889280
+ 200              		.cfi_endproc
+ 201              	.LFE59:
+ 203              		.section	.text.tsi_channel_pin_enable,"ax",%progbits
+ 204              		.align	1
+ 205              		.global	tsi_channel_pin_enable
+ 206              		.syntax unified
+ 207              		.thumb
+ 208              		.thumb_func
+ 209              		.fpu softvfp
+ 211              	tsi_channel_pin_enable:
+ 212              	.LVL13:
+ 213              	.LFB60:
+  95:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+  96:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+  97:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      enable channel pin 
+  98:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  channel: channel pin
+  99:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CHCFG_GxPy( x=0..5,y=0..3): pin y of group x
+ 100:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 101:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 102:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 103:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_channel_pin_enable(uint32_t channel)
+ 104:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 214              		.loc 1 104 1 is_stmt 1 view -0
+ 215              		.cfi_startproc
+ 216              		@ args = 0, pretend = 0, frame = 0
+ 217              		@ frame_needed = 0, uses_anonymous_args = 0
+ 218              		@ link register save eliminated.
+ 105:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_CHCFG |= channel;
+ 219              		.loc 1 105 5 view .LVU42
+ 220              		.loc 1 105 15 is_stmt 0 view .LVU43
+ 221 0000 024A     		ldr	r2, .L15
+ 222 0002 936A     		ldr	r3, [r2, #40]
+ 223 0004 0343     		orrs	r3, r3, r0
+ 224 0006 9362     		str	r3, [r2, #40]
+ 106:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 225              		.loc 1 106 1 view .LVU44
+ 226 0008 7047     		bx	lr
+ 227              	.L16:
+ 228 000a 00BF     		.align	2
+ 229              	.L15:
+ 230 000c 00400240 		.word	1073889280
+ 231              		.cfi_endproc
+ 232              	.LFE60:
+ 234              		.section	.text.tsi_channel_pin_disable,"ax",%progbits
+ 235              		.align	1
+ 236              		.global	tsi_channel_pin_disable
+ 237              		.syntax unified
+ 238              		.thumb
+ 239              		.thumb_func
+ 240              		.fpu softvfp
+ARM GAS  /tmp/cc1XCVhl.s 			page 7
+
+
+ 242              	tsi_channel_pin_disable:
+ 243              	.LVL14:
+ 244              	.LFB61:
+ 107:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 108:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 109:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      disable channel pin 
+ 110:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  channel: channel pin
+ 111:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CHCFG_GxPy( x=0..5,y=0..3): pin y of group x
+ 112:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 113:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 114:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 115:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_channel_pin_disable(uint32_t channel)
+ 116:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 245              		.loc 1 116 1 is_stmt 1 view -0
+ 246              		.cfi_startproc
+ 247              		@ args = 0, pretend = 0, frame = 0
+ 248              		@ frame_needed = 0, uses_anonymous_args = 0
+ 249              		@ link register save eliminated.
+ 117:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_CHCFG &=  ~channel;
+ 250              		.loc 1 117 5 view .LVU46
+ 251              		.loc 1 117 15 is_stmt 0 view .LVU47
+ 252 0000 024A     		ldr	r2, .L18
+ 253 0002 936A     		ldr	r3, [r2, #40]
+ 254 0004 23EA0003 		bic	r3, r3, r0
+ 255 0008 9362     		str	r3, [r2, #40]
+ 118:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 256              		.loc 1 118 1 view .LVU48
+ 257 000a 7047     		bx	lr
+ 258              	.L19:
+ 259              		.align	2
+ 260              	.L18:
+ 261 000c 00400240 		.word	1073889280
+ 262              		.cfi_endproc
+ 263              	.LFE61:
+ 265              		.section	.text.tsi_plus_config,"ax",%progbits
+ 266              		.align	1
+ 267              		.global	tsi_plus_config
+ 268              		.syntax unified
+ 269              		.thumb
+ 270              		.thumb_func
+ 271              		.fpu softvfp
+ 273              	tsi_plus_config:
+ 274              	.LVL15:
+ 275              	.LFB62:
+ 119:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 120:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 121:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      configure charge plus and transfer plus 
+ 122:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  prescaler: CTCLK clock division factor
+ 123:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV1:   fCTCLK = fHCLK
+ 124:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV2:   fCTCLK = fHCLK/2
+ 125:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV4:   fCTCLK = fHCLK/4
+ 126:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV8:   fCTCLK = fHCLK/6
+ 127:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV16:  fCTCLK = fHCLK/8
+ 128:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV32:  fCTCLK = fHCLK/32
+ 129:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV64:  fCTCLK = fHCLK/64
+ 130:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV128: fCTCLK = fHCLK/128
+ 131:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  charge_duration: charge state duration time
+ARM GAS  /tmp/cc1XCVhl.s 			page 8
+
+
+ 132:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CHARGE_xCTCLK(x=1..16): the duration time of charge state is x CTCLK
+ 133:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  transfer_duration: charge transfer state duration time
+ 134:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_TRANSFER_xCTCLK(x=1..16): the duration time of transfer state is x CTCLK
+ 135:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 136:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none
+ 137:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 138:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_plus_config(uint32_t prescaler,uint32_t charge_duration,uint32_t transfer_duration)
+ 139:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 276              		.loc 1 139 1 is_stmt 1 view -0
+ 277              		.cfi_startproc
+ 278              		@ args = 0, pretend = 0, frame = 0
+ 279              		@ frame_needed = 0, uses_anonymous_args = 0
+ 140:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     if(RESET == (TSI_CTL & TSI_CTL_TSIS)){
+ 280              		.loc 1 140 5 view .LVU50
+ 139:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     if(RESET == (TSI_CTL & TSI_CTL_TSIS)){
+ 281              		.loc 1 139 1 is_stmt 0 view .LVU51
+ 282 0000 20B5     		push	{r5, lr}
+ 283              	.LCFI3:
+ 284              		.cfi_def_cfa_offset 8
+ 285              		.cfi_offset 5, -8
+ 286              		.cfi_offset 14, -4
+ 287              		.loc 1 140 18 view .LVU52
+ 288 0002 074D     		ldr	r5, .L22
+ 289 0004 2B68     		ldr	r3, [r5]
+ 290              		.loc 1 140 7 view .LVU53
+ 291 0006 9B07     		lsls	r3, r3, #30
+ 292 0008 08D4     		bmi	.L20
+ 293              	.LBB3:
+ 141:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         uint32_t ctl;
+ 294              		.loc 1 141 9 is_stmt 1 view .LVU54
+ 142:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         ctl = TSI_CTL;
+ 295              		.loc 1 142 9 view .LVU55
+ 296              		.loc 1 142 13 is_stmt 0 view .LVU56
+ 297 000a 2B68     		ldr	r3, [r5]
+ 298              	.LVL16:
+ 143:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         /*configure TSI clock division factor,charge state duration time,charge transfer state dura
+ 144:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         ctl &= ~(TSI_CTL_CTCDIV|TSI_CTL_CTDT|TSI_CTL_CDT);
+ 299              		.loc 1 144 9 is_stmt 1 view .LVU57
+ 145:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         ctl |= (prescaler|charge_duration|transfer_duration);
+ 300              		.loc 1 145 9 view .LVU58
+ 144:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         ctl |= (prescaler|charge_duration|transfer_duration);
+ 301              		.loc 1 144 13 is_stmt 0 view .LVU59
+ 302 000c 23F07F43 		bic	r3, r3, #-16777216
+ 303              	.LVL17:
+ 144:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         ctl |= (prescaler|charge_duration|transfer_duration);
+ 304              		.loc 1 144 13 view .LVU60
+ 305 0010 23F4E043 		bic	r3, r3, #28672
+ 306 0014 1343     		orrs	r3, r3, r2
+ 307 0016 0B43     		orrs	r3, r3, r1
+ 308              		.loc 1 145 13 view .LVU61
+ 309 0018 1843     		orrs	r0, r0, r3
+ 310              	.LVL18:
+ 146:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         TSI_CTL = ctl;
+ 311              		.loc 1 146 9 is_stmt 1 view .LVU62
+ 312              		.loc 1 146 17 is_stmt 0 view .LVU63
+ 313 001a 2860     		str	r0, [r5]
+ 314              	.LVL19:
+ARM GAS  /tmp/cc1XCVhl.s 			page 9
+
+
+ 315              	.L20:
+ 316              		.loc 1 146 17 view .LVU64
+ 317              	.LBE3:
+ 147:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     }
+ 148:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 318              		.loc 1 148 1 view .LVU65
+ 319 001c 20BD     		pop	{r5, pc}
+ 320              	.L23:
+ 321 001e 00BF     		.align	2
+ 322              	.L22:
+ 323 0020 00400240 		.word	1073889280
+ 324              		.cfi_endproc
+ 325              	.LFE62:
+ 327              		.section	.text.tsi_sofeware_mode_config,"ax",%progbits
+ 328              		.align	1
+ 329              		.global	tsi_sofeware_mode_config
+ 330              		.syntax unified
+ 331              		.thumb
+ 332              		.thumb_func
+ 333              		.fpu softvfp
+ 335              	tsi_sofeware_mode_config:
+ 336              	.LFB63:
+ 149:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 150:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 151:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      configure TSI triggering by software 
+ 152:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  none
+ 153:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 154:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 155:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 156:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_sofeware_mode_config(void)
+ 157:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 337              		.loc 1 157 1 is_stmt 1 view -0
+ 338              		.cfi_startproc
+ 339              		@ args = 0, pretend = 0, frame = 0
+ 340              		@ frame_needed = 0, uses_anonymous_args = 0
+ 341              		@ link register save eliminated.
+ 158:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     if(RESET == (TSI_CTL & TSI_CTL_TSIS)){
+ 342              		.loc 1 158 5 view .LVU67
+ 343              		.loc 1 158 18 is_stmt 0 view .LVU68
+ 344 0000 044B     		ldr	r3, .L26
+ 345 0002 1A68     		ldr	r2, [r3]
+ 346              		.loc 1 158 7 view .LVU69
+ 347 0004 9207     		lsls	r2, r2, #30
+ 159:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         TSI_CTL &= ~TSI_CTL_TRGMOD;
+ 348              		.loc 1 159 9 is_stmt 1 view .LVU70
+ 349              		.loc 1 159 17 is_stmt 0 view .LVU71
+ 350 0006 5EBF     		ittt	pl
+ 351 0008 1A68     		ldrpl	r2, [r3]
+ 352 000a 22F00402 		bicpl	r2, r2, #4
+ 353 000e 1A60     		strpl	r2, [r3]
+ 160:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     }
+ 161:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 354              		.loc 1 161 1 view .LVU72
+ 355 0010 7047     		bx	lr
+ 356              	.L27:
+ 357 0012 00BF     		.align	2
+ 358              	.L26:
+ARM GAS  /tmp/cc1XCVhl.s 			page 10
+
+
+ 359 0014 00400240 		.word	1073889280
+ 360              		.cfi_endproc
+ 361              	.LFE63:
+ 363              		.section	.text.tsi_hardware_mode_config,"ax",%progbits
+ 364              		.align	1
+ 365              		.global	tsi_hardware_mode_config
+ 366              		.syntax unified
+ 367              		.thumb
+ 368              		.thumb_func
+ 369              		.fpu softvfp
+ 371              	tsi_hardware_mode_config:
+ 372              	.LVL20:
+ 373              	.LFB64:
+ 162:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 163:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 164:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      configure TSI triggering by hardware   
+ 165:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  trigger_edge: the edge type in hardware trigger mode
+ 166:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_FALLING_TRIGGER: falling edge trigger TSI charge transfer sequence
+ 167:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_RISING_TRIGGER:  rising edge trigger TSI charge transfer sequence
+ 168:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 169:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 170:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 171:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_hardware_mode_config(uint8_t trigger_edge)
+ 172:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 374              		.loc 1 172 1 is_stmt 1 view -0
+ 375              		.cfi_startproc
+ 376              		@ args = 0, pretend = 0, frame = 0
+ 377              		@ frame_needed = 0, uses_anonymous_args = 0
+ 378              		@ link register save eliminated.
+ 173:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     if(RESET == (TSI_CTL & TSI_CTL_TSIS)){
+ 379              		.loc 1 173 5 view .LVU74
+ 380              		.loc 1 173 18 is_stmt 0 view .LVU75
+ 381 0000 084B     		ldr	r3, .L32
+ 382 0002 1A68     		ldr	r2, [r3]
+ 383              		.loc 1 173 7 view .LVU76
+ 384 0004 9207     		lsls	r2, r2, #30
+ 385 0006 08D4     		bmi	.L28
+ 174:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         /*enable hardware mode*/
+ 175:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         TSI_CTL |= TSI_CTL_TRGMOD;
+ 386              		.loc 1 175 9 is_stmt 1 view .LVU77
+ 387              		.loc 1 175 17 is_stmt 0 view .LVU78
+ 388 0008 1A68     		ldr	r2, [r3]
+ 389 000a 42F00402 		orr	r2, r2, #4
+ 390 000e 1A60     		str	r2, [r3]
+ 176:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         /*configure the edge type in hardware trigger mode*/
+ 177:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         if(TSI_FALLING_TRIGGER == (uint32_t)trigger_edge){
+ 391              		.loc 1 177 9 is_stmt 1 view .LVU79
+ 178:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             TSI_CTL &= ~TSI_CTL_EGSEL;
+ 392              		.loc 1 178 21 is_stmt 0 view .LVU80
+ 393 0010 1A68     		ldr	r2, [r3]
+ 177:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             TSI_CTL &= ~TSI_CTL_EGSEL;
+ 394              		.loc 1 177 11 view .LVU81
+ 395 0012 18B9     		cbnz	r0, .L30
+ 396              		.loc 1 178 13 is_stmt 1 view .LVU82
+ 397              		.loc 1 178 21 is_stmt 0 view .LVU83
+ 398 0014 22F00802 		bic	r2, r2, #8
+ 399              	.L31:
+ARM GAS  /tmp/cc1XCVhl.s 			page 11
+
+
+ 179:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         }else{
+ 180:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             TSI_CTL |= TSI_CTL_EGSEL;
+ 400              		.loc 1 180 21 view .LVU84
+ 401 0018 1A60     		str	r2, [r3]
+ 402              	.L28:
+ 181:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         }
+ 182:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     }    
+ 183:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 403              		.loc 1 183 1 view .LVU85
+ 404 001a 7047     		bx	lr
+ 405              	.L30:
+ 180:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         }
+ 406              		.loc 1 180 13 is_stmt 1 view .LVU86
+ 180:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         }
+ 407              		.loc 1 180 21 is_stmt 0 view .LVU87
+ 408 001c 42F00802 		orr	r2, r2, #8
+ 409 0020 FAE7     		b	.L31
+ 410              	.L33:
+ 411 0022 00BF     		.align	2
+ 412              	.L32:
+ 413 0024 00400240 		.word	1073889280
+ 414              		.cfi_endproc
+ 415              	.LFE64:
+ 417              		.section	.text.tsi_pin_mode_config,"ax",%progbits
+ 418              		.align	1
+ 419              		.global	tsi_pin_mode_config
+ 420              		.syntax unified
+ 421              		.thumb
+ 422              		.thumb_func
+ 423              		.fpu softvfp
+ 425              	tsi_pin_mode_config:
+ 426              	.LVL21:
+ 427              	.LFB65:
+ 184:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 185:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 186:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      configure TSI pin mode when charge-transfer sequence is IDLE 
+ 187:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  pin_mode: pin mode when charge-transfer sequence is IDLE
+ 188:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_OUTPUT_LOW:     TSI pin will output low when IDLE 
+ 189:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_INPUT_FLOATING: TSI pin will keep input_floating when IDLE
+ 190:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 191:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 192:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 193:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_pin_mode_config(uint8_t pin_mode)
+ 194:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 428              		.loc 1 194 1 is_stmt 1 view -0
+ 429              		.cfi_startproc
+ 430              		@ args = 0, pretend = 0, frame = 0
+ 431              		@ frame_needed = 0, uses_anonymous_args = 0
+ 432              		@ link register save eliminated.
+ 195:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     if(RESET == (TSI_CTL & TSI_CTL_TSIS)){
+ 433              		.loc 1 195 5 view .LVU89
+ 434              		.loc 1 195 18 is_stmt 0 view .LVU90
+ 435 0000 064B     		ldr	r3, .L38
+ 436 0002 1A68     		ldr	r2, [r3]
+ 437              		.loc 1 195 7 view .LVU91
+ 438 0004 9207     		lsls	r2, r2, #30
+ 439 0006 04D4     		bmi	.L34
+ARM GAS  /tmp/cc1XCVhl.s 			page 12
+
+
+ 196:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         if(TSI_OUTPUT_LOW == pin_mode){
+ 440              		.loc 1 196 9 is_stmt 1 view .LVU92
+ 197:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             TSI_CTL &= ~TSI_CTL_PINMOD;
+ 441              		.loc 1 197 21 is_stmt 0 view .LVU93
+ 442 0008 1A68     		ldr	r2, [r3]
+ 196:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         if(TSI_OUTPUT_LOW == pin_mode){
+ 443              		.loc 1 196 11 view .LVU94
+ 444 000a 18B9     		cbnz	r0, .L36
+ 445              		.loc 1 197 13 is_stmt 1 view .LVU95
+ 446              		.loc 1 197 21 is_stmt 0 view .LVU96
+ 447 000c 22F01002 		bic	r2, r2, #16
+ 448              	.L37:
+ 198:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         }else{
+ 199:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             TSI_CTL |= TSI_CTL_PINMOD;
+ 449              		.loc 1 199 21 view .LVU97
+ 450 0010 1A60     		str	r2, [r3]
+ 451              	.L34:
+ 200:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         }
+ 201:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     }
+ 202:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 452              		.loc 1 202 1 view .LVU98
+ 453 0012 7047     		bx	lr
+ 454              	.L36:
+ 199:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         }
+ 455              		.loc 1 199 13 is_stmt 1 view .LVU99
+ 199:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         }
+ 456              		.loc 1 199 21 is_stmt 0 view .LVU100
+ 457 0014 42F01002 		orr	r2, r2, #16
+ 458 0018 FAE7     		b	.L37
+ 459              	.L39:
+ 460 001a 00BF     		.align	2
+ 461              	.L38:
+ 462 001c 00400240 		.word	1073889280
+ 463              		.cfi_endproc
+ 464              	.LFE65:
+ 466              		.section	.text.tsi_max_number_config,"ax",%progbits
+ 467              		.align	1
+ 468              		.global	tsi_max_number_config
+ 469              		.syntax unified
+ 470              		.thumb
+ 471              		.thumb_func
+ 472              		.fpu softvfp
+ 474              	tsi_max_number_config:
+ 475              	.LVL22:
+ 476              	.LFB66:
+ 203:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 204:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 205:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      configure the max cycle number of a charge-transfer sequence 
+ 206:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  max_number: max cycle number
+ 207:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM255:   the max cycle number of a sequence is 255
+ 208:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM511:   the max cycle number of a sequence is 511
+ 209:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM1023:  the max cycle number of a sequence is 1023
+ 210:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM2047:  the max cycle number of a sequence is 2047
+ 211:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM4095:  the max cycle number of a sequence is 4095
+ 212:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM8191:  the max cycle number of a sequence is 8191
+ 213:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM16383: the max cycle number of a sequence is 16383
+ 214:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ARM GAS  /tmp/cc1XCVhl.s 			page 13
+
+
+ 215:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 216:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 217:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_max_number_config(uint32_t max_number)
+ 218:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 477              		.loc 1 218 1 is_stmt 1 view -0
+ 478              		.cfi_startproc
+ 479              		@ args = 0, pretend = 0, frame = 0
+ 480              		@ frame_needed = 0, uses_anonymous_args = 0
+ 481              		@ link register save eliminated.
+ 219:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     if(RESET == (TSI_CTL & TSI_CTL_TSIS)){
+ 482              		.loc 1 219 5 view .LVU102
+ 483              		.loc 1 219 18 is_stmt 0 view .LVU103
+ 484 0000 044A     		ldr	r2, .L42
+ 485 0002 1368     		ldr	r3, [r2]
+ 486              		.loc 1 219 7 view .LVU104
+ 487 0004 9B07     		lsls	r3, r3, #30
+ 488              	.LBB4:
+ 220:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         uint32_t maxnum;
+ 489              		.loc 1 220 9 is_stmt 1 view .LVU105
+ 221:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         maxnum = TSI_CTL;
+ 490              		.loc 1 221 9 view .LVU106
+ 491              		.loc 1 221 16 is_stmt 0 view .LVU107
+ 492 0006 5FBF     		itttt	pl
+ 493 0008 1368     		ldrpl	r3, [r2]
+ 494              	.LVL23:
+ 222:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         /*configure the max cycle number of a charge-transfer sequence*/
+ 223:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         maxnum &= ~TSI_CTL_MCN;
+ 495              		.loc 1 223 9 is_stmt 1 view .LVU108
+ 496              		.loc 1 223 16 is_stmt 0 view .LVU109
+ 497 000a 23F0E003 		bicpl	r3, r3, #224
+ 498              	.LVL24:
+ 224:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         maxnum |= max_number;
+ 499              		.loc 1 224 9 is_stmt 1 view .LVU110
+ 500              		.loc 1 224 16 is_stmt 0 view .LVU111
+ 501 000e 1843     		orrpl	r0, r0, r3
+ 502              	.LVL25:
+ 225:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         TSI_CTL = maxnum;
+ 503              		.loc 1 225 9 is_stmt 1 view .LVU112
+ 504              		.loc 1 225 17 is_stmt 0 view .LVU113
+ 505 0010 1060     		strpl	r0, [r2]
+ 506              	.LBE4:
+ 226:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     }
+ 227:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 507              		.loc 1 227 1 view .LVU114
+ 508 0012 7047     		bx	lr
+ 509              	.L43:
+ 510              		.align	2
+ 511              	.L42:
+ 512 0014 00400240 		.word	1073889280
+ 513              		.cfi_endproc
+ 514              	.LFE66:
+ 516              		.section	.text.tsi_software_start,"ax",%progbits
+ 517              		.align	1
+ 518              		.global	tsi_software_start
+ 519              		.syntax unified
+ 520              		.thumb
+ 521              		.thumb_func
+ARM GAS  /tmp/cc1XCVhl.s 			page 14
+
+
+ 522              		.fpu softvfp
+ 524              	tsi_software_start:
+ 525              	.LFB67:
+ 228:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 229:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 230:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      start a charge-transfer sequence when TSI is in software trigger mode
+ 231:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  none
+ 232:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 233:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 234:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 235:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_software_start(void)
+ 236:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 526              		.loc 1 236 1 is_stmt 1 view -0
+ 527              		.cfi_startproc
+ 528              		@ args = 0, pretend = 0, frame = 0
+ 529              		@ frame_needed = 0, uses_anonymous_args = 0
+ 530              		@ link register save eliminated.
+ 237:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_CTL |= TSI_CTL_TSIS;
+ 531              		.loc 1 237 5 view .LVU116
+ 532              		.loc 1 237 13 is_stmt 0 view .LVU117
+ 533 0000 024A     		ldr	r2, .L45
+ 534 0002 1368     		ldr	r3, [r2]
+ 535 0004 43F00203 		orr	r3, r3, #2
+ 536 0008 1360     		str	r3, [r2]
+ 238:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 537              		.loc 1 238 1 view .LVU118
+ 538 000a 7047     		bx	lr
+ 539              	.L46:
+ 540              		.align	2
+ 541              	.L45:
+ 542 000c 00400240 		.word	1073889280
+ 543              		.cfi_endproc
+ 544              	.LFE67:
+ 546              		.section	.text.tsi_software_stop,"ax",%progbits
+ 547              		.align	1
+ 548              		.global	tsi_software_stop
+ 549              		.syntax unified
+ 550              		.thumb
+ 551              		.thumb_func
+ 552              		.fpu softvfp
+ 554              	tsi_software_stop:
+ 555              	.LFB68:
+ 239:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 240:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 241:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      stop a charge-transfer sequence when TSI is in software trigger mode
+ 242:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  none
+ 243:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 244:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 245:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 246:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_software_stop(void)
+ 247:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 556              		.loc 1 247 1 is_stmt 1 view -0
+ 557              		.cfi_startproc
+ 558              		@ args = 0, pretend = 0, frame = 0
+ 559              		@ frame_needed = 0, uses_anonymous_args = 0
+ 560              		@ link register save eliminated.
+ 248:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_CTL &= ~TSI_CTL_TSIS;
+ARM GAS  /tmp/cc1XCVhl.s 			page 15
+
+
+ 561              		.loc 1 248 5 view .LVU120
+ 562              		.loc 1 248 13 is_stmt 0 view .LVU121
+ 563 0000 024A     		ldr	r2, .L48
+ 564 0002 1368     		ldr	r3, [r2]
+ 565 0004 23F00203 		bic	r3, r3, #2
+ 566 0008 1360     		str	r3, [r2]
+ 249:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 567              		.loc 1 249 1 view .LVU122
+ 568 000a 7047     		bx	lr
+ 569              	.L49:
+ 570              		.align	2
+ 571              	.L48:
+ 572 000c 00400240 		.word	1073889280
+ 573              		.cfi_endproc
+ 574              	.LFE68:
+ 576              		.section	.text.tsi_enable,"ax",%progbits
+ 577              		.align	1
+ 578              		.global	tsi_enable
+ 579              		.syntax unified
+ 580              		.thumb
+ 581              		.thumb_func
+ 582              		.fpu softvfp
+ 584              	tsi_enable:
+ 585              	.LFB69:
+ 250:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 251:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 252:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      enable TSI module 
+ 253:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  none
+ 254:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 255:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 256:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 257:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_enable(void)
+ 258:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 586              		.loc 1 258 1 is_stmt 1 view -0
+ 587              		.cfi_startproc
+ 588              		@ args = 0, pretend = 0, frame = 0
+ 589              		@ frame_needed = 0, uses_anonymous_args = 0
+ 590              		@ link register save eliminated.
+ 259:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_CTL |= TSI_CTL_TSIEN;
+ 591              		.loc 1 259 5 view .LVU124
+ 592              		.loc 1 259 13 is_stmt 0 view .LVU125
+ 593 0000 024A     		ldr	r2, .L51
+ 594 0002 1368     		ldr	r3, [r2]
+ 595 0004 43F00103 		orr	r3, r3, #1
+ 596 0008 1360     		str	r3, [r2]
+ 260:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 597              		.loc 1 260 1 view .LVU126
+ 598 000a 7047     		bx	lr
+ 599              	.L52:
+ 600              		.align	2
+ 601              	.L51:
+ 602 000c 00400240 		.word	1073889280
+ 603              		.cfi_endproc
+ 604              	.LFE69:
+ 606              		.section	.text.tsi_disable,"ax",%progbits
+ 607              		.align	1
+ 608              		.global	tsi_disable
+ARM GAS  /tmp/cc1XCVhl.s 			page 16
+
+
+ 609              		.syntax unified
+ 610              		.thumb
+ 611              		.thumb_func
+ 612              		.fpu softvfp
+ 614              	tsi_disable:
+ 615              	.LFB70:
+ 261:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 262:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 263:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      disable TSI module 
+ 264:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  none
+ 265:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 266:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 267:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 268:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_disable(void)
+ 269:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 616              		.loc 1 269 1 is_stmt 1 view -0
+ 617              		.cfi_startproc
+ 618              		@ args = 0, pretend = 0, frame = 0
+ 619              		@ frame_needed = 0, uses_anonymous_args = 0
+ 620              		@ link register save eliminated.
+ 270:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_CTL &= ~TSI_CTL_TSIEN;
+ 621              		.loc 1 270 5 view .LVU128
+ 622              		.loc 1 270 13 is_stmt 0 view .LVU129
+ 623 0000 024A     		ldr	r2, .L54
+ 624 0002 1368     		ldr	r3, [r2]
+ 625 0004 23F00103 		bic	r3, r3, #1
+ 626 0008 1360     		str	r3, [r2]
+ 271:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 627              		.loc 1 271 1 view .LVU130
+ 628 000a 7047     		bx	lr
+ 629              	.L55:
+ 630              		.align	2
+ 631              	.L54:
+ 632 000c 00400240 		.word	1073889280
+ 633              		.cfi_endproc
+ 634              	.LFE70:
+ 636              		.section	.text.tsi_extend_charge_config,"ax",%progbits
+ 637              		.align	1
+ 638              		.global	tsi_extend_charge_config
+ 639              		.syntax unified
+ 640              		.thumb
+ 641              		.thumb_func
+ 642              		.fpu softvfp
+ 644              	tsi_extend_charge_config:
+ 645              	.LVL26:
+ 646              	.LFB71:
+ 272:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 273:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 274:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      configure extend charge state 
+ 275:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  extend: enable or disable extend charge state
+ 276:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        ENABLE:  enable extend charge state
+ 277:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        DISABLE: disable extend charge state
+ 278:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  prescaler: ECCLK clock division factor                 
+ 279:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_EXTEND_DIV1: fECCLK = fHCLK
+ 280:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_EXTEND_DIV2: fECCLK = fHCLK/2
+ 281:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  max_duration: value range 1...128,extend charge state maximum duration time is 1*tE
+ 282:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ARM GAS  /tmp/cc1XCVhl.s 			page 17
+
+
+ 283:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 284:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 285:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_extend_charge_config(ControlStatus extend,uint8_t prescaler,uint32_t max_duration)
+ 286:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 647              		.loc 1 286 1 is_stmt 1 view -0
+ 648              		.cfi_startproc
+ 649              		@ args = 0, pretend = 0, frame = 0
+ 650              		@ frame_needed = 0, uses_anonymous_args = 0
+ 287:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     if(RESET == (TSI_CTL & TSI_CTL_TSIS)){
+ 651              		.loc 1 287 5 view .LVU132
+ 286:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     if(RESET == (TSI_CTL & TSI_CTL_TSIS)){
+ 652              		.loc 1 286 1 is_stmt 0 view .LVU133
+ 653 0000 10B5     		push	{r4, lr}
+ 654              	.LCFI4:
+ 655              		.cfi_def_cfa_offset 8
+ 656              		.cfi_offset 4, -8
+ 657              		.cfi_offset 14, -4
+ 658              		.loc 1 287 18 view .LVU134
+ 659 0002 104C     		ldr	r4, .L62
+ 660 0004 2368     		ldr	r3, [r4]
+ 661              		.loc 1 287 7 view .LVU135
+ 662 0006 9B07     		lsls	r3, r3, #30
+ 663 0008 04D4     		bmi	.L56
+ 664              	.LBB5:
+ 288:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         uint32_t ctl;
+ 665              		.loc 1 288 9 is_stmt 1 view .LVU136
+ 289:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         if(DISABLE == extend){
+ 666              		.loc 1 289 9 view .LVU137
+ 667              		.loc 1 289 11 is_stmt 0 view .LVU138
+ 668 000a 20B9     		cbnz	r0, .L58
+ 290:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             /*disable extend charge state*/
+ 291:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             TSI_CTL &= ~TSI_CTL_ECEN;
+ 669              		.loc 1 291 13 is_stmt 1 view .LVU139
+ 670              		.loc 1 291 21 is_stmt 0 view .LVU140
+ 671 000c 2368     		ldr	r3, [r4]
+ 672 000e 23F48033 		bic	r3, r3, #65536
+ 673 0012 2360     		str	r3, [r4]
+ 674              	.LVL27:
+ 675              	.L56:
+ 676              		.loc 1 291 21 view .LVU141
+ 677              	.LBE5:
+ 292:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         }else{
+ 293:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             /*configure extend charge state maximum duration time*/
+ 294:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             ctl = TSI_CTL;
+ 295:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             ctl &= ~TSI_CTL_ECDT;
+ 296:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             ctl |= TSI_EXTENDMAX((uint32_t)(max_duration-1U));
+ 297:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             TSI_CTL = ctl;
+ 298:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             /*configure ECCLK clock division factor*/
+ 299:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             if(TSI_EXTEND_DIV1 == prescaler){
+ 300:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****                 TSI_CTL &= ~TSI_CTL_ECDIV;
+ 301:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             }else{
+ 302:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****                 TSI_CTL |= TSI_CTL_ECDIV;
+ 303:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             }
+ 304:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             /*enable extend charge state*/
+ 305:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             TSI_CTL |= TSI_CTL_ECEN;
+ 306:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         }
+ 307:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     }
+ARM GAS  /tmp/cc1XCVhl.s 			page 18
+
+
+ 308:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 678              		.loc 1 308 1 view .LVU142
+ 679 0014 10BD     		pop	{r4, pc}
+ 680              	.LVL28:
+ 681              	.L58:
+ 682              	.LBB6:
+ 294:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             ctl &= ~TSI_CTL_ECDT;
+ 683              		.loc 1 294 13 is_stmt 1 view .LVU143
+ 294:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             ctl &= ~TSI_CTL_ECDT;
+ 684              		.loc 1 294 17 is_stmt 0 view .LVU144
+ 685 0016 2068     		ldr	r0, [r4]
+ 686              	.LVL29:
+ 295:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             ctl |= TSI_EXTENDMAX((uint32_t)(max_duration-1U));
+ 687              		.loc 1 295 13 is_stmt 1 view .LVU145
+ 296:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             TSI_CTL = ctl;
+ 688              		.loc 1 296 20 is_stmt 0 view .LVU146
+ 689 0018 531E     		subs	r3, r2, #1
+ 690 001a 5B04     		lsls	r3, r3, #17
+ 295:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             ctl |= TSI_EXTENDMAX((uint32_t)(max_duration-1U));
+ 691              		.loc 1 295 17 view .LVU147
+ 692 001c 20F47E00 		bic	r0, r0, #16646144
+ 693              	.LVL30:
+ 296:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             TSI_CTL = ctl;
+ 694              		.loc 1 296 13 is_stmt 1 view .LVU148
+ 296:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             TSI_CTL = ctl;
+ 695              		.loc 1 296 20 is_stmt 0 view .LVU149
+ 696 0020 03F47E03 		and	r3, r3, #16646144
+ 296:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             TSI_CTL = ctl;
+ 697              		.loc 1 296 17 view .LVU150
+ 698 0024 0343     		orrs	r3, r3, r0
+ 699              	.LVL31:
+ 297:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             /*configure ECCLK clock division factor*/
+ 700              		.loc 1 297 13 is_stmt 1 view .LVU151
+ 297:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             /*configure ECCLK clock division factor*/
+ 701              		.loc 1 297 21 is_stmt 0 view .LVU152
+ 702 0026 2360     		str	r3, [r4]
+ 299:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****                 TSI_CTL &= ~TSI_CTL_ECDIV;
+ 703              		.loc 1 299 13 is_stmt 1 view .LVU153
+ 300:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             }else{
+ 704              		.loc 1 300 25 is_stmt 0 view .LVU154
+ 705 0028 2368     		ldr	r3, [r4]
+ 706              	.LVL32:
+ 299:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****                 TSI_CTL &= ~TSI_CTL_ECDIV;
+ 707              		.loc 1 299 15 view .LVU155
+ 708 002a 41B9     		cbnz	r1, .L59
+ 300:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             }else{
+ 709              		.loc 1 300 17 is_stmt 1 view .LVU156
+ 300:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             }else{
+ 710              		.loc 1 300 25 is_stmt 0 view .LVU157
+ 711 002c 23F40043 		bic	r3, r3, #32768
+ 712              	.L61:
+ 305:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         }
+ 713              		.loc 1 305 21 view .LVU158
+ 714 0030 044A     		ldr	r2, .L62
+ 715              	.LVL33:
+ 302:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             }
+ 716              		.loc 1 302 25 view .LVU159
+ARM GAS  /tmp/cc1XCVhl.s 			page 19
+
+
+ 717 0032 2360     		str	r3, [r4]
+ 718              	.LVL34:
+ 305:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         }
+ 719              		.loc 1 305 13 is_stmt 1 view .LVU160
+ 305:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         }
+ 720              		.loc 1 305 21 is_stmt 0 view .LVU161
+ 721 0034 1368     		ldr	r3, [r2]
+ 722 0036 43F48033 		orr	r3, r3, #65536
+ 723 003a 1360     		str	r3, [r2]
+ 724              	.LBE6:
+ 725              		.loc 1 308 1 view .LVU162
+ 726 003c EAE7     		b	.L56
+ 727              	.LVL35:
+ 728              	.L59:
+ 729              	.LBB7:
+ 302:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             }
+ 730              		.loc 1 302 17 is_stmt 1 view .LVU163
+ 302:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             }
+ 731              		.loc 1 302 25 is_stmt 0 view .LVU164
+ 732 003e 43F40043 		orr	r3, r3, #32768
+ 733 0042 F5E7     		b	.L61
+ 734              	.L63:
+ 735              		.align	2
+ 736              	.L62:
+ 737 0044 00400240 		.word	1073889280
+ 738              	.LBE7:
+ 739              		.cfi_endproc
+ 740              	.LFE71:
+ 742              		.section	.text.tsi_interrupt_enable,"ax",%progbits
+ 743              		.align	1
+ 744              		.global	tsi_interrupt_enable
+ 745              		.syntax unified
+ 746              		.thumb
+ 747              		.thumb_func
+ 748              		.fpu softvfp
+ 750              	tsi_interrupt_enable:
+ 751              	.LVL36:
+ 752              	.LFB72:
+ 309:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 310:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 311:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      enable TSI interrupt 
+ 312:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  source: select interrupt which will be enabled
+ 313:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_INT_CTCF: charge-transfer complete flag interrupt enable
+ 314:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_INTEN_MNERR:  max cycle number error interrupt enable
+ 315:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 316:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 317:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 318:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_interrupt_enable(uint32_t source)
+ 319:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 753              		.loc 1 319 1 is_stmt 1 view -0
+ 754              		.cfi_startproc
+ 755              		@ args = 0, pretend = 0, frame = 0
+ 756              		@ frame_needed = 0, uses_anonymous_args = 0
+ 757              		@ link register save eliminated.
+ 320:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_INTEN |= source;
+ 758              		.loc 1 320 5 view .LVU166
+ 759              		.loc 1 320 15 is_stmt 0 view .LVU167
+ARM GAS  /tmp/cc1XCVhl.s 			page 20
+
+
+ 760 0000 024A     		ldr	r2, .L65
+ 761 0002 5368     		ldr	r3, [r2, #4]
+ 762 0004 0343     		orrs	r3, r3, r0
+ 763 0006 5360     		str	r3, [r2, #4]
+ 321:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 764              		.loc 1 321 1 view .LVU168
+ 765 0008 7047     		bx	lr
+ 766              	.L66:
+ 767 000a 00BF     		.align	2
+ 768              	.L65:
+ 769 000c 00400240 		.word	1073889280
+ 770              		.cfi_endproc
+ 771              	.LFE72:
+ 773              		.section	.text.tsi_interrupt_disable,"ax",%progbits
+ 774              		.align	1
+ 775              		.global	tsi_interrupt_disable
+ 776              		.syntax unified
+ 777              		.thumb
+ 778              		.thumb_func
+ 779              		.fpu softvfp
+ 781              	tsi_interrupt_disable:
+ 782              	.LVL37:
+ 783              	.LFB73:
+ 322:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 323:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 324:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      disable TSI interrupt 
+ 325:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  source: select interrupt which will be disabled
+ 326:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_INT_CTCF: charge-transfer complete flag interrupt disable
+ 327:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_INTEN_MNERR:  max cycle number error interrupt disable
+ 328:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 329:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 330:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 331:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_interrupt_disable(uint32_t source)
+ 332:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 784              		.loc 1 332 1 is_stmt 1 view -0
+ 785              		.cfi_startproc
+ 786              		@ args = 0, pretend = 0, frame = 0
+ 787              		@ frame_needed = 0, uses_anonymous_args = 0
+ 788              		@ link register save eliminated.
+ 333:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_INTEN &= ~source;
+ 789              		.loc 1 333 5 view .LVU170
+ 790              		.loc 1 333 15 is_stmt 0 view .LVU171
+ 791 0000 024A     		ldr	r2, .L68
+ 792 0002 5368     		ldr	r3, [r2, #4]
+ 793 0004 23EA0003 		bic	r3, r3, r0
+ 794 0008 5360     		str	r3, [r2, #4]
+ 334:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 795              		.loc 1 334 1 view .LVU172
+ 796 000a 7047     		bx	lr
+ 797              	.L69:
+ 798              		.align	2
+ 799              	.L68:
+ 800 000c 00400240 		.word	1073889280
+ 801              		.cfi_endproc
+ 802              	.LFE73:
+ 804              		.section	.text.tsi_interrupt_flag_clear,"ax",%progbits
+ 805              		.align	1
+ARM GAS  /tmp/cc1XCVhl.s 			page 21
+
+
+ 806              		.global	tsi_interrupt_flag_clear
+ 807              		.syntax unified
+ 808              		.thumb
+ 809              		.thumb_func
+ 810              		.fpu softvfp
+ 812              	tsi_interrupt_flag_clear:
+ 813              	.LVL38:
+ 814              	.LFB74:
+ 335:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 336:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 337:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      clear flag
+ 338:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  source: select flag which will be cleared
+ 339:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_INT_FLAG_CTC: clear charge-transfer complete flag
+ 340:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_INT_FLAG_MNERR: clear max cycle number error
+ 341:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 342:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none
+ 343:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 344:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_interrupt_flag_clear(uint32_t flag)
+ 345:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 815              		.loc 1 345 1 is_stmt 1 view -0
+ 816              		.cfi_startproc
+ 817              		@ args = 0, pretend = 0, frame = 0
+ 818              		@ frame_needed = 0, uses_anonymous_args = 0
+ 819              		@ link register save eliminated.
+ 346:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_INTC |= flag;
+ 820              		.loc 1 346 5 view .LVU174
+ 821              		.loc 1 346 14 is_stmt 0 view .LVU175
+ 822 0000 024A     		ldr	r2, .L71
+ 823 0002 9368     		ldr	r3, [r2, #8]
+ 824 0004 0343     		orrs	r3, r3, r0
+ 825 0006 9360     		str	r3, [r2, #8]
+ 347:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 826              		.loc 1 347 1 view .LVU176
+ 827 0008 7047     		bx	lr
+ 828              	.L72:
+ 829 000a 00BF     		.align	2
+ 830              	.L71:
+ 831 000c 00400240 		.word	1073889280
+ 832              		.cfi_endproc
+ 833              	.LFE74:
+ 835              		.section	.text.tsi_interrupt_flag_get,"ax",%progbits
+ 836              		.align	1
+ 837              		.global	tsi_interrupt_flag_get
+ 838              		.syntax unified
+ 839              		.thumb
+ 840              		.thumb_func
+ 841              		.fpu softvfp
+ 843              	tsi_interrupt_flag_get:
+ 844              	.LVL39:
+ 845              	.LFB75:
+ 348:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 349:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 350:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      get TSI module current status  
+ 351:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  status:
+ 352:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_INT_FLAG_CTC: charge-transfer complete flag
+ 353:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_INT_FLAG_MNERR:  max Cycle Number Error
+ 354:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ARM GAS  /tmp/cc1XCVhl.s 			page 22
+
+
+ 355:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     FlagStatus:SET or RESET
+ 356:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 357:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** FlagStatus tsi_interrupt_flag_get(uint32_t status)
+ 358:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 846              		.loc 1 358 1 is_stmt 1 view -0
+ 847              		.cfi_startproc
+ 848              		@ args = 0, pretend = 0, frame = 0
+ 849              		@ frame_needed = 0, uses_anonymous_args = 0
+ 850              		@ link register save eliminated.
+ 359:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     if(TSI_INTF & status){
+ 851              		.loc 1 359 5 view .LVU178
+ 852              		.loc 1 359 8 is_stmt 0 view .LVU179
+ 853 0000 034B     		ldr	r3, .L74
+ 854 0002 DB68     		ldr	r3, [r3, #12]
+ 855              		.loc 1 359 7 view .LVU180
+ 856 0004 0342     		tst	r3, r0
+ 360:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         return SET;
+ 361:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     } else {
+ 362:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         return RESET;
+ 363:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     }
+ 364:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 857              		.loc 1 364 1 view .LVU181
+ 858 0006 14BF     		ite	ne
+ 859 0008 0120     		movne	r0, #1
+ 860              	.LVL40:
+ 861              		.loc 1 364 1 view .LVU182
+ 862 000a 0020     		moveq	r0, #0
+ 863 000c 7047     		bx	lr
+ 864              	.L75:
+ 865 000e 00BF     		.align	2
+ 866              	.L74:
+ 867 0010 00400240 		.word	1073889280
+ 868              		.cfi_endproc
+ 869              	.LFE75:
+ 871              		.section	.text.tsi_hysteresis_on,"ax",%progbits
+ 872              		.align	1
+ 873              		.global	tsi_hysteresis_on
+ 874              		.syntax unified
+ 875              		.thumb
+ 876              		.thumb_func
+ 877              		.fpu softvfp
+ 879              	tsi_hysteresis_on:
+ 880              	.LVL41:
+ 881              	.LFB76:
+ 365:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 366:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 367:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      switch on hysteresis pin
+ 368:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  group_pin: select pin which will be switched on hysteresis  
+ 369:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_PHM_GxPy(x=0..5,y=0..3): pin y of group x switch on hysteresis
+ 370:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 371:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 372:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 373:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_hysteresis_on(uint32_t group_pin)
+ 374:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 882              		.loc 1 374 1 is_stmt 1 view -0
+ 883              		.cfi_startproc
+ 884              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/cc1XCVhl.s 			page 23
+
+
+ 885              		@ frame_needed = 0, uses_anonymous_args = 0
+ 886              		@ link register save eliminated.
+ 375:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_PHM |= group_pin;
+ 887              		.loc 1 375 5 view .LVU184
+ 888              		.loc 1 375 13 is_stmt 0 view .LVU185
+ 889 0000 024A     		ldr	r2, .L77
+ 890 0002 1369     		ldr	r3, [r2, #16]
+ 891 0004 0343     		orrs	r3, r3, r0
+ 892 0006 1361     		str	r3, [r2, #16]
+ 376:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 893              		.loc 1 376 1 view .LVU186
+ 894 0008 7047     		bx	lr
+ 895              	.L78:
+ 896 000a 00BF     		.align	2
+ 897              	.L77:
+ 898 000c 00400240 		.word	1073889280
+ 899              		.cfi_endproc
+ 900              	.LFE76:
+ 902              		.section	.text.tsi_hysteresis_off,"ax",%progbits
+ 903              		.align	1
+ 904              		.global	tsi_hysteresis_off
+ 905              		.syntax unified
+ 906              		.thumb
+ 907              		.thumb_func
+ 908              		.fpu softvfp
+ 910              	tsi_hysteresis_off:
+ 911              	.LVL42:
+ 912              	.LFB77:
+ 377:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 378:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 379:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      switch off hysteresis pin
+ 380:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  group_pin: select pin which will be switched off hysteresis 
+ 381:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_PHM_GxPy(x=0..5,y=0..3): pin y of group x switch off hysteresis
+ 382:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 383:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 384:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 385:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_hysteresis_off(uint32_t group_pin)
+ 386:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 913              		.loc 1 386 1 is_stmt 1 view -0
+ 914              		.cfi_startproc
+ 915              		@ args = 0, pretend = 0, frame = 0
+ 916              		@ frame_needed = 0, uses_anonymous_args = 0
+ 917              		@ link register save eliminated.
+ 387:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_PHM &= ~group_pin;
+ 918              		.loc 1 387 5 view .LVU188
+ 919              		.loc 1 387 13 is_stmt 0 view .LVU189
+ 920 0000 024A     		ldr	r2, .L80
+ 921 0002 1369     		ldr	r3, [r2, #16]
+ 922 0004 23EA0003 		bic	r3, r3, r0
+ 923 0008 1361     		str	r3, [r2, #16]
+ 388:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 924              		.loc 1 388 1 view .LVU190
+ 925 000a 7047     		bx	lr
+ 926              	.L81:
+ 927              		.align	2
+ 928              	.L80:
+ 929 000c 00400240 		.word	1073889280
+ARM GAS  /tmp/cc1XCVhl.s 			page 24
+
+
+ 930              		.cfi_endproc
+ 931              	.LFE77:
+ 933              		.section	.text.tsi_analog_on,"ax",%progbits
+ 934              		.align	1
+ 935              		.global	tsi_analog_on
+ 936              		.syntax unified
+ 937              		.thumb
+ 938              		.thumb_func
+ 939              		.fpu softvfp
+ 941              	tsi_analog_on:
+ 942              	.LVL43:
+ 943              	.LFB78:
+ 389:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 390:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 391:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      switch on analog pin 
+ 392:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  group_pin: select pin which will be switched on analog
+ 393:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_ASW_GxPy(x=0..5,y=0..3):pin y of group x switch on analog
+ 394:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 395:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 396:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 397:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_analog_on(uint32_t group_pin)
+ 398:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 944              		.loc 1 398 1 is_stmt 1 view -0
+ 945              		.cfi_startproc
+ 946              		@ args = 0, pretend = 0, frame = 0
+ 947              		@ frame_needed = 0, uses_anonymous_args = 0
+ 948              		@ link register save eliminated.
+ 399:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_ASW |= group_pin;
+ 949              		.loc 1 399 5 view .LVU192
+ 950              		.loc 1 399 13 is_stmt 0 view .LVU193
+ 951 0000 024A     		ldr	r2, .L83
+ 952 0002 9369     		ldr	r3, [r2, #24]
+ 953 0004 0343     		orrs	r3, r3, r0
+ 954 0006 9361     		str	r3, [r2, #24]
+ 400:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 955              		.loc 1 400 1 view .LVU194
+ 956 0008 7047     		bx	lr
+ 957              	.L84:
+ 958 000a 00BF     		.align	2
+ 959              	.L83:
+ 960 000c 00400240 		.word	1073889280
+ 961              		.cfi_endproc
+ 962              	.LFE78:
+ 964              		.section	.text.tsi_analog_off,"ax",%progbits
+ 965              		.align	1
+ 966              		.global	tsi_analog_off
+ 967              		.syntax unified
+ 968              		.thumb
+ 969              		.thumb_func
+ 970              		.fpu softvfp
+ 972              	tsi_analog_off:
+ 973              	.LVL44:
+ 974              	.LFB79:
+ 401:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 402:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 403:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      switch off analog pin 
+ 404:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  group_pin: select pin which will be switched off analog
+ARM GAS  /tmp/cc1XCVhl.s 			page 25
+
+
+ 405:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_ASW_GxPy(x=0..5,y=0..3):pin y of group x switch off analog
+ 406:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 407:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 408:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 409:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_analog_off(uint32_t group_pin)
+ 410:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 975              		.loc 1 410 1 is_stmt 1 view -0
+ 976              		.cfi_startproc
+ 977              		@ args = 0, pretend = 0, frame = 0
+ 978              		@ frame_needed = 0, uses_anonymous_args = 0
+ 979              		@ link register save eliminated.
+ 411:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_ASW &= ~group_pin;
+ 980              		.loc 1 411 5 view .LVU196
+ 981              		.loc 1 411 13 is_stmt 0 view .LVU197
+ 982 0000 024A     		ldr	r2, .L86
+ 983 0002 9369     		ldr	r3, [r2, #24]
+ 984 0004 23EA0003 		bic	r3, r3, r0
+ 985 0008 9361     		str	r3, [r2, #24]
+ 412:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 986              		.loc 1 412 1 view .LVU198
+ 987 000a 7047     		bx	lr
+ 988              	.L87:
+ 989              		.align	2
+ 990              	.L86:
+ 991 000c 00400240 		.word	1073889280
+ 992              		.cfi_endproc
+ 993              	.LFE79:
+ 995              		.section	.text.tsi_group_enable,"ax",%progbits
+ 996              		.align	1
+ 997              		.global	tsi_group_enable
+ 998              		.syntax unified
+ 999              		.thumb
+ 1000              		.thumb_func
+ 1001              		.fpu softvfp
+ 1003              	tsi_group_enable:
+ 1004              	.LVL45:
+ 1005              	.LFB80:
+ 413:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 414:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 415:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      enbale group 
+ 416:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  group: select group to be enabled 
+ 417:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_GCTL_GEx(x=0..5): the x group will be enabled 
+ 418:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 419:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 420:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 421:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_group_enable(uint32_t group)
+ 422:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 1006              		.loc 1 422 1 is_stmt 1 view -0
+ 1007              		.cfi_startproc
+ 1008              		@ args = 0, pretend = 0, frame = 0
+ 1009              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1010              		@ link register save eliminated.
+ 423:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_GCTL |= group;
+ 1011              		.loc 1 423 5 view .LVU200
+ 1012              		.loc 1 423 14 is_stmt 0 view .LVU201
+ 1013 0000 024A     		ldr	r2, .L89
+ 1014 0002 136B     		ldr	r3, [r2, #48]
+ARM GAS  /tmp/cc1XCVhl.s 			page 26
+
+
+ 1015 0004 0343     		orrs	r3, r3, r0
+ 1016 0006 1363     		str	r3, [r2, #48]
+ 424:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 1017              		.loc 1 424 1 view .LVU202
+ 1018 0008 7047     		bx	lr
+ 1019              	.L90:
+ 1020 000a 00BF     		.align	2
+ 1021              	.L89:
+ 1022 000c 00400240 		.word	1073889280
+ 1023              		.cfi_endproc
+ 1024              	.LFE80:
+ 1026              		.section	.text.tsi_group_disable,"ax",%progbits
+ 1027              		.align	1
+ 1028              		.global	tsi_group_disable
+ 1029              		.syntax unified
+ 1030              		.thumb
+ 1031              		.thumb_func
+ 1032              		.fpu softvfp
+ 1034              	tsi_group_disable:
+ 1035              	.LVL46:
+ 1036              	.LFB81:
+ 425:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 426:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 427:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      disbale group 
+ 428:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  group: select group to be disabled 
+ 429:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_GCTL_GEx(x=0..5):the x group will be disabled 
+ 430:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 431:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
+ 432:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 433:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** void tsi_group_disable(uint32_t group)
+ 434:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 1037              		.loc 1 434 1 is_stmt 1 view -0
+ 1038              		.cfi_startproc
+ 1039              		@ args = 0, pretend = 0, frame = 0
+ 1040              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1041              		@ link register save eliminated.
+ 435:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_GCTL &= ~group;
+ 1042              		.loc 1 435 5 view .LVU204
+ 1043              		.loc 1 435 14 is_stmt 0 view .LVU205
+ 1044 0000 024A     		ldr	r2, .L92
+ 1045 0002 136B     		ldr	r3, [r2, #48]
+ 1046 0004 23EA0003 		bic	r3, r3, r0
+ 1047 0008 1363     		str	r3, [r2, #48]
+ 436:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 1048              		.loc 1 436 1 view .LVU206
+ 1049 000a 7047     		bx	lr
+ 1050              	.L93:
+ 1051              		.align	2
+ 1052              	.L92:
+ 1053 000c 00400240 		.word	1073889280
+ 1054              		.cfi_endproc
+ 1055              	.LFE81:
+ 1057              		.section	.text.tsi_group_status_get,"ax",%progbits
+ 1058              		.align	1
+ 1059              		.global	tsi_group_status_get
+ 1060              		.syntax unified
+ 1061              		.thumb
+ARM GAS  /tmp/cc1XCVhl.s 			page 27
+
+
+ 1062              		.thumb_func
+ 1063              		.fpu softvfp
+ 1065              	tsi_group_status_get:
+ 1066              	.LVL47:
+ 1067              	.LFB82:
+ 437:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 438:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 439:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      get group complete status
+ 440:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  group: select group 
+ 441:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_GCTL_GCx(x=0..5): get the complete status of group x
+ 442:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 443:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     FlagStatus: group complete status,SET or RESET
+ 444:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 445:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** FlagStatus tsi_group_status_get(uint32_t group)
+ 446:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 1068              		.loc 1 446 1 is_stmt 1 view -0
+ 1069              		.cfi_startproc
+ 1070              		@ args = 0, pretend = 0, frame = 0
+ 1071              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1072              		@ link register save eliminated.
+ 447:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     if(TSI_GCTL & group){
+ 1073              		.loc 1 447 5 view .LVU208
+ 1074              		.loc 1 447 8 is_stmt 0 view .LVU209
+ 1075 0000 034B     		ldr	r3, .L95
+ 1076 0002 1B6B     		ldr	r3, [r3, #48]
+ 1077              		.loc 1 447 7 view .LVU210
+ 1078 0004 0342     		tst	r3, r0
+ 448:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         return SET;
+ 449:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     }else{
+ 450:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         return RESET;
+ 451:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     }
+ 452:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 1079              		.loc 1 452 1 view .LVU211
+ 1080 0006 14BF     		ite	ne
+ 1081 0008 0120     		movne	r0, #1
+ 1082              	.LVL48:
+ 1083              		.loc 1 452 1 view .LVU212
+ 1084 000a 0020     		moveq	r0, #0
+ 1085 000c 7047     		bx	lr
+ 1086              	.L96:
+ 1087 000e 00BF     		.align	2
+ 1088              	.L95:
+ 1089 0010 00400240 		.word	1073889280
+ 1090              		.cfi_endproc
+ 1091              	.LFE82:
+ 1093              		.section	.text.tsi_group0_cycle_get,"ax",%progbits
+ 1094              		.align	1
+ 1095              		.global	tsi_group0_cycle_get
+ 1096              		.syntax unified
+ 1097              		.thumb
+ 1098              		.thumb_func
+ 1099              		.fpu softvfp
+ 1101              	tsi_group0_cycle_get:
+ 1102              	.LFB83:
+ 453:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 454:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 455:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      get the cycle number for group0 as soon as a charge-transfer sequence completes  
+ARM GAS  /tmp/cc1XCVhl.s 			page 28
+
+
+ 456:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  none
+ 457:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 458:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     group0 cycle number  
+ 459:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 460:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** uint16_t tsi_group0_cycle_get(void)
+ 461:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 1103              		.loc 1 461 1 is_stmt 1 view -0
+ 1104              		.cfi_startproc
+ 1105              		@ args = 0, pretend = 0, frame = 0
+ 1106              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1107              		@ link register save eliminated.
+ 462:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     return (uint16_t)TSI_G0CYCN;
+ 1108              		.loc 1 462 5 view .LVU214
+ 1109              		.loc 1 462 22 is_stmt 0 view .LVU215
+ 1110 0000 014B     		ldr	r3, .L98
+ 1111 0002 586B     		ldr	r0, [r3, #52]
+ 463:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 1112              		.loc 1 463 1 view .LVU216
+ 1113 0004 80B2     		uxth	r0, r0
+ 1114 0006 7047     		bx	lr
+ 1115              	.L99:
+ 1116              		.align	2
+ 1117              	.L98:
+ 1118 0008 00400240 		.word	1073889280
+ 1119              		.cfi_endproc
+ 1120              	.LFE83:
+ 1122              		.section	.text.tsi_group1_cycle_get,"ax",%progbits
+ 1123              		.align	1
+ 1124              		.global	tsi_group1_cycle_get
+ 1125              		.syntax unified
+ 1126              		.thumb
+ 1127              		.thumb_func
+ 1128              		.fpu softvfp
+ 1130              	tsi_group1_cycle_get:
+ 1131              	.LFB84:
+ 464:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 465:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 466:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      get the cycle number for group1 as soon as a charge-transfer sequence completes  
+ 467:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  none
+ 468:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 469:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     group1 cycle number  
+ 470:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 471:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** uint16_t tsi_group1_cycle_get(void)
+ 472:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 1132              		.loc 1 472 1 is_stmt 1 view -0
+ 1133              		.cfi_startproc
+ 1134              		@ args = 0, pretend = 0, frame = 0
+ 1135              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1136              		@ link register save eliminated.
+ 473:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     return (uint16_t)TSI_G1CYCN;
+ 1137              		.loc 1 473 5 view .LVU218
+ 1138              		.loc 1 473 22 is_stmt 0 view .LVU219
+ 1139 0000 014B     		ldr	r3, .L101
+ 1140 0002 986B     		ldr	r0, [r3, #56]
+ 474:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 1141              		.loc 1 474 1 view .LVU220
+ 1142 0004 80B2     		uxth	r0, r0
+ARM GAS  /tmp/cc1XCVhl.s 			page 29
+
+
+ 1143 0006 7047     		bx	lr
+ 1144              	.L102:
+ 1145              		.align	2
+ 1146              	.L101:
+ 1147 0008 00400240 		.word	1073889280
+ 1148              		.cfi_endproc
+ 1149              	.LFE84:
+ 1151              		.section	.text.tsi_group2_cycle_get,"ax",%progbits
+ 1152              		.align	1
+ 1153              		.global	tsi_group2_cycle_get
+ 1154              		.syntax unified
+ 1155              		.thumb
+ 1156              		.thumb_func
+ 1157              		.fpu softvfp
+ 1159              	tsi_group2_cycle_get:
+ 1160              	.LFB85:
+ 475:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 476:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 477:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      get the cycle number for group2 as soon as a charge-transfer sequence completes  
+ 478:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  none
+ 479:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 480:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     group2 cycle number  
+ 481:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 482:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** uint16_t tsi_group2_cycle_get(void)
+ 483:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 1161              		.loc 1 483 1 is_stmt 1 view -0
+ 1162              		.cfi_startproc
+ 1163              		@ args = 0, pretend = 0, frame = 0
+ 1164              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1165              		@ link register save eliminated.
+ 484:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     return (uint16_t)TSI_G2CYCN;
+ 1166              		.loc 1 484 5 view .LVU222
+ 1167              		.loc 1 484 22 is_stmt 0 view .LVU223
+ 1168 0000 014B     		ldr	r3, .L104
+ 1169 0002 D86B     		ldr	r0, [r3, #60]
+ 485:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 1170              		.loc 1 485 1 view .LVU224
+ 1171 0004 80B2     		uxth	r0, r0
+ 1172 0006 7047     		bx	lr
+ 1173              	.L105:
+ 1174              		.align	2
+ 1175              	.L104:
+ 1176 0008 00400240 		.word	1073889280
+ 1177              		.cfi_endproc
+ 1178              	.LFE85:
+ 1180              		.section	.text.tsi_group3_cycle_get,"ax",%progbits
+ 1181              		.align	1
+ 1182              		.global	tsi_group3_cycle_get
+ 1183              		.syntax unified
+ 1184              		.thumb
+ 1185              		.thumb_func
+ 1186              		.fpu softvfp
+ 1188              	tsi_group3_cycle_get:
+ 1189              	.LFB86:
+ 486:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 487:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 488:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      get the cycle number for group3 as soon as a charge-transfer sequence completes  
+ARM GAS  /tmp/cc1XCVhl.s 			page 30
+
+
+ 489:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  none
+ 490:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 491:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     group3 cycle number  
+ 492:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 493:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** uint16_t tsi_group3_cycle_get(void)
+ 494:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 1190              		.loc 1 494 1 is_stmt 1 view -0
+ 1191              		.cfi_startproc
+ 1192              		@ args = 0, pretend = 0, frame = 0
+ 1193              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1194              		@ link register save eliminated.
+ 495:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     return (uint16_t)TSI_G3CYCN;
+ 1195              		.loc 1 495 5 view .LVU226
+ 1196              		.loc 1 495 22 is_stmt 0 view .LVU227
+ 1197 0000 014B     		ldr	r3, .L107
+ 1198 0002 186C     		ldr	r0, [r3, #64]
+ 496:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 1199              		.loc 1 496 1 view .LVU228
+ 1200 0004 80B2     		uxth	r0, r0
+ 1201 0006 7047     		bx	lr
+ 1202              	.L108:
+ 1203              		.align	2
+ 1204              	.L107:
+ 1205 0008 00400240 		.word	1073889280
+ 1206              		.cfi_endproc
+ 1207              	.LFE86:
+ 1209              		.section	.text.tsi_group4_cycle_get,"ax",%progbits
+ 1210              		.align	1
+ 1211              		.global	tsi_group4_cycle_get
+ 1212              		.syntax unified
+ 1213              		.thumb
+ 1214              		.thumb_func
+ 1215              		.fpu softvfp
+ 1217              	tsi_group4_cycle_get:
+ 1218              	.LFB87:
+ 497:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 498:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 499:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      get the cycle number for group4 as soon as a charge-transfer sequence completes  
+ 500:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  none
+ 501:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 502:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     group4 cycle number  
+ 503:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 504:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** uint16_t tsi_group4_cycle_get(void)
+ 505:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 1219              		.loc 1 505 1 is_stmt 1 view -0
+ 1220              		.cfi_startproc
+ 1221              		@ args = 0, pretend = 0, frame = 0
+ 1222              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1223              		@ link register save eliminated.
+ 506:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     return (uint16_t)TSI_G4CYCN;
+ 1224              		.loc 1 506 5 view .LVU230
+ 1225              		.loc 1 506 22 is_stmt 0 view .LVU231
+ 1226 0000 014B     		ldr	r3, .L110
+ 1227 0002 586C     		ldr	r0, [r3, #68]
+ 507:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 1228              		.loc 1 507 1 view .LVU232
+ 1229 0004 80B2     		uxth	r0, r0
+ARM GAS  /tmp/cc1XCVhl.s 			page 31
+
+
+ 1230 0006 7047     		bx	lr
+ 1231              	.L111:
+ 1232              		.align	2
+ 1233              	.L110:
+ 1234 0008 00400240 		.word	1073889280
+ 1235              		.cfi_endproc
+ 1236              	.LFE87:
+ 1238              		.section	.text.tsi_group5_cycle_get,"ax",%progbits
+ 1239              		.align	1
+ 1240              		.global	tsi_group5_cycle_get
+ 1241              		.syntax unified
+ 1242              		.thumb
+ 1243              		.thumb_func
+ 1244              		.fpu softvfp
+ 1246              	tsi_group5_cycle_get:
+ 1247              	.LFB88:
+ 508:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
+ 509:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
+ 510:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      get the cycle number for group5 as soon as a charge-transfer sequence completes  
+ 511:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  none
+ 512:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
+ 513:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     group5 cycle number  
+ 514:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** */
+ 515:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** uint16_t tsi_group5_cycle_get(void)
+ 516:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** {
+ 1248              		.loc 1 516 1 is_stmt 1 view -0
+ 1249              		.cfi_startproc
+ 1250              		@ args = 0, pretend = 0, frame = 0
+ 1251              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1252              		@ link register save eliminated.
+ 517:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     return (uint16_t)TSI_G5CYCN;
+ 1253              		.loc 1 517 5 view .LVU234
+ 1254              		.loc 1 517 22 is_stmt 0 view .LVU235
+ 1255 0000 014B     		ldr	r3, .L113
+ 1256 0002 986C     		ldr	r0, [r3, #72]
+ 518:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
+ 1257              		.loc 1 518 1 view .LVU236
+ 1258 0004 80B2     		uxth	r0, r0
+ 1259 0006 7047     		bx	lr
+ 1260              	.L114:
+ 1261              		.align	2
+ 1262              	.L113:
+ 1263 0008 00400240 		.word	1073889280
+ 1264              		.cfi_endproc
+ 1265              	.LFE88:
+ 1267              		.text
+ 1268              	.Letext0:
+ 1269              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
+ 1270              		.file 3 "Drivers/CMSIS/Include/gd32f1x0.h"
+ 1271              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
+ARM GAS  /tmp/cc1XCVhl.s 			page 32
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 gd32f1x0_tsi.c
+     /tmp/cc1XCVhl.s:16     .text.tsi_deinit:0000000000000000 $t
+     /tmp/cc1XCVhl.s:24     .text.tsi_deinit:0000000000000000 tsi_deinit
+     /tmp/cc1XCVhl.s:57     .text.tsi_init:0000000000000000 $t
+     /tmp/cc1XCVhl.s:64     .text.tsi_init:0000000000000000 tsi_init
+     /tmp/cc1XCVhl.s:120    .text.tsi_init:000000000000001c $d
+     /tmp/cc1XCVhl.s:126    .text.tsi_sample_pin_enable:0000000000000000 $t
+     /tmp/cc1XCVhl.s:133    .text.tsi_sample_pin_enable:0000000000000000 tsi_sample_pin_enable
+     /tmp/cc1XCVhl.s:160    .text.tsi_sample_pin_enable:0000000000000010 $d
+     /tmp/cc1XCVhl.s:165    .text.tsi_sample_pin_disable:0000000000000000 $t
+     /tmp/cc1XCVhl.s:172    .text.tsi_sample_pin_disable:0000000000000000 tsi_sample_pin_disable
+     /tmp/cc1XCVhl.s:199    .text.tsi_sample_pin_disable:0000000000000014 $d
+     /tmp/cc1XCVhl.s:204    .text.tsi_channel_pin_enable:0000000000000000 $t
+     /tmp/cc1XCVhl.s:211    .text.tsi_channel_pin_enable:0000000000000000 tsi_channel_pin_enable
+     /tmp/cc1XCVhl.s:230    .text.tsi_channel_pin_enable:000000000000000c $d
+     /tmp/cc1XCVhl.s:235    .text.tsi_channel_pin_disable:0000000000000000 $t
+     /tmp/cc1XCVhl.s:242    .text.tsi_channel_pin_disable:0000000000000000 tsi_channel_pin_disable
+     /tmp/cc1XCVhl.s:261    .text.tsi_channel_pin_disable:000000000000000c $d
+     /tmp/cc1XCVhl.s:266    .text.tsi_plus_config:0000000000000000 $t
+     /tmp/cc1XCVhl.s:273    .text.tsi_plus_config:0000000000000000 tsi_plus_config
+     /tmp/cc1XCVhl.s:323    .text.tsi_plus_config:0000000000000020 $d
+     /tmp/cc1XCVhl.s:328    .text.tsi_sofeware_mode_config:0000000000000000 $t
+     /tmp/cc1XCVhl.s:335    .text.tsi_sofeware_mode_config:0000000000000000 tsi_sofeware_mode_config
+     /tmp/cc1XCVhl.s:359    .text.tsi_sofeware_mode_config:0000000000000014 $d
+     /tmp/cc1XCVhl.s:364    .text.tsi_hardware_mode_config:0000000000000000 $t
+     /tmp/cc1XCVhl.s:371    .text.tsi_hardware_mode_config:0000000000000000 tsi_hardware_mode_config
+     /tmp/cc1XCVhl.s:413    .text.tsi_hardware_mode_config:0000000000000024 $d
+     /tmp/cc1XCVhl.s:418    .text.tsi_pin_mode_config:0000000000000000 $t
+     /tmp/cc1XCVhl.s:425    .text.tsi_pin_mode_config:0000000000000000 tsi_pin_mode_config
+     /tmp/cc1XCVhl.s:462    .text.tsi_pin_mode_config:000000000000001c $d
+     /tmp/cc1XCVhl.s:467    .text.tsi_max_number_config:0000000000000000 $t
+     /tmp/cc1XCVhl.s:474    .text.tsi_max_number_config:0000000000000000 tsi_max_number_config
+     /tmp/cc1XCVhl.s:512    .text.tsi_max_number_config:0000000000000014 $d
+     /tmp/cc1XCVhl.s:517    .text.tsi_software_start:0000000000000000 $t
+     /tmp/cc1XCVhl.s:524    .text.tsi_software_start:0000000000000000 tsi_software_start
+     /tmp/cc1XCVhl.s:542    .text.tsi_software_start:000000000000000c $d
+     /tmp/cc1XCVhl.s:547    .text.tsi_software_stop:0000000000000000 $t
+     /tmp/cc1XCVhl.s:554    .text.tsi_software_stop:0000000000000000 tsi_software_stop
+     /tmp/cc1XCVhl.s:572    .text.tsi_software_stop:000000000000000c $d
+     /tmp/cc1XCVhl.s:577    .text.tsi_enable:0000000000000000 $t
+     /tmp/cc1XCVhl.s:584    .text.tsi_enable:0000000000000000 tsi_enable
+     /tmp/cc1XCVhl.s:602    .text.tsi_enable:000000000000000c $d
+     /tmp/cc1XCVhl.s:607    .text.tsi_disable:0000000000000000 $t
+     /tmp/cc1XCVhl.s:614    .text.tsi_disable:0000000000000000 tsi_disable
+     /tmp/cc1XCVhl.s:632    .text.tsi_disable:000000000000000c $d
+     /tmp/cc1XCVhl.s:637    .text.tsi_extend_charge_config:0000000000000000 $t
+     /tmp/cc1XCVhl.s:644    .text.tsi_extend_charge_config:0000000000000000 tsi_extend_charge_config
+     /tmp/cc1XCVhl.s:737    .text.tsi_extend_charge_config:0000000000000044 $d
+     /tmp/cc1XCVhl.s:743    .text.tsi_interrupt_enable:0000000000000000 $t
+     /tmp/cc1XCVhl.s:750    .text.tsi_interrupt_enable:0000000000000000 tsi_interrupt_enable
+     /tmp/cc1XCVhl.s:769    .text.tsi_interrupt_enable:000000000000000c $d
+     /tmp/cc1XCVhl.s:774    .text.tsi_interrupt_disable:0000000000000000 $t
+     /tmp/cc1XCVhl.s:781    .text.tsi_interrupt_disable:0000000000000000 tsi_interrupt_disable
+     /tmp/cc1XCVhl.s:800    .text.tsi_interrupt_disable:000000000000000c $d
+     /tmp/cc1XCVhl.s:805    .text.tsi_interrupt_flag_clear:0000000000000000 $t
+     /tmp/cc1XCVhl.s:812    .text.tsi_interrupt_flag_clear:0000000000000000 tsi_interrupt_flag_clear
+ARM GAS  /tmp/cc1XCVhl.s 			page 33
+
+
+     /tmp/cc1XCVhl.s:831    .text.tsi_interrupt_flag_clear:000000000000000c $d
+     /tmp/cc1XCVhl.s:836    .text.tsi_interrupt_flag_get:0000000000000000 $t
+     /tmp/cc1XCVhl.s:843    .text.tsi_interrupt_flag_get:0000000000000000 tsi_interrupt_flag_get
+     /tmp/cc1XCVhl.s:867    .text.tsi_interrupt_flag_get:0000000000000010 $d
+     /tmp/cc1XCVhl.s:872    .text.tsi_hysteresis_on:0000000000000000 $t
+     /tmp/cc1XCVhl.s:879    .text.tsi_hysteresis_on:0000000000000000 tsi_hysteresis_on
+     /tmp/cc1XCVhl.s:898    .text.tsi_hysteresis_on:000000000000000c $d
+     /tmp/cc1XCVhl.s:903    .text.tsi_hysteresis_off:0000000000000000 $t
+     /tmp/cc1XCVhl.s:910    .text.tsi_hysteresis_off:0000000000000000 tsi_hysteresis_off
+     /tmp/cc1XCVhl.s:929    .text.tsi_hysteresis_off:000000000000000c $d
+     /tmp/cc1XCVhl.s:934    .text.tsi_analog_on:0000000000000000 $t
+     /tmp/cc1XCVhl.s:941    .text.tsi_analog_on:0000000000000000 tsi_analog_on
+     /tmp/cc1XCVhl.s:960    .text.tsi_analog_on:000000000000000c $d
+     /tmp/cc1XCVhl.s:965    .text.tsi_analog_off:0000000000000000 $t
+     /tmp/cc1XCVhl.s:972    .text.tsi_analog_off:0000000000000000 tsi_analog_off
+     /tmp/cc1XCVhl.s:991    .text.tsi_analog_off:000000000000000c $d
+     /tmp/cc1XCVhl.s:996    .text.tsi_group_enable:0000000000000000 $t
+     /tmp/cc1XCVhl.s:1003   .text.tsi_group_enable:0000000000000000 tsi_group_enable
+     /tmp/cc1XCVhl.s:1022   .text.tsi_group_enable:000000000000000c $d
+     /tmp/cc1XCVhl.s:1027   .text.tsi_group_disable:0000000000000000 $t
+     /tmp/cc1XCVhl.s:1034   .text.tsi_group_disable:0000000000000000 tsi_group_disable
+     /tmp/cc1XCVhl.s:1053   .text.tsi_group_disable:000000000000000c $d
+     /tmp/cc1XCVhl.s:1058   .text.tsi_group_status_get:0000000000000000 $t
+     /tmp/cc1XCVhl.s:1065   .text.tsi_group_status_get:0000000000000000 tsi_group_status_get
+     /tmp/cc1XCVhl.s:1089   .text.tsi_group_status_get:0000000000000010 $d
+     /tmp/cc1XCVhl.s:1094   .text.tsi_group0_cycle_get:0000000000000000 $t
+     /tmp/cc1XCVhl.s:1101   .text.tsi_group0_cycle_get:0000000000000000 tsi_group0_cycle_get
+     /tmp/cc1XCVhl.s:1118   .text.tsi_group0_cycle_get:0000000000000008 $d
+     /tmp/cc1XCVhl.s:1123   .text.tsi_group1_cycle_get:0000000000000000 $t
+     /tmp/cc1XCVhl.s:1130   .text.tsi_group1_cycle_get:0000000000000000 tsi_group1_cycle_get
+     /tmp/cc1XCVhl.s:1147   .text.tsi_group1_cycle_get:0000000000000008 $d
+     /tmp/cc1XCVhl.s:1152   .text.tsi_group2_cycle_get:0000000000000000 $t
+     /tmp/cc1XCVhl.s:1159   .text.tsi_group2_cycle_get:0000000000000000 tsi_group2_cycle_get
+     /tmp/cc1XCVhl.s:1176   .text.tsi_group2_cycle_get:0000000000000008 $d
+     /tmp/cc1XCVhl.s:1181   .text.tsi_group3_cycle_get:0000000000000000 $t
+     /tmp/cc1XCVhl.s:1188   .text.tsi_group3_cycle_get:0000000000000000 tsi_group3_cycle_get
+     /tmp/cc1XCVhl.s:1205   .text.tsi_group3_cycle_get:0000000000000008 $d
+     /tmp/cc1XCVhl.s:1210   .text.tsi_group4_cycle_get:0000000000000000 $t
+     /tmp/cc1XCVhl.s:1217   .text.tsi_group4_cycle_get:0000000000000000 tsi_group4_cycle_get
+     /tmp/cc1XCVhl.s:1234   .text.tsi_group4_cycle_get:0000000000000008 $d
+     /tmp/cc1XCVhl.s:1239   .text.tsi_group5_cycle_get:0000000000000000 $t
+     /tmp/cc1XCVhl.s:1246   .text.tsi_group5_cycle_get:0000000000000000 tsi_group5_cycle_get
+     /tmp/cc1XCVhl.s:1263   .text.tsi_group5_cycle_get:0000000000000008 $d
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable
