@@ -305,7 +305,11 @@ void handle_usart(void) {
     #ifdef SERIAL_CONTROL
         if (main_loop_counter % 5 == 0 && dma_transfer_number_get(USART1_TX_DMA_CH) == 0) {     // Check if DMA channel counter is 0 (meaning all data has been transferred)
             sideboard_imu.start = (uint16_t)SERIAL_START_FRAME;
-
+            sideboard_imu.cmd1 = (int16_t)cmd1;
+            sideboard_imu.cmd2 = (int16_t)cmd2;
+            sideboard_imu.pitch = (int16_t)mpu.euler.pitch;
+            sideboard_imu.dPitch = (int16_t)mpu.gyro.y;
+  
             sideboard_imu.gyro_x = (int16_t)mpu.gyro.x;
             sideboard_imu.gyro_y = (int16_t)mpu.gyro.y;
             sideboard_imu.gyro_z = (int16_t)mpu.gyro.z;

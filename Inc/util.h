@@ -37,6 +37,10 @@ typedef struct{
 
 typedef struct{
     uint16_t start;
+    int16_t   cmd1;
+    int16_t   cmd2;
+    int16_t   pitch;
+    int16_t   dPitch;     
     int16_t gyro_x;      // mpu.gyro.x
     int16_t gyro_y;      // mpu.gyro.y  
     int16_t gyro_z;      // mpu.gyro.z
