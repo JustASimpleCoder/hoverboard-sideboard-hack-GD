@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccTfsfNT.s 			page 1
+ARM GAS  /tmp/ccG4HokV.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccTfsfNT.s 			page 1
   30:Src/main.c    **** #include "mpu6050_dmp.h"
   31:Src/main.c    **** 
   32:Src/main.c    **** uint32_t     main_loop_counter;                         // main loop counter to perform task schedu
-ARM GAS  /tmp/ccTfsfNT.s 			page 2
+ARM GAS  /tmp/ccG4HokV.s 			page 2
 
 
   33:Src/main.c    **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccTfsfNT.s 			page 1
   51:Src/main.c    ****         delay_1ms(DELAY_IN_MAIN_LOOP);
   52:Src/main.c    **** 
   53:Src/main.c    ****         handle_mpu6050();                               // Handle of the MPU-6050 IMU sensor
-ARM GAS  /tmp/ccTfsfNT.s 			page 3
+ARM GAS  /tmp/ccG4HokV.s 			page 3
 
 
   54:Src/main.c    ****         handle_sensors();                               // Handle of the optical sensors
@@ -178,23 +178,23 @@ ARM GAS  /tmp/ccTfsfNT.s 			page 1
  107              		.file 2 "/usr/include/newlib/machine/_default_types.h"
  108              		.file 3 "/usr/include/newlib/sys/_stdint.h"
  109              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_dbg.h"
-ARM GAS  /tmp/ccTfsfNT.s 			page 4
+ARM GAS  /tmp/ccG4HokV.s 			page 4
 
 
  110              		.file 5 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
  111              		.file 6 "Inc/systick.h"
  112              		.file 7 "Inc/setup.h"
  113              		.file 8 "Inc/util.h"
-ARM GAS  /tmp/ccTfsfNT.s 			page 5
+ARM GAS  /tmp/ccG4HokV.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-     /tmp/ccTfsfNT.s:16     .text.startup.main:0000000000000000 $t
-     /tmp/ccTfsfNT.s:24     .text.startup.main:0000000000000000 main
-     /tmp/ccTfsfNT.s:92     .text.startup.main:0000000000000044 $d
-     /tmp/ccTfsfNT.s:103    .bss.main_loop_counter:0000000000000000 main_loop_counter
-     /tmp/ccTfsfNT.s:99     .bss.main_loop_counter:0000000000000000 $d
+     /tmp/ccG4HokV.s:16     .text.startup.main:0000000000000000 $t
+     /tmp/ccG4HokV.s:24     .text.startup.main:0000000000000000 main
+     /tmp/ccG4HokV.s:92     .text.startup.main:0000000000000044 $d
+     /tmp/ccG4HokV.s:103    .bss.main_loop_counter:0000000000000000 main_loop_counter
+     /tmp/ccG4HokV.s:99     .bss.main_loop_counter:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 systick_config

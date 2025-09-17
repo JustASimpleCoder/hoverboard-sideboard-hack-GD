@@ -295,7 +295,7 @@ void handle_sensors(void) {
 }
 
 
-mpu
+
 
 /*
  * Handle of the USART data

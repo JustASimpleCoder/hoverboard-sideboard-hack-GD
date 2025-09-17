@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc6wQGsJ.s 			page 1
+ARM GAS  /tmp/ccgCL59o.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
   26:Src/mpu6050_dmp.c **** #include "config.h"
   27:Src/mpu6050_dmp.c **** #include "mpu6050.h"
   28:Src/mpu6050_dmp.c **** #include "mpu6050_dmp.h"
-ARM GAS  /tmp/cc6wQGsJ.s 			page 2
+ARM GAS  /tmp/ccgCL59o.s 			page 2
 
 
   29:Src/mpu6050_dmp.c **** #include "mpu6050_dmpKey.h"
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
   83:Src/mpu6050_dmp.c **** #define SKIP_SWING_END_3        (1588)
   84:Src/mpu6050_dmp.c **** #define SKIP_SWING_END_2        (1566)
   85:Src/mpu6050_dmp.c **** #define TILTG75_START           (1672)
-ARM GAS  /tmp/cc6wQGsJ.s 			page 3
+ARM GAS  /tmp/ccgCL59o.s 			page 3
 
 
   86:Src/mpu6050_dmp.c **** #define CFG_6                   (2753)
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  140:Src/mpu6050_dmp.c **** #define D_1_232                 (256 + 232)
  141:Src/mpu6050_dmp.c **** #define D_1_236                 (256 + 236)
  142:Src/mpu6050_dmp.c **** #define D_1_240                 (256 + 240)
-ARM GAS  /tmp/cc6wQGsJ.s 			page 4
+ARM GAS  /tmp/ccgCL59o.s 			page 4
 
 
  143:Src/mpu6050_dmp.c **** #define D_1_244                 (256 + 244)
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  197:Src/mpu6050_dmp.c **** #define D_PEDSTD_PEAKTHRSH      (768 + 0x98)
  198:Src/mpu6050_dmp.c **** #define D_PEDSTD_TIML           (768 + 0x2A)
  199:Src/mpu6050_dmp.c **** #define D_PEDSTD_TIMH           (768 + 0x2E)
-ARM GAS  /tmp/cc6wQGsJ.s 			page 5
+ARM GAS  /tmp/ccgCL59o.s 			page 5
 
 
  200:Src/mpu6050_dmp.c **** #define D_PEDSTD_PEAK           (768 + 0X94)
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  254:Src/mpu6050_dmp.c ****     0x00, 0x00, 0x00, 0x25, 0x00, 0x00, 0x00, 0x00, 0x16, 0xa0, 0x00, 0x00, 0x00, 0x00, 0x10, 0x00,
  255:Src/mpu6050_dmp.c ****     0x00, 0x00, 0x10, 0x00, 0x00, 0x2f, 0x00, 0x00, 0x00, 0x00, 0x01, 0xf4, 0x00, 0x00, 0x10, 0x00,
  256:Src/mpu6050_dmp.c ****     /* bank # 2 */
-ARM GAS  /tmp/cc6wQGsJ.s 			page 6
+ARM GAS  /tmp/ccgCL59o.s 			page 6
 
 
  257:Src/mpu6050_dmp.c ****     0x00, 0x28, 0x00, 0x00, 0xff, 0xff, 0x45, 0x81, 0xff, 0xff, 0xfa, 0x72, 0x00, 0x00, 0x00, 0x00,
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  311:Src/mpu6050_dmp.c ****     0x41, 0xda, 0xa6, 0xc8, 0xf8, 0xd8, 0xb0, 0xb4, 0xb8, 0x82, 0xa8, 0x92, 0xf5, 0x2c, 0x54, 0x88,
  312:Src/mpu6050_dmp.c ****     0x98, 0xf1, 0x35, 0xd9, 0xf4, 0x18, 0xd8, 0xf1, 0xa2, 0xd0, 0xf8, 0xf9, 0xa8, 0x84, 0xd9, 0xc7,
  313:Src/mpu6050_dmp.c ****     0xdf, 0xf8, 0xf8, 0x83, 0xc5, 0xda, 0xdf, 0x69, 0xdf, 0x83, 0xc1, 0xd8, 0xf4, 0x01, 0x14, 0xf1,
-ARM GAS  /tmp/cc6wQGsJ.s 			page 7
+ARM GAS  /tmp/ccgCL59o.s 			page 7
 
 
  314:Src/mpu6050_dmp.c ****     0xa8, 0x82, 0x4e, 0xa8, 0x84, 0xf3, 0x11, 0xd1, 0x82, 0xf5, 0xd9, 0x92, 0x28, 0x97, 0x88, 0xf1,
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  368:Src/mpu6050_dmp.c ****     0xfa, 0xf9, 0x83, 0xa7, 0xd9, 0xc3, 0xc5, 0xc7, 0xf1, 0x88, 0x9b, 0xa7, 0x7a, 0xad, 0xf7, 0xde,
  369:Src/mpu6050_dmp.c ****     0xdf, 0xa4, 0xf8, 0x84, 0x94, 0x08, 0xa7, 0x97, 0xf3, 0x00, 0xae, 0xf2, 0x98, 0x19, 0xa4, 0x88,
  370:Src/mpu6050_dmp.c ****     0xc6, 0xa3, 0x94, 0x88, 0xf6, 0x32, 0xdf, 0xf2, 0x83, 0x93, 0xdb, 0x09, 0xd9, 0xf2, 0xaa, 0xdf,
-ARM GAS  /tmp/cc6wQGsJ.s 			page 8
+ARM GAS  /tmp/ccgCL59o.s 			page 8
 
 
  371:Src/mpu6050_dmp.c ****     0xd8, 0xd8, 0xae, 0xf8, 0xf9, 0xd1, 0xda, 0xf3, 0xa4, 0xde, 0xa7, 0xf1, 0x88, 0x9b, 0x7a, 0xd8,
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  425:Src/mpu6050_dmp.c ****     0xac, 0xde, 0x80, 0x92, 0xa2, 0xf2, 0x4c, 0x82, 0xa8, 0xf1, 0xca, 0xf2, 0x35, 0xf1, 0x96, 0x88,
  426:Src/mpu6050_dmp.c ****     0xa6, 0xd9, 0x00, 0xd8, 0xf1, 0xff
  427:Src/mpu6050_dmp.c **** };
-ARM GAS  /tmp/cc6wQGsJ.s 			page 9
+ARM GAS  /tmp/ccgCL59o.s 			page 9
 
 
  428:Src/mpu6050_dmp.c **** 
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  482:Src/mpu6050_dmp.c ****  *  The orientation is represented here as the output of
  483:Src/mpu6050_dmp.c ****  *  @e inv_orientation_matrix_to_scalar.
  484:Src/mpu6050_dmp.c ****  *  @param[in]  orient  Gyro and accel orientation in body frame.
-ARM GAS  /tmp/cc6wQGsJ.s 			page 10
+ARM GAS  /tmp/ccgCL59o.s 			page 10
 
 
  485:Src/mpu6050_dmp.c ****  *  @return     0 if successful.
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  539:Src/mpu6050_dmp.c ****  *  @param[in]  bias    Gyro biases in q16.
  540:Src/mpu6050_dmp.c ****  *  @return     0 if successful.
  541:Src/mpu6050_dmp.c ****  */
-ARM GAS  /tmp/cc6wQGsJ.s 			page 11
+ARM GAS  /tmp/ccgCL59o.s 			page 11
 
 
  542:Src/mpu6050_dmp.c **** int dmp_set_gyro_bias(long *bias)
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  596:Src/mpu6050_dmp.c ****     long accel_bias_body[3];
  597:Src/mpu6050_dmp.c ****     unsigned char regs[12];
  598:Src/mpu6050_dmp.c ****     long long accel_sf;
-ARM GAS  /tmp/cc6wQGsJ.s 			page 12
+ARM GAS  /tmp/ccgCL59o.s 			page 12
 
 
  599:Src/mpu6050_dmp.c ****     unsigned short accel_sens;
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  653:Src/mpu6050_dmp.c ****     if (rate > DMP_SAMPLE_RATE)
  654:Src/mpu6050_dmp.c ****         return -1;
  655:Src/mpu6050_dmp.c ****     div = DMP_SAMPLE_RATE / rate - 1;
-ARM GAS  /tmp/cc6wQGsJ.s 			page 13
+ARM GAS  /tmp/ccgCL59o.s 			page 13
 
 
  656:Src/mpu6050_dmp.c ****     tmp[0] = (unsigned char)((div >> 8) & 0xFF);
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  710:Src/mpu6050_dmp.c ****         break;
  711:Src/mpu6050_dmp.c ****     case 16:
  712:Src/mpu6050_dmp.c ****         dmp_thresh = (unsigned short)(scaled_thresh * 2048);
-ARM GAS  /tmp/cc6wQGsJ.s 			page 14
+ARM GAS  /tmp/ccgCL59o.s 			page 14
 
 
  713:Src/mpu6050_dmp.c ****         /* dmp_thresh * 0.75 */
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  767:Src/mpu6050_dmp.c ****  */
  768:Src/mpu6050_dmp.c **** int dmp_set_tap_count(unsigned char min_taps)
  769:Src/mpu6050_dmp.c **** {
-ARM GAS  /tmp/cc6wQGsJ.s 			page 15
+ARM GAS  /tmp/ccgCL59o.s 			page 15
 
 
  770:Src/mpu6050_dmp.c ****     unsigned char tmp;
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  824:Src/mpu6050_dmp.c ****     tmp[0] = (unsigned char)(((long)thresh_scaled >> 24) & 0xFF);
  825:Src/mpu6050_dmp.c ****     tmp[1] = (unsigned char)(((long)thresh_scaled >> 16) & 0xFF);
  826:Src/mpu6050_dmp.c ****     tmp[2] = (unsigned char)(((long)thresh_scaled >> 8) & 0xFF);
-ARM GAS  /tmp/cc6wQGsJ.s 			page 16
+ARM GAS  /tmp/ccgCL59o.s 			page 16
 
 
  827:Src/mpu6050_dmp.c ****     tmp[3] = (unsigned char)((long)thresh_scaled & 0xFF);
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  881:Src/mpu6050_dmp.c ****     count[0] = ((unsigned long)tmp[0] << 24) | ((unsigned long)tmp[1] << 16) |
  882:Src/mpu6050_dmp.c ****         ((unsigned long)tmp[2] << 8) | tmp[3];
  883:Src/mpu6050_dmp.c ****     return 0;
-ARM GAS  /tmp/cc6wQGsJ.s 			page 17
+ARM GAS  /tmp/ccgCL59o.s 			page 17
 
 
  884:Src/mpu6050_dmp.c **** }
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  938:Src/mpu6050_dmp.c ****     tmp[3] = (unsigned char)(time & 0xFF);
  939:Src/mpu6050_dmp.c ****     return mpu_write_mem(D_PEDSTD_TIMECTR, 4, tmp);
  940:Src/mpu6050_dmp.c **** }
-ARM GAS  /tmp/cc6wQGsJ.s 			page 18
+ARM GAS  /tmp/ccgCL59o.s 			page 18
 
 
  941:Src/mpu6050_dmp.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  995:Src/mpu6050_dmp.c **** 
  996:Src/mpu6050_dmp.c ****     /* Send gesture data to the FIFO. */
  997:Src/mpu6050_dmp.c ****     if (mask & (DMP_FEATURE_TAP | DMP_FEATURE_ANDROID_ORIENT))
-ARM GAS  /tmp/cc6wQGsJ.s 			page 19
+ARM GAS  /tmp/ccgCL59o.s 			page 19
 
 
  998:Src/mpu6050_dmp.c ****         tmp[0] = DINA20;
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
 1052:Src/mpu6050_dmp.c ****     if (mask & DMP_FEATURE_6X_LP_QUAT)
 1053:Src/mpu6050_dmp.c ****         dmp_enable_6x_lp_quat(1);
 1054:Src/mpu6050_dmp.c ****     else
-ARM GAS  /tmp/cc6wQGsJ.s 			page 20
+ARM GAS  /tmp/ccgCL59o.s 			page 20
 
 
 1055:Src/mpu6050_dmp.c ****         dmp_enable_6x_lp_quat(0);
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
   39              	.LCFI0:
   40              		.cfi_def_cfa_offset 24
   41              		.cfi_offset 14, -4
-ARM GAS  /tmp/cc6wQGsJ.s 			page 21
+ARM GAS  /tmp/ccgCL59o.s 			page 21
 
 
   42              	.LBB9:
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
   89              		.loc 1 476 5 view .LVU10
  476:Src/mpu6050_dmp.c ****         DMP_SAMPLE_RATE);
   90              		.loc 1 476 12 is_stmt 0 view .LVU11
-ARM GAS  /tmp/cc6wQGsJ.s 			page 22
+ARM GAS  /tmp/ccgCL59o.s 			page 22
 
 
   91 0000 C823     		movs	r3, #200
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  141              		.cfi_def_cfa_offset 32
  490:Src/mpu6050_dmp.c ****     const unsigned char accel_axes[3] = {DINA0C, DINAC9, DINA2C};
  142              		.loc 1 490 25 view .LVU18
-ARM GAS  /tmp/cc6wQGsJ.s 			page 23
+ARM GAS  /tmp/ccgCL59o.s 			page 23
 
 
  143 0006 1A88     		ldrh	r2, [r3]	@ unaligned
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  182              		.loc 1 495 18 view .LVU33
  183 0052 8DF80030 		strb	r3, [sp]
  496:Src/mpu6050_dmp.c ****     gyro_regs[2] = gyro_axes[(orient >> 6) & 3];
-ARM GAS  /tmp/cc6wQGsJ.s 			page 24
+ARM GAS  /tmp/ccgCL59o.s 			page 24
 
 
  184              		.loc 1 496 5 is_stmt 1 view .LVU34
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  220              		.loc 1 500 19 view .LVU52
  221 0092 8DF80630 		strb	r3, [sp, #6]
  503:Src/mpu6050_dmp.c ****         return -1;
-ARM GAS  /tmp/cc6wQGsJ.s 			page 25
+ARM GAS  /tmp/ccgCL59o.s 			page 25
 
 
  222              		.loc 1 503 5 is_stmt 1 view .LVU53
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  509:Src/mpu6050_dmp.c ****     if (orient & 4) {
  264              		.loc 1 509 5 view .LVU66
  265 00ca ADF80430 		strh	r3, [sp, #4]	@ movhi
-ARM GAS  /tmp/cc6wQGsJ.s 			page 26
+ARM GAS  /tmp/ccgCL59o.s 			page 26
 
 
  266 00ce 4FEA1343 		lsr	r3, r3, #16
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  302 0100 6A46     		mov	r2, sp
  303 0102 4FF48860 		mov	r0, #1088
  520:Src/mpu6050_dmp.c ****     }
-ARM GAS  /tmp/cc6wQGsJ.s 			page 27
+ARM GAS  /tmp/ccgCL59o.s 			page 27
 
 
  304              		.loc 1 520 23 view .LVU85
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  350              	dmp_set_gyro_bias:
  351              	.LVL9:
  352              	.LFB61:
-ARM GAS  /tmp/cc6wQGsJ.s 			page 28
+ARM GAS  /tmp/ccgCL59o.s 			page 28
 
 
  543:Src/mpu6050_dmp.c ****     long gyro_bias_body[3];
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  551:Src/mpu6050_dmp.c ****         gyro_bias_body[1] *= -1;
  390              		.loc 1 551 8 is_stmt 0 view .LVU113
  391 001c 9106     		lsls	r1, r2, #26
-ARM GAS  /tmp/cc6wQGsJ.s 			page 29
+ARM GAS  /tmp/ccgCL59o.s 			page 29
 
 
  552:Src/mpu6050_dmp.c ****     gyro_bias_body[2] = bias[(dmp.orient >> 6) & 3];
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  429 0044 A40F     		lsrs	r4, r4, #30
  430 0046 44EA8204 		orr	r4, r4, r2, lsl #2
  567:Src/mpu6050_dmp.c ****     regs[1] = (unsigned char)((gyro_bias_body[0] >> 16) & 0xFF);
-ARM GAS  /tmp/cc6wQGsJ.s 			page 30
+ARM GAS  /tmp/ccgCL59o.s 			page 30
 
 
  431              		.loc 1 567 50 view .LVU131
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  467              	.L31:
  572:Src/mpu6050_dmp.c **** 
  468              		.loc 1 572 16 view .LVU150
-ARM GAS  /tmp/cc6wQGsJ.s 			page 31
+ARM GAS  /tmp/ccgCL59o.s 			page 31
 
 
  469 0074 4FF0FF30 		mov	r0, #-1
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  507 009a FFF7FEFF 		bl	mpu_write_mem
  508              	.LVL23:
  578:Src/mpu6050_dmp.c ****         return -1;
-ARM GAS  /tmp/cc6wQGsJ.s 			page 32
+ARM GAS  /tmp/ccgCL59o.s 			page 32
 
 
  509              		.loc 1 578 8 view .LVU167
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  549              		.align	1
  550              		.global	dmp_set_accel_bias
  551              		.syntax unified
-ARM GAS  /tmp/cc6wQGsJ.s 			page 33
+ARM GAS  /tmp/ccgCL59o.s 			page 33
 
 
  552              		.thumb
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  592 0014 E403     		lsls	r4, r4, #15
  593              	.LVL28:
  605:Src/mpu6050_dmp.c ****     if (dmp.orient & 4)
-ARM GAS  /tmp/cc6wQGsJ.s 			page 34
+ARM GAS  /tmp/ccgCL59o.s 			page 34
 
 
  594              		.loc 1 605 5 is_stmt 1 view .LVU198
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  630              	.LVL32:
  620:Src/mpu6050_dmp.c ****     accel_bias_body[1] = (long)(((long long)accel_bias_body[1] * accel_sf) >> 30);
  631              		.loc 1 620 64 view .LVU217
-ARM GAS  /tmp/cc6wQGsJ.s 			page 35
+ARM GAS  /tmp/ccgCL59o.s 			page 35
 
 
  632 0040 04FB0500 		mla	r0, r4, r5, r0
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  669 0072 0816     		asrs	r0, r1, #24
  625:Src/mpu6050_dmp.c ****     regs[1] = (unsigned char)((accel_bias_body[0] >> 16) & 0xFF);
  670              		.loc 1 625 15 view .LVU235
-ARM GAS  /tmp/cc6wQGsJ.s 			page 36
+ARM GAS  /tmp/ccgCL59o.s 			page 36
 
 
  671 0074 8DF80400 		strb	r0, [sp, #4]
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  707 00a2 1A14     		asrs	r2, r3, #16
  634:Src/mpu6050_dmp.c ****     regs[10] = (unsigned char)((accel_bias_body[2] >> 8) & 0xFF);
  708              		.loc 1 634 15 view .LVU254
-ARM GAS  /tmp/cc6wQGsJ.s 			page 37
+ARM GAS  /tmp/ccgCL59o.s 			page 37
 
 
  709 00a4 8DF80D20 		strb	r2, [sp, #13]
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  638:Src/mpu6050_dmp.c **** 
  745              		.loc 1 638 1 view .LVU273
  746 00ca 00BF     		.align	2
-ARM GAS  /tmp/cc6wQGsJ.s 			page 38
+ARM GAS  /tmp/ccgCL59o.s 			page 38
 
 
  747              	.L56:
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  792              		.loc 1 653 8 view .LVU281
  793 0012 C82C     		cmp	r4, #200
  648:Src/mpu6050_dmp.c ****         0xc4, DINAAA, DINAF1, DINADF, DINADF, 0xBB, 0xAF, DINADF, DINADF};
-ARM GAS  /tmp/cc6wQGsJ.s 			page 39
+ARM GAS  /tmp/ccgCL59o.s 			page 39
 
 
  794              		.loc 1 648 25 view .LVU282
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  833 0036 8DF80530 		strb	r3, [sp, #5]
  658:Src/mpu6050_dmp.c ****         return -1;
  834              		.loc 1 658 5 is_stmt 1 view .LVU298
-ARM GAS  /tmp/cc6wQGsJ.s 			page 40
+ARM GAS  /tmp/ccgCL59o.s 			page 40
 
 
  658:Src/mpu6050_dmp.c ****         return -1;
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  881              		@ link register save eliminated.
  674:Src/mpu6050_dmp.c ****     return 0;
  882              		.loc 1 674 5 view .LVU309
-ARM GAS  /tmp/cc6wQGsJ.s 			page 41
+ARM GAS  /tmp/ccgCL59o.s 			page 41
 
 
  674:Src/mpu6050_dmp.c ****     return 0;
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  928              		.cfi_offset 4, -16
  929              		.cfi_offset 5, -12
  930              		.cfi_offset 6, -8
-ARM GAS  /tmp/cc6wQGsJ.s 			page 42
+ARM GAS  /tmp/ccgCL59o.s 			page 42
 
 
  931              		.cfi_offset 14, -4
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  695:Src/mpu6050_dmp.c ****     case 2:
  974              		.loc 1 695 5 is_stmt 1 view .LVU332
  975 002c 9DF80330 		ldrb	r3, [sp, #3]	@ zero_extendqisi2
-ARM GAS  /tmp/cc6wQGsJ.s 			page 43
+ARM GAS  /tmp/ccgCL59o.s 			page 43
 
 
  976 0030 082B     		cmp	r3, #8
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  714:Src/mpu6050_dmp.c ****         break;
  1018              		.loc 1 714 9 is_stmt 1 view .LVU345
  1019 0068 08E0     		b	.L82
-ARM GAS  /tmp/cc6wQGsJ.s 			page 44
+ARM GAS  /tmp/ccgCL59o.s 			page 44
 
 
  1020              	.LVL66:
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1058 0090 4FEA1023 		lsr	r3, r0, #8
  720:Src/mpu6050_dmp.c ****     tmp[2] = (unsigned char)(dmp_thresh_2 >> 8);
  1059              		.loc 1 720 14 view .LVU362
-ARM GAS  /tmp/cc6wQGsJ.s 			page 45
+ARM GAS  /tmp/ccgCL59o.s 			page 45
 
 
  1060 0094 8DF80550 		strb	r5, [sp, #5]
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1098              		.loc 1 736 8 is_stmt 0 view .LVU378
  1099 00c8 14F00400 		ands	r0, r4, #4
  1100 00cc 9FD0     		beq	.L67
-ARM GAS  /tmp/cc6wQGsJ.s 			page 46
+ARM GAS  /tmp/ccgCL59o.s 			page 46
 
 
  737:Src/mpu6050_dmp.c ****             return -1;
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1143              	.L77:
  725:Src/mpu6050_dmp.c ****             return -1;
  1144              		.loc 1 725 9 view .LVU391
-ARM GAS  /tmp/cc6wQGsJ.s 			page 47
+ARM GAS  /tmp/ccgCL59o.s 			page 47
 
 
  725:Src/mpu6050_dmp.c ****             return -1;
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1193              		.loc 1 752 5 view .LVU399
  754:Src/mpu6050_dmp.c ****         tmp |= 0x30;
  1194              		.loc 1 754 5 view .LVU400
-ARM GAS  /tmp/cc6wQGsJ.s 			page 48
+ARM GAS  /tmp/ccgCL59o.s 			page 48
 
 
  754:Src/mpu6050_dmp.c ****         tmp |= 0x30;
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1232 0032 43F00303 		orrmi	r3, r3, #3
  760:Src/mpu6050_dmp.c **** }
  1233              		.loc 1 760 12 view .LVU418
-ARM GAS  /tmp/cc6wQGsJ.s 			page 49
+ARM GAS  /tmp/ccgCL59o.s 			page 49
 
 
  1234 0036 4FF4A470 		mov	r0, #328
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1280 0008 0128     		cmp	r0, #1
  1281 000a 38BF     		it	cc
  1282 000c 0120     		movcc	r0, #1
-ARM GAS  /tmp/cc6wQGsJ.s 			page 50
+ARM GAS  /tmp/ccgCL59o.s 			page 50
 
 
  1283              	.LVL91:
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1328              		.cfi_offset 14, -4
  791:Src/mpu6050_dmp.c ****     tmp[0] = (unsigned char)(dmp_time >> 8);
  1329              		.loc 1 791 14 view .LVU440
-ARM GAS  /tmp/cc6wQGsJ.s 			page 51
+ARM GAS  /tmp/ccgCL59o.s 			page 51
 
 
  1330 0004 B0FBF3F0 		udiv	r0, r0, r3
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1374              		.loc 1 804 5 view .LVU452
  805:Src/mpu6050_dmp.c **** 
  1375              		.loc 1 805 5 view .LVU453
-ARM GAS  /tmp/cc6wQGsJ.s 			page 52
+ARM GAS  /tmp/ccgCL59o.s 			page 52
 
 
  807:Src/mpu6050_dmp.c ****     tmp[0] = (unsigned char)(dmp_time >> 8);
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1417              		.syntax unified
  1418              		.thumb
  1419              		.thumb_func
-ARM GAS  /tmp/cc6wQGsJ.s 			page 53
+ARM GAS  /tmp/ccgCL59o.s 			page 53
 
 
  1420              		.fpu softvfp
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  828:Src/mpu6050_dmp.c **** }
  1459              		.loc 1 828 12 view .LVU484
  1460 001e 01AA     		add	r2, sp, #4
-ARM GAS  /tmp/cc6wQGsJ.s 			page 54
+ARM GAS  /tmp/ccgCL59o.s 			page 54
 
 
  1461 0020 0421     		movs	r1, #4
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1505              		.loc 1 843 10 view .LVU496
  1506 0004 B0FBF3F0 		udiv	r0, r0, r3
  1507              	.LVL107:
-ARM GAS  /tmp/cc6wQGsJ.s 			page 55
+ARM GAS  /tmp/ccgCL59o.s 			page 55
 
 
  844:Src/mpu6050_dmp.c ****     tmp[1] = time & 0xFF;
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1551              		.loc 1 861 5 view .LVU509
  861:Src/mpu6050_dmp.c ****     tmp[0] = time >> 8;
  1552              		.loc 1 861 10 is_stmt 0 view .LVU510
-ARM GAS  /tmp/cc6wQGsJ.s 			page 56
+ARM GAS  /tmp/ccgCL59o.s 			page 56
 
 
  1553 0000 0523     		movs	r3, #5
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1597              	dmp_get_pedometer_step_count:
  1598              	.LVL114:
  1599              	.LFB73:
-ARM GAS  /tmp/cc6wQGsJ.s 			page 57
+ARM GAS  /tmp/ccgCL59o.s 			page 57
 
 
  873:Src/mpu6050_dmp.c ****     unsigned char tmp[4];
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  881:Src/mpu6050_dmp.c ****         ((unsigned long)tmp[2] << 8) | tmp[3];
  1643              		.loc 1 881 5 is_stmt 1 view .LVU534
  1644 001e 019B     		ldr	r3, [sp, #4]
-ARM GAS  /tmp/cc6wQGsJ.s 			page 58
+ARM GAS  /tmp/ccgCL59o.s 			page 58
 
 
  1645 0020 1BBA     		rev	r3, r3
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1687 000e 8DF80700 		strb	r0, [sp, #7]
  899:Src/mpu6050_dmp.c ****     tmp[3] = (unsigned char)(count & 0xFF);
  1688              		.loc 1 899 37 view .LVU549
-ARM GAS  /tmp/cc6wQGsJ.s 			page 59
+ARM GAS  /tmp/ccgCL59o.s 			page 59
 
 
  1689 0012 030A     		lsrs	r3, r0, #8
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1734              		.loc 1 912 8 view .LVU560
  1735 0002 0446     		mov	r4, r0
  1736 0004 18B9     		cbnz	r0, .L110
-ARM GAS  /tmp/cc6wQGsJ.s 			page 60
+ARM GAS  /tmp/ccgCL59o.s 			page 60
 
 
  1737              	.LVL123:
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1781              		.global	dmp_set_pedometer_walk_time
  1782              		.syntax unified
  1783              		.thumb
-ARM GAS  /tmp/cc6wQGsJ.s 			page 61
+ARM GAS  /tmp/ccgCL59o.s 			page 61
 
 
  1784              		.thumb_func
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1823 001c 01AA     		add	r2, sp, #4
  1824 001e 4FF47170 		mov	r0, #964
  1825              	.LVL129:
-ARM GAS  /tmp/cc6wQGsJ.s 			page 62
+ARM GAS  /tmp/ccgCL59o.s 			page 62
 
 
  937:Src/mpu6050_dmp.c ****     tmp[3] = (unsigned char)(time & 0xFF);
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1870              	.L116:
  1871 000a 00BF     		.align	2
  1872              	.L115:
-ARM GAS  /tmp/cc6wQGsJ.s 			page 63
+ARM GAS  /tmp/ccgCL59o.s 			page 63
 
 
  1873 000c 00000000 		.word	.LANCHOR1
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1921 000e 084A     		ldr	r2, .L119
  1922 0010 01AB     		add	r3, sp, #4
  1923 0012 1068     		ldr	r0, [r2]	@ unaligned
-ARM GAS  /tmp/cc6wQGsJ.s 			page 64
+ARM GAS  /tmp/ccgCL59o.s 			page 64
 
 
  1924              	.LVL135:
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  1965              		.cfi_startproc
  1966              		@ args = 0, pretend = 0, frame = 8
  1967              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cc6wQGsJ.s 			page 65
+ARM GAS  /tmp/ccgCL59o.s 			page 65
 
 
 1114:Src/mpu6050_dmp.c ****     unsigned char regs[4];
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  2007 002c 03B0     		add	sp, sp, #12
  2008              	.LCFI48:
  2009              		.cfi_remember_state
-ARM GAS  /tmp/cc6wQGsJ.s 			page 66
+ARM GAS  /tmp/ccgCL59o.s 			page 66
 
 
  2010              		.cfi_def_cfa_offset 4
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  2051 0006 8DF80430 		strb	r3, [sp, #4]
 1141:Src/mpu6050_dmp.c ****         regs[1] = DINA28;
  2052              		.loc 1 1141 9 is_stmt 1 view .LVU639
-ARM GAS  /tmp/cc6wQGsJ.s 			page 67
+ARM GAS  /tmp/ccgCL59o.s 			page 67
 
 
  2053              		.loc 1 1141 17 is_stmt 0 view .LVU640
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  2098              		.syntax unified
  2099              		.thumb
  2100              		.thumb_func
-ARM GAS  /tmp/cc6wQGsJ.s 			page 68
+ARM GAS  /tmp/ccgCL59o.s 			page 68
 
 
  2101              		.fpu softvfp
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  968:Src/mpu6050_dmp.c ****     mpu_write_mem(D_0_104, 4, tmp);
  2143              		.loc 1 968 12 view .LVU664
  2144 0020 8DF80730 		strb	r3, [sp, #7]
-ARM GAS  /tmp/cc6wQGsJ.s 			page 69
+ARM GAS  /tmp/ccgCL59o.s 			page 69
 
 
  969:Src/mpu6050_dmp.c **** 
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  982:Src/mpu6050_dmp.c ****         tmp[4] = 0xC4;
  2180              		.loc 1 982 5 is_stmt 1 view .LVU684
  983:Src/mpu6050_dmp.c ****         tmp[5] = 0xCC;
-ARM GAS  /tmp/cc6wQGsJ.s 			page 70
+ARM GAS  /tmp/ccgCL59o.s 			page 70
 
 
  2181              		.loc 1 983 9 view .LVU685
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  2216              		.loc 1 992 12 is_stmt 0 view .LVU704
  2217 0082 8DF80C30 		strb	r3, [sp, #12]
  993:Src/mpu6050_dmp.c ****     mpu_write_mem(CFG_15,10,tmp);
-ARM GAS  /tmp/cc6wQGsJ.s 			page 71
+ARM GAS  /tmp/ccgCL59o.s 			page 71
 
 
  2218              		.loc 1 993 5 is_stmt 1 view .LVU705
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
 1009:Src/mpu6050_dmp.c ****             tmp[0] = 0xB2;
  2258              		.loc 1 1009 9 is_stmt 1 view .LVU720
 1009:Src/mpu6050_dmp.c ****             tmp[0] = 0xB2;
-ARM GAS  /tmp/cc6wQGsJ.s 			page 72
+ARM GAS  /tmp/ccgCL59o.s 			page 72
 
 
  2259              		.loc 1 1009 12 is_stmt 0 view .LVU721
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  2297 00e4 0121     		movs	r1, #1
  2298 00e6 4FF40B60 		mov	r0, #2224
 1025:Src/mpu6050_dmp.c ****         mpu_write_mem(CFG_20, 1, tmp);
-ARM GAS  /tmp/cc6wQGsJ.s 			page 73
+ARM GAS  /tmp/ccgCL59o.s 			page 73
 
 
  2299              		.loc 1 1025 16 view .LVU738
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  2342 012c 0CBF     		ite	eq
  2343 012e D823     		moveq	r3, #216
  2344 0130 D923     		movne	r3, #217
-ARM GAS  /tmp/cc6wQGsJ.s 			page 74
+ARM GAS  /tmp/ccgCL59o.s 			page 74
 
 
 1045:Src/mpu6050_dmp.c **** 
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  2382              		.loc 1 1062 5 view .LVU766
 1062:Src/mpu6050_dmp.c ****         dmp.packet_length += 6;
  2383              		.loc 1 1062 8 is_stmt 0 view .LVU767
-ARM GAS  /tmp/cc6wQGsJ.s 			page 75
+ARM GAS  /tmp/ccgCL59o.s 			page 75
 
 
  2384 0166 B8F1000F 		cmp	r8, #0
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  2423              		@ sp needed
  2424 0190 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
  2425              	.L133:
-ARM GAS  /tmp/cc6wQGsJ.s 			page 76
+ARM GAS  /tmp/ccgCL59o.s 			page 76
 
 
  2426              	.LCFI55:
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
 1063:Src/mpu6050_dmp.c ****     if (mask & DMP_FEATURE_SEND_ANY_GYRO)
  2465              		.loc 1 1063 27 is_stmt 0 view .LVU798
  2466 01c4 0623     		movs	r3, #6
-ARM GAS  /tmp/cc6wQGsJ.s 			page 77
+ARM GAS  /tmp/ccgCL59o.s 			page 77
 
 
  2467 01c6 AB73     		strb	r3, [r5, #14]
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
 1177:Src/mpu6050_dmp.c ****     return 0;
 1178:Src/mpu6050_dmp.c **** }
 1179:Src/mpu6050_dmp.c **** 
-ARM GAS  /tmp/cc6wQGsJ.s 			page 78
+ARM GAS  /tmp/ccgCL59o.s 			page 78
 
 
 1180:Src/mpu6050_dmp.c **** /**
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
 1191:Src/mpu6050_dmp.c ****         {0xd8, 0xb1, 0xb9, 0xf3, 0x8b, 0xa3, 0x91, 0xb6, 0x09, 0xb4, 0xd9};
  2525              		.loc 1 1191 25 view .LVU809
  2526 0018 1880     		strh	r0, [r3]	@ unaligned
-ARM GAS  /tmp/cc6wQGsJ.s 			page 79
+ARM GAS  /tmp/ccgCL59o.s 			page 79
 
 
  2527 001a 9970     		strb	r1, [r3, #2]
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
 1196:Src/mpu6050_dmp.c ****     case DMP_INT_CONTINUOUS:
  2567              		.loc 1 1196 5 view .LVU819
  2568 0046 4FF0FF30 		mov	r0, #-1
-ARM GAS  /tmp/cc6wQGsJ.s 			page 80
+ARM GAS  /tmp/ccgCL59o.s 			page 80
 
 
  2569 004a F8E7     		b	.L169
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
 1237:Src/mpu6050_dmp.c ****     sensors[0] = 0;
  2595              		.loc 1 1237 5 view .LVU823
 1230:Src/mpu6050_dmp.c ****     unsigned char fifo_data[MAX_PACKET_LENGTH];
-ARM GAS  /tmp/cc6wQGsJ.s 			page 81
+ARM GAS  /tmp/ccgCL59o.s 			page 81
 
 
  2596              		.loc 1 1230 1 is_stmt 0 view .LVU824
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
 1241:Src/mpu6050_dmp.c ****         return -1;
 1242:Src/mpu6050_dmp.c **** 
 1243:Src/mpu6050_dmp.c ****     /* Parse DMP packet. */
-ARM GAS  /tmp/cc6wQGsJ.s 			page 82
+ARM GAS  /tmp/ccgCL59o.s 			page 82
 
 
 1244:Src/mpu6050_dmp.c ****     if (dmp.feature_mask & (DMP_FEATURE_LP_QUAT | DMP_FEATURE_6X_LP_QUAT)) {
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  2670              		.loc 1 1250 17 view .LVU848
  2671 0054 CBF80810 		str	r1, [fp, #8]
 1264:Src/mpu6050_dmp.c ****         quat_q14[3] = quat[3] >> 16;
-ARM GAS  /tmp/cc6wQGsJ.s 			page 83
+ARM GAS  /tmp/ccgCL59o.s 			page 83
 
 
  2672              		.loc 1 1264 31 view .LVU849
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  2708              	.LVL181:
  2709              	.L186:
  2710              		.loc 1 1273 13 is_stmt 0 view .LVU871
-ARM GAS  /tmp/cc6wQGsJ.s 			page 84
+ARM GAS  /tmp/ccgCL59o.s 			page 84
 
 
  2711              	.LBE17:
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  2754              		.loc 1 1281 37 view .LVU888
  2755 00b4 2031     		adds	r1, r1, #32
  2756 00b6 6944     		add	r1, sp, r1
-ARM GAS  /tmp/cc6wQGsJ.s 			page 85
+ARM GAS  /tmp/ccgCL59o.s 			page 85
 
 
  2757              		.loc 1 1281 21 view .LVU889
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
 1286:Src/mpu6050_dmp.c **** 
 1287:Src/mpu6050_dmp.c ****     if (dmp.feature_mask & DMP_FEATURE_SEND_ANY_GYRO) {
  2804              		.loc 1 1287 5 is_stmt 1 view .LVU908
-ARM GAS  /tmp/cc6wQGsJ.s 			page 86
+ARM GAS  /tmp/ccgCL59o.s 			page 86
 
 
  2805              		.loc 1 1287 8 is_stmt 0 view .LVU909
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  2856 014a C9B2     		uxtb	r1, r1
  2857              		.loc 1 1290 60 view .LVU930
  2858 014c 2031     		adds	r1, r1, #32
-ARM GAS  /tmp/cc6wQGsJ.s 			page 87
+ARM GAS  /tmp/ccgCL59o.s 			page 87
 
 
  2859 014e 6944     		add	r1, sp, r1
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  2896              	.LVL189:
 1162:Src/mpu6050_dmp.c **** 
  2897              		.loc 1 1162 5 is_stmt 1 view .LVU947
-ARM GAS  /tmp/cc6wQGsJ.s 			page 88
+ARM GAS  /tmp/ccgCL59o.s 			page 88
 
 
 1164:Src/mpu6050_dmp.c ****         unsigned char direction, count;
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  2934 0192 0BB1     		cbz	r3, .L183
 1174:Src/mpu6050_dmp.c ****     }
  2935              		.loc 1 1174 13 is_stmt 1 view .LVU966
-ARM GAS  /tmp/cc6wQGsJ.s 			page 89
+ARM GAS  /tmp/ccgCL59o.s 			page 89
 
 
  2936 0194 B009     		lsrs	r0, r6, #6
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
 1308:Src/mpu6050_dmp.c ****  *  \n TAP_X_UP
 1309:Src/mpu6050_dmp.c ****  *  \n TAP_X_DOWN
 1310:Src/mpu6050_dmp.c ****  *  \n TAP_Y_UP
-ARM GAS  /tmp/cc6wQGsJ.s 			page 90
+ARM GAS  /tmp/ccgCL59o.s 			page 90
 
 
 1311:Src/mpu6050_dmp.c ****  *  \n TAP_Y_DOWN
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3019              		@ link register save eliminated.
 1330:Src/mpu6050_dmp.c ****     dmp.android_orient_cb = func;
  3020              		.loc 1 1330 5 view .LVU979
-ARM GAS  /tmp/cc6wQGsJ.s 			page 91
+ARM GAS  /tmp/ccgCL59o.s 			page 91
 
 
  3021              		.loc 1 1330 27 is_stmt 0 view .LVU980
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3055      A2003E03 
  3055      30400000 
  3055      0002CAE3 
-ARM GAS  /tmp/cc6wQGsJ.s 			page 92
+ARM GAS  /tmp/ccgCL59o.s 			page 92
 
 
  3055      09
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3068      00
  3069 012f 00000010 		.ascii	"\000\000\000\020r\000\000\000@\000\000\000\000\000\000"
  3069      72000000 
-ARM GAS  /tmp/cc6wQGsJ.s 			page 93
+ARM GAS  /tmp/ccgCL59o.s 			page 93
 
 
  3069      40000000 
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3083 01f5 2F000000 		.ascii	"/\000\000\000\000\001\364\000\000\020\000\000(\000\000"
  3083      0001F400 
  3083      00100000 
-ARM GAS  /tmp/cc6wQGsJ.s 			page 94
+ARM GAS  /tmp/ccgCL59o.s 			page 94
 
 
  3083      280000
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3097 02b6 00000000 		.ascii	"\000\000\000\000\000\000\000\000\000\000\000\033\000"
  3097      00000000 
  3097      0000001B 
-ARM GAS  /tmp/cc6wQGsJ.s 			page 95
+ARM GAS  /tmp/ccgCL59o.s 			page 95
 
 
  3097      00
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3111 0377 00C7938F 		.ascii	"\000\307\223\217\235\036\033\034\031\000\000\000\000"
  3111      9D1E1B1C 
  3111      19000000 
-ARM GAS  /tmp/cc6wQGsJ.s 			page 96
+ARM GAS  /tmp/ccgCL59o.s 			page 96
 
 
  3111      00
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3125 0438 2D557DB0 		.ascii	"-U}\260\260\212\250\2266Vv\361\272\243\264\262\200\300"
  3125      B08AA896 
  3125      365676F1 
-ARM GAS  /tmp/cc6wQGsJ.s 			page 97
+ARM GAS  /tmp/ccgCL59o.s 			page 97
 
 
  3125      BAA3B4B2 
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3138      CDFCD80D 
  3138      DBA8FC
  3139 050c 2DF3D9BA 		.ascii	"-\363\331\272\246\370\332\272\246\336\330\272\262\266"
-ARM GAS  /tmp/cc6wQGsJ.s 			page 98
+ARM GAS  /tmp/ccgCL59o.s 			page 98
 
 
  3139      A6F8DABA 
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3152      F1
  3153 05ce AD8898CC 		.ascii	"\255\210\230\314\250\011\371\331\202\222\250\365|\361"
  3153      A809F9D9 
-ARM GAS  /tmp/cc6wQGsJ.s 			page 99
+ARM GAS  /tmp/ccgCL59o.s 			page 99
 
 
  3153      8292A8F5 
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3166      FAFC
  3167 0698 A869F9F9 		.ascii	"\250i\371\371\257\320\332\336\372\331\370\217\237\250"
  3167      AFD0DADE 
-ARM GAS  /tmp/cc6wQGsJ.s 			page 100
+ARM GAS  /tmp/ccgCL59o.s 			page 100
 
 
  3167      FAD9F88F 
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3181 0757 F8F8F8F8 		.ascii	"\370\370\370\370\370\330\361\270\366\265\271\260\212"
  3181      F8D8F1B8 
  3181      F6B5B9B0 
-ARM GAS  /tmp/cc6wQGsJ.s 			page 101
+ARM GAS  /tmp/ccgCL59o.s 			page 101
 
 
  3181      8A
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3195      DED8A8
  3196 0829 68DB70D9 		.ascii	"h\333p\331\337\337\240\337\337\330\361\250\210\220,"
  3196      DFDFA0DF 
-ARM GAS  /tmp/cc6wQGsJ.s 			page 102
+ARM GAS  /tmp/ccgCL59o.s 			page 102
 
 
  3196      DFD8F1A8 
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3210 08ef C7D8A181 		.ascii	"\307\330\241\201\224\370\030\362\260\211\254\303\305"
  3210      94F818F2 
  3210      B089ACC3 
-ARM GAS  /tmp/cc6wQGsJ.s 			page 103
+ARM GAS  /tmp/ccgCL59o.s 			page 103
 
 
  3210      C5
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3222      D9B087C4 
  3222      AAF1DFDF 
  3222      BB
-ARM GAS  /tmp/cc6wQGsJ.s 			page 104
+ARM GAS  /tmp/ccgCL59o.s 			page 104
 
 
  3223 09e1 AFDFDFB9 		.ascii	"\257\337\337\271\330\261\361\243\227\216`\337\260\204"
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3236      8B8B8BB0 
  3236      87
  3237 0a9e A3A3A3A3 		.ascii	"\243\243\243\243\262\213\266\233\362\243\243\243\243"
-ARM GAS  /tmp/cc6wQGsJ.s 			page 105
+ARM GAS  /tmp/ccgCL59o.s 			page 105
 
 
  3237      B28BB69B 
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3249      98D90C
  3250 0b61 D8A809D9 		.ascii	"\330\250\011\331\377\330\001\332\377\330\2259\251\332"
  3250      FFD801DA 
-ARM GAS  /tmp/cc6wQGsJ.s 			page 106
+ARM GAS  /tmp/ccgCL59o.s 			page 106
 
 
  3250      FFD89539 
@@ -6348,88 +6348,88 @@ ARM GAS  /tmp/cc6wQGsJ.s 			page 1
  3266              		.file 5 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
  3267              		.file 6 "Inc/mpu6050.h"
  3268              		.file 7 "Inc/systick.h"
-ARM GAS  /tmp/cc6wQGsJ.s 			page 107
+ARM GAS  /tmp/ccgCL59o.s 			page 107
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 mpu6050_dmp.c
-     /tmp/cc6wQGsJ.s:19     .text.dmp_enable_gyro_cal.part.0:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:26     .text.dmp_enable_gyro_cal.part.0:0000000000000000 dmp_enable_gyro_cal.part.0
-     /tmp/cc6wQGsJ.s:70     .text.dmp_enable_gyro_cal.part.0:0000000000000024 $d
-     /tmp/cc6wQGsJ.s:75     .text.dmp_load_motion_driver_firmware:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:82     .text.dmp_load_motion_driver_firmware:0000000000000000 dmp_load_motion_driver_firmware
-     /tmp/cc6wQGsJ.s:100    .text.dmp_load_motion_driver_firmware:0000000000000010 $d
-     /tmp/cc6wQGsJ.s:114    .text.dmp_set_orientation:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:121    .text.dmp_set_orientation:0000000000000000 dmp_set_orientation
-     /tmp/cc6wQGsJ.s:334    .text.dmp_set_orientation:000000000000012c $d
-     /tmp/cc6wQGsJ.s:343    .text.dmp_set_gyro_bias:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:350    .text.dmp_set_gyro_bias:0000000000000000 dmp_set_gyro_bias
-     /tmp/cc6wQGsJ.s:543    .text.dmp_set_gyro_bias:00000000000000c8 $d
-     /tmp/cc6wQGsJ.s:549    .text.dmp_set_accel_bias:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:556    .text.dmp_set_accel_bias:0000000000000000 dmp_set_accel_bias
-     /tmp/cc6wQGsJ.s:748    .text.dmp_set_accel_bias:00000000000000cc $d
-     /tmp/cc6wQGsJ.s:756    .text.dmp_set_fifo_rate:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:763    .text.dmp_set_fifo_rate:0000000000000000 dmp_set_fifo_rate
-     /tmp/cc6wQGsJ.s:861    .text.dmp_set_fifo_rate:0000000000000058 $d
-     /tmp/cc6wQGsJ.s:867    .text.dmp_get_fifo_rate:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:874    .text.dmp_get_fifo_rate:0000000000000000 dmp_get_fifo_rate
-     /tmp/cc6wQGsJ.s:897    .text.dmp_get_fifo_rate:000000000000000c $d
-     /tmp/cc6wQGsJ.s:906    .text.dmp_set_tap_thresh:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:913    .text.dmp_set_tap_thresh:0000000000000000 dmp_set_tap_thresh
-     /tmp/cc6wQGsJ.s:1170   .text.dmp_set_tap_thresh:0000000000000130 $d
-     /tmp/cc6wQGsJ.s:1179   .text.dmp_set_tap_axes:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:1186   .text.dmp_set_tap_axes:0000000000000000 dmp_set_tap_axes
-     /tmp/cc6wQGsJ.s:1253   .text.dmp_set_tap_count:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:1260   .text.dmp_set_tap_count:0000000000000000 dmp_set_tap_count
-     /tmp/cc6wQGsJ.s:1305   .text.dmp_set_tap_time:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:1312   .text.dmp_set_tap_time:0000000000000000 dmp_set_tap_time
-     /tmp/cc6wQGsJ.s:1360   .text.dmp_set_tap_time_multi:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:1367   .text.dmp_set_tap_time_multi:0000000000000000 dmp_set_tap_time_multi
-     /tmp/cc6wQGsJ.s:1415   .text.dmp_set_shake_reject_thresh:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:1422   .text.dmp_set_shake_reject_thresh:0000000000000000 dmp_set_shake_reject_thresh
-     /tmp/cc6wQGsJ.s:1482   .text.dmp_set_shake_reject_time:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:1489   .text.dmp_set_shake_reject_time:0000000000000000 dmp_set_shake_reject_time
-     /tmp/cc6wQGsJ.s:1536   .text.dmp_set_shake_reject_timeout:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:1543   .text.dmp_set_shake_reject_timeout:0000000000000000 dmp_set_shake_reject_timeout
-     /tmp/cc6wQGsJ.s:1590   .text.dmp_get_pedometer_step_count:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:1597   .text.dmp_get_pedometer_step_count:0000000000000000 dmp_get_pedometer_step_count
-     /tmp/cc6wQGsJ.s:1655   .text.dmp_set_pedometer_step_count:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:1662   .text.dmp_set_pedometer_step_count:0000000000000000 dmp_set_pedometer_step_count
-     /tmp/cc6wQGsJ.s:1712   .text.dmp_get_pedometer_walk_time:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:1719   .text.dmp_get_pedometer_walk_time:0000000000000000 dmp_get_pedometer_walk_time
-     /tmp/cc6wQGsJ.s:1780   .text.dmp_set_pedometer_walk_time:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:1787   .text.dmp_set_pedometer_walk_time:0000000000000000 dmp_set_pedometer_walk_time
-     /tmp/cc6wQGsJ.s:1843   .text.dmp_get_enabled_features:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:1850   .text.dmp_get_enabled_features:0000000000000000 dmp_get_enabled_features
-     /tmp/cc6wQGsJ.s:1873   .text.dmp_get_enabled_features:000000000000000c $d
-     /tmp/cc6wQGsJ.s:1881   .text.dmp_enable_gyro_cal:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:1888   .text.dmp_enable_gyro_cal:0000000000000000 dmp_enable_gyro_cal
-     /tmp/cc6wQGsJ.s:1949   .text.dmp_enable_gyro_cal:0000000000000030 $d
-     /tmp/cc6wQGsJ.s:1954   .text.dmp_enable_lp_quat:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:1961   .text.dmp_enable_lp_quat:0000000000000000 dmp_enable_lp_quat
-     /tmp/cc6wQGsJ.s:2025   .text.dmp_enable_6x_lp_quat:0000000000000000 $t
-ARM GAS  /tmp/cc6wQGsJ.s 			page 108
+     /tmp/ccgCL59o.s:19     .text.dmp_enable_gyro_cal.part.0:0000000000000000 $t
+     /tmp/ccgCL59o.s:26     .text.dmp_enable_gyro_cal.part.0:0000000000000000 dmp_enable_gyro_cal.part.0
+     /tmp/ccgCL59o.s:70     .text.dmp_enable_gyro_cal.part.0:0000000000000024 $d
+     /tmp/ccgCL59o.s:75     .text.dmp_load_motion_driver_firmware:0000000000000000 $t
+     /tmp/ccgCL59o.s:82     .text.dmp_load_motion_driver_firmware:0000000000000000 dmp_load_motion_driver_firmware
+     /tmp/ccgCL59o.s:100    .text.dmp_load_motion_driver_firmware:0000000000000010 $d
+     /tmp/ccgCL59o.s:114    .text.dmp_set_orientation:0000000000000000 $t
+     /tmp/ccgCL59o.s:121    .text.dmp_set_orientation:0000000000000000 dmp_set_orientation
+     /tmp/ccgCL59o.s:334    .text.dmp_set_orientation:000000000000012c $d
+     /tmp/ccgCL59o.s:343    .text.dmp_set_gyro_bias:0000000000000000 $t
+     /tmp/ccgCL59o.s:350    .text.dmp_set_gyro_bias:0000000000000000 dmp_set_gyro_bias
+     /tmp/ccgCL59o.s:543    .text.dmp_set_gyro_bias:00000000000000c8 $d
+     /tmp/ccgCL59o.s:549    .text.dmp_set_accel_bias:0000000000000000 $t
+     /tmp/ccgCL59o.s:556    .text.dmp_set_accel_bias:0000000000000000 dmp_set_accel_bias
+     /tmp/ccgCL59o.s:748    .text.dmp_set_accel_bias:00000000000000cc $d
+     /tmp/ccgCL59o.s:756    .text.dmp_set_fifo_rate:0000000000000000 $t
+     /tmp/ccgCL59o.s:763    .text.dmp_set_fifo_rate:0000000000000000 dmp_set_fifo_rate
+     /tmp/ccgCL59o.s:861    .text.dmp_set_fifo_rate:0000000000000058 $d
+     /tmp/ccgCL59o.s:867    .text.dmp_get_fifo_rate:0000000000000000 $t
+     /tmp/ccgCL59o.s:874    .text.dmp_get_fifo_rate:0000000000000000 dmp_get_fifo_rate
+     /tmp/ccgCL59o.s:897    .text.dmp_get_fifo_rate:000000000000000c $d
+     /tmp/ccgCL59o.s:906    .text.dmp_set_tap_thresh:0000000000000000 $t
+     /tmp/ccgCL59o.s:913    .text.dmp_set_tap_thresh:0000000000000000 dmp_set_tap_thresh
+     /tmp/ccgCL59o.s:1170   .text.dmp_set_tap_thresh:0000000000000130 $d
+     /tmp/ccgCL59o.s:1179   .text.dmp_set_tap_axes:0000000000000000 $t
+     /tmp/ccgCL59o.s:1186   .text.dmp_set_tap_axes:0000000000000000 dmp_set_tap_axes
+     /tmp/ccgCL59o.s:1253   .text.dmp_set_tap_count:0000000000000000 $t
+     /tmp/ccgCL59o.s:1260   .text.dmp_set_tap_count:0000000000000000 dmp_set_tap_count
+     /tmp/ccgCL59o.s:1305   .text.dmp_set_tap_time:0000000000000000 $t
+     /tmp/ccgCL59o.s:1312   .text.dmp_set_tap_time:0000000000000000 dmp_set_tap_time
+     /tmp/ccgCL59o.s:1360   .text.dmp_set_tap_time_multi:0000000000000000 $t
+     /tmp/ccgCL59o.s:1367   .text.dmp_set_tap_time_multi:0000000000000000 dmp_set_tap_time_multi
+     /tmp/ccgCL59o.s:1415   .text.dmp_set_shake_reject_thresh:0000000000000000 $t
+     /tmp/ccgCL59o.s:1422   .text.dmp_set_shake_reject_thresh:0000000000000000 dmp_set_shake_reject_thresh
+     /tmp/ccgCL59o.s:1482   .text.dmp_set_shake_reject_time:0000000000000000 $t
+     /tmp/ccgCL59o.s:1489   .text.dmp_set_shake_reject_time:0000000000000000 dmp_set_shake_reject_time
+     /tmp/ccgCL59o.s:1536   .text.dmp_set_shake_reject_timeout:0000000000000000 $t
+     /tmp/ccgCL59o.s:1543   .text.dmp_set_shake_reject_timeout:0000000000000000 dmp_set_shake_reject_timeout
+     /tmp/ccgCL59o.s:1590   .text.dmp_get_pedometer_step_count:0000000000000000 $t
+     /tmp/ccgCL59o.s:1597   .text.dmp_get_pedometer_step_count:0000000000000000 dmp_get_pedometer_step_count
+     /tmp/ccgCL59o.s:1655   .text.dmp_set_pedometer_step_count:0000000000000000 $t
+     /tmp/ccgCL59o.s:1662   .text.dmp_set_pedometer_step_count:0000000000000000 dmp_set_pedometer_step_count
+     /tmp/ccgCL59o.s:1712   .text.dmp_get_pedometer_walk_time:0000000000000000 $t
+     /tmp/ccgCL59o.s:1719   .text.dmp_get_pedometer_walk_time:0000000000000000 dmp_get_pedometer_walk_time
+     /tmp/ccgCL59o.s:1780   .text.dmp_set_pedometer_walk_time:0000000000000000 $t
+     /tmp/ccgCL59o.s:1787   .text.dmp_set_pedometer_walk_time:0000000000000000 dmp_set_pedometer_walk_time
+     /tmp/ccgCL59o.s:1843   .text.dmp_get_enabled_features:0000000000000000 $t
+     /tmp/ccgCL59o.s:1850   .text.dmp_get_enabled_features:0000000000000000 dmp_get_enabled_features
+     /tmp/ccgCL59o.s:1873   .text.dmp_get_enabled_features:000000000000000c $d
+     /tmp/ccgCL59o.s:1881   .text.dmp_enable_gyro_cal:0000000000000000 $t
+     /tmp/ccgCL59o.s:1888   .text.dmp_enable_gyro_cal:0000000000000000 dmp_enable_gyro_cal
+     /tmp/ccgCL59o.s:1949   .text.dmp_enable_gyro_cal:0000000000000030 $d
+     /tmp/ccgCL59o.s:1954   .text.dmp_enable_lp_quat:0000000000000000 $t
+     /tmp/ccgCL59o.s:1961   .text.dmp_enable_lp_quat:0000000000000000 dmp_enable_lp_quat
+     /tmp/ccgCL59o.s:2025   .text.dmp_enable_6x_lp_quat:0000000000000000 $t
+ARM GAS  /tmp/ccgCL59o.s 			page 108
 
 
-     /tmp/cc6wQGsJ.s:2032   .text.dmp_enable_6x_lp_quat:0000000000000000 dmp_enable_6x_lp_quat
-     /tmp/cc6wQGsJ.s:2096   .text.dmp_enable_feature:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:2103   .text.dmp_enable_feature:0000000000000000 dmp_enable_feature
-     /tmp/cc6wQGsJ.s:2472   .text.dmp_enable_feature:00000000000001cc $d
-     /tmp/cc6wQGsJ.s:2483   .text.dmp_set_interrupt_mode:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:2490   .text.dmp_set_interrupt_mode:0000000000000000 dmp_set_interrupt_mode
-     /tmp/cc6wQGsJ.s:2573   .text.dmp_set_interrupt_mode:000000000000004c $d
-     /tmp/cc6wQGsJ.s:2579   .text.dmp_read_fifo:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:2586   .text.dmp_read_fifo:0000000000000000 dmp_read_fifo
-     /tmp/cc6wQGsJ.s:2967   .text.dmp_read_fifo:00000000000001ac $d
-     /tmp/cc6wQGsJ.s:2972   .text.dmp_register_tap_cb:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:2979   .text.dmp_register_tap_cb:0000000000000000 dmp_register_tap_cb
-     /tmp/cc6wQGsJ.s:3000   .text.dmp_register_tap_cb:0000000000000008 $d
-     /tmp/cc6wQGsJ.s:3005   .text.dmp_register_android_orient_cb:0000000000000000 $t
-     /tmp/cc6wQGsJ.s:3012   .text.dmp_register_android_orient_cb:0000000000000000 dmp_register_android_orient_cb
-     /tmp/cc6wQGsJ.s:3033   .text.dmp_register_android_orient_cb:0000000000000008 $d
-     /tmp/cc6wQGsJ.s:3038   .bss.dmp:0000000000000000 $d
-     /tmp/cc6wQGsJ.s:3042   .bss.dmp:0000000000000000 dmp
-     /tmp/cc6wQGsJ.s:3048   .rodata.dmp_memory:0000000000000000 dmp_memory
+     /tmp/ccgCL59o.s:2032   .text.dmp_enable_6x_lp_quat:0000000000000000 dmp_enable_6x_lp_quat
+     /tmp/ccgCL59o.s:2096   .text.dmp_enable_feature:0000000000000000 $t
+     /tmp/ccgCL59o.s:2103   .text.dmp_enable_feature:0000000000000000 dmp_enable_feature
+     /tmp/ccgCL59o.s:2472   .text.dmp_enable_feature:00000000000001cc $d
+     /tmp/ccgCL59o.s:2483   .text.dmp_set_interrupt_mode:0000000000000000 $t
+     /tmp/ccgCL59o.s:2490   .text.dmp_set_interrupt_mode:0000000000000000 dmp_set_interrupt_mode
+     /tmp/ccgCL59o.s:2573   .text.dmp_set_interrupt_mode:000000000000004c $d
+     /tmp/ccgCL59o.s:2579   .text.dmp_read_fifo:0000000000000000 $t
+     /tmp/ccgCL59o.s:2586   .text.dmp_read_fifo:0000000000000000 dmp_read_fifo
+     /tmp/ccgCL59o.s:2967   .text.dmp_read_fifo:00000000000001ac $d
+     /tmp/ccgCL59o.s:2972   .text.dmp_register_tap_cb:0000000000000000 $t
+     /tmp/ccgCL59o.s:2979   .text.dmp_register_tap_cb:0000000000000000 dmp_register_tap_cb
+     /tmp/ccgCL59o.s:3000   .text.dmp_register_tap_cb:0000000000000008 $d
+     /tmp/ccgCL59o.s:3005   .text.dmp_register_android_orient_cb:0000000000000000 $t
+     /tmp/ccgCL59o.s:3012   .text.dmp_register_android_orient_cb:0000000000000000 dmp_register_android_orient_cb
+     /tmp/ccgCL59o.s:3033   .text.dmp_register_android_orient_cb:0000000000000008 $d
+     /tmp/ccgCL59o.s:3038   .bss.dmp:0000000000000000 $d
+     /tmp/ccgCL59o.s:3042   .bss.dmp:0000000000000000 dmp
+     /tmp/ccgCL59o.s:3048   .rodata.dmp_memory:0000000000000000 dmp_memory
 
 UNDEFINED SYMBOLS
 mpu_write_mem
