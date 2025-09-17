@@ -1788,7 +1788,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
                 0x0000000008000000                g_pfnVectors
                 0x0000000008000168                . = ALIGN (0x4)
 
-.text           0x0000000008000168     0x4b7c
+.text           0x0000000008000168     0x4b84
                 0x0000000008000168                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000008000168       0x88 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
@@ -2061,411 +2061,410 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
                 0x0000000008002710       0x94 build/util.o
                 0x0000000008002710                handle_sensors
  .text.handle_usart
-                0x00000000080027a4      0x160 build/util.o
+                0x00000000080027a4      0x16c build/util.o
                 0x00000000080027a4                handle_usart
  .text.handle_leds
-                0x0000000008002904       0xa0 build/util.o
-                0x0000000008002904                handle_leds
+                0x0000000008002910       0xa0 build/util.o
+                0x0000000008002910                handle_leds
  .text.usart_process_data
-                0x00000000080029a4       0x58 build/util.o
-                0x00000000080029a4                usart_process_data
+                0x00000000080029b0       0x58 build/util.o
+                0x00000000080029b0                usart_process_data
  .text.usart1_rx_check
-                0x00000000080029fc       0x84 build/util.o
-                0x00000000080029fc                usart1_rx_check
+                0x0000000008002a08       0x84 build/util.o
+                0x0000000008002a08                usart1_rx_check
  .text.usart0_rx_check
-                0x0000000008002a80        0x2 build/util.o
-                0x0000000008002a80                usart0_rx_check
- *fill*         0x0000000008002a82        0x2 
+                0x0000000008002a8c        0x2 build/util.o
+                0x0000000008002a8c                usart0_rx_check
+ *fill*         0x0000000008002a8e        0x2 
  .text.i2c_writeBytes
-                0x0000000008002a84       0x90 build/util.o
-                0x0000000008002a84                i2c_writeBytes
+                0x0000000008002a90       0x90 build/util.o
+                0x0000000008002a90                i2c_writeBytes
  .text.i2c_readBytes
-                0x0000000008002b14       0xa0 build/util.o
-                0x0000000008002b14                i2c_readBytes
+                0x0000000008002b20       0xa0 build/util.o
+                0x0000000008002b20                i2c_readBytes
  .text.i2c_readByte
-                0x0000000008002bb4        0x8 build/util.o
-                0x0000000008002bb4                i2c_readByte
+                0x0000000008002bc0        0x8 build/util.o
+                0x0000000008002bc0                i2c_readByte
  .text.systick_config
-                0x0000000008002bbc       0x3c build/systick.o
-                0x0000000008002bbc                systick_config
+                0x0000000008002bc8       0x3c build/systick.o
+                0x0000000008002bc8                systick_config
  .text.delay_1ms
-                0x0000000008002bf8       0x10 build/systick.o
-                0x0000000008002bf8                delay_1ms
+                0x0000000008002c04       0x10 build/systick.o
+                0x0000000008002c04                delay_1ms
  .text.delay_decrement
-                0x0000000008002c08       0x14 build/systick.o
-                0x0000000008002c08                delay_decrement
+                0x0000000008002c14       0x14 build/systick.o
+                0x0000000008002c14                delay_decrement
  .text.tick_count_increment
-                0x0000000008002c1c       0x10 build/systick.o
-                0x0000000008002c1c                tick_count_increment
+                0x0000000008002c28       0x10 build/systick.o
+                0x0000000008002c28                tick_count_increment
  .text.get_tick_count_ms
-                0x0000000008002c2c        0xc build/systick.o
-                0x0000000008002c2c                get_tick_count_ms
+                0x0000000008002c38        0xc build/systick.o
+                0x0000000008002c38                get_tick_count_ms
  .text.mpu_tap_func
-                0x0000000008002c38       0x44 build/mpu6050.o
-                0x0000000008002c38                mpu_tap_func
+                0x0000000008002c44       0x44 build/mpu6050.o
+                0x0000000008002c44                mpu_tap_func
  .text.mpu_android_orient_func
-                0x0000000008002c7c       0x30 build/mpu6050.o
-                0x0000000008002c7c                mpu_android_orient_func
+                0x0000000008002c88       0x30 build/mpu6050.o
+                0x0000000008002c88                mpu_android_orient_func
  .text.set_int_enable.isra.0
-                0x0000000008002cac       0x4c build/mpu6050.o
+                0x0000000008002cb8       0x4c build/mpu6050.o
  .text.mpu_get_temperature
-                0x0000000008002cf8       0x80 build/mpu6050.o
-                0x0000000008002cf8                mpu_get_temperature
+                0x0000000008002d04       0x80 build/mpu6050.o
+                0x0000000008002d04                mpu_get_temperature
  .text.mpu_reset_fifo
-                0x0000000008002d78      0x16c build/mpu6050.o
-                0x0000000008002d78                mpu_reset_fifo
+                0x0000000008002d84      0x16c build/mpu6050.o
+                0x0000000008002d84                mpu_reset_fifo
  .text.mpu_set_gyro_fsr
-                0x0000000008002ee4       0x70 build/mpu6050.o
-                0x0000000008002ee4                mpu_set_gyro_fsr
+                0x0000000008002ef0       0x70 build/mpu6050.o
+                0x0000000008002ef0                mpu_set_gyro_fsr
  .text.mpu_get_accel_fsr
-                0x0000000008002f54       0x38 build/mpu6050.o
-                0x0000000008002f54                mpu_get_accel_fsr
+                0x0000000008002f60       0x38 build/mpu6050.o
+                0x0000000008002f60                mpu_get_accel_fsr
  .text.mpu_set_accel_fsr
-                0x0000000008002f8c       0x68 build/mpu6050.o
-                0x0000000008002f8c                mpu_set_accel_fsr
+                0x0000000008002f98       0x68 build/mpu6050.o
+                0x0000000008002f98                mpu_set_accel_fsr
  .text.mpu_set_lpf
-                0x0000000008002ff4       0x6c build/mpu6050.o
-                0x0000000008002ff4                mpu_set_lpf
+                0x0000000008003000       0x6c build/mpu6050.o
+                0x0000000008003000                mpu_set_lpf
  .text.mpu_configure_fifo
-                0x0000000008003060       0x4c build/mpu6050.o
-                0x0000000008003060                mpu_configure_fifo
+                0x000000000800306c       0x4c build/mpu6050.o
+                0x000000000800306c                mpu_configure_fifo
  .text.mpu_read_fifo
-                0x00000000080030ac      0x1a0 build/mpu6050.o
-                0x00000000080030ac                mpu_read_fifo
+                0x00000000080030b8      0x1a0 build/mpu6050.o
+                0x00000000080030b8                mpu_read_fifo
  .text.mpu_read_fifo_stream
-                0x000000000800324c       0x98 build/mpu6050.o
-                0x000000000800324c                mpu_read_fifo_stream
+                0x0000000008003258       0x98 build/mpu6050.o
+                0x0000000008003258                mpu_read_fifo_stream
  .text.mpu_set_bypass
-                0x00000000080032e4       0xe8 build/mpu6050.o
-                0x00000000080032e4                mpu_set_bypass
+                0x00000000080032f0       0xe8 build/mpu6050.o
+                0x00000000080032f0                mpu_set_bypass
  .text.mpu_set_int_latched
-                0x00000000080033cc       0x64 build/mpu6050.o
-                0x00000000080033cc                mpu_set_int_latched
+                0x00000000080033d8       0x64 build/mpu6050.o
+                0x00000000080033d8                mpu_set_int_latched
  .text.mpu_lp_accel_mode
-                0x0000000008003430       0xb0 build/mpu6050.o
-                0x0000000008003430                mpu_lp_accel_mode
+                0x000000000800343c       0xb0 build/mpu6050.o
+                0x000000000800343c                mpu_lp_accel_mode
  .text.mpu_set_sample_rate
-                0x00000000080034e0       0x80 build/mpu6050.o
-                0x00000000080034e0                mpu_set_sample_rate
+                0x00000000080034ec       0x80 build/mpu6050.o
+                0x00000000080034ec                mpu_set_sample_rate
  .text.mpu_set_sensors
-                0x0000000008003560       0xc0 build/mpu6050.o
-                0x0000000008003560                mpu_set_sensors
+                0x000000000800356c       0xc0 build/mpu6050.o
+                0x000000000800356c                mpu_set_sensors
  .text.mpu_init
-                0x0000000008003620       0xb4 build/mpu6050.o
-                0x0000000008003620                mpu_init
+                0x000000000800362c       0xb4 build/mpu6050.o
+                0x000000000800362c                mpu_init
  .text.mpu_write_mem
-                0x00000000080036d4       0x60 build/mpu6050.o
-                0x00000000080036d4                mpu_write_mem
+                0x00000000080036e0       0x60 build/mpu6050.o
+                0x00000000080036e0                mpu_write_mem
  .text.mpu_read_mem
-                0x0000000008003734       0x60 build/mpu6050.o
-                0x0000000008003734                mpu_read_mem
+                0x0000000008003740       0x60 build/mpu6050.o
+                0x0000000008003740                mpu_read_mem
  .text.mpu_load_firmware
-                0x0000000008003794       0xa0 build/mpu6050.o
-                0x0000000008003794                mpu_load_firmware
+                0x00000000080037a0       0xa0 build/mpu6050.o
+                0x00000000080037a0                mpu_load_firmware
  .text.mpu_set_dmp_state
-                0x0000000008003834       0x7c build/mpu6050.o
-                0x0000000008003834                mpu_set_dmp_state
+                0x0000000008003840       0x7c build/mpu6050.o
+                0x0000000008003840                mpu_set_dmp_state
  .text.inv_row_2_scale
-                0x00000000080038b0       0x3a build/mpu6050.o
-                0x00000000080038b0                inv_row_2_scale
+                0x00000000080038bc       0x3a build/mpu6050.o
+                0x00000000080038bc                inv_row_2_scale
  .text.inv_orientation_matrix_to_scalar
-                0x00000000080038ea       0x26 build/mpu6050.o
-                0x00000000080038ea                inv_orientation_matrix_to_scalar
+                0x00000000080038f6       0x26 build/mpu6050.o
+                0x00000000080038f6                inv_orientation_matrix_to_scalar
  .text.mpu_config
-                0x0000000008003910       0xac build/mpu6050.o
-                0x0000000008003910                mpu_config
- *fill*         0x00000000080039bc        0x4 
+                0x000000000800391c       0xac build/mpu6050.o
+                0x000000000800391c                mpu_config
  .text.mpu_calc_euler_angles
-                0x00000000080039c0      0x1b8 build/mpu6050.o
-                0x00000000080039c0                mpu_calc_euler_angles
+                0x00000000080039c8      0x1b8 build/mpu6050.o
+                0x00000000080039c8                mpu_calc_euler_angles
  .text.mpu_get_data
-                0x0000000008003b78      0x168 build/mpu6050.o
-                0x0000000008003b78                mpu_get_data
+                0x0000000008003b80      0x168 build/mpu6050.o
+                0x0000000008003b80                mpu_get_data
  .text.dmp_enable_gyro_cal.part.0
-                0x0000000008003ce0       0x28 build/mpu6050_dmp.o
+                0x0000000008003ce8       0x28 build/mpu6050_dmp.o
  .text.dmp_load_motion_driver_firmware
-                0x0000000008003d08       0x14 build/mpu6050_dmp.o
-                0x0000000008003d08                dmp_load_motion_driver_firmware
+                0x0000000008003d10       0x14 build/mpu6050_dmp.o
+                0x0000000008003d10                dmp_load_motion_driver_firmware
  .text.dmp_set_orientation
-                0x0000000008003d1c      0x140 build/mpu6050_dmp.o
-                0x0000000008003d1c                dmp_set_orientation
+                0x0000000008003d24      0x140 build/mpu6050_dmp.o
+                0x0000000008003d24                dmp_set_orientation
  .text.dmp_set_fifo_rate
-                0x0000000008003e5c       0x60 build/mpu6050_dmp.o
-                0x0000000008003e5c                dmp_set_fifo_rate
+                0x0000000008003e64       0x60 build/mpu6050_dmp.o
+                0x0000000008003e64                dmp_set_fifo_rate
  .text.dmp_set_tap_thresh
-                0x0000000008003ebc      0x144 build/mpu6050_dmp.o
-                0x0000000008003ebc                dmp_set_tap_thresh
+                0x0000000008003ec4      0x144 build/mpu6050_dmp.o
+                0x0000000008003ec4                dmp_set_tap_thresh
  .text.dmp_set_tap_axes
-                0x0000000008004000       0x4a build/mpu6050_dmp.o
-                0x0000000008004000                dmp_set_tap_axes
+                0x0000000008004008       0x4a build/mpu6050_dmp.o
+                0x0000000008004008                dmp_set_tap_axes
  .text.dmp_set_tap_count
-                0x000000000800404a       0x28 build/mpu6050_dmp.o
-                0x000000000800404a                dmp_set_tap_count
+                0x0000000008004052       0x28 build/mpu6050_dmp.o
+                0x0000000008004052                dmp_set_tap_count
  .text.dmp_set_tap_time
-                0x0000000008004072       0x24 build/mpu6050_dmp.o
-                0x0000000008004072                dmp_set_tap_time
+                0x000000000800407a       0x24 build/mpu6050_dmp.o
+                0x000000000800407a                dmp_set_tap_time
  .text.dmp_set_tap_time_multi
-                0x0000000008004096       0x24 build/mpu6050_dmp.o
-                0x0000000008004096                dmp_set_tap_time_multi
+                0x000000000800409e       0x24 build/mpu6050_dmp.o
+                0x000000000800409e                dmp_set_tap_time_multi
  .text.dmp_set_shake_reject_thresh
-                0x00000000080040ba       0x34 build/mpu6050_dmp.o
-                0x00000000080040ba                dmp_set_shake_reject_thresh
+                0x00000000080040c2       0x34 build/mpu6050_dmp.o
+                0x00000000080040c2                dmp_set_shake_reject_thresh
  .text.dmp_set_shake_reject_time
-                0x00000000080040ee       0x24 build/mpu6050_dmp.o
-                0x00000000080040ee                dmp_set_shake_reject_time
+                0x00000000080040f6       0x24 build/mpu6050_dmp.o
+                0x00000000080040f6                dmp_set_shake_reject_time
  .text.dmp_set_shake_reject_timeout
-                0x0000000008004112       0x24 build/mpu6050_dmp.o
-                0x0000000008004112                dmp_set_shake_reject_timeout
- *fill*         0x0000000008004136        0x2 
+                0x000000000800411a       0x24 build/mpu6050_dmp.o
+                0x000000000800411a                dmp_set_shake_reject_timeout
+ *fill*         0x000000000800413e        0x2 
  .text.dmp_enable_gyro_cal
-                0x0000000008004138       0x34 build/mpu6050_dmp.o
-                0x0000000008004138                dmp_enable_gyro_cal
+                0x0000000008004140       0x34 build/mpu6050_dmp.o
+                0x0000000008004140                dmp_enable_gyro_cal
  .text.dmp_enable_lp_quat
-                0x000000000800416c       0x3a build/mpu6050_dmp.o
-                0x000000000800416c                dmp_enable_lp_quat
+                0x0000000008004174       0x3a build/mpu6050_dmp.o
+                0x0000000008004174                dmp_enable_lp_quat
  .text.dmp_enable_6x_lp_quat
-                0x00000000080041a6       0x3a build/mpu6050_dmp.o
-                0x00000000080041a6                dmp_enable_6x_lp_quat
+                0x00000000080041ae       0x3a build/mpu6050_dmp.o
+                0x00000000080041ae                dmp_enable_6x_lp_quat
  .text.dmp_enable_feature
-                0x00000000080041e0      0x1d4 build/mpu6050_dmp.o
-                0x00000000080041e0                dmp_enable_feature
+                0x00000000080041e8      0x1d4 build/mpu6050_dmp.o
+                0x00000000080041e8                dmp_enable_feature
  .text.dmp_read_fifo
-                0x00000000080043b4      0x1b0 build/mpu6050_dmp.o
-                0x00000000080043b4                dmp_read_fifo
+                0x00000000080043bc      0x1b0 build/mpu6050_dmp.o
+                0x00000000080043bc                dmp_read_fifo
  .text.dmp_register_tap_cb
-                0x0000000008004564        0xc build/mpu6050_dmp.o
-                0x0000000008004564                dmp_register_tap_cb
+                0x000000000800456c        0xc build/mpu6050_dmp.o
+                0x000000000800456c                dmp_register_tap_cb
  .text.dmp_register_android_orient_cb
-                0x0000000008004570        0xc build/mpu6050_dmp.o
-                0x0000000008004570                dmp_register_android_orient_cb
+                0x0000000008004578        0xc build/mpu6050_dmp.o
+                0x0000000008004578                dmp_register_android_orient_cb
  .text.gpio_config
-                0x000000000800457c      0x1c8 build/setup.o
-                0x000000000800457c                gpio_config
+                0x0000000008004584      0x1c8 build/setup.o
+                0x0000000008004584                gpio_config
  .text.usart_config
-                0x0000000008004744       0xcc build/setup.o
-                0x0000000008004744                usart_config
+                0x000000000800474c       0xcc build/setup.o
+                0x000000000800474c                usart_config
  .text.usart_Tx_DMA_config
-                0x0000000008004810       0x90 build/setup.o
-                0x0000000008004810                usart_Tx_DMA_config
+                0x0000000008004818       0x90 build/setup.o
+                0x0000000008004818                usart_Tx_DMA_config
  .text.usart_Rx_DMA_config
-                0x00000000080048a0       0x90 build/setup.o
-                0x00000000080048a0                usart_Rx_DMA_config
+                0x00000000080048a8       0x90 build/setup.o
+                0x00000000080048a8                usart_Rx_DMA_config
  .text.i2c_config
-                0x0000000008004930       0x38 build/setup.o
-                0x0000000008004930                i2c_config
+                0x0000000008004938       0x38 build/setup.o
+                0x0000000008004938                i2c_config
  .text.usart_nvic_config
-                0x0000000008004968       0x1a build/setup.o
-                0x0000000008004968                usart_nvic_config
+                0x0000000008004970       0x1a build/setup.o
+                0x0000000008004970                usart_nvic_config
  .text.i2c_nvic_config
-                0x0000000008004982       0x22 build/setup.o
-                0x0000000008004982                i2c_nvic_config
+                0x000000000800498a       0x22 build/setup.o
+                0x000000000800498a                i2c_nvic_config
  .text.I2C0_EventIRQ_Handler
-                0x00000000080049a4      0x1b8 build/i2c_it.o
-                0x00000000080049a4                I2C0_EventIRQ_Handler
+                0x00000000080049ac      0x1b8 build/i2c_it.o
+                0x00000000080049ac                I2C0_EventIRQ_Handler
  .text.I2C0_ErrorIRQ_Handler
-                0x0000000008004b5c       0xb0 build/i2c_it.o
-                0x0000000008004b5c                I2C0_ErrorIRQ_Handler
+                0x0000000008004b64       0xb0 build/i2c_it.o
+                0x0000000008004b64                I2C0_ErrorIRQ_Handler
  .text.NMI_Handler
-                0x0000000008004c0c        0x2 build/gd32f1x0_it.o
-                0x0000000008004c0c                NMI_Handler
- .text.HardFault_Handler
-                0x0000000008004c0e        0x2 build/gd32f1x0_it.o
-                0x0000000008004c0e                HardFault_Handler
- .text.MemManage_Handler
-                0x0000000008004c10        0x2 build/gd32f1x0_it.o
-                0x0000000008004c10                MemManage_Handler
- .text.BusFault_Handler
-                0x0000000008004c12        0x2 build/gd32f1x0_it.o
-                0x0000000008004c12                BusFault_Handler
- .text.UsageFault_Handler
                 0x0000000008004c14        0x2 build/gd32f1x0_it.o
-                0x0000000008004c14                UsageFault_Handler
- .text.SVC_Handler
+                0x0000000008004c14                NMI_Handler
+ .text.HardFault_Handler
                 0x0000000008004c16        0x2 build/gd32f1x0_it.o
-                0x0000000008004c16                SVC_Handler
- .text.DebugMon_Handler
+                0x0000000008004c16                HardFault_Handler
+ .text.MemManage_Handler
                 0x0000000008004c18        0x2 build/gd32f1x0_it.o
-                0x0000000008004c18                DebugMon_Handler
- .text.PendSV_Handler
+                0x0000000008004c18                MemManage_Handler
+ .text.BusFault_Handler
                 0x0000000008004c1a        0x2 build/gd32f1x0_it.o
-                0x0000000008004c1a                PendSV_Handler
+                0x0000000008004c1a                BusFault_Handler
+ .text.UsageFault_Handler
+                0x0000000008004c1c        0x2 build/gd32f1x0_it.o
+                0x0000000008004c1c                UsageFault_Handler
+ .text.SVC_Handler
+                0x0000000008004c1e        0x2 build/gd32f1x0_it.o
+                0x0000000008004c1e                SVC_Handler
+ .text.DebugMon_Handler
+                0x0000000008004c20        0x2 build/gd32f1x0_it.o
+                0x0000000008004c20                DebugMon_Handler
+ .text.PendSV_Handler
+                0x0000000008004c22        0x2 build/gd32f1x0_it.o
+                0x0000000008004c22                PendSV_Handler
  .text.SysTick_Handler
-                0x0000000008004c1c        0xe build/gd32f1x0_it.o
-                0x0000000008004c1c                SysTick_Handler
- *fill*         0x0000000008004c2a        0x2 
+                0x0000000008004c24        0xe build/gd32f1x0_it.o
+                0x0000000008004c24                SysTick_Handler
+ *fill*         0x0000000008004c32        0x2 
  .text.USART0_IRQHandler
-                0x0000000008004c2c       0x28 build/gd32f1x0_it.o
-                0x0000000008004c2c                USART0_IRQHandler
+                0x0000000008004c34       0x28 build/gd32f1x0_it.o
+                0x0000000008004c34                USART0_IRQHandler
  .text.USART1_IRQHandler
-                0x0000000008004c54       0x28 build/gd32f1x0_it.o
-                0x0000000008004c54                USART1_IRQHandler
+                0x0000000008004c5c       0x28 build/gd32f1x0_it.o
+                0x0000000008004c5c                USART1_IRQHandler
  .text.I2C0_EV_IRQHandler
-                0x0000000008004c7c        0x4 build/gd32f1x0_it.o
-                0x0000000008004c7c                I2C0_EV_IRQHandler
+                0x0000000008004c84        0x4 build/gd32f1x0_it.o
+                0x0000000008004c84                I2C0_EV_IRQHandler
  .text.I2C0_ER_IRQHandler
-                0x0000000008004c80        0x4 build/gd32f1x0_it.o
-                0x0000000008004c80                I2C0_ER_IRQHandler
+                0x0000000008004c88        0x4 build/gd32f1x0_it.o
+                0x0000000008004c88                I2C0_ER_IRQHandler
  .text.Reset_Handler
-                0x0000000008004c84       0x44 build/startup_gd32f1x0.o
-                0x0000000008004c84                Reset_Handler
+                0x0000000008004c8c       0x44 build/startup_gd32f1x0.o
+                0x0000000008004c8c                Reset_Handler
  .text.Default_Handler
-                0x0000000008004cc8        0x2 build/startup_gd32f1x0.o
-                0x0000000008004cc8                TIMER2_IRQHandler
-                0x0000000008004cc8                LVD_IRQHandler
-                0x0000000008004cc8                USBDWakeUp_IRQHandler
-                0x0000000008004cc8                TSI_IRQHandler
-                0x0000000008004cc8                TIMER15_IRQHandler
-                0x0000000008004cc8                TIMER5_DAC_IRQHandler
-                0x0000000008004cc8                I2C2_EV_IRQHandler
-                0x0000000008004cc8                CAN1_RX0_IRQHandler
-                0x0000000008004cc8                ADC_CMP_IRQHandler
-                0x0000000008004cc8                SPI1_IRQHandler
-                0x0000000008004cc8                DMA_Channel3_4_IRQHandler
-                0x0000000008004cc8                TIMER14_IRQHandler
-                0x0000000008004cc8                TIMER16_IRQHandler
-                0x0000000008004cc8                EXTI2_3_IRQHandler
-                0x0000000008004cc8                RTC_IRQHandler
-                0x0000000008004cc8                CAN0_SCE_IRQHandler
-                0x0000000008004cc8                CAN1_RX1_IRQHandler
-                0x0000000008004cc8                USBD_LP_IRQHandler
-                0x0000000008004cc8                TIMER1_IRQHandler
-                0x0000000008004cc8                TIMER13_IRQHandler
-                0x0000000008004cc8                I2C1_EV_IRQHandler
-                0x0000000008004cc8                EXTI4_15_IRQHandler
-                0x0000000008004cc8                Default_Handler
-                0x0000000008004cc8                CEC_IRQHandler
-                0x0000000008004cc8                CAN0_TX_IRQHandler
-                0x0000000008004cc8                USBD_HP_IRQHandler
-                0x0000000008004cc8                DMA_Channel5_6_IRQHandler
-                0x0000000008004cc8                TIMER0_BRK_UP_TRG_COM_IRQHandler
-                0x0000000008004cc8                EXTI0_1_IRQHandler
-                0x0000000008004cc8                SPI2_IRQHandler
-                0x0000000008004cc8                CAN1_TX_IRQHandler
-                0x0000000008004cc8                DMA_Channel1_2_IRQHandler
-                0x0000000008004cc8                CAN0_RX1_IRQHandler
-                0x0000000008004cc8                WWDG_IRQHandler
-                0x0000000008004cc8                TIMER0_Channel_IRQHandler
-                0x0000000008004cc8                SPI0_IRQHandler
-                0x0000000008004cc8                CAN0_RX0_IRQHandler
-                0x0000000008004cc8                I2C2_ER_IRQHandler
-                0x0000000008004cc8                DMA_Channel0_IRQHandler
-                0x0000000008004cc8                CAN1_SCE_IRQHandler
-                0x0000000008004cc8                I2C1_ER_IRQHandler
-                0x0000000008004cc8                FMC_IRQHandler
-                0x0000000008004cc8                SLCD_IRQHandler
+                0x0000000008004cd0        0x2 build/startup_gd32f1x0.o
+                0x0000000008004cd0                TIMER2_IRQHandler
+                0x0000000008004cd0                LVD_IRQHandler
+                0x0000000008004cd0                USBDWakeUp_IRQHandler
+                0x0000000008004cd0                TSI_IRQHandler
+                0x0000000008004cd0                TIMER15_IRQHandler
+                0x0000000008004cd0                TIMER5_DAC_IRQHandler
+                0x0000000008004cd0                I2C2_EV_IRQHandler
+                0x0000000008004cd0                CAN1_RX0_IRQHandler
+                0x0000000008004cd0                ADC_CMP_IRQHandler
+                0x0000000008004cd0                SPI1_IRQHandler
+                0x0000000008004cd0                DMA_Channel3_4_IRQHandler
+                0x0000000008004cd0                TIMER14_IRQHandler
+                0x0000000008004cd0                TIMER16_IRQHandler
+                0x0000000008004cd0                EXTI2_3_IRQHandler
+                0x0000000008004cd0                RTC_IRQHandler
+                0x0000000008004cd0                CAN0_SCE_IRQHandler
+                0x0000000008004cd0                CAN1_RX1_IRQHandler
+                0x0000000008004cd0                USBD_LP_IRQHandler
+                0x0000000008004cd0                TIMER1_IRQHandler
+                0x0000000008004cd0                TIMER13_IRQHandler
+                0x0000000008004cd0                I2C1_EV_IRQHandler
+                0x0000000008004cd0                EXTI4_15_IRQHandler
+                0x0000000008004cd0                Default_Handler
+                0x0000000008004cd0                CEC_IRQHandler
+                0x0000000008004cd0                CAN0_TX_IRQHandler
+                0x0000000008004cd0                USBD_HP_IRQHandler
+                0x0000000008004cd0                DMA_Channel5_6_IRQHandler
+                0x0000000008004cd0                TIMER0_BRK_UP_TRG_COM_IRQHandler
+                0x0000000008004cd0                EXTI0_1_IRQHandler
+                0x0000000008004cd0                SPI2_IRQHandler
+                0x0000000008004cd0                CAN1_TX_IRQHandler
+                0x0000000008004cd0                DMA_Channel1_2_IRQHandler
+                0x0000000008004cd0                CAN0_RX1_IRQHandler
+                0x0000000008004cd0                WWDG_IRQHandler
+                0x0000000008004cd0                TIMER0_Channel_IRQHandler
+                0x0000000008004cd0                SPI0_IRQHandler
+                0x0000000008004cd0                CAN0_RX0_IRQHandler
+                0x0000000008004cd0                I2C2_ER_IRQHandler
+                0x0000000008004cd0                DMA_Channel0_IRQHandler
+                0x0000000008004cd0                CAN1_SCE_IRQHandler
+                0x0000000008004cd0                I2C1_ER_IRQHandler
+                0x0000000008004cd0                FMC_IRQHandler
+                0x0000000008004cd0                SLCD_IRQHandler
  *(.glue_7)
- .glue_7        0x0000000008004cca        0x0 linker stubs
+ .glue_7        0x0000000008004cd2        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008004cca        0x0 linker stubs
+ .glue_7t       0x0000000008004cd2        0x0 linker stubs
  *(.eh_frame)
- *fill*         0x0000000008004cca        0x2 
- .eh_frame      0x0000000008004ccc        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+ *fill*         0x0000000008004cd2        0x2 
+ .eh_frame      0x0000000008004cd4        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.init)
- .init          0x0000000008004ccc        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
-                0x0000000008004ccc                _init
- .init          0x0000000008004cd0        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
+ .init          0x0000000008004cd4        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
+                0x0000000008004cd4                _init
+ .init          0x0000000008004cd8        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
  *(.fini)
- .fini          0x0000000008004cd8        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
-                0x0000000008004cd8                _fini
- .fini          0x0000000008004cdc        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
-                0x0000000008004ce4                . = ALIGN (0x4)
-                0x0000000008004ce4                _etext = .
+ .fini          0x0000000008004ce0        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crti.o
+                0x0000000008004ce0                _fini
+ .fini          0x0000000008004ce4        0x8 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
+                0x0000000008004cec                . = ALIGN (0x4)
+                0x0000000008004cec                _etext = .
 
-.vfp11_veneer   0x0000000008004ce4        0x0
- .vfp11_veneer  0x0000000008004ce4        0x0 linker stubs
+.vfp11_veneer   0x0000000008004cec        0x0
+ .vfp11_veneer  0x0000000008004cec        0x0 linker stubs
 
-.v4_bx          0x0000000008004ce4        0x0
- .v4_bx         0x0000000008004ce4        0x0 linker stubs
+.v4_bx          0x0000000008004cec        0x0
+ .v4_bx         0x0000000008004cec        0x0 linker stubs
 
-.iplt           0x0000000008004ce4        0x0
- .iplt          0x0000000008004ce4        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+.iplt           0x0000000008004cec        0x0
+ .iplt          0x0000000008004cec        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
 
-.rodata         0x0000000008004ce8      0xdd0
-                0x0000000008004ce8                . = ALIGN (0x4)
+.rodata         0x0000000008004cf0      0xdd0
+                0x0000000008004cf0                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x0000000008004ce8       0x18 build/gd32f1x0_rcu.o
- .rodata        0x0000000008004d00       0x30 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_atan2.o)
- .rodata        0x0000000008004d30       0x40 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_atan.o)
+ .rodata        0x0000000008004cf0       0x18 build/gd32f1x0_rcu.o
+ .rodata        0x0000000008004d08       0x30 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_atan2.o)
+ .rodata        0x0000000008004d38       0x40 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_atan.o)
  *(.rodata*)
  .rodata.mpu_tap_func.str1.1
-                0x0000000008004d70       0x30 build/mpu6050.o
+                0x0000000008004d78       0x30 build/mpu6050.o
  .rodata.mpu_android_orient_func.str1.1
-                0x0000000008004da0       0x21 build/mpu6050.o
+                0x0000000008004da8       0x21 build/mpu6050.o
                                          0x38 (size before relaxing)
  .rodata.mpu_config.str1.1
-                0x0000000008004dc1       0x4a build/mpu6050.o
- *fill*         0x0000000008004e0b        0x1 
- .rodata.hw     0x0000000008004e0c        0xc build/mpu6050.o
-                0x0000000008004e0c                hw
- .rodata.reg    0x0000000008004e18       0x1e build/mpu6050.o
-                0x0000000008004e18                reg
- *fill*         0x0000000008004e36        0x2 
- .rodata.test   0x0000000008004e38       0x28 build/mpu6050.o
-                0x0000000008004e38                test
+                0x0000000008004dc9       0x4a build/mpu6050.o
+ *fill*         0x0000000008004e13        0x1 
+ .rodata.hw     0x0000000008004e14        0xc build/mpu6050.o
+                0x0000000008004e14                hw
+ .rodata.reg    0x0000000008004e20       0x1e build/mpu6050.o
+                0x0000000008004e20                reg
+ *fill*         0x0000000008004e3e        0x2 
+ .rodata.test   0x0000000008004e40       0x28 build/mpu6050.o
+                0x0000000008004e40                test
  .rodata.dmp_enable_gyro_cal.part.0.str1.1
-                0x0000000008004e60        0xa build/mpu6050_dmp.o
+                0x0000000008004e68        0xa build/mpu6050_dmp.o
  .rodata.dmp_set_orientation.str1.1
-                0x0000000008004e6a       0x10 build/mpu6050_dmp.o
+                0x0000000008004e72       0x10 build/mpu6050_dmp.o
  .rodata.dmp_set_fifo_rate.str1.1
-                0x0000000008004e7a        0xd build/mpu6050_dmp.o
+                0x0000000008004e82        0xd build/mpu6050_dmp.o
  .rodata.dmp_enable_gyro_cal.str1.1
-                0x0000000008004e87        0xa build/mpu6050_dmp.o
+                0x0000000008004e8f        0xa build/mpu6050_dmp.o
  .rodata.dmp_memory
-                0x0000000008004e91      0xbf6 build/mpu6050_dmp.o
- *fill*         0x0000000008005a87        0x1 
+                0x0000000008004e99      0xbf6 build/mpu6050_dmp.o
+ *fill*         0x0000000008005a8f        0x1 
  .rodata.USART_CLK
-                0x0000000008005a88        0x4 build/setup.o
+                0x0000000008005a90        0x4 build/setup.o
  .rodata.USART_RDATA_ADDRESS
-                0x0000000008005a8c        0x8 build/setup.o
+                0x0000000008005a94        0x8 build/setup.o
  .rodata.USART_RX_DMA_CH
-                0x0000000008005a94        0x2 build/setup.o
- *fill*         0x0000000008005a96        0x2 
+                0x0000000008005a9c        0x2 build/setup.o
+ *fill*         0x0000000008005a9e        0x2 
  .rodata.USART_RX_PIN
-                0x0000000008005a98        0x8 build/setup.o
- .rodata.USART_TDATA_ADDRESS
                 0x0000000008005aa0        0x8 build/setup.o
+ .rodata.USART_TDATA_ADDRESS
+                0x0000000008005aa8        0x8 build/setup.o
  .rodata.USART_TX_DMA_CH
-                0x0000000008005aa8        0x2 build/setup.o
- *fill*         0x0000000008005aaa        0x2 
+                0x0000000008005ab0        0x2 build/setup.o
+ *fill*         0x0000000008005ab2        0x2 
  .rodata.USART_TX_PIN
-                0x0000000008005aac        0x8 build/setup.o
+                0x0000000008005ab4        0x8 build/setup.o
  .rodata.str1.4
-                0x0000000008005ab4        0x1 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-w_asin.o)
-                0x0000000008005ab8                . = ALIGN (0x4)
- *fill*         0x0000000008005ab5        0x3 
+                0x0000000008005abc        0x1 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-w_asin.o)
+                0x0000000008005ac0                . = ALIGN (0x4)
+ *fill*         0x0000000008005abd        0x3 
 
-.rel.dyn        0x0000000008005ab8        0x0
- .rel.iplt      0x0000000008005ab8        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+.rel.dyn        0x0000000008005ac0        0x0
+ .rel.iplt      0x0000000008005ac0        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000008005ab8        0x0
-                0x0000000008005ab8                __exidx_start = .
+.ARM            0x0000000008005ac0        0x0
+                0x0000000008005ac0                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008005ab8                __exidx_end = .
+                0x0000000008005ac0                __exidx_end = .
 
-.preinit_array  0x0000000008005ab8        0x0
-                0x0000000008005ab8                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008005ac0        0x0
+                0x0000000008005ac0                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000000008005ab8                PROVIDE (__preinit_array_end = .)
+                0x0000000008005ac0                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000000008005ab8        0x4
-                0x0000000008005ab8                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008005ac0        0x4
+                0x0000000008005ac0                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008005ab8        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
-                0x0000000008005abc                PROVIDE (__init_array_end = .)
+ .init_array    0x0000000008005ac0        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x0000000008005ac4                PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000008005abc        0x4
-                0x0000000008005abc                PROVIDE (__fini_array_start = .)
+.fini_array     0x0000000008005ac4        0x4
+                0x0000000008005ac4                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008005abc        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
-                0x0000000008005ac0                PROVIDE (__fini_array_end = .)
-                0x0000000008005ac0                _sidata = LOADADDR (.data)
+ .fini_array    0x0000000008005ac4        0x4 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
+                0x0000000008005ac8                PROVIDE (__fini_array_end = .)
+                0x0000000008005ac8                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0xa4 load address 0x0000000008005ac0
+.data           0x0000000020000000       0xa4 load address 0x0000000008005ac8
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -2486,17 +2485,17 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
                 0x00000000200000a4                _edata = .
 
 .tm_clone_table
-                0x00000000200000a4        0x0 load address 0x0000000008005b64
+                0x00000000200000a4        0x0 load address 0x0000000008005b6c
  .tm_clone_table
                 0x00000000200000a4        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
  .tm_clone_table
                 0x00000000200000a4        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtend.o
 
-.igot.plt       0x00000000200000a4        0x0 load address 0x0000000008005b64
+.igot.plt       0x00000000200000a4        0x0 load address 0x0000000008005b6c
  .igot.plt      0x00000000200000a4        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtbegin.o
                 0x00000000200000a4                . = ALIGN (0x4)
 
-.bss            0x00000000200000a4      0x144 load address 0x0000000008005b64
+.bss            0x00000000200000a4      0x14c load address 0x0000000008005b6c
                 0x00000000200000a4                _sbss = .
                 0x00000000200000a4                __bss_start__ = _sbss
  *(.bss)
@@ -2550,37 +2549,37 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtn.o
  .bss.sensor2_read
                 0x0000000020000153        0x1 build/util.o
  .bss.sideboard_imu
-                0x0000000020000154       0x22 build/util.o
+                0x0000000020000154       0x2a build/util.o
  .bss.timeoutCntSerial1
-                0x0000000020000176        0x2 build/util.o
+                0x000000002000017e        0x2 build/util.o
  .bss.timeoutFlagSerial1
-                0x0000000020000178        0x1 build/util.o
- *fill*         0x0000000020000179        0x3 
- .bss.delay     0x000000002000017c        0x4 build/systick.o
+                0x0000000020000180        0x1 build/util.o
+ *fill*         0x0000000020000181        0x3 
+ .bss.delay     0x0000000020000184        0x4 build/systick.o
  .bss.tick_count_ms
-                0x0000000020000180        0x4 build/systick.o
- .bss.hal       0x0000000020000184       0x1c build/mpu6050.o
- .bss.mpu       0x00000000200001a0       0x24 build/mpu6050.o
-                0x00000000200001a0                mpu
- .bss.quat.1    0x00000000200001c4       0x10 build/mpu6050.o
+                0x0000000020000188        0x4 build/systick.o
+ .bss.hal       0x000000002000018c       0x1c build/mpu6050.o
+ .bss.mpu       0x00000000200001a8       0x24 build/mpu6050.o
+                0x00000000200001a8                mpu
+ .bss.quat.1    0x00000000200001cc       0x10 build/mpu6050.o
  .bss.temperature.0
-                0x00000000200001d4        0x4 build/mpu6050.o
- .bss.dmp       0x00000000200001d8       0x10 build/mpu6050_dmp.o
+                0x00000000200001dc        0x4 build/mpu6050.o
+ .bss.dmp       0x00000000200001e0       0x10 build/mpu6050_dmp.o
  *(COMMON)
-                0x00000000200001e8                . = ALIGN (0x4)
-                0x00000000200001e8                _ebss = .
-                0x00000000200001e8                __bss_end__ = _ebss
+                0x00000000200001f0                . = ALIGN (0x4)
+                0x00000000200001f0                _ebss = .
+                0x00000000200001f0                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x00000000200001e8      0x600 load address 0x0000000008005b64
-                0x00000000200001e8                . = ALIGN (0x4)
+                0x00000000200001f0      0x600 load address 0x0000000008005b6c
+                0x00000000200001f0                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
-                0x00000000200003e8                . = (. + _Min_Heap_Size)
- *fill*         0x00000000200001e8      0x200 
-                0x00000000200007e8                . = (. + _Min_Stack_Size)
- *fill*         0x00000000200003e8      0x400 
-                0x00000000200007e8                . = ALIGN (0x4)
+                0x00000000200003f0                . = (. + _Min_Heap_Size)
+ *fill*         0x00000000200001f0      0x200 
+                0x00000000200007f0                . = (. + _Min_Stack_Size)
+ *fill*         0x00000000200003f0      0x400 
+                0x00000000200007f0                . = ALIGN (0x4)
 
 /DISCARD/
  libc.a(*)
@@ -2714,7 +2713,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a
  .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-errno.o)
  .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/crtend.o
 
-.debug_info     0x0000000000000000     0xf28b
+.debug_info     0x0000000000000000     0xf2c7
  .debug_info    0x0000000000000000      0x7e5 build/gd32f1x0_dma.o
  .debug_info    0x00000000000007e5      0x616 build/gd32f1x0_gpio.o
  .debug_info    0x0000000000000dfb      0xa9a build/gd32f1x0_i2c.o
@@ -2723,37 +2722,37 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a
  .debug_info    0x0000000000002d0d     0x11ff build/gd32f1x0_usart.o
  .debug_info    0x0000000000003f0c      0x263 build/system_gd32f1x0.o
  .debug_info    0x000000000000416f      0x290 build/main.o
- .debug_info    0x00000000000043ff     0x1539 build/util.o
- .debug_info    0x0000000000005938      0x7b2 build/systick.o
- .debug_info    0x00000000000060ea     0x37bf build/mpu6050.o
- .debug_info    0x00000000000098a9     0x150a build/mpu6050_dmp.o
- .debug_info    0x000000000000adb3     0x1162 build/setup.o
- .debug_info    0x000000000000bf15      0x632 build/i2c_it.o
- .debug_info    0x000000000000c547      0x41b build/gd32f1x0_it.o
- .debug_info    0x000000000000c962       0x22 build/startup_gd32f1x0.o
- .debug_info    0x000000000000c984      0x863 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-impure.o)
- .debug_info    0x000000000000d1e7      0x138 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memcmp.o)
- .debug_info    0x000000000000d31f       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memcpy.o)
- .debug_info    0x000000000000d345      0x18a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-w_asin.o)
- .debug_info    0x000000000000d4cf       0xf9 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-w_atan2.o)
- .debug_info    0x000000000000d5c8      0x63f /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_asin.o)
- .debug_info    0x000000000000dc07      0x33b /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_atan2.o)
- .debug_info    0x000000000000df42      0x2c6 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_sqrt.o)
- .debug_info    0x000000000000e208      0x47b /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_atan.o)
- .debug_info    0x000000000000e683      0x151 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_fabs.o)
- .debug_info    0x000000000000e7d4       0xbb /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_lib_ver.o)
- .debug_info    0x000000000000e88f       0xd2 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_nan.o)
- .debug_info    0x000000000000e961       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
- .debug_info    0x000000000000e987       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivdf3.o)
- .debug_info    0x000000000000e9ad       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_cmpdf2.o)
- .debug_info    0x000000000000e9d3       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_unorddf2.o)
- .debug_info    0x000000000000e9f9       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
- .debug_info    0x000000000000ea1f       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_truncdfsf2.o)
- .debug_info    0x000000000000ea45       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
- .debug_info    0x000000000000ea6b       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
- .debug_info    0x000000000000ea91       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_fixsfsi.o)
- .debug_info    0x000000000000eab7       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
- .debug_info    0x000000000000eadd      0x7ae /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-errno.o)
+ .debug_info    0x00000000000043ff     0x1575 build/util.o
+ .debug_info    0x0000000000005974      0x7b2 build/systick.o
+ .debug_info    0x0000000000006126     0x37bf build/mpu6050.o
+ .debug_info    0x00000000000098e5     0x150a build/mpu6050_dmp.o
+ .debug_info    0x000000000000adef     0x1162 build/setup.o
+ .debug_info    0x000000000000bf51      0x632 build/i2c_it.o
+ .debug_info    0x000000000000c583      0x41b build/gd32f1x0_it.o
+ .debug_info    0x000000000000c99e       0x22 build/startup_gd32f1x0.o
+ .debug_info    0x000000000000c9c0      0x863 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-impure.o)
+ .debug_info    0x000000000000d223      0x138 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memcmp.o)
+ .debug_info    0x000000000000d35b       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memcpy.o)
+ .debug_info    0x000000000000d381      0x18a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-w_asin.o)
+ .debug_info    0x000000000000d50b       0xf9 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-w_atan2.o)
+ .debug_info    0x000000000000d604      0x63f /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_asin.o)
+ .debug_info    0x000000000000dc43      0x33b /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_atan2.o)
+ .debug_info    0x000000000000df7e      0x2c6 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_sqrt.o)
+ .debug_info    0x000000000000e244      0x47b /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_atan.o)
+ .debug_info    0x000000000000e6bf      0x151 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_fabs.o)
+ .debug_info    0x000000000000e810       0xbb /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_lib_ver.o)
+ .debug_info    0x000000000000e8cb       0xd2 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_nan.o)
+ .debug_info    0x000000000000e99d       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
+ .debug_info    0x000000000000e9c3       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivdf3.o)
+ .debug_info    0x000000000000e9e9       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_cmpdf2.o)
+ .debug_info    0x000000000000ea0f       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_unorddf2.o)
+ .debug_info    0x000000000000ea35       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
+ .debug_info    0x000000000000ea5b       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_truncdfsf2.o)
+ .debug_info    0x000000000000ea81       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
+ .debug_info    0x000000000000eaa7       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
+ .debug_info    0x000000000000eacd       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_fixsfsi.o)
+ .debug_info    0x000000000000eaf3       0x26 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
+ .debug_info    0x000000000000eb19      0x7ae /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-errno.o)
 
 .debug_abbrev   0x0000000000000000     0x2d0a
  .debug_abbrev  0x0000000000000000      0x1f2 build/gd32f1x0_dma.o
@@ -2924,7 +2923,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a
  .debug_ranges  0x0000000000000bc8       0x18 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_sqrt.o)
  .debug_ranges  0x0000000000000be0       0x38 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_atan.o)
 
-.debug_line     0x0000000000000000     0x972e
+.debug_line     0x0000000000000000     0x975e
  .debug_line    0x0000000000000000      0x5e4 build/gd32f1x0_dma.o
  .debug_line    0x00000000000005e4      0x48d build/gd32f1x0_gpio.o
  .debug_line    0x0000000000000a71      0x743 build/gd32f1x0_i2c.o
@@ -2933,37 +2932,37 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a
  .debug_line    0x0000000000001da9      0xc34 build/gd32f1x0_usart.o
  .debug_line    0x00000000000029dd      0x29e build/system_gd32f1x0.o
  .debug_line    0x0000000000002c7b      0x15b build/main.o
- .debug_line    0x0000000000002dd6      0xa7e build/util.o
- .debug_line    0x0000000000003854      0x260 build/systick.o
- .debug_line    0x0000000000003ab4     0x250e build/mpu6050.o
- .debug_line    0x0000000000005fc2      0xf42 build/mpu6050_dmp.o
- .debug_line    0x0000000000006f04      0x363 build/setup.o
- .debug_line    0x0000000000007267      0x349 build/i2c_it.o
- .debug_line    0x00000000000075b0      0x242 build/gd32f1x0_it.o
- .debug_line    0x00000000000077f2       0x6d build/startup_gd32f1x0.o
- .debug_line    0x000000000000785f       0xe4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-impure.o)
- .debug_line    0x0000000000007943      0x17a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memcmp.o)
- .debug_line    0x0000000000007abd       0xc1 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memcpy.o)
- .debug_line    0x0000000000007b7e      0x179 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-w_asin.o)
- .debug_line    0x0000000000007cf7       0xea /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-w_atan2.o)
- .debug_line    0x0000000000007de1      0x336 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_asin.o)
- .debug_line    0x0000000000008117      0x2cd /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_atan2.o)
- .debug_line    0x00000000000083e4      0x3f1 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_sqrt.o)
- .debug_line    0x00000000000087d5      0x32b /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_atan.o)
- .debug_line    0x0000000000008b00      0x14c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_fabs.o)
- .debug_line    0x0000000000008c4c       0x97 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_lib_ver.o)
- .debug_line    0x0000000000008ce3       0xae /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_nan.o)
- .debug_line    0x0000000000008d91      0x186 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
- .debug_line    0x0000000000008f17      0x19b /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivdf3.o)
- .debug_line    0x00000000000090b2       0xbd /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_cmpdf2.o)
- .debug_line    0x000000000000916f       0x6e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_unorddf2.o)
- .debug_line    0x00000000000091dd       0x79 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
- .debug_line    0x0000000000009256       0x8d /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_truncdfsf2.o)
- .debug_line    0x00000000000092e3      0x11a /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
- .debug_line    0x00000000000093fd      0x13a /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
- .debug_line    0x0000000000009537       0x79 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_fixsfsi.o)
- .debug_line    0x00000000000095b0       0x75 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
- .debug_line    0x0000000000009625      0x109 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-errno.o)
+ .debug_line    0x0000000000002dd6      0xaae build/util.o
+ .debug_line    0x0000000000003884      0x260 build/systick.o
+ .debug_line    0x0000000000003ae4     0x250e build/mpu6050.o
+ .debug_line    0x0000000000005ff2      0xf42 build/mpu6050_dmp.o
+ .debug_line    0x0000000000006f34      0x363 build/setup.o
+ .debug_line    0x0000000000007297      0x349 build/i2c_it.o
+ .debug_line    0x00000000000075e0      0x242 build/gd32f1x0_it.o
+ .debug_line    0x0000000000007822       0x6d build/startup_gd32f1x0.o
+ .debug_line    0x000000000000788f       0xe4 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-impure.o)
+ .debug_line    0x0000000000007973      0x17a /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memcmp.o)
+ .debug_line    0x0000000000007aed       0xc1 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-memcpy.o)
+ .debug_line    0x0000000000007bae      0x179 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-w_asin.o)
+ .debug_line    0x0000000000007d27       0xea /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-w_atan2.o)
+ .debug_line    0x0000000000007e11      0x336 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_asin.o)
+ .debug_line    0x0000000000008147      0x2cd /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_atan2.o)
+ .debug_line    0x0000000000008414      0x3f1 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-e_sqrt.o)
+ .debug_line    0x0000000000008805      0x32b /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_atan.o)
+ .debug_line    0x0000000000008b30      0x14c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_fabs.o)
+ .debug_line    0x0000000000008c7c       0x97 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_lib_ver.o)
+ .debug_line    0x0000000000008d13       0xae /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_nan.o)
+ .debug_line    0x0000000000008dc1      0x186 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubdf3.o)
+ .debug_line    0x0000000000008f47      0x19b /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivdf3.o)
+ .debug_line    0x00000000000090e2       0xbd /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_cmpdf2.o)
+ .debug_line    0x000000000000919f       0x6e /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_unorddf2.o)
+ .debug_line    0x000000000000920d       0x79 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_fixdfsi.o)
+ .debug_line    0x0000000000009286       0x8d /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_truncdfsf2.o)
+ .debug_line    0x0000000000009313      0x11a /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_addsubsf3.o)
+ .debug_line    0x000000000000942d      0x13a /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_muldivsf3.o)
+ .debug_line    0x0000000000009567       0x79 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_fixsfsi.o)
+ .debug_line    0x00000000000095e0       0x75 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_arm_fixunssfsi.o)
+ .debug_line    0x0000000000009655      0x109 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc_nano.a(lib_a-errno.o)
 
 .debug_str      0x0000000000000000     0x4a89
  .debug_str     0x0000000000000000      0x4a9 build/gd32f1x0_dma.o
