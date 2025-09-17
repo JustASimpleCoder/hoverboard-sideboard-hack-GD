@@ -31,6 +31,7 @@
 // USART1 variables
 #ifdef SERIAL_CONTROL
 static SerialSideboard Sideboard;
+static SideboardImuRaw sideboard_imu;
 #endif
 
 #if defined(SERIAL_DEBUG) || defined(SERIAL_FEEDBACK)
@@ -293,6 +294,9 @@ void handle_sensors(void) {
     }
 }
 
+
+mpu
+
 /*
  * Handle of the USART data
  */
@@ -300,17 +304,40 @@ void handle_usart(void) {
     // Tx USART MAIN
     #ifdef SERIAL_CONTROL
         if (main_loop_counter % 5 == 0 && dma_transfer_number_get(USART1_TX_DMA_CH) == 0) {     // Check if DMA channel counter is 0 (meaning all data has been transferred)
-            Sideboard.start     = (uint16_t)SERIAL_START_FRAME;
-            Sideboard.pitch     = (int16_t)mpu.euler.pitch;
-            Sideboard.dPitch    = (int16_t)mpu.gyro.y;
-            Sideboard.cmd1      = (int16_t)cmd1;
-            Sideboard.cmd2      = (int16_t)cmd2; 
-            Sideboard.sensors   = (uint16_t)( (cmdSwitch << 8)  | (sensor1 | (sensor2 << 1) | (mpuStatus << 2)) );
-            Sideboard.checksum  = (uint16_t)(Sideboard.start ^ Sideboard.pitch ^ Sideboard.dPitch ^ Sideboard.cmd1 ^ Sideboard.cmd2 ^ Sideboard.sensors);
+            sideboard_imu.start = (uint16_t)SERIAL_START_FRAME;
+
+            sideboard_imu.gyro_x = (int16_t)mpu.gyro.x;
+            sideboard_imu.gyro_y = (int16_t)mpu.gyro.y;
+            sideboard_imu.gyro_z = (int16_t)mpu.gyro.z;
+            
+            sideboard_imu.accel_x = (int16_t)mpu.accel.x;
+            sideboard_imu.accel_y = (int16_t)mpu.accel.y;
+            sideboard_imu.accel_z = (int16_t)mpu.accel.z;
+        
+            sideboard_imu.quat_w = (int16_t)mpu.quat.w;
+            sideboard_imu.quat_x = (int16_t)mpu.quat.x;
+            sideboard_imu.quat_y = (int16_t)mpu.quat.y;
+            sideboard_imu.quat_z = (int16_t)mpu.quat.z;
+ 
+            sideboard_imu.euler_pitch = (int16_t)mpu.euler.pitch;
+            sideboard_imu.euler_roll = (int16_t)mpu.euler.roll;
+            sideboard_imu.euler_yaw = (int16_t)mpu.euler.yaw;
+            
+            sideboard_imu.temperature = (int16_t)mpu.temp;
+            sideboard_imu.sensors = (uint16_t)((cmdSwitch << 8) | (sensor1 | (sensor2 << 1) | (mpuStatus << 2)));
+
+            sideboard_imu.checksum = (uint16_t)(
+                sideboard_imu.start ^ 
+                sideboard_imu.gyro_x ^ sideboard_imu.gyro_y ^ sideboard_imu.gyro_z ^
+                sideboard_imu.accel_x ^ sideboard_imu.accel_y ^ sideboard_imu.accel_z ^
+                sideboard_imu.quat_w ^ sideboard_imu.quat_x ^ sideboard_imu.quat_y ^ sideboard_imu.quat_z ^
+                sideboard_imu.euler_pitch ^ sideboard_imu.euler_roll ^ sideboard_imu.euler_yaw ^
+                sideboard_imu.temperature ^ sideboard_imu.sensors
+            );
         
             dma_channel_disable(USART1_TX_DMA_CH);
-            DMA_CHCNT(USART1_TX_DMA_CH)     = sizeof(Sideboard);
-            DMA_CHMADDR(USART1_TX_DMA_CH)   = (uint32_t)&Sideboard;
+            DMA_CHCNT(USART1_TX_DMA_CH)     = sizeof(sideboard_imu);
+            DMA_CHMADDR(USART1_TX_DMA_CH)   = (uint32_t)&sideboard_imu;
             dma_channel_enable(USART1_TX_DMA_CH);
         }
     #endif
