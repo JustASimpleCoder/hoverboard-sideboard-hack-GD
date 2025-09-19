@@ -54,9 +54,9 @@ uint8_t print_aux = 0;                              // print AUX serial data
 
 #ifdef  MPU_SENSOR_ENABLE
 
-static signed char MPU_ORIENTATION[9] = {1, 0, 0,   // [-] MPU Sensor orientation matrix: set this according to the sensor installation
-                                         0, 1, 0,
-                                         0, 0, 1};
+// static signed char MPU_ORIENTATION[9] = {1, 0, 0,   // [-] MPU Sensor orientation matrix: set this according to the sensor installation
+//                                          0, 1, 0,
+//                                          0, 0, 1};
 
 
 #if !defined MPU6050 && !defined MPU9150 && !defined MPU6500 && !defined MPU9250
