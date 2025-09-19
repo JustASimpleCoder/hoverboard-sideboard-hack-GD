@@ -4,6 +4,7 @@
 MDK-ARM/Listings/
 MDK-ARM/Objects/
 MDK-ARM/*.uvgui.*
+build/*
 !build/VARIANT_DEBUG/firmware.hex
 !build/VARIANT_DEBUG/firmware.bin
 !build/VARIANT_DEBUG/firmware.elf
