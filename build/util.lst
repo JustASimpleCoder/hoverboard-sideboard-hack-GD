@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc9tOEVd.s 			page 1
+ARM GAS  /tmp/ccmxNFnJ.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
   29:Src/util.c    **** #include "mpu6050.h"
   30:Src/util.c    **** 
   31:Src/util.c    **** // USART1 variables
-ARM GAS  /tmp/cc9tOEVd.s 			page 2
+ARM GAS  /tmp/ccmxNFnJ.s 			page 2
 
 
   32:Src/util.c    **** #ifdef SERIAL_CONTROL
@@ -103,7 +103,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
   71:Src/util.c    **** #endif
   72:Src/util.c    **** 
   73:Src/util.c    **** #if (defined(SERIAL_AUX_RX) && defined(CONTROL_IBUS)) || defined(SERIAL_CONTROL)
-  74:Src/util.c    **** static int16_t  cmd1, cmd2;
+  74:Src/util.c    **** // static int16_t  cmd1, cmd2;
   75:Src/util.c    **** static uint16_t cmdSwitch;
   76:Src/util.c    **** #endif
   77:Src/util.c    **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
   86:Src/util.c    **** #endif
   87:Src/util.c    **** 
   88:Src/util.c    **** extern uint32_t     main_loop_counter;          // main loop counter to perform task scheduling ins
-ARM GAS  /tmp/cc9tOEVd.s 			page 3
+ARM GAS  /tmp/ccmxNFnJ.s 			page 3
 
 
   89:Src/util.c    **** 
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  124:Src/util.c    **** 
  125:Src/util.c    **** /* retarget the C library printf function to the USART */
  126:Src/util.c    **** #ifdef SERIAL_DEBUG	
-ARM GAS  /tmp/cc9tOEVd.s 			page 4
+ARM GAS  /tmp/ccmxNFnJ.s 			page 4
 
 
  127:Src/util.c    ****     #ifdef __GNUC__
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
   76              		.cfi_startproc
   77              		@ args = 0, pretend = 0, frame = 0
   78              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cc9tOEVd.s 			page 5
+ARM GAS  /tmp/ccmxNFnJ.s 			page 5
 
 
  156:Src/util.c    ****     int i;
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  121              		.loc 1 164 9 discriminator 3 view .LVU18
  122 0036 2846     		mov	r0, r5
  123 0038 FFF7FEFF 		bl	delay_1ms
-ARM GAS  /tmp/cc9tOEVd.s 			page 6
+ARM GAS  /tmp/ccmxNFnJ.s 			page 6
 
 
  124              	.LVL9:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  164 0076 2046     		mov	r0, r4
  165 0078 FFF7FEFF 		bl	gpio_bit_set
  166              	.LVL18:
-ARM GAS  /tmp/cc9tOEVd.s 			page 7
+ARM GAS  /tmp/ccmxNFnJ.s 			page 7
 
 
  174:Src/util.c    ****         gpio_bit_set(LED4_GPIO_Port, LED4_Pin);
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  210 00c2 00D1     		bne	.L6
  182:Src/util.c    ****     }
  183:Src/util.c    **** }
-ARM GAS  /tmp/cc9tOEVd.s 			page 8
+ARM GAS  /tmp/ccmxNFnJ.s 			page 8
 
 
  211              		.loc 1 183 1 view .LVU41
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  260              	.LVL31:
  261              	.L11:
  191:Src/util.c    ****     } else {    // 2 positions switch
-ARM GAS  /tmp/cc9tOEVd.s 			page 9
+ARM GAS  /tmp/ccmxNFnJ.s 			page 9
 
 
  192:Src/util.c    ****         return  (ch > 850);
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  306 0006 0F48     		ldr	r0, .L18+4
  307 0008 FFF7FEFF 		bl	usart_Tx_DMA_config
  308              	.LVL35:
-ARM GAS  /tmp/cc9tOEVd.s 			page 10
+ARM GAS  /tmp/ccmxNFnJ.s 			page 10
 
 
  202:Src/util.c    ****     #endif
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  332              		.loc 1 231 1 is_stmt 0 view .LVU70
  333 002a BDE80840 		pop	{r3, lr}
  334              	.LCFI2:
-ARM GAS  /tmp/cc9tOEVd.s 			page 11
+ARM GAS  /tmp/ccmxNFnJ.s 			page 11
 
 
  335              		.cfi_remember_state
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  377              		.cfi_startproc
  378              		@ args = 0, pretend = 0, frame = 0
  379              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cc9tOEVd.s 			page 12
+ARM GAS  /tmp/ccmxNFnJ.s 			page 12
 
 
  380              		@ link register save eliminated.
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  250:Src/util.c    ****         mpu_print_to_console();
  251:Src/util.c    ****     }
  252:Src/util.c    ****     #endif
-ARM GAS  /tmp/cc9tOEVd.s 			page 13
+ARM GAS  /tmp/ccmxNFnJ.s 			page 13
 
 
  253:Src/util.c    **** #endif
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  465              		.loc 1 261 20 is_stmt 0 view .LVU100
  466 0014 1A48     		ldr	r0, .L30+4
  467 0016 FFF7FEFF 		bl	gpio_input_bit_get
-ARM GAS  /tmp/cc9tOEVd.s 			page 14
+ARM GAS  /tmp/ccmxNFnJ.s 			page 14
 
 
  468              	.LVL43:
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  275:Src/util.c    **** 
  276:Src/util.c    ****     // SENSOR2
  277:Src/util.c    ****     if (sensor2 == RESET && sensor2_read == SET) {
-ARM GAS  /tmp/cc9tOEVd.s 			page 15
+ARM GAS  /tmp/ccmxNFnJ.s 			page 15
 
 
  503              		.loc 1 277 5 is_stmt 1 view .LVU116
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  536 004e 012A     		cmp	r2, #1
  537 0050 F0D1     		bne	.L27
  269:Src/util.c    ****         // Sensor DEACTIVE: Do something here (one time task on deactivation)
-ARM GAS  /tmp/cc9tOEVd.s 			page 16
+ARM GAS  /tmp/ccmxNFnJ.s 			page 16
 
 
  538              		.loc 1 269 30 discriminator 1 view .LVU127
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  578              		.cfi_remember_state
  579              		.cfi_restore 14
  580              		.cfi_restore 5
-ARM GAS  /tmp/cc9tOEVd.s 			page 17
+ARM GAS  /tmp/ccmxNFnJ.s 			page 17
 
 
  581              		.cfi_restore 4
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  624              	.LCFI9:
  625              		.cfi_def_cfa_offset 48
  626              		.cfi_offset 4, -36
-ARM GAS  /tmp/cc9tOEVd.s 			page 18
+ARM GAS  /tmp/ccmxNFnJ.s 			page 18
 
 
  627              		.cfi_offset 5, -32
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  320:Src/util.c    ****         
  321:Src/util.c    ****             sideboard_imu.quat_w = (int16_t)mpu.quat.w;
  322:Src/util.c    ****             sideboard_imu.quat_x = (int16_t)mpu.quat.x;
-ARM GAS  /tmp/cc9tOEVd.s 			page 19
+ARM GAS  /tmp/ccmxNFnJ.s 			page 19
 
 
  323:Src/util.c    ****             sideboard_imu.quat_y = (int16_t)mpu.quat.y;
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  698              		.loc 1 311 13 is_stmt 1 view .LVU177
  313:Src/util.c    ****             sideboard_imu.gyro_y =  (int16_t)mpu.gyro.y;
  699              		.loc 1 313 13 view .LVU178
-ARM GAS  /tmp/cc9tOEVd.s 			page 20
+ARM GAS  /tmp/ccmxNFnJ.s 			page 20
 
 
  326:Src/util.c    ****             sideboard_imu.euler_roll = (int16_t)mpu.euler.roll;
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  731              		.loc 1 323 13 view .LVU198
  324:Src/util.c    ****  
  732              		.loc 1 324 13 view .LVU199
-ARM GAS  /tmp/cc9tOEVd.s 			page 21
+ARM GAS  /tmp/ccmxNFnJ.s 			page 21
 
 
  326:Src/util.c    ****             sideboard_imu.euler_roll = (int16_t)mpu.euler.roll;
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  766 00b2 83EA0A03 		eor	r3, r3, r10
  767 00b6 89EA0309 		eor	r9, r9, r3
  768 00ba 88EA0908 		eor	r8, r8, r9
-ARM GAS  /tmp/cc9tOEVd.s 			page 22
+ARM GAS  /tmp/ccmxNFnJ.s 			page 22
 
 
  769 00be 8EEA080E 		eor	lr, lr, r8
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  807              	.LBB20:
  808              	.LBI20:
  148:Src/util.c    **** {
-ARM GAS  /tmp/cc9tOEVd.s 			page 23
+ARM GAS  /tmp/ccmxNFnJ.s 			page 23
 
 
  809              		.loc 1 148 6 view .LVU234
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  366:Src/util.c    ****     #ifdef SERIAL_AUX_TX
  367:Src/util.c    ****         if (main_loop_counter % 5 == 0 && dma_transfer_number_get(USART0_TX_DMA_CH) == 0) {     // 
  368:Src/util.c    ****             AuxTx.start     = (uint16_t)SERIAL_START_FRAME;
-ARM GAS  /tmp/cc9tOEVd.s 			page 24
+ARM GAS  /tmp/ccmxNFnJ.s 			page 24
 
 
  369:Src/util.c    ****             AuxTx.signal1   = (int16_t)sensor1;
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  855 0128 CDCCCCCC 		.word	-858993459
  856 012c 00000000 		.word	.LANCHOR0
  857 0130 00000000 		.word	mpu
-ARM GAS  /tmp/cc9tOEVd.s 			page 25
+ARM GAS  /tmp/ccmxNFnJ.s 			page 25
 
 
  858 0134 00000000 		.word	.LANCHOR2
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  905 0016 29D5     		bpl	.L41
  906              		.loc 1 420 47 is_stmt 1 discriminator 1 view .LVU261
  907 0018 FFF7FEFF 		bl	gpio_bit_set
-ARM GAS  /tmp/cc9tOEVd.s 			page 26
+ARM GAS  /tmp/ccmxNFnJ.s 			page 26
 
 
  908              	.LVL53:
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  958              		.loc 1 424 47 view .LVU285
  959 004c 1021     		movs	r1, #16
  960              		.loc 1 424 16 view .LVU286
-ARM GAS  /tmp/cc9tOEVd.s 			page 27
+ARM GAS  /tmp/ccmxNFnJ.s 			page 27
 
 
  961 004e DA06     		lsls	r2, r3, #27
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  1007              	.LVL61:
  1008 007c DEE7     		b	.L46
  1009              	.L47:
-ARM GAS  /tmp/cc9tOEVd.s 			page 28
+ARM GAS  /tmp/ccmxNFnJ.s 			page 28
 
 
  423:Src/util.c    ****             if (Feedback.cmdLed & LED5_SET) { gpio_bit_set(LED5_GPIO_Port, LED5_Pin); } else { gpio
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  435:Src/util.c    ****     #ifdef SERIAL_DEBUG
  436:Src/util.c    ****     static uint32_t old_pos;
  437:Src/util.c    ****     uint32_t pos;
-ARM GAS  /tmp/cc9tOEVd.s 			page 29
+ARM GAS  /tmp/ccmxNFnJ.s 			page 29
 
 
  438:Src/util.c    **** 
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  492:Src/util.c    ****             mpu_handle_input(*userCommand);
  493:Src/util.c    ****         }
  494:Src/util.c    ****     }
-ARM GAS  /tmp/cc9tOEVd.s 			page 30
+ARM GAS  /tmp/ccmxNFnJ.s 			page 30
 
 
  495:Src/util.c    **** }
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  1092 0020 6340     		eors	r3, r3, r4
  1093 0022 8489     		ldrh	r4, [r0, #12]
  1094 0024 6340     		eors	r3, r3, r4
-ARM GAS  /tmp/cc9tOEVd.s 			page 31
+ARM GAS  /tmp/ccmxNFnJ.s 			page 31
 
 
  1095 0026 5A40     		eors	r2, r2, r3
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  1145              	usart1_rx_check:
  1146              	.LFB68:
  434:Src/util.c    ****     #ifdef SERIAL_DEBUG
-ARM GAS  /tmp/cc9tOEVd.s 			page 32
+ARM GAS  /tmp/ccmxNFnJ.s 			page 32
 
 
  1147              		.loc 1 434 1 is_stmt 1 view -0
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  1186 0016 631A     		subs	r3, r4, r1
  464:Src/util.c    ****             memcpy(ptr, &rx1_buffer[old_pos], Feedback_len);                    // Copy data. This 
  1187              		.loc 1 464 27 discriminator 1 view .LVU345
-ARM GAS  /tmp/cc9tOEVd.s 			page 33
+ARM GAS  /tmp/ccmxNFnJ.s 			page 33
 
 
  1188 0018 302B     		cmp	r3, #48
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  1228 0048 C1F58076 		rsb	r6, r1, #256
  467:Src/util.c    ****             memcpy(ptr, &rx1_buffer[old_pos], rx1_buffer_len - old_pos);        // First copy data 
  1229              		.loc 1 467 46 view .LVU360
-ARM GAS  /tmp/cc9tOEVd.s 			page 34
+ARM GAS  /tmp/ccmxNFnJ.s 			page 34
 
 
  1230 004c 3319     		adds	r3, r6, r4
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  517:Src/util.c    **** 
  518:Src/util.c    **** 
  519:Src/util.c    **** /* =========================== USART0 READ Functions =========================== */
-ARM GAS  /tmp/cc9tOEVd.s 			page 35
+ARM GAS  /tmp/ccmxNFnJ.s 			page 35
 
 
  520:Src/util.c    **** 
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  1300              		@ link register save eliminated.
  1301 0000 7047     		bx	lr
  1302              		.cfi_endproc
-ARM GAS  /tmp/cc9tOEVd.s 			page 36
+ARM GAS  /tmp/ccmxNFnJ.s 			page 36
 
 
  1303              	.LFE80:
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  596:Src/util.c    ****  */
  597:Src/util.c    **** int8_t i2c_writeBytes(uint8_t slaveAddr, uint8_t regAddr, uint8_t length, uint8_t *data)
  598:Src/util.c    **** {
-ARM GAS  /tmp/cc9tOEVd.s 			page 37
+ARM GAS  /tmp/ccmxNFnJ.s 			page 37
 
 
  1316              		.loc 1 598 1 view -0
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  611:Src/util.c    ****     uint16_t i2c_timeout = 0;
  612:Src/util.c    **** 
  613:Src/util.c    ****     // enable the I2C0 interrupt
-ARM GAS  /tmp/cc9tOEVd.s 			page 38
+ARM GAS  /tmp/ccmxNFnJ.s 			page 38
 
 
  614:Src/util.c    ****     i2c_interrupt_enable(MPU_I2C, I2C_INT_ERR | I2C_INT_BUF | I2C_INT_EV);
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  1385              		.loc 1 614 5 view .LVU402
  1386 0030 FFF7FEFF 		bl	i2c_interrupt_enable
  1387              	.LVL85:
-ARM GAS  /tmp/cc9tOEVd.s 			page 39
+ARM GAS  /tmp/ccmxNFnJ.s 			page 39
 
 
  1388              		.loc 1 617 5 view .LVU403
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  1435 0060 002B     		cmp	r3, #0
  1436 0062 F9D1     		bne	.L79
  1437              	.L78:
-ARM GAS  /tmp/cc9tOEVd.s 			page 40
+ARM GAS  /tmp/ccmxNFnJ.s 			page 40
 
 
  625:Src/util.c    **** 
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  1480              		.loc 1 635 1 view .LVU428
  1481 0002 8DF80720 		strb	r2, [sp, #7]
  1482              		.loc 1 636 12 view .LVU429
-ARM GAS  /tmp/cc9tOEVd.s 			page 41
+ARM GAS  /tmp/ccmxNFnJ.s 			page 41
 
 
  1483 0006 0DF10703 		add	r3, sp, #7
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  658:Src/util.c    **** 
  1514              		.loc 1 658 1 is_stmt 0 view .LVU434
  1515 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
-ARM GAS  /tmp/cc9tOEVd.s 			page 42
+ARM GAS  /tmp/ccmxNFnJ.s 			page 42
 
 
  1516              	.LCFI21:
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  669:Src/util.c    ****     i2c_nRABytes        = 1;
  1556              		.loc 1 669 25 view .LVU452
  1557 0020 0122     		movs	r2, #1
-ARM GAS  /tmp/cc9tOEVd.s 			page 43
+ARM GAS  /tmp/ccmxNFnJ.s 			page 43
 
 
  1558              	.LVL99:
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  680:Src/util.c    ****     // the master waits until the I2C bus is idle
  681:Src/util.c    ****     while(i2c_flag_get(MPU_I2C, I2C_FLAG_I2CBSY) && i2c_timeout++ < 20000);
  1594              		.loc 1 681 11 discriminator 2 view .LVU468
-ARM GAS  /tmp/cc9tOEVd.s 			page 44
+ARM GAS  /tmp/ccmxNFnJ.s 			page 44
 
 
  1595 0046 154F     		ldr	r7, .L105+32
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  689:Src/util.c    **** 
  690:Src/util.c    ****     // Return status
  691:Src/util.c    ****     return i2c_status;
-ARM GAS  /tmp/cc9tOEVd.s 			page 45
+ARM GAS  /tmp/ccmxNFnJ.s 			page 45
 
 
  1642              		.loc 1 691 5 is_stmt 1 view .LVU485
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  1687              	.LVL115:
  1688              		.loc 1 701 12 view .LVU493
  1689              		.cfi_endproc
-ARM GAS  /tmp/cc9tOEVd.s 			page 46
+ARM GAS  /tmp/ccmxNFnJ.s 			page 46
 
 
  1690              	.LFE76:
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  646:Src/util.c    ****     return i2c_writeByte(slaveAddr, regAddr, b);
  1735              		.loc 1 646 31 is_stmt 0 view .LVU505
  1736 0016 04FA08F2 		lsl	r2, r4, r8
-ARM GAS  /tmp/cc9tOEVd.s 			page 47
+ARM GAS  /tmp/ccmxNFnJ.s 			page 47
 
 
  646:Src/util.c    ****     return i2c_writeByte(slaveAddr, regAddr, b);
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  702:Src/util.c    **** }
  703:Src/util.c    **** 
  704:Src/util.c    **** 
-ARM GAS  /tmp/cc9tOEVd.s 			page 48
+ARM GAS  /tmp/ccmxNFnJ.s 			page 48
 
 
  705:Src/util.c    **** /*
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  1824              		.loc 1 714 1 view .LVU532
  1825              		.cfi_endproc
  1826              	.LFE77:
-ARM GAS  /tmp/cc9tOEVd.s 			page 49
+ARM GAS  /tmp/ccmxNFnJ.s 			page 49
 
 
  1828              		.global	buffer
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  1887              		.section	.bss.i2c_slaveAddress,"aw",%nobits
  1888              		.set	.LANCHOR14,. + 0
  1891              	i2c_slaveAddress:
-ARM GAS  /tmp/cc9tOEVd.s 			page 50
+ARM GAS  /tmp/ccmxNFnJ.s 			page 50
 
 
  1892 0000 00       		.space	1
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  1960              	timeoutCntSerial1:
  1961 0000 0000     		.space	2
  1962              		.section	.bss.timeoutFlagSerial1,"aw",%nobits
-ARM GAS  /tmp/cc9tOEVd.s 			page 51
+ARM GAS  /tmp/ccmxNFnJ.s 			page 51
 
 
  1963              		.set	.LANCHOR8,. + 0
@@ -3020,104 +3020,104 @@ ARM GAS  /tmp/cc9tOEVd.s 			page 1
  1981              		.file 13 "Inc/setup.h"
  1982              		.file 14 "Inc/systick.h"
  1983              		.file 15 "<built-in>"
-ARM GAS  /tmp/cc9tOEVd.s 			page 52
+ARM GAS  /tmp/ccmxNFnJ.s 			page 52
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 util.c
-     /tmp/cc9tOEVd.s:16     .text.consoleLog:0000000000000000 $t
-     /tmp/cc9tOEVd.s:24     .text.consoleLog:0000000000000000 consoleLog
-     /tmp/cc9tOEVd.s:39     .text.toggle_led:0000000000000000 $t
-     /tmp/cc9tOEVd.s:46     .text.toggle_led:0000000000000000 toggle_led
-     /tmp/cc9tOEVd.s:65     .text.intro_demo_led:0000000000000000 $t
-     /tmp/cc9tOEVd.s:72     .text.intro_demo_led:0000000000000000 intro_demo_led
-     /tmp/cc9tOEVd.s:223    .text.intro_demo_led:00000000000000cc $d
-     /tmp/cc9tOEVd.s:228    .text.switch_check:0000000000000000 $t
-     /tmp/cc9tOEVd.s:235    .text.switch_check:0000000000000000 switch_check
-     /tmp/cc9tOEVd.s:283    .text.input_init:0000000000000000 $t
-     /tmp/cc9tOEVd.s:290    .text.input_init:0000000000000000 input_init
-     /tmp/cc9tOEVd.s:358    .text.input_init:0000000000000040 $d
-     /tmp/cc9tOEVd.s:367    .text.handle_mpu6050:0000000000000000 $t
-     /tmp/cc9tOEVd.s:374    .text.handle_mpu6050:0000000000000000 handle_mpu6050
-     /tmp/cc9tOEVd.s:425    .text.handle_mpu6050:000000000000002c $d
-     /tmp/cc9tOEVd.s:431    .text.handle_sensors:0000000000000000 $t
-     /tmp/cc9tOEVd.s:438    .text.handle_sensors:0000000000000000 handle_sensors
-     /tmp/cc9tOEVd.s:596    .text.handle_sensors:000000000000007c $d
-     /tmp/cc9tOEVd.s:606    .text.handle_usart:0000000000000000 $t
-     /tmp/cc9tOEVd.s:613    .text.handle_usart:0000000000000000 handle_usart
-     /tmp/cc9tOEVd.s:854    .text.handle_usart:0000000000000124 $d
-     /tmp/cc9tOEVd.s:868    .text.handle_leds:0000000000000000 $t
-     /tmp/cc9tOEVd.s:875    .text.handle_leds:0000000000000000 handle_leds
-     /tmp/cc9tOEVd.s:1039   .text.handle_leds:0000000000000094 $d
-     /tmp/cc9tOEVd.s:1046   .text.usart_process_data:0000000000000000 $t
-     /tmp/cc9tOEVd.s:1053   .text.usart_process_data:0000000000000000 usart_process_data
-     /tmp/cc9tOEVd.s:1132   .text.usart_process_data:000000000000004c $d
-     /tmp/cc9tOEVd.s:1138   .text.usart1_rx_check:0000000000000000 $t
-     /tmp/cc9tOEVd.s:1145   .text.usart1_rx_check:0000000000000000 usart1_rx_check
-     /tmp/cc9tOEVd.s:1260   .text.usart1_rx_check:0000000000000070 $d
-     /tmp/cc9tOEVd.s:1268   .text.usart0_rx_check:0000000000000000 $t
-     /tmp/cc9tOEVd.s:1275   .text.usart0_rx_check:0000000000000000 usart0_rx_check
-     /tmp/cc9tOEVd.s:1288   .text.aux_print_to_console:0000000000000000 $t
-     /tmp/cc9tOEVd.s:1295   .text.aux_print_to_console:0000000000000000 aux_print_to_console
-     /tmp/cc9tOEVd.s:1306   .text.i2c_writeBytes:0000000000000000 $t
-     /tmp/cc9tOEVd.s:1313   .text.i2c_writeBytes:0000000000000000 i2c_writeBytes
-     /tmp/cc9tOEVd.s:1447   .text.i2c_writeBytes:000000000000006c $d
-     /tmp/cc9tOEVd.s:1460   .text.i2c_writeByte:0000000000000000 $t
-     /tmp/cc9tOEVd.s:1467   .text.i2c_writeByte:0000000000000000 i2c_writeByte
-     /tmp/cc9tOEVd.s:1499   .text.i2c_readBytes:0000000000000000 $t
-     /tmp/cc9tOEVd.s:1506   .text.i2c_readBytes:0000000000000000 i2c_readBytes
-     /tmp/cc9tOEVd.s:1651   .text.i2c_readBytes:000000000000007c $d
-     /tmp/cc9tOEVd.s:1664   .text.i2c_readByte:0000000000000000 $t
-     /tmp/cc9tOEVd.s:1671   .text.i2c_readByte:0000000000000000 i2c_readByte
-     /tmp/cc9tOEVd.s:1693   .text.i2c_writeBit:0000000000000000 $t
-     /tmp/cc9tOEVd.s:1700   .text.i2c_writeBit:0000000000000000 i2c_writeBit
-     /tmp/cc9tOEVd.s:1773   .text.i2c_readBit:0000000000000000 $t
-     /tmp/cc9tOEVd.s:1780   .text.i2c_readBit:0000000000000000 i2c_readBit
-     /tmp/cc9tOEVd.s:1854   .bss.buffer:0000000000000000 buffer
-     /tmp/cc9tOEVd.s:1872   .bss.i2c_nRABytes:0000000000000000 i2c_nRABytes
-     /tmp/cc9tOEVd.s:1866   .bss.i2c_nDABytes:0000000000000000 i2c_nDABytes
-     /tmp/cc9tOEVd.s:1885   .bss.i2c_rxbuffer:0000000000000000 i2c_rxbuffer
-     /tmp/cc9tOEVd.s:1904   .bss.i2c_txbuffer:0000000000000000 i2c_txbuffer
-     /tmp/cc9tOEVd.s:1891   .bss.i2c_slaveAddress:0000000000000000 i2c_slaveAddress
-     /tmp/cc9tOEVd.s:1878   .bss.i2c_regAddress:0000000000000000 i2c_regAddress
-ARM GAS  /tmp/cc9tOEVd.s 			page 53
+     /tmp/ccmxNFnJ.s:16     .text.consoleLog:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:24     .text.consoleLog:0000000000000000 consoleLog
+     /tmp/ccmxNFnJ.s:39     .text.toggle_led:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:46     .text.toggle_led:0000000000000000 toggle_led
+     /tmp/ccmxNFnJ.s:65     .text.intro_demo_led:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:72     .text.intro_demo_led:0000000000000000 intro_demo_led
+     /tmp/ccmxNFnJ.s:223    .text.intro_demo_led:00000000000000cc $d
+     /tmp/ccmxNFnJ.s:228    .text.switch_check:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:235    .text.switch_check:0000000000000000 switch_check
+     /tmp/ccmxNFnJ.s:283    .text.input_init:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:290    .text.input_init:0000000000000000 input_init
+     /tmp/ccmxNFnJ.s:358    .text.input_init:0000000000000040 $d
+     /tmp/ccmxNFnJ.s:367    .text.handle_mpu6050:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:374    .text.handle_mpu6050:0000000000000000 handle_mpu6050
+     /tmp/ccmxNFnJ.s:425    .text.handle_mpu6050:000000000000002c $d
+     /tmp/ccmxNFnJ.s:431    .text.handle_sensors:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:438    .text.handle_sensors:0000000000000000 handle_sensors
+     /tmp/ccmxNFnJ.s:596    .text.handle_sensors:000000000000007c $d
+     /tmp/ccmxNFnJ.s:606    .text.handle_usart:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:613    .text.handle_usart:0000000000000000 handle_usart
+     /tmp/ccmxNFnJ.s:854    .text.handle_usart:0000000000000124 $d
+     /tmp/ccmxNFnJ.s:868    .text.handle_leds:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:875    .text.handle_leds:0000000000000000 handle_leds
+     /tmp/ccmxNFnJ.s:1039   .text.handle_leds:0000000000000094 $d
+     /tmp/ccmxNFnJ.s:1046   .text.usart_process_data:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:1053   .text.usart_process_data:0000000000000000 usart_process_data
+     /tmp/ccmxNFnJ.s:1132   .text.usart_process_data:000000000000004c $d
+     /tmp/ccmxNFnJ.s:1138   .text.usart1_rx_check:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:1145   .text.usart1_rx_check:0000000000000000 usart1_rx_check
+     /tmp/ccmxNFnJ.s:1260   .text.usart1_rx_check:0000000000000070 $d
+     /tmp/ccmxNFnJ.s:1268   .text.usart0_rx_check:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:1275   .text.usart0_rx_check:0000000000000000 usart0_rx_check
+     /tmp/ccmxNFnJ.s:1288   .text.aux_print_to_console:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:1295   .text.aux_print_to_console:0000000000000000 aux_print_to_console
+     /tmp/ccmxNFnJ.s:1306   .text.i2c_writeBytes:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:1313   .text.i2c_writeBytes:0000000000000000 i2c_writeBytes
+     /tmp/ccmxNFnJ.s:1447   .text.i2c_writeBytes:000000000000006c $d
+     /tmp/ccmxNFnJ.s:1460   .text.i2c_writeByte:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:1467   .text.i2c_writeByte:0000000000000000 i2c_writeByte
+     /tmp/ccmxNFnJ.s:1499   .text.i2c_readBytes:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:1506   .text.i2c_readBytes:0000000000000000 i2c_readBytes
+     /tmp/ccmxNFnJ.s:1651   .text.i2c_readBytes:000000000000007c $d
+     /tmp/ccmxNFnJ.s:1664   .text.i2c_readByte:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:1671   .text.i2c_readByte:0000000000000000 i2c_readByte
+     /tmp/ccmxNFnJ.s:1693   .text.i2c_writeBit:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:1700   .text.i2c_writeBit:0000000000000000 i2c_writeBit
+     /tmp/ccmxNFnJ.s:1773   .text.i2c_readBit:0000000000000000 $t
+     /tmp/ccmxNFnJ.s:1780   .text.i2c_readBit:0000000000000000 i2c_readBit
+     /tmp/ccmxNFnJ.s:1854   .bss.buffer:0000000000000000 buffer
+     /tmp/ccmxNFnJ.s:1872   .bss.i2c_nRABytes:0000000000000000 i2c_nRABytes
+     /tmp/ccmxNFnJ.s:1866   .bss.i2c_nDABytes:0000000000000000 i2c_nDABytes
+     /tmp/ccmxNFnJ.s:1885   .bss.i2c_rxbuffer:0000000000000000 i2c_rxbuffer
+     /tmp/ccmxNFnJ.s:1904   .bss.i2c_txbuffer:0000000000000000 i2c_txbuffer
+     /tmp/ccmxNFnJ.s:1891   .bss.i2c_slaveAddress:0000000000000000 i2c_slaveAddress
+     /tmp/ccmxNFnJ.s:1878   .bss.i2c_regAddress:0000000000000000 i2c_regAddress
+ARM GAS  /tmp/ccmxNFnJ.s 			page 53
 
 
-     /tmp/cc9tOEVd.s:1860   .bss.i2c_ReadWriteCmd:0000000000000000 i2c_ReadWriteCmd
-     /tmp/cc9tOEVd.s:1897   .bss.i2c_status:0000000000000000 i2c_status
-     /tmp/cc9tOEVd.s:1838   .bss.Feedback:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1842   .bss.Feedback:0000000000000000 Feedback
-     /tmp/cc9tOEVd.s:1845   .bss.FeedbackRaw:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1849   .bss.FeedbackRaw:0000000000000000 FeedbackRaw
-     /tmp/cc9tOEVd.s:1855   .bss.buffer:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1861   .bss.i2c_ReadWriteCmd:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1867   .bss.i2c_nDABytes:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1873   .bss.i2c_nRABytes:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1879   .bss.i2c_regAddress:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1881   .bss.i2c_rxbuffer:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1892   .bss.i2c_slaveAddress:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1898   .bss.i2c_status:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1900   .bss.i2c_txbuffer:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1910   .bss.mpuStatus:0000000000000000 mpuStatus
-     /tmp/cc9tOEVd.s:1911   .bss.mpuStatus:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1913   .bss.old_pos.0:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1917   .bss.old_pos.0:0000000000000000 old_pos.0
-     /tmp/cc9tOEVd.s:1923   .bss.rx1_buffer:0000000000000000 rx1_buffer
-     /tmp/cc9tOEVd.s:1924   .bss.rx1_buffer:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1929   .bss.sensor1:0000000000000000 sensor1
-     /tmp/cc9tOEVd.s:1930   .bss.sensor1:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1935   .bss.sensor1_read:0000000000000000 sensor1_read
-     /tmp/cc9tOEVd.s:1936   .bss.sensor1_read:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1941   .bss.sensor2:0000000000000000 sensor2
-     /tmp/cc9tOEVd.s:1942   .bss.sensor2:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1947   .bss.sensor2_read:0000000000000000 sensor2_read
-     /tmp/cc9tOEVd.s:1948   .bss.sensor2_read:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1953   .bss.sideboard_imu:0000000000000000 sideboard_imu
-     /tmp/cc9tOEVd.s:1954   .bss.sideboard_imu:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1956   .bss.timeoutCntSerial1:0000000000000000 $d
-     /tmp/cc9tOEVd.s:1960   .bss.timeoutCntSerial1:0000000000000000 timeoutCntSerial1
-     /tmp/cc9tOEVd.s:1966   .bss.timeoutFlagSerial1:0000000000000000 timeoutFlagSerial1
-     /tmp/cc9tOEVd.s:1967   .bss.timeoutFlagSerial1:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1860   .bss.i2c_ReadWriteCmd:0000000000000000 i2c_ReadWriteCmd
+     /tmp/ccmxNFnJ.s:1897   .bss.i2c_status:0000000000000000 i2c_status
+     /tmp/ccmxNFnJ.s:1838   .bss.Feedback:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1842   .bss.Feedback:0000000000000000 Feedback
+     /tmp/ccmxNFnJ.s:1845   .bss.FeedbackRaw:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1849   .bss.FeedbackRaw:0000000000000000 FeedbackRaw
+     /tmp/ccmxNFnJ.s:1855   .bss.buffer:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1861   .bss.i2c_ReadWriteCmd:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1867   .bss.i2c_nDABytes:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1873   .bss.i2c_nRABytes:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1879   .bss.i2c_regAddress:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1881   .bss.i2c_rxbuffer:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1892   .bss.i2c_slaveAddress:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1898   .bss.i2c_status:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1900   .bss.i2c_txbuffer:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1910   .bss.mpuStatus:0000000000000000 mpuStatus
+     /tmp/ccmxNFnJ.s:1911   .bss.mpuStatus:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1913   .bss.old_pos.0:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1917   .bss.old_pos.0:0000000000000000 old_pos.0
+     /tmp/ccmxNFnJ.s:1923   .bss.rx1_buffer:0000000000000000 rx1_buffer
+     /tmp/ccmxNFnJ.s:1924   .bss.rx1_buffer:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1929   .bss.sensor1:0000000000000000 sensor1
+     /tmp/ccmxNFnJ.s:1930   .bss.sensor1:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1935   .bss.sensor1_read:0000000000000000 sensor1_read
+     /tmp/ccmxNFnJ.s:1936   .bss.sensor1_read:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1941   .bss.sensor2:0000000000000000 sensor2
+     /tmp/ccmxNFnJ.s:1942   .bss.sensor2:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1947   .bss.sensor2_read:0000000000000000 sensor2_read
+     /tmp/ccmxNFnJ.s:1948   .bss.sensor2_read:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1953   .bss.sideboard_imu:0000000000000000 sideboard_imu
+     /tmp/ccmxNFnJ.s:1954   .bss.sideboard_imu:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1956   .bss.timeoutCntSerial1:0000000000000000 $d
+     /tmp/ccmxNFnJ.s:1960   .bss.timeoutCntSerial1:0000000000000000 timeoutCntSerial1
+     /tmp/ccmxNFnJ.s:1966   .bss.timeoutFlagSerial1:0000000000000000 timeoutFlagSerial1
+     /tmp/ccmxNFnJ.s:1967   .bss.timeoutFlagSerial1:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 gpio_bit_set

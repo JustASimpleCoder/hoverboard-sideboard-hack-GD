@@ -1,0 +1,1880 @@
+ARM GAS  /tmp/cctkvHO9.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 4
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"madgwick_filter.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.madgwick_init,"ax",%progbits
+  16              		.align	1
+  17              		.global	madgwick_init
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	madgwick_init:
+  25              	.LVL0:
+  26              	.LFB56:
+  27              		.file 1 "Src/madgwick_filter.c"
+   1:Src/madgwick_filter.c **** // madgwick_filter.c
+   2:Src/madgwick_filter.c **** #include "madgwick_filter.h"
+   3:Src/madgwick_filter.c **** 
+   4:Src/madgwick_filter.c **** void madgwick_init(Quaternion* q) {
+  28              		.loc 1 4 35 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+   5:Src/madgwick_filter.c ****     q->w = 1.0f;
+  33              		.loc 1 5 5 view .LVU1
+   6:Src/madgwick_filter.c ****     q->x = 0.0f;
+  34              		.loc 1 6 10 is_stmt 0 view .LVU2
+  35 0000 0023     		movs	r3, #0
+  36 0002 0122     		movs	r2, #1
+   7:Src/madgwick_filter.c ****     q->y = 0.0f;
+   8:Src/madgwick_filter.c ****     q->z = 0.0f;
+  37              		.loc 1 8 10 view .LVU3
+  38 0004 C0E90233 		strd	r3, r3, [r0, #8]
+   6:Src/madgwick_filter.c ****     q->x = 0.0f;
+  39              		.loc 1 6 10 view .LVU4
+  40 0008 C0E90023 		strd	r2, r3, [r0]
+   7:Src/madgwick_filter.c ****     q->y = 0.0f;
+  41              		.loc 1 7 5 is_stmt 1 view .LVU5
+   9:Src/madgwick_filter.c **** }
+  42              		.loc 1 9 1 is_stmt 0 view .LVU6
+  43 000c 7047     		bx	lr
+  44              		.cfi_endproc
+  45              	.LFE56:
+  47              		.global	__aeabi_i2d
+  48              		.global	__aeabi_dmul
+ARM GAS  /tmp/cctkvHO9.s 			page 2
+
+
+  49              		.global	__aeabi_dsub
+  50              		.global	__aeabi_dadd
+  51              		.global	__aeabi_dcmpeq
+  52              		.global	__aeabi_d2f
+  53              		.global	__aeabi_fdiv
+  54              		.global	__aeabi_f2d
+  55              		.global	__aeabi_i2f
+  56              		.global	__aeabi_fadd
+  57              		.global	__aeabi_fmul
+  58              		.global	__aeabi_d2iz
+  59              		.section	.text.madgwick_update,"ax",%progbits
+  60              		.align	1
+  61              		.global	madgwick_update
+  62              		.syntax unified
+  63              		.thumb
+  64              		.thumb_func
+  65              		.fpu softvfp
+  67              	madgwick_update:
+  68              	.LVL1:
+  69              	.LFB58:
+  10:Src/madgwick_filter.c **** 
+  11:Src/madgwick_filter.c **** static double inv_sqrt(double x) {
+  12:Src/madgwick_filter.c ****     return 1.0f / sqrtf(x);
+  13:Src/madgwick_filter.c **** }
+  14:Src/madgwick_filter.c **** 
+  15:Src/madgwick_filter.c **** void madgwick_update(Quaternion* q, double ax, double ay, double az, 
+  16:Src/madgwick_filter.c ****                      double gx, double gy, double gz, double dt) {
+  70              		.loc 1 16 66 is_stmt 1 view -0
+  71              		.cfi_startproc
+  72              		@ args = 48, pretend = 0, frame = 160
+  73              		@ frame_needed = 0, uses_anonymous_args = 0
+  17:Src/madgwick_filter.c ****     double recipNorm;
+  74              		.loc 1 17 5 view .LVU8
+  18:Src/madgwick_filter.c ****     double s0, s1, s2, s3;
+  75              		.loc 1 18 5 view .LVU9
+  19:Src/madgwick_filter.c ****     double qDot1, qDot2, qDot3, qDot4;
+  76              		.loc 1 19 5 view .LVU10
+  20:Src/madgwick_filter.c ****     double _2q0, _2q1, _2q2, _2q3, _4q0, _4q1, _4q2, _8q1, _8q2, q0q0, q1q1, q2q2, q3q3;
+  77              		.loc 1 20 5 view .LVU11
+  21:Src/madgwick_filter.c **** 
+  22:Src/madgwick_filter.c ****     qDot1 = 0.5f * (-q->x * gx - q->y * gy - q->z * gz);
+  78              		.loc 1 22 5 view .LVU12
+  16:Src/madgwick_filter.c ****     double recipNorm;
+  79              		.loc 1 16 66 is_stmt 0 view .LVU13
+  80 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+  81              	.LCFI0:
+  82              		.cfi_def_cfa_offset 36
+  83              		.cfi_offset 4, -36
+  84              		.cfi_offset 5, -32
+  85              		.cfi_offset 6, -28
+  86              		.cfi_offset 7, -24
+  87              		.cfi_offset 8, -20
+  88              		.cfi_offset 9, -16
+  89              		.cfi_offset 10, -12
+  90              		.cfi_offset 11, -8
+  91              		.cfi_offset 14, -4
+  92 0004 0446     		mov	r4, r0
+ARM GAS  /tmp/cctkvHO9.s 			page 3
+
+
+  93              		.loc 1 22 39 view .LVU14
+  94 0006 D0E90150 		ldrd	r5, r0, [r0, #4]
+  95              	.LVL2:
+  16:Src/madgwick_filter.c ****     double recipNorm;
+  96              		.loc 1 16 66 view .LVU15
+  97 000a A9B0     		sub	sp, sp, #164
+  98              	.LCFI1:
+  99              		.cfi_def_cfa_offset 200
+  16:Src/madgwick_filter.c ****     double recipNorm;
+ 100              		.loc 1 16 66 view .LVU16
+ 101 000c 9246     		mov	r10, r2
+ 102 000e 9B46     		mov	fp, r3
+ 103              		.loc 1 22 39 view .LVU17
+ 104 0010 FFF7FEFF 		bl	__aeabi_i2d
+ 105              	.LVL3:
+ 106              		.loc 1 22 39 view .LVU18
+ 107 0014 CDE90001 		strd	r0, [sp]
+ 108              		.loc 1 22 51 view .LVU19
+ 109 0018 E068     		ldr	r0, [r4, #12]
+ 110 001a FFF7FEFF 		bl	__aeabi_i2d
+ 111              	.LVL4:
+ 112 001e 8046     		mov	r8, r0
+ 113              		.loc 1 22 27 view .LVU20
+ 114 0020 6842     		rsbs	r0, r5, #0
+ 115              		.loc 1 22 51 view .LVU21
+ 116 0022 8946     		mov	r9, r1
+ 117              		.loc 1 22 27 view .LVU22
+ 118 0024 FFF7FEFF 		bl	__aeabi_i2d
+ 119              	.LVL5:
+ 120 0028 DDE93623 		ldrd	r2, [sp, #216]
+ 121 002c FFF7FEFF 		bl	__aeabi_dmul
+ 122              	.LVL6:
+ 123              		.loc 1 22 39 view .LVU23
+ 124 0030 DDE93823 		ldrd	r2, [sp, #224]
+ 125              		.loc 1 22 27 view .LVU24
+ 126 0034 0646     		mov	r6, r0
+ 127 0036 0F46     		mov	r7, r1
+ 128              		.loc 1 22 39 view .LVU25
+ 129 0038 DDE90001 		ldrd	r0, [sp]
+ 130 003c FFF7FEFF 		bl	__aeabi_dmul
+ 131              	.LVL7:
+ 132 0040 0246     		mov	r2, r0
+ 133 0042 0B46     		mov	r3, r1
+ 134              		.loc 1 22 32 view .LVU26
+ 135 0044 3046     		mov	r0, r6
+ 136 0046 3946     		mov	r1, r7
+ 137 0048 FFF7FEFF 		bl	__aeabi_dsub
+ 138              	.LVL8:
+ 139              		.loc 1 22 51 view .LVU27
+ 140 004c DDE93A23 		ldrd	r2, [sp, #232]
+ 141              		.loc 1 22 32 view .LVU28
+ 142 0050 0646     		mov	r6, r0
+ 143 0052 0F46     		mov	r7, r1
+ 144              		.loc 1 22 51 view .LVU29
+ 145 0054 4046     		mov	r0, r8
+ 146 0056 4946     		mov	r1, r9
+ 147 0058 FFF7FEFF 		bl	__aeabi_dmul
+ARM GAS  /tmp/cctkvHO9.s 			page 4
+
+
+ 148              	.LVL9:
+ 149 005c 0246     		mov	r2, r0
+ 150 005e 0B46     		mov	r3, r1
+ 151              		.loc 1 22 44 view .LVU30
+ 152 0060 3046     		mov	r0, r6
+ 153 0062 3946     		mov	r1, r7
+ 154 0064 FFF7FEFF 		bl	__aeabi_dsub
+ 155              	.LVL10:
+ 156              		.loc 1 22 11 view .LVU31
+ 157 0068 0022     		movs	r2, #0
+ 158 006a 4F4B     		ldr	r3, .L15
+ 159 006c FFF7FEFF 		bl	__aeabi_dmul
+ 160              	.LVL11:
+ 161 0070 CDE90801 		strd	r0, [sp, #32]
+ 162              	.LVL12:
+  23:Src/madgwick_filter.c ****     qDot2 = 0.5f * (q->w * gx + q->y * gz - q->z * gy);
+ 163              		.loc 1 23 5 is_stmt 1 view .LVU32
+ 164              		.loc 1 23 26 is_stmt 0 view .LVU33
+ 165 0074 2068     		ldr	r0, [r4]
+ 166              	.LVL13:
+ 167              		.loc 1 23 26 view .LVU34
+ 168 0076 FFF7FEFF 		bl	__aeabi_i2d
+ 169              	.LVL14:
+ 170 007a 0246     		mov	r2, r0
+ 171 007c 0B46     		mov	r3, r1
+ 172 007e CDE90223 		strd	r2, [sp, #8]
+ 173 0082 DDE93623 		ldrd	r2, [sp, #216]
+ 174 0086 FFF7FEFF 		bl	__aeabi_dmul
+ 175              	.LVL15:
+ 176              		.loc 1 23 38 view .LVU35
+ 177 008a DDE93A23 		ldrd	r2, [sp, #232]
+ 178              		.loc 1 23 26 view .LVU36
+ 179 008e 0646     		mov	r6, r0
+ 180 0090 0F46     		mov	r7, r1
+ 181              		.loc 1 23 38 view .LVU37
+ 182 0092 DDE90001 		ldrd	r0, [sp]
+ 183 0096 FFF7FEFF 		bl	__aeabi_dmul
+ 184              	.LVL16:
+ 185 009a 0246     		mov	r2, r0
+ 186 009c 0B46     		mov	r3, r1
+ 187              		.loc 1 23 31 view .LVU38
+ 188 009e 3046     		mov	r0, r6
+ 189 00a0 3946     		mov	r1, r7
+ 190 00a2 FFF7FEFF 		bl	__aeabi_dadd
+ 191              	.LVL17:
+ 192              		.loc 1 23 50 view .LVU39
+ 193 00a6 DDE93823 		ldrd	r2, [sp, #224]
+ 194              		.loc 1 23 31 view .LVU40
+ 195 00aa 0646     		mov	r6, r0
+ 196 00ac 0F46     		mov	r7, r1
+ 197              		.loc 1 23 50 view .LVU41
+ 198 00ae 4046     		mov	r0, r8
+ 199 00b0 4946     		mov	r1, r9
+ 200 00b2 FFF7FEFF 		bl	__aeabi_dmul
+ 201              	.LVL18:
+ 202 00b6 0246     		mov	r2, r0
+ 203 00b8 0B46     		mov	r3, r1
+ARM GAS  /tmp/cctkvHO9.s 			page 5
+
+
+ 204              		.loc 1 23 43 view .LVU42
+ 205 00ba 3046     		mov	r0, r6
+ 206 00bc 3946     		mov	r1, r7
+ 207 00be FFF7FEFF 		bl	__aeabi_dsub
+ 208              	.LVL19:
+ 209              		.loc 1 23 11 view .LVU43
+ 210 00c2 0022     		movs	r2, #0
+ 211 00c4 384B     		ldr	r3, .L15
+ 212 00c6 FFF7FEFF 		bl	__aeabi_dmul
+ 213              	.LVL20:
+ 214 00ca CDE90A01 		strd	r0, [sp, #40]
+ 215              	.LVL21:
+  24:Src/madgwick_filter.c ****     qDot3 = 0.5f * (q->w * gy - q->x * gz + q->z * gx);
+ 216              		.loc 1 24 5 is_stmt 1 view .LVU44
+ 217              		.loc 1 24 38 is_stmt 0 view .LVU45
+ 218 00ce 2846     		mov	r0, r5
+ 219              	.LVL22:
+ 220              		.loc 1 24 38 view .LVU46
+ 221 00d0 FFF7FEFF 		bl	__aeabi_i2d
+ 222              	.LVL23:
+ 223              		.loc 1 24 26 view .LVU47
+ 224 00d4 DDE93823 		ldrd	r2, [sp, #224]
+ 225              		.loc 1 24 38 view .LVU48
+ 226 00d8 0646     		mov	r6, r0
+ 227 00da 0F46     		mov	r7, r1
+ 228              		.loc 1 24 26 view .LVU49
+ 229 00dc DDE90201 		ldrd	r0, [sp, #8]
+ 230 00e0 FFF7FEFF 		bl	__aeabi_dmul
+ 231              	.LVL24:
+ 232 00e4 CDE90401 		strd	r0, [sp, #16]
+ 233              		.loc 1 24 38 view .LVU50
+ 234 00e8 DDE93A23 		ldrd	r2, [sp, #232]
+ 235 00ec 3046     		mov	r0, r6
+ 236 00ee 3946     		mov	r1, r7
+ 237 00f0 FFF7FEFF 		bl	__aeabi_dmul
+ 238              	.LVL25:
+ 239 00f4 0246     		mov	r2, r0
+ 240 00f6 0B46     		mov	r3, r1
+ 241              		.loc 1 24 31 view .LVU51
+ 242 00f8 DDE90401 		ldrd	r0, [sp, #16]
+ 243 00fc FFF7FEFF 		bl	__aeabi_dsub
+ 244              	.LVL26:
+ 245              		.loc 1 24 50 view .LVU52
+ 246 0100 DDE93623 		ldrd	r2, [sp, #216]
+ 247              		.loc 1 24 31 view .LVU53
+ 248 0104 CDE90401 		strd	r0, [sp, #16]
+ 249              		.loc 1 24 50 view .LVU54
+ 250 0108 4046     		mov	r0, r8
+ 251 010a 4946     		mov	r1, r9
+ 252 010c FFF7FEFF 		bl	__aeabi_dmul
+ 253              	.LVL27:
+ 254 0110 0246     		mov	r2, r0
+ 255 0112 0B46     		mov	r3, r1
+ 256              		.loc 1 24 43 view .LVU55
+ 257 0114 DDE90401 		ldrd	r0, [sp, #16]
+ 258 0118 FFF7FEFF 		bl	__aeabi_dadd
+ 259              	.LVL28:
+ARM GAS  /tmp/cctkvHO9.s 			page 6
+
+
+ 260              		.loc 1 24 11 view .LVU56
+ 261 011c 0022     		movs	r2, #0
+ 262 011e 224B     		ldr	r3, .L15
+ 263 0120 FFF7FEFF 		bl	__aeabi_dmul
+ 264              	.LVL29:
+  25:Src/madgwick_filter.c ****     qDot4 = 0.5f * (q->w * gz + q->x * gy - q->y * gx);
+ 265              		.loc 1 25 26 view .LVU57
+ 266 0124 DDE93A23 		ldrd	r2, [sp, #232]
+  24:Src/madgwick_filter.c ****     qDot3 = 0.5f * (q->w * gy - q->x * gz + q->z * gx);
+ 267              		.loc 1 24 11 view .LVU58
+ 268 0128 CDE90C01 		strd	r0, [sp, #48]
+ 269              	.LVL30:
+ 270              		.loc 1 25 5 is_stmt 1 view .LVU59
+ 271              		.loc 1 25 26 is_stmt 0 view .LVU60
+ 272 012c DDE90201 		ldrd	r0, [sp, #8]
+ 273              	.LVL31:
+ 274              		.loc 1 25 26 view .LVU61
+ 275 0130 FFF7FEFF 		bl	__aeabi_dmul
+ 276              	.LVL32:
+ 277              		.loc 1 25 38 view .LVU62
+ 278 0134 DDE93823 		ldrd	r2, [sp, #224]
+ 279              		.loc 1 25 26 view .LVU63
+ 280 0138 8046     		mov	r8, r0
+ 281 013a 8946     		mov	r9, r1
+ 282              		.loc 1 25 38 view .LVU64
+ 283 013c 3046     		mov	r0, r6
+ 284 013e 3946     		mov	r1, r7
+ 285 0140 FFF7FEFF 		bl	__aeabi_dmul
+ 286              	.LVL33:
+ 287 0144 0246     		mov	r2, r0
+ 288 0146 0B46     		mov	r3, r1
+ 289              		.loc 1 25 31 view .LVU65
+ 290 0148 4046     		mov	r0, r8
+ 291 014a 4946     		mov	r1, r9
+ 292 014c FFF7FEFF 		bl	__aeabi_dadd
+ 293              	.LVL34:
+ 294              		.loc 1 25 50 view .LVU66
+ 295 0150 DDE93623 		ldrd	r2, [sp, #216]
+ 296              		.loc 1 25 31 view .LVU67
+ 297 0154 0646     		mov	r6, r0
+ 298 0156 0F46     		mov	r7, r1
+ 299              		.loc 1 25 50 view .LVU68
+ 300 0158 DDE90001 		ldrd	r0, [sp]
+ 301 015c FFF7FEFF 		bl	__aeabi_dmul
+ 302              	.LVL35:
+ 303 0160 0246     		mov	r2, r0
+ 304 0162 0B46     		mov	r3, r1
+ 305              		.loc 1 25 43 view .LVU69
+ 306 0164 3046     		mov	r0, r6
+ 307 0166 3946     		mov	r1, r7
+ 308 0168 FFF7FEFF 		bl	__aeabi_dsub
+ 309              	.LVL36:
+ 310              		.loc 1 25 11 view .LVU70
+ 311 016c 0022     		movs	r2, #0
+ 312 016e 0E4B     		ldr	r3, .L15
+ 313 0170 FFF7FEFF 		bl	__aeabi_dmul
+ 314              	.LVL37:
+ARM GAS  /tmp/cctkvHO9.s 			page 7
+
+
+  26:Src/madgwick_filter.c **** 
+  27:Src/madgwick_filter.c ****     if(!((ax == 0.0f) && (ay == 0.0f) && (az == 0.0f))) {
+ 315              		.loc 1 27 7 view .LVU71
+ 316 0174 0022     		movs	r2, #0
+  25:Src/madgwick_filter.c ****     qDot4 = 0.5f * (q->w * gz + q->x * gy - q->y * gx);
+ 317              		.loc 1 25 11 view .LVU72
+ 318 0176 CDE90E01 		strd	r0, [sp, #56]
+ 319              	.LVL38:
+ 320              		.loc 1 27 5 is_stmt 1 view .LVU73
+ 321              		.loc 1 27 7 is_stmt 0 view .LVU74
+ 322 017a 0023     		movs	r3, #0
+ 323 017c 5046     		mov	r0, r10
+ 324              	.LVL39:
+ 325              		.loc 1 27 7 view .LVU75
+ 326 017e 5946     		mov	r1, fp
+ 327 0180 FFF7FEFF 		bl	__aeabi_dcmpeq
+ 328              	.LVL40:
+ 329 0184 90B1     		cbz	r0, .L3
+ 330              		.loc 1 27 23 discriminator 1 view .LVU76
+ 331 0186 DDE93201 		ldrd	r0, [sp, #200]
+ 332 018a 0022     		movs	r2, #0
+ 333 018c 0023     		movs	r3, #0
+ 334 018e FFF7FEFF 		bl	__aeabi_dcmpeq
+ 335              	.LVL41:
+ 336 0192 58B1     		cbz	r0, .L3
+ 337              		.loc 1 27 8 discriminator 2 view .LVU77
+ 338 0194 DDE93401 		ldrd	r0, [sp, #208]
+ 339 0198 0022     		movs	r2, #0
+ 340 019a 0023     		movs	r3, #0
+ 341 019c FFF7FEFF 		bl	__aeabi_dcmpeq
+ 342              	.LVL42:
+ 343 01a0 0028     		cmp	r0, #0
+ 344 01a2 40F08982 		bne	.L4
+ 345 01a6 01E0     		b	.L16
+ 346              	.L17:
+ 347              		.align	2
+ 348              	.L15:
+ 349 01a8 0000E03F 		.word	1071644672
+ 350              	.L16:
+ 351              	.L3:
+  28:Src/madgwick_filter.c **** 
+  29:Src/madgwick_filter.c **** 
+  30:Src/madgwick_filter.c ****         recipNorm = inv_sqrt(ax * ax + ay * ay + az * az);
+ 352              		.loc 1 30 9 is_stmt 1 view .LVU78
+ 353              	.LVL43:
+ 354              	.LBB8:
+ 355              	.LBI8:
+  11:Src/madgwick_filter.c ****     return 1.0f / sqrtf(x);
+ 356              		.loc 1 11 15 view .LVU79
+ 357              	.LBB9:
+  12:Src/madgwick_filter.c **** }
+ 358              		.loc 1 12 5 view .LVU80
+ 359              	.LBE9:
+ 360              	.LBE8:
+ 361              		.loc 1 30 33 is_stmt 0 view .LVU81
+ 362 01ac 5246     		mov	r2, r10
+ 363 01ae 5B46     		mov	r3, fp
+ARM GAS  /tmp/cctkvHO9.s 			page 8
+
+
+ 364 01b0 5046     		mov	r0, r10
+ 365 01b2 5946     		mov	r1, fp
+ 366 01b4 FFF7FEFF 		bl	__aeabi_dmul
+ 367              	.LVL44:
+ 368              		.loc 1 30 43 view .LVU82
+ 369 01b8 DDE93223 		ldrd	r2, [sp, #200]
+ 370              		.loc 1 30 33 view .LVU83
+ 371 01bc 0646     		mov	r6, r0
+ 372 01be 0F46     		mov	r7, r1
+ 373              		.loc 1 30 43 view .LVU84
+ 374 01c0 1046     		mov	r0, r2
+ 375 01c2 1946     		mov	r1, r3
+ 376 01c4 FFF7FEFF 		bl	__aeabi_dmul
+ 377              	.LVL45:
+ 378 01c8 0246     		mov	r2, r0
+ 379 01ca 0B46     		mov	r3, r1
+ 380              		.loc 1 30 38 view .LVU85
+ 381 01cc 3046     		mov	r0, r6
+ 382 01ce 3946     		mov	r1, r7
+ 383 01d0 FFF7FEFF 		bl	__aeabi_dadd
+ 384              	.LVL46:
+ 385              		.loc 1 30 53 view .LVU86
+ 386 01d4 DDE93423 		ldrd	r2, [sp, #208]
+ 387              		.loc 1 30 38 view .LVU87
+ 388 01d8 0646     		mov	r6, r0
+ 389 01da 0F46     		mov	r7, r1
+ 390              		.loc 1 30 53 view .LVU88
+ 391 01dc 1046     		mov	r0, r2
+ 392 01de 1946     		mov	r1, r3
+ 393 01e0 FFF7FEFF 		bl	__aeabi_dmul
+ 394              	.LVL47:
+ 395 01e4 0246     		mov	r2, r0
+ 396 01e6 0B46     		mov	r3, r1
+ 397              		.loc 1 30 21 view .LVU89
+ 398 01e8 3046     		mov	r0, r6
+ 399 01ea 3946     		mov	r1, r7
+ 400 01ec FFF7FEFF 		bl	__aeabi_dadd
+ 401              	.LVL48:
+ 402              	.LBB11:
+ 403              	.LBB10:
+  12:Src/madgwick_filter.c **** }
+ 404              		.loc 1 12 19 view .LVU90
+ 405 01f0 FFF7FEFF 		bl	__aeabi_d2f
+ 406              	.LVL49:
+ 407 01f4 FFF7FEFF 		bl	sqrtf
+ 408              	.LVL50:
+ 409 01f8 0146     		mov	r1, r0
+  12:Src/madgwick_filter.c **** }
+ 410              		.loc 1 12 17 view .LVU91
+ 411 01fa 4FF07E50 		mov	r0, #1065353216
+ 412 01fe FFF7FEFF 		bl	__aeabi_fdiv
+ 413              	.LVL51:
+ 414 0202 FFF7FEFF 		bl	__aeabi_f2d
+ 415              	.LVL52:
+ 416 0206 0646     		mov	r6, r0
+ 417 0208 0F46     		mov	r7, r1
+ 418              	.LVL53:
+ARM GAS  /tmp/cctkvHO9.s 			page 9
+
+
+  12:Src/madgwick_filter.c **** }
+ 419              		.loc 1 12 17 view .LVU92
+ 420              	.LBE10:
+ 421              	.LBE11:
+  31:Src/madgwick_filter.c ****         ax *= recipNorm;
+ 422              		.loc 1 31 9 is_stmt 1 view .LVU93
+ 423              		.loc 1 31 12 is_stmt 0 view .LVU94
+ 424 020a 0246     		mov	r2, r0
+ 425 020c 0B46     		mov	r3, r1
+ 426 020e 5046     		mov	r0, r10
+ 427 0210 5946     		mov	r1, fp
+ 428 0212 FFF7FEFF 		bl	__aeabi_dmul
+ 429              	.LVL54:
+  32:Src/madgwick_filter.c ****         ay *= recipNorm;
+ 430              		.loc 1 32 12 view .LVU95
+ 431 0216 3246     		mov	r2, r6
+ 432 0218 3B46     		mov	r3, r7
+  31:Src/madgwick_filter.c ****         ax *= recipNorm;
+ 433              		.loc 1 31 12 view .LVU96
+ 434 021a CDE90001 		strd	r0, [sp]
+ 435              	.LVL55:
+ 436              		.loc 1 32 9 is_stmt 1 view .LVU97
+ 437              		.loc 1 32 12 is_stmt 0 view .LVU98
+ 438 021e DDE93201 		ldrd	r0, [sp, #200]
+ 439              	.LVL56:
+ 440              		.loc 1 32 12 view .LVU99
+ 441 0222 FFF7FEFF 		bl	__aeabi_dmul
+ 442              	.LVL57:
+  33:Src/madgwick_filter.c ****         az *= recipNorm;
+ 443              		.loc 1 33 12 view .LVU100
+ 444 0226 3246     		mov	r2, r6
+ 445 0228 3B46     		mov	r3, r7
+  32:Src/madgwick_filter.c ****         ay *= recipNorm;
+ 446              		.loc 1 32 12 view .LVU101
+ 447 022a CDE90201 		strd	r0, [sp, #8]
+ 448              	.LVL58:
+ 449              		.loc 1 33 9 is_stmt 1 view .LVU102
+ 450              		.loc 1 33 12 is_stmt 0 view .LVU103
+ 451 022e DDE93401 		ldrd	r0, [sp, #208]
+ 452              	.LVL59:
+ 453              		.loc 1 33 12 view .LVU104
+ 454 0232 FFF7FEFF 		bl	__aeabi_dmul
+ 455              	.LVL60:
+  34:Src/madgwick_filter.c **** 
+  35:Src/madgwick_filter.c **** 
+  36:Src/madgwick_filter.c ****         _2q0 = 2.0f * q->w;
+ 456              		.loc 1 36 24 view .LVU105
+ 457 0236 2768     		ldr	r7, [r4]
+  33:Src/madgwick_filter.c ****         az *= recipNorm;
+ 458              		.loc 1 33 12 view .LVU106
+ 459 0238 CDE91601 		strd	r0, [sp, #88]
+ 460              	.LVL61:
+ 461              		.loc 1 36 9 is_stmt 1 view .LVU107
+ 462              		.loc 1 36 21 is_stmt 0 view .LVU108
+ 463 023c 3846     		mov	r0, r7
+ 464              	.LVL62:
+ 465              		.loc 1 36 21 view .LVU109
+ARM GAS  /tmp/cctkvHO9.s 			page 10
+
+
+ 466 023e FFF7FEFF 		bl	__aeabi_i2f
+ 467              	.LVL63:
+ 468 0242 0146     		mov	r1, r0
+ 469 0244 8346     		mov	fp, r0
+ 470 0246 FFF7FEFF 		bl	__aeabi_fadd
+ 471              	.LVL64:
+ 472              		.loc 1 36 14 view .LVU110
+ 473 024a FFF7FEFF 		bl	__aeabi_f2d
+ 474              	.LVL65:
+  37:Src/madgwick_filter.c ****         _2q1 = 2.0f * q->x;
+ 475              		.loc 1 37 24 view .LVU111
+ 476 024e 6668     		ldr	r6, [r4, #4]
+ 477              	.LVL66:
+  36:Src/madgwick_filter.c ****         _2q1 = 2.0f * q->x;
+ 478              		.loc 1 36 14 view .LVU112
+ 479 0250 CDE91801 		strd	r0, [sp, #96]
+ 480              	.LVL67:
+ 481              		.loc 1 37 9 is_stmt 1 view .LVU113
+ 482              		.loc 1 37 21 is_stmt 0 view .LVU114
+ 483 0254 3046     		mov	r0, r6
+ 484              	.LVL68:
+ 485              		.loc 1 37 21 view .LVU115
+ 486 0256 FFF7FEFF 		bl	__aeabi_i2f
+ 487              	.LVL69:
+ 488 025a 0146     		mov	r1, r0
+ 489 025c 8146     		mov	r9, r0
+ 490 025e FFF7FEFF 		bl	__aeabi_fadd
+ 491              	.LVL70:
+ 492              		.loc 1 37 14 view .LVU116
+ 493 0262 FFF7FEFF 		bl	__aeabi_f2d
+ 494              	.LVL71:
+  38:Src/madgwick_filter.c ****         _2q2 = 2.0f * q->y;
+ 495              		.loc 1 38 24 view .LVU117
+ 496 0266 A568     		ldr	r5, [r4, #8]
+  37:Src/madgwick_filter.c ****         _2q1 = 2.0f * q->x;
+ 497              		.loc 1 37 14 view .LVU118
+ 498 0268 CDE91A01 		strd	r0, [sp, #104]
+ 499              	.LVL72:
+ 500              		.loc 1 38 9 is_stmt 1 view .LVU119
+ 501              		.loc 1 38 21 is_stmt 0 view .LVU120
+ 502 026c 2846     		mov	r0, r5
+ 503              	.LVL73:
+ 504              		.loc 1 38 21 view .LVU121
+ 505 026e FFF7FEFF 		bl	__aeabi_i2f
+ 506              	.LVL74:
+ 507 0272 0146     		mov	r1, r0
+ 508 0274 8046     		mov	r8, r0
+ 509 0276 FFF7FEFF 		bl	__aeabi_fadd
+ 510              	.LVL75:
+ 511              		.loc 1 38 14 view .LVU122
+ 512 027a FFF7FEFF 		bl	__aeabi_f2d
+ 513              	.LVL76:
+  39:Src/madgwick_filter.c ****         _2q3 = 2.0f * q->z;
+ 514              		.loc 1 39 24 view .LVU123
+ 515 027e E368     		ldr	r3, [r4, #12]
+  38:Src/madgwick_filter.c ****         _2q2 = 2.0f * q->y;
+ 516              		.loc 1 38 14 view .LVU124
+ARM GAS  /tmp/cctkvHO9.s 			page 11
+
+
+ 517 0280 CDE91C01 		strd	r0, [sp, #112]
+ 518              	.LVL77:
+ 519              		.loc 1 39 9 is_stmt 1 view .LVU125
+ 520              		.loc 1 39 21 is_stmt 0 view .LVU126
+ 521 0284 1846     		mov	r0, r3
+ 522              	.LVL78:
+ 523              		.loc 1 39 24 view .LVU127
+ 524 0286 0793     		str	r3, [sp, #28]
+ 525              		.loc 1 39 21 view .LVU128
+ 526 0288 FFF7FEFF 		bl	__aeabi_i2f
+ 527              	.LVL79:
+ 528 028c 0146     		mov	r1, r0
+ 529 028e FFF7FEFF 		bl	__aeabi_fadd
+ 530              	.LVL80:
+ 531              		.loc 1 39 14 view .LVU129
+ 532 0292 FFF7FEFF 		bl	__aeabi_f2d
+ 533              	.LVL81:
+ 534 0296 CDE91E01 		strd	r0, [sp, #120]
+ 535              	.LVL82:
+  40:Src/madgwick_filter.c ****         _4q0 = 4.0f * q->w;
+ 536              		.loc 1 40 9 is_stmt 1 view .LVU130
+ 537              		.loc 1 40 21 is_stmt 0 view .LVU131
+ 538 029a 4FF08141 		mov	r1, #1082130432
+ 539 029e 5846     		mov	r0, fp
+ 540              	.LVL83:
+ 541              		.loc 1 40 21 view .LVU132
+ 542 02a0 FFF7FEFF 		bl	__aeabi_fmul
+ 543              	.LVL84:
+ 544              		.loc 1 40 14 view .LVU133
+ 545 02a4 FFF7FEFF 		bl	__aeabi_f2d
+ 546              	.LVL85:
+ 547 02a8 CDE91401 		strd	r0, [sp, #80]
+ 548              	.LVL86:
+  41:Src/madgwick_filter.c ****         _4q1 = 4.0f * q->x;
+ 549              		.loc 1 41 9 is_stmt 1 view .LVU134
+ 550              		.loc 1 41 21 is_stmt 0 view .LVU135
+ 551 02ac 4FF08141 		mov	r1, #1082130432
+ 552 02b0 4846     		mov	r0, r9
+ 553              	.LVL87:
+ 554              		.loc 1 41 21 view .LVU136
+ 555 02b2 FFF7FEFF 		bl	__aeabi_fmul
+ 556              	.LVL88:
+ 557              		.loc 1 41 14 view .LVU137
+ 558 02b6 FFF7FEFF 		bl	__aeabi_f2d
+ 559              	.LVL89:
+ 560 02ba CDE91001 		strd	r0, [sp, #64]
+ 561              	.LVL90:
+  42:Src/madgwick_filter.c ****         _4q2 = 4.0f * q->y;
+ 562              		.loc 1 42 9 is_stmt 1 view .LVU138
+ 563              		.loc 1 42 21 is_stmt 0 view .LVU139
+ 564 02be 4FF08141 		mov	r1, #1082130432
+ 565 02c2 4046     		mov	r0, r8
+ 566              	.LVL91:
+ 567              		.loc 1 42 21 view .LVU140
+ 568 02c4 FFF7FEFF 		bl	__aeabi_fmul
+ 569              	.LVL92:
+ 570              		.loc 1 42 14 view .LVU141
+ARM GAS  /tmp/cctkvHO9.s 			page 12
+
+
+ 571 02c8 FFF7FEFF 		bl	__aeabi_f2d
+ 572              	.LVL93:
+ 573 02cc CDE91201 		strd	r0, [sp, #72]
+ 574              	.LVL94:
+  43:Src/madgwick_filter.c ****         _8q1 = 8.0f * q->x;
+ 575              		.loc 1 43 9 is_stmt 1 view .LVU142
+ 576              		.loc 1 43 21 is_stmt 0 view .LVU143
+ 577 02d0 4FF08241 		mov	r1, #1090519040
+ 578 02d4 4846     		mov	r0, r9
+ 579              	.LVL95:
+ 580              		.loc 1 43 21 view .LVU144
+ 581 02d6 FFF7FEFF 		bl	__aeabi_fmul
+ 582              	.LVL96:
+ 583              		.loc 1 43 14 view .LVU145
+ 584 02da FFF7FEFF 		bl	__aeabi_f2d
+ 585              	.LVL97:
+ 586 02de CDE92001 		strd	r0, [sp, #128]
+ 587              	.LVL98:
+  44:Src/madgwick_filter.c ****         _8q2 = 8.0f * q->y;
+ 588              		.loc 1 44 9 is_stmt 1 view .LVU146
+ 589              		.loc 1 44 21 is_stmt 0 view .LVU147
+ 590 02e2 4FF08241 		mov	r1, #1090519040
+ 591 02e6 4046     		mov	r0, r8
+ 592              	.LVL99:
+ 593              		.loc 1 44 21 view .LVU148
+ 594 02e8 FFF7FEFF 		bl	__aeabi_fmul
+ 595              	.LVL100:
+ 596              		.loc 1 44 14 view .LVU149
+ 597 02ec FFF7FEFF 		bl	__aeabi_f2d
+ 598              	.LVL101:
+ 599 02f0 CDE92201 		strd	r0, [sp, #136]
+ 600              	.LVL102:
+  45:Src/madgwick_filter.c ****         q0q0 = q->w * q->w;
+ 601              		.loc 1 45 9 is_stmt 1 view .LVU150
+  46:Src/madgwick_filter.c ****         q1q1 = q->x * q->x;
+ 602              		.loc 1 46 9 view .LVU151
+ 603              		.loc 1 46 14 is_stmt 0 view .LVU152
+ 604 02f4 06FB06F0 		mul	r0, r6, r6
+ 605              	.LVL103:
+ 606              		.loc 1 46 14 view .LVU153
+ 607 02f8 FFF7FEFF 		bl	__aeabi_i2d
+ 608              	.LVL104:
+ 609 02fc CDE90401 		strd	r0, [sp, #16]
+ 610              	.LVL105:
+  47:Src/madgwick_filter.c ****         q2q2 = q->y * q->y;
+ 611              		.loc 1 47 9 is_stmt 1 view .LVU154
+ 612              		.loc 1 47 14 is_stmt 0 view .LVU155
+ 613 0300 05FB05F0 		mul	r0, r5, r5
+ 614              	.LVL106:
+ 615              		.loc 1 47 14 view .LVU156
+ 616 0304 FFF7FEFF 		bl	__aeabi_i2d
+ 617              	.LVL107:
+  48:Src/madgwick_filter.c ****         q3q3 = q->z * q->z;
+ 618              		.loc 1 48 14 view .LVU157
+ 619 0308 079B     		ldr	r3, [sp, #28]
+  47:Src/madgwick_filter.c ****         q2q2 = q->y * q->y;
+ 620              		.loc 1 47 14 view .LVU158
+ARM GAS  /tmp/cctkvHO9.s 			page 13
+
+
+ 621 030a 8246     		mov	r10, r0
+ 622              		.loc 1 48 14 view .LVU159
+ 623 030c 03FB03F0 		mul	r0, r3, r3
+  47:Src/madgwick_filter.c ****         q2q2 = q->y * q->y;
+ 624              		.loc 1 47 14 view .LVU160
+ 625 0310 8B46     		mov	fp, r1
+ 626              	.LVL108:
+ 627              		.loc 1 48 9 is_stmt 1 view .LVU161
+ 628              		.loc 1 48 14 is_stmt 0 view .LVU162
+ 629 0312 FFF7FEFF 		bl	__aeabi_i2d
+ 630              	.LVL109:
+  49:Src/madgwick_filter.c **** 
+  50:Src/madgwick_filter.c **** 
+  51:Src/madgwick_filter.c ****         s0 = _4q0 * q2q2 + _2q2 * ax + _4q0 * q1q1 - _2q1 * ay;
+ 631              		.loc 1 51 19 view .LVU163
+ 632 0316 5246     		mov	r2, r10
+ 633 0318 5B46     		mov	r3, fp
+  48:Src/madgwick_filter.c ****         q3q3 = q->z * q->z;
+ 634              		.loc 1 48 14 view .LVU164
+ 635 031a CDE92401 		strd	r0, [sp, #144]
+ 636              	.LVL110:
+ 637              		.loc 1 51 9 is_stmt 1 view .LVU165
+ 638              		.loc 1 51 19 is_stmt 0 view .LVU166
+ 639 031e DDE91401 		ldrd	r0, [sp, #80]
+ 640              	.LVL111:
+ 641              		.loc 1 51 19 view .LVU167
+ 642 0322 FFF7FEFF 		bl	__aeabi_dmul
+ 643              	.LVL112:
+ 644              		.loc 1 51 33 view .LVU168
+ 645 0326 DDE91C23 		ldrd	r2, [sp, #112]
+ 646              		.loc 1 51 19 view .LVU169
+ 647 032a 8046     		mov	r8, r0
+ 648 032c 8946     		mov	r9, r1
+ 649              		.loc 1 51 33 view .LVU170
+ 650 032e DDE90001 		ldrd	r0, [sp]
+ 651 0332 FFF7FEFF 		bl	__aeabi_dmul
+ 652              	.LVL113:
+ 653 0336 0246     		mov	r2, r0
+ 654 0338 0B46     		mov	r3, r1
+ 655              		.loc 1 51 26 view .LVU171
+ 656 033a 4046     		mov	r0, r8
+ 657 033c 4946     		mov	r1, r9
+ 658 033e FFF7FEFF 		bl	__aeabi_dadd
+ 659              	.LVL114:
+ 660              		.loc 1 51 45 view .LVU172
+ 661 0342 DDE90423 		ldrd	r2, [sp, #16]
+ 662              		.loc 1 51 26 view .LVU173
+ 663 0346 8046     		mov	r8, r0
+ 664 0348 8946     		mov	r9, r1
+ 665              		.loc 1 51 45 view .LVU174
+ 666 034a DDE91401 		ldrd	r0, [sp, #80]
+ 667 034e FFF7FEFF 		bl	__aeabi_dmul
+ 668              	.LVL115:
+ 669 0352 0246     		mov	r2, r0
+ 670 0354 0B46     		mov	r3, r1
+ 671              		.loc 1 51 38 view .LVU175
+ 672 0356 4046     		mov	r0, r8
+ARM GAS  /tmp/cctkvHO9.s 			page 14
+
+
+ 673 0358 4946     		mov	r1, r9
+ 674 035a FFF7FEFF 		bl	__aeabi_dadd
+ 675              	.LVL116:
+ 676              		.loc 1 51 59 view .LVU176
+ 677 035e DDE91A23 		ldrd	r2, [sp, #104]
+ 678              		.loc 1 51 38 view .LVU177
+ 679 0362 8046     		mov	r8, r0
+ 680 0364 8946     		mov	r9, r1
+ 681              		.loc 1 51 59 view .LVU178
+ 682 0366 DDE90201 		ldrd	r0, [sp, #8]
+ 683 036a FFF7FEFF 		bl	__aeabi_dmul
+ 684              	.LVL117:
+ 685 036e 0246     		mov	r2, r0
+ 686 0370 0B46     		mov	r3, r1
+ 687              		.loc 1 51 12 view .LVU179
+ 688 0372 4046     		mov	r0, r8
+ 689 0374 4946     		mov	r1, r9
+ 690 0376 FFF7FEFF 		bl	__aeabi_dsub
+ 691              	.LVL118:
+ 692 037a CDE91401 		strd	r0, [sp, #80]
+ 693              	.LVL119:
+  52:Src/madgwick_filter.c ****         s1 = _4q1 * q3q3 - _2q3 * ax + 4.0f * q0q0 * q->x - _2q0 * ay - _4q1 + _8q1 * q1q1 + _8q1 *
+ 694              		.loc 1 52 9 is_stmt 1 view .LVU180
+  45:Src/madgwick_filter.c ****         q1q1 = q->x * q->x;
+ 695              		.loc 1 45 14 is_stmt 0 view .LVU181
+ 696 037e 07FB07F0 		mul	r0, r7, r7
+ 697              	.LVL120:
+  45:Src/madgwick_filter.c ****         q1q1 = q->x * q->x;
+ 698              		.loc 1 45 14 view .LVU182
+ 699 0382 FFF7FEFF 		bl	__aeabi_i2d
+ 700              	.LVL121:
+ 701              		.loc 1 52 45 view .LVU183
+ 702 0386 0022     		movs	r2, #0
+ 703 0388 C94B     		ldr	r3, .L18+8
+ 704 038a FFF7FEFF 		bl	__aeabi_dmul
+ 705              	.LVL122:
+ 706              		.loc 1 52 19 view .LVU184
+ 707 038e DDE92423 		ldrd	r2, [sp, #144]
+ 708              		.loc 1 52 45 view .LVU185
+ 709 0392 CDE92601 		strd	r0, [sp, #152]
+ 710              		.loc 1 52 19 view .LVU186
+ 711 0396 DDE91001 		ldrd	r0, [sp, #64]
+ 712 039a FFF7FEFF 		bl	__aeabi_dmul
+ 713              	.LVL123:
+ 714              		.loc 1 52 33 view .LVU187
+ 715 039e DDE91E23 		ldrd	r2, [sp, #120]
+ 716              		.loc 1 52 19 view .LVU188
+ 717 03a2 8046     		mov	r8, r0
+ 718 03a4 8946     		mov	r9, r1
+ 719              		.loc 1 52 33 view .LVU189
+ 720 03a6 DDE90001 		ldrd	r0, [sp]
+ 721 03aa FFF7FEFF 		bl	__aeabi_dmul
+ 722              	.LVL124:
+ 723 03ae 0246     		mov	r2, r0
+ 724 03b0 0B46     		mov	r3, r1
+ 725              		.loc 1 52 26 view .LVU190
+ 726 03b2 4046     		mov	r0, r8
+ARM GAS  /tmp/cctkvHO9.s 			page 15
+
+
+ 727 03b4 4946     		mov	r1, r9
+ 728 03b6 FFF7FEFF 		bl	__aeabi_dsub
+ 729              	.LVL125:
+ 730 03ba 8046     		mov	r8, r0
+ 731              		.loc 1 52 52 view .LVU191
+ 732 03bc 3046     		mov	r0, r6
+ 733              		.loc 1 52 26 view .LVU192
+ 734 03be 8946     		mov	r9, r1
+ 735              		.loc 1 52 52 view .LVU193
+ 736 03c0 FFF7FEFF 		bl	__aeabi_i2d
+ 737              	.LVL126:
+ 738 03c4 DDE92623 		ldrd	r2, [sp, #152]
+ 739 03c8 FFF7FEFF 		bl	__aeabi_dmul
+ 740              	.LVL127:
+ 741 03cc 0246     		mov	r2, r0
+ 742 03ce 0B46     		mov	r3, r1
+ 743              		.loc 1 52 38 view .LVU194
+ 744 03d0 4046     		mov	r0, r8
+ 745 03d2 4946     		mov	r1, r9
+ 746 03d4 FFF7FEFF 		bl	__aeabi_dadd
+ 747              	.LVL128:
+ 748              		.loc 1 52 66 view .LVU195
+ 749 03d8 DDE91823 		ldrd	r2, [sp, #96]
+ 750              		.loc 1 52 38 view .LVU196
+ 751 03dc 0646     		mov	r6, r0
+ 752 03de 0F46     		mov	r7, r1
+ 753              	.LVL129:
+ 754              		.loc 1 52 66 view .LVU197
+ 755 03e0 DDE90201 		ldrd	r0, [sp, #8]
+ 756 03e4 FFF7FEFF 		bl	__aeabi_dmul
+ 757              	.LVL130:
+ 758 03e8 0246     		mov	r2, r0
+ 759 03ea 0B46     		mov	r3, r1
+ 760              		.loc 1 52 59 view .LVU198
+ 761 03ec 3046     		mov	r0, r6
+ 762 03ee 3946     		mov	r1, r7
+ 763 03f0 FFF7FEFF 		bl	__aeabi_dsub
+ 764              	.LVL131:
+ 765              		.loc 1 52 71 view .LVU199
+ 766 03f4 DDE91023 		ldrd	r2, [sp, #64]
+ 767 03f8 FFF7FEFF 		bl	__aeabi_dsub
+ 768              	.LVL132:
+ 769              		.loc 1 52 85 view .LVU200
+ 770 03fc DDE90423 		ldrd	r2, [sp, #16]
+ 771              		.loc 1 52 71 view .LVU201
+ 772 0400 0646     		mov	r6, r0
+ 773 0402 0F46     		mov	r7, r1
+ 774              		.loc 1 52 85 view .LVU202
+ 775 0404 DDE92001 		ldrd	r0, [sp, #128]
+ 776 0408 FFF7FEFF 		bl	__aeabi_dmul
+ 777              	.LVL133:
+ 778 040c 0246     		mov	r2, r0
+ 779 040e 0B46     		mov	r3, r1
+ 780              		.loc 1 52 78 view .LVU203
+ 781 0410 3046     		mov	r0, r6
+ 782 0412 3946     		mov	r1, r7
+ 783 0414 FFF7FEFF 		bl	__aeabi_dadd
+ARM GAS  /tmp/cctkvHO9.s 			page 16
+
+
+ 784              	.LVL134:
+ 785              		.loc 1 52 99 view .LVU204
+ 786 0418 5246     		mov	r2, r10
+ 787              		.loc 1 52 78 view .LVU205
+ 788 041a 0646     		mov	r6, r0
+ 789 041c 0F46     		mov	r7, r1
+ 790              		.loc 1 52 99 view .LVU206
+ 791 041e DDE92001 		ldrd	r0, [sp, #128]
+ 792 0422 5B46     		mov	r3, fp
+ 793 0424 FFF7FEFF 		bl	__aeabi_dmul
+ 794              	.LVL135:
+ 795 0428 0246     		mov	r2, r0
+ 796 042a 0B46     		mov	r3, r1
+ 797              		.loc 1 52 92 view .LVU207
+ 798 042c 3046     		mov	r0, r6
+ 799 042e 3946     		mov	r1, r7
+ 800 0430 FFF7FEFF 		bl	__aeabi_dadd
+ 801              	.LVL136:
+ 802              		.loc 1 52 113 view .LVU208
+ 803 0434 DDE91023 		ldrd	r2, [sp, #64]
+ 804              		.loc 1 52 92 view .LVU209
+ 805 0438 0646     		mov	r6, r0
+ 806 043a 0F46     		mov	r7, r1
+ 807              		.loc 1 52 113 view .LVU210
+ 808 043c DDE91601 		ldrd	r0, [sp, #88]
+ 809 0440 FFF7FEFF 		bl	__aeabi_dmul
+ 810              	.LVL137:
+ 811 0444 0246     		mov	r2, r0
+ 812 0446 0B46     		mov	r3, r1
+ 813              		.loc 1 52 12 view .LVU211
+ 814 0448 3046     		mov	r0, r6
+ 815 044a 3946     		mov	r1, r7
+ 816 044c FFF7FEFF 		bl	__aeabi_dadd
+ 817              	.LVL138:
+ 818 0450 CDE91001 		strd	r0, [sp, #64]
+ 819              	.LVL139:
+  53:Src/madgwick_filter.c ****         s2 = 4.0f * q0q0 * q->y + _2q0 * ax + _4q2 * q3q3 - _2q3 * ay - _4q2 + _8q2 * q1q1 + _8q2 *
+ 820              		.loc 1 53 9 is_stmt 1 view .LVU212
+ 821              		.loc 1 53 26 is_stmt 0 view .LVU213
+ 822 0454 2846     		mov	r0, r5
+ 823              	.LVL140:
+ 824              		.loc 1 53 26 view .LVU214
+ 825 0456 FFF7FEFF 		bl	__aeabi_i2d
+ 826              	.LVL141:
+ 827 045a DDE92623 		ldrd	r2, [sp, #152]
+ 828 045e FFF7FEFF 		bl	__aeabi_dmul
+ 829              	.LVL142:
+ 830              		.loc 1 53 40 view .LVU215
+ 831 0462 DDE91823 		ldrd	r2, [sp, #96]
+ 832              		.loc 1 53 26 view .LVU216
+ 833 0466 0646     		mov	r6, r0
+ 834 0468 0F46     		mov	r7, r1
+ 835              		.loc 1 53 40 view .LVU217
+ 836 046a DDE90001 		ldrd	r0, [sp]
+ 837 046e FFF7FEFF 		bl	__aeabi_dmul
+ 838              	.LVL143:
+ 839 0472 0246     		mov	r2, r0
+ARM GAS  /tmp/cctkvHO9.s 			page 17
+
+
+ 840 0474 0B46     		mov	r3, r1
+ 841              		.loc 1 53 33 view .LVU218
+ 842 0476 3046     		mov	r0, r6
+ 843 0478 3946     		mov	r1, r7
+ 844 047a FFF7FEFF 		bl	__aeabi_dadd
+ 845              	.LVL144:
+ 846              		.loc 1 53 52 view .LVU219
+ 847 047e DDE92423 		ldrd	r2, [sp, #144]
+ 848              		.loc 1 53 33 view .LVU220
+ 849 0482 0646     		mov	r6, r0
+ 850 0484 0F46     		mov	r7, r1
+ 851              		.loc 1 53 52 view .LVU221
+ 852 0486 DDE91201 		ldrd	r0, [sp, #72]
+ 853 048a FFF7FEFF 		bl	__aeabi_dmul
+ 854              	.LVL145:
+ 855 048e 0246     		mov	r2, r0
+ 856 0490 0B46     		mov	r3, r1
+ 857              		.loc 1 53 45 view .LVU222
+ 858 0492 3046     		mov	r0, r6
+ 859 0494 3946     		mov	r1, r7
+ 860 0496 FFF7FEFF 		bl	__aeabi_dadd
+ 861              	.LVL146:
+ 862              		.loc 1 53 66 view .LVU223
+ 863 049a DDE91E23 		ldrd	r2, [sp, #120]
+ 864              		.loc 1 53 45 view .LVU224
+ 865 049e 0646     		mov	r6, r0
+ 866 04a0 0F46     		mov	r7, r1
+ 867              		.loc 1 53 66 view .LVU225
+ 868 04a2 DDE90201 		ldrd	r0, [sp, #8]
+ 869 04a6 FFF7FEFF 		bl	__aeabi_dmul
+ 870              	.LVL147:
+ 871 04aa 0246     		mov	r2, r0
+ 872 04ac 0B46     		mov	r3, r1
+ 873              		.loc 1 53 59 view .LVU226
+ 874 04ae 3046     		mov	r0, r6
+ 875 04b0 3946     		mov	r1, r7
+ 876 04b2 FFF7FEFF 		bl	__aeabi_dsub
+ 877              	.LVL148:
+ 878              		.loc 1 53 71 view .LVU227
+ 879 04b6 DDE91223 		ldrd	r2, [sp, #72]
+ 880 04ba FFF7FEFF 		bl	__aeabi_dsub
+ 881              	.LVL149:
+ 882              		.loc 1 53 85 view .LVU228
+ 883 04be DDE90423 		ldrd	r2, [sp, #16]
+ 884              		.loc 1 53 71 view .LVU229
+ 885 04c2 0646     		mov	r6, r0
+ 886 04c4 0F46     		mov	r7, r1
+ 887              		.loc 1 53 85 view .LVU230
+ 888 04c6 DDE92201 		ldrd	r0, [sp, #136]
+ 889 04ca FFF7FEFF 		bl	__aeabi_dmul
+ 890              	.LVL150:
+ 891 04ce 0246     		mov	r2, r0
+ 892 04d0 0B46     		mov	r3, r1
+ 893              		.loc 1 53 78 view .LVU231
+ 894 04d2 3046     		mov	r0, r6
+ 895 04d4 3946     		mov	r1, r7
+ 896 04d6 FFF7FEFF 		bl	__aeabi_dadd
+ARM GAS  /tmp/cctkvHO9.s 			page 18
+
+
+ 897              	.LVL151:
+ 898              		.loc 1 53 99 view .LVU232
+ 899 04da 5246     		mov	r2, r10
+ 900              		.loc 1 53 78 view .LVU233
+ 901 04dc 0646     		mov	r6, r0
+ 902 04de 0F46     		mov	r7, r1
+ 903              		.loc 1 53 99 view .LVU234
+ 904 04e0 DDE92201 		ldrd	r0, [sp, #136]
+ 905 04e4 5B46     		mov	r3, fp
+ 906 04e6 FFF7FEFF 		bl	__aeabi_dmul
+ 907              	.LVL152:
+ 908 04ea 0246     		mov	r2, r0
+ 909 04ec 0B46     		mov	r3, r1
+ 910              		.loc 1 53 92 view .LVU235
+ 911 04ee 3046     		mov	r0, r6
+ 912 04f0 3946     		mov	r1, r7
+ 913 04f2 FFF7FEFF 		bl	__aeabi_dadd
+ 914              	.LVL153:
+ 915              		.loc 1 53 113 view .LVU236
+ 916 04f6 DDE91223 		ldrd	r2, [sp, #72]
+ 917              		.loc 1 53 92 view .LVU237
+ 918 04fa 0646     		mov	r6, r0
+ 919 04fc 0F46     		mov	r7, r1
+ 920              		.loc 1 53 113 view .LVU238
+ 921 04fe DDE91601 		ldrd	r0, [sp, #88]
+ 922 0502 FFF7FEFF 		bl	__aeabi_dmul
+ 923              	.LVL154:
+ 924 0506 0246     		mov	r2, r0
+ 925 0508 0B46     		mov	r3, r1
+ 926              		.loc 1 53 12 view .LVU239
+ 927 050a 3046     		mov	r0, r6
+ 928 050c 3946     		mov	r1, r7
+ 929 050e FFF7FEFF 		bl	__aeabi_dadd
+ 930              	.LVL155:
+ 931 0512 CDE91201 		strd	r0, [sp, #72]
+ 932              	.LVL156:
+  54:Src/madgwick_filter.c ****         s3 = 4.0f * q1q1 * q->z - _2q1 * ax + 4.0f * q2q2 * q->z - _2q2 * ay;
+ 933              		.loc 1 54 9 is_stmt 1 view .LVU240
+ 934              		.loc 1 54 26 is_stmt 0 view .LVU241
+ 935 0516 0798     		ldr	r0, [sp, #28]
+ 936              	.LVL157:
+ 937              		.loc 1 54 26 view .LVU242
+ 938 0518 FFF7FEFF 		bl	__aeabi_i2d
+ 939              	.LVL158:
+ 940 051c 0646     		mov	r6, r0
+ 941 051e 0F46     		mov	r7, r1
+ 942              		.loc 1 54 19 view .LVU243
+ 943 0520 DDE90401 		ldrd	r0, [sp, #16]
+ 944 0524 0022     		movs	r2, #0
+ 945 0526 624B     		ldr	r3, .L18+8
+ 946 0528 FFF7FEFF 		bl	__aeabi_dmul
+ 947              	.LVL159:
+ 948              		.loc 1 54 26 view .LVU244
+ 949 052c 3246     		mov	r2, r6
+ 950 052e 3B46     		mov	r3, r7
+ 951 0530 FFF7FEFF 		bl	__aeabi_dmul
+ 952              	.LVL160:
+ARM GAS  /tmp/cctkvHO9.s 			page 19
+
+
+ 953              		.loc 1 54 40 view .LVU245
+ 954 0534 DDE91A23 		ldrd	r2, [sp, #104]
+ 955              		.loc 1 54 26 view .LVU246
+ 956 0538 8046     		mov	r8, r0
+ 957 053a 8946     		mov	r9, r1
+ 958              		.loc 1 54 40 view .LVU247
+ 959 053c DDE90001 		ldrd	r0, [sp]
+ 960 0540 FFF7FEFF 		bl	__aeabi_dmul
+ 961              	.LVL161:
+ 962 0544 0246     		mov	r2, r0
+ 963 0546 0B46     		mov	r3, r1
+ 964              		.loc 1 54 33 view .LVU248
+ 965 0548 4046     		mov	r0, r8
+ 966 054a 4946     		mov	r1, r9
+ 967 054c FFF7FEFF 		bl	__aeabi_dsub
+ 968              	.LVL162:
+ 969              		.loc 1 54 52 view .LVU249
+ 970 0550 0022     		movs	r2, #0
+ 971              		.loc 1 54 33 view .LVU250
+ 972 0552 8046     		mov	r8, r0
+ 973 0554 8946     		mov	r9, r1
+ 974              		.loc 1 54 52 view .LVU251
+ 975 0556 564B     		ldr	r3, .L18+8
+ 976 0558 5046     		mov	r0, r10
+ 977 055a 5946     		mov	r1, fp
+ 978 055c FFF7FEFF 		bl	__aeabi_dmul
+ 979              	.LVL163:
+ 980              		.loc 1 54 59 view .LVU252
+ 981 0560 3246     		mov	r2, r6
+ 982 0562 3B46     		mov	r3, r7
+ 983 0564 FFF7FEFF 		bl	__aeabi_dmul
+ 984              	.LVL164:
+ 985 0568 0246     		mov	r2, r0
+ 986 056a 0B46     		mov	r3, r1
+ 987              		.loc 1 54 45 view .LVU253
+ 988 056c 4046     		mov	r0, r8
+ 989 056e 4946     		mov	r1, r9
+ 990 0570 FFF7FEFF 		bl	__aeabi_dadd
+ 991              	.LVL165:
+ 992              		.loc 1 54 73 view .LVU254
+ 993 0574 DDE91C23 		ldrd	r2, [sp, #112]
+ 994              		.loc 1 54 45 view .LVU255
+ 995 0578 0646     		mov	r6, r0
+ 996 057a 0F46     		mov	r7, r1
+ 997              		.loc 1 54 73 view .LVU256
+ 998 057c DDE90201 		ldrd	r0, [sp, #8]
+ 999 0580 FFF7FEFF 		bl	__aeabi_dmul
+ 1000              	.LVL166:
+ 1001 0584 0246     		mov	r2, r0
+ 1002 0586 0B46     		mov	r3, r1
+ 1003              		.loc 1 54 12 view .LVU257
+ 1004 0588 3046     		mov	r0, r6
+ 1005 058a 3946     		mov	r1, r7
+ 1006 058c FFF7FEFF 		bl	__aeabi_dsub
+ 1007              	.LVL167:
+  55:Src/madgwick_filter.c ****         recipNorm = inv_sqrt(s0 * s0 + s1 * s1 + s2 * s2 + s3 * s3); 
+ 1008              		.loc 1 55 33 view .LVU258
+ARM GAS  /tmp/cctkvHO9.s 			page 20
+
+
+ 1009 0590 DDE91423 		ldrd	r2, [sp, #80]
+  54:Src/madgwick_filter.c ****         s3 = 4.0f * q1q1 * q->z - _2q1 * ax + 4.0f * q2q2 * q->z - _2q2 * ay;
+ 1010              		.loc 1 54 12 view .LVU259
+ 1011 0594 8046     		mov	r8, r0
+ 1012 0596 8946     		mov	r9, r1
+ 1013              	.LVL168:
+ 1014              		.loc 1 55 9 is_stmt 1 view .LVU260
+ 1015              	.LBB12:
+ 1016              	.LBI12:
+  11:Src/madgwick_filter.c ****     return 1.0f / sqrtf(x);
+ 1017              		.loc 1 11 15 view .LVU261
+ 1018              	.LBB13:
+  12:Src/madgwick_filter.c **** }
+ 1019              		.loc 1 12 5 view .LVU262
+ 1020              	.LBE13:
+ 1021              	.LBE12:
+ 1022              		.loc 1 55 33 is_stmt 0 view .LVU263
+ 1023 0598 1046     		mov	r0, r2
+ 1024 059a 1946     		mov	r1, r3
+ 1025 059c FFF7FEFF 		bl	__aeabi_dmul
+ 1026              	.LVL169:
+ 1027              		.loc 1 55 43 view .LVU264
+ 1028 05a0 DDE91023 		ldrd	r2, [sp, #64]
+ 1029              		.loc 1 55 33 view .LVU265
+ 1030 05a4 0646     		mov	r6, r0
+ 1031 05a6 0F46     		mov	r7, r1
+ 1032              		.loc 1 55 43 view .LVU266
+ 1033 05a8 1046     		mov	r0, r2
+ 1034 05aa 1946     		mov	r1, r3
+ 1035 05ac FFF7FEFF 		bl	__aeabi_dmul
+ 1036              	.LVL170:
+ 1037 05b0 0246     		mov	r2, r0
+ 1038 05b2 0B46     		mov	r3, r1
+ 1039              		.loc 1 55 38 view .LVU267
+ 1040 05b4 3046     		mov	r0, r6
+ 1041 05b6 3946     		mov	r1, r7
+ 1042 05b8 FFF7FEFF 		bl	__aeabi_dadd
+ 1043              	.LVL171:
+ 1044              		.loc 1 55 53 view .LVU268
+ 1045 05bc DDE91223 		ldrd	r2, [sp, #72]
+ 1046              		.loc 1 55 38 view .LVU269
+ 1047 05c0 0646     		mov	r6, r0
+ 1048 05c2 0F46     		mov	r7, r1
+ 1049              		.loc 1 55 53 view .LVU270
+ 1050 05c4 1046     		mov	r0, r2
+ 1051 05c6 1946     		mov	r1, r3
+ 1052 05c8 FFF7FEFF 		bl	__aeabi_dmul
+ 1053              	.LVL172:
+ 1054 05cc 0246     		mov	r2, r0
+ 1055 05ce 0B46     		mov	r3, r1
+ 1056              		.loc 1 55 48 view .LVU271
+ 1057 05d0 3046     		mov	r0, r6
+ 1058 05d2 3946     		mov	r1, r7
+ 1059 05d4 FFF7FEFF 		bl	__aeabi_dadd
+ 1060              	.LVL173:
+ 1061              		.loc 1 55 63 view .LVU272
+ 1062 05d8 4246     		mov	r2, r8
+ARM GAS  /tmp/cctkvHO9.s 			page 21
+
+
+ 1063              		.loc 1 55 48 view .LVU273
+ 1064 05da 0646     		mov	r6, r0
+ 1065 05dc 0F46     		mov	r7, r1
+ 1066              		.loc 1 55 63 view .LVU274
+ 1067 05de 4B46     		mov	r3, r9
+ 1068 05e0 4046     		mov	r0, r8
+ 1069 05e2 4946     		mov	r1, r9
+ 1070 05e4 FFF7FEFF 		bl	__aeabi_dmul
+ 1071              	.LVL174:
+ 1072 05e8 0246     		mov	r2, r0
+ 1073 05ea 0B46     		mov	r3, r1
+ 1074              		.loc 1 55 21 view .LVU275
+ 1075 05ec 3046     		mov	r0, r6
+ 1076 05ee 3946     		mov	r1, r7
+ 1077 05f0 FFF7FEFF 		bl	__aeabi_dadd
+ 1078              	.LVL175:
+ 1079              	.LBB15:
+ 1080              	.LBB14:
+  12:Src/madgwick_filter.c **** }
+ 1081              		.loc 1 12 19 view .LVU276
+ 1082 05f4 FFF7FEFF 		bl	__aeabi_d2f
+ 1083              	.LVL176:
+ 1084 05f8 FFF7FEFF 		bl	sqrtf
+ 1085              	.LVL177:
+ 1086 05fc 0146     		mov	r1, r0
+  12:Src/madgwick_filter.c **** }
+ 1087              		.loc 1 12 17 view .LVU277
+ 1088 05fe 4FF07E50 		mov	r0, #1065353216
+ 1089 0602 FFF7FEFF 		bl	__aeabi_fdiv
+ 1090              	.LVL178:
+ 1091 0606 FFF7FEFF 		bl	__aeabi_f2d
+ 1092              	.LVL179:
+ 1093 060a 0646     		mov	r6, r0
+ 1094 060c 0F46     		mov	r7, r1
+ 1095              	.LVL180:
+  12:Src/madgwick_filter.c **** }
+ 1096              		.loc 1 12 17 view .LVU278
+ 1097              	.LBE14:
+ 1098              	.LBE15:
+  56:Src/madgwick_filter.c ****         s0 *= recipNorm;
+ 1099              		.loc 1 56 9 is_stmt 1 view .LVU279
+  57:Src/madgwick_filter.c ****         s1 *= recipNorm;
+ 1100              		.loc 1 57 9 view .LVU280
+  58:Src/madgwick_filter.c ****         s2 *= recipNorm;
+ 1101              		.loc 1 58 9 view .LVU281
+  59:Src/madgwick_filter.c ****         s3 *= recipNorm;
+ 1102              		.loc 1 59 9 view .LVU282
+  60:Src/madgwick_filter.c **** 
+  61:Src/madgwick_filter.c **** 
+  62:Src/madgwick_filter.c ****         qDot1 -= beta * s0;
+ 1103              		.loc 1 62 9 view .LVU283
+  56:Src/madgwick_filter.c ****         s1 *= recipNorm;
+ 1104              		.loc 1 56 12 is_stmt 0 view .LVU284
+ 1105 060e 0246     		mov	r2, r0
+ 1106 0610 0B46     		mov	r3, r1
+ 1107 0612 DDE91401 		ldrd	r0, [sp, #80]
+ 1108 0616 FFF7FEFF 		bl	__aeabi_dmul
+ARM GAS  /tmp/cctkvHO9.s 			page 22
+
+
+ 1109              	.LVL181:
+ 1110              		.loc 1 62 23 view .LVU285
+ 1111 061a 23A3     		adr	r3, .L18
+ 1112 061c D3E90023 		ldrd	r2, [r3]
+ 1113 0620 FFF7FEFF 		bl	__aeabi_dmul
+ 1114              	.LVL182:
+ 1115 0624 0246     		mov	r2, r0
+ 1116 0626 0B46     		mov	r3, r1
+ 1117              		.loc 1 62 15 view .LVU286
+ 1118 0628 DDE90801 		ldrd	r0, [sp, #32]
+ 1119 062c FFF7FEFF 		bl	__aeabi_dsub
+ 1120              	.LVL183:
+  57:Src/madgwick_filter.c ****         s2 *= recipNorm;
+ 1121              		.loc 1 57 12 view .LVU287
+ 1122 0630 3246     		mov	r2, r6
+ 1123 0632 3B46     		mov	r3, r7
+ 1124              		.loc 1 62 15 view .LVU288
+ 1125 0634 CDE90801 		strd	r0, [sp, #32]
+ 1126              	.LVL184:
+  63:Src/madgwick_filter.c ****         qDot2 -= beta * s1;
+ 1127              		.loc 1 63 9 is_stmt 1 view .LVU289
+  57:Src/madgwick_filter.c ****         s2 *= recipNorm;
+ 1128              		.loc 1 57 12 is_stmt 0 view .LVU290
+ 1129 0638 DDE91001 		ldrd	r0, [sp, #64]
+ 1130              	.LVL185:
+  57:Src/madgwick_filter.c ****         s2 *= recipNorm;
+ 1131              		.loc 1 57 12 view .LVU291
+ 1132 063c FFF7FEFF 		bl	__aeabi_dmul
+ 1133              	.LVL186:
+ 1134              		.loc 1 63 23 view .LVU292
+ 1135 0640 19A3     		adr	r3, .L18
+ 1136 0642 D3E90023 		ldrd	r2, [r3]
+ 1137 0646 FFF7FEFF 		bl	__aeabi_dmul
+ 1138              	.LVL187:
+ 1139 064a 0246     		mov	r2, r0
+ 1140 064c 0B46     		mov	r3, r1
+ 1141              		.loc 1 63 15 view .LVU293
+ 1142 064e DDE90A01 		ldrd	r0, [sp, #40]
+ 1143 0652 FFF7FEFF 		bl	__aeabi_dsub
+ 1144              	.LVL188:
+  58:Src/madgwick_filter.c ****         s3 *= recipNorm;
+ 1145              		.loc 1 58 12 view .LVU294
+ 1146 0656 3246     		mov	r2, r6
+ 1147 0658 3B46     		mov	r3, r7
+ 1148              		.loc 1 63 15 view .LVU295
+ 1149 065a CDE90A01 		strd	r0, [sp, #40]
+ 1150              	.LVL189:
+  64:Src/madgwick_filter.c ****         qDot3 -= beta * s2;
+ 1151              		.loc 1 64 9 is_stmt 1 view .LVU296
+  58:Src/madgwick_filter.c ****         s3 *= recipNorm;
+ 1152              		.loc 1 58 12 is_stmt 0 view .LVU297
+ 1153 065e DDE91201 		ldrd	r0, [sp, #72]
+ 1154              	.LVL190:
+  58:Src/madgwick_filter.c ****         s3 *= recipNorm;
+ 1155              		.loc 1 58 12 view .LVU298
+ 1156 0662 FFF7FEFF 		bl	__aeabi_dmul
+ 1157              	.LVL191:
+ARM GAS  /tmp/cctkvHO9.s 			page 23
+
+
+ 1158              		.loc 1 64 23 view .LVU299
+ 1159 0666 10A3     		adr	r3, .L18
+ 1160 0668 D3E90023 		ldrd	r2, [r3]
+ 1161 066c FFF7FEFF 		bl	__aeabi_dmul
+ 1162              	.LVL192:
+ 1163 0670 0246     		mov	r2, r0
+ 1164 0672 0B46     		mov	r3, r1
+ 1165              		.loc 1 64 15 view .LVU300
+ 1166 0674 DDE90C01 		ldrd	r0, [sp, #48]
+ 1167 0678 FFF7FEFF 		bl	__aeabi_dsub
+ 1168              	.LVL193:
+  59:Src/madgwick_filter.c **** 
+ 1169              		.loc 1 59 12 view .LVU301
+ 1170 067c 3246     		mov	r2, r6
+ 1171              		.loc 1 64 15 view .LVU302
+ 1172 067e CDE90C01 		strd	r0, [sp, #48]
+ 1173              	.LVL194:
+  65:Src/madgwick_filter.c ****         qDot4 -= beta * s3;
+ 1174              		.loc 1 65 9 is_stmt 1 view .LVU303
+  59:Src/madgwick_filter.c **** 
+ 1175              		.loc 1 59 12 is_stmt 0 view .LVU304
+ 1176 0682 3B46     		mov	r3, r7
+ 1177 0684 4046     		mov	r0, r8
+ 1178              	.LVL195:
+  59:Src/madgwick_filter.c **** 
+ 1179              		.loc 1 59 12 view .LVU305
+ 1180 0686 4946     		mov	r1, r9
+ 1181 0688 FFF7FEFF 		bl	__aeabi_dmul
+ 1182              	.LVL196:
+ 1183              		.loc 1 65 23 view .LVU306
+ 1184 068c 06A3     		adr	r3, .L18
+ 1185 068e D3E90023 		ldrd	r2, [r3]
+ 1186 0692 FFF7FEFF 		bl	__aeabi_dmul
+ 1187              	.LVL197:
+ 1188 0696 0246     		mov	r2, r0
+ 1189 0698 0B46     		mov	r3, r1
+ 1190              		.loc 1 65 15 view .LVU307
+ 1191 069a DDE90E01 		ldrd	r0, [sp, #56]
+ 1192 069e FFF7FEFF 		bl	__aeabi_dsub
+ 1193              	.LVL198:
+ 1194 06a2 07E0     		b	.L19
+ 1195              	.L20:
+ 1196 06a4 AFF30080 		.align	3
+ 1197              	.L18:
+ 1198 06a8 9A999999 		.word	-1717986918
+ 1199 06ac 9999B93F 		.word	1069128089
+ 1200 06b0 00001040 		.word	1074790400
+ 1201              	.L19:
+ 1202 06b4 CDE90E01 		strd	r0, [sp, #56]
+ 1203              	.LVL199:
+ 1204              	.L4:
+  66:Src/madgwick_filter.c ****     }
+  67:Src/madgwick_filter.c **** 
+  68:Src/madgwick_filter.c ****     q->w += qDot1 * dt;
+ 1205              		.loc 1 68 5 is_stmt 1 view .LVU308
+ 1206              		.loc 1 68 10 is_stmt 0 view .LVU309
+ 1207 06b8 2068     		ldr	r0, [r4]
+ARM GAS  /tmp/cctkvHO9.s 			page 24
+
+
+ 1208 06ba FFF7FEFF 		bl	__aeabi_i2d
+ 1209              	.LVL200:
+ 1210              		.loc 1 68 19 view .LVU310
+ 1211 06be DDE93C23 		ldrd	r2, [sp, #240]
+ 1212              		.loc 1 68 10 view .LVU311
+ 1213 06c2 0646     		mov	r6, r0
+ 1214 06c4 0F46     		mov	r7, r1
+ 1215              		.loc 1 68 19 view .LVU312
+ 1216 06c6 DDE90801 		ldrd	r0, [sp, #32]
+ 1217 06ca FFF7FEFF 		bl	__aeabi_dmul
+ 1218              	.LVL201:
+ 1219 06ce 0246     		mov	r2, r0
+ 1220 06d0 0B46     		mov	r3, r1
+ 1221              		.loc 1 68 10 view .LVU313
+ 1222 06d2 3046     		mov	r0, r6
+ 1223 06d4 3946     		mov	r1, r7
+ 1224 06d6 FFF7FEFF 		bl	__aeabi_dadd
+ 1225              	.LVL202:
+ 1226 06da FFF7FEFF 		bl	__aeabi_d2iz
+ 1227              	.LVL203:
+ 1228 06de 2060     		str	r0, [r4]
+  69:Src/madgwick_filter.c ****     q->x += qDot2 * dt;
+ 1229              		.loc 1 69 5 is_stmt 1 view .LVU314
+  68:Src/madgwick_filter.c ****     q->x += qDot2 * dt;
+ 1230              		.loc 1 68 10 is_stmt 0 view .LVU315
+ 1231 06e0 0546     		mov	r5, r0
+ 1232              		.loc 1 69 10 view .LVU316
+ 1233 06e2 6068     		ldr	r0, [r4, #4]
+ 1234 06e4 FFF7FEFF 		bl	__aeabi_i2d
+ 1235              	.LVL204:
+ 1236              		.loc 1 69 19 view .LVU317
+ 1237 06e8 DDE93C23 		ldrd	r2, [sp, #240]
+ 1238              		.loc 1 69 10 view .LVU318
+ 1239 06ec 0646     		mov	r6, r0
+ 1240 06ee 0F46     		mov	r7, r1
+ 1241              		.loc 1 69 19 view .LVU319
+ 1242 06f0 DDE90A01 		ldrd	r0, [sp, #40]
+ 1243 06f4 FFF7FEFF 		bl	__aeabi_dmul
+ 1244              	.LVL205:
+ 1245 06f8 0246     		mov	r2, r0
+ 1246 06fa 0B46     		mov	r3, r1
+ 1247              		.loc 1 69 10 view .LVU320
+ 1248 06fc 3046     		mov	r0, r6
+ 1249 06fe 3946     		mov	r1, r7
+ 1250 0700 FFF7FEFF 		bl	__aeabi_dadd
+ 1251              	.LVL206:
+ 1252 0704 FFF7FEFF 		bl	__aeabi_d2iz
+ 1253              	.LVL207:
+ 1254 0708 6060     		str	r0, [r4, #4]
+  70:Src/madgwick_filter.c ****     q->y += qDot3 * dt;
+ 1255              		.loc 1 70 5 is_stmt 1 view .LVU321
+  69:Src/madgwick_filter.c ****     q->x += qDot2 * dt;
+ 1256              		.loc 1 69 10 is_stmt 0 view .LVU322
+ 1257 070a 0646     		mov	r6, r0
+ 1258              		.loc 1 70 10 view .LVU323
+ 1259 070c A068     		ldr	r0, [r4, #8]
+ 1260 070e FFF7FEFF 		bl	__aeabi_i2d
+ARM GAS  /tmp/cctkvHO9.s 			page 25
+
+
+ 1261              	.LVL208:
+ 1262              		.loc 1 70 19 view .LVU324
+ 1263 0712 DDE93C23 		ldrd	r2, [sp, #240]
+ 1264              		.loc 1 70 10 view .LVU325
+ 1265 0716 8046     		mov	r8, r0
+ 1266 0718 8946     		mov	r9, r1
+ 1267              		.loc 1 70 19 view .LVU326
+ 1268 071a DDE90C01 		ldrd	r0, [sp, #48]
+ 1269 071e FFF7FEFF 		bl	__aeabi_dmul
+ 1270              	.LVL209:
+ 1271 0722 0246     		mov	r2, r0
+ 1272 0724 0B46     		mov	r3, r1
+ 1273              		.loc 1 70 10 view .LVU327
+ 1274 0726 4046     		mov	r0, r8
+ 1275 0728 4946     		mov	r1, r9
+ 1276 072a FFF7FEFF 		bl	__aeabi_dadd
+ 1277              	.LVL210:
+ 1278 072e FFF7FEFF 		bl	__aeabi_d2iz
+ 1279              	.LVL211:
+ 1280 0732 A060     		str	r0, [r4, #8]
+  71:Src/madgwick_filter.c ****     q->z += qDot4 * dt;
+ 1281              		.loc 1 71 5 is_stmt 1 view .LVU328
+  70:Src/madgwick_filter.c ****     q->y += qDot3 * dt;
+ 1282              		.loc 1 70 10 is_stmt 0 view .LVU329
+ 1283 0734 0746     		mov	r7, r0
+ 1284              		.loc 1 71 10 view .LVU330
+ 1285 0736 E068     		ldr	r0, [r4, #12]
+ 1286 0738 FFF7FEFF 		bl	__aeabi_i2d
+ 1287              	.LVL212:
+ 1288              		.loc 1 71 19 view .LVU331
+ 1289 073c DDE93C23 		ldrd	r2, [sp, #240]
+ 1290              		.loc 1 71 10 view .LVU332
+ 1291 0740 8046     		mov	r8, r0
+ 1292 0742 8946     		mov	r9, r1
+ 1293              		.loc 1 71 19 view .LVU333
+ 1294 0744 DDE90E01 		ldrd	r0, [sp, #56]
+ 1295 0748 FFF7FEFF 		bl	__aeabi_dmul
+ 1296              	.LVL213:
+ 1297 074c 0246     		mov	r2, r0
+ 1298 074e 0B46     		mov	r3, r1
+ 1299              		.loc 1 71 10 view .LVU334
+ 1300 0750 4046     		mov	r0, r8
+ 1301 0752 4946     		mov	r1, r9
+ 1302 0754 FFF7FEFF 		bl	__aeabi_dadd
+ 1303              	.LVL214:
+ 1304 0758 FFF7FEFF 		bl	__aeabi_d2iz
+ 1305              	.LVL215:
+  72:Src/madgwick_filter.c **** 
+  73:Src/madgwick_filter.c **** 
+  74:Src/madgwick_filter.c ****     recipNorm = inv_sqrt(q->w * q->w + q->x * q->x + q->y * q->y + q->z * q->z);
+ 1306              		.loc 1 74 45 view .LVU335
+ 1307 075c 7643     		muls	r6, r6, r6
+ 1308              		.loc 1 74 38 view .LVU336
+ 1309 075e 05FB0565 		mla	r5, r5, r5, r6
+ 1310              		.loc 1 74 52 view .LVU337
+ 1311 0762 07FB0757 		mla	r7, r7, r7, r5
+  71:Src/madgwick_filter.c ****     q->z += qDot4 * dt;
+ARM GAS  /tmp/cctkvHO9.s 			page 26
+
+
+ 1312              		.loc 1 71 10 view .LVU338
+ 1313 0766 E060     		str	r0, [r4, #12]
+ 1314              		.loc 1 74 5 is_stmt 1 view .LVU339
+ 1315              	.LBB16:
+ 1316              	.LBI16:
+  11:Src/madgwick_filter.c ****     return 1.0f / sqrtf(x);
+ 1317              		.loc 1 11 15 view .LVU340
+ 1318              	.LBB17:
+  12:Src/madgwick_filter.c **** }
+ 1319              		.loc 1 12 5 view .LVU341
+ 1320              	.LBE17:
+ 1321              	.LBE16:
+ 1322              		.loc 1 74 17 is_stmt 0 view .LVU342
+ 1323 0768 00FB0070 		mla	r0, r0, r0, r7
+ 1324 076c FFF7FEFF 		bl	__aeabi_i2d
+ 1325              	.LVL216:
+ 1326              	.LBB19:
+ 1327              	.LBB18:
+  12:Src/madgwick_filter.c **** }
+ 1328              		.loc 1 12 19 view .LVU343
+ 1329 0770 FFF7FEFF 		bl	__aeabi_d2f
+ 1330              	.LVL217:
+ 1331 0774 FFF7FEFF 		bl	sqrtf
+ 1332              	.LVL218:
+ 1333 0778 0146     		mov	r1, r0
+  12:Src/madgwick_filter.c **** }
+ 1334              		.loc 1 12 17 view .LVU344
+ 1335 077a 4FF07E50 		mov	r0, #1065353216
+ 1336 077e FFF7FEFF 		bl	__aeabi_fdiv
+ 1337              	.LVL219:
+ 1338 0782 FFF7FEFF 		bl	__aeabi_f2d
+ 1339              	.LVL220:
+ 1340 0786 0646     		mov	r6, r0
+ 1341 0788 0F46     		mov	r7, r1
+ 1342              	.LVL221:
+  12:Src/madgwick_filter.c **** }
+ 1343              		.loc 1 12 17 view .LVU345
+ 1344              	.LBE18:
+ 1345              	.LBE19:
+  75:Src/madgwick_filter.c ****     q->w *= recipNorm;
+ 1346              		.loc 1 75 5 is_stmt 1 view .LVU346
+ 1347              		.loc 1 75 10 is_stmt 0 view .LVU347
+ 1348 078a 2068     		ldr	r0, [r4]
+ 1349 078c FFF7FEFF 		bl	__aeabi_i2d
+ 1350              	.LVL222:
+ 1351 0790 3246     		mov	r2, r6
+ 1352 0792 3B46     		mov	r3, r7
+ 1353 0794 FFF7FEFF 		bl	__aeabi_dmul
+ 1354              	.LVL223:
+ 1355 0798 FFF7FEFF 		bl	__aeabi_d2iz
+ 1356              	.LVL224:
+ 1357 079c 2060     		str	r0, [r4]
+  76:Src/madgwick_filter.c ****     q->x *= recipNorm;
+ 1358              		.loc 1 76 5 is_stmt 1 view .LVU348
+ 1359              		.loc 1 76 10 is_stmt 0 view .LVU349
+ 1360 079e 6068     		ldr	r0, [r4, #4]
+ 1361 07a0 FFF7FEFF 		bl	__aeabi_i2d
+ARM GAS  /tmp/cctkvHO9.s 			page 27
+
+
+ 1362              	.LVL225:
+ 1363 07a4 3246     		mov	r2, r6
+ 1364 07a6 3B46     		mov	r3, r7
+ 1365 07a8 FFF7FEFF 		bl	__aeabi_dmul
+ 1366              	.LVL226:
+ 1367 07ac FFF7FEFF 		bl	__aeabi_d2iz
+ 1368              	.LVL227:
+ 1369 07b0 6060     		str	r0, [r4, #4]
+  77:Src/madgwick_filter.c ****     q->y *= recipNorm;
+ 1370              		.loc 1 77 5 is_stmt 1 view .LVU350
+ 1371              		.loc 1 77 10 is_stmt 0 view .LVU351
+ 1372 07b2 A068     		ldr	r0, [r4, #8]
+ 1373 07b4 FFF7FEFF 		bl	__aeabi_i2d
+ 1374              	.LVL228:
+ 1375 07b8 3246     		mov	r2, r6
+ 1376 07ba 3B46     		mov	r3, r7
+ 1377 07bc FFF7FEFF 		bl	__aeabi_dmul
+ 1378              	.LVL229:
+ 1379 07c0 FFF7FEFF 		bl	__aeabi_d2iz
+ 1380              	.LVL230:
+ 1381 07c4 A060     		str	r0, [r4, #8]
+  78:Src/madgwick_filter.c ****     q->z *= recipNorm;
+ 1382              		.loc 1 78 5 is_stmt 1 view .LVU352
+ 1383              		.loc 1 78 10 is_stmt 0 view .LVU353
+ 1384 07c6 E068     		ldr	r0, [r4, #12]
+ 1385 07c8 FFF7FEFF 		bl	__aeabi_i2d
+ 1386              	.LVL231:
+ 1387 07cc 3246     		mov	r2, r6
+ 1388 07ce 3B46     		mov	r3, r7
+ 1389 07d0 FFF7FEFF 		bl	__aeabi_dmul
+ 1390              	.LVL232:
+ 1391 07d4 FFF7FEFF 		bl	__aeabi_d2iz
+ 1392              	.LVL233:
+ 1393 07d8 E060     		str	r0, [r4, #12]
+  79:Src/madgwick_filter.c **** }
+ 1394              		.loc 1 79 1 view .LVU354
+ 1395 07da 29B0     		add	sp, sp, #164
+ 1396              	.LCFI2:
+ 1397              		.cfi_def_cfa_offset 36
+ 1398              		@ sp needed
+ 1399 07dc BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 1400              		.loc 1 79 1 view .LVU355
+ 1401              		.cfi_endproc
+ 1402              	.LFE58:
+ 1404              		.global	__aeabi_fsub
+ 1405              		.global	__aeabi_fcmpge
+ 1406              		.section	.text.quat_to_euler,"ax",%progbits
+ 1407              		.align	1
+ 1408              		.global	quat_to_euler
+ 1409              		.syntax unified
+ 1410              		.thumb
+ 1411              		.thumb_func
+ 1412              		.fpu softvfp
+ 1414              	quat_to_euler:
+ 1415              	.LVL234:
+ 1416              	.LFB59:
+  80:Src/madgwick_filter.c **** 
+ARM GAS  /tmp/cctkvHO9.s 			page 28
+
+
+  81:Src/madgwick_filter.c **** void quat_to_euler(Quaternion q, double* roll, double* pitch, double* yaw) {
+ 1417              		.loc 1 81 76 is_stmt 1 view -0
+ 1418              		.cfi_startproc
+ 1419              		@ args = 12, pretend = 0, frame = 16
+ 1420              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1421              		.loc 1 81 76 is_stmt 0 view .LVU357
+ 1422 0000 2DE9FF47 		push	{r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, lr}
+ 1423              	.LCFI3:
+ 1424              		.cfi_def_cfa_offset 48
+ 1425              		.cfi_offset 4, -32
+ 1426              		.cfi_offset 5, -28
+ 1427              		.cfi_offset 6, -24
+ 1428              		.cfi_offset 7, -20
+ 1429              		.cfi_offset 8, -16
+ 1430              		.cfi_offset 9, -12
+ 1431              		.cfi_offset 10, -8
+ 1432              		.cfi_offset 14, -4
+  82:Src/madgwick_filter.c **** 
+  83:Src/madgwick_filter.c ****     double sinr_cosp = 2.0f * (q.w * q.x + q.y * q.z);
+  84:Src/madgwick_filter.c ****     double cosr_cosp = 1.0f - 2.0f * (q.x * q.x + q.y * q.y);
+ 1433              		.loc 1 84 55 view .LVU358
+ 1434 0004 02FB02F9 		mul	r9, r2, r2
+  81:Src/madgwick_filter.c **** 
+ 1435              		.loc 1 81 76 view .LVU359
+ 1436 0008 04AC     		add	r4, sp, #16
+ 1437 000a 04E90F00 		stmdb	r4, {r0, r1, r2, r3}
+ 1438 000e 8046     		mov	r8, r0
+ 1439              	.LVL235:
+ 1440              		.loc 1 84 36 view .LVU360
+ 1441 0010 01FB0190 		mla	r0, r1, r1, r9
+ 1442              	.LVL236:
+ 1443              		.loc 1 84 36 view .LVU361
+ 1444 0014 1746     		mov	r7, r2
+ 1445 0016 1E46     		mov	r6, r3
+ 1446 0018 0D46     		mov	r5, r1
+ 1447              	.LVL237:
+  83:Src/madgwick_filter.c ****     double cosr_cosp = 1.0f - 2.0f * (q.x * q.x + q.y * q.y);
+ 1448              		.loc 1 83 5 is_stmt 1 view .LVU362
+ 1449              		.loc 1 84 5 view .LVU363
+  85:Src/madgwick_filter.c ****     *roll = atan2f(sinr_cosp, cosr_cosp);
+ 1450              		.loc 1 85 5 view .LVU364
+  84:Src/madgwick_filter.c ****     *roll = atan2f(sinr_cosp, cosr_cosp);
+ 1451              		.loc 1 84 36 is_stmt 0 view .LVU365
+ 1452 001a FFF7FEFF 		bl	__aeabi_i2f
+ 1453              	.LVL238:
+  84:Src/madgwick_filter.c ****     *roll = atan2f(sinr_cosp, cosr_cosp);
+ 1454              		.loc 1 84 36 view .LVU366
+ 1455 001e 0146     		mov	r1, r0
+ 1456 0020 FFF7FEFF 		bl	__aeabi_fadd
+ 1457              	.LVL239:
+ 1458 0024 0146     		mov	r1, r0
+  84:Src/madgwick_filter.c ****     *roll = atan2f(sinr_cosp, cosr_cosp);
+ 1459              		.loc 1 84 29 view .LVU367
+ 1460 0026 4FF07E50 		mov	r0, #1065353216
+ 1461 002a FFF7FEFF 		bl	__aeabi_fsub
+ 1462              	.LVL240:
+ 1463 002e 0446     		mov	r4, r0
+ARM GAS  /tmp/cctkvHO9.s 			page 29
+
+
+  83:Src/madgwick_filter.c ****     double cosr_cosp = 1.0f - 2.0f * (q.x * q.x + q.y * q.y);
+ 1464              		.loc 1 83 48 view .LVU368
+ 1465 0030 06FB07F0 		mul	r0, r6, r7
+ 1466              	.LVL241:
+  83:Src/madgwick_filter.c ****     double cosr_cosp = 1.0f - 2.0f * (q.x * q.x + q.y * q.y);
+ 1467              		.loc 1 83 29 view .LVU369
+ 1468 0034 05FB0800 		mla	r0, r5, r8, r0
+ 1469              	.LVL242:
+  83:Src/madgwick_filter.c ****     double cosr_cosp = 1.0f - 2.0f * (q.x * q.x + q.y * q.y);
+ 1470              		.loc 1 83 29 view .LVU370
+ 1471 0038 FFF7FEFF 		bl	__aeabi_i2f
+ 1472              	.LVL243:
+ 1473 003c 0146     		mov	r1, r0
+ 1474 003e FFF7FEFF 		bl	__aeabi_fadd
+ 1475              	.LVL244:
+ 1476              		.loc 1 85 13 view .LVU371
+ 1477 0042 2146     		mov	r1, r4
+  81:Src/madgwick_filter.c **** 
+ 1478              		.loc 1 81 76 view .LVU372
+ 1479 0044 DDF834A0 		ldr	r10, [sp, #52]
+ 1480              		.loc 1 85 13 view .LVU373
+ 1481 0048 FFF7FEFF 		bl	atan2f
+ 1482              	.LVL245:
+ 1483 004c FFF7FEFF 		bl	__aeabi_f2d
+ 1484              	.LVL246:
+ 1485 0050 0C9B     		ldr	r3, [sp, #48]
+ 1486 0052 C3E90001 		strd	r0, [r3]
+  86:Src/madgwick_filter.c **** 
+  87:Src/madgwick_filter.c **** 
+  88:Src/madgwick_filter.c ****     double sinp = 2.0f * (q.w * q.y - q.z * q.x);
+ 1487              		.loc 1 88 5 is_stmt 1 view .LVU374
+ 1488              		.loc 1 88 31 is_stmt 0 view .LVU375
+ 1489 0056 07FB08F0 		mul	r0, r7, r8
+ 1490              		.loc 1 88 24 view .LVU376
+ 1491 005a 06FB1500 		mls	r0, r6, r5, r0
+ 1492 005e FFF7FEFF 		bl	__aeabi_i2f
+ 1493              	.LVL247:
+ 1494 0062 0146     		mov	r1, r0
+ 1495 0064 FFF7FEFF 		bl	__aeabi_fadd
+ 1496              	.LVL248:
+  89:Src/madgwick_filter.c ****     if (fabsf(sinp) >= 1.0f)
+ 1497              		.loc 1 89 8 view .LVU377
+ 1498 0068 4FF07E51 		mov	r1, #1065353216
+  88:Src/madgwick_filter.c ****     if (fabsf(sinp) >= 1.0f)
+ 1499              		.loc 1 88 24 view .LVU378
+ 1500 006c 0446     		mov	r4, r0
+ 1501              	.LVL249:
+ 1502              		.loc 1 89 5 is_stmt 1 view .LVU379
+ 1503              		.loc 1 89 9 is_stmt 0 view .LVU380
+ 1504 006e 20F00040 		bic	r0, r0, #-2147483648
+ 1505              	.LVL250:
+ 1506              		.loc 1 89 8 view .LVU381
+ 1507 0072 FFF7FEFF 		bl	__aeabi_fcmpge
+ 1508              	.LVL251:
+ 1509 0076 38B3     		cbz	r0, .L26
+  90:Src/madgwick_filter.c ****         *pitch = copysignf(M_PI / 2, sinp); 
+ 1510              		.loc 1 90 9 is_stmt 1 view .LVU382
+ARM GAS  /tmp/cctkvHO9.s 			page 30
+
+
+ 1511              		.loc 1 90 18 is_stmt 0 view .LVU383
+ 1512 0078 2046     		mov	r0, r4
+ 1513 007a 154B     		ldr	r3, .L28
+ 1514 007c 63F31E00 		bfi	r0, r3, #0, #31
+ 1515              	.L27:
+  91:Src/madgwick_filter.c ****     else
+  92:Src/madgwick_filter.c ****         *pitch = asinf(sinp);
+ 1516              		.loc 1 92 18 view .LVU384
+ 1517 0080 FFF7FEFF 		bl	__aeabi_f2d
+ 1518              	.LVL252:
+ 1519 0084 CAE90001 		strd	r0, [r10]
+  93:Src/madgwick_filter.c **** 
+  94:Src/madgwick_filter.c ****     // Yaw (z-axis rotation)
+  95:Src/madgwick_filter.c ****     double siny_cosp = 2.0f * (q.w * q.z + q.x * q.y);
+ 1520              		.loc 1 95 5 is_stmt 1 view .LVU385
+ 1521              	.LVL253:
+  96:Src/madgwick_filter.c ****     double cosy_cosp = 1.0f - 2.0f * (q.y * q.y + q.z * q.z);
+ 1522              		.loc 1 96 5 view .LVU386
+  97:Src/madgwick_filter.c ****     *yaw = atan2f(siny_cosp, cosy_cosp);
+ 1523              		.loc 1 97 5 view .LVU387
+  96:Src/madgwick_filter.c ****     double cosy_cosp = 1.0f - 2.0f * (q.y * q.y + q.z * q.z);
+ 1524              		.loc 1 96 36 is_stmt 0 view .LVU388
+ 1525 0088 06FB0690 		mla	r0, r6, r6, r9
+ 1526              	.LVL254:
+  96:Src/madgwick_filter.c ****     double cosy_cosp = 1.0f - 2.0f * (q.y * q.y + q.z * q.z);
+ 1527              		.loc 1 96 36 view .LVU389
+ 1528 008c FFF7FEFF 		bl	__aeabi_i2f
+ 1529              	.LVL255:
+  96:Src/madgwick_filter.c ****     double cosy_cosp = 1.0f - 2.0f * (q.y * q.y + q.z * q.z);
+ 1530              		.loc 1 96 36 view .LVU390
+ 1531 0090 0146     		mov	r1, r0
+ 1532 0092 FFF7FEFF 		bl	__aeabi_fadd
+ 1533              	.LVL256:
+ 1534 0096 0146     		mov	r1, r0
+  96:Src/madgwick_filter.c ****     double cosy_cosp = 1.0f - 2.0f * (q.y * q.y + q.z * q.z);
+ 1535              		.loc 1 96 29 view .LVU391
+ 1536 0098 4FF07E50 		mov	r0, #1065353216
+ 1537 009c FFF7FEFF 		bl	__aeabi_fsub
+ 1538              	.LVL257:
+  95:Src/madgwick_filter.c ****     double cosy_cosp = 1.0f - 2.0f * (q.y * q.y + q.z * q.z);
+ 1539              		.loc 1 95 48 view .LVU392
+ 1540 00a0 7D43     		muls	r5, r7, r5
+ 1541              	.LVL258:
+  96:Src/madgwick_filter.c ****     double cosy_cosp = 1.0f - 2.0f * (q.y * q.y + q.z * q.z);
+ 1542              		.loc 1 96 29 view .LVU393
+ 1543 00a2 0446     		mov	r4, r0
+ 1544              	.LVL259:
+  95:Src/madgwick_filter.c ****     double cosy_cosp = 1.0f - 2.0f * (q.y * q.y + q.z * q.z);
+ 1545              		.loc 1 95 29 view .LVU394
+ 1546 00a4 06FB0850 		mla	r0, r6, r8, r5
+ 1547 00a8 FFF7FEFF 		bl	__aeabi_i2f
+ 1548              	.LVL260:
+ 1549 00ac 0146     		mov	r1, r0
+ 1550 00ae FFF7FEFF 		bl	__aeabi_fadd
+ 1551              	.LVL261:
+ 1552              		.loc 1 97 12 view .LVU395
+ 1553 00b2 2146     		mov	r1, r4
+ARM GAS  /tmp/cctkvHO9.s 			page 31
+
+
+ 1554 00b4 FFF7FEFF 		bl	atan2f
+ 1555              	.LVL262:
+ 1556 00b8 FFF7FEFF 		bl	__aeabi_f2d
+ 1557              	.LVL263:
+ 1558 00bc 0E9B     		ldr	r3, [sp, #56]
+ 1559 00be C3E90001 		strd	r0, [r3]
+  98:Src/madgwick_filter.c **** }...
+ 1560              		.loc 1 98 1 view .LVU396
+ 1561 00c2 04B0     		add	sp, sp, #16
+ 1562              	.LCFI4:
+ 1563              		.cfi_remember_state
+ 1564              		.cfi_def_cfa_offset 32
+ 1565              	.LVL264:
+ 1566              		.loc 1 98 1 view .LVU397
+ 1567              		@ sp needed
+ 1568 00c4 BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+ 1569              	.LVL265:
+ 1570              	.L26:
+ 1571              	.LCFI5:
+ 1572              		.cfi_restore_state
+  92:Src/madgwick_filter.c ****         *pitch = asinf(sinp);
+ 1573              		.loc 1 92 9 is_stmt 1 view .LVU398
+  92:Src/madgwick_filter.c ****         *pitch = asinf(sinp);
+ 1574              		.loc 1 92 18 is_stmt 0 view .LVU399
+ 1575 00c8 2046     		mov	r0, r4
+ 1576 00ca FFF7FEFF 		bl	asinf
+ 1577              	.LVL266:
+ 1578 00ce D7E7     		b	.L27
+ 1579              	.L29:
+ 1580              		.align	2
+ 1581              	.L28:
+ 1582 00d0 DB0FC93F 		.word	1070141403
+ 1583              		.cfi_endproc
+ 1584              	.LFE59:
+ 1586              		.text
+ 1587              	.Letext0:
+ 1588              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
+ 1589              		.file 3 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_dbg.h"
+ 1590              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
+ 1591              		.file 5 "Inc/defines.h"
+ 1592              		.file 6 "/usr/include/newlib/math.h"
+ 1593              		.file 7 "Inc/madgwick_filter.h"
+ARM GAS  /tmp/cctkvHO9.s 			page 32
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 madgwick_filter.c
+     /tmp/cctkvHO9.s:16     .text.madgwick_init:0000000000000000 $t
+     /tmp/cctkvHO9.s:24     .text.madgwick_init:0000000000000000 madgwick_init
+     /tmp/cctkvHO9.s:60     .text.madgwick_update:0000000000000000 $t
+     /tmp/cctkvHO9.s:67     .text.madgwick_update:0000000000000000 madgwick_update
+     /tmp/cctkvHO9.s:349    .text.madgwick_update:00000000000001a8 $d
+     /tmp/cctkvHO9.s:362    .text.madgwick_update:00000000000001ac $t
+     /tmp/cctkvHO9.s:1198   .text.madgwick_update:00000000000006a8 $d
+     /tmp/cctkvHO9.s:1202   .text.madgwick_update:00000000000006b4 $t
+     /tmp/cctkvHO9.s:1407   .text.quat_to_euler:0000000000000000 $t
+     /tmp/cctkvHO9.s:1414   .text.quat_to_euler:0000000000000000 quat_to_euler
+     /tmp/cctkvHO9.s:1582   .text.quat_to_euler:00000000000000d0 $d
+
+UNDEFINED SYMBOLS
+__aeabi_i2d
+__aeabi_dmul
+__aeabi_dsub
+__aeabi_dadd
+__aeabi_dcmpeq
+__aeabi_d2f
+__aeabi_fdiv
+__aeabi_f2d
+__aeabi_i2f
+__aeabi_fadd
+__aeabi_fmul
+__aeabi_d2iz
+sqrtf
+__aeabi_fsub
+__aeabi_fcmpge
+atan2f
+asinf

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc3w4TEf.s 			page 1
+ARM GAS  /tmp/ccG3J3pC.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc3w4TEf.s 			page 1
   26:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_wwdgt.c ****     rcu_periph_reset_enable(RCU_WWDGTRST);
   31              		.loc 1 26 5 view .LVU1
   25:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_wwdgt.c ****     rcu_periph_reset_enable(RCU_WWDGTRST);
-ARM GAS  /tmp/cc3w4TEf.s 			page 2
+ARM GAS  /tmp/ccG3J3pC.s 			page 2
 
 
   32              		.loc 1 25 1 is_stmt 0 view .LVU2
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc3w4TEf.s 			page 1
   73              		.loc 1 40 5 view .LVU9
   74              		.loc 1 40 11 is_stmt 0 view .LVU10
   75 0000 054A     		ldr	r2, .L3
-ARM GAS  /tmp/cc3w4TEf.s 			page 3
+ARM GAS  /tmp/ccG3J3pC.s 			page 3
 
 
   41:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_wwdgt.c ****     reg |= (uint32_t)(CTL_CNT((uint32_t)counter_value));
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc3w4TEf.s 			page 1
  116              		.loc 1 54 15 is_stmt 0 view .LVU21
  117 0000 034A     		ldr	r2, .L6
  118 0002 D2F8003C 		ldr	r3, [r2, #3072]
-ARM GAS  /tmp/cc3w4TEf.s 			page 4
+ARM GAS  /tmp/ccG3J3pC.s 			page 4
 
 
  119 0006 43F08003 		orr	r3, r3, #128
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc3w4TEf.s 			page 1
  154              		.loc 1 74 15 view .LVU27
  155 0002 0B4C     		ldr	r4, .L9
   75:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_wwdgt.c ****     reg_ctl = WWDGT_CTL &(~(uint32_t)WWDGT_CTL_CNT);
-ARM GAS  /tmp/cc3w4TEf.s 			page 5
+ARM GAS  /tmp/ccG3J3pC.s 			page 5
 
 
   76:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_wwdgt.c ****   
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc3w4TEf.s 			page 1
  194              	.L10:
  195              		.align	2
  196              	.L9:
-ARM GAS  /tmp/cc3w4TEf.s 			page 6
+ARM GAS  /tmp/ccG3J3pC.s 			page 6
 
 
  197 0030 00200040 		.word	1073750016
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc3w4TEf.s 			page 1
   99:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_wwdgt.c ****     \param[in]  none
  100:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_wwdgt.c ****     \param[out] none
  101:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_wwdgt.c ****     \retval     FlagStatus: SET or RESET
-ARM GAS  /tmp/cc3w4TEf.s 			page 7
+ARM GAS  /tmp/ccG3J3pC.s 			page 7
 
 
  102:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_wwdgt.c **** */
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc3w4TEf.s 			page 1
  278 0002 D2F8083C 		ldr	r3, [r2, #3080]
  279 0006 23F00103 		bic	r3, r3, #1
  280 000a C2F8083C 		str	r3, [r2, #3080]
-ARM GAS  /tmp/cc3w4TEf.s 			page 8
+ARM GAS  /tmp/ccG3J3pC.s 			page 8
 
 
  121:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_wwdgt.c **** }
@@ -435,31 +435,31 @@ ARM GAS  /tmp/cc3w4TEf.s 			page 1
  292              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
  293              		.file 3 "Drivers/CMSIS/Include/gd32f1x0.h"
  294              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
-ARM GAS  /tmp/cc3w4TEf.s 			page 9
+ARM GAS  /tmp/ccG3J3pC.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32f1x0_wwdgt.c
-     /tmp/cc3w4TEf.s:16     .text.wwdgt_deinit:0000000000000000 $t
-     /tmp/cc3w4TEf.s:24     .text.wwdgt_deinit:0000000000000000 wwdgt_deinit
-     /tmp/cc3w4TEf.s:57     .text.wwdgt_counter_update:0000000000000000 $t
-     /tmp/cc3w4TEf.s:64     .text.wwdgt_counter_update:0000000000000000 wwdgt_counter_update
-     /tmp/cc3w4TEf.s:96     .text.wwdgt_counter_update:0000000000000018 $d
-     /tmp/cc3w4TEf.s:101    .text.wwdgt_enable:0000000000000000 $t
-     /tmp/cc3w4TEf.s:108    .text.wwdgt_enable:0000000000000000 wwdgt_enable
-     /tmp/cc3w4TEf.s:126    .text.wwdgt_enable:0000000000000010 $d
-     /tmp/cc3w4TEf.s:131    .text.wwdgt_config:0000000000000000 $t
-     /tmp/cc3w4TEf.s:138    .text.wwdgt_config:0000000000000000 wwdgt_config
-     /tmp/cc3w4TEf.s:197    .text.wwdgt_config:0000000000000030 $d
-     /tmp/cc3w4TEf.s:202    .text.wwdgt_interrupt_enable:0000000000000000 $t
-     /tmp/cc3w4TEf.s:209    .text.wwdgt_interrupt_enable:0000000000000000 wwdgt_interrupt_enable
-     /tmp/cc3w4TEf.s:227    .text.wwdgt_interrupt_enable:0000000000000010 $d
-     /tmp/cc3w4TEf.s:232    .text.wwdgt_flag_get:0000000000000000 $t
-     /tmp/cc3w4TEf.s:239    .text.wwdgt_flag_get:0000000000000000 wwdgt_flag_get
-     /tmp/cc3w4TEf.s:256    .text.wwdgt_flag_get:000000000000000c $d
-     /tmp/cc3w4TEf.s:261    .text.wwdgt_flag_clear:0000000000000000 $t
-     /tmp/cc3w4TEf.s:268    .text.wwdgt_flag_clear:0000000000000000 wwdgt_flag_clear
-     /tmp/cc3w4TEf.s:286    .text.wwdgt_flag_clear:0000000000000010 $d
+     /tmp/ccG3J3pC.s:16     .text.wwdgt_deinit:0000000000000000 $t
+     /tmp/ccG3J3pC.s:24     .text.wwdgt_deinit:0000000000000000 wwdgt_deinit
+     /tmp/ccG3J3pC.s:57     .text.wwdgt_counter_update:0000000000000000 $t
+     /tmp/ccG3J3pC.s:64     .text.wwdgt_counter_update:0000000000000000 wwdgt_counter_update
+     /tmp/ccG3J3pC.s:96     .text.wwdgt_counter_update:0000000000000018 $d
+     /tmp/ccG3J3pC.s:101    .text.wwdgt_enable:0000000000000000 $t
+     /tmp/ccG3J3pC.s:108    .text.wwdgt_enable:0000000000000000 wwdgt_enable
+     /tmp/ccG3J3pC.s:126    .text.wwdgt_enable:0000000000000010 $d
+     /tmp/ccG3J3pC.s:131    .text.wwdgt_config:0000000000000000 $t
+     /tmp/ccG3J3pC.s:138    .text.wwdgt_config:0000000000000000 wwdgt_config
+     /tmp/ccG3J3pC.s:197    .text.wwdgt_config:0000000000000030 $d
+     /tmp/ccG3J3pC.s:202    .text.wwdgt_interrupt_enable:0000000000000000 $t
+     /tmp/ccG3J3pC.s:209    .text.wwdgt_interrupt_enable:0000000000000000 wwdgt_interrupt_enable
+     /tmp/ccG3J3pC.s:227    .text.wwdgt_interrupt_enable:0000000000000010 $d
+     /tmp/ccG3J3pC.s:232    .text.wwdgt_flag_get:0000000000000000 $t
+     /tmp/ccG3J3pC.s:239    .text.wwdgt_flag_get:0000000000000000 wwdgt_flag_get
+     /tmp/ccG3J3pC.s:256    .text.wwdgt_flag_get:000000000000000c $d
+     /tmp/ccG3J3pC.s:261    .text.wwdgt_flag_clear:0000000000000000 $t
+     /tmp/ccG3J3pC.s:268    .text.wwdgt_flag_clear:0000000000000000 wwdgt_flag_clear
+     /tmp/ccG3J3pC.s:286    .text.wwdgt_flag_clear:0000000000000010 $d
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable

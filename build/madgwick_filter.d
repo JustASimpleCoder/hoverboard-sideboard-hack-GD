@@ -1,5 +1,5 @@
-build/mpu6050.o: Src/mpu6050.c Inc/systick.h Inc/defines.h \
- Drivers/CMSIS/Include/gd32f1x0.h Drivers/CMSIS/core_cm3.h \
+build/madgwick_filter.o: Src/madgwick_filter.c Inc/madgwick_filter.h \
+ Inc/defines.h Drivers/CMSIS/Include/gd32f1x0.h Drivers/CMSIS/core_cm3.h \
  Drivers/CMSIS/core_cmInstr.h Drivers/CMSIS/core_cmFunc.h \
  Drivers/CMSIS/Include/system_gd32f1x0.h Inc/gd32f1x0_libopt.h \
  Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_adc.h \
@@ -24,9 +24,8 @@ build/mpu6050.o: Src/mpu6050.c Inc/systick.h Inc/defines.h \
  Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_wwdgt.h \
  Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_misc.h \
  Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_tsi.h Inc/config.h \
- Inc/util.h Inc/config.h Inc/util.h Inc/mpu6050.h Inc/defines.h \
- Inc/mpu6050_dmp.h Inc/madgwick_filter.h
-Inc/systick.h:
+ Inc/util.h
+Inc/madgwick_filter.h:
 Inc/defines.h:
 Drivers/CMSIS/Include/gd32f1x0.h:
 Drivers/CMSIS/core_cm3.h:
@@ -58,9 +57,3 @@ Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_misc.h:
 Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_tsi.h:
 Inc/config.h:
 Inc/util.h:
-Inc/config.h:
-Inc/util.h:
-Inc/mpu6050.h:
-Inc/defines.h:
-Inc/mpu6050_dmp.h:
-Inc/madgwick_filter.h:

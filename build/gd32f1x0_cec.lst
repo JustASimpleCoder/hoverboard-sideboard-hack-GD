@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccer1HIx.s 			page 1
+ARM GAS  /tmp/ccP258vc.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
   26:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****     rcu_periph_reset_enable(RCU_CECRST);
   31              		.loc 1 26 5 view .LVU1
   25:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****     rcu_periph_reset_enable(RCU_CECRST);
-ARM GAS  /tmp/ccer1HIx.s 			page 2
+ARM GAS  /tmp/ccP258vc.s 			page 2
 
 
   32              		.loc 1 25 1 is_stmt 0 view .LVU2
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
   47:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****     \param[out] none
   48:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****     \retval     none
   49:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c **** */
-ARM GAS  /tmp/ccer1HIx.s 			page 3
+ARM GAS  /tmp/ccP258vc.s 			page 3
 
 
   50:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c **** void cec_init(uint32_t sftopt, uint32_t sft, uint32_t address)
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  106 0022 23F4FE03 		bic	r3, r3, #8323072
  107 0026 C4F80438 		str	r3, [r4, #2052]
  108              	.LVL7:
-ARM GAS  /tmp/ccer1HIx.s 			page 4
+ARM GAS  /tmp/ccP258vc.s 			page 4
 
 
  109              	.L2:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
   82:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****     \retval     none
   83:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c **** */
   84:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c **** void cec_error_config(uint32_t broadcast, uint32_t singlecast_lbpe, uint32_t singlecast_bre, uint32
-ARM GAS  /tmp/ccer1HIx.s 			page 5
+ARM GAS  /tmp/ccP258vc.s 			page 5
 
 
   85:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c **** {
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  181              		.loc 1 94 17 view .LVU46
  182 001c 43F01003 		orr	r3, r3, #16
  183              	.L10:
-ARM GAS  /tmp/ccer1HIx.s 			page 6
+ARM GAS  /tmp/ccP258vc.s 			page 6
 
 
   95:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****     }else{
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  223 0006 43F00103 		orr	r3, r3, #1
  224 000a C2F80038 		str	r3, [r2, #2048]
  109:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c **** }
-ARM GAS  /tmp/ccer1HIx.s 			page 7
+ARM GAS  /tmp/ccP258vc.s 			page 7
 
 
  225              		.loc 1 109 1 view .LVU55
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  272              	cec_transmission_start:
  273              	.LFB61:
  121:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c **** 
-ARM GAS  /tmp/ccer1HIx.s 			page 8
+ARM GAS  /tmp/ccP258vc.s 			page 8
 
 
  122:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c **** /*!
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  310              		.loc 1 141 13 is_stmt 0 view .LVU66
  311 0000 034A     		ldr	r2, .L23
  312 0002 D2F80038 		ldr	r3, [r2, #2048]
-ARM GAS  /tmp/ccer1HIx.s 			page 9
+ARM GAS  /tmp/ccP258vc.s 			page 9
 
 
  313 0006 43F00403 		orr	r3, r3, #4
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  358              		.thumb
  359              		.thumb_func
  360              		.fpu softvfp
-ARM GAS  /tmp/ccer1HIx.s 			page 10
+ARM GAS  /tmp/ccP258vc.s 			page 10
 
 
  362              	cec_listen_mode_disable:
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  396              		.cfi_startproc
  397              		@ args = 0, pretend = 0, frame = 0
  398              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccer1HIx.s 			page 11
+ARM GAS  /tmp/ccP258vc.s 			page 11
 
 
  399              		@ link register save eliminated.
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  191:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****       \arg        CEC_SFT_2POINT5_PERIOD: 2.5 nominal data bit periods
  192:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****       \arg        CEC_SFT_3POINT5_PERIOD: 3.5 nominal data bit periods
  193:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****       \arg        CEC_SFT_4POINT5_PERIOD: 4.5 nominal data bit periods
-ARM GAS  /tmp/ccer1HIx.s 			page 12
+ARM GAS  /tmp/ccP258vc.s 			page 12
 
 
  194:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****       \arg        CEC_SFT_5POINT5_PERIOD: 5.5 nominal data bit periods
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  476              		.syntax unified
  477              		.thumb
  478              		.thumb_func
-ARM GAS  /tmp/ccer1HIx.s 			page 13
+ARM GAS  /tmp/ccP258vc.s 			page 13
 
 
  479              		.fpu softvfp
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  230:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****     /* assign BCNG bit, BPLEG bit, BREG bit */
  508              		.loc 1 230 9 view .LVU107
  509 000e 0B43     		orrs	r3, r3, r1
-ARM GAS  /tmp/ccer1HIx.s 			page 14
+ARM GAS  /tmp/ccP258vc.s 			page 14
 
 
  510              		.loc 1 232 9 view .LVU108
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  550              	.L45:
  248:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****     } else {
  249:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****         CEC_CFG &= ~CEC_CFG_BRES;
-ARM GAS  /tmp/ccer1HIx.s 			page 15
+ARM GAS  /tmp/ccP258vc.s 			page 15
 
 
  551              		.loc 1 249 17 view .LVU118
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  592              	.L49:
  593 0010 00700040 		.word	1073770496
  594              		.cfi_endproc
-ARM GAS  /tmp/ccer1HIx.s 			page 16
+ARM GAS  /tmp/ccP258vc.s 			page 16
 
 
  595              	.LFE69:
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  278:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****     \param[out] none
  279:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****     \retval     none
  280:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c **** */
-ARM GAS  /tmp/ccer1HIx.s 			page 17
+ARM GAS  /tmp/ccP258vc.s 			page 17
 
 
  281:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c **** void cec_data_send(uint8_t data)
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  679 000a 00BF     		.align	2
  680              	.L58:
  681 000c 00700040 		.word	1073770496
-ARM GAS  /tmp/ccer1HIx.s 			page 18
+ARM GAS  /tmp/ccP258vc.s 			page 18
 
 
  682              		.cfi_endproc
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  712              	.LVL34:
  321:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****     if(interrupt_flag && interrupt_enable){
  713              		.loc 1 321 5 is_stmt 1 view .LVU145
-ARM GAS  /tmp/ccer1HIx.s 			page 19
+ARM GAS  /tmp/ccP258vc.s 			page 19
 
 
  714              		.loc 1 321 7 is_stmt 0 view .LVU146
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  344:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****     \param[out] none
  345:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****     \retval     none
  346:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c **** */
-ARM GAS  /tmp/ccer1HIx.s 			page 20
+ARM GAS  /tmp/ccP258vc.s 			page 20
 
 
  347:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c **** void cec_interrupt_flag_clear(uint32_t flag)
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  778              		.cfi_startproc
  779              		@ args = 0, pretend = 0, frame = 0
  780              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccer1HIx.s 			page 21
+ARM GAS  /tmp/ccP258vc.s 			page 21
 
 
  781              		@ link register save eliminated.
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  812              		@ link register save eliminated.
  398:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****     CEC_INTEN &= ~flag;
  813              		.loc 1 398 5 view .LVU161
-ARM GAS  /tmp/ccer1HIx.s 			page 22
+ARM GAS  /tmp/ccP258vc.s 			page 22
 
 
  814              		.loc 1 398 15 is_stmt 0 view .LVU162
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  846 0000 034B     		ldr	r3, .L75
  847 0002 D3F81038 		ldr	r3, [r3, #2064]
  848              		.loc 1 422 7 view .LVU167
-ARM GAS  /tmp/ccer1HIx.s 			page 23
+ARM GAS  /tmp/ccP258vc.s 			page 23
 
 
  849 0006 0342     		tst	r3, r0
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  877              		@ args = 0, pretend = 0, frame = 0
  878              		@ frame_needed = 0, uses_anonymous_args = 0
  879              		@ link register save eliminated.
-ARM GAS  /tmp/ccer1HIx.s 			page 24
+ARM GAS  /tmp/ccP258vc.s 			page 24
 
 
  451:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cec.c ****     CEC_INTF |= flag;
@@ -1402,82 +1402,82 @@ ARM GAS  /tmp/ccer1HIx.s 			page 1
  897              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
  898              		.file 3 "Drivers/CMSIS/Include/gd32f1x0.h"
  899              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
-ARM GAS  /tmp/ccer1HIx.s 			page 25
+ARM GAS  /tmp/ccP258vc.s 			page 25
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32f1x0_cec.c
-     /tmp/ccer1HIx.s:16     .text.cec_deinit:0000000000000000 $t
-     /tmp/ccer1HIx.s:24     .text.cec_deinit:0000000000000000 cec_deinit
-     /tmp/ccer1HIx.s:57     .text.cec_init:0000000000000000 $t
-     /tmp/ccer1HIx.s:64     .text.cec_init:0000000000000000 cec_init
-     /tmp/ccer1HIx.s:126    .text.cec_init:0000000000000034 $d
-     /tmp/ccer1HIx.s:131    .text.cec_error_config:0000000000000000 $t
-     /tmp/ccer1HIx.s:138    .text.cec_error_config:0000000000000000 cec_error_config
-     /tmp/ccer1HIx.s:200    .text.cec_error_config:0000000000000030 $d
-     /tmp/ccer1HIx.s:205    .text.cec_enable:0000000000000000 $t
-     /tmp/ccer1HIx.s:212    .text.cec_enable:0000000000000000 cec_enable
-     /tmp/ccer1HIx.s:230    .text.cec_enable:0000000000000010 $d
-     /tmp/ccer1HIx.s:235    .text.cec_disable:0000000000000000 $t
-     /tmp/ccer1HIx.s:242    .text.cec_disable:0000000000000000 cec_disable
-     /tmp/ccer1HIx.s:260    .text.cec_disable:0000000000000010 $d
-     /tmp/ccer1HIx.s:265    .text.cec_transmission_start:0000000000000000 $t
-     /tmp/ccer1HIx.s:272    .text.cec_transmission_start:0000000000000000 cec_transmission_start
-     /tmp/ccer1HIx.s:290    .text.cec_transmission_start:0000000000000010 $d
-     /tmp/ccer1HIx.s:295    .text.cec_transmission_end:0000000000000000 $t
-     /tmp/ccer1HIx.s:302    .text.cec_transmission_end:0000000000000000 cec_transmission_end
-     /tmp/ccer1HIx.s:320    .text.cec_transmission_end:0000000000000010 $d
-     /tmp/ccer1HIx.s:325    .text.cec_listen_mode_enable:0000000000000000 $t
-     /tmp/ccer1HIx.s:332    .text.cec_listen_mode_enable:0000000000000000 cec_listen_mode_enable
-     /tmp/ccer1HIx.s:350    .text.cec_listen_mode_enable:0000000000000010 $d
-     /tmp/ccer1HIx.s:355    .text.cec_listen_mode_disable:0000000000000000 $t
-     /tmp/ccer1HIx.s:362    .text.cec_listen_mode_disable:0000000000000000 cec_listen_mode_disable
-     /tmp/ccer1HIx.s:380    .text.cec_listen_mode_disable:0000000000000010 $d
-     /tmp/ccer1HIx.s:385    .text.cec_own_address_config:0000000000000000 $t
-     /tmp/ccer1HIx.s:392    .text.cec_own_address_config:0000000000000000 cec_own_address_config
-     /tmp/ccer1HIx.s:424    .text.cec_own_address_config:0000000000000020 $d
-     /tmp/ccer1HIx.s:429    .text.cec_sft_config:0000000000000000 $t
-     /tmp/ccer1HIx.s:436    .text.cec_sft_config:0000000000000000 cec_sft_config
-     /tmp/ccer1HIx.s:469    .text.cec_sft_config:0000000000000018 $d
-     /tmp/ccer1HIx.s:474    .text.cec_generate_errorbit_config:0000000000000000 $t
-     /tmp/ccer1HIx.s:481    .text.cec_generate_errorbit_config:0000000000000000 cec_generate_errorbit_config
-     /tmp/ccer1HIx.s:521    .text.cec_generate_errorbit_config:0000000000000018 $d
-     /tmp/ccer1HIx.s:526    .text.cec_stop_receive_bre_config:0000000000000000 $t
-     /tmp/ccer1HIx.s:533    .text.cec_stop_receive_bre_config:0000000000000000 cec_stop_receive_bre_config
-     /tmp/ccer1HIx.s:563    .text.cec_stop_receive_bre_config:0000000000000018 $d
-     /tmp/ccer1HIx.s:568    .text.cec_reception_tolerance_enable:0000000000000000 $t
-     /tmp/ccer1HIx.s:575    .text.cec_reception_tolerance_enable:0000000000000000 cec_reception_tolerance_enable
-     /tmp/ccer1HIx.s:593    .text.cec_reception_tolerance_enable:0000000000000010 $d
-     /tmp/ccer1HIx.s:598    .text.cec_reception_tolerance_disable:0000000000000000 $t
-     /tmp/ccer1HIx.s:605    .text.cec_reception_tolerance_disable:0000000000000000 cec_reception_tolerance_disable
-     /tmp/ccer1HIx.s:623    .text.cec_reception_tolerance_disable:0000000000000010 $d
-     /tmp/ccer1HIx.s:628    .text.cec_data_send:0000000000000000 $t
-     /tmp/ccer1HIx.s:635    .text.cec_data_send:0000000000000000 cec_data_send
-     /tmp/ccer1HIx.s:652    .text.cec_data_send:0000000000000008 $d
-     /tmp/ccer1HIx.s:657    .text.cec_data_receive:0000000000000000 $t
-     /tmp/ccer1HIx.s:664    .text.cec_data_receive:0000000000000000 cec_data_receive
-     /tmp/ccer1HIx.s:681    .text.cec_data_receive:000000000000000c $d
-     /tmp/ccer1HIx.s:686    .text.cec_interrupt_flag_get:0000000000000000 $t
-     /tmp/ccer1HIx.s:693    .text.cec_interrupt_flag_get:0000000000000000 cec_interrupt_flag_get
-     /tmp/ccer1HIx.s:733    .text.cec_interrupt_flag_get:000000000000001c $d
-     /tmp/ccer1HIx.s:738    .text.cec_interrupt_flag_clear:0000000000000000 $t
-     /tmp/ccer1HIx.s:745    .text.cec_interrupt_flag_clear:0000000000000000 cec_interrupt_flag_clear
-ARM GAS  /tmp/ccer1HIx.s 			page 26
+     /tmp/ccP258vc.s:16     .text.cec_deinit:0000000000000000 $t
+     /tmp/ccP258vc.s:24     .text.cec_deinit:0000000000000000 cec_deinit
+     /tmp/ccP258vc.s:57     .text.cec_init:0000000000000000 $t
+     /tmp/ccP258vc.s:64     .text.cec_init:0000000000000000 cec_init
+     /tmp/ccP258vc.s:126    .text.cec_init:0000000000000034 $d
+     /tmp/ccP258vc.s:131    .text.cec_error_config:0000000000000000 $t
+     /tmp/ccP258vc.s:138    .text.cec_error_config:0000000000000000 cec_error_config
+     /tmp/ccP258vc.s:200    .text.cec_error_config:0000000000000030 $d
+     /tmp/ccP258vc.s:205    .text.cec_enable:0000000000000000 $t
+     /tmp/ccP258vc.s:212    .text.cec_enable:0000000000000000 cec_enable
+     /tmp/ccP258vc.s:230    .text.cec_enable:0000000000000010 $d
+     /tmp/ccP258vc.s:235    .text.cec_disable:0000000000000000 $t
+     /tmp/ccP258vc.s:242    .text.cec_disable:0000000000000000 cec_disable
+     /tmp/ccP258vc.s:260    .text.cec_disable:0000000000000010 $d
+     /tmp/ccP258vc.s:265    .text.cec_transmission_start:0000000000000000 $t
+     /tmp/ccP258vc.s:272    .text.cec_transmission_start:0000000000000000 cec_transmission_start
+     /tmp/ccP258vc.s:290    .text.cec_transmission_start:0000000000000010 $d
+     /tmp/ccP258vc.s:295    .text.cec_transmission_end:0000000000000000 $t
+     /tmp/ccP258vc.s:302    .text.cec_transmission_end:0000000000000000 cec_transmission_end
+     /tmp/ccP258vc.s:320    .text.cec_transmission_end:0000000000000010 $d
+     /tmp/ccP258vc.s:325    .text.cec_listen_mode_enable:0000000000000000 $t
+     /tmp/ccP258vc.s:332    .text.cec_listen_mode_enable:0000000000000000 cec_listen_mode_enable
+     /tmp/ccP258vc.s:350    .text.cec_listen_mode_enable:0000000000000010 $d
+     /tmp/ccP258vc.s:355    .text.cec_listen_mode_disable:0000000000000000 $t
+     /tmp/ccP258vc.s:362    .text.cec_listen_mode_disable:0000000000000000 cec_listen_mode_disable
+     /tmp/ccP258vc.s:380    .text.cec_listen_mode_disable:0000000000000010 $d
+     /tmp/ccP258vc.s:385    .text.cec_own_address_config:0000000000000000 $t
+     /tmp/ccP258vc.s:392    .text.cec_own_address_config:0000000000000000 cec_own_address_config
+     /tmp/ccP258vc.s:424    .text.cec_own_address_config:0000000000000020 $d
+     /tmp/ccP258vc.s:429    .text.cec_sft_config:0000000000000000 $t
+     /tmp/ccP258vc.s:436    .text.cec_sft_config:0000000000000000 cec_sft_config
+     /tmp/ccP258vc.s:469    .text.cec_sft_config:0000000000000018 $d
+     /tmp/ccP258vc.s:474    .text.cec_generate_errorbit_config:0000000000000000 $t
+     /tmp/ccP258vc.s:481    .text.cec_generate_errorbit_config:0000000000000000 cec_generate_errorbit_config
+     /tmp/ccP258vc.s:521    .text.cec_generate_errorbit_config:0000000000000018 $d
+     /tmp/ccP258vc.s:526    .text.cec_stop_receive_bre_config:0000000000000000 $t
+     /tmp/ccP258vc.s:533    .text.cec_stop_receive_bre_config:0000000000000000 cec_stop_receive_bre_config
+     /tmp/ccP258vc.s:563    .text.cec_stop_receive_bre_config:0000000000000018 $d
+     /tmp/ccP258vc.s:568    .text.cec_reception_tolerance_enable:0000000000000000 $t
+     /tmp/ccP258vc.s:575    .text.cec_reception_tolerance_enable:0000000000000000 cec_reception_tolerance_enable
+     /tmp/ccP258vc.s:593    .text.cec_reception_tolerance_enable:0000000000000010 $d
+     /tmp/ccP258vc.s:598    .text.cec_reception_tolerance_disable:0000000000000000 $t
+     /tmp/ccP258vc.s:605    .text.cec_reception_tolerance_disable:0000000000000000 cec_reception_tolerance_disable
+     /tmp/ccP258vc.s:623    .text.cec_reception_tolerance_disable:0000000000000010 $d
+     /tmp/ccP258vc.s:628    .text.cec_data_send:0000000000000000 $t
+     /tmp/ccP258vc.s:635    .text.cec_data_send:0000000000000000 cec_data_send
+     /tmp/ccP258vc.s:652    .text.cec_data_send:0000000000000008 $d
+     /tmp/ccP258vc.s:657    .text.cec_data_receive:0000000000000000 $t
+     /tmp/ccP258vc.s:664    .text.cec_data_receive:0000000000000000 cec_data_receive
+     /tmp/ccP258vc.s:681    .text.cec_data_receive:000000000000000c $d
+     /tmp/ccP258vc.s:686    .text.cec_interrupt_flag_get:0000000000000000 $t
+     /tmp/ccP258vc.s:693    .text.cec_interrupt_flag_get:0000000000000000 cec_interrupt_flag_get
+     /tmp/ccP258vc.s:733    .text.cec_interrupt_flag_get:000000000000001c $d
+     /tmp/ccP258vc.s:738    .text.cec_interrupt_flag_clear:0000000000000000 $t
+     /tmp/ccP258vc.s:745    .text.cec_interrupt_flag_clear:0000000000000000 cec_interrupt_flag_clear
+ARM GAS  /tmp/ccP258vc.s 			page 26
 
 
-     /tmp/ccer1HIx.s:762    .text.cec_interrupt_flag_clear:0000000000000008 $d
-     /tmp/ccer1HIx.s:767    .text.cec_interrupt_enable:0000000000000000 $t
-     /tmp/ccer1HIx.s:774    .text.cec_interrupt_enable:0000000000000000 cec_interrupt_enable
-     /tmp/ccer1HIx.s:793    .text.cec_interrupt_enable:0000000000000010 $d
-     /tmp/ccer1HIx.s:798    .text.cec_interrupt_disable:0000000000000000 $t
-     /tmp/ccer1HIx.s:805    .text.cec_interrupt_disable:0000000000000000 cec_interrupt_disable
-     /tmp/ccer1HIx.s:824    .text.cec_interrupt_disable:0000000000000010 $d
-     /tmp/ccer1HIx.s:829    .text.cec_flag_get:0000000000000000 $t
-     /tmp/ccer1HIx.s:836    .text.cec_flag_get:0000000000000000 cec_flag_get
-     /tmp/ccer1HIx.s:860    .text.cec_flag_get:0000000000000010 $d
-     /tmp/ccer1HIx.s:865    .text.cec_flag_clear:0000000000000000 $t
-     /tmp/ccer1HIx.s:872    .text.cec_flag_clear:0000000000000000 cec_flag_clear
-     /tmp/ccer1HIx.s:891    .text.cec_flag_clear:0000000000000010 $d
+     /tmp/ccP258vc.s:762    .text.cec_interrupt_flag_clear:0000000000000008 $d
+     /tmp/ccP258vc.s:767    .text.cec_interrupt_enable:0000000000000000 $t
+     /tmp/ccP258vc.s:774    .text.cec_interrupt_enable:0000000000000000 cec_interrupt_enable
+     /tmp/ccP258vc.s:793    .text.cec_interrupt_enable:0000000000000010 $d
+     /tmp/ccP258vc.s:798    .text.cec_interrupt_disable:0000000000000000 $t
+     /tmp/ccP258vc.s:805    .text.cec_interrupt_disable:0000000000000000 cec_interrupt_disable
+     /tmp/ccP258vc.s:824    .text.cec_interrupt_disable:0000000000000010 $d
+     /tmp/ccP258vc.s:829    .text.cec_flag_get:0000000000000000 $t
+     /tmp/ccP258vc.s:836    .text.cec_flag_get:0000000000000000 cec_flag_get
+     /tmp/ccP258vc.s:860    .text.cec_flag_get:0000000000000010 $d
+     /tmp/ccP258vc.s:865    .text.cec_flag_clear:0000000000000000 $t
+     /tmp/ccP258vc.s:872    .text.cec_flag_clear:0000000000000000 cec_flag_clear
+     /tmp/ccP258vc.s:891    .text.cec_flag_clear:0000000000000010 $d
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable

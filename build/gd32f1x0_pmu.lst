@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccfzvmHv.s 			page 1
+ARM GAS  /tmp/ccotsx2A.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
   26:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     rcu_periph_reset_enable(RCU_PMURST);
   31              		.loc 1 26 5 view .LVU1
   24:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* reset PMU */
-ARM GAS  /tmp/ccfzvmHv.s 			page 2
+ARM GAS  /tmp/ccotsx2A.s 			page 2
 
 
   32              		.loc 1 24 1 is_stmt 0 view .LVU2
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
   68              		.cfi_startproc
   69              		@ args = 0, pretend = 0, frame = 0
   70              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccfzvmHv.s 			page 3
+ARM GAS  /tmp/ccotsx2A.s 			page 3
 
 
   71              		@ link register save eliminated.
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
   61:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \retval     none
   62:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** */
   63:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** void pmu_lvd_disable(void)
-ARM GAS  /tmp/ccfzvmHv.s 			page 4
+ARM GAS  /tmp/ccotsx2A.s 			page 4
 
 
   64:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c **** {
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  151 0002 1369     		ldr	r3, [r2, #16]
  152 0004 23F00403 		bic	r3, r3, #4
  153 0008 1361     		str	r3, [r2, #16]
-ARM GAS  /tmp/ccfzvmHv.s 			page 5
+ARM GAS  /tmp/ccotsx2A.s 			page 5
 
 
   81:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
   44:Drivers/CMSIS/core_cmInstr.h ****   Access to dedicated instructions
   45:Drivers/CMSIS/core_cmInstr.h ****   @{
   46:Drivers/CMSIS/core_cmInstr.h **** */
-ARM GAS  /tmp/ccfzvmHv.s 			page 6
+ARM GAS  /tmp/ccotsx2A.s 			page 6
 
 
   47:Drivers/CMSIS/core_cmInstr.h **** 
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  101:Drivers/CMSIS/core_cmInstr.h **** 
  102:Drivers/CMSIS/core_cmInstr.h **** 
  103:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Data Memory Barrier
-ARM GAS  /tmp/ccfzvmHv.s 			page 7
+ARM GAS  /tmp/ccotsx2A.s 			page 7
 
 
  104:Drivers/CMSIS/core_cmInstr.h **** 
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  158:Drivers/CMSIS/core_cmInstr.h ****     \return               Rotated value
  159:Drivers/CMSIS/core_cmInstr.h ****  */
  160:Drivers/CMSIS/core_cmInstr.h **** #define __ROR                             __ror
-ARM GAS  /tmp/ccfzvmHv.s 			page 8
+ARM GAS  /tmp/ccotsx2A.s 			page 8
 
 
  161:Drivers/CMSIS/core_cmInstr.h **** 
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  215:Drivers/CMSIS/core_cmInstr.h **** 
  216:Drivers/CMSIS/core_cmInstr.h **** /** \brief  STR Exclusive (8 bit)
  217:Drivers/CMSIS/core_cmInstr.h **** 
-ARM GAS  /tmp/ccfzvmHv.s 			page 9
+ARM GAS  /tmp/ccotsx2A.s 			page 9
 
 
  218:Drivers/CMSIS/core_cmInstr.h ****     This function performs a exclusive STR command for 8 bit values.
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  272:Drivers/CMSIS/core_cmInstr.h **** 
  273:Drivers/CMSIS/core_cmInstr.h ****     This function saturates an unsigned value.
  274:Drivers/CMSIS/core_cmInstr.h **** 
-ARM GAS  /tmp/ccfzvmHv.s 			page 10
+ARM GAS  /tmp/ccotsx2A.s 			page 10
 
 
  275:Drivers/CMSIS/core_cmInstr.h ****     \param [in]  value  Value to be saturated
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  329:Drivers/CMSIS/core_cmInstr.h **** 
  330:Drivers/CMSIS/core_cmInstr.h **** 
  331:Drivers/CMSIS/core_cmInstr.h **** /** \brief  Wait For Interrupt
-ARM GAS  /tmp/ccfzvmHv.s 			page 11
+ARM GAS  /tmp/ccotsx2A.s 			page 11
 
 
  332:Drivers/CMSIS/core_cmInstr.h **** 
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  193              	.L11:
  194 0014 00ED00E0 		.word	-536810240
  195              		.cfi_endproc
-ARM GAS  /tmp/ccfzvmHv.s 			page 12
+ARM GAS  /tmp/ccotsx2A.s 			page 12
 
 
  196              	.LFE59:
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  231 0010 1A60     		str	r2, [r3]
  109:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     
  110:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     /* set sleepdeep bit of Cortex-M3 system control register */
-ARM GAS  /tmp/ccfzvmHv.s 			page 13
+ARM GAS  /tmp/ccotsx2A.s 			page 13
 
 
  111:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  276 004a C3F88401 		str	r0, [r3, #388]
  121:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     REG32( 0xE000E188 )  = 0xFFFFFFFF;
  277              		.loc 1 121 5 is_stmt 1 view .LVU64
-ARM GAS  /tmp/ccfzvmHv.s 			page 14
+ARM GAS  /tmp/ccotsx2A.s 			page 14
 
 
  278              		.loc 1 121 26 is_stmt 0 view .LVU65
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  135:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     REG32( 0xE000E108 ) = reg_snap[ 3 ] ;   
  317              		.loc 1 135 5 is_stmt 1 view .LVU81
  318              		.loc 1 135 35 is_stmt 0 view .LVU82
-ARM GAS  /tmp/ccfzvmHv.s 			page 15
+ARM GAS  /tmp/ccotsx2A.s 			page 15
 
 
  319 006e D268     		ldr	r2, [r2, #12]
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  355              	@ 0 "" 2
  356              		.thumb
  357              		.syntax unified
-ARM GAS  /tmp/ccfzvmHv.s 			page 16
+ARM GAS  /tmp/ccotsx2A.s 			page 16
 
 
  358              	.LBE27:
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  399              		.cfi_startproc
  400              		@ args = 0, pretend = 0, frame = 0
  401              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccfzvmHv.s 			page 17
+ARM GAS  /tmp/ccotsx2A.s 			page 17
 
 
  402              		@ link register save eliminated.
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  164:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****         __WFE();
  440              		.loc 1 164 9 is_stmt 1 view .LVU110
  441              	.LBB32:
-ARM GAS  /tmp/ccfzvmHv.s 			page 18
+ARM GAS  /tmp/ccotsx2A.s 			page 18
 
 
  442              	.LBI32:
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  482 0002 0128     		cmp	r0, #1
  483 0004 06D0     		beq	.L25
  484 0006 7047     		bx	lr
-ARM GAS  /tmp/ccfzvmHv.s 			page 19
+ARM GAS  /tmp/ccotsx2A.s 			page 19
 
 
  485              	.L24:
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  196:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_FLAG_STANDBY: standby flag 
  197:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_FLAG_LVD: lvd flag 
  198:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[out] none
-ARM GAS  /tmp/ccfzvmHv.s 			page 20
+ARM GAS  /tmp/ccotsx2A.s 			page 20
 
 
  199:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \retval     FlagStatus SET or RESET
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  559              		@ args = 0, pretend = 0, frame = 0
  560              		@ frame_needed = 0, uses_anonymous_args = 0
  561              		@ link register save eliminated.
-ARM GAS  /tmp/ccfzvmHv.s 			page 21
+ARM GAS  /tmp/ccotsx2A.s 			page 21
 
 
  218:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     PMU_CTL |= PMU_CTL_BKPWEN;
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  605              	.LFE65:
  607              		.section	.text.pmu_wakeup_pin_enable,"ax",%progbits
  608              		.align	1
-ARM GAS  /tmp/ccfzvmHv.s 			page 22
+ARM GAS  /tmp/ccotsx2A.s 			page 22
 
 
  609              		.global	pmu_wakeup_pin_enable
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  248:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_WAKEUP_PIN0: wakeup pin 0
  249:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****       \arg        PMU_WAKEUP_PIN1: wakeup pin 1
  250:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \param[out] none
-ARM GAS  /tmp/ccfzvmHv.s 			page 23
+ARM GAS  /tmp/ccotsx2A.s 			page 23
 
 
  251:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_pmu.c ****     \retval     none
@@ -1361,48 +1361,48 @@ ARM GAS  /tmp/ccfzvmHv.s 			page 1
  679              		.file 4 "Drivers/CMSIS/core_cm3.h"
  680              		.file 5 "Drivers/CMSIS/Include/gd32f1x0.h"
  681              		.file 6 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
-ARM GAS  /tmp/ccfzvmHv.s 			page 24
+ARM GAS  /tmp/ccotsx2A.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32f1x0_pmu.c
-     /tmp/ccfzvmHv.s:16     .text.pmu_deinit:0000000000000000 $t
-     /tmp/ccfzvmHv.s:24     .text.pmu_deinit:0000000000000000 pmu_deinit
-     /tmp/ccfzvmHv.s:57     .text.pmu_lvd_select:0000000000000000 $t
-     /tmp/ccfzvmHv.s:64     .text.pmu_lvd_select:0000000000000000 pmu_lvd_select
-     /tmp/ccfzvmHv.s:98     .text.pmu_lvd_select:0000000000000024 $d
-     /tmp/ccfzvmHv.s:103    .text.pmu_lvd_disable:0000000000000000 $t
-     /tmp/ccfzvmHv.s:110    .text.pmu_lvd_disable:0000000000000000 pmu_lvd_disable
-     /tmp/ccfzvmHv.s:128    .text.pmu_lvd_disable:000000000000000c $d
-     /tmp/ccfzvmHv.s:133    .text.pmu_to_sleepmode:0000000000000000 $t
-     /tmp/ccfzvmHv.s:140    .text.pmu_to_sleepmode:0000000000000000 pmu_to_sleepmode
-     /tmp/ccfzvmHv.s:194    .text.pmu_to_sleepmode:0000000000000014 $d
-     /tmp/ccfzvmHv.s:199    .text.pmu_to_deepsleepmode:0000000000000000 $t
-     /tmp/ccfzvmHv.s:206    .text.pmu_to_deepsleepmode:0000000000000000 pmu_to_deepsleepmode
-     /tmp/ccfzvmHv.s:377    .text.pmu_to_deepsleepmode:0000000000000088 $d
-     /tmp/ccfzvmHv.s:388    .text.pmu_to_standbymode:0000000000000000 $t
-     /tmp/ccfzvmHv.s:395    .text.pmu_to_standbymode:0000000000000000 pmu_to_standbymode
-     /tmp/ccfzvmHv.s:459    .text.pmu_to_standbymode:0000000000000028 $d
-     /tmp/ccfzvmHv.s:465    .text.pmu_flag_clear:0000000000000000 $t
-     /tmp/ccfzvmHv.s:472    .text.pmu_flag_clear:0000000000000000 pmu_flag_clear
-     /tmp/ccfzvmHv.s:507    .text.pmu_flag_clear:0000000000000020 $d
-     /tmp/ccfzvmHv.s:512    .text.pmu_flag_get:0000000000000000 $t
-     /tmp/ccfzvmHv.s:519    .text.pmu_flag_get:0000000000000000 pmu_flag_get
-     /tmp/ccfzvmHv.s:543    .text.pmu_flag_get:0000000000000010 $d
-     /tmp/ccfzvmHv.s:548    .text.pmu_backup_write_enable:0000000000000000 $t
-     /tmp/ccfzvmHv.s:555    .text.pmu_backup_write_enable:0000000000000000 pmu_backup_write_enable
-     /tmp/ccfzvmHv.s:573    .text.pmu_backup_write_enable:000000000000000c $d
-     /tmp/ccfzvmHv.s:578    .text.pmu_backup_write_disable:0000000000000000 $t
-     /tmp/ccfzvmHv.s:585    .text.pmu_backup_write_disable:0000000000000000 pmu_backup_write_disable
-     /tmp/ccfzvmHv.s:603    .text.pmu_backup_write_disable:000000000000000c $d
-     /tmp/ccfzvmHv.s:608    .text.pmu_wakeup_pin_enable:0000000000000000 $t
-     /tmp/ccfzvmHv.s:615    .text.pmu_wakeup_pin_enable:0000000000000000 pmu_wakeup_pin_enable
-     /tmp/ccfzvmHv.s:634    .text.pmu_wakeup_pin_enable:000000000000000c $d
-     /tmp/ccfzvmHv.s:639    .text.pmu_wakeup_pin_disable:0000000000000000 $t
-     /tmp/ccfzvmHv.s:646    .text.pmu_wakeup_pin_disable:0000000000000000 pmu_wakeup_pin_disable
-     /tmp/ccfzvmHv.s:665    .text.pmu_wakeup_pin_disable:000000000000000c $d
-     /tmp/ccfzvmHv.s:670    .bss.reg_snap.0:0000000000000000 $d
-     /tmp/ccfzvmHv.s:674    .bss.reg_snap.0:0000000000000000 reg_snap.0
+     /tmp/ccotsx2A.s:16     .text.pmu_deinit:0000000000000000 $t
+     /tmp/ccotsx2A.s:24     .text.pmu_deinit:0000000000000000 pmu_deinit
+     /tmp/ccotsx2A.s:57     .text.pmu_lvd_select:0000000000000000 $t
+     /tmp/ccotsx2A.s:64     .text.pmu_lvd_select:0000000000000000 pmu_lvd_select
+     /tmp/ccotsx2A.s:98     .text.pmu_lvd_select:0000000000000024 $d
+     /tmp/ccotsx2A.s:103    .text.pmu_lvd_disable:0000000000000000 $t
+     /tmp/ccotsx2A.s:110    .text.pmu_lvd_disable:0000000000000000 pmu_lvd_disable
+     /tmp/ccotsx2A.s:128    .text.pmu_lvd_disable:000000000000000c $d
+     /tmp/ccotsx2A.s:133    .text.pmu_to_sleepmode:0000000000000000 $t
+     /tmp/ccotsx2A.s:140    .text.pmu_to_sleepmode:0000000000000000 pmu_to_sleepmode
+     /tmp/ccotsx2A.s:194    .text.pmu_to_sleepmode:0000000000000014 $d
+     /tmp/ccotsx2A.s:199    .text.pmu_to_deepsleepmode:0000000000000000 $t
+     /tmp/ccotsx2A.s:206    .text.pmu_to_deepsleepmode:0000000000000000 pmu_to_deepsleepmode
+     /tmp/ccotsx2A.s:377    .text.pmu_to_deepsleepmode:0000000000000088 $d
+     /tmp/ccotsx2A.s:388    .text.pmu_to_standbymode:0000000000000000 $t
+     /tmp/ccotsx2A.s:395    .text.pmu_to_standbymode:0000000000000000 pmu_to_standbymode
+     /tmp/ccotsx2A.s:459    .text.pmu_to_standbymode:0000000000000028 $d
+     /tmp/ccotsx2A.s:465    .text.pmu_flag_clear:0000000000000000 $t
+     /tmp/ccotsx2A.s:472    .text.pmu_flag_clear:0000000000000000 pmu_flag_clear
+     /tmp/ccotsx2A.s:507    .text.pmu_flag_clear:0000000000000020 $d
+     /tmp/ccotsx2A.s:512    .text.pmu_flag_get:0000000000000000 $t
+     /tmp/ccotsx2A.s:519    .text.pmu_flag_get:0000000000000000 pmu_flag_get
+     /tmp/ccotsx2A.s:543    .text.pmu_flag_get:0000000000000010 $d
+     /tmp/ccotsx2A.s:548    .text.pmu_backup_write_enable:0000000000000000 $t
+     /tmp/ccotsx2A.s:555    .text.pmu_backup_write_enable:0000000000000000 pmu_backup_write_enable
+     /tmp/ccotsx2A.s:573    .text.pmu_backup_write_enable:000000000000000c $d
+     /tmp/ccotsx2A.s:578    .text.pmu_backup_write_disable:0000000000000000 $t
+     /tmp/ccotsx2A.s:585    .text.pmu_backup_write_disable:0000000000000000 pmu_backup_write_disable
+     /tmp/ccotsx2A.s:603    .text.pmu_backup_write_disable:000000000000000c $d
+     /tmp/ccotsx2A.s:608    .text.pmu_wakeup_pin_enable:0000000000000000 $t
+     /tmp/ccotsx2A.s:615    .text.pmu_wakeup_pin_enable:0000000000000000 pmu_wakeup_pin_enable
+     /tmp/ccotsx2A.s:634    .text.pmu_wakeup_pin_enable:000000000000000c $d
+     /tmp/ccotsx2A.s:639    .text.pmu_wakeup_pin_disable:0000000000000000 $t
+     /tmp/ccotsx2A.s:646    .text.pmu_wakeup_pin_disable:0000000000000000 pmu_wakeup_pin_disable
+     /tmp/ccotsx2A.s:665    .text.pmu_wakeup_pin_disable:000000000000000c $d
+     /tmp/ccotsx2A.s:670    .bss.reg_snap.0:0000000000000000 $d
+     /tmp/ccotsx2A.s:674    .bss.reg_snap.0:0000000000000000 reg_snap.0
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable

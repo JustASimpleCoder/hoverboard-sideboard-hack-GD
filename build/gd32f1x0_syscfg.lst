@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cchtDTlQ.s 			page 1
+ARM GAS  /tmp/cct81q7X.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cchtDTlQ.s 			page 1
   31              		.loc 1 25 5 view .LVU1
   24:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_syscfg.c ****     rcu_periph_reset_enable(RCU_CFGCMPRST);
   32              		.loc 1 24 1 is_stmt 0 view .LVU2
-ARM GAS  /tmp/cchtDTlQ.s 			page 2
+ARM GAS  /tmp/cct81q7X.s 			page 2
 
 
   33 0000 08B5     		push	{r3, lr}
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cchtDTlQ.s 			page 1
   42:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_syscfg.c ****     SYSCFG_CFG0 |= syscfg_dma_remap;
   72              		.loc 1 42 5 view .LVU8
   73              		.loc 1 42 17 is_stmt 0 view .LVU9
-ARM GAS  /tmp/cchtDTlQ.s 			page 3
+ARM GAS  /tmp/cct81q7X.s 			page 3
 
 
   74 0000 024A     		ldr	r2, .L3
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cchtDTlQ.s 			page 1
  113              	.L6:
  114 000c 00000140 		.word	1073807360
  115              		.cfi_endproc
-ARM GAS  /tmp/cchtDTlQ.s 			page 4
+ARM GAS  /tmp/cct81q7X.s 			page 4
 
 
  116              	.LFE58:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cchtDTlQ.s 			page 1
   76:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_syscfg.c ****     \retval     none
   77:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_syscfg.c **** */
   78:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_syscfg.c **** void syscfg_high_current_disable(void)
-ARM GAS  /tmp/cchtDTlQ.s 			page 5
+ARM GAS  /tmp/cct81q7X.s 			page 5
 
 
   79:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_syscfg.c **** {
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cchtDTlQ.s 			page 1
  104:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_syscfg.c ****     /* according to VLCD bias, configure rails combination */
  105:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_syscfg.c ****     case VLCD_BIAS1_2_RAIL1:
  106:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_syscfg.c ****         SYSCFG_CFG1 |= SYSCFG_VLCD_RAIL1;
-ARM GAS  /tmp/cchtDTlQ.s 			page 6
+ARM GAS  /tmp/cct81q7X.s 			page 6
 
 
  107:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_syscfg.c ****         break;
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cchtDTlQ.s 			page 1
  141:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_syscfg.c ****     uint32_t clear_exti_mask = ~((uint32_t)EXTI_SS_MASK << (EXTI_SS_MSTEP(exti_pin)));
  205              		.loc 1 141 14 view .LVU29
  206 000c DB43     		mvns	r3, r3
-ARM GAS  /tmp/cchtDTlQ.s 			page 7
+ARM GAS  /tmp/cct81q7X.s 			page 7
 
 
  207              	.LVL6:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cchtDTlQ.s 			page 1
  154:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_syscfg.c ****         /* configure EXTI soure line(4..7) */
  155:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_syscfg.c ****         SYSCFG_EXTISS1 |= config_exti_mask;
  250              		.loc 1 155 9 is_stmt 1 view .LVU43
-ARM GAS  /tmp/cchtDTlQ.s 			page 8
+ARM GAS  /tmp/cct81q7X.s 			page 8
 
 
  251              		.loc 1 155 24 is_stmt 0 view .LVU44
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cchtDTlQ.s 			page 1
  293              		.loc 1 167 24 view .LVU59
  294 0058 5061     		str	r0, [r2, #20]
  168:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_syscfg.c ****         break;
-ARM GAS  /tmp/cchtDTlQ.s 			page 9
+ARM GAS  /tmp/cct81q7X.s 			page 9
 
 
  295              		.loc 1 168 9 is_stmt 1 view .LVU60
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cchtDTlQ.s 			page 1
  333 000c 00000140 		.word	1073807360
  334              		.cfi_endproc
  335              	.LFE62:
-ARM GAS  /tmp/cchtDTlQ.s 			page 10
+ARM GAS  /tmp/cct81q7X.s 			page 10
 
 
  337              		.section	.text.syscfg_flag_get,"ax",%progbits
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cchtDTlQ.s 			page 1
  377              		.thumb
  378              		.thumb_func
  379              		.fpu softvfp
-ARM GAS  /tmp/cchtDTlQ.s 			page 11
+ARM GAS  /tmp/cct81q7X.s 			page 11
 
 
  381              	syscfg_flag_clear:
@@ -615,38 +615,38 @@ ARM GAS  /tmp/cchtDTlQ.s 			page 1
  393              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
  394              		.file 3 "Drivers/CMSIS/Include/gd32f1x0.h"
  395              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
-ARM GAS  /tmp/cchtDTlQ.s 			page 12
+ARM GAS  /tmp/cct81q7X.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32f1x0_syscfg.c
-     /tmp/cchtDTlQ.s:16     .text.syscfg_deinit:0000000000000000 $t
-     /tmp/cchtDTlQ.s:24     .text.syscfg_deinit:0000000000000000 syscfg_deinit
-     /tmp/cchtDTlQ.s:57     .text.syscfg_dma_remap_enable:0000000000000000 $t
-     /tmp/cchtDTlQ.s:64     .text.syscfg_dma_remap_enable:0000000000000000 syscfg_dma_remap_enable
-     /tmp/cchtDTlQ.s:83     .text.syscfg_dma_remap_enable:000000000000000c $d
-     /tmp/cchtDTlQ.s:88     .text.syscfg_dma_remap_disable:0000000000000000 $t
-     /tmp/cchtDTlQ.s:95     .text.syscfg_dma_remap_disable:0000000000000000 syscfg_dma_remap_disable
-     /tmp/cchtDTlQ.s:114    .text.syscfg_dma_remap_disable:000000000000000c $d
-     /tmp/cchtDTlQ.s:119    .text.syscfg_high_current_enable:0000000000000000 $t
-     /tmp/cchtDTlQ.s:126    .text.syscfg_high_current_enable:0000000000000000 syscfg_high_current_enable
-     /tmp/cchtDTlQ.s:144    .text.syscfg_high_current_enable:000000000000000c $d
-     /tmp/cchtDTlQ.s:149    .text.syscfg_high_current_disable:0000000000000000 $t
-     /tmp/cchtDTlQ.s:156    .text.syscfg_high_current_disable:0000000000000000 syscfg_high_current_disable
-     /tmp/cchtDTlQ.s:174    .text.syscfg_high_current_disable:000000000000000c $d
-     /tmp/cchtDTlQ.s:179    .text.syscfg_exti_line_config:0000000000000000 $t
-     /tmp/cchtDTlQ.s:186    .text.syscfg_exti_line_config:0000000000000000 syscfg_exti_line_config
-     /tmp/cchtDTlQ.s:217    .text.syscfg_exti_line_config:0000000000000018 $d
-     /tmp/cchtDTlQ.s:221    .text.syscfg_exti_line_config:000000000000001c $t
-     /tmp/cchtDTlQ.s:302    .text.syscfg_exti_line_config:000000000000005c $d
-     /tmp/cchtDTlQ.s:307    .text.syscfg_lock_config:0000000000000000 $t
-     /tmp/cchtDTlQ.s:314    .text.syscfg_lock_config:0000000000000000 syscfg_lock_config
-     /tmp/cchtDTlQ.s:333    .text.syscfg_lock_config:000000000000000c $d
-     /tmp/cchtDTlQ.s:338    .text.syscfg_flag_get:0000000000000000 $t
-     /tmp/cchtDTlQ.s:345    .text.syscfg_flag_get:0000000000000000 syscfg_flag_get
-     /tmp/cchtDTlQ.s:369    .text.syscfg_flag_get:0000000000000010 $d
-     /tmp/cchtDTlQ.s:374    .text.syscfg_flag_clear:0000000000000000 $t
-     /tmp/cchtDTlQ.s:381    .text.syscfg_flag_clear:0000000000000000 syscfg_flag_clear
+     /tmp/cct81q7X.s:16     .text.syscfg_deinit:0000000000000000 $t
+     /tmp/cct81q7X.s:24     .text.syscfg_deinit:0000000000000000 syscfg_deinit
+     /tmp/cct81q7X.s:57     .text.syscfg_dma_remap_enable:0000000000000000 $t
+     /tmp/cct81q7X.s:64     .text.syscfg_dma_remap_enable:0000000000000000 syscfg_dma_remap_enable
+     /tmp/cct81q7X.s:83     .text.syscfg_dma_remap_enable:000000000000000c $d
+     /tmp/cct81q7X.s:88     .text.syscfg_dma_remap_disable:0000000000000000 $t
+     /tmp/cct81q7X.s:95     .text.syscfg_dma_remap_disable:0000000000000000 syscfg_dma_remap_disable
+     /tmp/cct81q7X.s:114    .text.syscfg_dma_remap_disable:000000000000000c $d
+     /tmp/cct81q7X.s:119    .text.syscfg_high_current_enable:0000000000000000 $t
+     /tmp/cct81q7X.s:126    .text.syscfg_high_current_enable:0000000000000000 syscfg_high_current_enable
+     /tmp/cct81q7X.s:144    .text.syscfg_high_current_enable:000000000000000c $d
+     /tmp/cct81q7X.s:149    .text.syscfg_high_current_disable:0000000000000000 $t
+     /tmp/cct81q7X.s:156    .text.syscfg_high_current_disable:0000000000000000 syscfg_high_current_disable
+     /tmp/cct81q7X.s:174    .text.syscfg_high_current_disable:000000000000000c $d
+     /tmp/cct81q7X.s:179    .text.syscfg_exti_line_config:0000000000000000 $t
+     /tmp/cct81q7X.s:186    .text.syscfg_exti_line_config:0000000000000000 syscfg_exti_line_config
+     /tmp/cct81q7X.s:217    .text.syscfg_exti_line_config:0000000000000018 $d
+     /tmp/cct81q7X.s:221    .text.syscfg_exti_line_config:000000000000001c $t
+     /tmp/cct81q7X.s:302    .text.syscfg_exti_line_config:000000000000005c $d
+     /tmp/cct81q7X.s:307    .text.syscfg_lock_config:0000000000000000 $t
+     /tmp/cct81q7X.s:314    .text.syscfg_lock_config:0000000000000000 syscfg_lock_config
+     /tmp/cct81q7X.s:333    .text.syscfg_lock_config:000000000000000c $d
+     /tmp/cct81q7X.s:338    .text.syscfg_flag_get:0000000000000000 $t
+     /tmp/cct81q7X.s:345    .text.syscfg_flag_get:0000000000000000 syscfg_flag_get
+     /tmp/cct81q7X.s:369    .text.syscfg_flag_get:0000000000000010 $d
+     /tmp/cct81q7X.s:374    .text.syscfg_flag_clear:0000000000000000 $t
+     /tmp/cct81q7X.s:381    .text.syscfg_flag_clear:0000000000000000 syscfg_flag_clear
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable

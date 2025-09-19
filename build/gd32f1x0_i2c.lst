@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccahbfuw.s 			page 1
+ARM GAS  /tmp/ccAu0RrJ.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccahbfuw.s 			page 2
+ARM GAS  /tmp/ccAu0RrJ.s 			page 2
 
 
   28:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     switch(i2c_periph){
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
   60              	.LCFI1:
   61              		.cfi_remember_state
   62              		.cfi_restore 14
-ARM GAS  /tmp/ccahbfuw.s 			page 3
+ARM GAS  /tmp/ccAu0RrJ.s 			page 3
 
 
   63              		.cfi_restore 3
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  101              		@ frame_needed = 0, uses_anonymous_args = 0
   64:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     uint32_t pclk1,clkc,freq,risetime;
  102              		.loc 1 64 5 view .LVU14
-ARM GAS  /tmp/ccahbfuw.s 			page 4
+ARM GAS  /tmp/ccAu0RrJ.s 			page 4
 
 
   65:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     uint32_t temp;
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  143 001e 6E68     		ldr	r6, [r5, #4]
  144              	.LVL11:
   74:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     temp &= ~I2C_CTL1_I2CCLK;
-ARM GAS  /tmp/ccahbfuw.s 			page 5
+ARM GAS  /tmp/ccAu0RrJ.s 			page 5
 
 
  145              		.loc 1 74 5 is_stmt 1 view .LVU30
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
   85:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****         }
  180              		.loc 1 85 32 view .LVU48
  181 003e 2962     		strls	r1, [r5, #32]
-ARM GAS  /tmp/ccahbfuw.s 			page 6
+ARM GAS  /tmp/ccAu0RrJ.s 			page 6
 
 
   83:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****             I2C_RT(i2c_periph) = I2CCLK_MAX;
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  206              		.loc 1 115 1 is_stmt 0 view .LVU59
  207 0052 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
  208              	.LVL21:
-ARM GAS  /tmp/ccahbfuw.s 			page 7
+ARM GAS  /tmp/ccAu0RrJ.s 			page 7
 
 
  209              	.L11:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  246              		.loc 1 106 24 is_stmt 0 view .LVU76
  247 007e C4F30B03 		ubfx	r3, r4, #0, #12
  106:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****             /* the CLKC in fast mode minmum value is 1 */
-ARM GAS  /tmp/ccahbfuw.s 			page 8
+ARM GAS  /tmp/ccAu0RrJ.s 			page 8
 
 
  248              		.loc 1 106 11 view .LVU77
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  288 00a8 BF4DC103 		.word	62999999
  289 00ac A0860100 		.word	100000
  290 00b0 801A0600 		.word	400000
-ARM GAS  /tmp/ccahbfuw.s 			page 9
+ARM GAS  /tmp/ccAu0RrJ.s 			page 9
 
 
  291              		.cfi_endproc
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  322 0004 1A43     		orrs	r2, r2, r3
  323              	.LVL34:
  135:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     ctl &= ~(I2C_CTL0_SMBEN); 
-ARM GAS  /tmp/ccahbfuw.s 			page 10
+ARM GAS  /tmp/ccAu0RrJ.s 			page 10
 
 
  324              		.loc 1 135 9 view .LVU99
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  361 0000 0368     		ldr	r3, [r0]
  153:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     if(I2C_SMBUS_HOST == type){
  362              		.loc 1 153 7 view .LVU111
-ARM GAS  /tmp/ccahbfuw.s 			page 11
+ARM GAS  /tmp/ccAu0RrJ.s 			page 11
 
 
  363 0002 0829     		cmp	r1, #8
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  400 0004 0CBF     		ite	eq
  401 0006 43F48063 		orreq	r3, r3, #1024
  173:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     }else{
-ARM GAS  /tmp/ccahbfuw.s 			page 12
+ARM GAS  /tmp/ccAu0RrJ.s 			page 12
 
 
  174:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****         I2C_CTL0(i2c_periph) &= ~(I2C_CTL0_ACKEN);
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  437 0008 0360     		str	r3, [r0]
  194:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     }
  195:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c **** }
-ARM GAS  /tmp/ccahbfuw.s 			page 13
+ARM GAS  /tmp/ccAu0RrJ.s 			page 13
 
 
  438              		.loc 1 195 1 view .LVU133
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  475 0008 41F00101 		orrne	r1, r1, #1
  476              	.LVL43:
  213:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     }
-ARM GAS  /tmp/ccahbfuw.s 			page 14
+ARM GAS  /tmp/ccAu0RrJ.s 			page 14
 
 
  214:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     I2C_DATA(i2c_periph) = addr;
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  232:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     }
  233:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c **** }
  514              		.loc 1 233 1 view .LVU154
-ARM GAS  /tmp/ccahbfuw.s 			page 15
+ARM GAS  /tmp/ccAu0RrJ.s 			page 15
 
 
  515 0010 7047     		bx	lr
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  251:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c **** */
  252:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c **** void i2c_disable(uint32_t i2c_periph)
  253:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c **** {
-ARM GAS  /tmp/ccahbfuw.s 			page 16
+ARM GAS  /tmp/ccAu0RrJ.s 			page 16
 
 
  556              		.loc 1 253 1 is_stmt 1 view -0
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  600              		.syntax unified
  601              		.thumb
  602              		.thumb_func
-ARM GAS  /tmp/ccahbfuw.s 			page 17
+ARM GAS  /tmp/ccAu0RrJ.s 			page 17
 
 
  603              		.fpu softvfp
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  288:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     I2C_DATA(i2c_periph) = DATA_TRANS(data);
  639              		.loc 1 288 5 view .LVU172
  640              		.loc 1 288 26 is_stmt 0 view .LVU173
-ARM GAS  /tmp/ccahbfuw.s 			page 18
+ARM GAS  /tmp/ccAu0RrJ.s 			page 18
 
 
  641 0000 0161     		str	r1, [r0, #16]
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  304:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
  305:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     \param[in]  dmastate: 
  306:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****       \arg        I2C_DMA_ON: DMA mode enable
-ARM GAS  /tmp/ccahbfuw.s 			page 19
+ARM GAS  /tmp/ccAu0RrJ.s 			page 19
 
 
  307:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****       \arg        I2C_DMA_OFF: DMA mode disable
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  326:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****       \arg        I2C_DMALST_OFF: next DMA EOT is not the last transfer
  327:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     \param[out] none
  328:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     \retval     none
-ARM GAS  /tmp/ccahbfuw.s 			page 20
+ARM GAS  /tmp/ccAu0RrJ.s 			page 20
 
 
  329:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c **** */
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  348:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c **** */
  349:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c **** void i2c_stretch_scl_low_config(uint32_t i2c_periph, uint32_t stretchpara)
  350:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c **** {
-ARM GAS  /tmp/ccahbfuw.s 			page 21
+ARM GAS  /tmp/ccAu0RrJ.s 			page 21
 
 
  758              		.loc 1 350 1 is_stmt 1 view -0
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  795              		.loc 1 369 1 is_stmt 1 view -0
  796              		.cfi_startproc
  797              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccahbfuw.s 			page 22
+ARM GAS  /tmp/ccAu0RrJ.s 			page 22
 
 
  798              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  835              		@ frame_needed = 0, uses_anonymous_args = 0
  836              		@ link register save eliminated.
  389:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     /* modify CTL0 and configure software reset I2C state */
-ARM GAS  /tmp/ccahbfuw.s 			page 23
+ARM GAS  /tmp/ccAu0RrJ.s 			page 23
 
 
  390:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     uint32_t ctl = 0U;
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  414:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****       \arg        I2C_FLAG_SMBALT: SMBus alert status
  415:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****       \arg        I2C_FLAG_MASTER: a flag indicating whether I2C block is in master or slave mode
  416:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****       \arg        I2C_FLAG_I2CBSY: busy flag
-ARM GAS  /tmp/ccahbfuw.s 			page 24
+ARM GAS  /tmp/ccAu0RrJ.s 			page 24
 
 
  417:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****       \arg        I2C_FLAG_TRS: whether the I2C is a transmitter or a receiver
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  444:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     /* return the flag status */
  445:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     return reval;
  895              		.loc 1 445 5 is_stmt 1 view .LVU245
-ARM GAS  /tmp/ccahbfuw.s 			page 25
+ARM GAS  /tmp/ccAu0RrJ.s 			page 25
 
 
  446:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c **** }
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  926 0006 23EA0101 		bicne	r1, r3, r1
  927              	.LVL76:
  468:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****         I2C_STAT1(i2c_periph);
-ARM GAS  /tmp/ccahbfuw.s 			page 26
+ARM GAS  /tmp/ccAu0RrJ.s 			page 26
 
 
  928              		.loc 1 468 9 view .LVU254
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  968              		.thumb
  969              		.thumb_func
  970              		.fpu softvfp
-ARM GAS  /tmp/ccahbfuw.s 			page 27
+ARM GAS  /tmp/ccAu0RrJ.s 			page 27
 
 
  972              	i2c_interrupt_disable:
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  515:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****       \arg        I2C_INT_FLAG_BERR: a bus error occurs indication a unexpected start or stop condi
  516:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****       \arg        I2C_INT_FLAG_LOSTARB: arbitration lost in master mode interrupt flag
  517:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****       \arg        I2C_INT_FLAG_AERR: acknowledge error interrupt flag
-ARM GAS  /tmp/ccahbfuw.s 			page 28
+ARM GAS  /tmp/ccAu0RrJ.s 			page 28
 
 
  518:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****       \arg        I2C_INT_FLAG_OUERR: over-run or under-run situation occurs in slave mode interrup
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  1035              	.LVL83:
  1036              	.L76:
  534:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****             /* check I2C event flags except TBE and RBNE */
-ARM GAS  /tmp/ccahbfuw.s 			page 29
+ARM GAS  /tmp/ccAu0RrJ.s 			page 29
 
 
  535:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****             if(intflag & I2C_STAT0(i2c_periph)){
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  559:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****             return RESET;
  560:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****         }
  561:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     }else{
-ARM GAS  /tmp/ccahbfuw.s 			page 30
+ARM GAS  /tmp/ccAu0RrJ.s 			page 30
 
 
  562:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****         return RESET;
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  571:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****       \arg        I2C_INT_FLAG_BERR: a bus error occurs indication a unexpected start or stop condi
  572:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****       \arg        I2C_INT_FLAG_LOSTARB: arbitration lost in master mode interrupt flag
  573:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****       \arg        I2C_INT_FLAG_AERR: acknowledge error interrupt flag
-ARM GAS  /tmp/ccahbfuw.s 			page 31
+ARM GAS  /tmp/ccAu0RrJ.s 			page 31
 
 
  574:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****       \arg        I2C_INT_FLAG_OUERR: over-run or under-run situation occurs in slave mode interrup
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  1125              		.loc 1 608 26 is_stmt 0 view .LVU303
  1126 0008 0360     		str	r3, [r0]
  609:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c **** }
-ARM GAS  /tmp/ccahbfuw.s 			page 32
+ARM GAS  /tmp/ccAu0RrJ.s 			page 32
 
 
  1127              		.loc 1 609 1 view .LVU304
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  1164              		.loc 1 628 1 view .LVU315
  1165 000a 7047     		bx	lr
  1166              		.cfi_endproc
-ARM GAS  /tmp/ccahbfuw.s 			page 33
+ARM GAS  /tmp/ccAu0RrJ.s 			page 33
 
 
  1167              	.LFE82:
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  648:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c ****     \retval     none
  649:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c **** */
  650:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c **** void i2c_smbus_issue_alert(uint32_t i2c_periph, uint32_t smbuspara)
-ARM GAS  /tmp/ccahbfuw.s 			page 34
+ARM GAS  /tmp/ccAu0RrJ.s 			page 34
 
 
  651:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c **** {
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  670:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_i2c.c **** {
  1243              		.loc 1 670 1 is_stmt 1 view -0
  1244              		.cfi_startproc
-ARM GAS  /tmp/ccahbfuw.s 			page 35
+ARM GAS  /tmp/ccAu0RrJ.s 			page 35
 
 
  1245              		@ args = 0, pretend = 0, frame = 0
@@ -2076,76 +2076,76 @@ ARM GAS  /tmp/ccahbfuw.s 			page 1
  1271              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
  1272              		.file 3 "Drivers/CMSIS/Include/gd32f1x0.h"
  1273              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
-ARM GAS  /tmp/ccahbfuw.s 			page 36
+ARM GAS  /tmp/ccAu0RrJ.s 			page 36
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32f1x0_i2c.c
-     /tmp/ccahbfuw.s:16     .text.i2c_deinit:0000000000000000 $t
-     /tmp/ccahbfuw.s:24     .text.i2c_deinit:0000000000000000 i2c_deinit
-     /tmp/ccahbfuw.s:83     .text.i2c_deinit:0000000000000034 $d
-     /tmp/ccahbfuw.s:88     .text.i2c_clock_config:0000000000000000 $t
-     /tmp/ccahbfuw.s:95     .text.i2c_clock_config:0000000000000000 i2c_clock_config
-     /tmp/ccahbfuw.s:287    .text.i2c_clock_config:00000000000000a4 $d
-     /tmp/ccahbfuw.s:295    .text.i2c_mode_addr_config:0000000000000000 $t
-     /tmp/ccahbfuw.s:302    .text.i2c_mode_addr_config:0000000000000000 i2c_mode_addr_config
-     /tmp/ccahbfuw.s:344    .text.i2c_smbus_type_config:0000000000000000 $t
-     /tmp/ccahbfuw.s:351    .text.i2c_smbus_type_config:0000000000000000 i2c_smbus_type_config
-     /tmp/ccahbfuw.s:378    .text.i2c_ack_config:0000000000000000 $t
-     /tmp/ccahbfuw.s:385    .text.i2c_ack_config:0000000000000000 i2c_ack_config
-     /tmp/ccahbfuw.s:412    .text.i2c_ackpos_config:0000000000000000 $t
-     /tmp/ccahbfuw.s:419    .text.i2c_ackpos_config:0000000000000000 i2c_ackpos_config
-     /tmp/ccahbfuw.s:449    .text.i2c_master_addressing:0000000000000000 $t
-     /tmp/ccahbfuw.s:456    .text.i2c_master_addressing:0000000000000000 i2c_master_addressing
-     /tmp/ccahbfuw.s:486    .text.i2c_dualaddr_enable:0000000000000000 $t
-     /tmp/ccahbfuw.s:493    .text.i2c_dualaddr_enable:0000000000000000 i2c_dualaddr_enable
-     /tmp/ccahbfuw.s:520    .text.i2c_enable:0000000000000000 $t
-     /tmp/ccahbfuw.s:527    .text.i2c_enable:0000000000000000 i2c_enable
-     /tmp/ccahbfuw.s:546    .text.i2c_disable:0000000000000000 $t
-     /tmp/ccahbfuw.s:553    .text.i2c_disable:0000000000000000 i2c_disable
-     /tmp/ccahbfuw.s:572    .text.i2c_start_on_bus:0000000000000000 $t
-     /tmp/ccahbfuw.s:579    .text.i2c_start_on_bus:0000000000000000 i2c_start_on_bus
-     /tmp/ccahbfuw.s:598    .text.i2c_stop_on_bus:0000000000000000 $t
-     /tmp/ccahbfuw.s:605    .text.i2c_stop_on_bus:0000000000000000 i2c_stop_on_bus
-     /tmp/ccahbfuw.s:624    .text.i2c_data_transmit:0000000000000000 $t
-     /tmp/ccahbfuw.s:631    .text.i2c_data_transmit:0000000000000000 i2c_data_transmit
-     /tmp/ccahbfuw.s:648    .text.i2c_data_receive:0000000000000000 $t
-     /tmp/ccahbfuw.s:655    .text.i2c_data_receive:0000000000000000 i2c_data_receive
-     /tmp/ccahbfuw.s:674    .text.i2c_dma_enable:0000000000000000 $t
-     /tmp/ccahbfuw.s:681    .text.i2c_dma_enable:0000000000000000 i2c_dma_enable
-     /tmp/ccahbfuw.s:711    .text.i2c_dma_last_transfer_enable:0000000000000000 $t
-     /tmp/ccahbfuw.s:718    .text.i2c_dma_last_transfer_enable:0000000000000000 i2c_dma_last_transfer_enable
-     /tmp/ccahbfuw.s:748    .text.i2c_stretch_scl_low_config:0000000000000000 $t
-     /tmp/ccahbfuw.s:755    .text.i2c_stretch_scl_low_config:0000000000000000 i2c_stretch_scl_low_config
-     /tmp/ccahbfuw.s:785    .text.i2c_slave_response_to_gcall_config:0000000000000000 $t
-     /tmp/ccahbfuw.s:792    .text.i2c_slave_response_to_gcall_config:0000000000000000 i2c_slave_response_to_gcall_config
-     /tmp/ccahbfuw.s:822    .text.i2c_software_reset_config:0000000000000000 $t
-     /tmp/ccahbfuw.s:829    .text.i2c_software_reset_config:0000000000000000 i2c_software_reset_config
-     /tmp/ccahbfuw.s:859    .text.i2c_flag_get:0000000000000000 $t
-     /tmp/ccahbfuw.s:866    .text.i2c_flag_get:0000000000000000 i2c_flag_get
-     /tmp/ccahbfuw.s:902    .text.i2c_flag_clear:0000000000000000 $t
-     /tmp/ccahbfuw.s:909    .text.i2c_flag_clear:0000000000000000 i2c_flag_clear
-     /tmp/ccahbfuw.s:939    .text.i2c_interrupt_enable:0000000000000000 $t
-     /tmp/ccahbfuw.s:946    .text.i2c_interrupt_enable:0000000000000000 i2c_interrupt_enable
-     /tmp/ccahbfuw.s:965    .text.i2c_interrupt_disable:0000000000000000 $t
-     /tmp/ccahbfuw.s:972    .text.i2c_interrupt_disable:0000000000000000 i2c_interrupt_disable
-     /tmp/ccahbfuw.s:991    .text.i2c_interrupt_flag_get:0000000000000000 $t
-     /tmp/ccahbfuw.s:998    .text.i2c_interrupt_flag_get:0000000000000000 i2c_interrupt_flag_get
-     /tmp/ccahbfuw.s:1078   .text.i2c_interrupt_flag_clear:0000000000000000 $t
-     /tmp/ccahbfuw.s:1085   .text.i2c_interrupt_flag_clear:0000000000000000 i2c_interrupt_flag_clear
-     /tmp/ccahbfuw.s:1096   .text.i2c_pec_enable:0000000000000000 $t
-     /tmp/ccahbfuw.s:1103   .text.i2c_pec_enable:0000000000000000 i2c_pec_enable
-     /tmp/ccahbfuw.s:1133   .text.i2c_pec_transfer_enable:0000000000000000 $t
-ARM GAS  /tmp/ccahbfuw.s 			page 37
+     /tmp/ccAu0RrJ.s:16     .text.i2c_deinit:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:24     .text.i2c_deinit:0000000000000000 i2c_deinit
+     /tmp/ccAu0RrJ.s:83     .text.i2c_deinit:0000000000000034 $d
+     /tmp/ccAu0RrJ.s:88     .text.i2c_clock_config:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:95     .text.i2c_clock_config:0000000000000000 i2c_clock_config
+     /tmp/ccAu0RrJ.s:287    .text.i2c_clock_config:00000000000000a4 $d
+     /tmp/ccAu0RrJ.s:295    .text.i2c_mode_addr_config:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:302    .text.i2c_mode_addr_config:0000000000000000 i2c_mode_addr_config
+     /tmp/ccAu0RrJ.s:344    .text.i2c_smbus_type_config:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:351    .text.i2c_smbus_type_config:0000000000000000 i2c_smbus_type_config
+     /tmp/ccAu0RrJ.s:378    .text.i2c_ack_config:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:385    .text.i2c_ack_config:0000000000000000 i2c_ack_config
+     /tmp/ccAu0RrJ.s:412    .text.i2c_ackpos_config:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:419    .text.i2c_ackpos_config:0000000000000000 i2c_ackpos_config
+     /tmp/ccAu0RrJ.s:449    .text.i2c_master_addressing:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:456    .text.i2c_master_addressing:0000000000000000 i2c_master_addressing
+     /tmp/ccAu0RrJ.s:486    .text.i2c_dualaddr_enable:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:493    .text.i2c_dualaddr_enable:0000000000000000 i2c_dualaddr_enable
+     /tmp/ccAu0RrJ.s:520    .text.i2c_enable:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:527    .text.i2c_enable:0000000000000000 i2c_enable
+     /tmp/ccAu0RrJ.s:546    .text.i2c_disable:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:553    .text.i2c_disable:0000000000000000 i2c_disable
+     /tmp/ccAu0RrJ.s:572    .text.i2c_start_on_bus:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:579    .text.i2c_start_on_bus:0000000000000000 i2c_start_on_bus
+     /tmp/ccAu0RrJ.s:598    .text.i2c_stop_on_bus:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:605    .text.i2c_stop_on_bus:0000000000000000 i2c_stop_on_bus
+     /tmp/ccAu0RrJ.s:624    .text.i2c_data_transmit:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:631    .text.i2c_data_transmit:0000000000000000 i2c_data_transmit
+     /tmp/ccAu0RrJ.s:648    .text.i2c_data_receive:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:655    .text.i2c_data_receive:0000000000000000 i2c_data_receive
+     /tmp/ccAu0RrJ.s:674    .text.i2c_dma_enable:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:681    .text.i2c_dma_enable:0000000000000000 i2c_dma_enable
+     /tmp/ccAu0RrJ.s:711    .text.i2c_dma_last_transfer_enable:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:718    .text.i2c_dma_last_transfer_enable:0000000000000000 i2c_dma_last_transfer_enable
+     /tmp/ccAu0RrJ.s:748    .text.i2c_stretch_scl_low_config:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:755    .text.i2c_stretch_scl_low_config:0000000000000000 i2c_stretch_scl_low_config
+     /tmp/ccAu0RrJ.s:785    .text.i2c_slave_response_to_gcall_config:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:792    .text.i2c_slave_response_to_gcall_config:0000000000000000 i2c_slave_response_to_gcall_config
+     /tmp/ccAu0RrJ.s:822    .text.i2c_software_reset_config:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:829    .text.i2c_software_reset_config:0000000000000000 i2c_software_reset_config
+     /tmp/ccAu0RrJ.s:859    .text.i2c_flag_get:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:866    .text.i2c_flag_get:0000000000000000 i2c_flag_get
+     /tmp/ccAu0RrJ.s:902    .text.i2c_flag_clear:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:909    .text.i2c_flag_clear:0000000000000000 i2c_flag_clear
+     /tmp/ccAu0RrJ.s:939    .text.i2c_interrupt_enable:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:946    .text.i2c_interrupt_enable:0000000000000000 i2c_interrupt_enable
+     /tmp/ccAu0RrJ.s:965    .text.i2c_interrupt_disable:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:972    .text.i2c_interrupt_disable:0000000000000000 i2c_interrupt_disable
+     /tmp/ccAu0RrJ.s:991    .text.i2c_interrupt_flag_get:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:998    .text.i2c_interrupt_flag_get:0000000000000000 i2c_interrupt_flag_get
+     /tmp/ccAu0RrJ.s:1078   .text.i2c_interrupt_flag_clear:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:1085   .text.i2c_interrupt_flag_clear:0000000000000000 i2c_interrupt_flag_clear
+     /tmp/ccAu0RrJ.s:1096   .text.i2c_pec_enable:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:1103   .text.i2c_pec_enable:0000000000000000 i2c_pec_enable
+     /tmp/ccAu0RrJ.s:1133   .text.i2c_pec_transfer_enable:0000000000000000 $t
+ARM GAS  /tmp/ccAu0RrJ.s 			page 37
 
 
-     /tmp/ccahbfuw.s:1140   .text.i2c_pec_transfer_enable:0000000000000000 i2c_pec_transfer_enable
-     /tmp/ccahbfuw.s:1170   .text.i2c_pec_value_get:0000000000000000 $t
-     /tmp/ccahbfuw.s:1177   .text.i2c_pec_value_get:0000000000000000 i2c_pec_value_get
-     /tmp/ccahbfuw.s:1196   .text.i2c_smbus_issue_alert:0000000000000000 $t
-     /tmp/ccahbfuw.s:1203   .text.i2c_smbus_issue_alert:0000000000000000 i2c_smbus_issue_alert
-     /tmp/ccahbfuw.s:1233   .text.i2c_smbus_arp_enable:0000000000000000 $t
-     /tmp/ccahbfuw.s:1240   .text.i2c_smbus_arp_enable:0000000000000000 i2c_smbus_arp_enable
+     /tmp/ccAu0RrJ.s:1140   .text.i2c_pec_transfer_enable:0000000000000000 i2c_pec_transfer_enable
+     /tmp/ccAu0RrJ.s:1170   .text.i2c_pec_value_get:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:1177   .text.i2c_pec_value_get:0000000000000000 i2c_pec_value_get
+     /tmp/ccAu0RrJ.s:1196   .text.i2c_smbus_issue_alert:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:1203   .text.i2c_smbus_issue_alert:0000000000000000 i2c_smbus_issue_alert
+     /tmp/ccAu0RrJ.s:1233   .text.i2c_smbus_arp_enable:0000000000000000 $t
+     /tmp/ccAu0RrJ.s:1240   .text.i2c_smbus_arp_enable:0000000000000000 i2c_smbus_arp_enable
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable

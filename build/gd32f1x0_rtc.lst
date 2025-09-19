@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccMAJaIL.s 			page 1
+ARM GAS  /tmp/ccRIP20l.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
   30:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     /* disable the write protection */
   31:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     RTC_WPK = RTC_UNLOCK_KEY1;
   32:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     RTC_WPK = RTC_UNLOCK_KEY2;
-ARM GAS  /tmp/ccMAJaIL.s 			page 2
+ARM GAS  /tmp/ccRIP20l.s 			page 2
 
 
   33:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
   87:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     \param[out] none
   88:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     \retval     ErrStatus: ERROR or SUCCESS
   89:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** */
-ARM GAS  /tmp/ccMAJaIL.s 			page 3
+ARM GAS  /tmp/ccRIP20l.s 			page 3
 
 
   90:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** ErrStatus rtc_init(rtc_parameter_struct* rtc_initpara_struct)
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccMAJaIL.s 			page 4
+ARM GAS  /tmp/ccRIP20l.s 			page 4
 
 
   31              		@ link register save eliminated.
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  153:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****         }while((--time_index > 0U) && ((uint32_t)RESET == flag_status));
   62              		.loc 1 153 26 is_stmt 0 view .LVU13
   63 001e D3F80C08 		ldr	r0, [r3, #2060]
-ARM GAS  /tmp/ccMAJaIL.s 			page 5
+ARM GAS  /tmp/ccRIP20l.s 			page 5
 
 
  154:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** 
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  108              	rtc_init_mode_exit:
  109              	.LFB59:
  164:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** 
-ARM GAS  /tmp/ccMAJaIL.s 			page 6
+ARM GAS  /tmp/ccRIP20l.s 			page 6
 
 
  165:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** /*!
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  145              		.loc 1 185 5 view .LVU30
  146              		.loc 1 185 23 is_stmt 0 view .LVU31
  147 0000 4FF40043 		mov	r3, #32768
-ARM GAS  /tmp/ccMAJaIL.s 			page 7
+ARM GAS  /tmp/ccRIP20l.s 			page 7
 
 
  184:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     volatile uint32_t time_index = RTC_RSYNF_TIMEOUT;
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  185              		.loc 1 199 25 discriminator 2 view .LVU49
  186 0030 00F02000 		and	r0, r0, #32
  187              	.LVL9:
-ARM GAS  /tmp/ccMAJaIL.s 			page 8
+ARM GAS  /tmp/ccRIP20l.s 			page 8
 
 
  188              		.loc 1 200 15 is_stmt 1 discriminator 2 view .LVU50
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  187:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** 
  226              		.loc 1 187 15 view .LVU62
  227 0050 F6E7     		b	.L19
-ARM GAS  /tmp/ccMAJaIL.s 			page 9
+ARM GAS  /tmp/ccRIP20l.s 			page 9
 
 
  228              	.LVL14:
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  273              		.loc 1 32 13 is_stmt 0 view .LVU73
  274 0010 5323     		movs	r3, #83
  275 0012 C1F82438 		str	r3, [r1, #2084]
-ARM GAS  /tmp/ccMAJaIL.s 			page 10
+ARM GAS  /tmp/ccRIP20l.s 			page 10
 
 
   35:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
   57:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****         RTC_HRFC       = RTC_REGISTER_RESET;
  310              		.loc 1 57 24 is_stmt 0 view .LVU94
  311 0044 C1F82C48 		str	r4, [r1, #2092]
-ARM GAS  /tmp/ccMAJaIL.s 			page 11
+ARM GAS  /tmp/ccRIP20l.s 			page 11
 
 
   58:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** 
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  355 0000 2DE9F74F 		push	{r0, r1, r2, r4, r5, r6, r7, r8, r9, r10, fp, lr}
  356              	.LCFI4:
  357              		.cfi_def_cfa_offset 48
-ARM GAS  /tmp/ccMAJaIL.s 			page 12
+ARM GAS  /tmp/ccRIP20l.s 			page 12
 
 
  358              		.cfi_offset 4, -36
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  396              		.loc 1 107 13 is_stmt 0 view .LVU123
  397 0026 5322     		movs	r2, #83
  398 0028 C4F82428 		str	r2, [r4, #2084]
-ARM GAS  /tmp/ccMAJaIL.s 			page 13
+ARM GAS  /tmp/ccRIP20l.s 			page 13
 
 
  110:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** 
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  435              		.loc 1 96 17 view .LVU141
  436 005a 1FFA88F8 		uxth	r8, r8
   97:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****                 DATE_DAY(rtc_initpara_struct->rtc_date)); 
-ARM GAS  /tmp/ccMAJaIL.s 			page 14
+ARM GAS  /tmp/ccRIP20l.s 			page 14
 
 
  437              		.loc 1 97 17 view .LVU142
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  473 0098 D4F80838 		ldr	r3, [r4, #2056]
  474 009c 1343     		orrs	r3, r3, r2
  475 009e C4F80838 		str	r3, [r4, #2056]
-ARM GAS  /tmp/ccMAJaIL.s 			page 15
+ARM GAS  /tmp/ccRIP20l.s 			page 15
 
 
  123:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****         
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  225:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****                   rtc_day_of_week: RTC_MONDAY, RTC_TUESDAY, RTC_WEDSDAY, RTC_THURSDAY
  226:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****                                    RTC_FRIDAY, RTC_SATURDAY, RTC_SUNDAY
  227:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****                   rtc_hour: 0x0 - 0x12(BCD format) or 0x0 - 0x23(BCD format) depending on the rtc_d
-ARM GAS  /tmp/ccMAJaIL.s 			page 16
+ARM GAS  /tmp/ccRIP20l.s 			page 16
 
 
  228:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****                   rtc_minute: 0x0 - 0x59(BCD format)
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  547 0016 0570     		strb	r5, [r0]
  247:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     rtc_initpara_struct->rtc_month = (uint8_t)GET_DATE_MON(temp_dr);
  548              		.loc 1 247 5 is_stmt 1 view .LVU182
-ARM GAS  /tmp/ccMAJaIL.s 			page 17
+ARM GAS  /tmp/ccRIP20l.s 			page 17
 
 
  549              		.loc 1 247 38 is_stmt 0 view .LVU183
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  251:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     rtc_initpara_struct->rtc_second = (uint8_t)GET_TIME_SC(temp_tr);
  588              		.loc 1 251 5 view .LVU202
  252:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     rtc_initpara_struct->rtc_factor_asyn = (uint16_t)GET_PSC_FACTOR_A(temp_pscr);
-ARM GAS  /tmp/ccMAJaIL.s 			page 18
+ARM GAS  /tmp/ccRIP20l.s 			page 18
 
 
  589              		.loc 1 252 5 view .LVU203
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  268:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     /* if BPSHAD bit is reset, reading RTC_SS will lock RTC_TIME and RTC_DATE automatically */
  269:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     reg = (uint32_t)RTC_SS;
  628              		.loc 1 269 5 view .LVU215
-ARM GAS  /tmp/ccMAJaIL.s 			page 19
+ARM GAS  /tmp/ccRIP20l.s 			page 19
 
 
  629              		.loc 1 269 9 is_stmt 0 view .LVU216
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  659              		@ frame_needed = 0, uses_anonymous_args = 0
  660              		@ link register save eliminated.
  296:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     uint32_t reg_alrm0td = 0U;
-ARM GAS  /tmp/ccMAJaIL.s 			page 20
+ARM GAS  /tmp/ccRIP20l.s 			page 20
 
 
  661              		.loc 1 296 5 view .LVU221
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  695              		.loc 1 307 13 is_stmt 0 view .LVU234
  696 0032 064A     		ldr	r2, .L46
  697 0034 C2F82418 		str	r1, [r2, #2084]
-ARM GAS  /tmp/ccMAJaIL.s 			page 21
+ARM GAS  /tmp/ccRIP20l.s 			page 21
 
 
  308:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     RTC_WPK = RTC_UNLOCK_KEY2;
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  330:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****       \arg        RTC_MASKSSC_11_14: mask RTC_ALRM0SS_SSC[14:11], and RTC_ALRM0SS_SSC[10:0] is to b
  331:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****       \arg        RTC_MASKSSC_12_14: mask RTC_ALRM0SS_SSC[14:12], and RTC_ALRM0SS_SSC[11:0] is to b
  332:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****       \arg        RTC_MASKSSC_13_14: mask RTC_ALRM0SS_SSC[14:13], and RTC_ALRM0SS_SSC[12:0] is to b
-ARM GAS  /tmp/ccMAJaIL.s 			page 22
+ARM GAS  /tmp/ccRIP20l.s 			page 22
 
 
  333:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****       \arg        RTC_MASKSSC_14: mask RTC_ALRM0SS_SSC[14], and RTC_ALRM0SS_SSC[13:0] is to be comp
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  765              	.LFE64:
  767              		.section	.text.rtc_alarm_enable,"ax",%progbits
  768              		.align	1
-ARM GAS  /tmp/ccMAJaIL.s 			page 23
+ARM GAS  /tmp/ccRIP20l.s 			page 23
 
 
  769              		.global	rtc_alarm_enable
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  806              		.cfi_endproc
  807              	.LFE65:
  809              		.section	.text.rtc_alarm_disable,"ax",%progbits
-ARM GAS  /tmp/ccMAJaIL.s 			page 24
+ARM GAS  /tmp/ccRIP20l.s 			page 24
 
 
  810              		.align	1
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  845 0012 C3F82428 		str	r2, [r3, #2084]
  384:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     
  385:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     /* clear the state of alarm */
-ARM GAS  /tmp/ccMAJaIL.s 			page 25
+ARM GAS  /tmp/ccRIP20l.s 			page 25
 
 
  386:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     RTC_CTL &= (uint32_t)(~RTC_CTL_ALRM0EN);  
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  883              		@ sp needed
  884 003e 7047     		bx	lr
  885              	.L63:
-ARM GAS  /tmp/ccMAJaIL.s 			page 26
+ARM GAS  /tmp/ccRIP20l.s 			page 26
 
 
  886              		.align	2
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  914              		.loc 1 429 5 is_stmt 1 view .LVU298
  915              		.loc 1 429 50 is_stmt 0 view .LVU299
  916 0006 03F08032 		and	r2, r3, #-2139062144
-ARM GAS  /tmp/ccMAJaIL.s 			page 27
+ARM GAS  /tmp/ccRIP20l.s 			page 27
 
 
  917              		.loc 1 429 36 view .LVU300
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  964              		.thumb_func
  965              		.fpu softvfp
  967              	rtc_alarm_subsecond_get:
-ARM GAS  /tmp/ccMAJaIL.s 			page 28
+ARM GAS  /tmp/ccRIP20l.s 			page 28
 
 
  968              	.LFB68:
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1002              		@ frame_needed = 0, uses_anonymous_args = 0
  1003              		@ link register save eliminated.
  459:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     uint32_t reg_ctl = 0U;
-ARM GAS  /tmp/ccMAJaIL.s 			page 29
+ARM GAS  /tmp/ccRIP20l.s 			page 29
 
 
  1004              		.loc 1 459 5 view .LVU325
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1037              		.loc 1 474 13 view .LVU342
  1038 0026 C2F82438 		str	r3, [r2, #2084]
  1039              	.LVL56:
-ARM GAS  /tmp/ccMAJaIL.s 			page 30
+ARM GAS  /tmp/ccRIP20l.s 			page 30
 
 
  475:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** }
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  493:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     RTC_WPK = RTC_LOCK_KEY;
  1078              		.loc 1 493 5 is_stmt 1 view .LVU351
  1079              		.loc 1 493 13 is_stmt 0 view .LVU352
-ARM GAS  /tmp/ccMAJaIL.s 			page 31
+ARM GAS  /tmp/ccRIP20l.s 			page 31
 
 
  1080 001a FF22     		movs	r2, #255
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1111 0002 D2F83038 		ldr	r3, [r2, #2096]
  1112              	.LVL58:
  519:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     temp_dts = (uint32_t)RTC_DTS;
-ARM GAS  /tmp/ccMAJaIL.s 			page 32
+ARM GAS  /tmp/ccRIP20l.s 			page 32
 
 
  1113              		.loc 1 519 5 is_stmt 1 view .LVU358
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1153 0032 4371     		strb	r3, [r0, #5]
  529:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** }
  1154              		.loc 1 529 1 view .LVU381
-ARM GAS  /tmp/ccMAJaIL.s 			page 33
+ARM GAS  /tmp/ccRIP20l.s 			page 33
 
 
  1155 0034 7047     		bx	lr
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  541:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** 
  542:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** /*!
  543:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     \brief      enable RTC tamper
-ARM GAS  /tmp/ccMAJaIL.s 			page 34
+ARM GAS  /tmp/ccRIP20l.s 			page 34
 
 
  544:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     \param[in]  rtc_tamper: pointer to a rtc_tamper_struct structure which contains 
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1229 0028 C3F84028 		str	r2, [r3, #2112]
  571:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** 
  572:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****         /* check if the tamper pin need precharge, if need, then configure the precharge time */
-ARM GAS  /tmp/ccMAJaIL.s 			page 35
+ARM GAS  /tmp/ccRIP20l.s 			page 35
 
 
  573:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****         if(DISABLE == rtc_tamper->rtc_tamper_precharge_enable){
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1269 006e 42F08002 		orr	r2, r2, #128
  1270 0072 C3F84028 		str	r2, [r3, #2112]
  1271              	.L86:
-ARM GAS  /tmp/ccMAJaIL.s 			page 36
+ARM GAS  /tmp/ccRIP20l.s 			page 36
 
 
  588:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     } 
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1314              	.LFE73:
  1316              		.section	.text.rtc_tamper_disable,"ax",%progbits
  1317              		.align	1
-ARM GAS  /tmp/ccMAJaIL.s 			page 37
+ARM GAS  /tmp/ccRIP20l.s 			page 37
 
 
  1318              		.global	rtc_tamper_disable
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  615:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     \brief      enable specified RTC interrupt
  616:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     \param[in]  interrupt: specify which interrupt source to be enabled
  617:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****       \arg        RTC_INT_TIMESTAMP: timestamp interrupt
-ARM GAS  /tmp/ccMAJaIL.s 			page 38
+ARM GAS  /tmp/ccRIP20l.s 			page 38
 
 
  618:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****       \arg        RTC_INT_ALARM: alarm interrupt
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1393              		.loc 1 635 13 is_stmt 0 view .LVU447
  1394 002c C3F82428 		str	r2, [r3, #2084]
  636:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** }
-ARM GAS  /tmp/ccMAJaIL.s 			page 39
+ARM GAS  /tmp/ccRIP20l.s 			page 39
 
 
  1395              		.loc 1 636 1 view .LVU448
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1430 000c 5322     		movs	r2, #83
  1431 000e C3F82428 		str	r2, [r3, #2084]
  1432              		.loc 1 654 5 is_stmt 1 view .LVU456
-ARM GAS  /tmp/ccMAJaIL.s 			page 40
+ARM GAS  /tmp/ccRIP20l.s 			page 40
 
 
  1433              		.loc 1 654 13 is_stmt 0 view .LVU457
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  670:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****       \arg        RTC_FLAG_ALARM0: alarm event flag
  671:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****       \arg        RTC_FLAG_INIT: init mode event flag
  672:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****       \arg        RTC_FLAG_RSYN: time and date registers synchronized event flag
-ARM GAS  /tmp/ccMAJaIL.s 			page 41
+ARM GAS  /tmp/ccRIP20l.s 			page 41
 
 
  673:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****       \arg        RTC_FLAG_YCM: year parameter configured event flag
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  689:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** /*!
  690:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     \brief      clear specified flag
  691:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     \param[in]  flag: specify which flag to clear
-ARM GAS  /tmp/ccMAJaIL.s 			page 42
+ARM GAS  /tmp/ccRIP20l.s 			page 42
 
 
  692:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****       \arg        RTC_FLAG_TAMP1: tamper 1 event flag
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  717:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****       \arg        RTC_ALARM_OUTPUT_PP: push pull mode
  718:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     \param[out] none
  719:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     \retval     none
-ARM GAS  /tmp/ccMAJaIL.s 			page 43
+ARM GAS  /tmp/ccRIP20l.s 			page 43
 
 
  720:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** */
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1581 003a C3F84018 		str	r1, [r3, #2112]
  1582              	.L116:
  735:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     }
-ARM GAS  /tmp/ccMAJaIL.s 			page 44
+ARM GAS  /tmp/ccRIP20l.s 			page 44
 
 
  736:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  754:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** 
  755:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     RTC_CTL |= (uint32_t)(operation);
  1621              		.loc 1 755 5 is_stmt 1 view .LVU503
-ARM GAS  /tmp/ccMAJaIL.s 			page 45
+ARM GAS  /tmp/ccRIP20l.s 			page 45
 
 
  1622              		.loc 1 755 13 is_stmt 0 view .LVU504
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1662 000a C3F82428 		str	r2, [r3, #2084]
  772:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** 
  773:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     RTC_CTL |= (uint8_t)RTC_CTL_BPSHAD;
-ARM GAS  /tmp/ccMAJaIL.s 			page 46
+ARM GAS  /tmp/ccRIP20l.s 			page 46
 
 
  1663              		.loc 1 773 5 is_stmt 1 view .LVU513
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1703 0008 5322     		movs	r2, #83
  1704 000a C3F82428 		str	r2, [r3, #2084]
  790:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** 
-ARM GAS  /tmp/ccMAJaIL.s 			page 47
+ARM GAS  /tmp/ccRIP20l.s 			page 47
 
 
  791:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     RTC_CTL &= (uint8_t)~RTC_CTL_BPSHAD;
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1742              	.LCFI9:
  1743              		.cfi_def_cfa_offset 8
  1744              		.cfi_offset 3, -8
-ARM GAS  /tmp/ccMAJaIL.s 			page 48
+ARM GAS  /tmp/ccRIP20l.s 			page 48
 
 
  1745              		.cfi_offset 14, -4
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1784              		.section	.text.rtc_refclock_detection_disable,"ax",%progbits
  1785              		.align	1
  1786              		.global	rtc_refclock_detection_disable
-ARM GAS  /tmp/ccMAJaIL.s 			page 49
+ARM GAS  /tmp/ccRIP20l.s 			page 49
 
 
  1787              		.syntax unified
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  844:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****         RTC_CTL &= (uint32_t)~RTC_CTL_REFEN;
  1822              		.loc 1 844 9 is_stmt 1 view .LVU557
  1823              		.loc 1 844 17 is_stmt 0 view .LVU558
-ARM GAS  /tmp/ccMAJaIL.s 			page 50
+ARM GAS  /tmp/ccRIP20l.s 			page 50
 
 
  1824 0016 D1F80838 		ldr	r3, [r1, #2056]
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1859              		@ frame_needed = 0, uses_anonymous_args = 0
  866:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     uint32_t time_index = RTC_SHIFTCTL_TIMEOUT;
  1860              		.loc 1 866 5 view .LVU565
-ARM GAS  /tmp/ccMAJaIL.s 			page 51
+ARM GAS  /tmp/ccRIP20l.s 			page 51
 
 
  867:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     ErrStatus error_status = ERROR;
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1901              	.L146:
  879:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c **** 
  880:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_rtc.c ****     temp = RTC_CTL & RTC_CTL_REFEN;    
-ARM GAS  /tmp/ccMAJaIL.s 			page 52
+ARM GAS  /tmp/ccRIP20l.s 			page 52
 
 
  1902              		.loc 1 880 5 is_stmt 1 view .LVU583
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1942              		.loc 1 867 15 view .LVU600
  1943 004a F8E7     		b	.L148
  1944              	.L156:
-ARM GAS  /tmp/ccMAJaIL.s 			page 53
+ARM GAS  /tmp/ccRIP20l.s 			page 53
 
 
  1945              		.align	2
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  1977              		.loc 1 907 1 view .LVU607
  1978 0002 0546     		mov	r5, r0
  1979              		.loc 1 913 13 view .LVU608
-ARM GAS  /tmp/ccMAJaIL.s 			page 54
+ARM GAS  /tmp/ccRIP20l.s 			page 54
 
 
  1980 0004 CA20     		movs	r0, #202
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  2022              		.loc 1 922 18 view .LVU625
  2023 0030 C3F83C18 		str	r1, [r3, #2108]
  2024              		.loc 1 923 9 is_stmt 1 view .LVU626
-ARM GAS  /tmp/ccMAJaIL.s 			page 55
+ARM GAS  /tmp/ccRIP20l.s 			page 55
 
 
  2025              	.LVL104:
@@ -3282,106 +3282,106 @@ ARM GAS  /tmp/ccMAJaIL.s 			page 1
  2055              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
  2056              		.file 3 "Drivers/CMSIS/Include/gd32f1x0.h"
  2057              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rtc.h"
-ARM GAS  /tmp/ccMAJaIL.s 			page 56
+ARM GAS  /tmp/ccRIP20l.s 			page 56
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32f1x0_rtc.c
-     /tmp/ccMAJaIL.s:16     .text.rtc_init_mode_enter:0000000000000000 $t
-     /tmp/ccMAJaIL.s:24     .text.rtc_init_mode_enter:0000000000000000 rtc_init_mode_enter
-     /tmp/ccMAJaIL.s:96     .text.rtc_init_mode_enter:0000000000000038 $d
-     /tmp/ccMAJaIL.s:101    .text.rtc_init_mode_exit:0000000000000000 $t
-     /tmp/ccMAJaIL.s:108    .text.rtc_init_mode_exit:0000000000000000 rtc_init_mode_exit
-     /tmp/ccMAJaIL.s:126    .text.rtc_init_mode_exit:0000000000000010 $d
-     /tmp/ccMAJaIL.s:131    .text.rtc_register_sync_wait:0000000000000000 $t
-     /tmp/ccMAJaIL.s:138    .text.rtc_register_sync_wait:0000000000000000 rtc_register_sync_wait
-     /tmp/ccMAJaIL.s:236    .text.rtc_register_sync_wait:0000000000000058 $d
-     /tmp/ccMAJaIL.s:241    .text.rtc_deinit:0000000000000000 $t
-     /tmp/ccMAJaIL.s:248    .text.rtc_deinit:0000000000000000 rtc_deinit
-     /tmp/ccMAJaIL.s:331    .text.rtc_deinit:000000000000005c $d
-     /tmp/ccMAJaIL.s:337    .text.rtc_init:0000000000000000 $t
-     /tmp/ccMAJaIL.s:344    .text.rtc_init:0000000000000000 rtc_init
-     /tmp/ccMAJaIL.s:499    .text.rtc_init:00000000000000b8 $d
-     /tmp/ccMAJaIL.s:504    .text.rtc_current_time_get:0000000000000000 $t
-     /tmp/ccMAJaIL.s:511    .text.rtc_current_time_get:0000000000000000 rtc_current_time_get
-     /tmp/ccMAJaIL.s:607    .text.rtc_current_time_get:0000000000000058 $d
-     /tmp/ccMAJaIL.s:612    .text.rtc_subsecond_get:0000000000000000 $t
-     /tmp/ccMAJaIL.s:619    .text.rtc_subsecond_get:0000000000000000 rtc_subsecond_get
-     /tmp/ccMAJaIL.s:641    .text.rtc_subsecond_get:000000000000000c $d
-     /tmp/ccMAJaIL.s:646    .text.rtc_alarm_config:0000000000000000 $t
-     /tmp/ccMAJaIL.s:653    .text.rtc_alarm_config:0000000000000000 rtc_alarm_config
-     /tmp/ccMAJaIL.s:717    .text.rtc_alarm_config:000000000000004c $d
-     /tmp/ccMAJaIL.s:722    .text.rtc_alarm_subsecond_config:0000000000000000 $t
-     /tmp/ccMAJaIL.s:729    .text.rtc_alarm_subsecond_config:0000000000000000 rtc_alarm_subsecond_config
-     /tmp/ccMAJaIL.s:763    .text.rtc_alarm_subsecond_config:000000000000001c $d
-     /tmp/ccMAJaIL.s:768    .text.rtc_alarm_enable:0000000000000000 $t
-     /tmp/ccMAJaIL.s:775    .text.rtc_alarm_enable:0000000000000000 rtc_alarm_enable
-     /tmp/ccMAJaIL.s:805    .text.rtc_alarm_enable:0000000000000024 $d
-     /tmp/ccMAJaIL.s:810    .text.rtc_alarm_disable:0000000000000000 $t
-     /tmp/ccMAJaIL.s:817    .text.rtc_alarm_disable:0000000000000000 rtc_alarm_disable
-     /tmp/ccMAJaIL.s:888    .text.rtc_alarm_disable:0000000000000040 $d
-     /tmp/ccMAJaIL.s:893    .text.rtc_alarm_get:0000000000000000 $t
-     /tmp/ccMAJaIL.s:900    .text.rtc_alarm_get:0000000000000000 rtc_alarm_get
-     /tmp/ccMAJaIL.s:955    .text.rtc_alarm_get:0000000000000034 $d
-     /tmp/ccMAJaIL.s:960    .text.rtc_alarm_subsecond_get:0000000000000000 $t
-     /tmp/ccMAJaIL.s:967    .text.rtc_alarm_subsecond_get:0000000000000000 rtc_alarm_subsecond_get
-     /tmp/ccMAJaIL.s:984    .text.rtc_alarm_subsecond_get:000000000000000c $d
-     /tmp/ccMAJaIL.s:989    .text.rtc_timestamp_enable:0000000000000000 $t
-     /tmp/ccMAJaIL.s:996    .text.rtc_timestamp_enable:0000000000000000 rtc_timestamp_enable
-     /tmp/ccMAJaIL.s:1045   .text.rtc_timestamp_enable:000000000000002c $d
-     /tmp/ccMAJaIL.s:1050   .text.rtc_timestamp_disable:0000000000000000 $t
-     /tmp/ccMAJaIL.s:1057   .text.rtc_timestamp_disable:0000000000000000 rtc_timestamp_disable
-     /tmp/ccMAJaIL.s:1087   .text.rtc_timestamp_disable:0000000000000024 $d
-     /tmp/ccMAJaIL.s:1092   .text.rtc_timestamp_get:0000000000000000 $t
-     /tmp/ccMAJaIL.s:1099   .text.rtc_timestamp_get:0000000000000000 rtc_timestamp_get
-     /tmp/ccMAJaIL.s:1159   .text.rtc_timestamp_get:0000000000000038 $d
-     /tmp/ccMAJaIL.s:1164   .text.rtc_timestamp_subsecond_get:0000000000000000 $t
-     /tmp/ccMAJaIL.s:1171   .text.rtc_timestamp_subsecond_get:0000000000000000 rtc_timestamp_subsecond_get
-     /tmp/ccMAJaIL.s:1187   .text.rtc_timestamp_subsecond_get:0000000000000008 $d
-     /tmp/ccMAJaIL.s:1192   .text.rtc_tamper_enable:0000000000000000 $t
-     /tmp/ccMAJaIL.s:1199   .text.rtc_tamper_enable:0000000000000000 rtc_tamper_enable
-     /tmp/ccMAJaIL.s:1312   .text.rtc_tamper_enable:00000000000000b0 $d
-     /tmp/ccMAJaIL.s:1317   .text.rtc_tamper_disable:0000000000000000 $t
-ARM GAS  /tmp/ccMAJaIL.s 			page 57
+     /tmp/ccRIP20l.s:16     .text.rtc_init_mode_enter:0000000000000000 $t
+     /tmp/ccRIP20l.s:24     .text.rtc_init_mode_enter:0000000000000000 rtc_init_mode_enter
+     /tmp/ccRIP20l.s:96     .text.rtc_init_mode_enter:0000000000000038 $d
+     /tmp/ccRIP20l.s:101    .text.rtc_init_mode_exit:0000000000000000 $t
+     /tmp/ccRIP20l.s:108    .text.rtc_init_mode_exit:0000000000000000 rtc_init_mode_exit
+     /tmp/ccRIP20l.s:126    .text.rtc_init_mode_exit:0000000000000010 $d
+     /tmp/ccRIP20l.s:131    .text.rtc_register_sync_wait:0000000000000000 $t
+     /tmp/ccRIP20l.s:138    .text.rtc_register_sync_wait:0000000000000000 rtc_register_sync_wait
+     /tmp/ccRIP20l.s:236    .text.rtc_register_sync_wait:0000000000000058 $d
+     /tmp/ccRIP20l.s:241    .text.rtc_deinit:0000000000000000 $t
+     /tmp/ccRIP20l.s:248    .text.rtc_deinit:0000000000000000 rtc_deinit
+     /tmp/ccRIP20l.s:331    .text.rtc_deinit:000000000000005c $d
+     /tmp/ccRIP20l.s:337    .text.rtc_init:0000000000000000 $t
+     /tmp/ccRIP20l.s:344    .text.rtc_init:0000000000000000 rtc_init
+     /tmp/ccRIP20l.s:499    .text.rtc_init:00000000000000b8 $d
+     /tmp/ccRIP20l.s:504    .text.rtc_current_time_get:0000000000000000 $t
+     /tmp/ccRIP20l.s:511    .text.rtc_current_time_get:0000000000000000 rtc_current_time_get
+     /tmp/ccRIP20l.s:607    .text.rtc_current_time_get:0000000000000058 $d
+     /tmp/ccRIP20l.s:612    .text.rtc_subsecond_get:0000000000000000 $t
+     /tmp/ccRIP20l.s:619    .text.rtc_subsecond_get:0000000000000000 rtc_subsecond_get
+     /tmp/ccRIP20l.s:641    .text.rtc_subsecond_get:000000000000000c $d
+     /tmp/ccRIP20l.s:646    .text.rtc_alarm_config:0000000000000000 $t
+     /tmp/ccRIP20l.s:653    .text.rtc_alarm_config:0000000000000000 rtc_alarm_config
+     /tmp/ccRIP20l.s:717    .text.rtc_alarm_config:000000000000004c $d
+     /tmp/ccRIP20l.s:722    .text.rtc_alarm_subsecond_config:0000000000000000 $t
+     /tmp/ccRIP20l.s:729    .text.rtc_alarm_subsecond_config:0000000000000000 rtc_alarm_subsecond_config
+     /tmp/ccRIP20l.s:763    .text.rtc_alarm_subsecond_config:000000000000001c $d
+     /tmp/ccRIP20l.s:768    .text.rtc_alarm_enable:0000000000000000 $t
+     /tmp/ccRIP20l.s:775    .text.rtc_alarm_enable:0000000000000000 rtc_alarm_enable
+     /tmp/ccRIP20l.s:805    .text.rtc_alarm_enable:0000000000000024 $d
+     /tmp/ccRIP20l.s:810    .text.rtc_alarm_disable:0000000000000000 $t
+     /tmp/ccRIP20l.s:817    .text.rtc_alarm_disable:0000000000000000 rtc_alarm_disable
+     /tmp/ccRIP20l.s:888    .text.rtc_alarm_disable:0000000000000040 $d
+     /tmp/ccRIP20l.s:893    .text.rtc_alarm_get:0000000000000000 $t
+     /tmp/ccRIP20l.s:900    .text.rtc_alarm_get:0000000000000000 rtc_alarm_get
+     /tmp/ccRIP20l.s:955    .text.rtc_alarm_get:0000000000000034 $d
+     /tmp/ccRIP20l.s:960    .text.rtc_alarm_subsecond_get:0000000000000000 $t
+     /tmp/ccRIP20l.s:967    .text.rtc_alarm_subsecond_get:0000000000000000 rtc_alarm_subsecond_get
+     /tmp/ccRIP20l.s:984    .text.rtc_alarm_subsecond_get:000000000000000c $d
+     /tmp/ccRIP20l.s:989    .text.rtc_timestamp_enable:0000000000000000 $t
+     /tmp/ccRIP20l.s:996    .text.rtc_timestamp_enable:0000000000000000 rtc_timestamp_enable
+     /tmp/ccRIP20l.s:1045   .text.rtc_timestamp_enable:000000000000002c $d
+     /tmp/ccRIP20l.s:1050   .text.rtc_timestamp_disable:0000000000000000 $t
+     /tmp/ccRIP20l.s:1057   .text.rtc_timestamp_disable:0000000000000000 rtc_timestamp_disable
+     /tmp/ccRIP20l.s:1087   .text.rtc_timestamp_disable:0000000000000024 $d
+     /tmp/ccRIP20l.s:1092   .text.rtc_timestamp_get:0000000000000000 $t
+     /tmp/ccRIP20l.s:1099   .text.rtc_timestamp_get:0000000000000000 rtc_timestamp_get
+     /tmp/ccRIP20l.s:1159   .text.rtc_timestamp_get:0000000000000038 $d
+     /tmp/ccRIP20l.s:1164   .text.rtc_timestamp_subsecond_get:0000000000000000 $t
+     /tmp/ccRIP20l.s:1171   .text.rtc_timestamp_subsecond_get:0000000000000000 rtc_timestamp_subsecond_get
+     /tmp/ccRIP20l.s:1187   .text.rtc_timestamp_subsecond_get:0000000000000008 $d
+     /tmp/ccRIP20l.s:1192   .text.rtc_tamper_enable:0000000000000000 $t
+     /tmp/ccRIP20l.s:1199   .text.rtc_tamper_enable:0000000000000000 rtc_tamper_enable
+     /tmp/ccRIP20l.s:1312   .text.rtc_tamper_enable:00000000000000b0 $d
+     /tmp/ccRIP20l.s:1317   .text.rtc_tamper_disable:0000000000000000 $t
+ARM GAS  /tmp/ccRIP20l.s 			page 57
 
 
-     /tmp/ccMAJaIL.s:1324   .text.rtc_tamper_disable:0000000000000000 rtc_tamper_disable
-     /tmp/ccMAJaIL.s:1343   .text.rtc_tamper_disable:0000000000000010 $d
-     /tmp/ccMAJaIL.s:1348   .text.rtc_interrupt_enable:0000000000000000 $t
-     /tmp/ccMAJaIL.s:1355   .text.rtc_interrupt_enable:0000000000000000 rtc_interrupt_enable
-     /tmp/ccMAJaIL.s:1400   .text.rtc_interrupt_enable:0000000000000034 $d
-     /tmp/ccMAJaIL.s:1405   .text.rtc_interrupt_disable:0000000000000000 $t
-     /tmp/ccMAJaIL.s:1412   .text.rtc_interrupt_disable:0000000000000000 rtc_interrupt_disable
-     /tmp/ccMAJaIL.s:1457   .text.rtc_interrupt_disable:0000000000000038 $d
-     /tmp/ccMAJaIL.s:1462   .text.rtc_flag_get:0000000000000000 $t
-     /tmp/ccMAJaIL.s:1469   .text.rtc_flag_get:0000000000000000 rtc_flag_get
-     /tmp/ccMAJaIL.s:1496   .text.rtc_flag_get:0000000000000010 $d
-     /tmp/ccMAJaIL.s:1501   .text.rtc_flag_clear:0000000000000000 $t
-     /tmp/ccMAJaIL.s:1508   .text.rtc_flag_clear:0000000000000000 rtc_flag_clear
-     /tmp/ccMAJaIL.s:1527   .text.rtc_flag_clear:0000000000000010 $d
-     /tmp/ccMAJaIL.s:1532   .text.rtc_alter_output_config:0000000000000000 $t
-     /tmp/ccMAJaIL.s:1539   .text.rtc_alter_output_config:0000000000000000 rtc_alter_output_config
-     /tmp/ccMAJaIL.s:1592   .text.rtc_alter_output_config:0000000000000048 $d
-     /tmp/ccMAJaIL.s:1597   .text.rtc_hour_adjust:0000000000000000 $t
-     /tmp/ccMAJaIL.s:1604   .text.rtc_hour_adjust:0000000000000000 rtc_hour_adjust
-     /tmp/ccMAJaIL.s:1635   .text.rtc_hour_adjust:0000000000000020 $d
-     /tmp/ccMAJaIL.s:1640   .text.rtc_bypass_shadow_enable:0000000000000000 $t
-     /tmp/ccMAJaIL.s:1647   .text.rtc_bypass_shadow_enable:0000000000000000 rtc_bypass_shadow_enable
-     /tmp/ccMAJaIL.s:1677   .text.rtc_bypass_shadow_enable:0000000000000024 $d
-     /tmp/ccMAJaIL.s:1682   .text.rtc_bypass_shadow_disable:0000000000000000 $t
-     /tmp/ccMAJaIL.s:1689   .text.rtc_bypass_shadow_disable:0000000000000000 rtc_bypass_shadow_disable
-     /tmp/ccMAJaIL.s:1719   .text.rtc_bypass_shadow_disable:0000000000000024 $d
-     /tmp/ccMAJaIL.s:1724   .text.rtc_refclock_detection_enable:0000000000000000 $t
-     /tmp/ccMAJaIL.s:1731   .text.rtc_refclock_detection_enable:0000000000000000 rtc_refclock_detection_enable
-     /tmp/ccMAJaIL.s:1780   .text.rtc_refclock_detection_enable:0000000000000030 $d
-     /tmp/ccMAJaIL.s:1785   .text.rtc_refclock_detection_disable:0000000000000000 $t
-     /tmp/ccMAJaIL.s:1792   .text.rtc_refclock_detection_disable:0000000000000000 rtc_refclock_detection_disable
-     /tmp/ccMAJaIL.s:1841   .text.rtc_refclock_detection_disable:0000000000000030 $d
-     /tmp/ccMAJaIL.s:1846   .text.rtc_second_ajust:0000000000000000 $t
-     /tmp/ccMAJaIL.s:1853   .text.rtc_second_ajust:0000000000000000 rtc_second_ajust
-     /tmp/ccMAJaIL.s:1947   .text.rtc_second_ajust:000000000000004c $d
-     /tmp/ccMAJaIL.s:1952   .text.rtc_calibration_config:0000000000000000 $t
-     /tmp/ccMAJaIL.s:1959   .text.rtc_calibration_config:0000000000000000 rtc_calibration_config
-     /tmp/ccMAJaIL.s:2049   .text.rtc_calibration_config:0000000000000044 $d
+     /tmp/ccRIP20l.s:1324   .text.rtc_tamper_disable:0000000000000000 rtc_tamper_disable
+     /tmp/ccRIP20l.s:1343   .text.rtc_tamper_disable:0000000000000010 $d
+     /tmp/ccRIP20l.s:1348   .text.rtc_interrupt_enable:0000000000000000 $t
+     /tmp/ccRIP20l.s:1355   .text.rtc_interrupt_enable:0000000000000000 rtc_interrupt_enable
+     /tmp/ccRIP20l.s:1400   .text.rtc_interrupt_enable:0000000000000034 $d
+     /tmp/ccRIP20l.s:1405   .text.rtc_interrupt_disable:0000000000000000 $t
+     /tmp/ccRIP20l.s:1412   .text.rtc_interrupt_disable:0000000000000000 rtc_interrupt_disable
+     /tmp/ccRIP20l.s:1457   .text.rtc_interrupt_disable:0000000000000038 $d
+     /tmp/ccRIP20l.s:1462   .text.rtc_flag_get:0000000000000000 $t
+     /tmp/ccRIP20l.s:1469   .text.rtc_flag_get:0000000000000000 rtc_flag_get
+     /tmp/ccRIP20l.s:1496   .text.rtc_flag_get:0000000000000010 $d
+     /tmp/ccRIP20l.s:1501   .text.rtc_flag_clear:0000000000000000 $t
+     /tmp/ccRIP20l.s:1508   .text.rtc_flag_clear:0000000000000000 rtc_flag_clear
+     /tmp/ccRIP20l.s:1527   .text.rtc_flag_clear:0000000000000010 $d
+     /tmp/ccRIP20l.s:1532   .text.rtc_alter_output_config:0000000000000000 $t
+     /tmp/ccRIP20l.s:1539   .text.rtc_alter_output_config:0000000000000000 rtc_alter_output_config
+     /tmp/ccRIP20l.s:1592   .text.rtc_alter_output_config:0000000000000048 $d
+     /tmp/ccRIP20l.s:1597   .text.rtc_hour_adjust:0000000000000000 $t
+     /tmp/ccRIP20l.s:1604   .text.rtc_hour_adjust:0000000000000000 rtc_hour_adjust
+     /tmp/ccRIP20l.s:1635   .text.rtc_hour_adjust:0000000000000020 $d
+     /tmp/ccRIP20l.s:1640   .text.rtc_bypass_shadow_enable:0000000000000000 $t
+     /tmp/ccRIP20l.s:1647   .text.rtc_bypass_shadow_enable:0000000000000000 rtc_bypass_shadow_enable
+     /tmp/ccRIP20l.s:1677   .text.rtc_bypass_shadow_enable:0000000000000024 $d
+     /tmp/ccRIP20l.s:1682   .text.rtc_bypass_shadow_disable:0000000000000000 $t
+     /tmp/ccRIP20l.s:1689   .text.rtc_bypass_shadow_disable:0000000000000000 rtc_bypass_shadow_disable
+     /tmp/ccRIP20l.s:1719   .text.rtc_bypass_shadow_disable:0000000000000024 $d
+     /tmp/ccRIP20l.s:1724   .text.rtc_refclock_detection_enable:0000000000000000 $t
+     /tmp/ccRIP20l.s:1731   .text.rtc_refclock_detection_enable:0000000000000000 rtc_refclock_detection_enable
+     /tmp/ccRIP20l.s:1780   .text.rtc_refclock_detection_enable:0000000000000030 $d
+     /tmp/ccRIP20l.s:1785   .text.rtc_refclock_detection_disable:0000000000000000 $t
+     /tmp/ccRIP20l.s:1792   .text.rtc_refclock_detection_disable:0000000000000000 rtc_refclock_detection_disable
+     /tmp/ccRIP20l.s:1841   .text.rtc_refclock_detection_disable:0000000000000030 $d
+     /tmp/ccRIP20l.s:1846   .text.rtc_second_ajust:0000000000000000 $t
+     /tmp/ccRIP20l.s:1853   .text.rtc_second_ajust:0000000000000000 rtc_second_ajust
+     /tmp/ccRIP20l.s:1947   .text.rtc_second_ajust:000000000000004c $d
+     /tmp/ccRIP20l.s:1952   .text.rtc_calibration_config:0000000000000000 $t
+     /tmp/ccRIP20l.s:1959   .text.rtc_calibration_config:0000000000000000 rtc_calibration_config
+     /tmp/ccRIP20l.s:2049   .text.rtc_calibration_config:0000000000000044 $d
 
 NO UNDEFINED SYMBOLS

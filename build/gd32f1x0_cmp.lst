@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccsF3AUE.s 			page 1
+ARM GAS  /tmp/cclgCgv6.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccsF3AUE.s 			page 1
   25:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c ****     CMP_CS = ((uint32_t)0x00000000);
   32              		.loc 1 25 5 view .LVU1
   33              		.loc 1 25 12 is_stmt 0 view .LVU2
-ARM GAS  /tmp/ccsF3AUE.s 			page 2
+ARM GAS  /tmp/cclgCgv6.s 			page 2
 
 
   34 0000 0022     		movs	r2, #0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccsF3AUE.s 			page 1
   60              		@ frame_needed = 0, uses_anonymous_args = 0
   56:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c ****     if(CMP0 == cmp_periph){
   61              		.loc 1 56 5 view .LVU5
-ARM GAS  /tmp/ccsF3AUE.s 			page 3
+ARM GAS  /tmp/cclgCgv6.s 			page 3
 
 
   55:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c ****     if(CMP0 == cmp_periph){
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccsF3AUE.s 			page 1
   61:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c ****     }
  106              		.loc 1 61 85 view .LVU22
  107 0026 1B07     		lsls	r3, r3, #28
-ARM GAS  /tmp/ccsF3AUE.s 			page 4
+ARM GAS  /tmp/cclgCgv6.s 			page 4
 
 
  108              	.LVL7:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccsF3AUE.s 			page 1
   77:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c ****       \arg        CMP_OUTPUT_TIMER2IC0: TIMER 2 channel0 input capture
   78:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c ****       \arg        CMP_OUTPUT_TIMER2OCPRECLR: TIMER 2 OCPRE_CLR input
   79:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c ****     \param[in]  cmp_output_polarity 
-ARM GAS  /tmp/ccsF3AUE.s 			page 5
+ARM GAS  /tmp/cclgCgv6.s 			page 5
 
 
   80:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c ****       \arg        CMP_OUTPUT_POLARITY_INVERTED: output is inverted
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccsF3AUE.s 			page 1
   99:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c ****         if(CMP_OUTPUT_POLARITY_INVERTED == cmp_output_polarity){
  100:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c ****             CMP_CS |= CMP_CS_CMP1PL;
  101:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c ****         }else{ 
-ARM GAS  /tmp/ccsF3AUE.s 			page 6
+ARM GAS  /tmp/cclgCgv6.s 			page 6
 
 
  102:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c ****             CMP_CS &= ~CMP_CS_CMP1PL;
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccsF3AUE.s 			page 1
  218              		.section	.text.cmp_enable,"ax",%progbits
  219              		.align	1
  220              		.global	cmp_enable
-ARM GAS  /tmp/ccsF3AUE.s 			page 7
+ARM GAS  /tmp/cclgCgv6.s 			page 7
 
 
  221              		.syntax unified
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccsF3AUE.s 			page 1
  256 0014 00000140 		.word	1073807360
  257              		.cfi_endproc
  258              	.LFE59:
-ARM GAS  /tmp/ccsF3AUE.s 			page 8
+ARM GAS  /tmp/cclgCgv6.s 			page 8
 
 
  260              		.section	.text.cmp_disable,"ax",%progbits
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccsF3AUE.s 			page 1
  295              	.L29:
  296              		.align	2
  297              	.L28:
-ARM GAS  /tmp/ccsF3AUE.s 			page 9
+ARM GAS  /tmp/cclgCgv6.s 			page 9
 
 
  298 0014 00000140 		.word	1073807360
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccsF3AUE.s 			page 1
  154:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c ****     \param[in]  none
  155:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c ****     \param[out] none
  156:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c ****     \retval     none
-ARM GAS  /tmp/ccsF3AUE.s 			page 10
+ARM GAS  /tmp/cclgCgv6.s 			page 10
 
 
  157:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c **** */
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccsF3AUE.s 			page 1
  381 0004 43F40003 		orr	r3, r3, #8388608
  382 0008 D361     		str	r3, [r2, #28]
  174:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c **** }
-ARM GAS  /tmp/ccsF3AUE.s 			page 11
+ARM GAS  /tmp/cclgCgv6.s 			page 11
 
 
  383              		.loc 1 174 1 view .LVU90
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccsF3AUE.s 			page 1
  430              	cmp_lock_enable:
  431              	.LVL20:
  432              	.LFB65:
-ARM GAS  /tmp/ccsF3AUE.s 			page 12
+ARM GAS  /tmp/cclgCgv6.s 			page 12
 
 
  186:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c **** 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccsF3AUE.s 			page 1
  468              		.thumb
  469              		.thumb_func
  470              		.fpu softvfp
-ARM GAS  /tmp/ccsF3AUE.s 			page 13
+ARM GAS  /tmp/cclgCgv6.s 			page 13
 
 
  472              	cmp_lock_disable:
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccsF3AUE.s 			page 1
  507              		.align	1
  508              		.global	cmp_output_level_get
  509              		.syntax unified
-ARM GAS  /tmp/ccsF3AUE.s 			page 14
+ARM GAS  /tmp/cclgCgv6.s 			page 14
 
 
  510              		.thumb
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccsF3AUE.s 			page 1
  244:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_cmp.c **** }
  541              		.loc 1 244 1 view .LVU124
  542 0012 7047     		bx	lr
-ARM GAS  /tmp/ccsF3AUE.s 			page 15
+ARM GAS  /tmp/cclgCgv6.s 			page 15
 
 
  543              	.L58:
@@ -851,46 +851,46 @@ ARM GAS  /tmp/ccsF3AUE.s 			page 1
  551              	.Letext0:
  552              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
  553              		.file 3 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_cmp.h"
-ARM GAS  /tmp/ccsF3AUE.s 			page 16
+ARM GAS  /tmp/cclgCgv6.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32f1x0_cmp.c
-     /tmp/ccsF3AUE.s:16     .text.cmp_deinit:0000000000000000 $t
-     /tmp/ccsF3AUE.s:24     .text.cmp_deinit:0000000000000000 cmp_deinit
-     /tmp/ccsF3AUE.s:42     .text.cmp_deinit:0000000000000008 $d
-     /tmp/ccsF3AUE.s:47     .text.cmp_mode_init:0000000000000000 $t
-     /tmp/ccsF3AUE.s:54     .text.cmp_mode_init:0000000000000000 cmp_mode_init
-     /tmp/ccsF3AUE.s:129    .text.cmp_mode_init:0000000000000040 $d
-     /tmp/ccsF3AUE.s:134    .text.cmp_output_init:0000000000000000 $t
-     /tmp/ccsF3AUE.s:141    .text.cmp_output_init:0000000000000000 cmp_output_init
-     /tmp/ccsF3AUE.s:214    .text.cmp_output_init:0000000000000040 $d
-     /tmp/ccsF3AUE.s:219    .text.cmp_enable:0000000000000000 $t
-     /tmp/ccsF3AUE.s:226    .text.cmp_enable:0000000000000000 cmp_enable
-     /tmp/ccsF3AUE.s:256    .text.cmp_enable:0000000000000014 $d
-     /tmp/ccsF3AUE.s:261    .text.cmp_disable:0000000000000000 $t
-     /tmp/ccsF3AUE.s:268    .text.cmp_disable:0000000000000000 cmp_disable
-     /tmp/ccsF3AUE.s:298    .text.cmp_disable:0000000000000014 $d
-     /tmp/ccsF3AUE.s:303    .text.cmp_switch_enable:0000000000000000 $t
-     /tmp/ccsF3AUE.s:310    .text.cmp_switch_enable:0000000000000000 cmp_switch_enable
-     /tmp/ccsF3AUE.s:328    .text.cmp_switch_enable:000000000000000c $d
-     /tmp/ccsF3AUE.s:333    .text.cmp_switch_disable:0000000000000000 $t
-     /tmp/ccsF3AUE.s:340    .text.cmp_switch_disable:0000000000000000 cmp_switch_disable
-     /tmp/ccsF3AUE.s:358    .text.cmp_switch_disable:000000000000000c $d
-     /tmp/ccsF3AUE.s:363    .text.cmp_window_enable:0000000000000000 $t
-     /tmp/ccsF3AUE.s:370    .text.cmp_window_enable:0000000000000000 cmp_window_enable
-     /tmp/ccsF3AUE.s:388    .text.cmp_window_enable:000000000000000c $d
-     /tmp/ccsF3AUE.s:393    .text.cmp_window_disable:0000000000000000 $t
-     /tmp/ccsF3AUE.s:400    .text.cmp_window_disable:0000000000000000 cmp_window_disable
-     /tmp/ccsF3AUE.s:418    .text.cmp_window_disable:000000000000000c $d
-     /tmp/ccsF3AUE.s:423    .text.cmp_lock_enable:0000000000000000 $t
-     /tmp/ccsF3AUE.s:430    .text.cmp_lock_enable:0000000000000000 cmp_lock_enable
-     /tmp/ccsF3AUE.s:460    .text.cmp_lock_enable:0000000000000014 $d
-     /tmp/ccsF3AUE.s:465    .text.cmp_lock_disable:0000000000000000 $t
-     /tmp/ccsF3AUE.s:472    .text.cmp_lock_disable:0000000000000000 cmp_lock_disable
-     /tmp/ccsF3AUE.s:502    .text.cmp_lock_disable:0000000000000014 $d
-     /tmp/ccsF3AUE.s:507    .text.cmp_output_level_get:0000000000000000 $t
-     /tmp/ccsF3AUE.s:514    .text.cmp_output_level_get:0000000000000000 cmp_output_level_get
-     /tmp/ccsF3AUE.s:546    .text.cmp_output_level_get:0000000000000014 $d
+     /tmp/cclgCgv6.s:16     .text.cmp_deinit:0000000000000000 $t
+     /tmp/cclgCgv6.s:24     .text.cmp_deinit:0000000000000000 cmp_deinit
+     /tmp/cclgCgv6.s:42     .text.cmp_deinit:0000000000000008 $d
+     /tmp/cclgCgv6.s:47     .text.cmp_mode_init:0000000000000000 $t
+     /tmp/cclgCgv6.s:54     .text.cmp_mode_init:0000000000000000 cmp_mode_init
+     /tmp/cclgCgv6.s:129    .text.cmp_mode_init:0000000000000040 $d
+     /tmp/cclgCgv6.s:134    .text.cmp_output_init:0000000000000000 $t
+     /tmp/cclgCgv6.s:141    .text.cmp_output_init:0000000000000000 cmp_output_init
+     /tmp/cclgCgv6.s:214    .text.cmp_output_init:0000000000000040 $d
+     /tmp/cclgCgv6.s:219    .text.cmp_enable:0000000000000000 $t
+     /tmp/cclgCgv6.s:226    .text.cmp_enable:0000000000000000 cmp_enable
+     /tmp/cclgCgv6.s:256    .text.cmp_enable:0000000000000014 $d
+     /tmp/cclgCgv6.s:261    .text.cmp_disable:0000000000000000 $t
+     /tmp/cclgCgv6.s:268    .text.cmp_disable:0000000000000000 cmp_disable
+     /tmp/cclgCgv6.s:298    .text.cmp_disable:0000000000000014 $d
+     /tmp/cclgCgv6.s:303    .text.cmp_switch_enable:0000000000000000 $t
+     /tmp/cclgCgv6.s:310    .text.cmp_switch_enable:0000000000000000 cmp_switch_enable
+     /tmp/cclgCgv6.s:328    .text.cmp_switch_enable:000000000000000c $d
+     /tmp/cclgCgv6.s:333    .text.cmp_switch_disable:0000000000000000 $t
+     /tmp/cclgCgv6.s:340    .text.cmp_switch_disable:0000000000000000 cmp_switch_disable
+     /tmp/cclgCgv6.s:358    .text.cmp_switch_disable:000000000000000c $d
+     /tmp/cclgCgv6.s:363    .text.cmp_window_enable:0000000000000000 $t
+     /tmp/cclgCgv6.s:370    .text.cmp_window_enable:0000000000000000 cmp_window_enable
+     /tmp/cclgCgv6.s:388    .text.cmp_window_enable:000000000000000c $d
+     /tmp/cclgCgv6.s:393    .text.cmp_window_disable:0000000000000000 $t
+     /tmp/cclgCgv6.s:400    .text.cmp_window_disable:0000000000000000 cmp_window_disable
+     /tmp/cclgCgv6.s:418    .text.cmp_window_disable:000000000000000c $d
+     /tmp/cclgCgv6.s:423    .text.cmp_lock_enable:0000000000000000 $t
+     /tmp/cclgCgv6.s:430    .text.cmp_lock_enable:0000000000000000 cmp_lock_enable
+     /tmp/cclgCgv6.s:460    .text.cmp_lock_enable:0000000000000014 $d
+     /tmp/cclgCgv6.s:465    .text.cmp_lock_disable:0000000000000000 $t
+     /tmp/cclgCgv6.s:472    .text.cmp_lock_disable:0000000000000000 cmp_lock_disable
+     /tmp/cclgCgv6.s:502    .text.cmp_lock_disable:0000000000000014 $d
+     /tmp/cclgCgv6.s:507    .text.cmp_output_level_get:0000000000000000 $t
+     /tmp/cclgCgv6.s:514    .text.cmp_output_level_get:0000000000000000 cmp_output_level_get
+     /tmp/cclgCgv6.s:546    .text.cmp_output_level_get:0000000000000014 $d
 
 NO UNDEFINED SYMBOLS

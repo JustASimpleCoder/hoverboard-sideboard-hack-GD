@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccoCTl0v.s 			page 1
+ARM GAS  /tmp/ccY03Ayu.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccoCTl0v.s 			page 1
   30:Drivers/CMSIS/Source/system_gd32f1x0.c ****    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
   31:Drivers/CMSIS/Source/system_gd32f1x0.c ****    POSSIBILITY OF SUCH DAMAGE.
   32:Drivers/CMSIS/Source/system_gd32f1x0.c ****    ---------------------------------------------------------------------------*/
-ARM GAS  /tmp/ccoCTl0v.s 			page 2
+ARM GAS  /tmp/ccY03Ayu.s 			page 2
 
 
   33:Drivers/CMSIS/Source/system_gd32f1x0.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccoCTl0v.s 			page 1
   33              		.loc 1 80 14 is_stmt 0 view .LVU2
   34 0000 284B     		ldr	r3, .L11
   35 0002 1A68     		ldr	r2, [r3]
-ARM GAS  /tmp/ccoCTl0v.s 			page 3
+ARM GAS  /tmp/ccY03Ayu.s 			page 3
 
 
   36 0004 42F00102 		orr	r2, r2, #1
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccoCTl0v.s 			page 1
   71              		.loc 1 96 14 is_stmt 0 view .LVU17
   72 0038 DA6A     		ldr	r2, [r3, #44]
   73 003a 22F00F02 		bic	r2, r2, #15
-ARM GAS  /tmp/ccoCTl0v.s 			page 4
+ARM GAS  /tmp/ccY03Ayu.s 			page 4
 
 
   74 003e DA62     		str	r2, [r3, #44]
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccoCTl0v.s 			page 1
  126:Drivers/CMSIS/Source/system_gd32f1x0.c **** #else
  127:Drivers/CMSIS/Source/system_gd32f1x0.c ****     system_clock_8m_irc8m();
  128:Drivers/CMSIS/Source/system_gd32f1x0.c **** #endif /* __SYSTEM_CLOCK_8M_HXTAL */
-ARM GAS  /tmp/ccoCTl0v.s 			page 5
+ARM GAS  /tmp/ccY03Ayu.s 			page 5
 
 
  129:Drivers/CMSIS/Source/system_gd32f1x0.c **** }
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccoCTl0v.s 			page 1
  183:Drivers/CMSIS/Source/system_gd32f1x0.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
  184:Drivers/CMSIS/Source/system_gd32f1x0.c ****     do{
  185:Drivers/CMSIS/Source/system_gd32f1x0.c ****         timeout++;
-ARM GAS  /tmp/ccoCTl0v.s 			page 6
+ARM GAS  /tmp/ccY03Ayu.s 			page 6
 
 
  186:Drivers/CMSIS/Source/system_gd32f1x0.c ****         stab_flag = (RCU_CTL0 & RCU_CTL0_HXTALSTB);
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccoCTl0v.s 			page 1
  234:Drivers/CMSIS/Source/system_gd32f1x0.c ****     /* APB2 = AHB */
  235:Drivers/CMSIS/Source/system_gd32f1x0.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV1;
  105              		.loc 1 235 5 is_stmt 1 view .LVU30
-ARM GAS  /tmp/ccoCTl0v.s 			page 7
+ARM GAS  /tmp/ccY03Ayu.s 			page 7
 
 
  106              		.loc 1 235 14 is_stmt 0 view .LVU31
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccoCTl0v.s 			page 1
  145              		.loc 1 250 14 is_stmt 0 view .LVU48
  146 0092 5A68     		ldr	r2, [r3, #4]
  147 0094 42F00202 		orr	r2, r2, #2
-ARM GAS  /tmp/ccoCTl0v.s 			page 8
+ARM GAS  /tmp/ccY03Ayu.s 			page 8
 
 
  148 0098 5A60     		str	r2, [r3, #4]
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccoCTl0v.s 			page 1
  273:Drivers/CMSIS/Source/system_gd32f1x0.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
  274:Drivers/CMSIS/Source/system_gd32f1x0.c ****     RCU_CFG0 |= RCU_CKSYSSRC_IRC8M;
  275:Drivers/CMSIS/Source/system_gd32f1x0.c ****     
-ARM GAS  /tmp/ccoCTl0v.s 			page 9
+ARM GAS  /tmp/ccY03Ayu.s 			page 9
 
 
  276:Drivers/CMSIS/Source/system_gd32f1x0.c ****     /* wait until IRC8M is selected as system clock */
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccoCTl0v.s 			page 1
  215 001e 1749     		ldr	r1, .L23+8
  216 0020 5368     		ldr	r3, [r2, #4]
  217              	.LVL1:
-ARM GAS  /tmp/ccoCTl0v.s 			page 10
+ARM GAS  /tmp/ccY03Ayu.s 			page 10
 
 
  295:Drivers/CMSIS/Source/system_gd32f1x0.c ****     switch(sws){
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccoCTl0v.s 			page 1
  235              	.LVL4:
  331:Drivers/CMSIS/Source/system_gd32f1x0.c ****     clk_exp = ahb_exp[idx];
  236              		.loc 1 331 5 is_stmt 1 view .LVU71
-ARM GAS  /tmp/ccoCTl0v.s 			page 11
+ARM GAS  /tmp/ccY03Ayu.s 			page 11
 
 
  332:Drivers/CMSIS/Source/system_gd32f1x0.c ****     SystemCoreClock >>= clk_exp;
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccoCTl0v.s 			page 1
  311:Drivers/CMSIS/Source/system_gd32f1x0.c ****         }else{
  277              		.loc 1 311 19 view .LVU87
  278 0052 4CBF     		ite	mi
-ARM GAS  /tmp/ccoCTl0v.s 			page 12
+ARM GAS  /tmp/ccY03Ayu.s 			page 12
 
 
  279 0054 1133     		addmi	r3, r3, #17
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccoCTl0v.s 			page 1
  318 007c 00000000 		.word	.LANCHOR1
  319 0080 00127A00 		.word	8000000
  320 0084 00093D00 		.word	4000000
-ARM GAS  /tmp/ccoCTl0v.s 			page 13
+ARM GAS  /tmp/ccY03Ayu.s 			page 13
 
 
  321              		.cfi_endproc
@@ -743,18 +743,18 @@ ARM GAS  /tmp/ccoCTl0v.s 			page 1
  340              		.file 3 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_dbg.h"
  341              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
  342              		.file 5 "Drivers/CMSIS/Include/system_gd32f1x0.h"
-ARM GAS  /tmp/ccoCTl0v.s 			page 14
+ARM GAS  /tmp/ccY03Ayu.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 system_gd32f1x0.c
-     /tmp/ccoCTl0v.s:16     .text.SystemInit:0000000000000000 $t
-     /tmp/ccoCTl0v.s:24     .text.SystemInit:0000000000000000 SystemInit
-     /tmp/ccoCTl0v.s:166    .text.SystemInit:00000000000000a4 $d
-     /tmp/ccoCTl0v.s:172    .text.SystemCoreClockUpdate:0000000000000000 $t
-     /tmp/ccoCTl0v.s:179    .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
-     /tmp/ccoCTl0v.s:316    .text.SystemCoreClockUpdate:0000000000000074 $d
-     /tmp/ccoCTl0v.s:335    .data.SystemCoreClock:0000000000000000 SystemCoreClock
-     /tmp/ccoCTl0v.s:331    .data.SystemCoreClock:0000000000000000 $d
+     /tmp/ccY03Ayu.s:16     .text.SystemInit:0000000000000000 $t
+     /tmp/ccY03Ayu.s:24     .text.SystemInit:0000000000000000 SystemInit
+     /tmp/ccY03Ayu.s:166    .text.SystemInit:00000000000000a4 $d
+     /tmp/ccY03Ayu.s:172    .text.SystemCoreClockUpdate:0000000000000000 $t
+     /tmp/ccY03Ayu.s:179    .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
+     /tmp/ccY03Ayu.s:316    .text.SystemCoreClockUpdate:0000000000000074 $d
+     /tmp/ccY03Ayu.s:335    .data.SystemCoreClock:0000000000000000 SystemCoreClock
+     /tmp/ccY03Ayu.s:331    .data.SystemCoreClock:0000000000000000 $d
 
 NO UNDEFINED SYMBOLS

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc7gBZyD.s 			page 1
+ARM GAS  /tmp/cc3GRaVD.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc7gBZyD.s 			page 1
   26:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c ****     rcu_periph_reset_enable(RCU_DACRST);
   31              		.loc 1 26 5 view .LVU1
   25:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c ****     rcu_periph_reset_enable(RCU_DACRST);
-ARM GAS  /tmp/cc7gBZyD.s 			page 2
+ARM GAS  /tmp/cc3GRaVD.s 			page 2
 
 
   32              		.loc 1 25 1 is_stmt 0 view .LVU2
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc7gBZyD.s 			page 1
   75 0006 43F00103 		orr	r3, r3, #1
   76 000a C2F80034 		str	r3, [r2, #1024]
   39:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c **** }
-ARM GAS  /tmp/cc7gBZyD.s 			page 3
+ARM GAS  /tmp/cc3GRaVD.s 			page 3
 
 
   77              		.loc 1 39 1 view .LVU10
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc7gBZyD.s 			page 1
  124              	dac0_dma_enable:
  125              	.LFB59:
   51:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c **** 
-ARM GAS  /tmp/cc7gBZyD.s 			page 4
+ARM GAS  /tmp/cc3GRaVD.s 			page 4
 
 
   52:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c **** /*!
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc7gBZyD.s 			page 1
  162              		.loc 1 71 13 is_stmt 0 view .LVU21
  163 0000 034A     		ldr	r2, .L12
  164 0002 D2F80034 		ldr	r3, [r2, #1024]
-ARM GAS  /tmp/cc7gBZyD.s 			page 5
+ARM GAS  /tmp/cc3GRaVD.s 			page 5
 
 
  165 0006 23F48053 		bic	r3, r3, #4096
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc7gBZyD.s 			page 1
  210              		.thumb
  211              		.thumb_func
  212              		.fpu softvfp
-ARM GAS  /tmp/cc7gBZyD.s 			page 6
+ARM GAS  /tmp/cc3GRaVD.s 			page 6
 
 
  214              	dac0_output_buffer_disable:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc7gBZyD.s 			page 1
  250              		@ link register save eliminated.
  104:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c ****     DAC_CTL |= DAC_CTL_DTEN0;
  251              		.loc 1 104 5 view .LVU32
-ARM GAS  /tmp/cc7gBZyD.s 			page 7
+ARM GAS  /tmp/cc3GRaVD.s 			page 7
 
 
  252              		.loc 1 104 13 is_stmt 0 view .LVU33
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc7gBZyD.s 			page 1
  297              		.align	1
  298              		.global	dac0_software_trigger_enable
  299              		.syntax unified
-ARM GAS  /tmp/cc7gBZyD.s 			page 8
+ARM GAS  /tmp/cc3GRaVD.s 			page 8
 
 
  300              		.thumb
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc7gBZyD.s 			page 1
  337              		.cfi_startproc
  338              		@ args = 0, pretend = 0, frame = 0
  339              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cc7gBZyD.s 			page 9
+ARM GAS  /tmp/cc3GRaVD.s 			page 9
 
 
  340              		@ link register save eliminated.
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc7gBZyD.s 			page 1
  383              		.cfi_endproc
  384              	.LFE67:
  386              		.section	.text.dac0_interrupt_disable,"ax",%progbits
-ARM GAS  /tmp/cc7gBZyD.s 			page 10
+ARM GAS  /tmp/cc3GRaVD.s 			page 10
 
 
  387              		.align	1
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc7gBZyD.s 			page 1
  167:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c ****       \arg        DAC_TRIGGER_T5_TRGO: trigger source is timer5 trgo
  168:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c ****       \arg        DAC_TRIGGER_T14_TRGO: trigger source is timer14 trgo
  169:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c ****       \arg        DAC_TRIGGER_EXTI_IT9: trigger source is exti interrupt line 9
-ARM GAS  /tmp/cc7gBZyD.s 			page 11
+ARM GAS  /tmp/cc3GRaVD.s 			page 11
 
 
  170:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c ****       \arg        DAC_TRIGGER_SOFTWARE: trigger source is software
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc7gBZyD.s 			page 1
  465              		@ frame_needed = 0, uses_anonymous_args = 0
  466              		@ link register save eliminated.
  188:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c ****     uint16_t data = 0U;
-ARM GAS  /tmp/cc7gBZyD.s 			page 12
+ARM GAS  /tmp/cc3GRaVD.s 			page 12
 
 
  467              		.loc 1 188 5 view .LVU62
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc7gBZyD.s 			page 1
  207:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c **** }
  505              		.loc 1 207 1 view .LVU71
  506 0006 C0F34030 		ubfx	r0, r0, #13, #1
-ARM GAS  /tmp/cc7gBZyD.s 			page 13
+ARM GAS  /tmp/cc3GRaVD.s 			page 13
 
 
  507 000a 7047     		bx	lr
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc7gBZyD.s 			page 1
  554              	.LFB73:
  219:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c **** 
  220:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c **** /*!
-ARM GAS  /tmp/cc7gBZyD.s 			page 14
+ARM GAS  /tmp/cc3GRaVD.s 			page 14
 
 
  221:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c ****     \brief      get the specified DAC0 interrupt flag(DAC0 DMA underrun interrupt flag)
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc7gBZyD.s 			page 1
  593              		.thumb_func
  594              		.fpu softvfp
  596              	dac0_interrupt_flag_clear:
-ARM GAS  /tmp/cc7gBZyD.s 			page 15
+ARM GAS  /tmp/cc3GRaVD.s 			page 15
 
 
  597              	.LFB77:
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc7gBZyD.s 			page 1
  263:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c ****         /* data right 12b alignment */
  264:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c ****         case DAC_ALIGN_12B_R:
  265:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dac.c ****             DAC0_R12DH = data;
-ARM GAS  /tmp/cc7gBZyD.s 			page 16
+ARM GAS  /tmp/cc3GRaVD.s 			page 16
 
 
  628              		.loc 1 265 13 view .LVU88
@@ -947,72 +947,72 @@ ARM GAS  /tmp/cc7gBZyD.s 			page 1
  659              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
  660              		.file 3 "Drivers/CMSIS/Include/gd32f1x0.h"
  661              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
-ARM GAS  /tmp/cc7gBZyD.s 			page 17
+ARM GAS  /tmp/cc3GRaVD.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32f1x0_dac.c
-     /tmp/cc7gBZyD.s:16     .text.dac_deinit:0000000000000000 $t
-     /tmp/cc7gBZyD.s:24     .text.dac_deinit:0000000000000000 dac_deinit
-     /tmp/cc7gBZyD.s:57     .text.dac0_enable:0000000000000000 $t
-     /tmp/cc7gBZyD.s:64     .text.dac0_enable:0000000000000000 dac0_enable
-     /tmp/cc7gBZyD.s:82     .text.dac0_enable:0000000000000010 $d
-     /tmp/cc7gBZyD.s:87     .text.dac0_disable:0000000000000000 $t
-     /tmp/cc7gBZyD.s:94     .text.dac0_disable:0000000000000000 dac0_disable
-     /tmp/cc7gBZyD.s:112    .text.dac0_disable:0000000000000010 $d
-     /tmp/cc7gBZyD.s:117    .text.dac0_dma_enable:0000000000000000 $t
-     /tmp/cc7gBZyD.s:124    .text.dac0_dma_enable:0000000000000000 dac0_dma_enable
-     /tmp/cc7gBZyD.s:142    .text.dac0_dma_enable:0000000000000010 $d
-     /tmp/cc7gBZyD.s:147    .text.dac0_dma_disable:0000000000000000 $t
-     /tmp/cc7gBZyD.s:154    .text.dac0_dma_disable:0000000000000000 dac0_dma_disable
-     /tmp/cc7gBZyD.s:172    .text.dac0_dma_disable:0000000000000010 $d
-     /tmp/cc7gBZyD.s:177    .text.dac0_output_buffer_enable:0000000000000000 $t
-     /tmp/cc7gBZyD.s:184    .text.dac0_output_buffer_enable:0000000000000000 dac0_output_buffer_enable
-     /tmp/cc7gBZyD.s:202    .text.dac0_output_buffer_enable:0000000000000010 $d
-     /tmp/cc7gBZyD.s:207    .text.dac0_output_buffer_disable:0000000000000000 $t
-     /tmp/cc7gBZyD.s:214    .text.dac0_output_buffer_disable:0000000000000000 dac0_output_buffer_disable
-     /tmp/cc7gBZyD.s:232    .text.dac0_output_buffer_disable:0000000000000010 $d
-     /tmp/cc7gBZyD.s:237    .text.dac0_trigger_enable:0000000000000000 $t
-     /tmp/cc7gBZyD.s:244    .text.dac0_trigger_enable:0000000000000000 dac0_trigger_enable
-     /tmp/cc7gBZyD.s:262    .text.dac0_trigger_enable:0000000000000010 $d
-     /tmp/cc7gBZyD.s:267    .text.dac0_trigger_disable:0000000000000000 $t
-     /tmp/cc7gBZyD.s:274    .text.dac0_trigger_disable:0000000000000000 dac0_trigger_disable
-     /tmp/cc7gBZyD.s:292    .text.dac0_trigger_disable:0000000000000010 $d
-     /tmp/cc7gBZyD.s:297    .text.dac0_software_trigger_enable:0000000000000000 $t
-     /tmp/cc7gBZyD.s:304    .text.dac0_software_trigger_enable:0000000000000000 dac0_software_trigger_enable
-     /tmp/cc7gBZyD.s:322    .text.dac0_software_trigger_enable:0000000000000010 $d
-     /tmp/cc7gBZyD.s:327    .text.dac0_software_trigger_disable:0000000000000000 $t
-     /tmp/cc7gBZyD.s:334    .text.dac0_software_trigger_disable:0000000000000000 dac0_software_trigger_disable
-     /tmp/cc7gBZyD.s:352    .text.dac0_software_trigger_disable:0000000000000010 $d
-     /tmp/cc7gBZyD.s:357    .text.dac0_interrupt_enable:0000000000000000 $t
-     /tmp/cc7gBZyD.s:364    .text.dac0_interrupt_enable:0000000000000000 dac0_interrupt_enable
-     /tmp/cc7gBZyD.s:382    .text.dac0_interrupt_enable:0000000000000010 $d
-     /tmp/cc7gBZyD.s:387    .text.dac0_interrupt_disable:0000000000000000 $t
-     /tmp/cc7gBZyD.s:394    .text.dac0_interrupt_disable:0000000000000000 dac0_interrupt_disable
-     /tmp/cc7gBZyD.s:412    .text.dac0_interrupt_disable:0000000000000010 $d
-     /tmp/cc7gBZyD.s:417    .text.dac0_trigger_source_config:0000000000000000 $t
-     /tmp/cc7gBZyD.s:424    .text.dac0_trigger_source_config:0000000000000000 dac0_trigger_source_config
-     /tmp/cc7gBZyD.s:448    .text.dac0_trigger_source_config:000000000000001c $d
-     /tmp/cc7gBZyD.s:453    .text.dac0_output_value_get:0000000000000000 $t
-     /tmp/cc7gBZyD.s:460    .text.dac0_output_value_get:0000000000000000 dac0_output_value_get
-     /tmp/cc7gBZyD.s:482    .text.dac0_output_value_get:000000000000000c $d
-     /tmp/cc7gBZyD.s:487    .text.dac0_flag_get:0000000000000000 $t
-     /tmp/cc7gBZyD.s:494    .text.dac0_flag_get:0000000000000000 dac0_flag_get
-     /tmp/cc7gBZyD.s:511    .text.dac0_flag_get:000000000000000c $d
-     /tmp/cc7gBZyD.s:516    .text.dac0_flag_clear:0000000000000000 $t
-     /tmp/cc7gBZyD.s:523    .text.dac0_flag_clear:0000000000000000 dac0_flag_clear
-     /tmp/cc7gBZyD.s:541    .text.dac0_flag_clear:0000000000000010 $d
-     /tmp/cc7gBZyD.s:546    .text.dac0_interrupt_flag_get:0000000000000000 $t
-     /tmp/cc7gBZyD.s:553    .text.dac0_interrupt_flag_get:0000000000000000 dac0_interrupt_flag_get
-     /tmp/cc7gBZyD.s:584    .text.dac0_interrupt_flag_get:0000000000000018 $d
-     /tmp/cc7gBZyD.s:589    .text.dac0_interrupt_flag_clear:0000000000000000 $t
-     /tmp/cc7gBZyD.s:596    .text.dac0_interrupt_flag_clear:0000000000000000 dac0_interrupt_flag_clear
-ARM GAS  /tmp/cc7gBZyD.s 			page 18
+     /tmp/cc3GRaVD.s:16     .text.dac_deinit:0000000000000000 $t
+     /tmp/cc3GRaVD.s:24     .text.dac_deinit:0000000000000000 dac_deinit
+     /tmp/cc3GRaVD.s:57     .text.dac0_enable:0000000000000000 $t
+     /tmp/cc3GRaVD.s:64     .text.dac0_enable:0000000000000000 dac0_enable
+     /tmp/cc3GRaVD.s:82     .text.dac0_enable:0000000000000010 $d
+     /tmp/cc3GRaVD.s:87     .text.dac0_disable:0000000000000000 $t
+     /tmp/cc3GRaVD.s:94     .text.dac0_disable:0000000000000000 dac0_disable
+     /tmp/cc3GRaVD.s:112    .text.dac0_disable:0000000000000010 $d
+     /tmp/cc3GRaVD.s:117    .text.dac0_dma_enable:0000000000000000 $t
+     /tmp/cc3GRaVD.s:124    .text.dac0_dma_enable:0000000000000000 dac0_dma_enable
+     /tmp/cc3GRaVD.s:142    .text.dac0_dma_enable:0000000000000010 $d
+     /tmp/cc3GRaVD.s:147    .text.dac0_dma_disable:0000000000000000 $t
+     /tmp/cc3GRaVD.s:154    .text.dac0_dma_disable:0000000000000000 dac0_dma_disable
+     /tmp/cc3GRaVD.s:172    .text.dac0_dma_disable:0000000000000010 $d
+     /tmp/cc3GRaVD.s:177    .text.dac0_output_buffer_enable:0000000000000000 $t
+     /tmp/cc3GRaVD.s:184    .text.dac0_output_buffer_enable:0000000000000000 dac0_output_buffer_enable
+     /tmp/cc3GRaVD.s:202    .text.dac0_output_buffer_enable:0000000000000010 $d
+     /tmp/cc3GRaVD.s:207    .text.dac0_output_buffer_disable:0000000000000000 $t
+     /tmp/cc3GRaVD.s:214    .text.dac0_output_buffer_disable:0000000000000000 dac0_output_buffer_disable
+     /tmp/cc3GRaVD.s:232    .text.dac0_output_buffer_disable:0000000000000010 $d
+     /tmp/cc3GRaVD.s:237    .text.dac0_trigger_enable:0000000000000000 $t
+     /tmp/cc3GRaVD.s:244    .text.dac0_trigger_enable:0000000000000000 dac0_trigger_enable
+     /tmp/cc3GRaVD.s:262    .text.dac0_trigger_enable:0000000000000010 $d
+     /tmp/cc3GRaVD.s:267    .text.dac0_trigger_disable:0000000000000000 $t
+     /tmp/cc3GRaVD.s:274    .text.dac0_trigger_disable:0000000000000000 dac0_trigger_disable
+     /tmp/cc3GRaVD.s:292    .text.dac0_trigger_disable:0000000000000010 $d
+     /tmp/cc3GRaVD.s:297    .text.dac0_software_trigger_enable:0000000000000000 $t
+     /tmp/cc3GRaVD.s:304    .text.dac0_software_trigger_enable:0000000000000000 dac0_software_trigger_enable
+     /tmp/cc3GRaVD.s:322    .text.dac0_software_trigger_enable:0000000000000010 $d
+     /tmp/cc3GRaVD.s:327    .text.dac0_software_trigger_disable:0000000000000000 $t
+     /tmp/cc3GRaVD.s:334    .text.dac0_software_trigger_disable:0000000000000000 dac0_software_trigger_disable
+     /tmp/cc3GRaVD.s:352    .text.dac0_software_trigger_disable:0000000000000010 $d
+     /tmp/cc3GRaVD.s:357    .text.dac0_interrupt_enable:0000000000000000 $t
+     /tmp/cc3GRaVD.s:364    .text.dac0_interrupt_enable:0000000000000000 dac0_interrupt_enable
+     /tmp/cc3GRaVD.s:382    .text.dac0_interrupt_enable:0000000000000010 $d
+     /tmp/cc3GRaVD.s:387    .text.dac0_interrupt_disable:0000000000000000 $t
+     /tmp/cc3GRaVD.s:394    .text.dac0_interrupt_disable:0000000000000000 dac0_interrupt_disable
+     /tmp/cc3GRaVD.s:412    .text.dac0_interrupt_disable:0000000000000010 $d
+     /tmp/cc3GRaVD.s:417    .text.dac0_trigger_source_config:0000000000000000 $t
+     /tmp/cc3GRaVD.s:424    .text.dac0_trigger_source_config:0000000000000000 dac0_trigger_source_config
+     /tmp/cc3GRaVD.s:448    .text.dac0_trigger_source_config:000000000000001c $d
+     /tmp/cc3GRaVD.s:453    .text.dac0_output_value_get:0000000000000000 $t
+     /tmp/cc3GRaVD.s:460    .text.dac0_output_value_get:0000000000000000 dac0_output_value_get
+     /tmp/cc3GRaVD.s:482    .text.dac0_output_value_get:000000000000000c $d
+     /tmp/cc3GRaVD.s:487    .text.dac0_flag_get:0000000000000000 $t
+     /tmp/cc3GRaVD.s:494    .text.dac0_flag_get:0000000000000000 dac0_flag_get
+     /tmp/cc3GRaVD.s:511    .text.dac0_flag_get:000000000000000c $d
+     /tmp/cc3GRaVD.s:516    .text.dac0_flag_clear:0000000000000000 $t
+     /tmp/cc3GRaVD.s:523    .text.dac0_flag_clear:0000000000000000 dac0_flag_clear
+     /tmp/cc3GRaVD.s:541    .text.dac0_flag_clear:0000000000000010 $d
+     /tmp/cc3GRaVD.s:546    .text.dac0_interrupt_flag_get:0000000000000000 $t
+     /tmp/cc3GRaVD.s:553    .text.dac0_interrupt_flag_get:0000000000000000 dac0_interrupt_flag_get
+     /tmp/cc3GRaVD.s:584    .text.dac0_interrupt_flag_get:0000000000000018 $d
+     /tmp/cc3GRaVD.s:589    .text.dac0_interrupt_flag_clear:0000000000000000 $t
+     /tmp/cc3GRaVD.s:596    .text.dac0_interrupt_flag_clear:0000000000000000 dac0_interrupt_flag_clear
+ARM GAS  /tmp/cc3GRaVD.s 			page 18
 
 
-     /tmp/cc7gBZyD.s:607    .text.dac0_data_set:0000000000000000 $t
-     /tmp/cc7gBZyD.s:614    .text.dac0_data_set:0000000000000000 dac0_data_set
-     /tmp/cc7gBZyD.s:653    .text.dac0_data_set:0000000000000024 $d
+     /tmp/cc3GRaVD.s:607    .text.dac0_data_set:0000000000000000 $t
+     /tmp/cc3GRaVD.s:614    .text.dac0_data_set:0000000000000000 dac0_data_set
+     /tmp/cc3GRaVD.s:653    .text.dac0_data_set:0000000000000024 $d
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable

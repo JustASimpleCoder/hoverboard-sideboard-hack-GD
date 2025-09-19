@@ -30,7 +30,7 @@
 #include "util.h"
 #include "mpu6050.h"
 #include "mpu6050_dmp.h"
-
+#include "madgwick_filter.h"
 
 /* The following functions must be defined for this platform:
  * i2c_write(unsigned char slave_addr, unsigned char reg_addr,
@@ -45,6 +45,8 @@
  */
 
 MPU_Data mpu;                                       // holds the MPU-6050 data
+Quaternion imu_quaternion;
+double last_quat_timestamp;
 
 #ifdef SERIAL_AUX_RX
 uint8_t print_aux = 0;                              // print AUX serial data
@@ -3579,11 +3581,29 @@ void mpu_get_data(void)
             new_data = 1;
         }
     }
-
+    
     if (new_data) {
         // do something if needed
-    }
-        
+
+        double dt = (sensor_timestamp - last_quat_timestamp) / 1000.0f;  // Convert ms to seconds
+        last_quat_timestamp = sensor_timestamp;
+        madgwick_update(&imu_quaternion,
+                        (double)mpu.accel.x / ACCEL_TO_G, 
+                        (double)mpu.accel.y / ACCEL_TO_G, 
+                        (double)mpu.accel.z / ACCEL_TO_G,
+                        ( (double)mpu.gyro.x / GYRO_TO_DEG_S )*( M_PI/ 180.00), 
+                        ( (double)mpu.gyro.y / GYRO_TO_DEG_S )*( M_PI/ 180.00),  
+                        ( (double)mpu.gyro.z / GYRO_TO_DEG_S )*( M_PI/ 180.00),
+                        dt
+                    );
+
+        mpu.quat.w = imu_quaternion.w;
+        mpu.quat.x = imu_quaternion.x;
+        mpu.quat.y = imu_quaternion.y;
+        mpu.quat.z = imu_quaternion.z;
+
+        mpu_calc_euler_angles();
+    }   
 }
 
 

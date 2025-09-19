@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc1XCVhl.s 			page 1
+ARM GAS  /tmp/ccexM6Do.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
   26:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     rcu_periph_reset_enable(RCU_TSIRST);
   31              		.loc 1 26 5 view .LVU1
   25:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     rcu_periph_reset_enable(RCU_TSIRST);
-ARM GAS  /tmp/cc1XCVhl.s 			page 2
+ARM GAS  /tmp/ccexM6Do.s 			page 2
 
 
   32              		.loc 1 25 1 is_stmt 0 view .LVU2
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
   47:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM511:   the max cycle number of a sequence is 511
   48:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM1023:  the max cycle number of a sequence is 1023
   49:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM2047:  the max cycle number of a sequence is 2047
-ARM GAS  /tmp/cc1XCVhl.s 			page 3
+ARM GAS  /tmp/ccexM6Do.s 			page 3
 
 
   50:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM4095:  the max cycle number of a sequence is 4095
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  103 0014 2143     		orrs	r1, r1, r4
  104              	.LVL6:
  105              		.loc 1 63 13 view .LVU20
-ARM GAS  /tmp/cc1XCVhl.s 			page 4
+ARM GAS  /tmp/ccexM6Do.s 			page 4
 
 
  106 0016 0843     		orrs	r0, r0, r1
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  147              		.loc 1 78 9 is_stmt 1 view .LVU29
  148              		.loc 1 78 21 is_stmt 0 view .LVU30
  149 0006 5EBF     		ittt	pl
-ARM GAS  /tmp/cc1XCVhl.s 			page 5
+ARM GAS  /tmp/ccexM6Do.s 			page 5
 
 
  150 0008 1A6A     		ldrpl	r2, [r3, #32]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  192              		.loc 1 92 21 view .LVU39
  193 000e 1862     		strpl	r0, [r3, #32]
   93:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     }
-ARM GAS  /tmp/cc1XCVhl.s 			page 6
+ARM GAS  /tmp/ccexM6Do.s 			page 6
 
 
   94:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  238              		.thumb
  239              		.thumb_func
  240              		.fpu softvfp
-ARM GAS  /tmp/cc1XCVhl.s 			page 7
+ARM GAS  /tmp/ccexM6Do.s 			page 7
 
 
  242              	tsi_channel_pin_disable:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  129:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV64:  fCTCLK = fHCLK/64
  130:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CTCDIV_DIV128: fCTCLK = fHCLK/128
  131:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  charge_duration: charge state duration time
-ARM GAS  /tmp/cc1XCVhl.s 			page 8
+ARM GAS  /tmp/ccexM6Do.s 			page 8
 
 
  132:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_CHARGE_xCTCLK(x=1..16): the duration time of charge state is x CTCLK
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  312              		.loc 1 146 17 is_stmt 0 view .LVU63
  313 001a 2860     		str	r0, [r5]
  314              	.LVL19:
-ARM GAS  /tmp/cc1XCVhl.s 			page 9
+ARM GAS  /tmp/ccexM6Do.s 			page 9
 
 
  315              	.L20:
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  356              	.L27:
  357 0012 00BF     		.align	2
  358              	.L26:
-ARM GAS  /tmp/cc1XCVhl.s 			page 10
+ARM GAS  /tmp/ccexM6Do.s 			page 10
 
 
  359 0014 00400240 		.word	1073889280
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  397              		.loc 1 178 21 is_stmt 0 view .LVU83
  398 0014 22F00802 		bic	r2, r2, #8
  399              	.L31:
-ARM GAS  /tmp/cc1XCVhl.s 			page 11
+ARM GAS  /tmp/ccexM6Do.s 			page 11
 
 
  179:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         }else{
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  437              		.loc 1 195 7 view .LVU91
  438 0004 9207     		lsls	r2, r2, #30
  439 0006 04D4     		bmi	.L34
-ARM GAS  /tmp/cc1XCVhl.s 			page 12
+ARM GAS  /tmp/ccexM6Do.s 			page 12
 
 
  196:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         if(TSI_OUTPUT_LOW == pin_mode){
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  212:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM8191:  the max cycle number of a sequence is 8191
  213:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_MAXNUM16383: the max cycle number of a sequence is 16383
  214:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
-ARM GAS  /tmp/cc1XCVhl.s 			page 13
+ARM GAS  /tmp/ccexM6Do.s 			page 13
 
 
  215:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  519              		.syntax unified
  520              		.thumb
  521              		.thumb_func
-ARM GAS  /tmp/cc1XCVhl.s 			page 14
+ARM GAS  /tmp/ccexM6Do.s 			page 14
 
 
  522              		.fpu softvfp
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  559              		@ frame_needed = 0, uses_anonymous_args = 0
  560              		@ link register save eliminated.
  248:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_CTL &= ~TSI_CTL_TSIS;
-ARM GAS  /tmp/cc1XCVhl.s 			page 15
+ARM GAS  /tmp/ccexM6Do.s 			page 15
 
 
  561              		.loc 1 248 5 view .LVU120
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  606              		.section	.text.tsi_disable,"ax",%progbits
  607              		.align	1
  608              		.global	tsi_disable
-ARM GAS  /tmp/cc1XCVhl.s 			page 16
+ARM GAS  /tmp/ccexM6Do.s 			page 16
 
 
  609              		.syntax unified
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  280:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_EXTEND_DIV2: fECCLK = fHCLK/2
  281:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  max_duration: value range 1...128,extend charge state maximum duration time is 1*tE
  282:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
-ARM GAS  /tmp/cc1XCVhl.s 			page 17
+ARM GAS  /tmp/ccexM6Do.s 			page 17
 
 
  283:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     none 
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  305:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             TSI_CTL |= TSI_CTL_ECEN;
  306:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****         }
  307:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     }
-ARM GAS  /tmp/cc1XCVhl.s 			page 18
+ARM GAS  /tmp/ccexM6Do.s 			page 18
 
 
  308:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  715              	.LVL33:
  302:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****             }
  716              		.loc 1 302 25 view .LVU159
-ARM GAS  /tmp/cc1XCVhl.s 			page 19
+ARM GAS  /tmp/ccexM6Do.s 			page 19
 
 
  717 0032 2360     		str	r3, [r4]
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  320:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     TSI_INTEN |= source;
  758              		.loc 1 320 5 view .LVU166
  759              		.loc 1 320 15 is_stmt 0 view .LVU167
-ARM GAS  /tmp/cc1XCVhl.s 			page 20
+ARM GAS  /tmp/ccexM6Do.s 			page 20
 
 
  760 0000 024A     		ldr	r2, .L65
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  802              	.LFE73:
  804              		.section	.text.tsi_interrupt_flag_clear,"ax",%progbits
  805              		.align	1
-ARM GAS  /tmp/cc1XCVhl.s 			page 21
+ARM GAS  /tmp/ccexM6Do.s 			page 21
 
 
  806              		.global	tsi_interrupt_flag_clear
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  352:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_INT_FLAG_CTC: charge-transfer complete flag
  353:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_INT_FLAG_MNERR:  max Cycle Number Error
  354:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[out] none
-ARM GAS  /tmp/cc1XCVhl.s 			page 22
+ARM GAS  /tmp/ccexM6Do.s 			page 22
 
 
  355:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \retval     FlagStatus:SET or RESET
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  882              		.loc 1 374 1 is_stmt 1 view -0
  883              		.cfi_startproc
  884              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/cc1XCVhl.s 			page 23
+ARM GAS  /tmp/ccexM6Do.s 			page 23
 
 
  885              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  927              		.align	2
  928              	.L80:
  929 000c 00400240 		.word	1073889280
-ARM GAS  /tmp/cc1XCVhl.s 			page 24
+ARM GAS  /tmp/ccexM6Do.s 			page 24
 
 
  930              		.cfi_endproc
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  402:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
  403:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      switch off analog pin 
  404:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  group_pin: select pin which will be switched off analog
-ARM GAS  /tmp/cc1XCVhl.s 			page 25
+ARM GAS  /tmp/ccexM6Do.s 			page 25
 
 
  405:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****       \arg        TSI_ASW_GxPy(x=0..5,y=0..3):pin y of group x switch off analog
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  1012              		.loc 1 423 14 is_stmt 0 view .LVU201
  1013 0000 024A     		ldr	r2, .L89
  1014 0002 136B     		ldr	r3, [r2, #48]
-ARM GAS  /tmp/cc1XCVhl.s 			page 26
+ARM GAS  /tmp/ccexM6Do.s 			page 26
 
 
  1015 0004 0343     		orrs	r3, r3, r0
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  1059              		.global	tsi_group_status_get
  1060              		.syntax unified
  1061              		.thumb
-ARM GAS  /tmp/cc1XCVhl.s 			page 27
+ARM GAS  /tmp/ccexM6Do.s 			page 27
 
 
  1062              		.thumb_func
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  453:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
  454:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
  455:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      get the cycle number for group0 as soon as a charge-transfer sequence completes  
-ARM GAS  /tmp/cc1XCVhl.s 			page 28
+ARM GAS  /tmp/ccexM6Do.s 			page 28
 
 
  456:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  none
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  474:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
  1141              		.loc 1 474 1 view .LVU220
  1142 0004 80B2     		uxth	r0, r0
-ARM GAS  /tmp/cc1XCVhl.s 			page 29
+ARM GAS  /tmp/ccexM6Do.s 			page 29
 
 
  1143 0006 7047     		bx	lr
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  486:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** 
  487:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** /*!
  488:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \brief      get the cycle number for group3 as soon as a charge-transfer sequence completes  
-ARM GAS  /tmp/cc1XCVhl.s 			page 30
+ARM GAS  /tmp/ccexM6Do.s 			page 30
 
 
  489:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c ****     \param[in]  none
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  507:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_tsi.c **** }
  1228              		.loc 1 507 1 view .LVU232
  1229 0004 80B2     		uxth	r0, r0
-ARM GAS  /tmp/cc1XCVhl.s 			page 31
+ARM GAS  /tmp/ccexM6Do.s 			page 31
 
 
  1230 0006 7047     		bx	lr
@@ -1851,112 +1851,112 @@ ARM GAS  /tmp/cc1XCVhl.s 			page 1
  1269              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
  1270              		.file 3 "Drivers/CMSIS/Include/gd32f1x0.h"
  1271              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
-ARM GAS  /tmp/cc1XCVhl.s 			page 32
+ARM GAS  /tmp/ccexM6Do.s 			page 32
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32f1x0_tsi.c
-     /tmp/cc1XCVhl.s:16     .text.tsi_deinit:0000000000000000 $t
-     /tmp/cc1XCVhl.s:24     .text.tsi_deinit:0000000000000000 tsi_deinit
-     /tmp/cc1XCVhl.s:57     .text.tsi_init:0000000000000000 $t
-     /tmp/cc1XCVhl.s:64     .text.tsi_init:0000000000000000 tsi_init
-     /tmp/cc1XCVhl.s:120    .text.tsi_init:000000000000001c $d
-     /tmp/cc1XCVhl.s:126    .text.tsi_sample_pin_enable:0000000000000000 $t
-     /tmp/cc1XCVhl.s:133    .text.tsi_sample_pin_enable:0000000000000000 tsi_sample_pin_enable
-     /tmp/cc1XCVhl.s:160    .text.tsi_sample_pin_enable:0000000000000010 $d
-     /tmp/cc1XCVhl.s:165    .text.tsi_sample_pin_disable:0000000000000000 $t
-     /tmp/cc1XCVhl.s:172    .text.tsi_sample_pin_disable:0000000000000000 tsi_sample_pin_disable
-     /tmp/cc1XCVhl.s:199    .text.tsi_sample_pin_disable:0000000000000014 $d
-     /tmp/cc1XCVhl.s:204    .text.tsi_channel_pin_enable:0000000000000000 $t
-     /tmp/cc1XCVhl.s:211    .text.tsi_channel_pin_enable:0000000000000000 tsi_channel_pin_enable
-     /tmp/cc1XCVhl.s:230    .text.tsi_channel_pin_enable:000000000000000c $d
-     /tmp/cc1XCVhl.s:235    .text.tsi_channel_pin_disable:0000000000000000 $t
-     /tmp/cc1XCVhl.s:242    .text.tsi_channel_pin_disable:0000000000000000 tsi_channel_pin_disable
-     /tmp/cc1XCVhl.s:261    .text.tsi_channel_pin_disable:000000000000000c $d
-     /tmp/cc1XCVhl.s:266    .text.tsi_plus_config:0000000000000000 $t
-     /tmp/cc1XCVhl.s:273    .text.tsi_plus_config:0000000000000000 tsi_plus_config
-     /tmp/cc1XCVhl.s:323    .text.tsi_plus_config:0000000000000020 $d
-     /tmp/cc1XCVhl.s:328    .text.tsi_sofeware_mode_config:0000000000000000 $t
-     /tmp/cc1XCVhl.s:335    .text.tsi_sofeware_mode_config:0000000000000000 tsi_sofeware_mode_config
-     /tmp/cc1XCVhl.s:359    .text.tsi_sofeware_mode_config:0000000000000014 $d
-     /tmp/cc1XCVhl.s:364    .text.tsi_hardware_mode_config:0000000000000000 $t
-     /tmp/cc1XCVhl.s:371    .text.tsi_hardware_mode_config:0000000000000000 tsi_hardware_mode_config
-     /tmp/cc1XCVhl.s:413    .text.tsi_hardware_mode_config:0000000000000024 $d
-     /tmp/cc1XCVhl.s:418    .text.tsi_pin_mode_config:0000000000000000 $t
-     /tmp/cc1XCVhl.s:425    .text.tsi_pin_mode_config:0000000000000000 tsi_pin_mode_config
-     /tmp/cc1XCVhl.s:462    .text.tsi_pin_mode_config:000000000000001c $d
-     /tmp/cc1XCVhl.s:467    .text.tsi_max_number_config:0000000000000000 $t
-     /tmp/cc1XCVhl.s:474    .text.tsi_max_number_config:0000000000000000 tsi_max_number_config
-     /tmp/cc1XCVhl.s:512    .text.tsi_max_number_config:0000000000000014 $d
-     /tmp/cc1XCVhl.s:517    .text.tsi_software_start:0000000000000000 $t
-     /tmp/cc1XCVhl.s:524    .text.tsi_software_start:0000000000000000 tsi_software_start
-     /tmp/cc1XCVhl.s:542    .text.tsi_software_start:000000000000000c $d
-     /tmp/cc1XCVhl.s:547    .text.tsi_software_stop:0000000000000000 $t
-     /tmp/cc1XCVhl.s:554    .text.tsi_software_stop:0000000000000000 tsi_software_stop
-     /tmp/cc1XCVhl.s:572    .text.tsi_software_stop:000000000000000c $d
-     /tmp/cc1XCVhl.s:577    .text.tsi_enable:0000000000000000 $t
-     /tmp/cc1XCVhl.s:584    .text.tsi_enable:0000000000000000 tsi_enable
-     /tmp/cc1XCVhl.s:602    .text.tsi_enable:000000000000000c $d
-     /tmp/cc1XCVhl.s:607    .text.tsi_disable:0000000000000000 $t
-     /tmp/cc1XCVhl.s:614    .text.tsi_disable:0000000000000000 tsi_disable
-     /tmp/cc1XCVhl.s:632    .text.tsi_disable:000000000000000c $d
-     /tmp/cc1XCVhl.s:637    .text.tsi_extend_charge_config:0000000000000000 $t
-     /tmp/cc1XCVhl.s:644    .text.tsi_extend_charge_config:0000000000000000 tsi_extend_charge_config
-     /tmp/cc1XCVhl.s:737    .text.tsi_extend_charge_config:0000000000000044 $d
-     /tmp/cc1XCVhl.s:743    .text.tsi_interrupt_enable:0000000000000000 $t
-     /tmp/cc1XCVhl.s:750    .text.tsi_interrupt_enable:0000000000000000 tsi_interrupt_enable
-     /tmp/cc1XCVhl.s:769    .text.tsi_interrupt_enable:000000000000000c $d
-     /tmp/cc1XCVhl.s:774    .text.tsi_interrupt_disable:0000000000000000 $t
-     /tmp/cc1XCVhl.s:781    .text.tsi_interrupt_disable:0000000000000000 tsi_interrupt_disable
-     /tmp/cc1XCVhl.s:800    .text.tsi_interrupt_disable:000000000000000c $d
-     /tmp/cc1XCVhl.s:805    .text.tsi_interrupt_flag_clear:0000000000000000 $t
-     /tmp/cc1XCVhl.s:812    .text.tsi_interrupt_flag_clear:0000000000000000 tsi_interrupt_flag_clear
-ARM GAS  /tmp/cc1XCVhl.s 			page 33
+     /tmp/ccexM6Do.s:16     .text.tsi_deinit:0000000000000000 $t
+     /tmp/ccexM6Do.s:24     .text.tsi_deinit:0000000000000000 tsi_deinit
+     /tmp/ccexM6Do.s:57     .text.tsi_init:0000000000000000 $t
+     /tmp/ccexM6Do.s:64     .text.tsi_init:0000000000000000 tsi_init
+     /tmp/ccexM6Do.s:120    .text.tsi_init:000000000000001c $d
+     /tmp/ccexM6Do.s:126    .text.tsi_sample_pin_enable:0000000000000000 $t
+     /tmp/ccexM6Do.s:133    .text.tsi_sample_pin_enable:0000000000000000 tsi_sample_pin_enable
+     /tmp/ccexM6Do.s:160    .text.tsi_sample_pin_enable:0000000000000010 $d
+     /tmp/ccexM6Do.s:165    .text.tsi_sample_pin_disable:0000000000000000 $t
+     /tmp/ccexM6Do.s:172    .text.tsi_sample_pin_disable:0000000000000000 tsi_sample_pin_disable
+     /tmp/ccexM6Do.s:199    .text.tsi_sample_pin_disable:0000000000000014 $d
+     /tmp/ccexM6Do.s:204    .text.tsi_channel_pin_enable:0000000000000000 $t
+     /tmp/ccexM6Do.s:211    .text.tsi_channel_pin_enable:0000000000000000 tsi_channel_pin_enable
+     /tmp/ccexM6Do.s:230    .text.tsi_channel_pin_enable:000000000000000c $d
+     /tmp/ccexM6Do.s:235    .text.tsi_channel_pin_disable:0000000000000000 $t
+     /tmp/ccexM6Do.s:242    .text.tsi_channel_pin_disable:0000000000000000 tsi_channel_pin_disable
+     /tmp/ccexM6Do.s:261    .text.tsi_channel_pin_disable:000000000000000c $d
+     /tmp/ccexM6Do.s:266    .text.tsi_plus_config:0000000000000000 $t
+     /tmp/ccexM6Do.s:273    .text.tsi_plus_config:0000000000000000 tsi_plus_config
+     /tmp/ccexM6Do.s:323    .text.tsi_plus_config:0000000000000020 $d
+     /tmp/ccexM6Do.s:328    .text.tsi_sofeware_mode_config:0000000000000000 $t
+     /tmp/ccexM6Do.s:335    .text.tsi_sofeware_mode_config:0000000000000000 tsi_sofeware_mode_config
+     /tmp/ccexM6Do.s:359    .text.tsi_sofeware_mode_config:0000000000000014 $d
+     /tmp/ccexM6Do.s:364    .text.tsi_hardware_mode_config:0000000000000000 $t
+     /tmp/ccexM6Do.s:371    .text.tsi_hardware_mode_config:0000000000000000 tsi_hardware_mode_config
+     /tmp/ccexM6Do.s:413    .text.tsi_hardware_mode_config:0000000000000024 $d
+     /tmp/ccexM6Do.s:418    .text.tsi_pin_mode_config:0000000000000000 $t
+     /tmp/ccexM6Do.s:425    .text.tsi_pin_mode_config:0000000000000000 tsi_pin_mode_config
+     /tmp/ccexM6Do.s:462    .text.tsi_pin_mode_config:000000000000001c $d
+     /tmp/ccexM6Do.s:467    .text.tsi_max_number_config:0000000000000000 $t
+     /tmp/ccexM6Do.s:474    .text.tsi_max_number_config:0000000000000000 tsi_max_number_config
+     /tmp/ccexM6Do.s:512    .text.tsi_max_number_config:0000000000000014 $d
+     /tmp/ccexM6Do.s:517    .text.tsi_software_start:0000000000000000 $t
+     /tmp/ccexM6Do.s:524    .text.tsi_software_start:0000000000000000 tsi_software_start
+     /tmp/ccexM6Do.s:542    .text.tsi_software_start:000000000000000c $d
+     /tmp/ccexM6Do.s:547    .text.tsi_software_stop:0000000000000000 $t
+     /tmp/ccexM6Do.s:554    .text.tsi_software_stop:0000000000000000 tsi_software_stop
+     /tmp/ccexM6Do.s:572    .text.tsi_software_stop:000000000000000c $d
+     /tmp/ccexM6Do.s:577    .text.tsi_enable:0000000000000000 $t
+     /tmp/ccexM6Do.s:584    .text.tsi_enable:0000000000000000 tsi_enable
+     /tmp/ccexM6Do.s:602    .text.tsi_enable:000000000000000c $d
+     /tmp/ccexM6Do.s:607    .text.tsi_disable:0000000000000000 $t
+     /tmp/ccexM6Do.s:614    .text.tsi_disable:0000000000000000 tsi_disable
+     /tmp/ccexM6Do.s:632    .text.tsi_disable:000000000000000c $d
+     /tmp/ccexM6Do.s:637    .text.tsi_extend_charge_config:0000000000000000 $t
+     /tmp/ccexM6Do.s:644    .text.tsi_extend_charge_config:0000000000000000 tsi_extend_charge_config
+     /tmp/ccexM6Do.s:737    .text.tsi_extend_charge_config:0000000000000044 $d
+     /tmp/ccexM6Do.s:743    .text.tsi_interrupt_enable:0000000000000000 $t
+     /tmp/ccexM6Do.s:750    .text.tsi_interrupt_enable:0000000000000000 tsi_interrupt_enable
+     /tmp/ccexM6Do.s:769    .text.tsi_interrupt_enable:000000000000000c $d
+     /tmp/ccexM6Do.s:774    .text.tsi_interrupt_disable:0000000000000000 $t
+     /tmp/ccexM6Do.s:781    .text.tsi_interrupt_disable:0000000000000000 tsi_interrupt_disable
+     /tmp/ccexM6Do.s:800    .text.tsi_interrupt_disable:000000000000000c $d
+     /tmp/ccexM6Do.s:805    .text.tsi_interrupt_flag_clear:0000000000000000 $t
+     /tmp/ccexM6Do.s:812    .text.tsi_interrupt_flag_clear:0000000000000000 tsi_interrupt_flag_clear
+ARM GAS  /tmp/ccexM6Do.s 			page 33
 
 
-     /tmp/cc1XCVhl.s:831    .text.tsi_interrupt_flag_clear:000000000000000c $d
-     /tmp/cc1XCVhl.s:836    .text.tsi_interrupt_flag_get:0000000000000000 $t
-     /tmp/cc1XCVhl.s:843    .text.tsi_interrupt_flag_get:0000000000000000 tsi_interrupt_flag_get
-     /tmp/cc1XCVhl.s:867    .text.tsi_interrupt_flag_get:0000000000000010 $d
-     /tmp/cc1XCVhl.s:872    .text.tsi_hysteresis_on:0000000000000000 $t
-     /tmp/cc1XCVhl.s:879    .text.tsi_hysteresis_on:0000000000000000 tsi_hysteresis_on
-     /tmp/cc1XCVhl.s:898    .text.tsi_hysteresis_on:000000000000000c $d
-     /tmp/cc1XCVhl.s:903    .text.tsi_hysteresis_off:0000000000000000 $t
-     /tmp/cc1XCVhl.s:910    .text.tsi_hysteresis_off:0000000000000000 tsi_hysteresis_off
-     /tmp/cc1XCVhl.s:929    .text.tsi_hysteresis_off:000000000000000c $d
-     /tmp/cc1XCVhl.s:934    .text.tsi_analog_on:0000000000000000 $t
-     /tmp/cc1XCVhl.s:941    .text.tsi_analog_on:0000000000000000 tsi_analog_on
-     /tmp/cc1XCVhl.s:960    .text.tsi_analog_on:000000000000000c $d
-     /tmp/cc1XCVhl.s:965    .text.tsi_analog_off:0000000000000000 $t
-     /tmp/cc1XCVhl.s:972    .text.tsi_analog_off:0000000000000000 tsi_analog_off
-     /tmp/cc1XCVhl.s:991    .text.tsi_analog_off:000000000000000c $d
-     /tmp/cc1XCVhl.s:996    .text.tsi_group_enable:0000000000000000 $t
-     /tmp/cc1XCVhl.s:1003   .text.tsi_group_enable:0000000000000000 tsi_group_enable
-     /tmp/cc1XCVhl.s:1022   .text.tsi_group_enable:000000000000000c $d
-     /tmp/cc1XCVhl.s:1027   .text.tsi_group_disable:0000000000000000 $t
-     /tmp/cc1XCVhl.s:1034   .text.tsi_group_disable:0000000000000000 tsi_group_disable
-     /tmp/cc1XCVhl.s:1053   .text.tsi_group_disable:000000000000000c $d
-     /tmp/cc1XCVhl.s:1058   .text.tsi_group_status_get:0000000000000000 $t
-     /tmp/cc1XCVhl.s:1065   .text.tsi_group_status_get:0000000000000000 tsi_group_status_get
-     /tmp/cc1XCVhl.s:1089   .text.tsi_group_status_get:0000000000000010 $d
-     /tmp/cc1XCVhl.s:1094   .text.tsi_group0_cycle_get:0000000000000000 $t
-     /tmp/cc1XCVhl.s:1101   .text.tsi_group0_cycle_get:0000000000000000 tsi_group0_cycle_get
-     /tmp/cc1XCVhl.s:1118   .text.tsi_group0_cycle_get:0000000000000008 $d
-     /tmp/cc1XCVhl.s:1123   .text.tsi_group1_cycle_get:0000000000000000 $t
-     /tmp/cc1XCVhl.s:1130   .text.tsi_group1_cycle_get:0000000000000000 tsi_group1_cycle_get
-     /tmp/cc1XCVhl.s:1147   .text.tsi_group1_cycle_get:0000000000000008 $d
-     /tmp/cc1XCVhl.s:1152   .text.tsi_group2_cycle_get:0000000000000000 $t
-     /tmp/cc1XCVhl.s:1159   .text.tsi_group2_cycle_get:0000000000000000 tsi_group2_cycle_get
-     /tmp/cc1XCVhl.s:1176   .text.tsi_group2_cycle_get:0000000000000008 $d
-     /tmp/cc1XCVhl.s:1181   .text.tsi_group3_cycle_get:0000000000000000 $t
-     /tmp/cc1XCVhl.s:1188   .text.tsi_group3_cycle_get:0000000000000000 tsi_group3_cycle_get
-     /tmp/cc1XCVhl.s:1205   .text.tsi_group3_cycle_get:0000000000000008 $d
-     /tmp/cc1XCVhl.s:1210   .text.tsi_group4_cycle_get:0000000000000000 $t
-     /tmp/cc1XCVhl.s:1217   .text.tsi_group4_cycle_get:0000000000000000 tsi_group4_cycle_get
-     /tmp/cc1XCVhl.s:1234   .text.tsi_group4_cycle_get:0000000000000008 $d
-     /tmp/cc1XCVhl.s:1239   .text.tsi_group5_cycle_get:0000000000000000 $t
-     /tmp/cc1XCVhl.s:1246   .text.tsi_group5_cycle_get:0000000000000000 tsi_group5_cycle_get
-     /tmp/cc1XCVhl.s:1263   .text.tsi_group5_cycle_get:0000000000000008 $d
+     /tmp/ccexM6Do.s:831    .text.tsi_interrupt_flag_clear:000000000000000c $d
+     /tmp/ccexM6Do.s:836    .text.tsi_interrupt_flag_get:0000000000000000 $t
+     /tmp/ccexM6Do.s:843    .text.tsi_interrupt_flag_get:0000000000000000 tsi_interrupt_flag_get
+     /tmp/ccexM6Do.s:867    .text.tsi_interrupt_flag_get:0000000000000010 $d
+     /tmp/ccexM6Do.s:872    .text.tsi_hysteresis_on:0000000000000000 $t
+     /tmp/ccexM6Do.s:879    .text.tsi_hysteresis_on:0000000000000000 tsi_hysteresis_on
+     /tmp/ccexM6Do.s:898    .text.tsi_hysteresis_on:000000000000000c $d
+     /tmp/ccexM6Do.s:903    .text.tsi_hysteresis_off:0000000000000000 $t
+     /tmp/ccexM6Do.s:910    .text.tsi_hysteresis_off:0000000000000000 tsi_hysteresis_off
+     /tmp/ccexM6Do.s:929    .text.tsi_hysteresis_off:000000000000000c $d
+     /tmp/ccexM6Do.s:934    .text.tsi_analog_on:0000000000000000 $t
+     /tmp/ccexM6Do.s:941    .text.tsi_analog_on:0000000000000000 tsi_analog_on
+     /tmp/ccexM6Do.s:960    .text.tsi_analog_on:000000000000000c $d
+     /tmp/ccexM6Do.s:965    .text.tsi_analog_off:0000000000000000 $t
+     /tmp/ccexM6Do.s:972    .text.tsi_analog_off:0000000000000000 tsi_analog_off
+     /tmp/ccexM6Do.s:991    .text.tsi_analog_off:000000000000000c $d
+     /tmp/ccexM6Do.s:996    .text.tsi_group_enable:0000000000000000 $t
+     /tmp/ccexM6Do.s:1003   .text.tsi_group_enable:0000000000000000 tsi_group_enable
+     /tmp/ccexM6Do.s:1022   .text.tsi_group_enable:000000000000000c $d
+     /tmp/ccexM6Do.s:1027   .text.tsi_group_disable:0000000000000000 $t
+     /tmp/ccexM6Do.s:1034   .text.tsi_group_disable:0000000000000000 tsi_group_disable
+     /tmp/ccexM6Do.s:1053   .text.tsi_group_disable:000000000000000c $d
+     /tmp/ccexM6Do.s:1058   .text.tsi_group_status_get:0000000000000000 $t
+     /tmp/ccexM6Do.s:1065   .text.tsi_group_status_get:0000000000000000 tsi_group_status_get
+     /tmp/ccexM6Do.s:1089   .text.tsi_group_status_get:0000000000000010 $d
+     /tmp/ccexM6Do.s:1094   .text.tsi_group0_cycle_get:0000000000000000 $t
+     /tmp/ccexM6Do.s:1101   .text.tsi_group0_cycle_get:0000000000000000 tsi_group0_cycle_get
+     /tmp/ccexM6Do.s:1118   .text.tsi_group0_cycle_get:0000000000000008 $d
+     /tmp/ccexM6Do.s:1123   .text.tsi_group1_cycle_get:0000000000000000 $t
+     /tmp/ccexM6Do.s:1130   .text.tsi_group1_cycle_get:0000000000000000 tsi_group1_cycle_get
+     /tmp/ccexM6Do.s:1147   .text.tsi_group1_cycle_get:0000000000000008 $d
+     /tmp/ccexM6Do.s:1152   .text.tsi_group2_cycle_get:0000000000000000 $t
+     /tmp/ccexM6Do.s:1159   .text.tsi_group2_cycle_get:0000000000000000 tsi_group2_cycle_get
+     /tmp/ccexM6Do.s:1176   .text.tsi_group2_cycle_get:0000000000000008 $d
+     /tmp/ccexM6Do.s:1181   .text.tsi_group3_cycle_get:0000000000000000 $t
+     /tmp/ccexM6Do.s:1188   .text.tsi_group3_cycle_get:0000000000000000 tsi_group3_cycle_get
+     /tmp/ccexM6Do.s:1205   .text.tsi_group3_cycle_get:0000000000000008 $d
+     /tmp/ccexM6Do.s:1210   .text.tsi_group4_cycle_get:0000000000000000 $t
+     /tmp/ccexM6Do.s:1217   .text.tsi_group4_cycle_get:0000000000000000 tsi_group4_cycle_get
+     /tmp/ccexM6Do.s:1234   .text.tsi_group4_cycle_get:0000000000000008 $d
+     /tmp/ccexM6Do.s:1239   .text.tsi_group5_cycle_get:0000000000000000 $t
+     /tmp/ccexM6Do.s:1246   .text.tsi_group5_cycle_get:0000000000000000 tsi_group5_cycle_get
+     /tmp/ccexM6Do.s:1263   .text.tsi_group5_cycle_get:0000000000000008 $d
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cco2egur.s 			page 1
+ARM GAS  /tmp/ccaDU9Nh.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
   25:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     switch(gpio_periph){
   32              		.loc 1 25 5 view .LVU1
   24:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     switch(gpio_periph){
-ARM GAS  /tmp/cco2egur.s 			page 2
+ARM GAS  /tmp/ccaDU9Nh.s 			page 2
 
 
   33              		.loc 1 24 1 is_stmt 0 view .LVU2
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
   57 0020 03F50063 		add	r3, r3, #2048
   58 0024 9842     		cmp	r0, r3
   59 0026 F7D1     		bne	.L1
-ARM GAS  /tmp/cco2egur.s 			page 3
+ARM GAS  /tmp/ccaDU9Nh.s 			page 3
 
 
   48:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOFRST);
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
   38:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOCRST);
  104              		.loc 1 38 9 view .LVU17
  105 0058 40F61320 		movw	r0, #2579
-ARM GAS  /tmp/cco2egur.s 			page 4
+ARM GAS  /tmp/ccaDU9Nh.s 			page 4
 
 
  106              	.LVL10:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
   69:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[out] none
   70:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \retval     none
   71:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
-ARM GAS  /tmp/cco2egur.s 			page 5
+ARM GAS  /tmp/ccaDU9Nh.s 			page 5
 
 
   72:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** void gpio_mode_set(uint32_t gpio_periph,uint32_t mode,uint32_t pull_up_down,uint32_t pin)
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
   81:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin mode bits */
  178              		.loc 1 81 16 is_stmt 0 view .LVU37
  179 0012 0EFA06F7 		lsl	r7, lr, r6
-ARM GAS  /tmp/cco2egur.s 			page 6
+ARM GAS  /tmp/ccaDU9Nh.s 			page 6
 
 
   81:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin mode bits */
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
  215              		.loc 1 94 5 is_stmt 1 view .LVU54
  216              		.loc 1 94 27 is_stmt 0 view .LVU55
  217 003c 0560     		str	r5, [r0]
-ARM GAS  /tmp/cco2egur.s 			page 7
+ARM GAS  /tmp/ccaDU9Nh.s 			page 7
 
 
   95:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     GPIO_PUD(gpio_periph) = pupd;
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
  250              		.cfi_offset 5, -16
  251              		.cfi_offset 6, -12
  252              		.cfi_offset 7, -8
-ARM GAS  /tmp/cco2egur.s 			page 8
+ARM GAS  /tmp/ccaDU9Nh.s 			page 8
 
 
  253              		.cfi_offset 14, -4
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
  127:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****             /* clear the specified pin output speed bits */
  283              		.loc 1 127 11 view .LVU80
  284 001a 1D42     		tst	r5, r3
-ARM GAS  /tmp/cco2egur.s 			page 9
+ARM GAS  /tmp/ccaDU9Nh.s 			page 9
 
 
  285 001c 07D0     		beq	.L22
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
  140:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
  141:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[out] none
  142:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \retval     none
-ARM GAS  /tmp/cco2egur.s 			page 10
+ARM GAS  /tmp/ccaDU9Nh.s 			page 10
 
 
  143:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** */
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
  367              		.syntax unified
  368              		.thumb
  369              		.thumb_func
-ARM GAS  /tmp/cco2egur.s 			page 11
+ARM GAS  /tmp/ccaDU9Nh.s 			page 11
 
 
  370              		.fpu softvfp
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
  180:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*!
  181:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \brief      write data to the specified GPIO port
  182:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,F) 
-ARM GAS  /tmp/cco2egur.s 			page 12
+ARM GAS  /tmp/ccaDU9Nh.s 			page 12
 
 
  183:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  data: specify the value to be written to the port output control register
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
  205:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     }
  206:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** }
  441              		.loc 1 206 1 view .LVU118
-ARM GAS  /tmp/cco2egur.s 			page 13
+ARM GAS  /tmp/ccaDU9Nh.s 			page 13
 
 
  442 0004 14BF     		ite	ne
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
  219:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** /*!
  220:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \brief      get GPIO pin output status
  221:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,F) 
-ARM GAS  /tmp/cco2egur.s 			page 14
+ARM GAS  /tmp/ccaDU9Nh.s 			page 14
 
 
  222:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
  523              		@ link register save eliminated.
  243:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     return ((uint16_t)GPIO_OCTL(gpio_periph));
  524              		.loc 1 243 5 view .LVU131
-ARM GAS  /tmp/cco2egur.s 			page 15
+ARM GAS  /tmp/ccaDU9Nh.s 			page 15
 
 
  525              		.loc 1 243 23 is_stmt 0 view .LVU132
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
  553 0000 F0B5     		push	{r4, r5, r6, r7, lr}
  554              	.LCFI5:
  555              		.cfi_def_cfa_offset 20
-ARM GAS  /tmp/cco2egur.s 			page 16
+ARM GAS  /tmp/ccaDU9Nh.s 			page 16
 
 
  556              		.cfi_offset 4, -20
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
  595              	.LVL45:
  596              	.L40:
  273:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
-ARM GAS  /tmp/cco2egur.s 			page 17
+ARM GAS  /tmp/ccaDU9Nh.s 			page 17
 
 
  597              		.loc 1 273 26 is_stmt 1 discriminator 2 view .LVU156
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
  281:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
  635              		.loc 1 281 18 discriminator 2 view .LVU173
  281:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****         if((1U << i) & pin){
-ARM GAS  /tmp/cco2egur.s 			page 18
+ARM GAS  /tmp/ccaDU9Nh.s 			page 18
 
 
  636              		.loc 1 281 5 is_stmt 0 discriminator 2 view .LVU174
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cco2egur.s 			page 1
  673 0000 41F48033 		orr	r3, r1, #65536
  674              	.LVL52:
  304:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c **** 
-ARM GAS  /tmp/cco2egur.s 			page 19
+ARM GAS  /tmp/ccaDU9Nh.s 			page 19
 
 
  305:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_gpio.c ****     /* lock key writing sequence: write 1->write 0->write 1-> read 0-> read 1 */
@@ -1114,38 +1114,38 @@ ARM GAS  /tmp/cco2egur.s 			page 1
  699              		.file 3 "Drivers/CMSIS/Include/gd32f1x0.h"
  700              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
  701              		.file 5 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_gpio.h"
-ARM GAS  /tmp/cco2egur.s 			page 20
+ARM GAS  /tmp/ccaDU9Nh.s 			page 20
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32f1x0_gpio.c
-     /tmp/cco2egur.s:16     .text.gpio_deinit:0000000000000000 $t
-     /tmp/cco2egur.s:24     .text.gpio_deinit:0000000000000000 gpio_deinit
-     /tmp/cco2egur.s:127    .text.gpio_deinit:0000000000000074 $d
-     /tmp/cco2egur.s:133    .text.gpio_mode_set:0000000000000000 $t
-     /tmp/cco2egur.s:140    .text.gpio_mode_set:0000000000000000 gpio_mode_set
-     /tmp/cco2egur.s:228    .text.gpio_output_options_set:0000000000000000 $t
-     /tmp/cco2egur.s:235    .text.gpio_output_options_set:0000000000000000 gpio_output_options_set
-     /tmp/cco2egur.s:317    .text.gpio_bit_set:0000000000000000 $t
-     /tmp/cco2egur.s:324    .text.gpio_bit_set:0000000000000000 gpio_bit_set
-     /tmp/cco2egur.s:341    .text.gpio_bit_reset:0000000000000000 $t
-     /tmp/cco2egur.s:348    .text.gpio_bit_reset:0000000000000000 gpio_bit_reset
-     /tmp/cco2egur.s:365    .text.gpio_bit_write:0000000000000000 $t
-     /tmp/cco2egur.s:372    .text.gpio_bit_write:0000000000000000 gpio_bit_write
-     /tmp/cco2egur.s:397    .text.gpio_port_write:0000000000000000 $t
-     /tmp/cco2egur.s:404    .text.gpio_port_write:0000000000000000 gpio_port_write
-     /tmp/cco2egur.s:421    .text.gpio_input_bit_get:0000000000000000 $t
-     /tmp/cco2egur.s:428    .text.gpio_input_bit_get:0000000000000000 gpio_input_bit_get
-     /tmp/cco2egur.s:452    .text.gpio_input_port_get:0000000000000000 $t
-     /tmp/cco2egur.s:459    .text.gpio_input_port_get:0000000000000000 gpio_input_port_get
-     /tmp/cco2egur.s:478    .text.gpio_output_bit_get:0000000000000000 $t
-     /tmp/cco2egur.s:485    .text.gpio_output_bit_get:0000000000000000 gpio_output_bit_get
-     /tmp/cco2egur.s:509    .text.gpio_output_port_get:0000000000000000 $t
-     /tmp/cco2egur.s:516    .text.gpio_output_port_get:0000000000000000 gpio_output_port_get
-     /tmp/cco2egur.s:535    .text.gpio_af_set:0000000000000000 $t
-     /tmp/cco2egur.s:542    .text.gpio_af_set:0000000000000000 gpio_af_set
-     /tmp/cco2egur.s:655    .text.gpio_pin_lock:0000000000000000 $t
-     /tmp/cco2egur.s:662    .text.gpio_pin_lock:0000000000000000 gpio_pin_lock
+     /tmp/ccaDU9Nh.s:16     .text.gpio_deinit:0000000000000000 $t
+     /tmp/ccaDU9Nh.s:24     .text.gpio_deinit:0000000000000000 gpio_deinit
+     /tmp/ccaDU9Nh.s:127    .text.gpio_deinit:0000000000000074 $d
+     /tmp/ccaDU9Nh.s:133    .text.gpio_mode_set:0000000000000000 $t
+     /tmp/ccaDU9Nh.s:140    .text.gpio_mode_set:0000000000000000 gpio_mode_set
+     /tmp/ccaDU9Nh.s:228    .text.gpio_output_options_set:0000000000000000 $t
+     /tmp/ccaDU9Nh.s:235    .text.gpio_output_options_set:0000000000000000 gpio_output_options_set
+     /tmp/ccaDU9Nh.s:317    .text.gpio_bit_set:0000000000000000 $t
+     /tmp/ccaDU9Nh.s:324    .text.gpio_bit_set:0000000000000000 gpio_bit_set
+     /tmp/ccaDU9Nh.s:341    .text.gpio_bit_reset:0000000000000000 $t
+     /tmp/ccaDU9Nh.s:348    .text.gpio_bit_reset:0000000000000000 gpio_bit_reset
+     /tmp/ccaDU9Nh.s:365    .text.gpio_bit_write:0000000000000000 $t
+     /tmp/ccaDU9Nh.s:372    .text.gpio_bit_write:0000000000000000 gpio_bit_write
+     /tmp/ccaDU9Nh.s:397    .text.gpio_port_write:0000000000000000 $t
+     /tmp/ccaDU9Nh.s:404    .text.gpio_port_write:0000000000000000 gpio_port_write
+     /tmp/ccaDU9Nh.s:421    .text.gpio_input_bit_get:0000000000000000 $t
+     /tmp/ccaDU9Nh.s:428    .text.gpio_input_bit_get:0000000000000000 gpio_input_bit_get
+     /tmp/ccaDU9Nh.s:452    .text.gpio_input_port_get:0000000000000000 $t
+     /tmp/ccaDU9Nh.s:459    .text.gpio_input_port_get:0000000000000000 gpio_input_port_get
+     /tmp/ccaDU9Nh.s:478    .text.gpio_output_bit_get:0000000000000000 $t
+     /tmp/ccaDU9Nh.s:485    .text.gpio_output_bit_get:0000000000000000 gpio_output_bit_get
+     /tmp/ccaDU9Nh.s:509    .text.gpio_output_port_get:0000000000000000 $t
+     /tmp/ccaDU9Nh.s:516    .text.gpio_output_port_get:0000000000000000 gpio_output_port_get
+     /tmp/ccaDU9Nh.s:535    .text.gpio_af_set:0000000000000000 $t
+     /tmp/ccaDU9Nh.s:542    .text.gpio_af_set:0000000000000000 gpio_af_set
+     /tmp/ccaDU9Nh.s:655    .text.gpio_pin_lock:0000000000000000 $t
+     /tmp/ccaDU9Nh.s:662    .text.gpio_pin_lock:0000000000000000 gpio_pin_lock
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable

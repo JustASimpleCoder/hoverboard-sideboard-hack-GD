@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cceIc0kc.s 			page 1
+ARM GAS  /tmp/ccVpul13.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cceIc0kc.s 			page 1
   30              		@ frame_needed = 0, uses_anonymous_args = 0
   31              		@ link register save eliminated.
   27:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dbg.c ****     DBG_CTL0 = DBG_RESET_VAL;
-ARM GAS  /tmp/cceIc0kc.s 			page 2
+ARM GAS  /tmp/ccVpul13.s 			page 2
 
 
   32              		.loc 1 27 5 view .LVU1
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cceIc0kc.s 			page 1
   75              	.LFE57:
   77              		.section	.text.dbg_low_power_enable,"ax",%progbits
   78              		.align	1
-ARM GAS  /tmp/cceIc0kc.s 			page 3
+ARM GAS  /tmp/ccVpul13.s 			page 3
 
 
   79              		.global	dbg_low_power_enable
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cceIc0kc.s 			page 1
   58:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dbg.c ****     \brief      disable low power behavior when the mcu is in debug mode
   59:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dbg.c ****     \param[in]  dbg_low_power:
   60:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dbg.c ****                 this parameter can be any combination of the following values:
-ARM GAS  /tmp/cceIc0kc.s 			page 4
+ARM GAS  /tmp/ccVpul13.s 			page 4
 
 
   61:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dbg.c ****       \arg        DBG_LOW_POWER_SLEEP: donot keep debugger connection during sleep mode
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cceIc0kc.s 			page 1
   86:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dbg.c **** {
  150              		.loc 1 86 1 is_stmt 1 view -0
  151              		.cfi_startproc
-ARM GAS  /tmp/cceIc0kc.s 			page 5
+ARM GAS  /tmp/ccVpul13.s 			page 5
 
 
  152              		@ args = 0, pretend = 0, frame = 0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cceIc0kc.s 			page 1
  190              		@ frame_needed = 0, uses_anonymous_args = 0
  191              		@ link register save eliminated.
  105:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_dbg.c ****     DBG_REG_VAL(dbg_periph) &= ~BIT(DBG_BIT_POS(dbg_periph));
-ARM GAS  /tmp/cceIc0kc.s 			page 6
+ARM GAS  /tmp/ccVpul13.s 			page 6
 
 
  192              		.loc 1 105 5 view .LVU27
@@ -326,26 +326,26 @@ ARM GAS  /tmp/cceIc0kc.s 			page 1
  214              	.Letext0:
  215              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
  216              		.file 3 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_dbg.h"
-ARM GAS  /tmp/cceIc0kc.s 			page 7
+ARM GAS  /tmp/ccVpul13.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32f1x0_dbg.c
-     /tmp/cceIc0kc.s:16     .text.dbg_deinit:0000000000000000 $t
-     /tmp/cceIc0kc.s:24     .text.dbg_deinit:0000000000000000 dbg_deinit
-     /tmp/cceIc0kc.s:45     .text.dbg_deinit:000000000000000c $d
-     /tmp/cceIc0kc.s:50     .text.dbg_id_get:0000000000000000 $t
-     /tmp/cceIc0kc.s:57     .text.dbg_id_get:0000000000000000 dbg_id_get
-     /tmp/cceIc0kc.s:73     .text.dbg_id_get:0000000000000008 $d
-     /tmp/cceIc0kc.s:78     .text.dbg_low_power_enable:0000000000000000 $t
-     /tmp/cceIc0kc.s:85     .text.dbg_low_power_enable:0000000000000000 dbg_low_power_enable
-     /tmp/cceIc0kc.s:104    .text.dbg_low_power_enable:000000000000000c $d
-     /tmp/cceIc0kc.s:109    .text.dbg_low_power_disable:0000000000000000 $t
-     /tmp/cceIc0kc.s:116    .text.dbg_low_power_disable:0000000000000000 dbg_low_power_disable
-     /tmp/cceIc0kc.s:135    .text.dbg_low_power_disable:000000000000000c $d
-     /tmp/cceIc0kc.s:140    .text.dbg_periph_enable:0000000000000000 $t
-     /tmp/cceIc0kc.s:147    .text.dbg_periph_enable:0000000000000000 dbg_periph_enable
-     /tmp/cceIc0kc.s:177    .text.dbg_periph_disable:0000000000000000 $t
-     /tmp/cceIc0kc.s:184    .text.dbg_periph_disable:0000000000000000 dbg_periph_disable
+     /tmp/ccVpul13.s:16     .text.dbg_deinit:0000000000000000 $t
+     /tmp/ccVpul13.s:24     .text.dbg_deinit:0000000000000000 dbg_deinit
+     /tmp/ccVpul13.s:45     .text.dbg_deinit:000000000000000c $d
+     /tmp/ccVpul13.s:50     .text.dbg_id_get:0000000000000000 $t
+     /tmp/ccVpul13.s:57     .text.dbg_id_get:0000000000000000 dbg_id_get
+     /tmp/ccVpul13.s:73     .text.dbg_id_get:0000000000000008 $d
+     /tmp/ccVpul13.s:78     .text.dbg_low_power_enable:0000000000000000 $t
+     /tmp/ccVpul13.s:85     .text.dbg_low_power_enable:0000000000000000 dbg_low_power_enable
+     /tmp/ccVpul13.s:104    .text.dbg_low_power_enable:000000000000000c $d
+     /tmp/ccVpul13.s:109    .text.dbg_low_power_disable:0000000000000000 $t
+     /tmp/ccVpul13.s:116    .text.dbg_low_power_disable:0000000000000000 dbg_low_power_disable
+     /tmp/ccVpul13.s:135    .text.dbg_low_power_disable:000000000000000c $d
+     /tmp/ccVpul13.s:140    .text.dbg_periph_enable:0000000000000000 $t
+     /tmp/ccVpul13.s:147    .text.dbg_periph_enable:0000000000000000 dbg_periph_enable
+     /tmp/ccVpul13.s:177    .text.dbg_periph_disable:0000000000000000 $t
+     /tmp/ccVpul13.s:184    .text.dbg_periph_disable:0000000000000000 dbg_periph_disable
 
 NO UNDEFINED SYMBOLS

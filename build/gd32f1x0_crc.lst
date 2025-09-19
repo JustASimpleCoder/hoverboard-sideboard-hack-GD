@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccHKCxz1.s 			page 1
+ARM GAS  /tmp/ccVzGT9P.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccHKCxz1.s 			page 1
   25:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_crc.c ****     CRC_IDATA = (uint32_t)0xFFFFFFFFU;
   32              		.loc 1 25 5 view .LVU1
   33              		.loc 1 25 15 is_stmt 0 view .LVU2
-ARM GAS  /tmp/ccHKCxz1.s 			page 2
+ARM GAS  /tmp/ccVzGT9P.s 			page 2
 
 
   34 0000 4FF0FF32 		mov	r2, #-1
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccHKCxz1.s 			page 1
   76 0004 22F08002 		bic	r2, r2, #128
   77 0008 9A60     		str	r2, [r3, #8]
   40:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_crc.c ****     CRC_CTL |= (uint32_t)CRC_CTL_REV_O;
-ARM GAS  /tmp/ccHKCxz1.s 			page 3
+ARM GAS  /tmp/ccVzGT9P.s 			page 3
 
 
   78              		.loc 1 40 5 is_stmt 1 view .LVU13
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccHKCxz1.s 			page 1
  123              		.align	1
  124              		.global	crc_data_register_reset
  125              		.syntax unified
-ARM GAS  /tmp/ccHKCxz1.s 			page 4
+ARM GAS  /tmp/ccVzGT9P.s 			page 4
 
 
  126              		.thumb
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccHKCxz1.s 			page 1
  163              		.cfi_startproc
  164              		@ args = 0, pretend = 0, frame = 0
  165              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccHKCxz1.s 			page 5
+ARM GAS  /tmp/ccVzGT9P.s 			page 5
 
 
  166              		@ link register save eliminated.
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccHKCxz1.s 			page 1
  205              		.loc 1 89 1 is_stmt 0 view .LVU35
  206 0004 C0B2     		uxtb	r0, r0
  207              		.loc 1 89 1 view .LVU36
-ARM GAS  /tmp/ccHKCxz1.s 			page 6
+ARM GAS  /tmp/ccVzGT9P.s 			page 6
 
 
  208 0006 7047     		bx	lr
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccHKCxz1.s 			page 1
  255              	.LFB63:
  101:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_crc.c **** 
  102:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_crc.c **** /*!
-ARM GAS  /tmp/ccHKCxz1.s 			page 7
+ARM GAS  /tmp/ccVzGT9P.s 			page 7
 
 
  103:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_crc.c ****     \brief      write the initializaiton data register
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccHKCxz1.s 			page 1
  125:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_crc.c ****     CRC_CTL &= (uint32_t)(~CRC_CTL_REV_I);
  290              		.loc 1 125 5 view .LVU46
  291              		.loc 1 125 13 is_stmt 0 view .LVU47
-ARM GAS  /tmp/ccHKCxz1.s 			page 8
+ARM GAS  /tmp/ccVzGT9P.s 			page 8
 
 
  292 0000 044B     		ldr	r3, .L26
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccHKCxz1.s 			page 1
  334              		.loc 1 139 1 view .LVU56
  335 0006 7047     		bx	lr
  336              	.L30:
-ARM GAS  /tmp/ccHKCxz1.s 			page 9
+ARM GAS  /tmp/ccVzGT9P.s 			page 9
 
 
  337              		.align	2
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccHKCxz1.s 			page 1
  376              		.loc 1 152 9 is_stmt 1 discriminator 3 view .LVU66
  152:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_crc.c ****         CRC_DATA = array[index];
  377              		.loc 1 152 25 is_stmt 0 discriminator 3 view .LVU67
-ARM GAS  /tmp/ccHKCxz1.s 			page 10
+ARM GAS  /tmp/ccVzGT9P.s 			page 10
 
 
  378 000e 50F8042B 		ldr	r2, [r0], #4
@@ -557,43 +557,43 @@ ARM GAS  /tmp/ccHKCxz1.s 			page 1
  390              		.text
  391              	.Letext0:
  392              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
-ARM GAS  /tmp/ccHKCxz1.s 			page 11
+ARM GAS  /tmp/ccVzGT9P.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32f1x0_crc.c
-     /tmp/ccHKCxz1.s:16     .text.crc_deinit:0000000000000000 $t
-     /tmp/ccHKCxz1.s:24     .text.crc_deinit:0000000000000000 crc_deinit
-     /tmp/ccHKCxz1.s:53     .text.crc_deinit:0000000000000014 $d
-     /tmp/ccHKCxz1.s:58     .text.crc_reverse_output_data_enable:0000000000000000 $t
-     /tmp/ccHKCxz1.s:65     .text.crc_reverse_output_data_enable:0000000000000000 crc_reverse_output_data_enable
-     /tmp/ccHKCxz1.s:88     .text.crc_reverse_output_data_enable:0000000000000014 $d
-     /tmp/ccHKCxz1.s:93     .text.crc_reverse_output_data_disable:0000000000000000 $t
-     /tmp/ccHKCxz1.s:100    .text.crc_reverse_output_data_disable:0000000000000000 crc_reverse_output_data_disable
-     /tmp/ccHKCxz1.s:118    .text.crc_reverse_output_data_disable:000000000000000c $d
-     /tmp/ccHKCxz1.s:123    .text.crc_data_register_reset:0000000000000000 $t
-     /tmp/ccHKCxz1.s:130    .text.crc_data_register_reset:0000000000000000 crc_data_register_reset
-     /tmp/ccHKCxz1.s:148    .text.crc_data_register_reset:000000000000000c $d
-     /tmp/ccHKCxz1.s:153    .text.crc_data_register_read:0000000000000000 $t
-     /tmp/ccHKCxz1.s:160    .text.crc_data_register_read:0000000000000000 crc_data_register_read
-     /tmp/ccHKCxz1.s:179    .text.crc_data_register_read:0000000000000008 $d
-     /tmp/ccHKCxz1.s:184    .text.crc_free_data_register_read:0000000000000000 $t
-     /tmp/ccHKCxz1.s:191    .text.crc_free_data_register_read:0000000000000000 crc_free_data_register_read
-     /tmp/ccHKCxz1.s:212    .text.crc_free_data_register_read:0000000000000008 $d
-     /tmp/ccHKCxz1.s:217    .text.crc_free_data_register_write:0000000000000000 $t
-     /tmp/ccHKCxz1.s:224    .text.crc_free_data_register_write:0000000000000000 crc_free_data_register_write
-     /tmp/ccHKCxz1.s:241    .text.crc_free_data_register_write:0000000000000008 $d
-     /tmp/ccHKCxz1.s:246    .text.crc_init_data_register_write:0000000000000000 $t
-     /tmp/ccHKCxz1.s:253    .text.crc_init_data_register_write:0000000000000000 crc_init_data_register_write
-     /tmp/ccHKCxz1.s:270    .text.crc_init_data_register_write:0000000000000008 $d
-     /tmp/ccHKCxz1.s:275    .text.crc_input_data_reverse_config:0000000000000000 $t
-     /tmp/ccHKCxz1.s:282    .text.crc_input_data_reverse_config:0000000000000000 crc_input_data_reverse_config
-     /tmp/ccHKCxz1.s:306    .text.crc_input_data_reverse_config:0000000000000014 $d
-     /tmp/ccHKCxz1.s:311    .text.crc_single_data_calculate:0000000000000000 $t
-     /tmp/ccHKCxz1.s:318    .text.crc_single_data_calculate:0000000000000000 crc_single_data_calculate
-     /tmp/ccHKCxz1.s:339    .text.crc_single_data_calculate:0000000000000008 $d
-     /tmp/ccHKCxz1.s:344    .text.crc_block_data_calculate:0000000000000000 $t
-     /tmp/ccHKCxz1.s:351    .text.crc_block_data_calculate:0000000000000000 crc_block_data_calculate
-     /tmp/ccHKCxz1.s:386    .text.crc_block_data_calculate:0000000000000018 $d
+     /tmp/ccVzGT9P.s:16     .text.crc_deinit:0000000000000000 $t
+     /tmp/ccVzGT9P.s:24     .text.crc_deinit:0000000000000000 crc_deinit
+     /tmp/ccVzGT9P.s:53     .text.crc_deinit:0000000000000014 $d
+     /tmp/ccVzGT9P.s:58     .text.crc_reverse_output_data_enable:0000000000000000 $t
+     /tmp/ccVzGT9P.s:65     .text.crc_reverse_output_data_enable:0000000000000000 crc_reverse_output_data_enable
+     /tmp/ccVzGT9P.s:88     .text.crc_reverse_output_data_enable:0000000000000014 $d
+     /tmp/ccVzGT9P.s:93     .text.crc_reverse_output_data_disable:0000000000000000 $t
+     /tmp/ccVzGT9P.s:100    .text.crc_reverse_output_data_disable:0000000000000000 crc_reverse_output_data_disable
+     /tmp/ccVzGT9P.s:118    .text.crc_reverse_output_data_disable:000000000000000c $d
+     /tmp/ccVzGT9P.s:123    .text.crc_data_register_reset:0000000000000000 $t
+     /tmp/ccVzGT9P.s:130    .text.crc_data_register_reset:0000000000000000 crc_data_register_reset
+     /tmp/ccVzGT9P.s:148    .text.crc_data_register_reset:000000000000000c $d
+     /tmp/ccVzGT9P.s:153    .text.crc_data_register_read:0000000000000000 $t
+     /tmp/ccVzGT9P.s:160    .text.crc_data_register_read:0000000000000000 crc_data_register_read
+     /tmp/ccVzGT9P.s:179    .text.crc_data_register_read:0000000000000008 $d
+     /tmp/ccVzGT9P.s:184    .text.crc_free_data_register_read:0000000000000000 $t
+     /tmp/ccVzGT9P.s:191    .text.crc_free_data_register_read:0000000000000000 crc_free_data_register_read
+     /tmp/ccVzGT9P.s:212    .text.crc_free_data_register_read:0000000000000008 $d
+     /tmp/ccVzGT9P.s:217    .text.crc_free_data_register_write:0000000000000000 $t
+     /tmp/ccVzGT9P.s:224    .text.crc_free_data_register_write:0000000000000000 crc_free_data_register_write
+     /tmp/ccVzGT9P.s:241    .text.crc_free_data_register_write:0000000000000008 $d
+     /tmp/ccVzGT9P.s:246    .text.crc_init_data_register_write:0000000000000000 $t
+     /tmp/ccVzGT9P.s:253    .text.crc_init_data_register_write:0000000000000000 crc_init_data_register_write
+     /tmp/ccVzGT9P.s:270    .text.crc_init_data_register_write:0000000000000008 $d
+     /tmp/ccVzGT9P.s:275    .text.crc_input_data_reverse_config:0000000000000000 $t
+     /tmp/ccVzGT9P.s:282    .text.crc_input_data_reverse_config:0000000000000000 crc_input_data_reverse_config
+     /tmp/ccVzGT9P.s:306    .text.crc_input_data_reverse_config:0000000000000014 $d
+     /tmp/ccVzGT9P.s:311    .text.crc_single_data_calculate:0000000000000000 $t
+     /tmp/ccVzGT9P.s:318    .text.crc_single_data_calculate:0000000000000000 crc_single_data_calculate
+     /tmp/ccVzGT9P.s:339    .text.crc_single_data_calculate:0000000000000008 $d
+     /tmp/ccVzGT9P.s:344    .text.crc_block_data_calculate:0000000000000000 $t
+     /tmp/ccVzGT9P.s:351    .text.crc_block_data_calculate:0000000000000000 crc_block_data_calculate
+     /tmp/ccVzGT9P.s:386    .text.crc_block_data_calculate:0000000000000018 $d
 
 NO UNDEFINED SYMBOLS

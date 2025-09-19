@@ -71,7 +71,7 @@ extern uint8_t  print_aux;
 #endif
 
 #if (defined(SERIAL_AUX_RX) && defined(CONTROL_IBUS)) || defined(SERIAL_CONTROL)
-static int16_t  cmd1, cmd2;
+// static int16_t  cmd1, cmd2;
 static uint16_t cmdSwitch;
 #endif
 

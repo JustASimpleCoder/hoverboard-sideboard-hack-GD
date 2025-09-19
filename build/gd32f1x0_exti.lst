@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccp3VESO.s 			page 1
+ARM GAS  /tmp/ccrpUSCJ.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccp3VESO.s 			page 1
   30:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c **** {
   27              		.loc 1 30 1 view -0
   28              		.cfi_startproc
-ARM GAS  /tmp/ccp3VESO.s 			page 2
+ARM GAS  /tmp/ccrpUSCJ.s 			page 2
 
 
   29              		@ args = 0, pretend = 0, frame = 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccp3VESO.s 			page 1
   46:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****                 only one parameter can be selected which is shown as below:
   47:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****       \arg        EXTI_INTERRUPT: interrupt mode
   48:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****       \arg        EXTI_EVENT: event mode
-ARM GAS  /tmp/ccp3VESO.s 			page 3
+ARM GAS  /tmp/ccrpUSCJ.s 			page 3
 
 
   49:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****     \param[in]  trig_type: interrupt trigger type, refer to exti_trig_type_enum
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccp3VESO.s 			page 1
   66:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****     
   67:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****     /* set the EXTI mode and enable the interrupts or events from EXTI line x */
   68:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****     switch(mode){
-ARM GAS  /tmp/ccp3VESO.s 			page 4
+ARM GAS  /tmp/ccrpUSCJ.s 			page 4
 
 
  106              		.loc 1 68 5 is_stmt 1 view .LVU25
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccp3VESO.s 			page 1
   92:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****         break;
   93:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****     default:
   94:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****         break;
-ARM GAS  /tmp/ccp3VESO.s 			page 5
+ARM GAS  /tmp/ccrpUSCJ.s 			page 5
 
 
   95:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****     }
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccp3VESO.s 			page 1
  175              	.LVL10:
   91:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****         break;
  176              		.loc 1 91 19 view .LVU50
-ARM GAS  /tmp/ccp3VESO.s 			page 6
+ARM GAS  /tmp/ccrpUSCJ.s 			page 6
 
 
  177 0086 C3F80C04 		str	r0, [r3, #1036]
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccp3VESO.s 			page 1
  216              		.loc 1 109 16 is_stmt 0 view .LVU58
  217 0000 034A     		ldr	r2, .L15
  218 0002 D2F80034 		ldr	r3, [r2, #1024]
-ARM GAS  /tmp/ccp3VESO.s 			page 7
+ARM GAS  /tmp/ccrpUSCJ.s 			page 7
 
 
  219 0006 0343     		orrs	r3, r3, r0
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccp3VESO.s 			page 1
  261              		.section	.text.exti_interrupt_disable,"ax",%progbits
  262              		.align	1
  263              		.global	exti_interrupt_disable
-ARM GAS  /tmp/ccp3VESO.s 			page 8
+ARM GAS  /tmp/ccrpUSCJ.s 			page 8
 
 
  264              		.syntax unified
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccp3VESO.s 			page 1
  143:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****                 only one parameter can be selected which is shown as below:
  144:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****       \arg        EXTI_x (x=0..19,21,22,25,27): EXTI line x (for GD32F130xx and GD32F150xx devices)
  145:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****       \arg        EXTI_x (x=0..17,19,21,22,25,27): EXTI line x (for GD32F130xx and GD32F150xx devic
-ARM GAS  /tmp/ccp3VESO.s 			page 9
+ARM GAS  /tmp/ccrpUSCJ.s 			page 9
 
 
  146:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****     \param[out] none
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccp3VESO.s 			page 1
  339              		.loc 1 165 5 view .LVU73
  340              		.loc 1 165 18 is_stmt 0 view .LVU74
  341 0000 034B     		ldr	r3, .L27
-ARM GAS  /tmp/ccp3VESO.s 			page 10
+ARM GAS  /tmp/ccrpUSCJ.s 			page 10
 
 
  342 0002 D3F81434 		ldr	r3, [r3, #1044]
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccp3VESO.s 			page 1
  379              		.loc 1 184 1 view .LVU81
  380 0006 7047     		bx	lr
  381              	.L31:
-ARM GAS  /tmp/ccp3VESO.s 			page 11
+ARM GAS  /tmp/ccrpUSCJ.s 			page 11
 
 
  382              		.align	2
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccp3VESO.s 			page 1
  421 000e 03D0     		beq	.L33
  422              		.loc 1 200 29 discriminator 1 view .LVU92
  423 0010 1142     		tst	r1, r2
-ARM GAS  /tmp/ccp3VESO.s 			page 12
+ARM GAS  /tmp/ccrpUSCJ.s 			page 12
 
 
  201:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****         return SET;
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccp3VESO.s 			page 1
  208:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****     \brief      clear EXTI lines pending flag
  209:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
  210:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****                 only one parameter can be selected which is shown as below:
-ARM GAS  /tmp/ccp3VESO.s 			page 13
+ARM GAS  /tmp/ccrpUSCJ.s 			page 13
 
 
  211:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****       \arg        EXTI_x (x=0..19,21,22,25,27): EXTI line x (for GD32F130xx and GD32F150xx devices)
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccp3VESO.s 			page 1
  236:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****     \brief      disable EXTI software interrupt event
  237:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
  238:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****                 only one parameter can be selected which is shown as below:
-ARM GAS  /tmp/ccp3VESO.s 			page 14
+ARM GAS  /tmp/ccrpUSCJ.s 			page 14
 
 
  239:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_exti.c ****       \arg        EXTI_x (x=0..19,21,22,25,27): EXTI line x (for GD32F130xx and GD32F150xx devices)
@@ -814,46 +814,46 @@ ARM GAS  /tmp/ccp3VESO.s 			page 1
  528              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
  529              		.file 3 "Drivers/CMSIS/Include/gd32f1x0.h"
  530              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_exti.h"
-ARM GAS  /tmp/ccp3VESO.s 			page 15
+ARM GAS  /tmp/ccrpUSCJ.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32f1x0_exti.c
-     /tmp/ccp3VESO.s:16     .text.exti_deinit:0000000000000000 $t
-     /tmp/ccp3VESO.s:24     .text.exti_deinit:0000000000000000 exti_deinit
-     /tmp/ccp3VESO.s:55     .text.exti_deinit:0000000000000020 $d
-     /tmp/ccp3VESO.s:60     .text.exti_init:0000000000000000 $t
-     /tmp/ccp3VESO.s:67     .text.exti_init:0000000000000000 exti_init
-     /tmp/ccp3VESO.s:195    .text.exti_init:000000000000009c $d
-     /tmp/ccp3VESO.s:200    .text.exti_interrupt_enable:0000000000000000 $t
-     /tmp/ccp3VESO.s:207    .text.exti_interrupt_enable:0000000000000000 exti_interrupt_enable
-     /tmp/ccp3VESO.s:226    .text.exti_interrupt_enable:0000000000000010 $d
-     /tmp/ccp3VESO.s:231    .text.exti_event_enable:0000000000000000 $t
-     /tmp/ccp3VESO.s:238    .text.exti_event_enable:0000000000000000 exti_event_enable
-     /tmp/ccp3VESO.s:257    .text.exti_event_enable:0000000000000010 $d
-     /tmp/ccp3VESO.s:262    .text.exti_interrupt_disable:0000000000000000 $t
-     /tmp/ccp3VESO.s:269    .text.exti_interrupt_disable:0000000000000000 exti_interrupt_disable
-     /tmp/ccp3VESO.s:288    .text.exti_interrupt_disable:0000000000000010 $d
-     /tmp/ccp3VESO.s:293    .text.exti_event_disable:0000000000000000 $t
-     /tmp/ccp3VESO.s:300    .text.exti_event_disable:0000000000000000 exti_event_disable
-     /tmp/ccp3VESO.s:319    .text.exti_event_disable:0000000000000010 $d
-     /tmp/ccp3VESO.s:324    .text.exti_flag_get:0000000000000000 $t
-     /tmp/ccp3VESO.s:331    .text.exti_flag_get:0000000000000000 exti_flag_get
-     /tmp/ccp3VESO.s:355    .text.exti_flag_get:0000000000000010 $d
-     /tmp/ccp3VESO.s:360    .text.exti_flag_clear:0000000000000000 $t
-     /tmp/ccp3VESO.s:367    .text.exti_flag_clear:0000000000000000 exti_flag_clear
-     /tmp/ccp3VESO.s:384    .text.exti_flag_clear:0000000000000008 $d
-     /tmp/ccp3VESO.s:389    .text.exti_interrupt_flag_get:0000000000000000 $t
-     /tmp/ccp3VESO.s:396    .text.exti_interrupt_flag_get:0000000000000000 exti_interrupt_flag_get
-     /tmp/ccp3VESO.s:436    .text.exti_interrupt_flag_get:000000000000001c $d
-     /tmp/ccp3VESO.s:441    .text.exti_interrupt_flag_clear:0000000000000000 $t
-     /tmp/ccp3VESO.s:448    .text.exti_interrupt_flag_clear:0000000000000000 exti_interrupt_flag_clear
-     /tmp/ccp3VESO.s:460    .text.exti_interrupt_flag_clear:0000000000000008 $d
-     /tmp/ccp3VESO.s:465    .text.exti_software_interrupt_enable:0000000000000000 $t
-     /tmp/ccp3VESO.s:472    .text.exti_software_interrupt_enable:0000000000000000 exti_software_interrupt_enable
-     /tmp/ccp3VESO.s:491    .text.exti_software_interrupt_enable:0000000000000010 $d
-     /tmp/ccp3VESO.s:496    .text.exti_software_interrupt_disable:0000000000000000 $t
-     /tmp/ccp3VESO.s:503    .text.exti_software_interrupt_disable:0000000000000000 exti_software_interrupt_disable
-     /tmp/ccp3VESO.s:522    .text.exti_software_interrupt_disable:0000000000000010 $d
+     /tmp/ccrpUSCJ.s:16     .text.exti_deinit:0000000000000000 $t
+     /tmp/ccrpUSCJ.s:24     .text.exti_deinit:0000000000000000 exti_deinit
+     /tmp/ccrpUSCJ.s:55     .text.exti_deinit:0000000000000020 $d
+     /tmp/ccrpUSCJ.s:60     .text.exti_init:0000000000000000 $t
+     /tmp/ccrpUSCJ.s:67     .text.exti_init:0000000000000000 exti_init
+     /tmp/ccrpUSCJ.s:195    .text.exti_init:000000000000009c $d
+     /tmp/ccrpUSCJ.s:200    .text.exti_interrupt_enable:0000000000000000 $t
+     /tmp/ccrpUSCJ.s:207    .text.exti_interrupt_enable:0000000000000000 exti_interrupt_enable
+     /tmp/ccrpUSCJ.s:226    .text.exti_interrupt_enable:0000000000000010 $d
+     /tmp/ccrpUSCJ.s:231    .text.exti_event_enable:0000000000000000 $t
+     /tmp/ccrpUSCJ.s:238    .text.exti_event_enable:0000000000000000 exti_event_enable
+     /tmp/ccrpUSCJ.s:257    .text.exti_event_enable:0000000000000010 $d
+     /tmp/ccrpUSCJ.s:262    .text.exti_interrupt_disable:0000000000000000 $t
+     /tmp/ccrpUSCJ.s:269    .text.exti_interrupt_disable:0000000000000000 exti_interrupt_disable
+     /tmp/ccrpUSCJ.s:288    .text.exti_interrupt_disable:0000000000000010 $d
+     /tmp/ccrpUSCJ.s:293    .text.exti_event_disable:0000000000000000 $t
+     /tmp/ccrpUSCJ.s:300    .text.exti_event_disable:0000000000000000 exti_event_disable
+     /tmp/ccrpUSCJ.s:319    .text.exti_event_disable:0000000000000010 $d
+     /tmp/ccrpUSCJ.s:324    .text.exti_flag_get:0000000000000000 $t
+     /tmp/ccrpUSCJ.s:331    .text.exti_flag_get:0000000000000000 exti_flag_get
+     /tmp/ccrpUSCJ.s:355    .text.exti_flag_get:0000000000000010 $d
+     /tmp/ccrpUSCJ.s:360    .text.exti_flag_clear:0000000000000000 $t
+     /tmp/ccrpUSCJ.s:367    .text.exti_flag_clear:0000000000000000 exti_flag_clear
+     /tmp/ccrpUSCJ.s:384    .text.exti_flag_clear:0000000000000008 $d
+     /tmp/ccrpUSCJ.s:389    .text.exti_interrupt_flag_get:0000000000000000 $t
+     /tmp/ccrpUSCJ.s:396    .text.exti_interrupt_flag_get:0000000000000000 exti_interrupt_flag_get
+     /tmp/ccrpUSCJ.s:436    .text.exti_interrupt_flag_get:000000000000001c $d
+     /tmp/ccrpUSCJ.s:441    .text.exti_interrupt_flag_clear:0000000000000000 $t
+     /tmp/ccrpUSCJ.s:448    .text.exti_interrupt_flag_clear:0000000000000000 exti_interrupt_flag_clear
+     /tmp/ccrpUSCJ.s:460    .text.exti_interrupt_flag_clear:0000000000000008 $d
+     /tmp/ccrpUSCJ.s:465    .text.exti_software_interrupt_enable:0000000000000000 $t
+     /tmp/ccrpUSCJ.s:472    .text.exti_software_interrupt_enable:0000000000000000 exti_software_interrupt_enable
+     /tmp/ccrpUSCJ.s:491    .text.exti_software_interrupt_enable:0000000000000010 $d
+     /tmp/ccrpUSCJ.s:496    .text.exti_software_interrupt_disable:0000000000000000 $t
+     /tmp/ccrpUSCJ.s:503    .text.exti_software_interrupt_disable:0000000000000000 exti_software_interrupt_disable
+     /tmp/ccrpUSCJ.s:522    .text.exti_software_interrupt_disable:0000000000000010 $d
 
 NO UNDEFINED SYMBOLS

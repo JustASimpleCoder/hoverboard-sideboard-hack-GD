@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc4SaFca.s 			page 1
+ARM GAS  /tmp/ccUYdcQJ.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc4SaFca.s 			page 1
   29:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** {
   28              		.loc 1 29 1 view -0
   29              		.cfi_startproc
-ARM GAS  /tmp/cc4SaFca.s 			page 2
+ARM GAS  /tmp/ccUYdcQJ.s 			page 2
 
 
   30              		@ args = 0, pretend = 0, frame = 0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc4SaFca.s 			page 1
   68              		.loc 1 47 5 view .LVU9
   44:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     uint32_t temp_priority = 0x00U, temp_pre = 0x00U, temp_sub = 0x00U;
   69              		.loc 1 44 1 is_stmt 0 view .LVU10
-ARM GAS  /tmp/cc4SaFca.s 			page 3
+ARM GAS  /tmp/ccUYdcQJ.s 			page 3
 
 
   70 0000 30B5     		push	{r4, r5, lr}
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc4SaFca.s 			page 1
   61:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_sub = 0x0U;
  111              		.loc 1 61 18 view .LVU28
  112 0036 0024     		movs	r4, #0
-ARM GAS  /tmp/cc4SaFca.s 			page 4
+ARM GAS  /tmp/ccUYdcQJ.s 			page 4
 
 
   59:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****         temp_pre = 4U;
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc4SaFca.s 			page 1
  154              		.loc 1 68 26 view .LVU47
  155 005e DBB2     		uxtb	r3, r3
  156              	.LVL11:
-ARM GAS  /tmp/cc4SaFca.s 			page 5
+ARM GAS  /tmp/ccUYdcQJ.s 			page 5
 
 
  157              		.loc 1 68 24 view .LVU48
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc4SaFca.s 			page 1
  200 008e 00BF     		.align	2
  201              	.L11:
  202 0090 00ED00E0 		.word	-536810240
-ARM GAS  /tmp/cc4SaFca.s 			page 6
+ARM GAS  /tmp/ccUYdcQJ.s 			page 6
 
 
  203 0094 00E100E0 		.word	-536813312
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc4SaFca.s 			page 1
  248              		.global	nvic_vector_table_set
  249              		.syntax unified
  250              		.thumb
-ARM GAS  /tmp/cc4SaFca.s 			page 7
+ARM GAS  /tmp/ccUYdcQJ.s 			page 7
 
 
  251              		.thumb_func
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc4SaFca.s 			page 1
   98:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** 
   99:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** /*!
  100:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \brief      set the state of the low power mode
-ARM GAS  /tmp/cc4SaFca.s 			page 8
+ARM GAS  /tmp/ccUYdcQJ.s 			page 8
 
 
  101:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \param[in]  lowpower_mode: the low power mode state
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc4SaFca.s 			page 1
  124:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     \retval     none
  125:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** */
  126:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** void system_lowpower_reset(uint8_t lowpower_mode)
-ARM GAS  /tmp/cc4SaFca.s 			page 9
+ARM GAS  /tmp/ccUYdcQJ.s 			page 9
 
 
  127:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c **** {
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc4SaFca.s 			page 1
  365              		.loc 1 144 23 is_stmt 0 view .LVU91
  366 0004 1A69     		ldr	r2, [r3, #16]
  367              		.loc 1 144 9 is_stmt 1 view .LVU92
-ARM GAS  /tmp/cc4SaFca.s 			page 10
+ARM GAS  /tmp/ccUYdcQJ.s 			page 10
 
 
  142:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_misc.c ****     if(SYSTICK_CLKSOURCE_HCLK == systick_clksource ){
@@ -564,30 +564,30 @@ ARM GAS  /tmp/cc4SaFca.s 			page 1
  383              	.Letext0:
  384              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
  385              		.file 3 "Drivers/CMSIS/core_cm3.h"
-ARM GAS  /tmp/cc4SaFca.s 			page 11
+ARM GAS  /tmp/ccUYdcQJ.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32f1x0_misc.c
-     /tmp/cc4SaFca.s:16     .text.nvic_priority_group_set:0000000000000000 $t
-     /tmp/cc4SaFca.s:24     .text.nvic_priority_group_set:0000000000000000 nvic_priority_group_set
-     /tmp/cc4SaFca.s:48     .text.nvic_priority_group_set:0000000000000010 $d
-     /tmp/cc4SaFca.s:53     .text.nvic_irq_enable:0000000000000000 $t
-     /tmp/cc4SaFca.s:60     .text.nvic_irq_enable:0000000000000000 nvic_irq_enable
-     /tmp/cc4SaFca.s:202    .text.nvic_irq_enable:0000000000000090 $d
-     /tmp/cc4SaFca.s:208    .text.nvic_irq_disable:0000000000000000 $t
-     /tmp/cc4SaFca.s:215    .text.nvic_irq_disable:0000000000000000 nvic_irq_disable
-     /tmp/cc4SaFca.s:242    .text.nvic_irq_disable:0000000000000018 $d
-     /tmp/cc4SaFca.s:247    .text.nvic_vector_table_set:0000000000000000 $t
-     /tmp/cc4SaFca.s:254    .text.nvic_vector_table_set:0000000000000000 nvic_vector_table_set
-     /tmp/cc4SaFca.s:279    .text.nvic_vector_table_set:0000000000000010 $d
-     /tmp/cc4SaFca.s:284    .text.system_lowpower_set:0000000000000000 $t
-     /tmp/cc4SaFca.s:291    .text.system_lowpower_set:0000000000000000 system_lowpower_set
-     /tmp/cc4SaFca.s:312    .text.system_lowpower_set:000000000000000c $d
-     /tmp/cc4SaFca.s:317    .text.system_lowpower_reset:0000000000000000 $t
-     /tmp/cc4SaFca.s:324    .text.system_lowpower_reset:0000000000000000 system_lowpower_reset
-     /tmp/cc4SaFca.s:343    .text.system_lowpower_reset:000000000000000c $d
-     /tmp/cc4SaFca.s:348    .text.systick_clksource_set:0000000000000000 $t
-     /tmp/cc4SaFca.s:355    .text.systick_clksource_set:0000000000000000 systick_clksource_set
+     /tmp/ccUYdcQJ.s:16     .text.nvic_priority_group_set:0000000000000000 $t
+     /tmp/ccUYdcQJ.s:24     .text.nvic_priority_group_set:0000000000000000 nvic_priority_group_set
+     /tmp/ccUYdcQJ.s:48     .text.nvic_priority_group_set:0000000000000010 $d
+     /tmp/ccUYdcQJ.s:53     .text.nvic_irq_enable:0000000000000000 $t
+     /tmp/ccUYdcQJ.s:60     .text.nvic_irq_enable:0000000000000000 nvic_irq_enable
+     /tmp/ccUYdcQJ.s:202    .text.nvic_irq_enable:0000000000000090 $d
+     /tmp/ccUYdcQJ.s:208    .text.nvic_irq_disable:0000000000000000 $t
+     /tmp/ccUYdcQJ.s:215    .text.nvic_irq_disable:0000000000000000 nvic_irq_disable
+     /tmp/ccUYdcQJ.s:242    .text.nvic_irq_disable:0000000000000018 $d
+     /tmp/ccUYdcQJ.s:247    .text.nvic_vector_table_set:0000000000000000 $t
+     /tmp/ccUYdcQJ.s:254    .text.nvic_vector_table_set:0000000000000000 nvic_vector_table_set
+     /tmp/ccUYdcQJ.s:279    .text.nvic_vector_table_set:0000000000000010 $d
+     /tmp/ccUYdcQJ.s:284    .text.system_lowpower_set:0000000000000000 $t
+     /tmp/ccUYdcQJ.s:291    .text.system_lowpower_set:0000000000000000 system_lowpower_set
+     /tmp/ccUYdcQJ.s:312    .text.system_lowpower_set:000000000000000c $d
+     /tmp/ccUYdcQJ.s:317    .text.system_lowpower_reset:0000000000000000 $t
+     /tmp/ccUYdcQJ.s:324    .text.system_lowpower_reset:0000000000000000 system_lowpower_reset
+     /tmp/ccUYdcQJ.s:343    .text.system_lowpower_reset:000000000000000c $d
+     /tmp/ccUYdcQJ.s:348    .text.systick_clksource_set:0000000000000000 $t
+     /tmp/ccUYdcQJ.s:355    .text.systick_clksource_set:0000000000000000 systick_clksource_set
 
 NO UNDEFINED SYMBOLS

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cctbLu4m.s 			page 1
+ARM GAS  /tmp/ccFZtiGI.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
   30:Src/systick.c **** NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
   31:Src/systick.c **** PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
   32:Src/systick.c **** WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
-ARM GAS  /tmp/cctbLu4m.s 			page 2
+ARM GAS  /tmp/ccFZtiGI.s 			page 2
 
 
   33:Src/systick.c **** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
   25:Drivers/CMSIS/core_cm3.h ****    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
   26:Drivers/CMSIS/core_cm3.h ****    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
   27:Drivers/CMSIS/core_cm3.h ****    ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS BE
-ARM GAS  /tmp/cctbLu4m.s 			page 3
+ARM GAS  /tmp/ccFZtiGI.s 			page 3
 
 
   28:Drivers/CMSIS/core_cm3.h ****    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
   82:Drivers/CMSIS/core_cm3.h ****   #define __STATIC_INLINE  static __inline
   83:Drivers/CMSIS/core_cm3.h **** 
   84:Drivers/CMSIS/core_cm3.h **** #elif defined ( __GNUC__ )
-ARM GAS  /tmp/cctbLu4m.s 			page 4
+ARM GAS  /tmp/ccFZtiGI.s 			page 4
 
 
   85:Drivers/CMSIS/core_cm3.h ****   #define __ASM            __asm                                      /*!< asm keyword for GNU Comp
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  139:Drivers/CMSIS/core_cm3.h **** 
  140:Drivers/CMSIS/core_cm3.h **** #elif defined ( __CSMC__ )    /* Cosmic */
  141:Drivers/CMSIS/core_cm3.h ****   #if ( __CSMC__ & 0x400)    // FPU present for parser
-ARM GAS  /tmp/cctbLu4m.s 			page 5
+ARM GAS  /tmp/ccFZtiGI.s 			page 5
 
 
  142:Drivers/CMSIS/core_cm3.h ****     #error "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  196:Drivers/CMSIS/core_cm3.h **** /*@} end of group Cortex_M3 */
  197:Drivers/CMSIS/core_cm3.h **** 
  198:Drivers/CMSIS/core_cm3.h **** 
-ARM GAS  /tmp/cctbLu4m.s 			page 6
+ARM GAS  /tmp/ccFZtiGI.s 			page 6
 
 
  199:Drivers/CMSIS/core_cm3.h **** 
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  253:Drivers/CMSIS/core_cm3.h **** } IPSR_Type;
  254:Drivers/CMSIS/core_cm3.h **** 
  255:Drivers/CMSIS/core_cm3.h **** 
-ARM GAS  /tmp/cctbLu4m.s 			page 7
+ARM GAS  /tmp/ccFZtiGI.s 			page 7
 
 
  256:Drivers/CMSIS/core_cm3.h **** /** \brief  Union type to access the Special-Purpose Program Status Registers (xPSR).
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  310:Drivers/CMSIS/core_cm3.h ****        uint32_t RESERVED0[24];
  311:Drivers/CMSIS/core_cm3.h ****   __IO uint32_t ICER[8];                 /*!< Offset: 0x080 (R/W)  Interrupt Clear Enable Register 
  312:Drivers/CMSIS/core_cm3.h ****        uint32_t RSERVED1[24];
-ARM GAS  /tmp/cctbLu4m.s 			page 8
+ARM GAS  /tmp/ccFZtiGI.s 			page 8
 
 
  313:Drivers/CMSIS/core_cm3.h ****   __IO uint32_t ISPR[8];                 /*!< Offset: 0x100 (R/W)  Interrupt Set Pending Register  
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  367:Drivers/CMSIS/core_cm3.h **** 
  368:Drivers/CMSIS/core_cm3.h **** #define SCB_CPUID_VARIANT_Pos              20                                             /*!< SCB 
  369:Drivers/CMSIS/core_cm3.h **** #define SCB_CPUID_VARIANT_Msk              (0xFUL << SCB_CPUID_VARIANT_Pos)               /*!< SCB 
-ARM GAS  /tmp/cctbLu4m.s 			page 9
+ARM GAS  /tmp/ccFZtiGI.s 			page 9
 
 
  370:Drivers/CMSIS/core_cm3.h **** 
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  424:Drivers/CMSIS/core_cm3.h **** #define SCB_AIRCR_VECTKEY_Pos              16                                             /*!< SCB 
  425:Drivers/CMSIS/core_cm3.h **** #define SCB_AIRCR_VECTKEY_Msk              (0xFFFFUL << SCB_AIRCR_VECTKEY_Pos)            /*!< SCB 
  426:Drivers/CMSIS/core_cm3.h **** 
-ARM GAS  /tmp/cctbLu4m.s 			page 10
+ARM GAS  /tmp/ccFZtiGI.s 			page 10
 
 
  427:Drivers/CMSIS/core_cm3.h **** #define SCB_AIRCR_VECTKEYSTAT_Pos          16                                             /*!< SCB 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  481:Drivers/CMSIS/core_cm3.h **** #define SCB_SHCSR_MEMFAULTENA_Pos          16                                             /*!< SCB 
  482:Drivers/CMSIS/core_cm3.h **** #define SCB_SHCSR_MEMFAULTENA_Msk          (1UL << SCB_SHCSR_MEMFAULTENA_Pos)             /*!< SCB 
  483:Drivers/CMSIS/core_cm3.h **** 
-ARM GAS  /tmp/cctbLu4m.s 			page 11
+ARM GAS  /tmp/ccFZtiGI.s 			page 11
 
 
  484:Drivers/CMSIS/core_cm3.h **** #define SCB_SHCSR_SVCALLPENDED_Pos         15                                             /*!< SCB 
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  538:Drivers/CMSIS/core_cm3.h **** #define SCB_DFSR_EXTERNAL_Pos               4                                             /*!< SCB 
  539:Drivers/CMSIS/core_cm3.h **** #define SCB_DFSR_EXTERNAL_Msk              (1UL << SCB_DFSR_EXTERNAL_Pos)                 /*!< SCB 
  540:Drivers/CMSIS/core_cm3.h **** 
-ARM GAS  /tmp/cctbLu4m.s 			page 12
+ARM GAS  /tmp/ccFZtiGI.s 			page 12
 
 
  541:Drivers/CMSIS/core_cm3.h **** #define SCB_DFSR_VCATCH_Pos                 3                                             /*!< SCB 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  595:Drivers/CMSIS/core_cm3.h ****     \brief      Type definitions for the System Timer Registers.
  596:Drivers/CMSIS/core_cm3.h ****   @{
  597:Drivers/CMSIS/core_cm3.h ****  */
-ARM GAS  /tmp/cctbLu4m.s 			page 13
+ARM GAS  /tmp/ccFZtiGI.s 			page 13
 
 
  598:Drivers/CMSIS/core_cm3.h **** 
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  652:Drivers/CMSIS/core_cm3.h **** {
  653:Drivers/CMSIS/core_cm3.h ****   __O  union
  654:Drivers/CMSIS/core_cm3.h ****   {
-ARM GAS  /tmp/cctbLu4m.s 			page 14
+ARM GAS  /tmp/ccFZtiGI.s 			page 14
 
 
  655:Drivers/CMSIS/core_cm3.h ****     __O  uint8_t    u8;                  /*!< Offset: 0x000 ( /W)  ITM Stimulus Port 8-bit         
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  709:Drivers/CMSIS/core_cm3.h **** 
  710:Drivers/CMSIS/core_cm3.h **** #define ITM_TCR_SYNCENA_Pos                 2                                             /*!< ITM 
  711:Drivers/CMSIS/core_cm3.h **** #define ITM_TCR_SYNCENA_Msk                (1UL << ITM_TCR_SYNCENA_Pos)                   /*!< ITM 
-ARM GAS  /tmp/cctbLu4m.s 			page 15
+ARM GAS  /tmp/ccFZtiGI.s 			page 15
 
 
  712:Drivers/CMSIS/core_cm3.h **** 
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  766:Drivers/CMSIS/core_cm3.h ****   __IO uint32_t COMP1;                   /*!< Offset: 0x030 (R/W)  Comparator Register 1           
  767:Drivers/CMSIS/core_cm3.h ****   __IO uint32_t MASK1;                   /*!< Offset: 0x034 (R/W)  Mask Register 1                 
  768:Drivers/CMSIS/core_cm3.h ****   __IO uint32_t FUNCTION1;               /*!< Offset: 0x038 (R/W)  Function Register 1             
-ARM GAS  /tmp/cctbLu4m.s 			page 16
+ARM GAS  /tmp/ccFZtiGI.s 			page 16
 
 
  769:Drivers/CMSIS/core_cm3.h ****        uint32_t RESERVED1[1];
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  823:Drivers/CMSIS/core_cm3.h **** #define DWT_CTRL_CYCTAP_Msk                (0x1UL << DWT_CTRL_CYCTAP_Pos)              /*!< DWT CTR
  824:Drivers/CMSIS/core_cm3.h **** 
  825:Drivers/CMSIS/core_cm3.h **** #define DWT_CTRL_POSTINIT_Pos               5                                          /*!< DWT CTR
-ARM GAS  /tmp/cctbLu4m.s 			page 17
+ARM GAS  /tmp/ccFZtiGI.s 			page 17
 
 
  826:Drivers/CMSIS/core_cm3.h **** #define DWT_CTRL_POSTINIT_Msk              (0xFUL << DWT_CTRL_POSTINIT_Pos)            /*!< DWT CTR
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  880:Drivers/CMSIS/core_cm3.h **** #define DWT_FUNCTION_EMITRANGE_Pos          5                                          /*!< DWT FUN
  881:Drivers/CMSIS/core_cm3.h **** #define DWT_FUNCTION_EMITRANGE_Msk         (0x1UL << DWT_FUNCTION_EMITRANGE_Pos)       /*!< DWT FUN
  882:Drivers/CMSIS/core_cm3.h **** 
-ARM GAS  /tmp/cctbLu4m.s 			page 18
+ARM GAS  /tmp/ccFZtiGI.s 			page 18
 
 
  883:Drivers/CMSIS/core_cm3.h **** #define DWT_FUNCTION_FUNCTION_Pos           0                                          /*!< DWT FUN
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  937:Drivers/CMSIS/core_cm3.h **** #define TPI_FFSR_TCPresent_Pos              2                                          /*!< TPI FFS
  938:Drivers/CMSIS/core_cm3.h **** #define TPI_FFSR_TCPresent_Msk             (0x1UL << TPI_FFSR_TCPresent_Pos)           /*!< TPI FFS
  939:Drivers/CMSIS/core_cm3.h **** 
-ARM GAS  /tmp/cctbLu4m.s 			page 19
+ARM GAS  /tmp/ccFZtiGI.s 			page 19
 
 
  940:Drivers/CMSIS/core_cm3.h **** #define TPI_FFSR_FtStopped_Pos              1                                          /*!< TPI FFS
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  994:Drivers/CMSIS/core_cm3.h **** #define TPI_FIFO1_ETM_bytecount_Msk        (0x3UL << TPI_FIFO1_ETM_bytecount_Pos)      /*!< TPI FIF
  995:Drivers/CMSIS/core_cm3.h **** 
  996:Drivers/CMSIS/core_cm3.h **** #define TPI_FIFO1_ITM2_Pos                 16                                          /*!< TPI FIF
-ARM GAS  /tmp/cctbLu4m.s 			page 20
+ARM GAS  /tmp/ccFZtiGI.s 			page 20
 
 
  997:Drivers/CMSIS/core_cm3.h **** #define TPI_FIFO1_ITM2_Msk                 (0xFFUL << TPI_FIFO1_ITM2_Pos)              /*!< TPI FIF
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
 1051:Drivers/CMSIS/core_cm3.h **** typedef struct
 1052:Drivers/CMSIS/core_cm3.h **** {
 1053:Drivers/CMSIS/core_cm3.h ****   __I  uint32_t TYPE;                    /*!< Offset: 0x000 (R/ )  MPU Type Register               
-ARM GAS  /tmp/cctbLu4m.s 			page 21
+ARM GAS  /tmp/ccFZtiGI.s 			page 21
 
 
 1054:Drivers/CMSIS/core_cm3.h ****   __IO uint32_t CTRL;                    /*!< Offset: 0x004 (R/W)  MPU Control Register            
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
 1108:Drivers/CMSIS/core_cm3.h **** #define MPU_RASR_AP_Msk                    (0x7UL << MPU_RASR_AP_Pos)                     /*!< MPU 
 1109:Drivers/CMSIS/core_cm3.h **** 
 1110:Drivers/CMSIS/core_cm3.h **** #define MPU_RASR_TEX_Pos                   19                                             /*!< MPU 
-ARM GAS  /tmp/cctbLu4m.s 			page 22
+ARM GAS  /tmp/ccFZtiGI.s 			page 22
 
 
 1111:Drivers/CMSIS/core_cm3.h **** #define MPU_RASR_TEX_Msk                   (0x7UL << MPU_RASR_TEX_Pos)                    /*!< MPU 
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
 1165:Drivers/CMSIS/core_cm3.h **** #define CoreDebug_DHCSR_S_SLEEP_Msk        (1UL << CoreDebug_DHCSR_S_SLEEP_Pos)           /*!< Core
 1166:Drivers/CMSIS/core_cm3.h **** 
 1167:Drivers/CMSIS/core_cm3.h **** #define CoreDebug_DHCSR_S_HALT_Pos         17                                             /*!< Core
-ARM GAS  /tmp/cctbLu4m.s 			page 23
+ARM GAS  /tmp/ccFZtiGI.s 			page 23
 
 
 1168:Drivers/CMSIS/core_cm3.h **** #define CoreDebug_DHCSR_S_HALT_Msk         (1UL << CoreDebug_DHCSR_S_HALT_Pos)            /*!< Core
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
 1222:Drivers/CMSIS/core_cm3.h **** 
 1223:Drivers/CMSIS/core_cm3.h **** #define CoreDebug_DEMCR_VC_CHKERR_Pos       6                                             /*!< Core
 1224:Drivers/CMSIS/core_cm3.h **** #define CoreDebug_DEMCR_VC_CHKERR_Msk      (1UL << CoreDebug_DEMCR_VC_CHKERR_Pos)         /*!< Core
-ARM GAS  /tmp/cctbLu4m.s 			page 24
+ARM GAS  /tmp/ccFZtiGI.s 			page 24
 
 
 1225:Drivers/CMSIS/core_cm3.h **** 
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
 1279:Drivers/CMSIS/core_cm3.h ****  ******************************************************************************/
 1280:Drivers/CMSIS/core_cm3.h **** /** \defgroup CMSIS_Core_FunctionInterface Functions and Instructions Reference
 1281:Drivers/CMSIS/core_cm3.h **** */
-ARM GAS  /tmp/cctbLu4m.s 			page 25
+ARM GAS  /tmp/ccFZtiGI.s 			page 25
 
 
 1282:Drivers/CMSIS/core_cm3.h **** 
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
 1336:Drivers/CMSIS/core_cm3.h ****   NVIC->ISER[((uint32_t)(IRQn) >> 5)] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* enable interrupt */
 1337:Drivers/CMSIS/core_cm3.h **** }
 1338:Drivers/CMSIS/core_cm3.h **** 
-ARM GAS  /tmp/cctbLu4m.s 			page 26
+ARM GAS  /tmp/ccFZtiGI.s 			page 26
 
 
 1339:Drivers/CMSIS/core_cm3.h **** 
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
 1393:Drivers/CMSIS/core_cm3.h **** 
 1394:Drivers/CMSIS/core_cm3.h ****     The function reads the active register in NVIC and returns the active bit.
 1395:Drivers/CMSIS/core_cm3.h **** 
-ARM GAS  /tmp/cctbLu4m.s 			page 27
+ARM GAS  /tmp/ccFZtiGI.s 			page 27
 
 
 1396:Drivers/CMSIS/core_cm3.h ****     \param [in]      IRQn  Interrupt number.
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
 1450:Drivers/CMSIS/core_cm3.h ****     In case of a conflict between priority grouping and available
 1451:Drivers/CMSIS/core_cm3.h ****     priority bits (__NVIC_PRIO_BITS), the samllest possible priority group is set.
 1452:Drivers/CMSIS/core_cm3.h **** 
-ARM GAS  /tmp/cctbLu4m.s 			page 28
+ARM GAS  /tmp/ccFZtiGI.s 			page 28
 
 
 1453:Drivers/CMSIS/core_cm3.h ****     \param [in]     PriorityGroup  Used priority group.
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
 1507:Drivers/CMSIS/core_cm3.h ****                                                                   buffered write are completed befo
 1508:Drivers/CMSIS/core_cm3.h ****   SCB->AIRCR  = ((0x5FA << SCB_AIRCR_VECTKEY_Pos)      |
 1509:Drivers/CMSIS/core_cm3.h ****                  (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
-ARM GAS  /tmp/cctbLu4m.s 			page 29
+ARM GAS  /tmp/ccFZtiGI.s 			page 29
 
 
 1510:Drivers/CMSIS/core_cm3.h ****                  SCB_AIRCR_SYSRESETREQ_Msk);                   /* Keep priority group unchanged */
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
   55 000c 013B     		subs	r3, r3, #1
   56              	.LVL4:
   57              		.loc 2 1545 6 view .LVU8
-ARM GAS  /tmp/cctbLu4m.s 			page 30
+ARM GAS  /tmp/ccFZtiGI.s 			page 30
 
 
   58 000e B3F1807F 		cmp	r3, #16777216
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
   97 0024 0021     		movs	r1, #0
   98 0026 9161     		str	r1, [r2, #24]
   99              		.loc 2 1550 3 is_stmt 1 view .LVU24
-ARM GAS  /tmp/cctbLu4m.s 			page 31
+ARM GAS  /tmp/ccFZtiGI.s 			page 31
 
 
  100              		.loc 2 1550 18 is_stmt 0 view .LVU25
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  137              		.global	delay_1ms
  138              		.syntax unified
  139              		.thumb
-ARM GAS  /tmp/cctbLu4m.s 			page 32
+ARM GAS  /tmp/ccFZtiGI.s 			page 32
 
 
  140              		.thumb_func
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  179              		.fpu softvfp
  181              	delay_decrement:
  182              	.LFB58:
-ARM GAS  /tmp/cctbLu4m.s 			page 33
+ARM GAS  /tmp/ccFZtiGI.s 			page 33
 
 
   74:Src/systick.c **** 
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
   94:Src/systick.c **** void tick_count_increment()
   95:Src/systick.c **** {
  219              		.loc 1 95 1 is_stmt 1 view -0
-ARM GAS  /tmp/cctbLu4m.s 			page 34
+ARM GAS  /tmp/ccFZtiGI.s 			page 34
 
 
  220              		.cfi_startproc
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  263              		.align	2
  264              	.L24:
  265 0008 00000000 		.word	.LANCHOR1
-ARM GAS  /tmp/cctbLu4m.s 			page 35
+ARM GAS  /tmp/ccFZtiGI.s 			page 35
 
 
  266              		.cfi_endproc
@@ -2060,30 +2060,30 @@ ARM GAS  /tmp/cctbLu4m.s 			page 1
  287              		.file 5 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_dbg.h"
  288              		.file 6 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
  289              		.file 7 "Drivers/CMSIS/Include/system_gd32f1x0.h"
-ARM GAS  /tmp/cctbLu4m.s 			page 36
+ARM GAS  /tmp/ccFZtiGI.s 			page 36
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 systick.c
-     /tmp/cctbLu4m.s:16     .text.systick_config:0000000000000000 $t
-     /tmp/cctbLu4m.s:24     .text.systick_config:0000000000000000 systick_config
-     /tmp/cctbLu4m.s:130    .text.systick_config:0000000000000034 $d
-     /tmp/cctbLu4m.s:136    .text.delay_1ms:0000000000000000 $t
-     /tmp/cctbLu4m.s:143    .text.delay_1ms:0000000000000000 delay_1ms
-     /tmp/cctbLu4m.s:169    .text.delay_1ms:000000000000000c $d
-     /tmp/cctbLu4m.s:174    .text.delay_decrement:0000000000000000 $t
-     /tmp/cctbLu4m.s:181    .text.delay_decrement:0000000000000000 delay_decrement
-     /tmp/cctbLu4m.s:205    .text.delay_decrement:0000000000000010 $d
-     /tmp/cctbLu4m.s:210    .text.tick_count_increment:0000000000000000 $t
-     /tmp/cctbLu4m.s:217    .text.tick_count_increment:0000000000000000 tick_count_increment
-     /tmp/cctbLu4m.s:235    .text.tick_count_increment:000000000000000c $d
-     /tmp/cctbLu4m.s:240    .text.get_tick_count_ms:0000000000000000 $t
-     /tmp/cctbLu4m.s:247    .text.get_tick_count_ms:0000000000000000 get_tick_count_ms
-     /tmp/cctbLu4m.s:265    .text.get_tick_count_ms:0000000000000008 $d
-     /tmp/cctbLu4m.s:270    .bss.delay:0000000000000000 $d
-     /tmp/cctbLu4m.s:274    .bss.delay:0000000000000000 delay
-     /tmp/cctbLu4m.s:277    .bss.tick_count_ms:0000000000000000 $d
-     /tmp/cctbLu4m.s:281    .bss.tick_count_ms:0000000000000000 tick_count_ms
+     /tmp/ccFZtiGI.s:16     .text.systick_config:0000000000000000 $t
+     /tmp/ccFZtiGI.s:24     .text.systick_config:0000000000000000 systick_config
+     /tmp/ccFZtiGI.s:130    .text.systick_config:0000000000000034 $d
+     /tmp/ccFZtiGI.s:136    .text.delay_1ms:0000000000000000 $t
+     /tmp/ccFZtiGI.s:143    .text.delay_1ms:0000000000000000 delay_1ms
+     /tmp/ccFZtiGI.s:169    .text.delay_1ms:000000000000000c $d
+     /tmp/ccFZtiGI.s:174    .text.delay_decrement:0000000000000000 $t
+     /tmp/ccFZtiGI.s:181    .text.delay_decrement:0000000000000000 delay_decrement
+     /tmp/ccFZtiGI.s:205    .text.delay_decrement:0000000000000010 $d
+     /tmp/ccFZtiGI.s:210    .text.tick_count_increment:0000000000000000 $t
+     /tmp/ccFZtiGI.s:217    .text.tick_count_increment:0000000000000000 tick_count_increment
+     /tmp/ccFZtiGI.s:235    .text.tick_count_increment:000000000000000c $d
+     /tmp/ccFZtiGI.s:240    .text.get_tick_count_ms:0000000000000000 $t
+     /tmp/ccFZtiGI.s:247    .text.get_tick_count_ms:0000000000000000 get_tick_count_ms
+     /tmp/ccFZtiGI.s:265    .text.get_tick_count_ms:0000000000000008 $d
+     /tmp/ccFZtiGI.s:270    .bss.delay:0000000000000000 $d
+     /tmp/ccFZtiGI.s:274    .bss.delay:0000000000000000 delay
+     /tmp/ccFZtiGI.s:277    .bss.tick_count_ms:0000000000000000 $d
+     /tmp/ccFZtiGI.s:281    .bss.tick_count_ms:0000000000000000 tick_count_ms
 
 UNDEFINED SYMBOLS
 SystemCoreClock

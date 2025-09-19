@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc8PYp20.s 			page 1
+ARM GAS  /tmp/cchLWr0R.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
   31              		@ frame_needed = 0, uses_anonymous_args = 0
   26:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     switch(usart_periph){
   32              		.loc 1 26 5 view .LVU1
-ARM GAS  /tmp/cc8PYp20.s 			page 2
+ARM GAS  /tmp/cchLWr0R.s 			page 2
 
 
   25:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     switch(usart_periph){
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
   71              		.loc 1 32 9 is_stmt 0 view .LVU10
   72 0028 FFF7FEFF 		bl	rcu_periph_reset_enable
   73              	.LVL5:
-ARM GAS  /tmp/cc8PYp20.s 			page 3
+ARM GAS  /tmp/cchLWr0R.s 			page 3
 
 
   33:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****         break;
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  115              		.loc 1 48 1 view .LVU18
  116 0004 0446     		mov	r4, r0
  117              		.loc 1 50 5 view .LVU19
-ARM GAS  /tmp/cc8PYp20.s 			page 4
+ARM GAS  /tmp/cchLWr0R.s 			page 4
 
 
  118 0006 9842     		cmp	r0, r3
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  154 002a C1F34203 		ubfx	r3, r1, #1, #3
   63:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****         intdiv = udiv & 0xfff0U;
  155              		.loc 1 63 16 view .LVU37
-ARM GAS  /tmp/cc8PYp20.s 			page 5
+ARM GAS  /tmp/cchLWr0R.s 			page 5
 
 
  156 002e 21F00F01 		bic	r1, r1, #15
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  191 0044 0344     		add	r3, r3, r0
  192              	.LVL18:
   68:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****         intdiv = udiv & 0xfff0U;
-ARM GAS  /tmp/cc8PYp20.s 			page 6
+ARM GAS  /tmp/cchLWr0R.s 			page 6
 
 
  193              		.loc 1 68 14 view .LVU52
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  230              		.loc 1 90 30 is_stmt 0 view .LVU59
  231 0008 0268     		ldr	r2, [r0]
  232 000a 22F4C062 		bic	r2, r2, #1536
-ARM GAS  /tmp/cc8PYp20.s 			page 7
+ARM GAS  /tmp/cchLWr0R.s 			page 7
 
 
  233 000e 0260     		str	r2, [r0]
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  110:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     /* configure USART word length */
  111:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     USART_CTL0(usart_periph) |= wlen;
  270              		.loc 1 111 5 is_stmt 1 view .LVU68
-ARM GAS  /tmp/cc8PYp20.s 			page 8
+ARM GAS  /tmp/cchLWr0R.s 			page 8
 
 
  271              		.loc 1 111 30 is_stmt 0 view .LVU69
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  308 0010 4368     		ldr	r3, [r0, #4]
  309 0012 0B43     		orrs	r3, r3, r1
  310 0014 4360     		str	r3, [r0, #4]
-ARM GAS  /tmp/cc8PYp20.s 			page 9
+ARM GAS  /tmp/cchLWr0R.s 			page 9
 
 
  131:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** }
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  147:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \param[out] none
  148:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \retval     none
  149:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** */
-ARM GAS  /tmp/cc8PYp20.s 			page 10
+ARM GAS  /tmp/cchLWr0R.s 			page 10
 
 
  150:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** void usart_disable(uint32_t usart_periph)
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  390              		.loc 1 168 30 is_stmt 0 view .LVU91
  391 0008 0368     		ldr	r3, [r0]
  392 000a 0B43     		orrs	r3, r3, r1
-ARM GAS  /tmp/cc8PYp20.s 			page 11
+ARM GAS  /tmp/cchLWr0R.s 			page 11
 
 
  393 000c 0360     		str	r3, [r0]
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  433              		.syntax unified
  434              		.thumb
  435              		.thumb_func
-ARM GAS  /tmp/cc8PYp20.s 			page 12
+ARM GAS  /tmp/cchLWr0R.s 			page 12
 
 
  436              		.fpu softvfp
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  472              		@ link register save eliminated.
  207:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     return (uint16_t)(GET_BITS(USART_RDATA(usart_periph), 0U, 8U));
  473              		.loc 1 207 5 view .LVU105
-ARM GAS  /tmp/cc8PYp20.s 			page 13
+ARM GAS  /tmp/cchLWr0R.s 			page 13
 
 
  474              		.loc 1 207 23 is_stmt 0 view .LVU106
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  510 000c 4368     		ldr	r3, [r0, #4]
  511 000e 23F40023 		bic	r3, r3, #524288
  512 0012 4360     		str	r3, [r0, #4]
-ARM GAS  /tmp/cc8PYp20.s 			page 14
+ARM GAS  /tmp/cchLWr0R.s 			page 14
 
 
  513              		.loc 1 224 5 is_stmt 1 view .LVU115
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  555 0016 21       		.byte	(.L31-.L30)/2
  556 0017 15       		.byte	(.L29-.L30)/2
  557              		.p2align 1
-ARM GAS  /tmp/cc8PYp20.s 			page 15
+ARM GAS  /tmp/cchLWr0R.s 			page 15
 
 
  558              	.L37:
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  580 002c 23F40033 		bic	r3, r3, #131072
  581 0030 F5E7     		b	.L38
  582              	.L32:
-ARM GAS  /tmp/cc8PYp20.s 			page 16
+ARM GAS  /tmp/cchLWr0R.s 			page 16
 
 
  249:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****         break;
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  270:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \param[in]  usart_periph: USARTx(x=0,1)
  271:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \param[out] none
  272:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \retval     none
-ARM GAS  /tmp/cc8PYp20.s 			page 17
+ARM GAS  /tmp/cchLWr0R.s 			page 17
 
 
  273:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** */
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  666 0006 0360     		str	r3, [r0]
  289:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     USART_CTL2(usart_periph) |= USART_CTL2_OVRD; 
  667              		.loc 1 289 5 is_stmt 1 view .LVU150
-ARM GAS  /tmp/cc8PYp20.s 			page 18
+ARM GAS  /tmp/cchLWr0R.s 			page 18
 
 
  668              		.loc 1 289 30 is_stmt 0 view .LVU151
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  706 0012 0B43     		orrs	r3, r3, r1
  707 0014 0360     		str	r3, [r0]
  308:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** }
-ARM GAS  /tmp/cc8PYp20.s 			page 19
+ARM GAS  /tmp/cchLWr0R.s 			page 19
 
 
  708              		.loc 1 308 1 view .LVU160
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  747              	.LFE72:
  749              		.section	.text.usart_autobaud_detection_enable,"ax",%progbits
  750              		.align	1
-ARM GAS  /tmp/cc8PYp20.s 			page 20
+ARM GAS  /tmp/cchLWr0R.s 			page 20
 
 
  751              		.global	usart_autobaud_detection_enable
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  788              		@ args = 0, pretend = 0, frame = 0
  789              		@ frame_needed = 0, uses_anonymous_args = 0
  790              		@ link register save eliminated.
-ARM GAS  /tmp/cc8PYp20.s 			page 21
+ARM GAS  /tmp/cchLWr0R.s 			page 21
 
 
  346:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     USART_CTL1(usart_periph) &= ~(USART_CTL1_ABDEN);
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  829              		.cfi_endproc
  830              	.LFE75:
  832              		.section	.text.usart_mute_mode_enable,"ax",%progbits
-ARM GAS  /tmp/cc8PYp20.s 			page 22
+ARM GAS  /tmp/cchLWr0R.s 			page 22
 
 
  833              		.align	1
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  870              		.cfi_startproc
  871              		@ args = 0, pretend = 0, frame = 0
  872              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cc8PYp20.s 			page 23
+ARM GAS  /tmp/cchLWr0R.s 			page 23
 
 
  873              		@ link register save eliminated.
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  911              		.loc 1 401 30 is_stmt 0 view .LVU197
  912 0010 0368     		ldr	r3, [r0]
  913 0012 0B43     		orrs	r3, r3, r1
-ARM GAS  /tmp/cc8PYp20.s 			page 24
+ARM GAS  /tmp/cchLWr0R.s 			page 24
 
 
  914 0014 0360     		str	r3, [r0]
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  950              		.loc 1 418 5 is_stmt 1 view .LVU206
  951              		.loc 1 418 30 is_stmt 0 view .LVU207
  952 0014 4368     		ldr	r3, [r0, #4]
-ARM GAS  /tmp/cc8PYp20.s 			page 25
+ARM GAS  /tmp/cchLWr0R.s 			page 25
 
 
  953 0016 1943     		orrs	r1, r1, r3
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  993              		.cfi_endproc
  994              	.LFE80:
  996              		.section	.text.usart_receiver_timeout_enable,"ax",%progbits
-ARM GAS  /tmp/cc8PYp20.s 			page 26
+ARM GAS  /tmp/cchLWr0R.s 			page 26
 
 
  997              		.align	1
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1034              		.cfi_startproc
  1035              		@ args = 0, pretend = 0, frame = 0
  1036              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cc8PYp20.s 			page 27
+ARM GAS  /tmp/cchLWr0R.s 			page 27
 
 
  1037              		@ link register save eliminated.
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1079              		.section	.text.usart_lin_mode_enable,"ax",%progbits
  1080              		.align	1
  1081              		.global	usart_lin_mode_enable
-ARM GAS  /tmp/cc8PYp20.s 			page 28
+ARM GAS  /tmp/cchLWr0R.s 			page 28
 
 
  1082              		.syntax unified
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  488:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \param[out] none
  489:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \retval     none
  490:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** */
-ARM GAS  /tmp/cc8PYp20.s 			page 29
+ARM GAS  /tmp/cchLWr0R.s 			page 29
 
 
  491:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** void usart_lin_mode_disable(uint32_t usart_periph)
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  511:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     USART_CTL0(usart_periph) &= ~(USART_CTL0_UEN);
  1157              		.loc 1 511 5 view .LVU244
  1158              		.loc 1 511 30 is_stmt 0 view .LVU245
-ARM GAS  /tmp/cc8PYp20.s 			page 30
+ARM GAS  /tmp/cchLWr0R.s 			page 30
 
 
  1159 0000 0368     		ldr	r3, [r0]
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1198              		.loc 1 527 30 is_stmt 0 view .LVU255
  1199 0008 8368     		ldr	r3, [r0, #8]
  1200 000a 43F00803 		orr	r3, r3, #8
-ARM GAS  /tmp/cc8PYp20.s 			page 31
+ARM GAS  /tmp/cchLWr0R.s 			page 31
 
 
  1201 000e 8360     		str	r3, [r0, #8]
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1243              		.thumb_func
  1244              		.fpu softvfp
  1246              	usart_clock_enable:
-ARM GAS  /tmp/cc8PYp20.s 			page 32
+ARM GAS  /tmp/cchLWr0R.s 			page 32
 
 
  1247              	.LVL57:
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1280              		.loc 1 565 1 is_stmt 1 view -0
  1281              		.cfi_startproc
  1282              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/cc8PYp20.s 			page 33
+ARM GAS  /tmp/cchLWr0R.s 			page 33
 
 
  1283              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  590:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     USART_CTL0(usart_periph) &= ~(USART_CTL0_UEN);
  1315              		.loc 1 590 5 view .LVU276
  588:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     /* disable USART */
-ARM GAS  /tmp/cc8PYp20.s 			page 34
+ARM GAS  /tmp/cchLWr0R.s 			page 34
 
 
  1316              		.loc 1 588 1 is_stmt 0 view .LVU277
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1355 002a 4268     		ldr	r2, [r0, #4]
  1356 002c 1343     		orrs	r3, r3, r2
  1357 002e 4360     		str	r3, [r0, #4]
-ARM GAS  /tmp/cc8PYp20.s 			page 35
+ARM GAS  /tmp/cchLWr0R.s 			page 35
 
 
  597:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** }
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1400              		.fpu softvfp
  1402              	usart_smartcard_mode_disable:
  1403              	.LVL64:
-ARM GAS  /tmp/cc8PYp20.s 			page 36
+ARM GAS  /tmp/cchLWr0R.s 			page 36
 
 
  1404              	.LFB93:
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1437              		.cfi_startproc
  1438              		@ args = 0, pretend = 0, frame = 0
  1439              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cc8PYp20.s 			page 37
+ARM GAS  /tmp/cchLWr0R.s 			page 37
 
 
  1440              		@ link register save eliminated.
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1478              		.loc 1 652 30 is_stmt 0 view .LVU316
  1479 0008 8368     		ldr	r3, [r0, #8]
  1480 000a 23F01003 		bic	r3, r3, #16
-ARM GAS  /tmp/cc8PYp20.s 			page 38
+ARM GAS  /tmp/cchLWr0R.s 			page 38
 
 
  1481 000e 8360     		str	r3, [r0, #8]
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1517              		.loc 1 667 28 view .LVU326
  1518 000e 23F47F43 		bic	r3, r3, #65280
  1519 0012 0361     		str	r3, [r0, #16]
-ARM GAS  /tmp/cc8PYp20.s 			page 39
+ARM GAS  /tmp/cchLWr0R.s 			page 39
 
 
  1520              		.loc 1 668 5 is_stmt 1 view .LVU327
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1563              		.global	usart_smartcard_autoretry_config
  1564              		.syntax unified
  1565              		.thumb
-ARM GAS  /tmp/cc8PYp20.s 			page 40
+ARM GAS  /tmp/cchLWr0R.s 			page 40
 
 
  1566              		.thumb_func
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1601              		.cfi_endproc
  1602              	.LFE98:
  1604              		.section	.text.usart_irda_mode_enable,"ax",%progbits
-ARM GAS  /tmp/cc8PYp20.s 			page 41
+ARM GAS  /tmp/cchLWr0R.s 			page 41
 
 
  1605              		.align	1
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  715:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \brief      IrDA mode disable
  716:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \param[in]  usart_periph: USARTx(x=0)
  717:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \param[out] none
-ARM GAS  /tmp/cc8PYp20.s 			page 42
+ARM GAS  /tmp/cchLWr0R.s 			page 42
 
 
  718:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \retval     none
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1681              		@ link register save eliminated.
  739:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     /* disable USART */
  740:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     USART_CTL0(usart_periph) &= ~(USART_CTL0_UEN);
-ARM GAS  /tmp/cc8PYp20.s 			page 43
+ARM GAS  /tmp/cchLWr0R.s 			page 43
 
 
  1682              		.loc 1 740 5 view .LVU361
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  756:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     
  757:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     USART_GP(usart_periph) &= ~(USART_GP_PSC);
  1722              		.loc 1 757 5 is_stmt 1 view .LVU371
-ARM GAS  /tmp/cc8PYp20.s 			page 44
+ARM GAS  /tmp/cchLWr0R.s 			page 44
 
 
  1723              		.loc 1 757 28 is_stmt 0 view .LVU372
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1761 000a 22F48072 		bic	r2, r2, #256
  1762 000e 8260     		str	r2, [r0, #8]
  776:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     USART_CTL2(usart_periph) |= rtsconfig;
-ARM GAS  /tmp/cc8PYp20.s 			page 45
+ARM GAS  /tmp/cchLWr0R.s 			page 45
 
 
  1763              		.loc 1 776 5 is_stmt 1 view .LVU381
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1801 0010 8368     		ldr	r3, [r0, #8]
  1802 0012 0B43     		orrs	r3, r3, r1
  1803 0014 8360     		str	r3, [r0, #8]
-ARM GAS  /tmp/cc8PYp20.s 			page 46
+ARM GAS  /tmp/cchLWr0R.s 			page 46
 
 
  795:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** }
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1846              		.fpu softvfp
  1848              	usart_rs485_driver_disable:
  1849              	.LVL80:
-ARM GAS  /tmp/cc8PYp20.s 			page 47
+ARM GAS  /tmp/cchLWr0R.s 			page 47
 
 
  1850              	.LFB106:
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  1882              		.loc 1 833 1 is_stmt 1 view -0
  1883              		.cfi_startproc
  1884              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/cc8PYp20.s 			page 48
+ARM GAS  /tmp/cchLWr0R.s 			page 48
 
 
  1885              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  846:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \retval     none
  847:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** */
  848:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** void usart_driver_deassertime_config(uint32_t usart_periph, uint32_t dedtime)
-ARM GAS  /tmp/cc8PYp20.s 			page 49
+ARM GAS  /tmp/cchLWr0R.s 			page 49
 
 
  849:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** {
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  858:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \brief      configure driver enable polarity mode
  859:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \param[in]  usart_periph: USARTx(x=0,1)
  860:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \param[in]  dep: DE signal
-ARM GAS  /tmp/cc8PYp20.s 			page 50
+ARM GAS  /tmp/cchLWr0R.s 			page 50
 
 
  861:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****       \arg        USART_DEP_HIGH: DE signal is active high 
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  874:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** 
  875:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** /*!
  876:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \brief      configure USART DMA reception
-ARM GAS  /tmp/cc8PYp20.s 			page 51
+ARM GAS  /tmp/cchLWr0R.s 			page 51
 
 
  877:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     \param[in]  usart_periph: USARTx(x=0,1)
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  2039              		.loc 1 901 1 is_stmt 1 view -0
  2040              		.cfi_startproc
  2041              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/cc8PYp20.s 			page 52
+ARM GAS  /tmp/cchLWr0R.s 			page 52
 
 
  2042              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  2082 0008 8368     		ldr	r3, [r0, #8]
  2083 000a 43F40053 		orr	r3, r3, #8192
  2084 000e 8360     		str	r3, [r0, #8]
-ARM GAS  /tmp/cc8PYp20.s 			page 53
+ARM GAS  /tmp/cchLWr0R.s 			page 53
 
 
  918:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** }
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  2129              	usart_wakeup_enable:
  2130              	.LVL91:
  2131              	.LFB114:
-ARM GAS  /tmp/cc8PYp20.s 			page 54
+ARM GAS  /tmp/cchLWr0R.s 			page 54
 
 
  932:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** 
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  2167 0006 0360     		str	r3, [r0]
  953:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** }
  2168              		.loc 1 953 1 view .LVU469
-ARM GAS  /tmp/cc8PYp20.s 			page 55
+ARM GAS  /tmp/cchLWr0R.s 			page 55
 
 
  2169 0008 7047     		bx	lr
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  2204              		.loc 1 971 30 is_stmt 0 view .LVU478
  2205 0014 8368     		ldr	r3, [r0, #8]
  2206 0016 1943     		orrs	r1, r1, r3
-ARM GAS  /tmp/cc8PYp20.s 			page 56
+ARM GAS  /tmp/cchLWr0R.s 			page 56
 
 
  2207 0018 8160     		str	r1, [r0, #8]
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  2229              		.loc 1 1005 5 view .LVU481
  2230              		.loc 1 1005 18 is_stmt 0 view .LVU482
  2231 0000 8B09     		lsrs	r3, r1, #6
-ARM GAS  /tmp/cc8PYp20.s 			page 57
+ARM GAS  /tmp/cchLWr0R.s 			page 57
 
 
  2232 0002 1858     		ldr	r0, [r3, r0]
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
 1033:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     USART_INTC(usart_periph) |= BIT(USART_BIT_POS(flag));
  2261              		.loc 1 1033 5 view .LVU487
  2262              		.loc 1 1033 33 is_stmt 0 view .LVU488
-ARM GAS  /tmp/cc8PYp20.s 			page 58
+ARM GAS  /tmp/cchLWr0R.s 			page 58
 
 
  2263 0000 01F01F03 		and	r3, r1, #31
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  2294              		.loc 1 1058 45 is_stmt 0 view .LVU495
  2295 0000 0123     		movs	r3, #1
 1057:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     USART_REG_VAL(usart_periph, inttype) |= BIT(USART_BIT_POS(inttype));
-ARM GAS  /tmp/cc8PYp20.s 			page 59
+ARM GAS  /tmp/cchLWr0R.s 			page 59
 
 
  2296              		.loc 1 1057 1 view .LVU496
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
 1082:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c **** {
  2329              		.loc 1 1082 1 is_stmt 1 view -0
  2330              		.cfi_startproc
-ARM GAS  /tmp/cc8PYp20.s 			page 60
+ARM GAS  /tmp/cchLWr0R.s 			page 60
 
 
  2331              		@ args = 0, pretend = 0, frame = 0
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  2369              		.loc 1 1099 1 is_stmt 1 view -0
  2370              		.cfi_startproc
  2371              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/cc8PYp20.s 			page 61
+ARM GAS  /tmp/cchLWr0R.s 			page 61
 
 
  2372              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
 1128:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     /* get the interrupt enable bit status */
 1129:Drivers/GD32F1x0_standard_peripheral/Source/gd32f1x0_usart.c ****     intenable = (USART_REG_VAL(usart_periph, int_flag) & BIT(USART_BIT_POS(int_flag)));
  2400              		.loc 1 1129 5 view .LVU517
-ARM GAS  /tmp/cc8PYp20.s 			page 62
+ARM GAS  /tmp/cchLWr0R.s 			page 62
 
 
  2401              		.loc 1 1129 18 is_stmt 0 view .LVU518
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  2441 002a 10BD     		pop	{r4, pc}
  2442              		.loc 1 1138 1 view .LVU532
  2443              		.cfi_endproc
-ARM GAS  /tmp/cc8PYp20.s 			page 63
+ARM GAS  /tmp/cchLWr0R.s 			page 63
 
 
  2444              	.LFE122:
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  2476              		.cfi_endproc
  2477              	.LFE123:
  2479              		.text
-ARM GAS  /tmp/cc8PYp20.s 			page 64
+ARM GAS  /tmp/cchLWr0R.s 			page 64
 
 
  2480              	.Letext0:
@@ -3786,157 +3786,157 @@ ARM GAS  /tmp/cc8PYp20.s 			page 1
  2482              		.file 3 "Drivers/CMSIS/Include/gd32f1x0.h"
  2483              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
  2484              		.file 5 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_usart.h"
-ARM GAS  /tmp/cc8PYp20.s 			page 65
+ARM GAS  /tmp/cchLWr0R.s 			page 65
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32f1x0_usart.c
-     /tmp/cc8PYp20.s:16     .text.usart_deinit:0000000000000000 $t
-     /tmp/cc8PYp20.s:24     .text.usart_deinit:0000000000000000 usart_deinit
-     /tmp/cc8PYp20.s:84     .text.usart_deinit:0000000000000034 $d
-     /tmp/cc8PYp20.s:89     .text.usart_baudrate_set:0000000000000000 $t
-     /tmp/cc8PYp20.s:96     .text.usart_baudrate_set:0000000000000000 usart_baudrate_set
-     /tmp/cc8PYp20.s:204    .text.usart_baudrate_set:0000000000000050 $d
-     /tmp/cc8PYp20.s:209    .text.usart_parity_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:216    .text.usart_parity_config:0000000000000000 usart_parity_config
-     /tmp/cc8PYp20.s:245    .text.usart_word_length_set:0000000000000000 $t
-     /tmp/cc8PYp20.s:252    .text.usart_word_length_set:0000000000000000 usart_word_length_set
-     /tmp/cc8PYp20.s:281    .text.usart_stop_bit_set:0000000000000000 $t
-     /tmp/cc8PYp20.s:288    .text.usart_stop_bit_set:0000000000000000 usart_stop_bit_set
-     /tmp/cc8PYp20.s:317    .text.usart_enable:0000000000000000 $t
-     /tmp/cc8PYp20.s:324    .text.usart_enable:0000000000000000 usart_enable
-     /tmp/cc8PYp20.s:343    .text.usart_disable:0000000000000000 $t
-     /tmp/cc8PYp20.s:350    .text.usart_disable:0000000000000000 usart_disable
-     /tmp/cc8PYp20.s:369    .text.usart_transmit_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:376    .text.usart_transmit_config:0000000000000000 usart_transmit_config
-     /tmp/cc8PYp20.s:400    .text.usart_receive_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:407    .text.usart_receive_config:0000000000000000 usart_receive_config
-     /tmp/cc8PYp20.s:431    .text.usart_data_transmit:0000000000000000 $t
-     /tmp/cc8PYp20.s:438    .text.usart_data_transmit:0000000000000000 usart_data_transmit
-     /tmp/cc8PYp20.s:458    .text.usart_data_receive:0000000000000000 $t
-     /tmp/cc8PYp20.s:465    .text.usart_data_receive:0000000000000000 usart_data_receive
-     /tmp/cc8PYp20.s:484    .text.usart_data_first_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:491    .text.usart_data_first_config:0000000000000000 usart_data_first_config
-     /tmp/cc8PYp20.s:524    .text.usart_invert_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:531    .text.usart_invert_config:0000000000000000 usart_invert_config
-     /tmp/cc8PYp20.s:549    .text.usart_invert_config:0000000000000010 $d
-     /tmp/cc8PYp20.s:557    .text.usart_invert_config:0000000000000018 $t
-     /tmp/cc8PYp20.s:616    .text.usart_overrun_enable:0000000000000000 $t
-     /tmp/cc8PYp20.s:623    .text.usart_overrun_enable:0000000000000000 usart_overrun_enable
-     /tmp/cc8PYp20.s:647    .text.usart_overrun_disable:0000000000000000 $t
-     /tmp/cc8PYp20.s:654    .text.usart_overrun_disable:0000000000000000 usart_overrun_disable
-     /tmp/cc8PYp20.s:678    .text.usart_oversample_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:685    .text.usart_oversample_config:0000000000000000 usart_oversample_config
-     /tmp/cc8PYp20.s:714    .text.usart_sample_bit_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:721    .text.usart_sample_bit_config:0000000000000000 usart_sample_bit_config
-     /tmp/cc8PYp20.s:750    .text.usart_autobaud_detection_enable:0000000000000000 $t
-     /tmp/cc8PYp20.s:757    .text.usart_autobaud_detection_enable:0000000000000000 usart_autobaud_detection_enable
-     /tmp/cc8PYp20.s:776    .text.usart_autobaud_detection_disable:0000000000000000 $t
-     /tmp/cc8PYp20.s:783    .text.usart_autobaud_detection_disable:0000000000000000 usart_autobaud_detection_disable
-     /tmp/cc8PYp20.s:802    .text.usart_autobaud_detection_mode_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:809    .text.usart_autobaud_detection_mode_config:0000000000000000 usart_autobaud_detection_mode_config
-     /tmp/cc8PYp20.s:833    .text.usart_mute_mode_enable:0000000000000000 $t
-     /tmp/cc8PYp20.s:840    .text.usart_mute_mode_enable:0000000000000000 usart_mute_mode_enable
-     /tmp/cc8PYp20.s:859    .text.usart_mute_mode_disable:0000000000000000 $t
-     /tmp/cc8PYp20.s:866    .text.usart_mute_mode_disable:0000000000000000 usart_mute_mode_disable
-     /tmp/cc8PYp20.s:885    .text.usart_mute_mode_wakeup_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:892    .text.usart_mute_mode_wakeup_config:0000000000000000 usart_mute_mode_wakeup_config
-     /tmp/cc8PYp20.s:921    .text.usart_address_detection_mode_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:928    .text.usart_address_detection_mode_config:0000000000000000 usart_address_detection_mode_config
-     /tmp/cc8PYp20.s:961    .text.usart_address_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:968    .text.usart_address_config:0000000000000000 usart_address_config
-     /tmp/cc8PYp20.s:997    .text.usart_receiver_timeout_enable:0000000000000000 $t
-ARM GAS  /tmp/cc8PYp20.s 			page 66
+     /tmp/cchLWr0R.s:16     .text.usart_deinit:0000000000000000 $t
+     /tmp/cchLWr0R.s:24     .text.usart_deinit:0000000000000000 usart_deinit
+     /tmp/cchLWr0R.s:84     .text.usart_deinit:0000000000000034 $d
+     /tmp/cchLWr0R.s:89     .text.usart_baudrate_set:0000000000000000 $t
+     /tmp/cchLWr0R.s:96     .text.usart_baudrate_set:0000000000000000 usart_baudrate_set
+     /tmp/cchLWr0R.s:204    .text.usart_baudrate_set:0000000000000050 $d
+     /tmp/cchLWr0R.s:209    .text.usart_parity_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:216    .text.usart_parity_config:0000000000000000 usart_parity_config
+     /tmp/cchLWr0R.s:245    .text.usart_word_length_set:0000000000000000 $t
+     /tmp/cchLWr0R.s:252    .text.usart_word_length_set:0000000000000000 usart_word_length_set
+     /tmp/cchLWr0R.s:281    .text.usart_stop_bit_set:0000000000000000 $t
+     /tmp/cchLWr0R.s:288    .text.usart_stop_bit_set:0000000000000000 usart_stop_bit_set
+     /tmp/cchLWr0R.s:317    .text.usart_enable:0000000000000000 $t
+     /tmp/cchLWr0R.s:324    .text.usart_enable:0000000000000000 usart_enable
+     /tmp/cchLWr0R.s:343    .text.usart_disable:0000000000000000 $t
+     /tmp/cchLWr0R.s:350    .text.usart_disable:0000000000000000 usart_disable
+     /tmp/cchLWr0R.s:369    .text.usart_transmit_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:376    .text.usart_transmit_config:0000000000000000 usart_transmit_config
+     /tmp/cchLWr0R.s:400    .text.usart_receive_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:407    .text.usart_receive_config:0000000000000000 usart_receive_config
+     /tmp/cchLWr0R.s:431    .text.usart_data_transmit:0000000000000000 $t
+     /tmp/cchLWr0R.s:438    .text.usart_data_transmit:0000000000000000 usart_data_transmit
+     /tmp/cchLWr0R.s:458    .text.usart_data_receive:0000000000000000 $t
+     /tmp/cchLWr0R.s:465    .text.usart_data_receive:0000000000000000 usart_data_receive
+     /tmp/cchLWr0R.s:484    .text.usart_data_first_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:491    .text.usart_data_first_config:0000000000000000 usart_data_first_config
+     /tmp/cchLWr0R.s:524    .text.usart_invert_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:531    .text.usart_invert_config:0000000000000000 usart_invert_config
+     /tmp/cchLWr0R.s:549    .text.usart_invert_config:0000000000000010 $d
+     /tmp/cchLWr0R.s:557    .text.usart_invert_config:0000000000000018 $t
+     /tmp/cchLWr0R.s:616    .text.usart_overrun_enable:0000000000000000 $t
+     /tmp/cchLWr0R.s:623    .text.usart_overrun_enable:0000000000000000 usart_overrun_enable
+     /tmp/cchLWr0R.s:647    .text.usart_overrun_disable:0000000000000000 $t
+     /tmp/cchLWr0R.s:654    .text.usart_overrun_disable:0000000000000000 usart_overrun_disable
+     /tmp/cchLWr0R.s:678    .text.usart_oversample_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:685    .text.usart_oversample_config:0000000000000000 usart_oversample_config
+     /tmp/cchLWr0R.s:714    .text.usart_sample_bit_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:721    .text.usart_sample_bit_config:0000000000000000 usart_sample_bit_config
+     /tmp/cchLWr0R.s:750    .text.usart_autobaud_detection_enable:0000000000000000 $t
+     /tmp/cchLWr0R.s:757    .text.usart_autobaud_detection_enable:0000000000000000 usart_autobaud_detection_enable
+     /tmp/cchLWr0R.s:776    .text.usart_autobaud_detection_disable:0000000000000000 $t
+     /tmp/cchLWr0R.s:783    .text.usart_autobaud_detection_disable:0000000000000000 usart_autobaud_detection_disable
+     /tmp/cchLWr0R.s:802    .text.usart_autobaud_detection_mode_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:809    .text.usart_autobaud_detection_mode_config:0000000000000000 usart_autobaud_detection_mode_config
+     /tmp/cchLWr0R.s:833    .text.usart_mute_mode_enable:0000000000000000 $t
+     /tmp/cchLWr0R.s:840    .text.usart_mute_mode_enable:0000000000000000 usart_mute_mode_enable
+     /tmp/cchLWr0R.s:859    .text.usart_mute_mode_disable:0000000000000000 $t
+     /tmp/cchLWr0R.s:866    .text.usart_mute_mode_disable:0000000000000000 usart_mute_mode_disable
+     /tmp/cchLWr0R.s:885    .text.usart_mute_mode_wakeup_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:892    .text.usart_mute_mode_wakeup_config:0000000000000000 usart_mute_mode_wakeup_config
+     /tmp/cchLWr0R.s:921    .text.usart_address_detection_mode_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:928    .text.usart_address_detection_mode_config:0000000000000000 usart_address_detection_mode_config
+     /tmp/cchLWr0R.s:961    .text.usart_address_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:968    .text.usart_address_config:0000000000000000 usart_address_config
+     /tmp/cchLWr0R.s:997    .text.usart_receiver_timeout_enable:0000000000000000 $t
+ARM GAS  /tmp/cchLWr0R.s 			page 66
 
 
-     /tmp/cc8PYp20.s:1004   .text.usart_receiver_timeout_enable:0000000000000000 usart_receiver_timeout_enable
-     /tmp/cc8PYp20.s:1023   .text.usart_receiver_timeout_disable:0000000000000000 $t
-     /tmp/cc8PYp20.s:1030   .text.usart_receiver_timeout_disable:0000000000000000 usart_receiver_timeout_disable
-     /tmp/cc8PYp20.s:1049   .text.usart_receiver_timeout_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:1056   .text.usart_receiver_timeout_config:0000000000000000 usart_receiver_timeout_config
-     /tmp/cc8PYp20.s:1080   .text.usart_lin_mode_enable:0000000000000000 $t
-     /tmp/cc8PYp20.s:1087   .text.usart_lin_mode_enable:0000000000000000 usart_lin_mode_enable
-     /tmp/cc8PYp20.s:1111   .text.usart_lin_mode_disable:0000000000000000 $t
-     /tmp/cc8PYp20.s:1118   .text.usart_lin_mode_disable:0000000000000000 usart_lin_mode_disable
-     /tmp/cc8PYp20.s:1142   .text.usart_lin_break_dection_length_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:1149   .text.usart_lin_break_dection_length_config:0000000000000000 usart_lin_break_dection_length_config
-     /tmp/cc8PYp20.s:1177   .text.usart_halfduplex_enable:0000000000000000 $t
-     /tmp/cc8PYp20.s:1184   .text.usart_halfduplex_enable:0000000000000000 usart_halfduplex_enable
-     /tmp/cc8PYp20.s:1208   .text.usart_halfduplex_disable:0000000000000000 $t
-     /tmp/cc8PYp20.s:1215   .text.usart_halfduplex_disable:0000000000000000 usart_halfduplex_disable
-     /tmp/cc8PYp20.s:1239   .text.usart_clock_enable:0000000000000000 $t
-     /tmp/cc8PYp20.s:1246   .text.usart_clock_enable:0000000000000000 usart_clock_enable
-     /tmp/cc8PYp20.s:1270   .text.usart_clock_disable:0000000000000000 $t
-     /tmp/cc8PYp20.s:1277   .text.usart_clock_disable:0000000000000000 usart_clock_disable
-     /tmp/cc8PYp20.s:1301   .text.usart_synchronous_clock_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:1308   .text.usart_synchronous_clock_config:0000000000000000 usart_synchronous_clock_config
-     /tmp/cc8PYp20.s:1364   .text.usart_smartcard_mode_enable:0000000000000000 $t
-     /tmp/cc8PYp20.s:1371   .text.usart_smartcard_mode_enable:0000000000000000 usart_smartcard_mode_enable
-     /tmp/cc8PYp20.s:1395   .text.usart_smartcard_mode_disable:0000000000000000 $t
-     /tmp/cc8PYp20.s:1402   .text.usart_smartcard_mode_disable:0000000000000000 usart_smartcard_mode_disable
-     /tmp/cc8PYp20.s:1426   .text.usart_smartcard_mode_nack_enable:0000000000000000 $t
-     /tmp/cc8PYp20.s:1433   .text.usart_smartcard_mode_nack_enable:0000000000000000 usart_smartcard_mode_nack_enable
-     /tmp/cc8PYp20.s:1457   .text.usart_smartcard_mode_nack_disable:0000000000000000 $t
-     /tmp/cc8PYp20.s:1464   .text.usart_smartcard_mode_nack_disable:0000000000000000 usart_smartcard_mode_nack_disable
-     /tmp/cc8PYp20.s:1488   .text.usart_guard_time_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:1495   .text.usart_guard_time_config:0000000000000000 usart_guard_time_config
-     /tmp/cc8PYp20.s:1531   .text.usart_block_length_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:1538   .text.usart_block_length_config:0000000000000000 usart_block_length_config
-     /tmp/cc8PYp20.s:1562   .text.usart_smartcard_autoretry_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:1569   .text.usart_smartcard_autoretry_config:0000000000000000 usart_smartcard_autoretry_config
-     /tmp/cc8PYp20.s:1605   .text.usart_irda_mode_enable:0000000000000000 $t
-     /tmp/cc8PYp20.s:1612   .text.usart_irda_mode_enable:0000000000000000 usart_irda_mode_enable
-     /tmp/cc8PYp20.s:1636   .text.usart_irda_mode_disable:0000000000000000 $t
-     /tmp/cc8PYp20.s:1643   .text.usart_irda_mode_disable:0000000000000000 usart_irda_mode_disable
-     /tmp/cc8PYp20.s:1667   .text.usart_irda_lowpower_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:1674   .text.usart_irda_lowpower_config:0000000000000000 usart_irda_lowpower_config
-     /tmp/cc8PYp20.s:1702   .text.usart_prescaler_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:1709   .text.usart_prescaler_config:0000000000000000 usart_prescaler_config
-     /tmp/cc8PYp20.s:1738   .text.usart_hardware_flow_rts_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:1745   .text.usart_hardware_flow_rts_config:0000000000000000 usart_hardware_flow_rts_config
-     /tmp/cc8PYp20.s:1774   .text.usart_hardware_flow_cts_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:1781   .text.usart_hardware_flow_cts_config:0000000000000000 usart_hardware_flow_cts_config
-     /tmp/cc8PYp20.s:1810   .text.usart_rs485_driver_enable:0000000000000000 $t
-     /tmp/cc8PYp20.s:1817   .text.usart_rs485_driver_enable:0000000000000000 usart_rs485_driver_enable
-     /tmp/cc8PYp20.s:1841   .text.usart_rs485_driver_disable:0000000000000000 $t
-     /tmp/cc8PYp20.s:1848   .text.usart_rs485_driver_disable:0000000000000000 usart_rs485_driver_disable
-     /tmp/cc8PYp20.s:1872   .text.usart_driver_assertime_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:1879   .text.usart_driver_assertime_config:0000000000000000 usart_driver_assertime_config
-     /tmp/cc8PYp20.s:1915   .text.usart_driver_deassertime_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:1922   .text.usart_driver_deassertime_config:0000000000000000 usart_driver_deassertime_config
-     /tmp/cc8PYp20.s:1958   .text.usart_depolarity_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:1965   .text.usart_depolarity_config:0000000000000000 usart_depolarity_config
-ARM GAS  /tmp/cc8PYp20.s 			page 67
+     /tmp/cchLWr0R.s:1004   .text.usart_receiver_timeout_enable:0000000000000000 usart_receiver_timeout_enable
+     /tmp/cchLWr0R.s:1023   .text.usart_receiver_timeout_disable:0000000000000000 $t
+     /tmp/cchLWr0R.s:1030   .text.usart_receiver_timeout_disable:0000000000000000 usart_receiver_timeout_disable
+     /tmp/cchLWr0R.s:1049   .text.usart_receiver_timeout_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:1056   .text.usart_receiver_timeout_config:0000000000000000 usart_receiver_timeout_config
+     /tmp/cchLWr0R.s:1080   .text.usart_lin_mode_enable:0000000000000000 $t
+     /tmp/cchLWr0R.s:1087   .text.usart_lin_mode_enable:0000000000000000 usart_lin_mode_enable
+     /tmp/cchLWr0R.s:1111   .text.usart_lin_mode_disable:0000000000000000 $t
+     /tmp/cchLWr0R.s:1118   .text.usart_lin_mode_disable:0000000000000000 usart_lin_mode_disable
+     /tmp/cchLWr0R.s:1142   .text.usart_lin_break_dection_length_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:1149   .text.usart_lin_break_dection_length_config:0000000000000000 usart_lin_break_dection_length_config
+     /tmp/cchLWr0R.s:1177   .text.usart_halfduplex_enable:0000000000000000 $t
+     /tmp/cchLWr0R.s:1184   .text.usart_halfduplex_enable:0000000000000000 usart_halfduplex_enable
+     /tmp/cchLWr0R.s:1208   .text.usart_halfduplex_disable:0000000000000000 $t
+     /tmp/cchLWr0R.s:1215   .text.usart_halfduplex_disable:0000000000000000 usart_halfduplex_disable
+     /tmp/cchLWr0R.s:1239   .text.usart_clock_enable:0000000000000000 $t
+     /tmp/cchLWr0R.s:1246   .text.usart_clock_enable:0000000000000000 usart_clock_enable
+     /tmp/cchLWr0R.s:1270   .text.usart_clock_disable:0000000000000000 $t
+     /tmp/cchLWr0R.s:1277   .text.usart_clock_disable:0000000000000000 usart_clock_disable
+     /tmp/cchLWr0R.s:1301   .text.usart_synchronous_clock_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:1308   .text.usart_synchronous_clock_config:0000000000000000 usart_synchronous_clock_config
+     /tmp/cchLWr0R.s:1364   .text.usart_smartcard_mode_enable:0000000000000000 $t
+     /tmp/cchLWr0R.s:1371   .text.usart_smartcard_mode_enable:0000000000000000 usart_smartcard_mode_enable
+     /tmp/cchLWr0R.s:1395   .text.usart_smartcard_mode_disable:0000000000000000 $t
+     /tmp/cchLWr0R.s:1402   .text.usart_smartcard_mode_disable:0000000000000000 usart_smartcard_mode_disable
+     /tmp/cchLWr0R.s:1426   .text.usart_smartcard_mode_nack_enable:0000000000000000 $t
+     /tmp/cchLWr0R.s:1433   .text.usart_smartcard_mode_nack_enable:0000000000000000 usart_smartcard_mode_nack_enable
+     /tmp/cchLWr0R.s:1457   .text.usart_smartcard_mode_nack_disable:0000000000000000 $t
+     /tmp/cchLWr0R.s:1464   .text.usart_smartcard_mode_nack_disable:0000000000000000 usart_smartcard_mode_nack_disable
+     /tmp/cchLWr0R.s:1488   .text.usart_guard_time_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:1495   .text.usart_guard_time_config:0000000000000000 usart_guard_time_config
+     /tmp/cchLWr0R.s:1531   .text.usart_block_length_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:1538   .text.usart_block_length_config:0000000000000000 usart_block_length_config
+     /tmp/cchLWr0R.s:1562   .text.usart_smartcard_autoretry_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:1569   .text.usart_smartcard_autoretry_config:0000000000000000 usart_smartcard_autoretry_config
+     /tmp/cchLWr0R.s:1605   .text.usart_irda_mode_enable:0000000000000000 $t
+     /tmp/cchLWr0R.s:1612   .text.usart_irda_mode_enable:0000000000000000 usart_irda_mode_enable
+     /tmp/cchLWr0R.s:1636   .text.usart_irda_mode_disable:0000000000000000 $t
+     /tmp/cchLWr0R.s:1643   .text.usart_irda_mode_disable:0000000000000000 usart_irda_mode_disable
+     /tmp/cchLWr0R.s:1667   .text.usart_irda_lowpower_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:1674   .text.usart_irda_lowpower_config:0000000000000000 usart_irda_lowpower_config
+     /tmp/cchLWr0R.s:1702   .text.usart_prescaler_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:1709   .text.usart_prescaler_config:0000000000000000 usart_prescaler_config
+     /tmp/cchLWr0R.s:1738   .text.usart_hardware_flow_rts_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:1745   .text.usart_hardware_flow_rts_config:0000000000000000 usart_hardware_flow_rts_config
+     /tmp/cchLWr0R.s:1774   .text.usart_hardware_flow_cts_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:1781   .text.usart_hardware_flow_cts_config:0000000000000000 usart_hardware_flow_cts_config
+     /tmp/cchLWr0R.s:1810   .text.usart_rs485_driver_enable:0000000000000000 $t
+     /tmp/cchLWr0R.s:1817   .text.usart_rs485_driver_enable:0000000000000000 usart_rs485_driver_enable
+     /tmp/cchLWr0R.s:1841   .text.usart_rs485_driver_disable:0000000000000000 $t
+     /tmp/cchLWr0R.s:1848   .text.usart_rs485_driver_disable:0000000000000000 usart_rs485_driver_disable
+     /tmp/cchLWr0R.s:1872   .text.usart_driver_assertime_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:1879   .text.usart_driver_assertime_config:0000000000000000 usart_driver_assertime_config
+     /tmp/cchLWr0R.s:1915   .text.usart_driver_deassertime_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:1922   .text.usart_driver_deassertime_config:0000000000000000 usart_driver_deassertime_config
+     /tmp/cchLWr0R.s:1958   .text.usart_depolarity_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:1965   .text.usart_depolarity_config:0000000000000000 usart_depolarity_config
+ARM GAS  /tmp/cchLWr0R.s 			page 67
 
 
-     /tmp/cc8PYp20.s:1998   .text.usart_dma_receive_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:2005   .text.usart_dma_receive_config:0000000000000000 usart_dma_receive_config
-     /tmp/cc8PYp20.s:2029   .text.usart_dma_transmit_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:2036   .text.usart_dma_transmit_config:0000000000000000 usart_dma_transmit_config
-     /tmp/cc8PYp20.s:2060   .text.usart_reception_error_dma_disable:0000000000000000 $t
-     /tmp/cc8PYp20.s:2067   .text.usart_reception_error_dma_disable:0000000000000000 usart_reception_error_dma_disable
-     /tmp/cc8PYp20.s:2091   .text.usart_reception_error_dma_enable:0000000000000000 $t
-     /tmp/cc8PYp20.s:2098   .text.usart_reception_error_dma_enable:0000000000000000 usart_reception_error_dma_enable
-     /tmp/cc8PYp20.s:2122   .text.usart_wakeup_enable:0000000000000000 $t
-     /tmp/cc8PYp20.s:2129   .text.usart_wakeup_enable:0000000000000000 usart_wakeup_enable
-     /tmp/cc8PYp20.s:2148   .text.usart_wakeup_disable:0000000000000000 $t
-     /tmp/cc8PYp20.s:2155   .text.usart_wakeup_disable:0000000000000000 usart_wakeup_disable
-     /tmp/cc8PYp20.s:2174   .text.usart_wakeup_mode_config:0000000000000000 $t
-     /tmp/cc8PYp20.s:2181   .text.usart_wakeup_mode_config:0000000000000000 usart_wakeup_mode_config
-     /tmp/cc8PYp20.s:2214   .text.usart_flag_get:0000000000000000 $t
-     /tmp/cc8PYp20.s:2221   .text.usart_flag_get:0000000000000000 usart_flag_get
-     /tmp/cc8PYp20.s:2246   .text.usart_flag_clear:0000000000000000 $t
-     /tmp/cc8PYp20.s:2253   .text.usart_flag_clear:0000000000000000 usart_flag_clear
-     /tmp/cc8PYp20.s:2279   .text.usart_interrupt_enable:0000000000000000 $t
-     /tmp/cc8PYp20.s:2286   .text.usart_interrupt_enable:0000000000000000 usart_interrupt_enable
-     /tmp/cc8PYp20.s:2319   .text.usart_interrupt_disable:0000000000000000 $t
-     /tmp/cc8PYp20.s:2326   .text.usart_interrupt_disable:0000000000000000 usart_interrupt_disable
-     /tmp/cc8PYp20.s:2359   .text.usart_command_enable:0000000000000000 $t
-     /tmp/cc8PYp20.s:2366   .text.usart_command_enable:0000000000000000 usart_command_enable
-     /tmp/cc8PYp20.s:2385   .text.usart_interrupt_flag_get:0000000000000000 $t
-     /tmp/cc8PYp20.s:2392   .text.usart_interrupt_flag_get:0000000000000000 usart_interrupt_flag_get
-     /tmp/cc8PYp20.s:2447   .text.usart_interrupt_flag_clear:0000000000000000 $t
-     /tmp/cc8PYp20.s:2454   .text.usart_interrupt_flag_clear:0000000000000000 usart_interrupt_flag_clear
+     /tmp/cchLWr0R.s:1998   .text.usart_dma_receive_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:2005   .text.usart_dma_receive_config:0000000000000000 usart_dma_receive_config
+     /tmp/cchLWr0R.s:2029   .text.usart_dma_transmit_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:2036   .text.usart_dma_transmit_config:0000000000000000 usart_dma_transmit_config
+     /tmp/cchLWr0R.s:2060   .text.usart_reception_error_dma_disable:0000000000000000 $t
+     /tmp/cchLWr0R.s:2067   .text.usart_reception_error_dma_disable:0000000000000000 usart_reception_error_dma_disable
+     /tmp/cchLWr0R.s:2091   .text.usart_reception_error_dma_enable:0000000000000000 $t
+     /tmp/cchLWr0R.s:2098   .text.usart_reception_error_dma_enable:0000000000000000 usart_reception_error_dma_enable
+     /tmp/cchLWr0R.s:2122   .text.usart_wakeup_enable:0000000000000000 $t
+     /tmp/cchLWr0R.s:2129   .text.usart_wakeup_enable:0000000000000000 usart_wakeup_enable
+     /tmp/cchLWr0R.s:2148   .text.usart_wakeup_disable:0000000000000000 $t
+     /tmp/cchLWr0R.s:2155   .text.usart_wakeup_disable:0000000000000000 usart_wakeup_disable
+     /tmp/cchLWr0R.s:2174   .text.usart_wakeup_mode_config:0000000000000000 $t
+     /tmp/cchLWr0R.s:2181   .text.usart_wakeup_mode_config:0000000000000000 usart_wakeup_mode_config
+     /tmp/cchLWr0R.s:2214   .text.usart_flag_get:0000000000000000 $t
+     /tmp/cchLWr0R.s:2221   .text.usart_flag_get:0000000000000000 usart_flag_get
+     /tmp/cchLWr0R.s:2246   .text.usart_flag_clear:0000000000000000 $t
+     /tmp/cchLWr0R.s:2253   .text.usart_flag_clear:0000000000000000 usart_flag_clear
+     /tmp/cchLWr0R.s:2279   .text.usart_interrupt_enable:0000000000000000 $t
+     /tmp/cchLWr0R.s:2286   .text.usart_interrupt_enable:0000000000000000 usart_interrupt_enable
+     /tmp/cchLWr0R.s:2319   .text.usart_interrupt_disable:0000000000000000 $t
+     /tmp/cchLWr0R.s:2326   .text.usart_interrupt_disable:0000000000000000 usart_interrupt_disable
+     /tmp/cchLWr0R.s:2359   .text.usart_command_enable:0000000000000000 $t
+     /tmp/cchLWr0R.s:2366   .text.usart_command_enable:0000000000000000 usart_command_enable
+     /tmp/cchLWr0R.s:2385   .text.usart_interrupt_flag_get:0000000000000000 $t
+     /tmp/cchLWr0R.s:2392   .text.usart_interrupt_flag_get:0000000000000000 usart_interrupt_flag_get
+     /tmp/cchLWr0R.s:2447   .text.usart_interrupt_flag_clear:0000000000000000 $t
+     /tmp/cchLWr0R.s:2454   .text.usart_interrupt_flag_clear:0000000000000000 usart_interrupt_flag_clear
 
 UNDEFINED SYMBOLS
 rcu_periph_reset_enable
