@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc9hJHfQ.s 			page 1
+ARM GAS  /tmp/ccbGzaDM.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc9hJHfQ.s 			page 1
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cc9hJHfQ.s 			page 2
+ARM GAS  /tmp/ccbGzaDM.s 			page 2
 
 
   31              		@ link register save eliminated.
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc9hJHfQ.s 			page 1
   46:Src/gd32f1x0_it.c ****     \param[in]  none
   47:Src/gd32f1x0_it.c ****     \param[out] none
   48:Src/gd32f1x0_it.c ****     \retval     none
-ARM GAS  /tmp/cc9hJHfQ.s 			page 3
+ARM GAS  /tmp/ccbGzaDM.s 			page 3
 
 
   49:Src/gd32f1x0_it.c **** */
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc9hJHfQ.s 			page 1
  106              		.cfi_endproc
  107              	.LFE59:
  109              		.section	.text.UsageFault_Handler,"ax",%progbits
-ARM GAS  /tmp/cc9hJHfQ.s 			page 4
+ARM GAS  /tmp/ccbGzaDM.s 			page 4
 
 
  110              		.align	1
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc9hJHfQ.s 			page 1
  154              		.syntax unified
  155              		.thumb
  156              		.thumb_func
-ARM GAS  /tmp/cc9hJHfQ.s 			page 5
+ARM GAS  /tmp/ccbGzaDM.s 			page 5
 
 
  157              		.fpu softvfp
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc9hJHfQ.s 			page 1
  100:Src/gd32f1x0_it.c **** {
  101:Src/gd32f1x0_it.c **** }
  102:Src/gd32f1x0_it.c **** 
-ARM GAS  /tmp/cc9hJHfQ.s 			page 6
+ARM GAS  /tmp/ccbGzaDM.s 			page 6
 
 
  103:Src/gd32f1x0_it.c **** /*!
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc9hJHfQ.s 			page 1
  229              		.thumb_func
  230              		.fpu softvfp
  232              	USART0_IRQHandler:
-ARM GAS  /tmp/cc9hJHfQ.s 			page 7
+ARM GAS  /tmp/ccbGzaDM.s 			page 7
 
 
  233              	.LFB65:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc9hJHfQ.s 			page 1
  271              		.loc 1 137 1 view .LVU34
  272 001e 08BD     		pop	{r3, pc}
  273              	.L17:
-ARM GAS  /tmp/cc9hJHfQ.s 			page 8
+ARM GAS  /tmp/ccbGzaDM.s 			page 8
 
 
  274              		.align	2
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc9hJHfQ.s 			page 1
  315              		.loc 1 151 1 is_stmt 0 view .LVU42
  316 0016 BDE80840 		pop	{r3, lr}
  317              	.LCFI6:
-ARM GAS  /tmp/cc9hJHfQ.s 			page 9
+ARM GAS  /tmp/ccbGzaDM.s 			page 9
 
 
  318              		.cfi_remember_state
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc9hJHfQ.s 			page 1
  364              		.thumb_func
  365              		.fpu softvfp
  367              	I2C0_ER_IRQHandler:
-ARM GAS  /tmp/cc9hJHfQ.s 			page 10
+ARM GAS  /tmp/ccbGzaDM.s 			page 10
 
 
  368              	.LFB68:
@@ -571,39 +571,39 @@ ARM GAS  /tmp/cc9hJHfQ.s 			page 1
  385              		.file 5 "Inc/util.h"
  386              		.file 6 "Inc/systick.h"
  387              		.file 7 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
-ARM GAS  /tmp/cc9hJHfQ.s 			page 11
+ARM GAS  /tmp/ccbGzaDM.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 gd32f1x0_it.c
-     /tmp/cc9hJHfQ.s:16     .text.NMI_Handler:0000000000000000 $t
-     /tmp/cc9hJHfQ.s:24     .text.NMI_Handler:0000000000000000 NMI_Handler
-     /tmp/cc9hJHfQ.s:38     .text.HardFault_Handler:0000000000000000 $t
-     /tmp/cc9hJHfQ.s:45     .text.HardFault_Handler:0000000000000000 HardFault_Handler
-     /tmp/cc9hJHfQ.s:62     .text.MemManage_Handler:0000000000000000 $t
-     /tmp/cc9hJHfQ.s:69     .text.MemManage_Handler:0000000000000000 MemManage_Handler
-     /tmp/cc9hJHfQ.s:86     .text.BusFault_Handler:0000000000000000 $t
-     /tmp/cc9hJHfQ.s:93     .text.BusFault_Handler:0000000000000000 BusFault_Handler
-     /tmp/cc9hJHfQ.s:110    .text.UsageFault_Handler:0000000000000000 $t
-     /tmp/cc9hJHfQ.s:117    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
-     /tmp/cc9hJHfQ.s:134    .text.SVC_Handler:0000000000000000 $t
-     /tmp/cc9hJHfQ.s:141    .text.SVC_Handler:0000000000000000 SVC_Handler
-     /tmp/cc9hJHfQ.s:152    .text.DebugMon_Handler:0000000000000000 $t
-     /tmp/cc9hJHfQ.s:159    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
-     /tmp/cc9hJHfQ.s:170    .text.PendSV_Handler:0000000000000000 $t
-     /tmp/cc9hJHfQ.s:177    .text.PendSV_Handler:0000000000000000 PendSV_Handler
-     /tmp/cc9hJHfQ.s:188    .text.SysTick_Handler:0000000000000000 $t
-     /tmp/cc9hJHfQ.s:195    .text.SysTick_Handler:0000000000000000 SysTick_Handler
-     /tmp/cc9hJHfQ.s:225    .text.USART0_IRQHandler:0000000000000000 $t
-     /tmp/cc9hJHfQ.s:232    .text.USART0_IRQHandler:0000000000000000 USART0_IRQHandler
-     /tmp/cc9hJHfQ.s:276    .text.USART0_IRQHandler:0000000000000020 $d
-     /tmp/cc9hJHfQ.s:282    .text.USART1_IRQHandler:0000000000000000 $t
-     /tmp/cc9hJHfQ.s:289    .text.USART1_IRQHandler:0000000000000000 USART1_IRQHandler
-     /tmp/cc9hJHfQ.s:333    .text.USART1_IRQHandler:0000000000000020 $d
-     /tmp/cc9hJHfQ.s:339    .text.I2C0_EV_IRQHandler:0000000000000000 $t
-     /tmp/cc9hJHfQ.s:346    .text.I2C0_EV_IRQHandler:0000000000000000 I2C0_EV_IRQHandler
-     /tmp/cc9hJHfQ.s:360    .text.I2C0_ER_IRQHandler:0000000000000000 $t
-     /tmp/cc9hJHfQ.s:367    .text.I2C0_ER_IRQHandler:0000000000000000 I2C0_ER_IRQHandler
+     /tmp/ccbGzaDM.s:16     .text.NMI_Handler:0000000000000000 $t
+     /tmp/ccbGzaDM.s:24     .text.NMI_Handler:0000000000000000 NMI_Handler
+     /tmp/ccbGzaDM.s:38     .text.HardFault_Handler:0000000000000000 $t
+     /tmp/ccbGzaDM.s:45     .text.HardFault_Handler:0000000000000000 HardFault_Handler
+     /tmp/ccbGzaDM.s:62     .text.MemManage_Handler:0000000000000000 $t
+     /tmp/ccbGzaDM.s:69     .text.MemManage_Handler:0000000000000000 MemManage_Handler
+     /tmp/ccbGzaDM.s:86     .text.BusFault_Handler:0000000000000000 $t
+     /tmp/ccbGzaDM.s:93     .text.BusFault_Handler:0000000000000000 BusFault_Handler
+     /tmp/ccbGzaDM.s:110    .text.UsageFault_Handler:0000000000000000 $t
+     /tmp/ccbGzaDM.s:117    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
+     /tmp/ccbGzaDM.s:134    .text.SVC_Handler:0000000000000000 $t
+     /tmp/ccbGzaDM.s:141    .text.SVC_Handler:0000000000000000 SVC_Handler
+     /tmp/ccbGzaDM.s:152    .text.DebugMon_Handler:0000000000000000 $t
+     /tmp/ccbGzaDM.s:159    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
+     /tmp/ccbGzaDM.s:170    .text.PendSV_Handler:0000000000000000 $t
+     /tmp/ccbGzaDM.s:177    .text.PendSV_Handler:0000000000000000 PendSV_Handler
+     /tmp/ccbGzaDM.s:188    .text.SysTick_Handler:0000000000000000 $t
+     /tmp/ccbGzaDM.s:195    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+     /tmp/ccbGzaDM.s:225    .text.USART0_IRQHandler:0000000000000000 $t
+     /tmp/ccbGzaDM.s:232    .text.USART0_IRQHandler:0000000000000000 USART0_IRQHandler
+     /tmp/ccbGzaDM.s:276    .text.USART0_IRQHandler:0000000000000020 $d
+     /tmp/ccbGzaDM.s:282    .text.USART1_IRQHandler:0000000000000000 $t
+     /tmp/ccbGzaDM.s:289    .text.USART1_IRQHandler:0000000000000000 USART1_IRQHandler
+     /tmp/ccbGzaDM.s:333    .text.USART1_IRQHandler:0000000000000020 $d
+     /tmp/ccbGzaDM.s:339    .text.I2C0_EV_IRQHandler:0000000000000000 $t
+     /tmp/ccbGzaDM.s:346    .text.I2C0_EV_IRQHandler:0000000000000000 I2C0_EV_IRQHandler
+     /tmp/ccbGzaDM.s:360    .text.I2C0_ER_IRQHandler:0000000000000000 $t
+     /tmp/ccbGzaDM.s:367    .text.I2C0_ER_IRQHandler:0000000000000000 I2C0_ER_IRQHandler
 
 UNDEFINED SYMBOLS
 tick_count_increment

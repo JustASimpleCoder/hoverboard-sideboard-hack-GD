@@ -29,10 +29,8 @@
 #if !defined(PLATFORMIO)
   // #define VARIANT_DEBUG                    // Variant for debugging and checking the capabilities of the side-board
   // #define VARIANT_HOVERCAR                 // Variant for using the side-boards connected to the Hoverboard mainboard
-  // #define VARIANT_HOVERBOARD               // Variant for using the side-boards connected to the Hoverboard mainboard
+ #define VARIANT_HOVERBOARD               // Variant for using the side-boards connected to the Hoverboard mainboard
 #endif
-#define VARIANT_HOVERBOARD
-
 
 /* ==================================== DO NOT TOUCH SETTINGS ==================================== */
 #define MPU6050                               // [-] Define IMU sensor type
@@ -63,7 +61,7 @@
 
 /* ==================================== SETTINGS USART ==================================== */
 #define SERIAL_START_FRAME        0xABCD      // [-] Start frame definition for reliable serial communication
-#define SERIAL_BUFFER_SIZE        64          // [bytes] Size of Serial Rx buffer. Make sure it is always larger than the 'Feedback' structure size
+#define SERIAL_BUFFER_SIZE        256          // [bytes] Size of Serial Rx buffer. Make sure it is always larger than the 'Feedback' structure size
 #define SERIAL_TIMEOUT            600         // [-] Number of wrong received data for Serial timeout detection. Depends on DELAY_IN_MAIN_LOOP
 #define USART_MAIN_BAUD           115200      // [bit/s] MAIN Serial Tx/Rx baud rate
 #define USART_AUX_BAUD            115200      // [bit/s] AUX Serial Tx/Rx baud rate

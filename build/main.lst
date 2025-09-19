@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cciDKa0q.s 			page 1
+ARM GAS  /tmp/cc9LxESr.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cciDKa0q.s 			page 1
   30:Src/main.c    **** #include "mpu6050_dmp.h"
   31:Src/main.c    **** 
   32:Src/main.c    **** uint32_t     main_loop_counter;                         // main loop counter to perform task schedu
-ARM GAS  /tmp/cciDKa0q.s 			page 2
+ARM GAS  /tmp/cc9LxESr.s 			page 2
 
 
   33:Src/main.c    **** 
@@ -89,7 +89,7 @@ ARM GAS  /tmp/cciDKa0q.s 			page 1
   39:Src/main.c    ****     usart_config(USART_MAIN, USART_MAIN_BAUD);          // USART MAIN config
   45              		.loc 1 39 5 view .LVU5
   46 000a 4FF4E131 		mov	r1, #115200
-  47 000e 0D48     		ldr	r0, .L3
+  47 000e 0948     		ldr	r0, .L3
   48 0010 FFF7FEFF 		bl	usart_config
   49              	.LVL2:
   40:Src/main.c    ****     #if defined(SERIAL_AUX_RX) || defined(SERIAL_AUX_TX)
@@ -112,89 +112,62 @@ ARM GAS  /tmp/cciDKa0q.s 			page 1
   59              		.loc 1 47 5 view .LVU9
   60 0020 FFF7FEFF 		bl	input_init
   61              	.LVL6:
+  62              	.L2:
   48:Src/main.c    **** 
   49:Src/main.c    ****     while(1) {
+  63              		.loc 1 49 5 discriminator 1 view .LVU10
   50:Src/main.c    **** 
   51:Src/main.c    ****         delay_1ms(DELAY_IN_MAIN_LOOP);
+ARM GAS  /tmp/cc9LxESr.s 			page 3
+
+
+  64              		.loc 1 51 9 discriminator 1 view .LVU11
+  65 0024 0120     		movs	r0, #1
+  66 0026 FFF7FEFF 		bl	delay_1ms
+  67              	.LVL7:
   52:Src/main.c    **** 
   53:Src/main.c    ****         handle_mpu6050();                               // Handle of the MPU-6050 IMU sensor
-ARM GAS  /tmp/cciDKa0q.s 			page 3
-
-
-  54:Src/main.c    ****         handle_sensors();                               // Handle of the optical sensors
+  68              		.loc 1 53 9 discriminator 1 view .LVU12
+  69 002a FFF7FEFF 		bl	handle_mpu6050
+  70              	.LVL8:
+  54:Src/main.c    ****         //handle_sensors();                               // Handle of the optical sensors
   55:Src/main.c    ****         handle_usart();                                 // Handle of the USART data
-  56:Src/main.c    ****         handle_leds();                                  // Handle of the sideboard LEDs
-  57:Src/main.c    **** 
-  58:Src/main.c    ****         main_loop_counter++;
-  62              		.loc 1 58 26 is_stmt 0 view .LVU10
-  63 0024 084C     		ldr	r4, .L3+4
-  64              	.L2:
+  71              		.loc 1 55 9 discriminator 1 view .LVU13
+  72 002e FFF7FEFF 		bl	handle_usart
+  73              	.LVL9:
   49:Src/main.c    **** 
-  65              		.loc 1 49 5 is_stmt 1 discriminator 1 view .LVU11
-  51:Src/main.c    **** 
-  66              		.loc 1 51 9 discriminator 1 view .LVU12
-  67 0026 0120     		movs	r0, #1
-  68 0028 FFF7FEFF 		bl	delay_1ms
-  69              	.LVL7:
-  53:Src/main.c    ****         handle_sensors();                               // Handle of the optical sensors
-  70              		.loc 1 53 9 discriminator 1 view .LVU13
-  71 002c FFF7FEFF 		bl	handle_mpu6050
-  72              	.LVL8:
-  54:Src/main.c    ****         handle_usart();                                 // Handle of the USART data
-  73              		.loc 1 54 9 discriminator 1 view .LVU14
-  74 0030 FFF7FEFF 		bl	handle_sensors
-  75              	.LVL9:
-  55:Src/main.c    ****         handle_leds();                                  // Handle of the sideboard LEDs
-  76              		.loc 1 55 9 discriminator 1 view .LVU15
-  77 0034 FFF7FEFF 		bl	handle_usart
-  78              	.LVL10:
-  56:Src/main.c    **** 
-  79              		.loc 1 56 9 discriminator 1 view .LVU16
-  80 0038 FFF7FEFF 		bl	handle_leds
-  81              	.LVL11:
-  82              		.loc 1 58 9 discriminator 1 view .LVU17
-  83              		.loc 1 58 26 is_stmt 0 discriminator 1 view .LVU18
-  84 003c 2368     		ldr	r3, [r4]
-  85 003e 0133     		adds	r3, r3, #1
-  86 0040 2360     		str	r3, [r4]
-  49:Src/main.c    **** 
-  87              		.loc 1 49 10 is_stmt 1 discriminator 1 view .LVU19
-  88 0042 F0E7     		b	.L2
-  89              	.L4:
-  90              		.align	2
-  91              	.L3:
-  92 0044 00440040 		.word	1073759232
-  93 0048 00000000 		.word	.LANCHOR0
-  94              		.cfi_endproc
-  95              	.LFE59:
-  97              		.global	main_loop_counter
-  98              		.section	.bss.main_loop_counter,"aw",%nobits
-  99              		.align	2
- 100              		.set	.LANCHOR0,. + 0
- 103              	main_loop_counter:
- 104 0000 00000000 		.space	4
- 105              		.text
- 106              	.Letext0:
- 107              		.file 2 "/usr/include/newlib/machine/_default_types.h"
- 108              		.file 3 "/usr/include/newlib/sys/_stdint.h"
- 109              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_dbg.h"
-ARM GAS  /tmp/cciDKa0q.s 			page 4
-
-
- 110              		.file 5 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
- 111              		.file 6 "Inc/systick.h"
- 112              		.file 7 "Inc/setup.h"
- 113              		.file 8 "Inc/util.h"
-ARM GAS  /tmp/cciDKa0q.s 			page 5
+  74              		.loc 1 49 10 discriminator 1 view .LVU14
+  75 0032 F7E7     		b	.L2
+  76              	.L4:
+  77              		.align	2
+  78              	.L3:
+  79 0034 00440040 		.word	1073759232
+  80              		.cfi_endproc
+  81              	.LFE59:
+  83              		.global	main_loop_counter
+  84              		.section	.bss.main_loop_counter,"aw",%nobits
+  85              		.align	2
+  88              	main_loop_counter:
+  89 0000 00000000 		.space	4
+  90              		.text
+  91              	.Letext0:
+  92              		.file 2 "/usr/include/newlib/machine/_default_types.h"
+  93              		.file 3 "/usr/include/newlib/sys/_stdint.h"
+  94              		.file 4 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_dbg.h"
+  95              		.file 5 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
+  96              		.file 6 "Inc/systick.h"
+  97              		.file 7 "Inc/setup.h"
+  98              		.file 8 "Inc/util.h"
+ARM GAS  /tmp/cc9LxESr.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-     /tmp/cciDKa0q.s:16     .text.startup.main:0000000000000000 $t
-     /tmp/cciDKa0q.s:24     .text.startup.main:0000000000000000 main
-     /tmp/cciDKa0q.s:92     .text.startup.main:0000000000000044 $d
-     /tmp/cciDKa0q.s:103    .bss.main_loop_counter:0000000000000000 main_loop_counter
-     /tmp/cciDKa0q.s:99     .bss.main_loop_counter:0000000000000000 $d
+     /tmp/cc9LxESr.s:16     .text.startup.main:0000000000000000 $t
+     /tmp/cc9LxESr.s:24     .text.startup.main:0000000000000000 main
+     /tmp/cc9LxESr.s:79     .text.startup.main:0000000000000034 $d
+     /tmp/cc9LxESr.s:88     .bss.main_loop_counter:0000000000000000 main_loop_counter
+     /tmp/cc9LxESr.s:85     .bss.main_loop_counter:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 systick_config
@@ -206,6 +179,4 @@ i2c_nvic_config
 input_init
 delay_1ms
 handle_mpu6050
-handle_sensors
 handle_usart
-handle_leds

@@ -30,7 +30,7 @@
 
 // USART1 variables
 #ifdef SERIAL_CONTROL
-static SerialSideboard Sideboard;
+//static SerialSideboard Sideboard;
 static SideboardImuRaw sideboard_imu;
 #endif
 
@@ -198,7 +198,7 @@ uint8_t switch_check(uint16_t ch, uint8_t type) {
 
 void input_init(void) {
     #ifdef SERIAL_CONTROL
-        usart_Tx_DMA_config(USART_MAIN, (uint8_t *)&Sideboard, sizeof(Sideboard));
+        usart_Tx_DMA_config(USART_MAIN, (uint8_t *)&sideboard_imu, sizeof(sideboard_imu));
     #endif
     #if defined(SERIAL_DEBUG) || defined(SERIAL_FEEDBACK)
         usart_Rx_DMA_config(USART_MAIN, (uint8_t *)rx1_buffer, sizeof(rx1_buffer));
@@ -210,7 +210,7 @@ void input_init(void) {
         usart_Rx_DMA_config(USART_AUX, (uint8_t *)rx0_buffer, sizeof(rx0_buffer));
     #endif
 
-    intro_demo_led(100);                                // Short LEDs intro demo with 100 ms delay. This also gives some time for the MPU-6050 to power-up.	
+    //intro_demo_led(100);                                // Short LEDs intro demo with 100 ms delay. This also gives some time for the MPU-6050 to power-up.	
 
     #ifdef MPU_SENSOR_ENABLE
         if(mpu_config()) {                              // IMU MPU-6050 config
@@ -304,24 +304,24 @@ void handle_usart(void) {
     // Tx USART MAIN
     #ifdef SERIAL_CONTROL
         if (main_loop_counter % 5 == 0 && dma_transfer_number_get(USART1_TX_DMA_CH) == 0) {     // Check if DMA channel counter is 0 (meaning all data has been transferred)
-            sideboard_imu.start = (uint16_t)SERIAL_START_FRAME;
-            sideboard_imu.cmd1 = (int16_t)cmd1;
-            sideboard_imu.cmd2 = (int16_t)cmd2;
-            sideboard_imu.pitch = (int16_t)mpu.euler.pitch;
-            sideboard_imu.dPitch = (int16_t)mpu.gyro.y;
+            sideboard_imu.start =   (uint16_t)SERIAL_START_FRAME;
+            sideboard_imu.cmd1 =    (int16_t)0;
+            sideboard_imu.cmd2 =    (int16_t)0;
+            sideboard_imu.pitch =   (int16_t)mpu.euler.pitch;
+            sideboard_imu.dPitch =  (int16_t)mpu.gyro.y;
   
-            sideboard_imu.gyro_x = (int16_t)mpu.gyro.x;
-            sideboard_imu.gyro_y = (int16_t)mpu.gyro.y;
-            sideboard_imu.gyro_z = (int16_t)mpu.gyro.z;
+            sideboard_imu.gyro_x =  (int16_t)mpu.gyro.x;
+            sideboard_imu.gyro_y =  (int16_t)mpu.gyro.y;
+            sideboard_imu.gyro_z =  (int16_t)mpu.gyro.z;
             
             sideboard_imu.accel_x = (int16_t)mpu.accel.x;
             sideboard_imu.accel_y = (int16_t)mpu.accel.y;
             sideboard_imu.accel_z = (int16_t)mpu.accel.z;
         
-            sideboard_imu.quat_w = (int16_t)mpu.quat.w;
-            sideboard_imu.quat_x = (int16_t)mpu.quat.x;
-            sideboard_imu.quat_y = (int16_t)mpu.quat.y;
-            sideboard_imu.quat_z = (int16_t)mpu.quat.z;
+            sideboard_imu.quat_w = (int16_t)34;//mpu.quat.w;
+            sideboard_imu.quat_x = (int16_t)-1234;//mpu.quat.x;
+            sideboard_imu.quat_y = (int16_t)5322;//mpu.quat.y;
+            sideboard_imu.quat_z = (int16_t)-876;//mpu.quat.z;
  
             sideboard_imu.euler_pitch = (int16_t)mpu.euler.pitch;
             sideboard_imu.euler_roll = (int16_t)mpu.euler.roll;
@@ -331,7 +331,9 @@ void handle_usart(void) {
             sideboard_imu.sensors = (uint16_t)((cmdSwitch << 8) | (sensor1 | (sensor2 << 1) | (mpuStatus << 2)));
 
             sideboard_imu.checksum = (uint16_t)(
-                sideboard_imu.start ^ 
+                sideboard_imu.start ^
+                sideboard_imu.cmd1 ^ sideboard_imu.cmd2 ^
+                sideboard_imu.pitch ^ sideboard_imu.dPitch ^
                 sideboard_imu.gyro_x ^ sideboard_imu.gyro_y ^ sideboard_imu.gyro_z ^
                 sideboard_imu.accel_x ^ sideboard_imu.accel_y ^ sideboard_imu.accel_z ^
                 sideboard_imu.quat_w ^ sideboard_imu.quat_x ^ sideboard_imu.quat_y ^ sideboard_imu.quat_z ^
@@ -343,6 +345,10 @@ void handle_usart(void) {
             DMA_CHCNT(USART1_TX_DMA_CH)     = sizeof(sideboard_imu);
             DMA_CHMADDR(USART1_TX_DMA_CH)   = (uint32_t)&sideboard_imu;
             dma_channel_enable(USART1_TX_DMA_CH);
+
+
+            toggle_led(LED2_GPIO_Port, LED2_Pin); //toggle green
+
         }
     #endif
     // Rx USART MAIN
@@ -352,7 +358,7 @@ void handle_usart(void) {
             timeoutCntSerial1  = SERIAL_TIMEOUT;                    // Limit timout counter value
         }
         if (timeoutFlagSerial1 && main_loop_counter % 100 == 0) {   // In case of timeout bring the system to a Safe State and indicate error if desired
-            toggle_led(LED3_GPIO_Port, LED3_Pin);                   // Toggle the Yellow LED every 100 ms
+            //toggle_led(LED3_GPIO_Port, LED3_Pin);                   // Toggle the Yellow LED every 100 ms
         }
     #endif
 
@@ -499,7 +505,7 @@ void usart_process_data(SerialFeedback *Feedback_in, SerialFeedback *Feedback_ou
     uint16_t checksum;
     if (Feedback_in->start == SERIAL_START_FRAME) {
         checksum = (uint16_t)(Feedback_in->start ^ Feedback_in->cmd1 ^ Feedback_in->cmd2 ^ Feedback_in->speedR_meas ^ Feedback_in->speedL_meas
-                            ^ Feedback_in->batVoltage ^ Feedback_in->boardTemp ^ Feedback_in->cmdLed);
+                            ^ Feedback_in->batVoltage ^ Feedback_in->boardTemp ^ Feedback_in->cmdLed); 
         if (Feedback_in->checksum == checksum) {
             *Feedback_out = *Feedback_in;
             timeoutCntSerial1  = 0;     // Reset timeout counter
