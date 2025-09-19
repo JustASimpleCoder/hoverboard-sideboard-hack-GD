@@ -3586,10 +3586,15 @@ void mpu_get_data(void)
     }
     
     if (new_data) {
-        // do something if needed
 
-        double dt = (sensor_timestamp - last_quat_timestamp) / 1000.0f;  // Convert ms to seconds
-        last_quat_timestamp = sensor_timestamp;
+        static unsigned long last_tick = 0;
+        unsigned long current_tick;
+        
+        get_tick_count_ms(&current_tick);
+        double dt = (current_tick - last_tick) / 1000.0;  // Convert ms to seconds
+        last_tick = current_tick;
+
+
         madgwick_update(&imu_quaternion,
                         (double)mpu.accel.x / ACCEL_TO_G, 
                         (double)mpu.accel.y / ACCEL_TO_G, 
