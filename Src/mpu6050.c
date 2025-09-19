@@ -656,6 +656,9 @@ int mpu_read_reg(unsigned char reg, unsigned char *data)
  */
 int mpu_init(void)
 {
+
+    madgwick_init(&imu_quaternion);
+
     unsigned char data[6];
 
     /* Reset device. */
