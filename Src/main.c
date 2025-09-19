@@ -55,7 +55,6 @@ int main(void)
         handle_usart();                                 // Handle of the USART data
         //handle_leds();                                  // Handle of the sideboard LEDs
 
-
     }
 }
 

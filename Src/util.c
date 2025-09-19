@@ -318,10 +318,10 @@ void handle_usart(void) {
             sideboard_imu.accel_y = (int16_t)mpu.accel.y;
             sideboard_imu.accel_z = (int16_t)mpu.accel.z;
         
-            sideboard_imu.quat_w = (int16_t)34;//mpu.quat.w;
-            sideboard_imu.quat_x = (int16_t)-1234;//mpu.quat.x;
-            sideboard_imu.quat_y = (int16_t)5322;//mpu.quat.y;
-            sideboard_imu.quat_z = (int16_t)-876;//mpu.quat.z;
+            sideboard_imu.quat_w = (int16_t)mpu.quat.w;
+            sideboard_imu.quat_x = (int16_t)mpu.quat.x;
+            sideboard_imu.quat_y = (int16_t)mpu.quat.y;
+            sideboard_imu.quat_z = (int16_t)mpu.quat.z;
  
             sideboard_imu.euler_pitch = (int16_t)mpu.euler.pitch;
             sideboard_imu.euler_roll = (int16_t)mpu.euler.roll;

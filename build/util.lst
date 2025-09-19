@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccPeOSOQ.s 			page 1
+ARM GAS  /tmp/cc9tOEVd.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
   29:Src/util.c    **** #include "mpu6050.h"
   30:Src/util.c    **** 
   31:Src/util.c    **** // USART1 variables
-ARM GAS  /tmp/ccPeOSOQ.s 			page 2
+ARM GAS  /tmp/cc9tOEVd.s 			page 2
 
 
   32:Src/util.c    **** #ifdef SERIAL_CONTROL
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
   86:Src/util.c    **** #endif
   87:Src/util.c    **** 
   88:Src/util.c    **** extern uint32_t     main_loop_counter;          // main loop counter to perform task scheduling ins
-ARM GAS  /tmp/ccPeOSOQ.s 			page 3
+ARM GAS  /tmp/cc9tOEVd.s 			page 3
 
 
   89:Src/util.c    **** 
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  124:Src/util.c    **** 
  125:Src/util.c    **** /* retarget the C library printf function to the USART */
  126:Src/util.c    **** #ifdef SERIAL_DEBUG	
-ARM GAS  /tmp/ccPeOSOQ.s 			page 4
+ARM GAS  /tmp/cc9tOEVd.s 			page 4
 
 
  127:Src/util.c    ****     #ifdef __GNUC__
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
   76              		.cfi_startproc
   77              		@ args = 0, pretend = 0, frame = 0
   78              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccPeOSOQ.s 			page 5
+ARM GAS  /tmp/cc9tOEVd.s 			page 5
 
 
  156:Src/util.c    ****     int i;
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  121              		.loc 1 164 9 discriminator 3 view .LVU18
  122 0036 2846     		mov	r0, r5
  123 0038 FFF7FEFF 		bl	delay_1ms
-ARM GAS  /tmp/ccPeOSOQ.s 			page 6
+ARM GAS  /tmp/cc9tOEVd.s 			page 6
 
 
  124              	.LVL9:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  164 0076 2046     		mov	r0, r4
  165 0078 FFF7FEFF 		bl	gpio_bit_set
  166              	.LVL18:
-ARM GAS  /tmp/ccPeOSOQ.s 			page 7
+ARM GAS  /tmp/cc9tOEVd.s 			page 7
 
 
  174:Src/util.c    ****         gpio_bit_set(LED4_GPIO_Port, LED4_Pin);
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  210 00c2 00D1     		bne	.L6
  182:Src/util.c    ****     }
  183:Src/util.c    **** }
-ARM GAS  /tmp/ccPeOSOQ.s 			page 8
+ARM GAS  /tmp/cc9tOEVd.s 			page 8
 
 
  211              		.loc 1 183 1 view .LVU41
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  260              	.LVL31:
  261              	.L11:
  191:Src/util.c    ****     } else {    // 2 positions switch
-ARM GAS  /tmp/ccPeOSOQ.s 			page 9
+ARM GAS  /tmp/cc9tOEVd.s 			page 9
 
 
  192:Src/util.c    ****         return  (ch > 850);
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  306 0006 0F48     		ldr	r0, .L18+4
  307 0008 FFF7FEFF 		bl	usart_Tx_DMA_config
  308              	.LVL35:
-ARM GAS  /tmp/ccPeOSOQ.s 			page 10
+ARM GAS  /tmp/cc9tOEVd.s 			page 10
 
 
  202:Src/util.c    ****     #endif
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  332              		.loc 1 231 1 is_stmt 0 view .LVU70
  333 002a BDE80840 		pop	{r3, lr}
  334              	.LCFI2:
-ARM GAS  /tmp/ccPeOSOQ.s 			page 11
+ARM GAS  /tmp/cc9tOEVd.s 			page 11
 
 
  335              		.cfi_remember_state
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  377              		.cfi_startproc
  378              		@ args = 0, pretend = 0, frame = 0
  379              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccPeOSOQ.s 			page 12
+ARM GAS  /tmp/cc9tOEVd.s 			page 12
 
 
  380              		@ link register save eliminated.
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  250:Src/util.c    ****         mpu_print_to_console();
  251:Src/util.c    ****     }
  252:Src/util.c    ****     #endif
-ARM GAS  /tmp/ccPeOSOQ.s 			page 13
+ARM GAS  /tmp/cc9tOEVd.s 			page 13
 
 
  253:Src/util.c    **** #endif
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  465              		.loc 1 261 20 is_stmt 0 view .LVU100
  466 0014 1A48     		ldr	r0, .L30+4
  467 0016 FFF7FEFF 		bl	gpio_input_bit_get
-ARM GAS  /tmp/ccPeOSOQ.s 			page 14
+ARM GAS  /tmp/cc9tOEVd.s 			page 14
 
 
  468              	.LVL43:
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  275:Src/util.c    **** 
  276:Src/util.c    ****     // SENSOR2
  277:Src/util.c    ****     if (sensor2 == RESET && sensor2_read == SET) {
-ARM GAS  /tmp/ccPeOSOQ.s 			page 15
+ARM GAS  /tmp/cc9tOEVd.s 			page 15
 
 
  503              		.loc 1 277 5 is_stmt 1 view .LVU116
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  536 004e 012A     		cmp	r2, #1
  537 0050 F0D1     		bne	.L27
  269:Src/util.c    ****         // Sensor DEACTIVE: Do something here (one time task on deactivation)
-ARM GAS  /tmp/ccPeOSOQ.s 			page 16
+ARM GAS  /tmp/cc9tOEVd.s 			page 16
 
 
  538              		.loc 1 269 30 discriminator 1 view .LVU127
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  578              		.cfi_remember_state
  579              		.cfi_restore 14
  580              		.cfi_restore 5
-ARM GAS  /tmp/ccPeOSOQ.s 			page 17
+ARM GAS  /tmp/cc9tOEVd.s 			page 17
 
 
  581              		.cfi_restore 4
@@ -1004,211 +1004,230 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  303:Src/util.c    **** void handle_usart(void) {
  615              		.loc 1 303 25 is_stmt 1 view -0
  616              		.cfi_startproc
- 617              		@ args = 0, pretend = 0, frame = 0
+ 617              		@ args = 0, pretend = 0, frame = 8
  618              		@ frame_needed = 0, uses_anonymous_args = 0
  304:Src/util.c    ****     // Tx USART MAIN
  305:Src/util.c    ****     #ifdef SERIAL_CONTROL
  306:Src/util.c    ****         if (main_loop_counter % 5 == 0 && dma_transfer_number_get(USART1_TX_DMA_CH) == 0) {     // 
  619              		.loc 1 306 9 view .LVU146
  620              		.loc 1 306 31 is_stmt 0 view .LVU147
- 621 0000 454B     		ldr	r3, .L37
+ 621 0000 484B     		ldr	r3, .L37
  303:Src/util.c    ****     // Tx USART MAIN
  622              		.loc 1 303 25 view .LVU148
- 623 0002 464A     		ldr	r2, .L37+4
- 624 0004 1B68     		ldr	r3, [r3]
- 625 0006 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
- 626              	.LCFI9:
-ARM GAS  /tmp/ccPeOSOQ.s 			page 18
+ 623 0002 2DE9F74F 		push	{r0, r1, r2, r4, r5, r6, r7, r8, r9, r10, fp, lr}
+ 624              	.LCFI9:
+ 625              		.cfi_def_cfa_offset 48
+ 626              		.cfi_offset 4, -36
+ARM GAS  /tmp/cc9tOEVd.s 			page 18
 
 
- 627              		.cfi_def_cfa_offset 24
- 628              		.cfi_offset 4, -24
- 629              		.cfi_offset 5, -20
- 630              		.cfi_offset 6, -16
- 631              		.cfi_offset 7, -12
- 632              		.cfi_offset 8, -8
- 633              		.cfi_offset 14, -4
+ 627              		.cfi_offset 5, -32
+ 628              		.cfi_offset 6, -28
+ 629              		.cfi_offset 7, -24
+ 630              		.cfi_offset 8, -20
+ 631              		.cfi_offset 9, -16
+ 632              		.cfi_offset 10, -12
+ 633              		.cfi_offset 11, -8
+ 634              		.cfi_offset 14, -4
  303:Src/util.c    ****     // Tx USART MAIN
- 634              		.loc 1 303 25 view .LVU149
- 635 000a 5343     		muls	r3, r2, r3
- 636              		.loc 1 306 12 view .LVU150
- 637 000c B3F1333F 		cmp	r3, #858993459
- 638 0010 73D8     		bhi	.L34
- 639              		.loc 1 306 43 discriminator 1 view .LVU151
- 640 0012 0320     		movs	r0, #3
- 641 0014 FFF7FEFF 		bl	dma_transfer_number_get
- 642              	.LVL49:
- 643              		.loc 1 306 40 discriminator 1 view .LVU152
- 644 0018 0028     		cmp	r0, #0
- 645 001a 6ED1     		bne	.L34
+ 635              		.loc 1 303 25 view .LVU149
+ 636 0006 1B68     		ldr	r3, [r3]
+ 637 0008 474A     		ldr	r2, .L37+4
+ 638 000a 5343     		muls	r3, r2, r3
+ 639              		.loc 1 306 12 view .LVU150
+ 640 000c B3F1333F 		cmp	r3, #858993459
+ 641 0010 79D8     		bhi	.L34
+ 642              		.loc 1 306 43 discriminator 1 view .LVU151
+ 643 0012 0320     		movs	r0, #3
+ 644 0014 FFF7FEFF 		bl	dma_transfer_number_get
+ 645              	.LVL49:
+ 646              		.loc 1 306 40 discriminator 1 view .LVU152
+ 647 0018 0028     		cmp	r0, #0
+ 648 001a 74D1     		bne	.L34
  307:Src/util.c    ****             sideboard_imu.start =   (uint16_t)SERIAL_START_FRAME;
- 646              		.loc 1 307 13 is_stmt 1 view .LVU153
- 647              		.loc 1 307 33 is_stmt 0 view .LVU154
- 648 001c 6FF03203 		mvn	r3, #50
- 649 0020 3F4C     		ldr	r4, .L37+8
- 650 0022 2370     		strb	r3, [r4]
- 651 0024 6FF05403 		mvn	r3, #84
- 652 0028 6370     		strb	r3, [r4, #1]
+ 649              		.loc 1 307 13 is_stmt 1 view .LVU153
+ 650              		.loc 1 307 33 is_stmt 0 view .LVU154
+ 651 001c 6FF03203 		mvn	r3, #50
+ 652 0020 424C     		ldr	r4, .L37+8
+ 653 0022 2370     		strb	r3, [r4]
+ 654 0024 6FF05403 		mvn	r3, #84
+ 655 0028 6370     		strb	r3, [r4, #1]
  308:Src/util.c    ****             sideboard_imu.cmd1 =    (int16_t)0;
- 653              		.loc 1 308 13 is_stmt 1 view .LVU155
+ 656              		.loc 1 308 13 is_stmt 1 view .LVU155
  309:Src/util.c    ****             sideboard_imu.cmd2 =    (int16_t)0;
  310:Src/util.c    ****             sideboard_imu.pitch =   (int16_t)mpu.euler.pitch;
- 654              		.loc 1 310 55 is_stmt 0 view .LVU156
- 655 002a 3E4B     		ldr	r3, .L37+12
+ 657              		.loc 1 310 55 is_stmt 0 view .LVU156
+ 658 002a 414B     		ldr	r3, .L37+12
  308:Src/util.c    ****             sideboard_imu.cmd1 =    (int16_t)0;
- 656              		.loc 1 308 32 view .LVU157
- 657 002c A070     		strb	r0, [r4, #2]
+ 659              		.loc 1 308 32 view .LVU157
+ 660 002c A070     		strb	r0, [r4, #2]
  311:Src/util.c    ****             sideboard_imu.dPitch =  (int16_t)mpu.gyro.y;
- 658              		.loc 1 311 54 view .LVU158
- 659 002e B3F90210 		ldrsh	r1, [r3, #2]
+ 661              		.loc 1 311 54 view .LVU158
+ 662 002e B3F90210 		ldrsh	r1, [r3, #2]
  310:Src/util.c    ****             sideboard_imu.dPitch =  (int16_t)mpu.gyro.y;
- 660              		.loc 1 310 55 view .LVU159
- 661 0032 B3F91E20 		ldrsh	r2, [r3, #30]
- 662              		.loc 1 311 34 view .LVU160
- 663 0036 2181     		strh	r1, [r4, #8]	@ unaligned
+ 663              		.loc 1 310 55 view .LVU159
+ 664 0032 B3F91E20 		ldrsh	r2, [r3, #30]
  312:Src/util.c    ****   
  313:Src/util.c    ****             sideboard_imu.gyro_x =  (int16_t)mpu.gyro.x;
  314:Src/util.c    ****             sideboard_imu.gyro_y =  (int16_t)mpu.gyro.y;
- 664              		.loc 1 314 34 view .LVU161
- 665 0038 A181     		strh	r1, [r4, #12]	@ unaligned
  315:Src/util.c    ****             sideboard_imu.gyro_z =  (int16_t)mpu.gyro.z;
  316:Src/util.c    ****             
  317:Src/util.c    ****             sideboard_imu.accel_x = (int16_t)mpu.accel.x;
  318:Src/util.c    ****             sideboard_imu.accel_y = (int16_t)mpu.accel.y;
  319:Src/util.c    ****             sideboard_imu.accel_z = (int16_t)mpu.accel.z;
  320:Src/util.c    ****         
- 321:Src/util.c    ****             sideboard_imu.quat_w = (int16_t)34;//mpu.quat.w;
-ARM GAS  /tmp/ccPeOSOQ.s 			page 19
+ 321:Src/util.c    ****             sideboard_imu.quat_w = (int16_t)mpu.quat.w;
+ 322:Src/util.c    ****             sideboard_imu.quat_x = (int16_t)mpu.quat.x;
+ARM GAS  /tmp/cc9tOEVd.s 			page 19
 
 
- 666              		.loc 1 321 34 view .LVU162
- 667 003a 2221     		movs	r1, #34
- 668 003c A175     		strb	r1, [r4, #22]
- 322:Src/util.c    ****             sideboard_imu.quat_x = (int16_t)-1234;//mpu.quat.x;
- 669              		.loc 1 322 34 view .LVU163
- 670 003e 2E21     		movs	r1, #46
- 671 0040 2176     		strb	r1, [r4, #24]
- 672 0042 6FF00401 		mvn	r1, #4
- 673 0046 6176     		strb	r1, [r4, #25]
- 323:Src/util.c    ****             sideboard_imu.quat_y = (int16_t)5322;//mpu.quat.y;
- 674              		.loc 1 323 34 view .LVU164
- 675 0048 6FF03501 		mvn	r1, #53
- 676 004c A176     		strb	r1, [r4, #26]
- 677 004e 1421     		movs	r1, #20
- 678 0050 E176     		strb	r1, [r4, #27]
- 324:Src/util.c    ****             sideboard_imu.quat_z = (int16_t)-876;//mpu.quat.z;
- 679              		.loc 1 324 34 view .LVU165
- 680 0052 6FF06B01 		mvn	r1, #107
- 681 0056 2177     		strb	r1, [r4, #28]
- 682 0058 6FF00301 		mvn	r1, #3
- 317:Src/util.c    ****             sideboard_imu.accel_y = (int16_t)mpu.accel.y;
- 683              		.loc 1 317 55 view .LVU166
- 684 005c B3F906C0 		ldrsh	ip, [r3, #6]
+ 323:Src/util.c    ****             sideboard_imu.quat_y = (int16_t)mpu.quat.y;
+ 324:Src/util.c    ****             sideboard_imu.quat_z = (int16_t)mpu.quat.z;
+ 665              		.loc 1 324 36 view .LVU160
+ 666 0036 B3F91860 		ldrsh	r6, [r3, #24]
  313:Src/util.c    ****             sideboard_imu.gyro_y =  (int16_t)mpu.gyro.y;
- 685              		.loc 1 313 54 view .LVU167
- 686 0060 B3F900E0 		ldrsh	lr, [r3]
+ 667              		.loc 1 313 54 view .LVU161
+ 668 003a B3F900A0 		ldrsh	r10, [r3]
  315:Src/util.c    ****             
- 687              		.loc 1 315 54 view .LVU168
- 688 0064 B3F90480 		ldrsh	r8, [r3, #4]
+ 669              		.loc 1 315 54 view .LVU162
+ 670 003e B3F904B0 		ldrsh	fp, [r3, #4]
+ 317:Src/util.c    ****             sideboard_imu.accel_y = (int16_t)mpu.accel.y;
+ 671              		.loc 1 317 55 view .LVU163
+ 672 0042 B3F90690 		ldrsh	r9, [r3, #6]
  318:Src/util.c    ****             sideboard_imu.accel_z = (int16_t)mpu.accel.z;
- 689              		.loc 1 318 55 view .LVU169
- 690 0068 B3F90870 		ldrsh	r7, [r3, #8]
+ 673              		.loc 1 318 55 view .LVU164
+ 674 0046 B3F90880 		ldrsh	r8, [r3, #8]
  319:Src/util.c    ****         
- 691              		.loc 1 319 55 view .LVU170
- 692 006c B3F90A60 		ldrsh	r6, [r3, #10]
+ 675              		.loc 1 319 55 view .LVU165
+ 676 004a B3F90AE0 		ldrsh	lr, [r3, #10]
+ 321:Src/util.c    ****             sideboard_imu.quat_x = (int16_t)mpu.quat.x;
+ 677              		.loc 1 321 36 view .LVU166
+ 678 004e B3F90C50 		ldrsh	r5, [r3, #12]
  325:Src/util.c    ****  
  326:Src/util.c    ****             sideboard_imu.euler_pitch = (int16_t)mpu.euler.pitch;
  327:Src/util.c    ****             sideboard_imu.euler_roll = (int16_t)mpu.euler.roll;
- 693              		.loc 1 327 58 view .LVU171
- 694 0070 B3F91C50 		ldrsh	r5, [r3, #28]
+ 679              		.loc 1 327 58 view .LVU167
+ 680 0052 B3F91CC0 		ldrsh	ip, [r3, #28]
+ 308:Src/util.c    ****             sideboard_imu.cmd2 =    (int16_t)0;
+ 681              		.loc 1 308 32 view .LVU168
+ 682 0056 E070     		strb	r0, [r4, #3]
+ 309:Src/util.c    ****             sideboard_imu.pitch =   (int16_t)mpu.euler.pitch;
+ 683              		.loc 1 309 13 is_stmt 1 view .LVU169
+ 309:Src/util.c    ****             sideboard_imu.pitch =   (int16_t)mpu.euler.pitch;
+ 684              		.loc 1 309 32 is_stmt 0 view .LVU170
+ 685 0058 2071     		strb	r0, [r4, #4]
+ 686 005a 6071     		strb	r0, [r4, #5]
  310:Src/util.c    ****             sideboard_imu.dPitch =  (int16_t)mpu.gyro.y;
- 695              		.loc 1 310 33 view .LVU172
- 696 0074 E280     		strh	r2, [r4, #6]	@ unaligned
+ 687              		.loc 1 310 13 is_stmt 1 view .LVU171
+ 311:Src/util.c    ****   
+ 688              		.loc 1 311 34 is_stmt 0 view .LVU172
+ 689 005c 2181     		strh	r1, [r4, #8]	@ unaligned
+ 322:Src/util.c    ****             sideboard_imu.quat_y = (int16_t)mpu.quat.y;
+ 690              		.loc 1 322 36 view .LVU173
+ 691 005e B3F91000 		ldrsh	r0, [r3, #16]
+ 314:Src/util.c    ****             sideboard_imu.gyro_z =  (int16_t)mpu.gyro.z;
+ 692              		.loc 1 314 34 view .LVU174
+ 693 0062 A181     		strh	r1, [r4, #12]	@ unaligned
+ 323:Src/util.c    ****             sideboard_imu.quat_z = (int16_t)mpu.quat.z;
+ 694              		.loc 1 323 36 view .LVU175
+ 695 0064 B3F91410 		ldrsh	r1, [r3, #20]
+ 310:Src/util.c    ****             sideboard_imu.dPitch =  (int16_t)mpu.gyro.y;
+ 696              		.loc 1 310 33 view .LVU176
+ 697 0068 E280     		strh	r2, [r4, #6]	@ unaligned
+ 311:Src/util.c    ****   
+ 698              		.loc 1 311 13 is_stmt 1 view .LVU177
+ 313:Src/util.c    ****             sideboard_imu.gyro_y =  (int16_t)mpu.gyro.y;
+ 699              		.loc 1 313 13 view .LVU178
+ARM GAS  /tmp/cc9tOEVd.s 			page 20
+
+
  326:Src/util.c    ****             sideboard_imu.euler_roll = (int16_t)mpu.euler.roll;
- 697              		.loc 1 326 39 view .LVU173
- 698 0076 E283     		strh	r2, [r4, #30]	@ unaligned
+ 700              		.loc 1 326 39 is_stmt 0 view .LVU179
+ 701 006a E283     		strh	r2, [r4, #30]	@ unaligned
  328:Src/util.c    ****             sideboard_imu.euler_yaw = (int16_t)mpu.euler.yaw;
  329:Src/util.c    ****             
  330:Src/util.c    ****             sideboard_imu.temperature = (int16_t)mpu.temp;
  331:Src/util.c    ****             sideboard_imu.sensors = (uint16_t)((cmdSwitch << 8) | (sensor1 | (sensor2 << 1) | (mpuS
- 699              		.loc 1 331 87 view .LVU174
- 700 0078 2B4A     		ldr	r2, .L37+16
- 317:Src/util.c    ****             sideboard_imu.accel_y = (int16_t)mpu.accel.y;
- 701              		.loc 1 317 35 view .LVU175
- 702 007a A4F810C0 		strh	ip, [r4, #16]	@ unaligned
+ 702              		.loc 1 331 106 view .LVU180
+ 703 006c 314A     		ldr	r2, .L37+16
  313:Src/util.c    ****             sideboard_imu.gyro_y =  (int16_t)mpu.gyro.y;
- 703              		.loc 1 313 34 view .LVU176
-ARM GAS  /tmp/ccPeOSOQ.s 			page 20
-
-
- 704 007e A4F80AE0 		strh	lr, [r4, #10]	@ unaligned
- 318:Src/util.c    ****             sideboard_imu.accel_z = (int16_t)mpu.accel.z;
- 705              		.loc 1 318 35 view .LVU177
- 706 0082 6782     		strh	r7, [r4, #18]	@ unaligned
- 319:Src/util.c    ****         
- 707              		.loc 1 319 35 view .LVU178
- 708 0084 A682     		strh	r6, [r4, #20]	@ unaligned
- 324:Src/util.c    ****  
- 709              		.loc 1 324 34 view .LVU179
- 710 0086 6177     		strb	r1, [r4, #29]
- 327:Src/util.c    ****             sideboard_imu.euler_yaw = (int16_t)mpu.euler.yaw;
- 711              		.loc 1 327 38 view .LVU180
- 712 0088 2584     		strh	r5, [r4, #32]	@ unaligned
- 308:Src/util.c    ****             sideboard_imu.cmd2 =    (int16_t)0;
- 713              		.loc 1 308 32 view .LVU181
- 714 008a E070     		strb	r0, [r4, #3]
- 309:Src/util.c    ****             sideboard_imu.pitch =   (int16_t)mpu.euler.pitch;
- 715              		.loc 1 309 13 is_stmt 1 view .LVU182
- 309:Src/util.c    ****             sideboard_imu.pitch =   (int16_t)mpu.euler.pitch;
- 716              		.loc 1 309 32 is_stmt 0 view .LVU183
- 717 008c 2071     		strb	r0, [r4, #4]
- 718 008e 6071     		strb	r0, [r4, #5]
- 310:Src/util.c    ****             sideboard_imu.dPitch =  (int16_t)mpu.gyro.y;
- 719              		.loc 1 310 13 is_stmt 1 view .LVU184
- 311:Src/util.c    ****   
- 720              		.loc 1 311 13 view .LVU185
- 313:Src/util.c    ****             sideboard_imu.gyro_y =  (int16_t)mpu.gyro.y;
- 721              		.loc 1 313 13 view .LVU186
+ 704              		.loc 1 313 34 view .LVU181
+ 705 006e A4F80AA0 		strh	r10, [r4, #10]	@ unaligned
  314:Src/util.c    ****             sideboard_imu.gyro_z =  (int16_t)mpu.gyro.z;
- 722              		.loc 1 314 13 view .LVU187
+ 706              		.loc 1 314 13 is_stmt 1 view .LVU182
  315:Src/util.c    ****             
- 723              		.loc 1 315 13 view .LVU188
- 315:Src/util.c    ****             
- 724              		.loc 1 315 34 is_stmt 0 view .LVU189
- 725 0090 A4F80E80 		strh	r8, [r4, #14]	@ unaligned
+ 707              		.loc 1 315 13 view .LVU183
  317:Src/util.c    ****             sideboard_imu.accel_y = (int16_t)mpu.accel.y;
- 726              		.loc 1 317 13 is_stmt 1 view .LVU190
+ 708              		.loc 1 317 35 is_stmt 0 view .LVU184
+ 709 0072 A4F81090 		strh	r9, [r4, #16]	@ unaligned
  318:Src/util.c    ****             sideboard_imu.accel_z = (int16_t)mpu.accel.z;
- 727              		.loc 1 318 13 view .LVU191
+ 710              		.loc 1 318 35 view .LVU185
+ 711 0076 A4F81280 		strh	r8, [r4, #18]	@ unaligned
  319:Src/util.c    ****         
- 728              		.loc 1 319 13 view .LVU192
- 321:Src/util.c    ****             sideboard_imu.quat_x = (int16_t)-1234;//mpu.quat.x;
- 729              		.loc 1 321 13 view .LVU193
- 321:Src/util.c    ****             sideboard_imu.quat_x = (int16_t)-1234;//mpu.quat.x;
- 730              		.loc 1 321 34 is_stmt 0 view .LVU194
- 731 0094 E075     		strb	r0, [r4, #23]
- 322:Src/util.c    ****             sideboard_imu.quat_y = (int16_t)5322;//mpu.quat.y;
- 732              		.loc 1 322 13 is_stmt 1 view .LVU195
- 323:Src/util.c    ****             sideboard_imu.quat_z = (int16_t)-876;//mpu.quat.z;
- 733              		.loc 1 323 13 view .LVU196
+ 712              		.loc 1 319 35 view .LVU186
+ 713 007a A4F814E0 		strh	lr, [r4, #20]	@ unaligned
+ 321:Src/util.c    ****             sideboard_imu.quat_x = (int16_t)mpu.quat.x;
+ 714              		.loc 1 321 34 view .LVU187
+ 715 007e E582     		strh	r5, [r4, #22]	@ unaligned
+ 322:Src/util.c    ****             sideboard_imu.quat_y = (int16_t)mpu.quat.y;
+ 716              		.loc 1 322 34 view .LVU188
+ 717 0080 2083     		strh	r0, [r4, #24]	@ unaligned
+ 323:Src/util.c    ****             sideboard_imu.quat_z = (int16_t)mpu.quat.z;
+ 718              		.loc 1 323 34 view .LVU189
+ 719 0082 6183     		strh	r1, [r4, #26]	@ unaligned
  324:Src/util.c    ****  
- 734              		.loc 1 324 13 view .LVU197
+ 720              		.loc 1 324 36 view .LVU190
+ 721 0084 0196     		str	r6, [sp, #4]
+ 324:Src/util.c    ****  
+ 722              		.loc 1 324 34 view .LVU191
+ 723 0086 A683     		strh	r6, [r4, #28]	@ unaligned
+ 315:Src/util.c    ****             
+ 724              		.loc 1 315 34 view .LVU192
+ 725 0088 A4F80EB0 		strh	fp, [r4, #14]	@ unaligned
+ 317:Src/util.c    ****             sideboard_imu.accel_y = (int16_t)mpu.accel.y;
+ 726              		.loc 1 317 13 is_stmt 1 view .LVU193
+ 318:Src/util.c    ****             sideboard_imu.accel_z = (int16_t)mpu.accel.z;
+ 727              		.loc 1 318 13 view .LVU194
+ 319:Src/util.c    ****         
+ 728              		.loc 1 319 13 view .LVU195
+ 321:Src/util.c    ****             sideboard_imu.quat_x = (int16_t)mpu.quat.x;
+ 729              		.loc 1 321 13 view .LVU196
+ 322:Src/util.c    ****             sideboard_imu.quat_y = (int16_t)mpu.quat.y;
+ 730              		.loc 1 322 13 view .LVU197
+ 323:Src/util.c    ****             sideboard_imu.quat_z = (int16_t)mpu.quat.z;
+ 731              		.loc 1 323 13 view .LVU198
+ 324:Src/util.c    ****  
+ 732              		.loc 1 324 13 view .LVU199
+ARM GAS  /tmp/cc9tOEVd.s 			page 21
+
+
  326:Src/util.c    ****             sideboard_imu.euler_roll = (int16_t)mpu.euler.roll;
- 735              		.loc 1 326 13 view .LVU198
+ 733              		.loc 1 326 13 view .LVU200
  327:Src/util.c    ****             sideboard_imu.euler_yaw = (int16_t)mpu.euler.yaw;
- 736              		.loc 1 327 13 view .LVU199
+ 734              		.loc 1 327 13 view .LVU201
+ 327:Src/util.c    ****             sideboard_imu.euler_yaw = (int16_t)mpu.euler.yaw;
+ 735              		.loc 1 327 38 is_stmt 0 view .LVU202
+ 736 008c A4F820C0 		strh	ip, [r4, #32]	@ unaligned
  328:Src/util.c    ****             
-ARM GAS  /tmp/ccPeOSOQ.s 			page 21
-
-
- 737              		.loc 1 328 13 view .LVU200
+ 737              		.loc 1 328 13 is_stmt 1 view .LVU203
  328:Src/util.c    ****             
- 738              		.loc 1 328 57 is_stmt 0 view .LVU201
- 739 0096 B3F92000 		ldrsh	r0, [r3, #32]
- 740              		.loc 1 331 87 view .LVU202
- 741 009a 1178     		ldrb	r1, [r2]	@ zero_extendqisi2
- 742              		.loc 1 331 106 view .LVU203
- 743 009c 234A     		ldr	r2, .L37+20
+ 738              		.loc 1 328 57 is_stmt 0 view .LVU204
+ 739 0090 B3F92070 		ldrsh	r7, [r3, #32]
+ 330:Src/util.c    ****             sideboard_imu.sensors = (uint16_t)((cmdSwitch << 8) | (sensor1 | (sensor2 << 1) | (mpuS
+ 740              		.loc 1 330 53 view .LVU205
+ 741 0094 B3F92260 		ldrsh	r6, [r3, #34]
+ 742              		.loc 1 331 87 view .LVU206
+ 743 0098 274B     		ldr	r3, .L37+20
+ 744              		.loc 1 331 106 view .LVU207
+ 745 009a 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
+ 746              		.loc 1 331 87 view .LVU208
+ 747 009c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 748              		.loc 1 331 106 view .LVU209
+ 749 009e 9200     		lsls	r2, r2, #2
+ 750              		.loc 1 331 93 view .LVU210
+ 751 00a0 42EA4302 		orr	r2, r2, r3, lsl #1
+ 752              		.loc 1 331 76 view .LVU211
+ 753 00a4 254B     		ldr	r3, .L37+24
  332:Src/util.c    **** 
  333:Src/util.c    ****             sideboard_imu.checksum = (uint16_t)(
  334:Src/util.c    ****                 sideboard_imu.start ^
@@ -1219,155 +1238,149 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  339:Src/util.c    ****                 sideboard_imu.quat_w ^ sideboard_imu.quat_x ^ sideboard_imu.quat_y ^ sideboard_imu.
  340:Src/util.c    ****                 sideboard_imu.euler_pitch ^ sideboard_imu.euler_roll ^ sideboard_imu.euler_yaw ^
  341:Src/util.c    ****                 sideboard_imu.temperature ^ sideboard_imu.sensors
- 744              		.loc 1 341 43 view .LVU204
- 745 009e 8EEA080E 		eor	lr, lr, r8
+ 754              		.loc 1 341 43 view .LVU212
+ 755 00a6 8AEA0B0A 		eor	r10, r10, fp
  331:Src/util.c    **** 
- 746              		.loc 1 331 106 view .LVU205
- 747 00a2 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
- 330:Src/util.c    ****             sideboard_imu.sensors = (uint16_t)((cmdSwitch << 8) | (sensor1 | (sensor2 << 1) | (mpuS
- 748              		.loc 1 330 53 view .LVU206
- 749 00a4 B3F92230 		ldrsh	r3, [r3, #34]
- 331:Src/util.c    **** 
- 750              		.loc 1 331 106 view .LVU207
- 751 00a8 9200     		lsls	r2, r2, #2
- 331:Src/util.c    **** 
- 752              		.loc 1 331 93 view .LVU208
- 753 00aa 42EA4101 		orr	r1, r2, r1, lsl #1
- 331:Src/util.c    **** 
- 754              		.loc 1 331 76 view .LVU209
- 755 00ae 204A     		ldr	r2, .L37+24
+ 756              		.loc 1 331 76 view .LVU213
+ 757 00aa 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  328:Src/util.c    ****             
- 756              		.loc 1 328 37 view .LVU210
- 757 00b0 6084     		strh	r0, [r4, #34]	@ unaligned
+ 758              		.loc 1 328 37 view .LVU214
+ 759 00ac 6784     		strh	r7, [r4, #34]	@ unaligned
  330:Src/util.c    ****             sideboard_imu.sensors = (uint16_t)((cmdSwitch << 8) | (sensor1 | (sensor2 << 1) | (mpuS
- 758              		.loc 1 330 13 is_stmt 1 view .LVU211
+ 760              		.loc 1 330 13 is_stmt 1 view .LVU215
  331:Src/util.c    **** 
- 759              		.loc 1 331 76 is_stmt 0 view .LVU212
- 760 00b2 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
+ 761              		.loc 1 331 93 is_stmt 0 view .LVU216
+ 762 00ae 1343     		orrs	r3, r3, r2
+ 331:Src/util.c    **** 
+ 763              		.loc 1 331 35 view .LVU217
+ 764 00b0 E384     		strh	r3, [r4, #38]	@ unaligned
+ 765              		.loc 1 341 43 view .LVU218
+ 766 00b2 83EA0A03 		eor	r3, r3, r10
+ 767 00b6 89EA0309 		eor	r9, r9, r3
+ 768 00ba 88EA0908 		eor	r8, r8, r9
+ARM GAS  /tmp/cc9tOEVd.s 			page 22
+
+
+ 769 00be 8EEA080E 		eor	lr, lr, r8
+ 770 00c2 8CEA0E0C 		eor	ip, ip, lr
+ 771 00c6 87EA0C07 		eor	r7, r7, ip
  330:Src/util.c    ****             sideboard_imu.sensors = (uint16_t)((cmdSwitch << 8) | (sensor1 | (sensor2 << 1) | (mpuS
- 761              		.loc 1 330 39 view .LVU213
- 762 00b4 A384     		strh	r3, [r4, #36]	@ unaligned
+ 772              		.loc 1 330 39 view .LVU219
+ 773 00ca A684     		strh	r6, [r4, #36]	@ unaligned
  331:Src/util.c    **** 
- 763              		.loc 1 331 13 is_stmt 1 view .LVU214
- 331:Src/util.c    **** 
- 764              		.loc 1 331 93 is_stmt 0 view .LVU215
- 765 00b6 0A43     		orrs	r2, r2, r1
- 331:Src/util.c    **** 
- 766              		.loc 1 331 35 view .LVU216
- 767 00b8 E284     		strh	r2, [r4, #38]	@ unaligned
+ 774              		.loc 1 331 13 is_stmt 1 view .LVU220
  333:Src/util.c    ****                 sideboard_imu.start ^
- 768              		.loc 1 333 13 is_stmt 1 view .LVU217
- 769              		.loc 1 341 43 is_stmt 0 view .LVU218
-ARM GAS  /tmp/ccPeOSOQ.s 			page 22
-
-
- 770 00ba 82EA0E02 		eor	r2, r2, lr
- 771 00be 8CEA0202 		eor	r2, ip, r2
- 772 00c2 5740     		eors	r7, r7, r2
- 773 00c4 7E40     		eors	r6, r6, r7
- 774 00c6 7540     		eors	r5, r5, r6
- 775 00c8 6840     		eors	r0, r0, r5
- 776 00ca 4340     		eors	r3, r3, r0
- 777 00cc 83F43843 		eor	r3, r3, #47104
- 778 00d0 83F09F03 		eor	r3, r3, #159
+ 775              		.loc 1 333 13 view .LVU221
+ 776              		.loc 1 341 43 is_stmt 0 view .LVU222
+ 777 00cc 7E40     		eors	r6, r6, r7
+ 778 00ce 7540     		eors	r5, r5, r6
+ 779 00d0 019B     		ldr	r3, [sp, #4]
+ 780 00d2 6840     		eors	r0, r0, r5
+ 781 00d4 4140     		eors	r1, r1, r0
+ 782 00d6 5940     		eors	r1, r1, r3
+ 783 00d8 81F42B41 		eor	r1, r1, #43776
+ 784 00dc 81F0CD01 		eor	r1, r1, #205
  342:Src/util.c    ****             );
  343:Src/util.c    ****         
  344:Src/util.c    ****             dma_channel_disable(USART1_TX_DMA_CH);
- 779              		.loc 1 344 13 view .LVU219
- 780 00d4 0320     		movs	r0, #3
+ 785              		.loc 1 344 13 view .LVU223
+ 786 00e0 0320     		movs	r0, #3
  333:Src/util.c    ****                 sideboard_imu.start ^
- 781              		.loc 1 333 36 view .LVU220
- 782 00d6 2385     		strh	r3, [r4, #40]	@ unaligned
- 783              		.loc 1 344 13 is_stmt 1 view .LVU221
- 784 00d8 FFF7FEFF 		bl	dma_channel_disable
- 785              	.LVL50:
+ 787              		.loc 1 333 36 view .LVU224
+ 788 00e2 2185     		strh	r1, [r4, #40]	@ unaligned
+ 789              		.loc 1 344 13 is_stmt 1 view .LVU225
+ 790 00e4 FFF7FEFF 		bl	dma_channel_disable
+ 791              	.LVL50:
  345:Src/util.c    ****             DMA_CHCNT(USART1_TX_DMA_CH)     = sizeof(sideboard_imu);
- 786              		.loc 1 345 13 view .LVU222
- 787              		.loc 1 345 45 is_stmt 0 view .LVU223
- 788 00dc 2A22     		movs	r2, #42
- 789 00de 154B     		ldr	r3, .L37+28
+ 792              		.loc 1 345 13 view .LVU226
+ 793              		.loc 1 345 45 is_stmt 0 view .LVU227
+ 794 00e8 2A22     		movs	r2, #42
+ 795 00ea 154B     		ldr	r3, .L37+28
  346:Src/util.c    ****             DMA_CHMADDR(USART1_TX_DMA_CH)   = (uint32_t)&sideboard_imu;
  347:Src/util.c    ****             dma_channel_enable(USART1_TX_DMA_CH);
- 790              		.loc 1 347 13 view .LVU224
- 791 00e0 0320     		movs	r0, #3
+ 796              		.loc 1 347 13 view .LVU228
+ 797 00ec 0320     		movs	r0, #3
  345:Src/util.c    ****             DMA_CHCNT(USART1_TX_DMA_CH)     = sizeof(sideboard_imu);
- 792              		.loc 1 345 45 view .LVU225
- 793 00e2 9A64     		str	r2, [r3, #72]
+ 798              		.loc 1 345 45 view .LVU229
+ 799 00ee 9A64     		str	r2, [r3, #72]
  346:Src/util.c    ****             DMA_CHMADDR(USART1_TX_DMA_CH)   = (uint32_t)&sideboard_imu;
- 794              		.loc 1 346 13 is_stmt 1 view .LVU226
+ 800              		.loc 1 346 13 is_stmt 1 view .LVU230
  346:Src/util.c    ****             DMA_CHMADDR(USART1_TX_DMA_CH)   = (uint32_t)&sideboard_imu;
- 795              		.loc 1 346 45 is_stmt 0 view .LVU227
- 796 00e4 1C65     		str	r4, [r3, #80]
- 797              		.loc 1 347 13 is_stmt 1 view .LVU228
- 798 00e6 FFF7FEFF 		bl	dma_channel_enable
- 799              	.LVL51:
+ 801              		.loc 1 346 45 is_stmt 0 view .LVU231
+ 802 00f0 1C65     		str	r4, [r3, #80]
+ 803              		.loc 1 347 13 is_stmt 1 view .LVU232
+ 804 00f2 FFF7FEFF 		bl	dma_channel_enable
+ 805              	.LVL51:
  348:Src/util.c    **** 
  349:Src/util.c    **** 
  350:Src/util.c    ****             toggle_led(LED2_GPIO_Port, LED2_Pin); //toggle green
- 800              		.loc 1 350 13 view .LVU229
- 801              	.LBB20:
- 802              	.LBI20:
+ 806              		.loc 1 350 13 view .LVU233
+ 807              	.LBB20:
+ 808              	.LBI20:
  148:Src/util.c    **** {
- 803              		.loc 1 148 6 view .LVU230
- 804              	.LBB21:
- 150:Src/util.c    **** }
- 805              		.loc 1 150 5 view .LVU231
- 150:Src/util.c    **** }
- 806              		.loc 1 150 28 is_stmt 0 view .LVU232
- 807 00ea 4FF09042 		mov	r2, #1207959552
- 808 00ee D2F81434 		ldr	r3, [r2, #1044]
- 809 00f2 83F40073 		eor	r3, r3, #512
- 810 00f6 C2F81434 		str	r3, [r2, #1044]
-ARM GAS  /tmp/ccPeOSOQ.s 			page 23
+ARM GAS  /tmp/cc9tOEVd.s 			page 23
 
 
- 811              	.LVL52:
- 812              	.L34:
+ 809              		.loc 1 148 6 view .LVU234
+ 810              	.LBB21:
  150:Src/util.c    **** }
- 813              		.loc 1 150 28 view .LVU233
- 814              	.LBE21:
- 815              	.LBE20:
+ 811              		.loc 1 150 5 view .LVU235
+ 150:Src/util.c    **** }
+ 812              		.loc 1 150 28 is_stmt 0 view .LVU236
+ 813 00f6 4FF09042 		mov	r2, #1207959552
+ 814 00fa D2F81434 		ldr	r3, [r2, #1044]
+ 815 00fe 83F40073 		eor	r3, r3, #512
+ 816 0102 C2F81434 		str	r3, [r2, #1044]
+ 817              	.LVL52:
+ 818              	.L34:
+ 150:Src/util.c    **** }
+ 819              		.loc 1 150 28 view .LVU237
+ 820              	.LBE21:
+ 821              	.LBE20:
  351:Src/util.c    **** 
  352:Src/util.c    ****         }
  353:Src/util.c    ****     #endif
  354:Src/util.c    ****     // Rx USART MAIN
  355:Src/util.c    ****     #ifdef SERIAL_FEEDBACK
  356:Src/util.c    ****         if (timeoutCntSerial1++ >= SERIAL_TIMEOUT) {                // Timeout qualification
- 816              		.loc 1 356 9 is_stmt 1 view .LVU234
- 817              		.loc 1 356 30 is_stmt 0 view .LVU235
- 818 00fa 0F4B     		ldr	r3, .L37+32
- 819 00fc 1A88     		ldrh	r2, [r3]
- 820 00fe 511C     		adds	r1, r2, #1
- 821              		.loc 1 356 12 view .LVU236
- 822 0100 B2F5167F 		cmp	r2, #600
- 823              		.loc 1 356 30 view .LVU237
- 824 0104 1980     		strh	r1, [r3]	@ movhi
- 825              		.loc 1 356 12 view .LVU238
- 826 0106 05D3     		bcc	.L32
+ 822              		.loc 1 356 9 is_stmt 1 view .LVU238
+ 823              		.loc 1 356 30 is_stmt 0 view .LVU239
+ 824 0106 0F4B     		ldr	r3, .L37+32
+ 825 0108 1A88     		ldrh	r2, [r3]
+ 826 010a 511C     		adds	r1, r2, #1
+ 827              		.loc 1 356 12 view .LVU240
+ 828 010c 9F2A     		cmp	r2, #159
+ 829              		.loc 1 356 30 view .LVU241
+ 830 010e 1980     		strh	r1, [r3]	@ movhi
+ 831              		.loc 1 356 12 view .LVU242
+ 832 0110 04D9     		bls	.L32
  357:Src/util.c    ****             timeoutFlagSerial1 = 1;                                 // Timeout detected
- 827              		.loc 1 357 13 is_stmt 1 view .LVU239
- 828              		.loc 1 357 32 is_stmt 0 view .LVU240
- 829 0108 0121     		movs	r1, #1
- 830 010a 0C4A     		ldr	r2, .L37+36
- 831 010c 1170     		strb	r1, [r2]
+ 833              		.loc 1 357 13 is_stmt 1 view .LVU243
+ 834              		.loc 1 357 32 is_stmt 0 view .LVU244
+ 835 0112 0121     		movs	r1, #1
+ 836 0114 0C4A     		ldr	r2, .L37+36
+ 837 0116 1170     		strb	r1, [r2]
  358:Src/util.c    ****             timeoutCntSerial1  = SERIAL_TIMEOUT;                    // Limit timout counter value
- 832              		.loc 1 358 13 is_stmt 1 view .LVU241
- 833              		.loc 1 358 32 is_stmt 0 view .LVU242
- 834 010e 4FF41672 		mov	r2, #600
- 835 0112 1A80     		strh	r2, [r3]	@ movhi
+ 838              		.loc 1 358 13 is_stmt 1 view .LVU245
+ 839              		.loc 1 358 32 is_stmt 0 view .LVU246
+ 840 0118 A022     		movs	r2, #160
+ 841 011a 1A80     		strh	r2, [r3]	@ movhi
  359:Src/util.c    ****         }
  360:Src/util.c    ****         if (timeoutFlagSerial1 && main_loop_counter % 100 == 0) {   // In case of timeout bring the
- 836              		.loc 1 360 9 is_stmt 1 view .LVU243
+ 842              		.loc 1 360 9 is_stmt 1 view .LVU247
  361:Src/util.c    ****             //toggle_led(LED3_GPIO_Port, LED3_Pin);                   // Toggle the Yellow LED ever
  362:Src/util.c    ****         }
- 837              		.loc 1 362 9 view .LVU244
- 838              	.L32:
+ 843              		.loc 1 362 9 view .LVU248
+ 844              	.L32:
  363:Src/util.c    ****     #endif
  364:Src/util.c    **** 
  365:Src/util.c    ****     // Tx USART AUX
  366:Src/util.c    ****     #ifdef SERIAL_AUX_TX
  367:Src/util.c    ****         if (main_loop_counter % 5 == 0 && dma_transfer_number_get(USART0_TX_DMA_CH) == 0) {     // 
  368:Src/util.c    ****             AuxTx.start     = (uint16_t)SERIAL_START_FRAME;
+ARM GAS  /tmp/cc9tOEVd.s 			page 24
+
+
  369:Src/util.c    ****             AuxTx.signal1   = (int16_t)sensor1;
  370:Src/util.c    ****             AuxTx.signal2   = (int16_t)sensor2;
  371:Src/util.c    ****             AuxTx.checksum  = (uint16_t)(AuxTx.start ^ AuxTx.signal1 ^ AuxTx.signal2);
@@ -1378,9 +1391,6 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  376:Src/util.c    ****             dma_channel_enable(USART0_TX_DMA_CH);
  377:Src/util.c    ****         }
  378:Src/util.c    ****     #endif
-ARM GAS  /tmp/ccPeOSOQ.s 			page 24
-
-
  379:Src/util.c    ****     // Rx USART AUX
  380:Src/util.c    ****     #ifdef SERIAL_AUX_RX
  381:Src/util.c    ****         #ifdef CONTROL_IBUS
@@ -1415,246 +1425,250 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  410:Src/util.c    ****         #endif
  411:Src/util.c    ****     #endif
  412:Src/util.c    **** }
- 839              		.loc 1 412 1 is_stmt 0 view .LVU245
- 840 0114 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
- 841              	.L38:
- 842              		.align	2
- 843              	.L37:
- 844 0118 00000000 		.word	main_loop_counter
- 845 011c CDCCCCCC 		.word	-858993459
- 846 0120 00000000 		.word	.LANCHOR0
- 847 0124 00000000 		.word	mpu
- 848 0128 00000000 		.word	.LANCHOR6
- 849 012c 00000000 		.word	.LANCHOR2
- 850 0130 00000000 		.word	.LANCHOR5
- 851 0134 00000240 		.word	1073872896
- 852 0138 00000000 		.word	.LANCHOR7
- 853 013c 00000000 		.word	.LANCHOR8
- 854              		.cfi_endproc
- 855              	.LFE66:
- 857              		.section	.text.handle_leds,"ax",%progbits
- 858              		.align	1
- 859              		.global	handle_leds
- 860              		.syntax unified
- 861              		.thumb
- 862              		.thumb_func
-ARM GAS  /tmp/ccPeOSOQ.s 			page 25
+ 845              		.loc 1 412 1 is_stmt 0 view .LVU249
+ 846 011c 03B0     		add	sp, sp, #12
+ 847              	.LCFI10:
+ 848              		.cfi_def_cfa_offset 36
+ 849              		@ sp needed
+ 850 011e BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 851              	.L38:
+ 852 0122 00BF     		.align	2
+ 853              	.L37:
+ 854 0124 00000000 		.word	main_loop_counter
+ 855 0128 CDCCCCCC 		.word	-858993459
+ 856 012c 00000000 		.word	.LANCHOR0
+ 857 0130 00000000 		.word	mpu
+ARM GAS  /tmp/cc9tOEVd.s 			page 25
 
 
- 863              		.fpu softvfp
- 865              	handle_leds:
- 866              	.LFB67:
+ 858 0134 00000000 		.word	.LANCHOR2
+ 859 0138 00000000 		.word	.LANCHOR6
+ 860 013c 00000000 		.word	.LANCHOR5
+ 861 0140 00000240 		.word	1073872896
+ 862 0144 00000000 		.word	.LANCHOR7
+ 863 0148 00000000 		.word	.LANCHOR8
+ 864              		.cfi_endproc
+ 865              	.LFE66:
+ 867              		.section	.text.handle_leds,"ax",%progbits
+ 868              		.align	1
+ 869              		.global	handle_leds
+ 870              		.syntax unified
+ 871              		.thumb
+ 872              		.thumb_func
+ 873              		.fpu softvfp
+ 875              	handle_leds:
+ 876              	.LFB67:
  413:Src/util.c    **** 
  414:Src/util.c    **** /*
  415:Src/util.c    ****  * Handle of the sideboard LEDs
  416:Src/util.c    ****  */
  417:Src/util.c    **** void handle_leds(void) {
- 867              		.loc 1 417 24 is_stmt 1 view -0
- 868              		.cfi_startproc
- 869              		@ args = 0, pretend = 0, frame = 0
- 870              		@ frame_needed = 0, uses_anonymous_args = 0
+ 877              		.loc 1 417 24 is_stmt 1 view -0
+ 878              		.cfi_startproc
+ 879              		@ args = 0, pretend = 0, frame = 0
+ 880              		@ frame_needed = 0, uses_anonymous_args = 0
  418:Src/util.c    ****     #ifdef SERIAL_FEEDBACK
  419:Src/util.c    ****         if (!timeoutFlagSerial1) {
- 871              		.loc 1 419 9 view .LVU247
+ 881              		.loc 1 419 9 view .LVU251
  417:Src/util.c    ****     #ifdef SERIAL_FEEDBACK
- 872              		.loc 1 417 24 is_stmt 0 view .LVU248
- 873 0000 10B5     		push	{r4, lr}
- 874              	.LCFI10:
- 875              		.cfi_def_cfa_offset 8
- 876              		.cfi_offset 4, -8
- 877              		.cfi_offset 14, -4
- 878              		.loc 1 419 13 view .LVU249
- 879 0002 244B     		ldr	r3, .L52
- 880              		.loc 1 419 12 view .LVU250
- 881 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 882 0006 002B     		cmp	r3, #0
- 883 0008 43D1     		bne	.L39
+ 882              		.loc 1 417 24 is_stmt 0 view .LVU252
+ 883 0000 10B5     		push	{r4, lr}
+ 884              	.LCFI11:
+ 885              		.cfi_def_cfa_offset 8
+ 886              		.cfi_offset 4, -8
+ 887              		.cfi_offset 14, -4
+ 888              		.loc 1 419 13 view .LVU253
+ 889 0002 244B     		ldr	r3, .L52
+ 890              		.loc 1 419 12 view .LVU254
+ 891 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 892 0006 002B     		cmp	r3, #0
+ 893 0008 43D1     		bne	.L39
  420:Src/util.c    ****             if (Feedback.cmdLed & LED1_SET) { gpio_bit_set(LED1_GPIO_Port, LED1_Pin); } else { gpio
- 884              		.loc 1 420 13 is_stmt 1 view .LVU251
- 885              		.loc 1 420 25 is_stmt 0 view .LVU252
- 886 000a 234C     		ldr	r4, .L52+4
- 887              		.loc 1 420 47 view .LVU253
- 888 000c 0121     		movs	r1, #1
- 889              		.loc 1 420 16 view .LVU254
- 890 000e A38D     		ldrh	r3, [r4, #44]
- 891              		.loc 1 420 47 view .LVU255
- 892 0010 4FF09040 		mov	r0, #1207959552
- 893              		.loc 1 420 16 view .LVU256
- 894 0014 DA07     		lsls	r2, r3, #31
- 895 0016 29D5     		bpl	.L41
- 896              		.loc 1 420 47 is_stmt 1 discriminator 1 view .LVU257
- 897 0018 FFF7FEFF 		bl	gpio_bit_set
- 898              	.LVL53:
- 899              	.L42:
+ 894              		.loc 1 420 13 is_stmt 1 view .LVU255
+ 895              		.loc 1 420 25 is_stmt 0 view .LVU256
+ 896 000a 234C     		ldr	r4, .L52+4
+ 897              		.loc 1 420 47 view .LVU257
+ 898 000c 0121     		movs	r1, #1
+ 899              		.loc 1 420 16 view .LVU258
+ 900 000e A38D     		ldrh	r3, [r4, #44]
+ 901              		.loc 1 420 47 view .LVU259
+ 902 0010 4FF09040 		mov	r0, #1207959552
+ 903              		.loc 1 420 16 view .LVU260
+ 904 0014 DA07     		lsls	r2, r3, #31
+ 905 0016 29D5     		bpl	.L41
+ 906              		.loc 1 420 47 is_stmt 1 discriminator 1 view .LVU261
+ 907 0018 FFF7FEFF 		bl	gpio_bit_set
+ARM GAS  /tmp/cc9tOEVd.s 			page 26
+
+
+ 908              	.LVL53:
+ 909              	.L42:
  421:Src/util.c    ****             if (Feedback.cmdLed & LED2_SET) { gpio_bit_set(LED2_GPIO_Port, LED2_Pin); } else { gpio
- 900              		.loc 1 421 13 view .LVU258
- 901              		.loc 1 421 16 is_stmt 0 view .LVU259
- 902 001c A38D     		ldrh	r3, [r4, #44]
- 903              		.loc 1 421 47 view .LVU260
- 904 001e 4FF40071 		mov	r1, #512
- 905              		.loc 1 421 16 view .LVU261
- 906 0022 9B07     		lsls	r3, r3, #30
- 907              		.loc 1 421 47 view .LVU262
- 908 0024 1D48     		ldr	r0, .L52+8
- 909              		.loc 1 421 16 view .LVU263
- 910 0026 24D5     		bpl	.L43
-ARM GAS  /tmp/ccPeOSOQ.s 			page 26
-
-
- 911              		.loc 1 421 47 is_stmt 1 discriminator 1 view .LVU264
- 912 0028 FFF7FEFF 		bl	gpio_bit_set
- 913              	.LVL54:
- 914              	.L44:
+ 910              		.loc 1 421 13 view .LVU262
+ 911              		.loc 1 421 16 is_stmt 0 view .LVU263
+ 912 001c A38D     		ldrh	r3, [r4, #44]
+ 913              		.loc 1 421 47 view .LVU264
+ 914 001e 4FF40071 		mov	r1, #512
+ 915              		.loc 1 421 16 view .LVU265
+ 916 0022 9B07     		lsls	r3, r3, #30
+ 917              		.loc 1 421 47 view .LVU266
+ 918 0024 1D48     		ldr	r0, .L52+8
+ 919              		.loc 1 421 16 view .LVU267
+ 920 0026 24D5     		bpl	.L43
+ 921              		.loc 1 421 47 is_stmt 1 discriminator 1 view .LVU268
+ 922 0028 FFF7FEFF 		bl	gpio_bit_set
+ 923              	.LVL54:
+ 924              	.L44:
  422:Src/util.c    ****             if (Feedback.cmdLed & LED3_SET) { gpio_bit_set(LED3_GPIO_Port, LED3_Pin); } else { gpio
- 915              		.loc 1 422 13 view .LVU265
- 916              		.loc 1 422 16 is_stmt 0 view .LVU266
- 917 002c A38D     		ldrh	r3, [r4, #44]
- 918              		.loc 1 422 47 view .LVU267
- 919 002e 4FF48071 		mov	r1, #256
- 920              		.loc 1 422 16 view .LVU268
- 921 0032 5A07     		lsls	r2, r3, #29
- 922              		.loc 1 422 47 view .LVU269
- 923 0034 1948     		ldr	r0, .L52+8
- 924              		.loc 1 422 16 view .LVU270
- 925 0036 1FD5     		bpl	.L45
- 926              		.loc 1 422 47 is_stmt 1 discriminator 1 view .LVU271
- 927 0038 FFF7FEFF 		bl	gpio_bit_set
- 928              	.LVL55:
- 929              	.L46:
+ 925              		.loc 1 422 13 view .LVU269
+ 926              		.loc 1 422 16 is_stmt 0 view .LVU270
+ 927 002c A38D     		ldrh	r3, [r4, #44]
+ 928              		.loc 1 422 47 view .LVU271
+ 929 002e 4FF48071 		mov	r1, #256
+ 930              		.loc 1 422 16 view .LVU272
+ 931 0032 5A07     		lsls	r2, r3, #29
+ 932              		.loc 1 422 47 view .LVU273
+ 933 0034 1948     		ldr	r0, .L52+8
+ 934              		.loc 1 422 16 view .LVU274
+ 935 0036 1FD5     		bpl	.L45
+ 936              		.loc 1 422 47 is_stmt 1 discriminator 1 view .LVU275
+ 937 0038 FFF7FEFF 		bl	gpio_bit_set
+ 938              	.LVL55:
+ 939              	.L46:
  423:Src/util.c    ****             if (Feedback.cmdLed & LED4_SET) { gpio_bit_set(LED4_GPIO_Port, LED4_Pin); } else { gpio
- 930              		.loc 1 423 13 view .LVU272
- 931              		.loc 1 423 16 is_stmt 0 view .LVU273
- 932 003c A38D     		ldrh	r3, [r4, #44]
- 933              		.loc 1 423 47 view .LVU274
- 934 003e 2021     		movs	r1, #32
- 935              		.loc 1 423 16 view .LVU275
- 936 0040 1B07     		lsls	r3, r3, #28
- 937              		.loc 1 423 47 view .LVU276
- 938 0042 1648     		ldr	r0, .L52+8
- 939              		.loc 1 423 16 view .LVU277
- 940 0044 1BD5     		bpl	.L47
- 941              		.loc 1 423 47 is_stmt 1 discriminator 1 view .LVU278
- 942 0046 FFF7FEFF 		bl	gpio_bit_set
- 943              	.LVL56:
- 944              	.L48:
+ 940              		.loc 1 423 13 view .LVU276
+ 941              		.loc 1 423 16 is_stmt 0 view .LVU277
+ 942 003c A38D     		ldrh	r3, [r4, #44]
+ 943              		.loc 1 423 47 view .LVU278
+ 944 003e 2021     		movs	r1, #32
+ 945              		.loc 1 423 16 view .LVU279
+ 946 0040 1B07     		lsls	r3, r3, #28
+ 947              		.loc 1 423 47 view .LVU280
+ 948 0042 1648     		ldr	r0, .L52+8
+ 949              		.loc 1 423 16 view .LVU281
+ 950 0044 1BD5     		bpl	.L47
+ 951              		.loc 1 423 47 is_stmt 1 discriminator 1 view .LVU282
+ 952 0046 FFF7FEFF 		bl	gpio_bit_set
+ 953              	.LVL56:
+ 954              	.L48:
  424:Src/util.c    ****             if (Feedback.cmdLed & LED5_SET) { gpio_bit_set(LED5_GPIO_Port, LED5_Pin); } else { gpio
- 945              		.loc 1 424 13 view .LVU279
- 946              		.loc 1 424 16 is_stmt 0 view .LVU280
- 947 004a A38D     		ldrh	r3, [r4, #44]
- 948              		.loc 1 424 47 view .LVU281
- 949 004c 1021     		movs	r1, #16
- 950              		.loc 1 424 16 view .LVU282
- 951 004e DA06     		lsls	r2, r3, #27
- 952              		.loc 1 424 47 view .LVU283
- 953 0050 1248     		ldr	r0, .L52+8
- 954              		.loc 1 424 16 view .LVU284
- 955 0052 17D5     		bpl	.L49
- 956              		.loc 1 424 47 is_stmt 1 discriminator 1 view .LVU285
- 957 0054 FFF7FEFF 		bl	gpio_bit_set
- 958              	.LVL57:
- 959              	.L50:
+ 955              		.loc 1 424 13 view .LVU283
+ 956              		.loc 1 424 16 is_stmt 0 view .LVU284
+ 957 004a A38D     		ldrh	r3, [r4, #44]
+ 958              		.loc 1 424 47 view .LVU285
+ 959 004c 1021     		movs	r1, #16
+ 960              		.loc 1 424 16 view .LVU286
+ARM GAS  /tmp/cc9tOEVd.s 			page 27
+
+
+ 961 004e DA06     		lsls	r2, r3, #27
+ 962              		.loc 1 424 47 view .LVU287
+ 963 0050 1248     		ldr	r0, .L52+8
+ 964              		.loc 1 424 16 view .LVU288
+ 965 0052 17D5     		bpl	.L49
+ 966              		.loc 1 424 47 is_stmt 1 discriminator 1 view .LVU289
+ 967 0054 FFF7FEFF 		bl	gpio_bit_set
+ 968              	.LVL57:
+ 969              	.L50:
  425:Src/util.c    ****             if (Feedback.cmdLed & LED4_SET) { gpio_bit_set(AUX3_GPIO_Port, AUX3_Pin); } else { gpio
- 960              		.loc 1 425 13 view .LVU286
- 961              		.loc 1 425 16 is_stmt 0 view .LVU287
- 962 0058 A38D     		ldrh	r3, [r4, #44]
- 963              		.loc 1 425 47 view .LVU288
-ARM GAS  /tmp/ccPeOSOQ.s 			page 27
-
-
- 964 005a 4FF48061 		mov	r1, #1024
- 965              		.loc 1 425 16 view .LVU289
- 966 005e 1B07     		lsls	r3, r3, #28
- 967              		.loc 1 425 47 view .LVU290
- 968 0060 0E48     		ldr	r0, .L52+8
- 969              		.loc 1 425 16 view .LVU291
- 970 0062 12D5     		bpl	.L51
- 971              		.loc 1 425 47 is_stmt 1 discriminator 1 view .LVU292
+ 970              		.loc 1 425 13 view .LVU290
+ 971              		.loc 1 425 16 is_stmt 0 view .LVU291
+ 972 0058 A38D     		ldrh	r3, [r4, #44]
+ 973              		.loc 1 425 47 view .LVU292
+ 974 005a 4FF48061 		mov	r1, #1024
+ 975              		.loc 1 425 16 view .LVU293
+ 976 005e 1B07     		lsls	r3, r3, #28
+ 977              		.loc 1 425 47 view .LVU294
+ 978 0060 0E48     		ldr	r0, .L52+8
+ 979              		.loc 1 425 16 view .LVU295
+ 980 0062 12D5     		bpl	.L51
+ 981              		.loc 1 425 47 is_stmt 1 discriminator 1 view .LVU296
  426:Src/util.c    ****         }
  427:Src/util.c    ****     #endif
  428:Src/util.c    **** }
- 972              		.loc 1 428 1 is_stmt 0 discriminator 1 view .LVU293
- 973 0064 BDE81040 		pop	{r4, lr}
- 974              	.LCFI11:
- 975              		.cfi_remember_state
- 976              		.cfi_restore 14
- 977              		.cfi_restore 4
- 978              		.cfi_def_cfa_offset 0
+ 982              		.loc 1 428 1 is_stmt 0 discriminator 1 view .LVU297
+ 983 0064 BDE81040 		pop	{r4, lr}
+ 984              	.LCFI12:
+ 985              		.cfi_remember_state
+ 986              		.cfi_restore 14
+ 987              		.cfi_restore 4
+ 988              		.cfi_def_cfa_offset 0
  425:Src/util.c    ****             if (Feedback.cmdLed & LED4_SET) { gpio_bit_set(AUX3_GPIO_Port, AUX3_Pin); } else { gpio
- 979              		.loc 1 425 47 discriminator 1 view .LVU294
- 980 0068 FFF7FEBF 		b	gpio_bit_set
- 981              	.LVL58:
- 982              	.L41:
- 983              	.LCFI12:
- 984              		.cfi_restore_state
+ 989              		.loc 1 425 47 discriminator 1 view .LVU298
+ 990 0068 FFF7FEBF 		b	gpio_bit_set
+ 991              	.LVL58:
+ 992              	.L41:
+ 993              	.LCFI13:
+ 994              		.cfi_restore_state
  420:Src/util.c    ****             if (Feedback.cmdLed & LED2_SET) { gpio_bit_set(LED2_GPIO_Port, LED2_Pin); } else { gpio
- 985              		.loc 1 420 96 is_stmt 1 discriminator 2 view .LVU295
- 986 006c FFF7FEFF 		bl	gpio_bit_reset
- 987              	.LVL59:
- 988 0070 D4E7     		b	.L42
- 989              	.L43:
+ 995              		.loc 1 420 96 is_stmt 1 discriminator 2 view .LVU299
+ 996 006c FFF7FEFF 		bl	gpio_bit_reset
+ 997              	.LVL59:
+ 998 0070 D4E7     		b	.L42
+ 999              	.L43:
  421:Src/util.c    ****             if (Feedback.cmdLed & LED3_SET) { gpio_bit_set(LED3_GPIO_Port, LED3_Pin); } else { gpio
- 990              		.loc 1 421 96 discriminator 2 view .LVU296
- 991 0072 FFF7FEFF 		bl	gpio_bit_reset
- 992              	.LVL60:
- 993 0076 D9E7     		b	.L44
- 994              	.L45:
+ 1000              		.loc 1 421 96 discriminator 2 view .LVU300
+ 1001 0072 FFF7FEFF 		bl	gpio_bit_reset
+ 1002              	.LVL60:
+ 1003 0076 D9E7     		b	.L44
+ 1004              	.L45:
  422:Src/util.c    ****             if (Feedback.cmdLed & LED4_SET) { gpio_bit_set(LED4_GPIO_Port, LED4_Pin); } else { gpio
- 995              		.loc 1 422 96 discriminator 2 view .LVU297
- 996 0078 FFF7FEFF 		bl	gpio_bit_reset
- 997              	.LVL61:
- 998 007c DEE7     		b	.L46
- 999              	.L47:
+ 1005              		.loc 1 422 96 discriminator 2 view .LVU301
+ 1006 0078 FFF7FEFF 		bl	gpio_bit_reset
+ 1007              	.LVL61:
+ 1008 007c DEE7     		b	.L46
+ 1009              	.L47:
+ARM GAS  /tmp/cc9tOEVd.s 			page 28
+
+
  423:Src/util.c    ****             if (Feedback.cmdLed & LED5_SET) { gpio_bit_set(LED5_GPIO_Port, LED5_Pin); } else { gpio
- 1000              		.loc 1 423 96 discriminator 2 view .LVU298
- 1001 007e FFF7FEFF 		bl	gpio_bit_reset
- 1002              	.LVL62:
- 1003 0082 E2E7     		b	.L48
- 1004              	.L49:
+ 1010              		.loc 1 423 96 discriminator 2 view .LVU302
+ 1011 007e FFF7FEFF 		bl	gpio_bit_reset
+ 1012              	.LVL62:
+ 1013 0082 E2E7     		b	.L48
+ 1014              	.L49:
  424:Src/util.c    ****             if (Feedback.cmdLed & LED4_SET) { gpio_bit_set(AUX3_GPIO_Port, AUX3_Pin); } else { gpio
- 1005              		.loc 1 424 96 discriminator 2 view .LVU299
- 1006 0084 FFF7FEFF 		bl	gpio_bit_reset
- 1007              	.LVL63:
- 1008 0088 E6E7     		b	.L50
- 1009              	.L51:
+ 1015              		.loc 1 424 96 discriminator 2 view .LVU303
+ 1016 0084 FFF7FEFF 		bl	gpio_bit_reset
+ 1017              	.LVL63:
+ 1018 0088 E6E7     		b	.L50
+ 1019              	.L51:
  425:Src/util.c    ****         }
- 1010              		.loc 1 425 96 discriminator 2 view .LVU300
-ARM GAS  /tmp/ccPeOSOQ.s 			page 28
-
-
- 1011              		.loc 1 428 1 is_stmt 0 discriminator 2 view .LVU301
- 1012 008a BDE81040 		pop	{r4, lr}
- 1013              	.LCFI13:
- 1014              		.cfi_remember_state
- 1015              		.cfi_restore 14
- 1016              		.cfi_restore 4
- 1017              		.cfi_def_cfa_offset 0
+ 1020              		.loc 1 425 96 discriminator 2 view .LVU304
+ 1021              		.loc 1 428 1 is_stmt 0 discriminator 2 view .LVU305
+ 1022 008a BDE81040 		pop	{r4, lr}
+ 1023              	.LCFI14:
+ 1024              		.cfi_remember_state
+ 1025              		.cfi_restore 14
+ 1026              		.cfi_restore 4
+ 1027              		.cfi_def_cfa_offset 0
  425:Src/util.c    ****         }
- 1018              		.loc 1 425 96 discriminator 2 view .LVU302
- 1019 008e FFF7FEBF 		b	gpio_bit_reset
- 1020              	.LVL64:
- 1021              	.L39:
- 1022              	.LCFI14:
- 1023              		.cfi_restore_state
- 1024              		.loc 1 428 1 view .LVU303
- 1025 0092 10BD     		pop	{r4, pc}
- 1026              	.L53:
- 1027              		.align	2
- 1028              	.L52:
- 1029 0094 00000000 		.word	.LANCHOR8
- 1030 0098 00000000 		.word	.LANCHOR9
- 1031 009c 00040048 		.word	1207960576
- 1032              		.cfi_endproc
- 1033              	.LFE67:
- 1035              		.section	.text.usart_process_data,"ax",%progbits
- 1036              		.align	1
- 1037              		.global	usart_process_data
- 1038              		.syntax unified
- 1039              		.thumb
- 1040              		.thumb_func
- 1041              		.fpu softvfp
- 1043              	usart_process_data:
- 1044              	.LVL65:
- 1045              	.LFB69:
+ 1028              		.loc 1 425 96 discriminator 2 view .LVU306
+ 1029 008e FFF7FEBF 		b	gpio_bit_reset
+ 1030              	.LVL64:
+ 1031              	.L39:
+ 1032              	.LCFI15:
+ 1033              		.cfi_restore_state
+ 1034              		.loc 1 428 1 view .LVU307
+ 1035 0092 10BD     		pop	{r4, pc}
+ 1036              	.L53:
+ 1037              		.align	2
+ 1038              	.L52:
+ 1039 0094 00000000 		.word	.LANCHOR8
+ 1040 0098 00000000 		.word	.LANCHOR9
+ 1041 009c 00040048 		.word	1207960576
+ 1042              		.cfi_endproc
+ 1043              	.LFE67:
+ 1045              		.section	.text.usart_process_data,"ax",%progbits
+ 1046              		.align	1
+ 1047              		.global	usart_process_data
+ 1048              		.syntax unified
+ 1049              		.thumb
+ 1050              		.thumb_func
+ 1051              		.fpu softvfp
+ 1053              	usart_process_data:
+ 1054              	.LVL65:
+ 1055              	.LFB69:
  429:Src/util.c    **** 
  430:Src/util.c    **** 
  431:Src/util.c    **** /* =========================== USART1 READ Functions =========================== */
@@ -1664,6 +1678,9 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  435:Src/util.c    ****     #ifdef SERIAL_DEBUG
  436:Src/util.c    ****     static uint32_t old_pos;
  437:Src/util.c    ****     uint32_t pos;
+ARM GAS  /tmp/cc9tOEVd.s 			page 29
+
+
  438:Src/util.c    **** 
  439:Src/util.c    ****     pos = rx1_buffer_len - dma_transfer_number_get(USART1_RX_DMA_CH);           // Calculate curren
  440:Src/util.c    ****     if (pos != old_pos) {                                                       // Check change in 
@@ -1678,9 +1695,6 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  449:Src/util.c    ****     }
  450:Src/util.c    ****     old_pos = pos;                                                              // Update old posit
  451:Src/util.c    ****     if (old_pos == rx1_buffer_len) {                                            // Check and manual
-ARM GAS  /tmp/ccPeOSOQ.s 			page 29
-
-
  452:Src/util.c    ****         old_pos = 0;
  453:Src/util.c    ****     }
  454:Src/util.c    ****     #endif // SERIAL_DEBUG
@@ -1724,6 +1738,9 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  492:Src/util.c    ****             mpu_handle_input(*userCommand);
  493:Src/util.c    ****         }
  494:Src/util.c    ****     }
+ARM GAS  /tmp/cc9tOEVd.s 			page 30
+
+
  495:Src/util.c    **** }
  496:Src/util.c    **** #endif // SERIAL_DEBUG
  497:Src/util.c    **** 
@@ -1734,296 +1751,296 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  502:Src/util.c    **** #ifdef SERIAL_FEEDBACK
  503:Src/util.c    **** void usart_process_data(SerialFeedback *Feedback_in, SerialFeedback *Feedback_out)
  504:Src/util.c    **** {
- 1046              		.loc 1 504 1 is_stmt 1 view -0
- 1047              		.cfi_startproc
- 1048              		@ args = 0, pretend = 0, frame = 0
- 1049              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccPeOSOQ.s 			page 30
-
-
+ 1056              		.loc 1 504 1 is_stmt 1 view -0
+ 1057              		.cfi_startproc
+ 1058              		@ args = 0, pretend = 0, frame = 0
+ 1059              		@ frame_needed = 0, uses_anonymous_args = 0
  505:Src/util.c    ****     uint16_t checksum;
- 1050              		.loc 1 505 5 view .LVU305
+ 1060              		.loc 1 505 5 view .LVU309
  506:Src/util.c    ****     if (Feedback_in->start == SERIAL_START_FRAME) {
- 1051              		.loc 1 506 5 view .LVU306
- 1052              		.loc 1 506 8 is_stmt 0 view .LVU307
- 1053 0000 4AF6CD33 		movw	r3, #43981
- 1054 0004 0288     		ldrh	r2, [r0]
+ 1061              		.loc 1 506 5 view .LVU310
+ 1062              		.loc 1 506 8 is_stmt 0 view .LVU311
+ 1063 0000 4AF6CD33 		movw	r3, #43981
+ 1064 0004 0288     		ldrh	r2, [r0]
  504:Src/util.c    ****     uint16_t checksum;
- 1055              		.loc 1 504 1 view .LVU308
- 1056 0006 10B5     		push	{r4, lr}
- 1057              	.LCFI15:
- 1058              		.cfi_def_cfa_offset 8
- 1059              		.cfi_offset 4, -8
- 1060              		.cfi_offset 14, -4
- 1061              		.loc 1 506 8 view .LVU309
- 1062 0008 9A42     		cmp	r2, r3
- 1063 000a 1ED1     		bne	.L54
- 1064              	.LVL66:
- 1065              	.LBB24:
- 1066              	.LBI24:
+ 1065              		.loc 1 504 1 view .LVU312
+ 1066 0006 10B5     		push	{r4, lr}
+ 1067              	.LCFI16:
+ 1068              		.cfi_def_cfa_offset 8
+ 1069              		.cfi_offset 4, -8
+ 1070              		.cfi_offset 14, -4
+ 1071              		.loc 1 506 8 view .LVU313
+ 1072 0008 9A42     		cmp	r2, r3
+ 1073 000a 1ED1     		bne	.L54
+ 1074              	.LVL66:
+ 1075              	.LBB24:
+ 1076              	.LBI24:
  503:Src/util.c    **** {
- 1067              		.loc 1 503 6 is_stmt 1 view .LVU310
- 1068              	.LBB25:
+ 1077              		.loc 1 503 6 is_stmt 1 view .LVU314
+ 1078              	.LBB25:
  507:Src/util.c    ****         checksum = (uint16_t)(Feedback_in->start ^ Feedback_in->cmd1 ^ Feedback_in->cmd2 ^ Feedback
- 1069              		.loc 1 507 9 view .LVU311
+ 1079              		.loc 1 507 9 view .LVU315
  508:Src/util.c    ****                             ^ Feedback_in->batVoltage ^ Feedback_in->boardTemp ^ Feedback_in->cmdLe
  509:Src/util.c    ****         if (Feedback_in->checksum == checksum) {
- 1070              		.loc 1 509 9 view .LVU312
+ 1080              		.loc 1 509 9 view .LVU316
  508:Src/util.c    ****                             ^ Feedback_in->batVoltage ^ Feedback_in->boardTemp ^ Feedback_in->cmdLe
- 1071              		.loc 1 508 80 is_stmt 0 view .LVU313
- 1072 000c 8488     		ldrh	r4, [r0, #4]
- 1073 000e 4388     		ldrh	r3, [r0, #2]
- 1074 0010 6340     		eors	r3, r3, r4
- 1075 0012 848D     		ldrh	r4, [r0, #44]
- 1076 0014 6340     		eors	r3, r3, r4
- 1077 0016 C488     		ldrh	r4, [r0, #6]
- 1078 0018 6340     		eors	r3, r3, r4
- 1079 001a 0489     		ldrh	r4, [r0, #8]
- 1080 001c 6340     		eors	r3, r3, r4
- 1081 001e 4489     		ldrh	r4, [r0, #10]
- 1082 0020 6340     		eors	r3, r3, r4
- 1083 0022 8489     		ldrh	r4, [r0, #12]
- 1084 0024 6340     		eors	r3, r3, r4
- 1085 0026 5A40     		eors	r2, r2, r3
- 1086              		.loc 1 509 12 view .LVU314
- 1087 0028 C38D     		ldrh	r3, [r0, #46]
- 1088 002a 92B2     		uxth	r2, r2
- 1089 002c 9342     		cmp	r3, r2
- 1090 002e 0CD1     		bne	.L54
+ 1081              		.loc 1 508 80 is_stmt 0 view .LVU317
+ 1082 000c 8488     		ldrh	r4, [r0, #4]
+ 1083 000e 4388     		ldrh	r3, [r0, #2]
+ 1084 0010 6340     		eors	r3, r3, r4
+ 1085 0012 848D     		ldrh	r4, [r0, #44]
+ 1086 0014 6340     		eors	r3, r3, r4
+ 1087 0016 C488     		ldrh	r4, [r0, #6]
+ 1088 0018 6340     		eors	r3, r3, r4
+ 1089 001a 0489     		ldrh	r4, [r0, #8]
+ 1090 001c 6340     		eors	r3, r3, r4
+ 1091 001e 4489     		ldrh	r4, [r0, #10]
+ 1092 0020 6340     		eors	r3, r3, r4
+ 1093 0022 8489     		ldrh	r4, [r0, #12]
+ 1094 0024 6340     		eors	r3, r3, r4
+ARM GAS  /tmp/cc9tOEVd.s 			page 31
+
+
+ 1095 0026 5A40     		eors	r2, r2, r3
+ 1096              		.loc 1 509 12 view .LVU318
+ 1097 0028 C38D     		ldrh	r3, [r0, #46]
+ 1098 002a 92B2     		uxth	r2, r2
+ 1099 002c 9342     		cmp	r3, r2
+ 1100 002e 0CD1     		bne	.L54
  510:Src/util.c    ****             *Feedback_out = *Feedback_in;
- 1091              		.loc 1 510 13 is_stmt 1 view .LVU315
- 1092              		.loc 1 510 27 is_stmt 0 view .LVU316
- 1093 0030 00F13003 		add	r3, r0, #48
- 1094              	.LVL67:
- 1095              	.L56:
- 1096              		.loc 1 510 27 view .LVU317
- 1097 0034 50F8042B 		ldr	r2, [r0], #4	@ unaligned
-ARM GAS  /tmp/ccPeOSOQ.s 			page 31
-
-
- 1098 0038 9842     		cmp	r0, r3
- 1099 003a 41F8042B 		str	r2, [r1], #4	@ unaligned
- 1100 003e F9D1     		bne	.L56
+ 1101              		.loc 1 510 13 is_stmt 1 view .LVU319
+ 1102              		.loc 1 510 27 is_stmt 0 view .LVU320
+ 1103 0030 00F13003 		add	r3, r0, #48
+ 1104              	.LVL67:
+ 1105              	.L56:
+ 1106              		.loc 1 510 27 view .LVU321
+ 1107 0034 50F8042B 		ldr	r2, [r0], #4	@ unaligned
+ 1108 0038 9842     		cmp	r0, r3
+ 1109 003a 41F8042B 		str	r2, [r1], #4	@ unaligned
+ 1110 003e F9D1     		bne	.L56
  511:Src/util.c    ****             timeoutCntSerial1  = 0;     // Reset timeout counter
- 1101              		.loc 1 511 13 is_stmt 1 view .LVU318
- 1102              		.loc 1 511 32 is_stmt 0 view .LVU319
- 1103 0040 0023     		movs	r3, #0
- 1104              	.LVL68:
- 1105              		.loc 1 511 32 view .LVU320
- 1106 0042 024A     		ldr	r2, .L58
- 1107 0044 1380     		strh	r3, [r2]	@ movhi
+ 1111              		.loc 1 511 13 is_stmt 1 view .LVU322
+ 1112              		.loc 1 511 32 is_stmt 0 view .LVU323
+ 1113 0040 0023     		movs	r3, #0
+ 1114              	.LVL68:
+ 1115              		.loc 1 511 32 view .LVU324
+ 1116 0042 024A     		ldr	r2, .L58
+ 1117 0044 1380     		strh	r3, [r2]	@ movhi
  512:Src/util.c    ****             timeoutFlagSerial1 = 0;     // Clear timeout flag
- 1108              		.loc 1 512 13 is_stmt 1 view .LVU321
- 1109              		.loc 1 512 32 is_stmt 0 view .LVU322
- 1110 0046 024A     		ldr	r2, .L58+4
- 1111 0048 1370     		strb	r3, [r2]
- 1112              	.LVL69:
- 1113              	.L54:
- 1114              		.loc 1 512 32 view .LVU323
- 1115              	.LBE25:
- 1116              	.LBE24:
+ 1118              		.loc 1 512 13 is_stmt 1 view .LVU325
+ 1119              		.loc 1 512 32 is_stmt 0 view .LVU326
+ 1120 0046 024A     		ldr	r2, .L58+4
+ 1121 0048 1370     		strb	r3, [r2]
+ 1122              	.LVL69:
+ 1123              	.L54:
+ 1124              		.loc 1 512 32 view .LVU327
+ 1125              	.LBE25:
+ 1126              	.LBE24:
  513:Src/util.c    ****         }
  514:Src/util.c    ****     }
  515:Src/util.c    **** }
- 1117              		.loc 1 515 1 view .LVU324
- 1118 004a 10BD     		pop	{r4, pc}
- 1119              	.L59:
- 1120              		.align	2
- 1121              	.L58:
- 1122 004c 00000000 		.word	.LANCHOR7
- 1123 0050 00000000 		.word	.LANCHOR8
- 1124              		.cfi_endproc
- 1125              	.LFE69:
- 1127              		.section	.text.usart1_rx_check,"ax",%progbits
- 1128              		.align	1
- 1129              		.global	usart1_rx_check
- 1130              		.syntax unified
- 1131              		.thumb
- 1132              		.thumb_func
- 1133              		.fpu softvfp
- 1135              	usart1_rx_check:
- 1136              	.LFB68:
+ 1127              		.loc 1 515 1 view .LVU328
+ 1128 004a 10BD     		pop	{r4, pc}
+ 1129              	.L59:
+ 1130              		.align	2
+ 1131              	.L58:
+ 1132 004c 00000000 		.word	.LANCHOR7
+ 1133 0050 00000000 		.word	.LANCHOR8
+ 1134              		.cfi_endproc
+ 1135              	.LFE69:
+ 1137              		.section	.text.usart1_rx_check,"ax",%progbits
+ 1138              		.align	1
+ 1139              		.global	usart1_rx_check
+ 1140              		.syntax unified
+ 1141              		.thumb
+ 1142              		.thumb_func
+ 1143              		.fpu softvfp
+ 1145              	usart1_rx_check:
+ 1146              	.LFB68:
  434:Src/util.c    ****     #ifdef SERIAL_DEBUG
- 1137              		.loc 1 434 1 is_stmt 1 view -0
- 1138              		.cfi_startproc
- 1139              		@ args = 0, pretend = 0, frame = 0
- 1140              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/cc9tOEVd.s 			page 32
+
+
+ 1147              		.loc 1 434 1 is_stmt 1 view -0
+ 1148              		.cfi_startproc
+ 1149              		@ args = 0, pretend = 0, frame = 0
+ 1150              		@ frame_needed = 0, uses_anonymous_args = 0
  457:Src/util.c    ****     uint32_t pos;
- 1141              		.loc 1 457 5 view .LVU326
+ 1151              		.loc 1 457 5 view .LVU330
  458:Src/util.c    ****     uint8_t *ptr;
- 1142              		.loc 1 458 5 view .LVU327
+ 1152              		.loc 1 458 5 view .LVU331
  459:Src/util.c    **** 
- 1143              		.loc 1 459 5 view .LVU328
+ 1153              		.loc 1 459 5 view .LVU332
  461:Src/util.c    ****     if (pos != old_pos) {                                                       // Check change in 
- 1144              		.loc 1 461 5 view .LVU329
+ 1154              		.loc 1 461 5 view .LVU333
  434:Src/util.c    ****     #ifdef SERIAL_DEBUG
- 1145              		.loc 1 434 1 is_stmt 0 view .LVU330
-ARM GAS  /tmp/ccPeOSOQ.s 			page 32
-
-
- 1146 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
- 1147              	.LCFI16:
- 1148              		.cfi_def_cfa_offset 24
- 1149              		.cfi_offset 3, -24
- 1150              		.cfi_offset 4, -20
- 1151              		.cfi_offset 5, -16
- 1152              		.cfi_offset 6, -12
- 1153              		.cfi_offset 7, -8
- 1154              		.cfi_offset 14, -4
+ 1155              		.loc 1 434 1 is_stmt 0 view .LVU334
+ 1156 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 1157              	.LCFI17:
+ 1158              		.cfi_def_cfa_offset 24
+ 1159              		.cfi_offset 3, -24
+ 1160              		.cfi_offset 4, -20
+ 1161              		.cfi_offset 5, -16
+ 1162              		.cfi_offset 6, -12
+ 1163              		.cfi_offset 7, -8
+ 1164              		.cfi_offset 14, -4
  461:Src/util.c    ****     if (pos != old_pos) {                                                       // Check change in 
- 1155              		.loc 1 461 28 view .LVU331
- 1156 0002 0420     		movs	r0, #4
- 1157 0004 FFF7FEFF 		bl	dma_transfer_number_get
- 1158              	.LVL70:
+ 1165              		.loc 1 461 28 view .LVU335
+ 1166 0002 0420     		movs	r0, #4
+ 1167 0004 FFF7FEFF 		bl	dma_transfer_number_get
+ 1168              	.LVL70:
  462:Src/util.c    ****         ptr = (uint8_t *)&FeedbackRaw;                                          // Initialize the p
- 1159              		.loc 1 462 13 view .LVU332
- 1160 0008 194D     		ldr	r5, .L71
+ 1169              		.loc 1 462 13 view .LVU336
+ 1170 0008 194D     		ldr	r5, .L71
  461:Src/util.c    ****     if (pos != old_pos) {                                                       // Check change in 
- 1161              		.loc 1 461 9 view .LVU333
- 1162 000a C0F58074 		rsb	r4, r0, #256
- 1163              	.LVL71:
+ 1171              		.loc 1 461 9 view .LVU337
+ 1172 000a C0F58074 		rsb	r4, r0, #256
+ 1173              	.LVL71:
  462:Src/util.c    ****         ptr = (uint8_t *)&FeedbackRaw;                                          // Initialize the p
- 1164              		.loc 1 462 5 is_stmt 1 view .LVU334
+ 1174              		.loc 1 462 5 is_stmt 1 view .LVU338
  462:Src/util.c    ****         ptr = (uint8_t *)&FeedbackRaw;                                          // Initialize the p
- 1165              		.loc 1 462 13 is_stmt 0 view .LVU335
- 1166 000e 2968     		ldr	r1, [r5]
+ 1175              		.loc 1 462 13 is_stmt 0 view .LVU339
+ 1176 000e 2968     		ldr	r1, [r5]
  462:Src/util.c    ****         ptr = (uint8_t *)&FeedbackRaw;                                          // Initialize the p
- 1167              		.loc 1 462 8 view .LVU336
- 1168 0010 A142     		cmp	r1, r4
- 1169 0012 12D0     		beq	.L61
+ 1177              		.loc 1 462 8 view .LVU340
+ 1178 0010 A142     		cmp	r1, r4
+ 1179 0012 12D0     		beq	.L61
  463:Src/util.c    ****         if (pos > old_pos && (pos - old_pos) == Feedback_len) {                 // "Linear" buffer 
- 1170              		.loc 1 463 9 is_stmt 1 view .LVU337
- 1171              	.LVL72:
+ 1180              		.loc 1 463 9 is_stmt 1 view .LVU341
+ 1181              	.LVL72:
  464:Src/util.c    ****             memcpy(ptr, &rx1_buffer[old_pos], Feedback_len);                    // Copy data. This 
- 1172              		.loc 1 464 9 view .LVU338
+ 1182              		.loc 1 464 9 view .LVU342
  464:Src/util.c    ****             memcpy(ptr, &rx1_buffer[old_pos], Feedback_len);                    // Copy data. This 
- 1173              		.loc 1 464 12 is_stmt 0 view .LVU339
- 1174 0014 18D2     		bcs	.L62
+ 1183              		.loc 1 464 12 is_stmt 0 view .LVU343
+ 1184 0014 18D2     		bcs	.L62
  464:Src/util.c    ****             memcpy(ptr, &rx1_buffer[old_pos], Feedback_len);                    // Copy data. This 
- 1175              		.loc 1 464 35 discriminator 1 view .LVU340
- 1176 0016 631A     		subs	r3, r4, r1
+ 1185              		.loc 1 464 35 discriminator 1 view .LVU344
+ 1186 0016 631A     		subs	r3, r4, r1
  464:Src/util.c    ****             memcpy(ptr, &rx1_buffer[old_pos], Feedback_len);                    // Copy data. This 
- 1177              		.loc 1 464 27 discriminator 1 view .LVU341
- 1178 0018 302B     		cmp	r3, #48
- 1179 001a 15D1     		bne	.L62
- 465:Src/util.c    ****             usart_process_data(&FeedbackRaw, &Feedback);                        // Process data
- 1180              		.loc 1 465 13 is_stmt 1 view .LVU342
- 465:Src/util.c    ****             usart_process_data(&FeedbackRaw, &Feedback);                        // Process data
- 1181              		.loc 1 465 25 is_stmt 0 view .LVU343
- 1182 001c 154B     		ldr	r3, .L71+4
- 1183 001e 1944     		add	r1, r1, r3
- 465:Src/util.c    ****             usart_process_data(&FeedbackRaw, &Feedback);                        // Process data
- 1184              		.loc 1 465 13 view .LVU344
- 1185 0020 154B     		ldr	r3, .L71+8
- 1186 0022 01F13002 		add	r2, r1, #48
- 1187              	.L63:
- 1188 0026 51F8040B 		ldr	r0, [r1], #4	@ unaligned
-ARM GAS  /tmp/ccPeOSOQ.s 			page 33
+ 1187              		.loc 1 464 27 discriminator 1 view .LVU345
+ARM GAS  /tmp/cc9tOEVd.s 			page 33
 
 
- 1189 002a 9142     		cmp	r1, r2
- 1190 002c 43F8040B 		str	r0, [r3], #4	@ unaligned
- 1191 0030 F9D1     		bne	.L63
- 1192              	.LVL73:
- 1193              	.L64:
+ 1188 0018 302B     		cmp	r3, #48
+ 1189 001a 15D1     		bne	.L62
+ 465:Src/util.c    ****             usart_process_data(&FeedbackRaw, &Feedback);                        // Process data
+ 1190              		.loc 1 465 13 is_stmt 1 view .LVU346
+ 465:Src/util.c    ****             usart_process_data(&FeedbackRaw, &Feedback);                        // Process data
+ 1191              		.loc 1 465 25 is_stmt 0 view .LVU347
+ 1192 001c 154B     		ldr	r3, .L71+4
+ 1193 001e 1944     		add	r1, r1, r3
+ 465:Src/util.c    ****             usart_process_data(&FeedbackRaw, &Feedback);                        // Process data
+ 1194              		.loc 1 465 13 view .LVU348
+ 1195 0020 154B     		ldr	r3, .L71+8
+ 1196 0022 01F13002 		add	r2, r1, #48
+ 1197              	.L63:
+ 1198 0026 51F8040B 		ldr	r0, [r1], #4	@ unaligned
+ 1199 002a 9142     		cmp	r1, r2
+ 1200 002c 43F8040B 		str	r0, [r3], #4	@ unaligned
+ 1201 0030 F9D1     		bne	.L63
+ 1202              	.LVL73:
+ 1203              	.L64:
  473:Src/util.c    ****         }
- 1194              		.loc 1 473 13 is_stmt 1 view .LVU345
- 1195 0032 1249     		ldr	r1, .L71+12
- 1196 0034 1048     		ldr	r0, .L71+8
- 1197 0036 FFF7FEFF 		bl	usart_process_data
- 1198              	.LVL74:
- 1199              	.L61:
+ 1204              		.loc 1 473 13 is_stmt 1 view .LVU349
+ 1205 0032 1249     		ldr	r1, .L71+12
+ 1206 0034 1048     		ldr	r0, .L71+8
+ 1207 0036 FFF7FEFF 		bl	usart_process_data
+ 1208              	.LVL74:
+ 1209              	.L61:
  476:Src/util.c    ****     if (old_pos == rx1_buffer_len) {                                            // Check and manual
- 1200              		.loc 1 476 5 view .LVU346
+ 1210              		.loc 1 476 5 view .LVU350
  477:Src/util.c    ****         old_pos = 0;
- 1201              		.loc 1 477 5 view .LVU347
+ 1211              		.loc 1 477 5 view .LVU351
  477:Src/util.c    ****         old_pos = 0;
- 1202              		.loc 1 477 8 is_stmt 0 view .LVU348
- 1203 003a B4F5807F 		cmp	r4, #256
+ 1212              		.loc 1 477 8 is_stmt 0 view .LVU352
+ 1213 003a B4F5807F 		cmp	r4, #256
  478:Src/util.c    ****     }
- 1204              		.loc 1 478 17 view .LVU349
- 1205 003e 0ABF     		itet	eq
- 1206 0040 0023     		moveq	r3, #0
+ 1214              		.loc 1 478 17 view .LVU353
+ 1215 003e 0ABF     		itet	eq
+ 1216 0040 0023     		moveq	r3, #0
  476:Src/util.c    ****     if (old_pos == rx1_buffer_len) {                                            // Check and manual
- 1207              		.loc 1 476 13 view .LVU350
- 1208 0042 2C60     		strne	r4, [r5]
+ 1217              		.loc 1 476 13 view .LVU354
+ 1218 0042 2C60     		strne	r4, [r5]
  478:Src/util.c    ****     }
- 1209              		.loc 1 478 9 is_stmt 1 view .LVU351
+ 1219              		.loc 1 478 9 is_stmt 1 view .LVU355
  478:Src/util.c    ****     }
- 1210              		.loc 1 478 17 is_stmt 0 view .LVU352
- 1211 0044 2B60     		streq	r3, [r5]
+ 1220              		.loc 1 478 17 is_stmt 0 view .LVU356
+ 1221 0044 2B60     		streq	r3, [r5]
  481:Src/util.c    **** 
- 1212              		.loc 1 481 1 view .LVU353
- 1213 0046 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
- 1214              	.LVL75:
- 1215              	.L62:
+ 1222              		.loc 1 481 1 view .LVU357
+ 1223 0046 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 1224              	.LVL75:
+ 1225              	.L62:
  467:Src/util.c    ****             memcpy(ptr, &rx1_buffer[old_pos], rx1_buffer_len - old_pos);        // First copy data 
- 1216              		.loc 1 467 16 is_stmt 1 view .LVU354
+ 1226              		.loc 1 467 16 is_stmt 1 view .LVU358
  467:Src/util.c    ****             memcpy(ptr, &rx1_buffer[old_pos], rx1_buffer_len - old_pos);        // First copy data 
- 1217              		.loc 1 467 36 is_stmt 0 view .LVU355
- 1218 0048 C1F58076 		rsb	r6, r1, #256
+ 1227              		.loc 1 467 36 is_stmt 0 view .LVU359
+ 1228 0048 C1F58076 		rsb	r6, r1, #256
  467:Src/util.c    ****             memcpy(ptr, &rx1_buffer[old_pos], rx1_buffer_len - old_pos);        // First copy data 
- 1219              		.loc 1 467 46 view .LVU356
- 1220 004c 3319     		adds	r3, r6, r4
- 467:Src/util.c    ****             memcpy(ptr, &rx1_buffer[old_pos], rx1_buffer_len - old_pos);        // First copy data 
- 1221              		.loc 1 467 19 view .LVU357
- 1222 004e 302B     		cmp	r3, #48
- 1223 0050 F3D1     		bne	.L61
- 468:Src/util.c    ****             if (pos > 0) {                                                      // Check and contin
- 1224              		.loc 1 468 13 is_stmt 1 view .LVU358
- 1225 0052 094B     		ldr	r3, .L71+8
- 468:Src/util.c    ****             if (pos > 0) {                                                      // Check and contin
- 1226              		.loc 1 468 25 is_stmt 0 view .LVU359
- 1227 0054 074F     		ldr	r7, .L71+4
- 468:Src/util.c    ****             if (pos > 0) {                                                      // Check and contin
- 1228              		.loc 1 468 13 view .LVU360
- 1229 0056 3246     		mov	r2, r6
-ARM GAS  /tmp/ccPeOSOQ.s 			page 34
+ 1229              		.loc 1 467 46 view .LVU360
+ARM GAS  /tmp/cc9tOEVd.s 			page 34
 
 
- 1230 0058 1846     		mov	r0, r3
- 1231 005a 3944     		add	r1, r1, r7
- 1232 005c FFF7FEFF 		bl	memcpy
- 1233              	.LVL76:
+ 1230 004c 3319     		adds	r3, r6, r4
+ 467:Src/util.c    ****             memcpy(ptr, &rx1_buffer[old_pos], rx1_buffer_len - old_pos);        // First copy data 
+ 1231              		.loc 1 467 19 view .LVU361
+ 1232 004e 302B     		cmp	r3, #48
+ 1233 0050 F3D1     		bne	.L61
+ 468:Src/util.c    ****             if (pos > 0) {                                                      // Check and contin
+ 1234              		.loc 1 468 13 is_stmt 1 view .LVU362
+ 1235 0052 094B     		ldr	r3, .L71+8
+ 468:Src/util.c    ****             if (pos > 0) {                                                      // Check and contin
+ 1236              		.loc 1 468 25 is_stmt 0 view .LVU363
+ 1237 0054 074F     		ldr	r7, .L71+4
+ 468:Src/util.c    ****             if (pos > 0) {                                                      // Check and contin
+ 1238              		.loc 1 468 13 view .LVU364
+ 1239 0056 3246     		mov	r2, r6
+ 1240 0058 1846     		mov	r0, r3
+ 1241 005a 3944     		add	r1, r1, r7
+ 1242 005c FFF7FEFF 		bl	memcpy
+ 1243              	.LVL76:
  469:Src/util.c    ****                 ptr += rx1_buffer_len - old_pos;                                // Move to correct 
- 1234              		.loc 1 469 13 is_stmt 1 view .LVU361
+ 1244              		.loc 1 469 13 is_stmt 1 view .LVU365
  469:Src/util.c    ****                 ptr += rx1_buffer_len - old_pos;                                // Move to correct 
- 1235              		.loc 1 469 16 is_stmt 0 view .LVU362
- 1236 0060 002C     		cmp	r4, #0
- 1237 0062 E6D0     		beq	.L64
+ 1245              		.loc 1 469 16 is_stmt 0 view .LVU366
+ 1246 0060 002C     		cmp	r4, #0
+ 1247 0062 E6D0     		beq	.L64
  470:Src/util.c    ****                 memcpy(ptr, &rx1_buffer[0], pos);                               // Copy remaining d
- 1238              		.loc 1 470 17 is_stmt 1 view .LVU363
- 1239              	.LVL77:
+ 1248              		.loc 1 470 17 is_stmt 1 view .LVU367
+ 1249              	.LVL77:
  471:Src/util.c    ****             }
- 1240              		.loc 1 471 17 view .LVU364
- 1241 0064 2246     		mov	r2, r4
- 1242 0066 3946     		mov	r1, r7
- 1243 0068 3044     		add	r0, r0, r6
- 1244 006a FFF7FEFF 		bl	memcpy
- 1245              	.LVL78:
- 1246 006e E0E7     		b	.L64
- 1247              	.L72:
- 1248              		.align	2
- 1249              	.L71:
- 1250 0070 00000000 		.word	.LANCHOR10
- 1251 0074 00000000 		.word	.LANCHOR1
- 1252 0078 00000000 		.word	.LANCHOR11
- 1253 007c 00000000 		.word	.LANCHOR9
- 1254              		.cfi_endproc
- 1255              	.LFE68:
- 1257              		.section	.text.usart0_rx_check,"ax",%progbits
- 1258              		.align	1
- 1259              		.global	usart0_rx_check
- 1260              		.syntax unified
- 1261              		.thumb
- 1262              		.thumb_func
- 1263              		.fpu softvfp
- 1265              	usart0_rx_check:
- 1266              	.LFB70:
+ 1250              		.loc 1 471 17 view .LVU368
+ 1251 0064 2246     		mov	r2, r4
+ 1252 0066 3946     		mov	r1, r7
+ 1253 0068 3044     		add	r0, r0, r6
+ 1254 006a FFF7FEFF 		bl	memcpy
+ 1255              	.LVL78:
+ 1256 006e E0E7     		b	.L64
+ 1257              	.L72:
+ 1258              		.align	2
+ 1259              	.L71:
+ 1260 0070 00000000 		.word	.LANCHOR10
+ 1261 0074 00000000 		.word	.LANCHOR1
+ 1262 0078 00000000 		.word	.LANCHOR11
+ 1263 007c 00000000 		.word	.LANCHOR9
+ 1264              		.cfi_endproc
+ 1265              	.LFE68:
+ 1267              		.section	.text.usart0_rx_check,"ax",%progbits
+ 1268              		.align	1
+ 1269              		.global	usart0_rx_check
+ 1270              		.syntax unified
+ 1271              		.thumb
+ 1272              		.thumb_func
+ 1273              		.fpu softvfp
+ 1275              	usart0_rx_check:
+ 1276              	.LFB70:
  516:Src/util.c    **** #endif // SERIAL_FEEDBACK
  517:Src/util.c    **** 
  518:Src/util.c    **** 
  519:Src/util.c    **** /* =========================== USART0 READ Functions =========================== */
+ARM GAS  /tmp/cc9tOEVd.s 			page 35
+
+
  520:Src/util.c    **** 
  521:Src/util.c    **** /*
  522:Src/util.c    ****  * Check for new data received on USART with DMA: refactored function from https://github.com/MaJer
@@ -2031,16 +2048,13 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  524:Src/util.c    ****  */
  525:Src/util.c    **** void usart0_rx_check(void)
  526:Src/util.c    **** {
- 1267              		.loc 1 526 1 view -0
- 1268              		.cfi_startproc
- 1269              		@ args = 0, pretend = 0, frame = 0
- 1270              		@ frame_needed = 0, uses_anonymous_args = 0
- 1271              		@ link register save eliminated.
+ 1277              		.loc 1 526 1 view -0
+ 1278              		.cfi_startproc
+ 1279              		@ args = 0, pretend = 0, frame = 0
+ 1280              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1281              		@ link register save eliminated.
  527:Src/util.c    ****     #ifdef SERIAL_AUX_RX
  528:Src/util.c    ****     static uint32_t old_pos;
-ARM GAS  /tmp/ccPeOSOQ.s 			page 35
-
-
  529:Src/util.c    ****     uint32_t pos;
  530:Src/util.c    ****     uint8_t *ptr;
  531:Src/util.c    **** 
@@ -2065,42 +2079,42 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  550:Src/util.c    ****     }
  551:Src/util.c    ****     #endif  // SERIAL_AUX_RX
  552:Src/util.c    **** }
- 1272              		.loc 1 552 1 view .LVU366
- 1273 0000 7047     		bx	lr
- 1274              		.cfi_endproc
- 1275              	.LFE70:
- 1277              		.section	.text.aux_print_to_console,"ax",%progbits
- 1278              		.align	1
- 1279              		.global	aux_print_to_console
- 1280              		.syntax unified
- 1281              		.thumb
- 1282              		.thumb_func
- 1283              		.fpu softvfp
- 1285              	aux_print_to_console:
- 1286              	.LFB80:
- 1287              		.cfi_startproc
- 1288              		@ args = 0, pretend = 0, frame = 0
- 1289              		@ frame_needed = 0, uses_anonymous_args = 0
- 1290              		@ link register save eliminated.
- 1291 0000 7047     		bx	lr
- 1292              		.cfi_endproc
- 1293              	.LFE80:
- 1295              		.section	.text.i2c_writeBytes,"ax",%progbits
- 1296              		.align	1
- 1297              		.global	i2c_writeBytes
- 1298              		.syntax unified
- 1299              		.thumb
- 1300              		.thumb_func
- 1301              		.fpu softvfp
- 1303              	i2c_writeBytes:
- 1304              	.LVL79:
- 1305              	.LFB72:
+ 1282              		.loc 1 552 1 view .LVU370
+ 1283 0000 7047     		bx	lr
+ 1284              		.cfi_endproc
+ 1285              	.LFE70:
+ 1287              		.section	.text.aux_print_to_console,"ax",%progbits
+ 1288              		.align	1
+ 1289              		.global	aux_print_to_console
+ 1290              		.syntax unified
+ 1291              		.thumb
+ 1292              		.thumb_func
+ 1293              		.fpu softvfp
+ 1295              	aux_print_to_console:
+ 1296              	.LFB80:
+ 1297              		.cfi_startproc
+ 1298              		@ args = 0, pretend = 0, frame = 0
+ 1299              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1300              		@ link register save eliminated.
+ 1301 0000 7047     		bx	lr
+ 1302              		.cfi_endproc
+ARM GAS  /tmp/cc9tOEVd.s 			page 36
+
+
+ 1303              	.LFE80:
+ 1305              		.section	.text.i2c_writeBytes,"ax",%progbits
+ 1306              		.align	1
+ 1307              		.global	i2c_writeBytes
+ 1308              		.syntax unified
+ 1309              		.thumb
+ 1310              		.thumb_func
+ 1311              		.fpu softvfp
+ 1313              	i2c_writeBytes:
+ 1314              	.LVL79:
+ 1315              	.LFB72:
  553:Src/util.c    **** 
  554:Src/util.c    **** /*
  555:Src/util.c    ****  * Process command UART0 Rx data
-ARM GAS  /tmp/ccPeOSOQ.s 			page 36
-
-
  556:Src/util.c    ****  * - if the command_in data is valid (correct START_FRAME and checksum) copy the command_in to comm
  557:Src/util.c    ****  */
  558:Src/util.c    **** #ifdef SERIAL_AUX_RX
@@ -2144,58 +2158,58 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  596:Src/util.c    ****  */
  597:Src/util.c    **** int8_t i2c_writeBytes(uint8_t slaveAddr, uint8_t regAddr, uint8_t length, uint8_t *data)
  598:Src/util.c    **** {
- 1306              		.loc 1 598 1 view -0
- 1307              		.cfi_startproc
- 1308              		@ args = 0, pretend = 0, frame = 0
- 1309              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/cc9tOEVd.s 			page 37
+
+
+ 1316              		.loc 1 598 1 view -0
+ 1317              		.cfi_startproc
+ 1318              		@ args = 0, pretend = 0, frame = 0
+ 1319              		@ frame_needed = 0, uses_anonymous_args = 0
  599:Src/util.c    **** 
  600:Src/util.c    ****     // assign WRITE command
  601:Src/util.c    ****     i2c_ReadWriteCmd    = WRITE;
- 1310              		.loc 1 601 5 view .LVU368
+ 1320              		.loc 1 601 5 view .LVU372
  598:Src/util.c    **** 
- 1311              		.loc 1 598 1 is_stmt 0 view .LVU369
- 1312 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
- 1313              	.LCFI17:
- 1314              		.cfi_def_cfa_offset 24
- 1315              		.cfi_offset 4, -24
-ARM GAS  /tmp/ccPeOSOQ.s 			page 37
-
-
- 1316              		.cfi_offset 5, -20
- 1317              		.cfi_offset 6, -16
- 1318              		.cfi_offset 7, -12
- 1319              		.cfi_offset 8, -8
- 1320              		.cfi_offset 14, -4
- 1321              		.loc 1 601 25 view .LVU370
- 1322 0004 0124     		movs	r4, #1
+ 1321              		.loc 1 598 1 is_stmt 0 view .LVU373
+ 1322 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 1323              	.LCFI18:
+ 1324              		.cfi_def_cfa_offset 24
+ 1325              		.cfi_offset 4, -24
+ 1326              		.cfi_offset 5, -20
+ 1327              		.cfi_offset 6, -16
+ 1328              		.cfi_offset 7, -12
+ 1329              		.cfi_offset 8, -8
+ 1330              		.cfi_offset 14, -4
+ 1331              		.loc 1 601 25 view .LVU374
+ 1332 0004 0124     		movs	r4, #1
  602:Src/util.c    **** 
  603:Src/util.c    ****     // assign inputs
  604:Src/util.c    ****     i2c_status          = -1;
- 1323              		.loc 1 604 25 view .LVU371
- 1324 0006 FF26     		movs	r6, #255
+ 1333              		.loc 1 604 25 view .LVU375
+ 1334 0006 FF26     		movs	r6, #255
  601:Src/util.c    **** 
- 1325              		.loc 1 601 25 view .LVU372
- 1326 0008 184D     		ldr	r5, .L88
+ 1335              		.loc 1 601 25 view .LVU376
+ 1336 0008 184D     		ldr	r5, .L88
  605:Src/util.c    ****     i2c_slaveAddress    = slaveAddr << 1;       // Address is shifted one position to the left. LSB
- 1327              		.loc 1 605 37 view .LVU373
- 1328 000a A040     		lsls	r0, r0, r4
- 1329              	.LVL80:
+ 1337              		.loc 1 605 37 view .LVU377
+ 1338 000a A040     		lsls	r0, r0, r4
+ 1339              	.LVL80:
  601:Src/util.c    **** 
- 1330              		.loc 1 601 25 view .LVU374
- 1331 000c 2C70     		strb	r4, [r5]
+ 1340              		.loc 1 601 25 view .LVU378
+ 1341 000c 2C70     		strb	r4, [r5]
  604:Src/util.c    ****     i2c_slaveAddress    = slaveAddr << 1;       // Address is shifted one position to the left. LSB
- 1332              		.loc 1 604 5 is_stmt 1 view .LVU375
+ 1342              		.loc 1 604 5 is_stmt 1 view .LVU379
  604:Src/util.c    ****     i2c_slaveAddress    = slaveAddr << 1;       // Address is shifted one position to the left. LSB
- 1333              		.loc 1 604 25 is_stmt 0 view .LVU376
- 1334 000e 184D     		ldr	r5, .L88+4
- 1335              		.loc 1 605 37 view .LVU377
- 1336 0010 C0B2     		uxtb	r0, r0
+ 1343              		.loc 1 604 25 is_stmt 0 view .LVU380
+ 1344 000e 184D     		ldr	r5, .L88+4
+ 1345              		.loc 1 605 37 view .LVU381
+ 1346 0010 C0B2     		uxtb	r0, r0
  604:Src/util.c    ****     i2c_slaveAddress    = slaveAddr << 1;       // Address is shifted one position to the left. LSB
- 1337              		.loc 1 604 25 view .LVU378
- 1338 0012 2E70     		strb	r6, [r5]
- 1339              		.loc 1 605 5 is_stmt 1 view .LVU379
- 1340              		.loc 1 605 25 is_stmt 0 view .LVU380
- 1341 0014 174E     		ldr	r6, .L88+8
+ 1347              		.loc 1 604 25 view .LVU382
+ 1348 0012 2E70     		strb	r6, [r5]
+ 1349              		.loc 1 605 5 is_stmt 1 view .LVU383
+ 1350              		.loc 1 605 25 is_stmt 0 view .LVU384
+ 1351 0014 174E     		ldr	r6, .L88+8
  606:Src/util.c    ****     i2c_regAddress      = regAddr;
  607:Src/util.c    ****     i2c_txbuffer        = data;
  608:Src/util.c    ****     i2c_nDABytes        = length;
@@ -2204,163 +2218,163 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  611:Src/util.c    ****     uint16_t i2c_timeout = 0;
  612:Src/util.c    **** 
  613:Src/util.c    ****     // enable the I2C0 interrupt
+ARM GAS  /tmp/cc9tOEVd.s 			page 38
+
+
  614:Src/util.c    ****     i2c_interrupt_enable(MPU_I2C, I2C_INT_ERR | I2C_INT_BUF | I2C_INT_EV);
  615:Src/util.c    **** 
  616:Src/util.c    ****     // the master waits until the I2C bus is idle
  617:Src/util.c    ****     while(i2c_flag_get(MPU_I2C, I2C_FLAG_I2CBSY) && i2c_timeout++ < 20000);
- 1342              		.loc 1 617 11 view .LVU381
- 1343 0016 184F     		ldr	r7, .L88+12
+ 1352              		.loc 1 617 11 view .LVU385
+ 1353 0016 184F     		ldr	r7, .L88+12
  605:Src/util.c    ****     i2c_regAddress      = regAddr;
- 1344              		.loc 1 605 25 view .LVU382
- 1345 0018 3070     		strb	r0, [r6]
+ 1354              		.loc 1 605 25 view .LVU386
+ 1355 0018 3070     		strb	r0, [r6]
  606:Src/util.c    ****     i2c_regAddress      = regAddr;
- 1346              		.loc 1 606 5 is_stmt 1 view .LVU383
+ 1356              		.loc 1 606 5 is_stmt 1 view .LVU387
  606:Src/util.c    ****     i2c_regAddress      = regAddr;
- 1347              		.loc 1 606 25 is_stmt 0 view .LVU384
- 1348 001a 1848     		ldr	r0, .L88+16
-ARM GAS  /tmp/ccPeOSOQ.s 			page 38
-
-
+ 1357              		.loc 1 606 25 is_stmt 0 view .LVU388
+ 1358 001a 1848     		ldr	r0, .L88+16
  608:Src/util.c    ****     i2c_nRABytes        = 1;
- 1349              		.loc 1 608 25 view .LVU385
- 1350 001c 184E     		ldr	r6, .L88+20
+ 1359              		.loc 1 608 25 view .LVU389
+ 1360 001c 184E     		ldr	r6, .L88+20
  606:Src/util.c    ****     i2c_regAddress      = regAddr;
- 1351              		.loc 1 606 25 view .LVU386
- 1352 001e 0170     		strb	r1, [r0]
+ 1361              		.loc 1 606 25 view .LVU390
+ 1362 001e 0170     		strb	r1, [r0]
  607:Src/util.c    ****     i2c_nDABytes        = length;
- 1353              		.loc 1 607 5 is_stmt 1 view .LVU387
+ 1363              		.loc 1 607 5 is_stmt 1 view .LVU391
  607:Src/util.c    ****     i2c_nDABytes        = length;
- 1354              		.loc 1 607 25 is_stmt 0 view .LVU388
- 1355 0020 1849     		ldr	r1, .L88+24
- 1356              	.LVL81:
+ 1364              		.loc 1 607 25 is_stmt 0 view .LVU392
+ 1365 0020 1849     		ldr	r1, .L88+24
+ 1366              	.LVL81:
  614:Src/util.c    **** 
- 1357              		.loc 1 614 5 view .LVU389
- 1358 0022 1948     		ldr	r0, .L88+28
+ 1367              		.loc 1 614 5 view .LVU393
+ 1368 0022 1948     		ldr	r0, .L88+28
  607:Src/util.c    ****     i2c_nDABytes        = length;
- 1359              		.loc 1 607 25 view .LVU390
- 1360 0024 0B60     		str	r3, [r1]
+ 1369              		.loc 1 607 25 view .LVU394
+ 1370 0024 0B60     		str	r3, [r1]
  608:Src/util.c    ****     i2c_nRABytes        = 1;
- 1361              		.loc 1 608 5 is_stmt 1 view .LVU391
+ 1371              		.loc 1 608 5 is_stmt 1 view .LVU395
  609:Src/util.c    **** 
- 1362              		.loc 1 609 25 is_stmt 0 view .LVU392
- 1363 0026 194B     		ldr	r3, .L88+32
- 1364              	.LVL82:
+ 1372              		.loc 1 609 25 is_stmt 0 view .LVU396
+ 1373 0026 194B     		ldr	r3, .L88+32
+ 1374              	.LVL82:
  614:Src/util.c    **** 
- 1365              		.loc 1 614 5 view .LVU393
- 1366 0028 4FF4E061 		mov	r1, #1792
+ 1375              		.loc 1 614 5 view .LVU397
+ 1376 0028 4FF4E061 		mov	r1, #1792
  608:Src/util.c    ****     i2c_nRABytes        = 1;
- 1367              		.loc 1 608 25 view .LVU394
- 1368 002c 3270     		strb	r2, [r6]
- 1369              	.LVL83:
+ 1377              		.loc 1 608 25 view .LVU398
+ 1378 002c 3270     		strb	r2, [r6]
+ 1379              	.LVL83:
  609:Src/util.c    **** 
- 1370              		.loc 1 609 5 is_stmt 1 view .LVU395
+ 1380              		.loc 1 609 5 is_stmt 1 view .LVU399
  609:Src/util.c    **** 
- 1371              		.loc 1 609 25 is_stmt 0 view .LVU396
- 1372 002e 1C70     		strb	r4, [r3]
+ 1381              		.loc 1 609 25 is_stmt 0 view .LVU400
+ 1382 002e 1C70     		strb	r4, [r3]
  611:Src/util.c    **** 
- 1373              		.loc 1 611 5 is_stmt 1 view .LVU397
- 1374              	.LVL84:
+ 1383              		.loc 1 611 5 is_stmt 1 view .LVU401
+ 1384              	.LVL84:
  614:Src/util.c    **** 
- 1375              		.loc 1 614 5 view .LVU398
- 1376 0030 FFF7FEFF 		bl	i2c_interrupt_enable
- 1377              	.LVL85:
- 1378              		.loc 1 617 5 view .LVU399
- 1379              		.loc 1 617 10 is_stmt 0 view .LVU400
- 1380 0034 44F62164 		movw	r4, #20001
- 1381              		.loc 1 617 11 view .LVU401
- 1382 0038 DFF84C80 		ldr	r8, .L88+28
- 1383              	.LVL86:
- 1384              	.L77:
- 1385              		.loc 1 617 75 is_stmt 1 discriminator 2 view .LVU402
- 1386              		.loc 1 617 10 discriminator 2 view .LVU403
- 1387              		.loc 1 617 11 is_stmt 0 discriminator 2 view .LVU404
- 1388 003c 3946     		mov	r1, r7
- 1389 003e 4046     		mov	r0, r8
- 1390 0040 FFF7FEFF 		bl	i2c_flag_get
- 1391              	.LVL87:
-ARM GAS  /tmp/ccPeOSOQ.s 			page 39
+ 1385              		.loc 1 614 5 view .LVU402
+ 1386 0030 FFF7FEFF 		bl	i2c_interrupt_enable
+ 1387              	.LVL85:
+ARM GAS  /tmp/cc9tOEVd.s 			page 39
 
 
- 1392              		.loc 1 617 10 discriminator 2 view .LVU405
- 1393 0044 18B1     		cbz	r0, .L76
- 1394              	.LVL88:
- 1395              		.loc 1 617 50 discriminator 1 view .LVU406
- 1396 0046 013C     		subs	r4, r4, #1
- 1397              	.LVL89:
- 1398              		.loc 1 617 50 discriminator 1 view .LVU407
- 1399 0048 A4B2     		uxth	r4, r4
- 1400 004a 002C     		cmp	r4, #0
- 1401 004c F6D1     		bne	.L77
- 1402              	.L76:
+ 1388              		.loc 1 617 5 view .LVU403
+ 1389              		.loc 1 617 10 is_stmt 0 view .LVU404
+ 1390 0034 44F62164 		movw	r4, #20001
+ 1391              		.loc 1 617 11 view .LVU405
+ 1392 0038 DFF84C80 		ldr	r8, .L88+28
+ 1393              	.LVL86:
+ 1394              	.L77:
+ 1395              		.loc 1 617 75 is_stmt 1 discriminator 2 view .LVU406
+ 1396              		.loc 1 617 10 discriminator 2 view .LVU407
+ 1397              		.loc 1 617 11 is_stmt 0 discriminator 2 view .LVU408
+ 1398 003c 3946     		mov	r1, r7
+ 1399 003e 4046     		mov	r0, r8
+ 1400 0040 FFF7FEFF 		bl	i2c_flag_get
+ 1401              	.LVL87:
+ 1402              		.loc 1 617 10 discriminator 2 view .LVU409
+ 1403 0044 18B1     		cbz	r0, .L76
+ 1404              	.LVL88:
+ 1405              		.loc 1 617 50 discriminator 1 view .LVU410
+ 1406 0046 013C     		subs	r4, r4, #1
+ 1407              	.LVL89:
+ 1408              		.loc 1 617 50 discriminator 1 view .LVU411
+ 1409 0048 A4B2     		uxth	r4, r4
+ 1410 004a 002C     		cmp	r4, #0
+ 1411 004c F6D1     		bne	.L77
+ 1412              	.L76:
  618:Src/util.c    **** 
  619:Src/util.c    ****     // the master sends a start condition to I2C bus
  620:Src/util.c    ****     i2c_start_on_bus(MPU_I2C);
- 1403              		.loc 1 620 5 is_stmt 1 view .LVU408
- 1404 004e 0E48     		ldr	r0, .L88+28
- 1405 0050 FFF7FEFF 		bl	i2c_start_on_bus
- 1406              	.LVL90:
+ 1413              		.loc 1 620 5 is_stmt 1 view .LVU412
+ 1414 004e 0E48     		ldr	r0, .L88+28
+ 1415 0050 FFF7FEFF 		bl	i2c_start_on_bus
+ 1416              	.LVL90:
  621:Src/util.c    ****     
  622:Src/util.c    ****     // Wait until all data bytes are sent/received
  623:Src/util.c    ****     i2c_timeout = 0;
- 1407              		.loc 1 623 5 view .LVU409
+ 1417              		.loc 1 623 5 view .LVU413
  624:Src/util.c    ****     while(i2c_nDABytes > 0 && i2c_timeout++ < 20000);
- 1408              		.loc 1 624 5 view .LVU410
- 1409              		.loc 1 624 10 is_stmt 0 view .LVU411
- 1410 0054 44F62163 		movw	r3, #20001
- 1411              	.LVL91:
- 1412              	.L79:
- 1413              		.loc 1 624 53 is_stmt 1 discriminator 2 view .LVU412
- 1414              		.loc 1 624 10 discriminator 2 view .LVU413
- 1415              		.loc 1 624 24 is_stmt 0 discriminator 2 view .LVU414
- 1416 0058 3278     		ldrb	r2, [r6]	@ zero_extendqisi2
- 1417              		.loc 1 624 10 discriminator 2 view .LVU415
- 1418 005a 1AB1     		cbz	r2, .L78
- 1419              	.LVL92:
- 1420              		.loc 1 624 28 discriminator 1 view .LVU416
- 1421 005c 013B     		subs	r3, r3, #1
- 1422              	.LVL93:
- 1423              		.loc 1 624 28 discriminator 1 view .LVU417
- 1424 005e 9BB2     		uxth	r3, r3
- 1425 0060 002B     		cmp	r3, #0
- 1426 0062 F9D1     		bne	.L79
- 1427              	.L78:
+ 1418              		.loc 1 624 5 view .LVU414
+ 1419              		.loc 1 624 10 is_stmt 0 view .LVU415
+ 1420 0054 44F62163 		movw	r3, #20001
+ 1421              	.LVL91:
+ 1422              	.L79:
+ 1423              		.loc 1 624 53 is_stmt 1 discriminator 2 view .LVU416
+ 1424              		.loc 1 624 10 discriminator 2 view .LVU417
+ 1425              		.loc 1 624 24 is_stmt 0 discriminator 2 view .LVU418
+ 1426 0058 3278     		ldrb	r2, [r6]	@ zero_extendqisi2
+ 1427              		.loc 1 624 10 discriminator 2 view .LVU419
+ 1428 005a 1AB1     		cbz	r2, .L78
+ 1429              	.LVL92:
+ 1430              		.loc 1 624 28 discriminator 1 view .LVU420
+ 1431 005c 013B     		subs	r3, r3, #1
+ 1432              	.LVL93:
+ 1433              		.loc 1 624 28 discriminator 1 view .LVU421
+ 1434 005e 9BB2     		uxth	r3, r3
+ 1435 0060 002B     		cmp	r3, #0
+ 1436 0062 F9D1     		bne	.L79
+ 1437              	.L78:
+ARM GAS  /tmp/cc9tOEVd.s 			page 40
+
+
  625:Src/util.c    **** 
  626:Src/util.c    ****     return i2c_status;
- 1428              		.loc 1 626 5 is_stmt 1 view .LVU418
- 1429              		.loc 1 626 12 is_stmt 0 view .LVU419
- 1430 0064 2878     		ldrb	r0, [r5]	@ zero_extendqisi2
+ 1438              		.loc 1 626 5 is_stmt 1 view .LVU422
+ 1439              		.loc 1 626 12 is_stmt 0 view .LVU423
+ 1440 0064 2878     		ldrb	r0, [r5]	@ zero_extendqisi2
  627:Src/util.c    **** 
  628:Src/util.c    **** }
- 1431              		.loc 1 628 1 view .LVU420
- 1432 0066 40B2     		sxtb	r0, r0
- 1433 0068 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
- 1434              	.L89:
- 1435              		.align	2
- 1436              	.L88:
- 1437 006c 00000000 		.word	.LANCHOR12
-ARM GAS  /tmp/ccPeOSOQ.s 			page 40
-
-
- 1438 0070 00000000 		.word	.LANCHOR13
- 1439 0074 00000000 		.word	.LANCHOR14
- 1440 0078 02000080 		.word	-2147483646
- 1441 007c 00000000 		.word	.LANCHOR15
- 1442 0080 00000000 		.word	.LANCHOR17
- 1443 0084 00000000 		.word	.LANCHOR16
- 1444 0088 00540040 		.word	1073763328
- 1445 008c 00000000 		.word	.LANCHOR18
- 1446              		.cfi_endproc
- 1447              	.LFE72:
- 1449              		.section	.text.i2c_writeByte,"ax",%progbits
- 1450              		.align	1
- 1451              		.global	i2c_writeByte
- 1452              		.syntax unified
- 1453              		.thumb
- 1454              		.thumb_func
- 1455              		.fpu softvfp
- 1457              	i2c_writeByte:
- 1458              	.LVL94:
- 1459              	.LFB73:
+ 1441              		.loc 1 628 1 view .LVU424
+ 1442 0066 40B2     		sxtb	r0, r0
+ 1443 0068 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 1444              	.L89:
+ 1445              		.align	2
+ 1446              	.L88:
+ 1447 006c 00000000 		.word	.LANCHOR12
+ 1448 0070 00000000 		.word	.LANCHOR13
+ 1449 0074 00000000 		.word	.LANCHOR14
+ 1450 0078 02000080 		.word	-2147483646
+ 1451 007c 00000000 		.word	.LANCHOR15
+ 1452 0080 00000000 		.word	.LANCHOR17
+ 1453 0084 00000000 		.word	.LANCHOR16
+ 1454 0088 00540040 		.word	1073763328
+ 1455 008c 00000000 		.word	.LANCHOR18
+ 1456              		.cfi_endproc
+ 1457              	.LFE72:
+ 1459              		.section	.text.i2c_writeByte,"ax",%progbits
+ 1460              		.align	1
+ 1461              		.global	i2c_writeByte
+ 1462              		.syntax unified
+ 1463              		.thumb
+ 1464              		.thumb_func
+ 1465              		.fpu softvfp
+ 1467              	i2c_writeByte:
+ 1468              	.LVL94:
+ 1469              	.LFB73:
  629:Src/util.c    **** 
  630:Src/util.c    **** 
  631:Src/util.c    **** /*
@@ -2368,50 +2382,50 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  633:Src/util.c    ****  */
  634:Src/util.c    **** int8_t i2c_writeByte(uint8_t slaveAddr, uint8_t regAddr, uint8_t data)
  635:Src/util.c    **** {
- 1460              		.loc 1 635 1 is_stmt 1 view -0
- 1461              		.cfi_startproc
- 1462              		@ args = 0, pretend = 0, frame = 8
- 1463              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1470              		.loc 1 635 1 is_stmt 1 view -0
+ 1471              		.cfi_startproc
+ 1472              		@ args = 0, pretend = 0, frame = 8
+ 1473              		@ frame_needed = 0, uses_anonymous_args = 0
  636:Src/util.c    ****     return i2c_writeBytes(slaveAddr, regAddr, 1, &data);
- 1464              		.loc 1 636 5 view .LVU422
+ 1474              		.loc 1 636 5 view .LVU426
  635:Src/util.c    ****     return i2c_writeBytes(slaveAddr, regAddr, 1, &data);
- 1465              		.loc 1 635 1 is_stmt 0 view .LVU423
- 1466 0000 07B5     		push	{r0, r1, r2, lr}
- 1467              	.LCFI18:
- 1468              		.cfi_def_cfa_offset 16
- 1469              		.cfi_offset 14, -4
+ 1475              		.loc 1 635 1 is_stmt 0 view .LVU427
+ 1476 0000 07B5     		push	{r0, r1, r2, lr}
+ 1477              	.LCFI19:
+ 1478              		.cfi_def_cfa_offset 16
+ 1479              		.cfi_offset 14, -4
  635:Src/util.c    ****     return i2c_writeBytes(slaveAddr, regAddr, 1, &data);
- 1470              		.loc 1 635 1 view .LVU424
- 1471 0002 8DF80720 		strb	r2, [sp, #7]
- 1472              		.loc 1 636 12 view .LVU425
- 1473 0006 0DF10703 		add	r3, sp, #7
- 1474 000a 0122     		movs	r2, #1
- 1475              	.LVL95:
- 1476              		.loc 1 636 12 view .LVU426
- 1477 000c FFF7FEFF 		bl	i2c_writeBytes
- 1478              	.LVL96:
+ 1480              		.loc 1 635 1 view .LVU428
+ 1481 0002 8DF80720 		strb	r2, [sp, #7]
+ 1482              		.loc 1 636 12 view .LVU429
+ARM GAS  /tmp/cc9tOEVd.s 			page 41
+
+
+ 1483 0006 0DF10703 		add	r3, sp, #7
+ 1484 000a 0122     		movs	r2, #1
+ 1485              	.LVL95:
+ 1486              		.loc 1 636 12 view .LVU430
+ 1487 000c FFF7FEFF 		bl	i2c_writeBytes
+ 1488              	.LVL96:
  637:Src/util.c    **** }
- 1479              		.loc 1 637 1 view .LVU427
- 1480 0010 03B0     		add	sp, sp, #12
- 1481              	.LCFI19:
- 1482              		.cfi_def_cfa_offset 4
- 1483              		@ sp needed
- 1484 0012 5DF804FB 		ldr	pc, [sp], #4
- 1485              		.cfi_endproc
-ARM GAS  /tmp/ccPeOSOQ.s 			page 41
-
-
- 1486              	.LFE73:
- 1488              		.section	.text.i2c_readBytes,"ax",%progbits
- 1489              		.align	1
- 1490              		.global	i2c_readBytes
- 1491              		.syntax unified
- 1492              		.thumb
- 1493              		.thumb_func
- 1494              		.fpu softvfp
- 1496              	i2c_readBytes:
- 1497              	.LVL97:
- 1498              	.LFB75:
+ 1489              		.loc 1 637 1 view .LVU431
+ 1490 0010 03B0     		add	sp, sp, #12
+ 1491              	.LCFI20:
+ 1492              		.cfi_def_cfa_offset 4
+ 1493              		@ sp needed
+ 1494 0012 5DF804FB 		ldr	pc, [sp], #4
+ 1495              		.cfi_endproc
+ 1496              	.LFE73:
+ 1498              		.section	.text.i2c_readBytes,"ax",%progbits
+ 1499              		.align	1
+ 1500              		.global	i2c_readBytes
+ 1501              		.syntax unified
+ 1502              		.thumb
+ 1503              		.thumb_func
+ 1504              		.fpu softvfp
+ 1506              	i2c_readBytes:
+ 1507              	.LVL97:
+ 1508              	.LFB75:
  638:Src/util.c    **** 
  639:Src/util.c    **** 
  640:Src/util.c    **** /*
@@ -2433,232 +2447,232 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  656:Src/util.c    ****  */
  657:Src/util.c    **** int8_t i2c_readBytes(uint8_t slaveAddr, uint8_t regAddr, uint8_t length, uint8_t *data) 
  658:Src/util.c    **** {
- 1499              		.loc 1 658 1 is_stmt 1 view -0
- 1500              		.cfi_startproc
- 1501              		@ args = 0, pretend = 0, frame = 0
- 1502              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1509              		.loc 1 658 1 is_stmt 1 view -0
+ 1510              		.cfi_startproc
+ 1511              		@ args = 0, pretend = 0, frame = 0
+ 1512              		@ frame_needed = 0, uses_anonymous_args = 0
  659:Src/util.c    **** 
  660:Src/util.c    ****     // assign READ command
  661:Src/util.c    ****     i2c_ReadWriteCmd    = READ;
- 1503              		.loc 1 661 5 view .LVU429
+ 1513              		.loc 1 661 5 view .LVU433
  658:Src/util.c    **** 
- 1504              		.loc 1 658 1 is_stmt 0 view .LVU430
- 1505 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
- 1506              	.LCFI20:
- 1507              		.cfi_def_cfa_offset 24
- 1508              		.cfi_offset 4, -24
- 1509              		.cfi_offset 5, -20
- 1510              		.cfi_offset 6, -16
- 1511              		.cfi_offset 7, -12
- 1512              		.cfi_offset 8, -8
- 1513              		.cfi_offset 14, -4
- 1514              		.loc 1 661 25 view .LVU431
- 1515 0004 0024     		movs	r4, #0
+ 1514              		.loc 1 658 1 is_stmt 0 view .LVU434
+ 1515 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ARM GAS  /tmp/cc9tOEVd.s 			page 42
+
+
+ 1516              	.LCFI21:
+ 1517              		.cfi_def_cfa_offset 24
+ 1518              		.cfi_offset 4, -24
+ 1519              		.cfi_offset 5, -20
+ 1520              		.cfi_offset 6, -16
+ 1521              		.cfi_offset 7, -12
+ 1522              		.cfi_offset 8, -8
+ 1523              		.cfi_offset 14, -4
+ 1524              		.loc 1 661 25 view .LVU435
+ 1525 0004 0024     		movs	r4, #0
  662:Src/util.c    ****     
  663:Src/util.c    ****     // assign inputs
  664:Src/util.c    ****     i2c_status          = -1;
- 1516              		.loc 1 664 25 view .LVU432
-ARM GAS  /tmp/ccPeOSOQ.s 			page 42
-
-
- 1517 0006 FF26     		movs	r6, #255
+ 1526              		.loc 1 664 25 view .LVU436
+ 1527 0006 FF26     		movs	r6, #255
  661:Src/util.c    ****     
- 1518              		.loc 1 661 25 view .LVU433
- 1519 0008 1C4D     		ldr	r5, .L105
+ 1528              		.loc 1 661 25 view .LVU437
+ 1529 0008 1C4D     		ldr	r5, .L105
  665:Src/util.c    ****     i2c_slaveAddress    = slaveAddr << 1;   // Address is shifted one position to the left. LSB is 
- 1520              		.loc 1 665 37 view .LVU434
- 1521 000a 4000     		lsls	r0, r0, #1
- 1522              	.LVL98:
+ 1530              		.loc 1 665 37 view .LVU438
+ 1531 000a 4000     		lsls	r0, r0, #1
+ 1532              	.LVL98:
  661:Src/util.c    ****     
- 1523              		.loc 1 661 25 view .LVU435
- 1524 000c 2C70     		strb	r4, [r5]
+ 1533              		.loc 1 661 25 view .LVU439
+ 1534 000c 2C70     		strb	r4, [r5]
  664:Src/util.c    ****     i2c_slaveAddress    = slaveAddr << 1;   // Address is shifted one position to the left. LSB is 
- 1525              		.loc 1 664 5 is_stmt 1 view .LVU436
+ 1535              		.loc 1 664 5 is_stmt 1 view .LVU440
  664:Src/util.c    ****     i2c_slaveAddress    = slaveAddr << 1;   // Address is shifted one position to the left. LSB is 
- 1526              		.loc 1 664 25 is_stmt 0 view .LVU437
- 1527 000e 1C4D     		ldr	r5, .L105+4
- 1528              		.loc 1 665 37 view .LVU438
- 1529 0010 C0B2     		uxtb	r0, r0
+ 1536              		.loc 1 664 25 is_stmt 0 view .LVU441
+ 1537 000e 1C4D     		ldr	r5, .L105+4
+ 1538              		.loc 1 665 37 view .LVU442
+ 1539 0010 C0B2     		uxtb	r0, r0
  664:Src/util.c    ****     i2c_slaveAddress    = slaveAddr << 1;   // Address is shifted one position to the left. LSB is 
- 1530              		.loc 1 664 25 view .LVU439
- 1531 0012 2E70     		strb	r6, [r5]
- 1532              		.loc 1 665 5 is_stmt 1 view .LVU440
- 1533              		.loc 1 665 25 is_stmt 0 view .LVU441
- 1534 0014 1B4E     		ldr	r6, .L105+8
- 1535 0016 3070     		strb	r0, [r6]
+ 1540              		.loc 1 664 25 view .LVU443
+ 1541 0012 2E70     		strb	r6, [r5]
+ 1542              		.loc 1 665 5 is_stmt 1 view .LVU444
+ 1543              		.loc 1 665 25 is_stmt 0 view .LVU445
+ 1544 0014 1B4E     		ldr	r6, .L105+8
+ 1545 0016 3070     		strb	r0, [r6]
  666:Src/util.c    ****     i2c_regAddress      = regAddr;
- 1536              		.loc 1 666 5 is_stmt 1 view .LVU442
- 1537              		.loc 1 666 25 is_stmt 0 view .LVU443
- 1538 0018 1B48     		ldr	r0, .L105+12
+ 1546              		.loc 1 666 5 is_stmt 1 view .LVU446
+ 1547              		.loc 1 666 25 is_stmt 0 view .LVU447
+ 1548 0018 1B48     		ldr	r0, .L105+12
  667:Src/util.c    ****     i2c_rxbuffer        = data;
  668:Src/util.c    ****     i2c_nDABytes        = length;
- 1539              		.loc 1 668 25 view .LVU444
- 1540 001a 1C4E     		ldr	r6, .L105+16
+ 1549              		.loc 1 668 25 view .LVU448
+ 1550 001a 1C4E     		ldr	r6, .L105+16
  666:Src/util.c    ****     i2c_regAddress      = regAddr;
- 1541              		.loc 1 666 25 view .LVU445
- 1542 001c 0170     		strb	r1, [r0]
+ 1551              		.loc 1 666 25 view .LVU449
+ 1552 001c 0170     		strb	r1, [r0]
  667:Src/util.c    ****     i2c_rxbuffer        = data;
- 1543              		.loc 1 667 5 is_stmt 1 view .LVU446
- 1544              		.loc 1 668 25 is_stmt 0 view .LVU447
- 1545 001e 3270     		strb	r2, [r6]
+ 1553              		.loc 1 667 5 is_stmt 1 view .LVU450
+ 1554              		.loc 1 668 25 is_stmt 0 view .LVU451
+ 1555 001e 3270     		strb	r2, [r6]
  669:Src/util.c    ****     i2c_nRABytes        = 1;
- 1546              		.loc 1 669 25 view .LVU448
- 1547 0020 0122     		movs	r2, #1
- 1548              	.LVL99:
+ 1556              		.loc 1 669 25 view .LVU452
+ 1557 0020 0122     		movs	r2, #1
+ARM GAS  /tmp/cc9tOEVd.s 			page 43
+
+
+ 1558              	.LVL99:
  667:Src/util.c    ****     i2c_rxbuffer        = data;
- 1549              		.loc 1 667 25 view .LVU449
- 1550 0022 1B49     		ldr	r1, .L105+20
- 1551              	.LVL100:
+ 1559              		.loc 1 667 25 view .LVU453
+ 1560 0022 1B49     		ldr	r1, .L105+20
+ 1561              	.LVL100:
  670:Src/util.c    **** 
  671:Src/util.c    ****     uint16_t i2c_timeout = 0;
  672:Src/util.c    **** 
  673:Src/util.c    ****     // enable the I2C0 interrupt
  674:Src/util.c    ****     i2c_interrupt_enable(MPU_I2C, I2C_INT_ERR | I2C_INT_BUF | I2C_INT_EV);
- 1552              		.loc 1 674 5 view .LVU450
- 1553 0024 1B48     		ldr	r0, .L105+24
+ 1562              		.loc 1 674 5 view .LVU454
+ 1563 0024 1B48     		ldr	r0, .L105+24
  667:Src/util.c    ****     i2c_nDABytes        = length;
- 1554              		.loc 1 667 25 view .LVU451
-ARM GAS  /tmp/ccPeOSOQ.s 			page 43
-
-
- 1555 0026 0B60     		str	r3, [r1]
+ 1564              		.loc 1 667 25 view .LVU455
+ 1565 0026 0B60     		str	r3, [r1]
  668:Src/util.c    ****     i2c_nRABytes        = 1;
- 1556              		.loc 1 668 5 is_stmt 1 view .LVU452
+ 1566              		.loc 1 668 5 is_stmt 1 view .LVU456
  669:Src/util.c    **** 
- 1557              		.loc 1 669 5 view .LVU453
+ 1567              		.loc 1 669 5 view .LVU457
  669:Src/util.c    **** 
- 1558              		.loc 1 669 25 is_stmt 0 view .LVU454
- 1559 0028 1B4B     		ldr	r3, .L105+28
- 1560              	.LVL101:
- 1561              		.loc 1 674 5 view .LVU455
- 1562 002a 4FF4E061 		mov	r1, #1792
+ 1568              		.loc 1 669 25 is_stmt 0 view .LVU458
+ 1569 0028 1B4B     		ldr	r3, .L105+28
+ 1570              	.LVL101:
+ 1571              		.loc 1 674 5 view .LVU459
+ 1572 002a 4FF4E061 		mov	r1, #1792
  669:Src/util.c    **** 
- 1563              		.loc 1 669 25 view .LVU456
- 1564 002e 1A70     		strb	r2, [r3]
- 1565              	.LVL102:
+ 1573              		.loc 1 669 25 view .LVU460
+ 1574 002e 1A70     		strb	r2, [r3]
+ 1575              	.LVL102:
  671:Src/util.c    **** 
- 1566              		.loc 1 671 5 is_stmt 1 view .LVU457
- 1567              		.loc 1 674 5 view .LVU458
- 1568 0030 FFF7FEFF 		bl	i2c_interrupt_enable
- 1569              	.LVL103:
+ 1576              		.loc 1 671 5 is_stmt 1 view .LVU461
+ 1577              		.loc 1 674 5 view .LVU462
+ 1578 0030 FFF7FEFF 		bl	i2c_interrupt_enable
+ 1579              	.LVL103:
  675:Src/util.c    **** 
  676:Src/util.c    ****     if(2 == i2c_nDABytes){
- 1570              		.loc 1 676 5 view .LVU459
- 1571              		.loc 1 676 10 is_stmt 0 view .LVU460
- 1572 0034 3378     		ldrb	r3, [r6]	@ zero_extendqisi2
- 1573              		.loc 1 676 7 view .LVU461
- 1574 0036 022B     		cmp	r3, #2
- 1575 0038 03D1     		bne	.L92
+ 1580              		.loc 1 676 5 view .LVU463
+ 1581              		.loc 1 676 10 is_stmt 0 view .LVU464
+ 1582 0034 3378     		ldrb	r3, [r6]	@ zero_extendqisi2
+ 1583              		.loc 1 676 7 view .LVU465
+ 1584 0036 022B     		cmp	r3, #2
+ 1585 0038 03D1     		bne	.L92
  677:Src/util.c    ****         i2c_ackpos_config(MPU_I2C, I2C_ACKPOS_NEXT);    // send ACK for the next byte
- 1576              		.loc 1 677 9 is_stmt 1 view .LVU462
- 1577 003a 2146     		mov	r1, r4
- 1578 003c 1548     		ldr	r0, .L105+24
- 1579 003e FFF7FEFF 		bl	i2c_ackpos_config
- 1580              	.LVL104:
- 1581              	.L92:
+ 1586              		.loc 1 677 9 is_stmt 1 view .LVU466
+ 1587 003a 2146     		mov	r1, r4
+ 1588 003c 1548     		ldr	r0, .L105+24
+ 1589 003e FFF7FEFF 		bl	i2c_ackpos_config
+ 1590              	.LVL104:
+ 1591              	.L92:
  658:Src/util.c    **** 
- 1582              		.loc 1 658 1 is_stmt 0 discriminator 2 view .LVU463
- 1583 0042 44F62164 		movw	r4, #20001
+ 1592              		.loc 1 658 1 is_stmt 0 discriminator 2 view .LVU467
+ 1593 0042 44F62164 		movw	r4, #20001
  678:Src/util.c    ****     }
  679:Src/util.c    **** 
  680:Src/util.c    ****     // the master waits until the I2C bus is idle
  681:Src/util.c    ****     while(i2c_flag_get(MPU_I2C, I2C_FLAG_I2CBSY) && i2c_timeout++ < 20000);
- 1584              		.loc 1 681 11 discriminator 2 view .LVU464
- 1585 0046 154F     		ldr	r7, .L105+32
- 1586 0048 DFF84880 		ldr	r8, .L105+24
- 1587              	.LVL105:
- 1588              	.L94:
- 1589              		.loc 1 681 75 is_stmt 1 discriminator 2 view .LVU465
- 1590              		.loc 1 681 10 discriminator 2 view .LVU466
- 1591              		.loc 1 681 11 is_stmt 0 discriminator 2 view .LVU467
- 1592 004c 3946     		mov	r1, r7
- 1593 004e 4046     		mov	r0, r8
- 1594 0050 FFF7FEFF 		bl	i2c_flag_get
- 1595              	.LVL106:
- 1596              		.loc 1 681 10 discriminator 2 view .LVU468
- 1597 0054 18B1     		cbz	r0, .L93
- 1598              	.LVL107:
-ARM GAS  /tmp/ccPeOSOQ.s 			page 44
+ 1594              		.loc 1 681 11 discriminator 2 view .LVU468
+ARM GAS  /tmp/cc9tOEVd.s 			page 44
 
 
- 1599              		.loc 1 681 50 discriminator 1 view .LVU469
- 1600 0056 013C     		subs	r4, r4, #1
- 1601              	.LVL108:
- 1602              		.loc 1 681 50 discriminator 1 view .LVU470
- 1603 0058 A4B2     		uxth	r4, r4
- 1604 005a 002C     		cmp	r4, #0
- 1605 005c F6D1     		bne	.L94
- 1606              	.L93:
+ 1595 0046 154F     		ldr	r7, .L105+32
+ 1596 0048 DFF84880 		ldr	r8, .L105+24
+ 1597              	.LVL105:
+ 1598              	.L94:
+ 1599              		.loc 1 681 75 is_stmt 1 discriminator 2 view .LVU469
+ 1600              		.loc 1 681 10 discriminator 2 view .LVU470
+ 1601              		.loc 1 681 11 is_stmt 0 discriminator 2 view .LVU471
+ 1602 004c 3946     		mov	r1, r7
+ 1603 004e 4046     		mov	r0, r8
+ 1604 0050 FFF7FEFF 		bl	i2c_flag_get
+ 1605              	.LVL106:
+ 1606              		.loc 1 681 10 discriminator 2 view .LVU472
+ 1607 0054 18B1     		cbz	r0, .L93
+ 1608              	.LVL107:
+ 1609              		.loc 1 681 50 discriminator 1 view .LVU473
+ 1610 0056 013C     		subs	r4, r4, #1
+ 1611              	.LVL108:
+ 1612              		.loc 1 681 50 discriminator 1 view .LVU474
+ 1613 0058 A4B2     		uxth	r4, r4
+ 1614 005a 002C     		cmp	r4, #0
+ 1615 005c F6D1     		bne	.L94
+ 1616              	.L93:
  682:Src/util.c    **** 
  683:Src/util.c    ****     // the master sends a start condition to I2C bus
  684:Src/util.c    ****     i2c_start_on_bus(MPU_I2C);
- 1607              		.loc 1 684 5 is_stmt 1 view .LVU471
- 1608 005e 0D48     		ldr	r0, .L105+24
- 1609 0060 FFF7FEFF 		bl	i2c_start_on_bus
- 1610              	.LVL109:
+ 1617              		.loc 1 684 5 is_stmt 1 view .LVU475
+ 1618 005e 0D48     		ldr	r0, .L105+24
+ 1619 0060 FFF7FEFF 		bl	i2c_start_on_bus
+ 1620              	.LVL109:
  685:Src/util.c    **** 
  686:Src/util.c    ****     // Wait until all data bytes are sent/received
  687:Src/util.c    ****     i2c_timeout = 0;
- 1611              		.loc 1 687 5 view .LVU472
+ 1621              		.loc 1 687 5 view .LVU476
  688:Src/util.c    ****     while(i2c_nDABytes > 0 && i2c_timeout++ < 20000);
- 1612              		.loc 1 688 5 view .LVU473
- 1613              		.loc 1 688 10 is_stmt 0 view .LVU474
- 1614 0064 44F62163 		movw	r3, #20001
- 1615              	.LVL110:
- 1616              	.L96:
- 1617              		.loc 1 688 53 is_stmt 1 discriminator 2 view .LVU475
- 1618              		.loc 1 688 10 discriminator 2 view .LVU476
- 1619              		.loc 1 688 24 is_stmt 0 discriminator 2 view .LVU477
- 1620 0068 3278     		ldrb	r2, [r6]	@ zero_extendqisi2
- 1621              		.loc 1 688 10 discriminator 2 view .LVU478
- 1622 006a 1AB1     		cbz	r2, .L95
- 1623              	.LVL111:
- 1624              		.loc 1 688 28 discriminator 1 view .LVU479
- 1625 006c 013B     		subs	r3, r3, #1
- 1626              	.LVL112:
- 1627              		.loc 1 688 28 discriminator 1 view .LVU480
- 1628 006e 9BB2     		uxth	r3, r3
- 1629 0070 002B     		cmp	r3, #0
- 1630 0072 F9D1     		bne	.L96
- 1631              	.L95:
+ 1622              		.loc 1 688 5 view .LVU477
+ 1623              		.loc 1 688 10 is_stmt 0 view .LVU478
+ 1624 0064 44F62163 		movw	r3, #20001
+ 1625              	.LVL110:
+ 1626              	.L96:
+ 1627              		.loc 1 688 53 is_stmt 1 discriminator 2 view .LVU479
+ 1628              		.loc 1 688 10 discriminator 2 view .LVU480
+ 1629              		.loc 1 688 24 is_stmt 0 discriminator 2 view .LVU481
+ 1630 0068 3278     		ldrb	r2, [r6]	@ zero_extendqisi2
+ 1631              		.loc 1 688 10 discriminator 2 view .LVU482
+ 1632 006a 1AB1     		cbz	r2, .L95
+ 1633              	.LVL111:
+ 1634              		.loc 1 688 28 discriminator 1 view .LVU483
+ 1635 006c 013B     		subs	r3, r3, #1
+ 1636              	.LVL112:
+ 1637              		.loc 1 688 28 discriminator 1 view .LVU484
+ 1638 006e 9BB2     		uxth	r3, r3
+ 1639 0070 002B     		cmp	r3, #0
+ 1640 0072 F9D1     		bne	.L96
+ 1641              	.L95:
  689:Src/util.c    **** 
  690:Src/util.c    ****     // Return status
  691:Src/util.c    ****     return i2c_status;
- 1632              		.loc 1 691 5 is_stmt 1 view .LVU481
- 1633              		.loc 1 691 12 is_stmt 0 view .LVU482
- 1634 0074 2878     		ldrb	r0, [r5]	@ zero_extendqisi2
+ARM GAS  /tmp/cc9tOEVd.s 			page 45
+
+
+ 1642              		.loc 1 691 5 is_stmt 1 view .LVU485
+ 1643              		.loc 1 691 12 is_stmt 0 view .LVU486
+ 1644 0074 2878     		ldrb	r0, [r5]	@ zero_extendqisi2
  692:Src/util.c    **** 
  693:Src/util.c    **** }
- 1635              		.loc 1 693 1 view .LVU483
- 1636 0076 40B2     		sxtb	r0, r0
- 1637 0078 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
- 1638              	.L106:
- 1639              		.align	2
- 1640              	.L105:
- 1641 007c 00000000 		.word	.LANCHOR12
- 1642 0080 00000000 		.word	.LANCHOR13
- 1643 0084 00000000 		.word	.LANCHOR14
-ARM GAS  /tmp/ccPeOSOQ.s 			page 45
-
-
- 1644 0088 00000000 		.word	.LANCHOR15
- 1645 008c 00000000 		.word	.LANCHOR17
- 1646 0090 00000000 		.word	.LANCHOR19
- 1647 0094 00540040 		.word	1073763328
- 1648 0098 00000000 		.word	.LANCHOR18
- 1649 009c 02000080 		.word	-2147483646
- 1650              		.cfi_endproc
- 1651              	.LFE75:
- 1653              		.section	.text.i2c_readByte,"ax",%progbits
- 1654              		.align	1
- 1655              		.global	i2c_readByte
- 1656              		.syntax unified
- 1657              		.thumb
- 1658              		.thumb_func
- 1659              		.fpu softvfp
- 1661              	i2c_readByte:
- 1662              	.LVL113:
- 1663              	.LFB76:
+ 1645              		.loc 1 693 1 view .LVU487
+ 1646 0076 40B2     		sxtb	r0, r0
+ 1647 0078 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 1648              	.L106:
+ 1649              		.align	2
+ 1650              	.L105:
+ 1651 007c 00000000 		.word	.LANCHOR12
+ 1652 0080 00000000 		.word	.LANCHOR13
+ 1653 0084 00000000 		.word	.LANCHOR14
+ 1654 0088 00000000 		.word	.LANCHOR15
+ 1655 008c 00000000 		.word	.LANCHOR17
+ 1656 0090 00000000 		.word	.LANCHOR19
+ 1657 0094 00540040 		.word	1073763328
+ 1658 0098 00000000 		.word	.LANCHOR18
+ 1659 009c 02000080 		.word	-2147483646
+ 1660              		.cfi_endproc
+ 1661              	.LFE75:
+ 1663              		.section	.text.i2c_readByte,"ax",%progbits
+ 1664              		.align	1
+ 1665              		.global	i2c_readByte
+ 1666              		.syntax unified
+ 1667              		.thumb
+ 1668              		.thumb_func
+ 1669              		.fpu softvfp
+ 1671              	i2c_readByte:
+ 1672              	.LVL113:
+ 1673              	.LFB76:
  694:Src/util.c    **** 
  695:Src/util.c    **** 
  696:Src/util.c    **** /*
@@ -2666,444 +2680,444 @@ ARM GAS  /tmp/ccPeOSOQ.s 			page 1
  698:Src/util.c    ****  */
  699:Src/util.c    **** int8_t i2c_readByte(uint8_t slaveAddr, uint8_t regAddr, uint8_t *data)
  700:Src/util.c    **** {
- 1664              		.loc 1 700 1 is_stmt 1 view -0
- 1665              		.cfi_startproc
- 1666              		@ args = 0, pretend = 0, frame = 0
- 1667              		@ frame_needed = 0, uses_anonymous_args = 0
- 1668              		@ link register save eliminated.
+ 1674              		.loc 1 700 1 is_stmt 1 view -0
+ 1675              		.cfi_startproc
+ 1676              		@ args = 0, pretend = 0, frame = 0
+ 1677              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1678              		@ link register save eliminated.
  701:Src/util.c    ****     return i2c_readBytes(slaveAddr, regAddr, 1, data);
- 1669              		.loc 1 701 5 view .LVU485
+ 1679              		.loc 1 701 5 view .LVU489
  700:Src/util.c    ****     return i2c_readBytes(slaveAddr, regAddr, 1, data);
- 1670              		.loc 1 700 1 is_stmt 0 view .LVU486
- 1671 0000 1346     		mov	r3, r2
- 1672              		.loc 1 701 12 view .LVU487
- 1673 0002 0122     		movs	r2, #1
- 1674              	.LVL114:
- 1675              		.loc 1 701 12 view .LVU488
- 1676 0004 FFF7FEBF 		b	i2c_readBytes
- 1677              	.LVL115:
- 1678              		.loc 1 701 12 view .LVU489
- 1679              		.cfi_endproc
- 1680              	.LFE76:
- 1682              		.section	.text.i2c_writeBit,"ax",%progbits
- 1683              		.align	1
- 1684              		.global	i2c_writeBit
- 1685              		.syntax unified
- 1686              		.thumb
- 1687              		.thumb_func
- 1688              		.fpu softvfp
- 1690              	i2c_writeBit:
- 1691              	.LVL116:
- 1692              	.LFB74:
+ 1680              		.loc 1 700 1 is_stmt 0 view .LVU490
+ 1681 0000 1346     		mov	r3, r2
+ 1682              		.loc 1 701 12 view .LVU491
+ 1683 0002 0122     		movs	r2, #1
+ 1684              	.LVL114:
+ 1685              		.loc 1 701 12 view .LVU492
+ 1686 0004 FFF7FEBF 		b	i2c_readBytes
+ 1687              	.LVL115:
+ 1688              		.loc 1 701 12 view .LVU493
+ 1689              		.cfi_endproc
+ARM GAS  /tmp/cc9tOEVd.s 			page 46
+
+
+ 1690              	.LFE76:
+ 1692              		.section	.text.i2c_writeBit,"ax",%progbits
+ 1693              		.align	1
+ 1694              		.global	i2c_writeBit
+ 1695              		.syntax unified
+ 1696              		.thumb
+ 1697              		.thumb_func
+ 1698              		.fpu softvfp
+ 1700              	i2c_writeBit:
+ 1701              	.LVL116:
+ 1702              	.LFB74:
  643:Src/util.c    ****     uint8_t b;
- 1693              		.loc 1 643 87 is_stmt 1 view -0
- 1694              		.cfi_startproc
-ARM GAS  /tmp/ccPeOSOQ.s 			page 46
-
-
- 1695              		@ args = 0, pretend = 0, frame = 8
- 1696              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1703              		.loc 1 643 87 is_stmt 1 view -0
+ 1704              		.cfi_startproc
+ 1705              		@ args = 0, pretend = 0, frame = 8
+ 1706              		@ frame_needed = 0, uses_anonymous_args = 0
  644:Src/util.c    ****     i2c_readByte(slaveAddr, regAddr, &b);
- 1697              		.loc 1 644 5 view .LVU491
+ 1707              		.loc 1 644 5 view .LVU495
  645:Src/util.c    ****     b = (data != 0) ? (b | (1 << bitNum)) : (b & ~(1 << bitNum));
- 1698              		.loc 1 645 5 view .LVU492
+ 1708              		.loc 1 645 5 view .LVU496
  643:Src/util.c    ****     uint8_t b;
- 1699              		.loc 1 643 87 is_stmt 0 view .LVU493
- 1700 0000 2DE9F341 		push	{r0, r1, r4, r5, r6, r7, r8, lr}
- 1701              	.LCFI21:
- 1702              		.cfi_def_cfa_offset 32
- 1703              		.cfi_offset 4, -24
- 1704              		.cfi_offset 5, -20
- 1705              		.cfi_offset 6, -16
- 1706              		.cfi_offset 7, -12
- 1707              		.cfi_offset 8, -8
- 1708              		.cfi_offset 14, -4
+ 1709              		.loc 1 643 87 is_stmt 0 view .LVU497
+ 1710 0000 2DE9F341 		push	{r0, r1, r4, r5, r6, r7, r8, lr}
+ 1711              	.LCFI22:
+ 1712              		.cfi_def_cfa_offset 32
+ 1713              		.cfi_offset 4, -24
+ 1714              		.cfi_offset 5, -20
+ 1715              		.cfi_offset 6, -16
+ 1716              		.cfi_offset 7, -12
+ 1717              		.cfi_offset 8, -8
+ 1718              		.cfi_offset 14, -4
  643:Src/util.c    ****     uint8_t b;
- 1709              		.loc 1 643 87 view .LVU494
- 1710 0004 9046     		mov	r8, r2
+ 1719              		.loc 1 643 87 view .LVU498
+ 1720 0004 9046     		mov	r8, r2
  646:Src/util.c    ****     return i2c_writeByte(slaveAddr, regAddr, b);
- 1711              		.loc 1 646 31 view .LVU495
- 1712 0006 0124     		movs	r4, #1
+ 1721              		.loc 1 646 31 view .LVU499
+ 1722 0006 0124     		movs	r4, #1
  643:Src/util.c    ****     uint8_t b;
- 1713              		.loc 1 643 87 view .LVU496
- 1714 0008 1F46     		mov	r7, r3
+ 1723              		.loc 1 643 87 view .LVU500
+ 1724 0008 1F46     		mov	r7, r3
  645:Src/util.c    ****     b = (data != 0) ? (b | (1 << bitNum)) : (b & ~(1 << bitNum));
- 1715              		.loc 1 645 5 view .LVU497
- 1716 000a 0DF10702 		add	r2, sp, #7
- 1717              	.LVL117:
+ 1725              		.loc 1 645 5 view .LVU501
+ 1726 000a 0DF10702 		add	r2, sp, #7
+ 1727              	.LVL117:
  643:Src/util.c    ****     uint8_t b;
- 1718              		.loc 1 643 87 view .LVU498
- 1719 000e 0546     		mov	r5, r0
- 1720 0010 0E46     		mov	r6, r1
+ 1728              		.loc 1 643 87 view .LVU502
+ 1729 000e 0546     		mov	r5, r0
+ 1730 0010 0E46     		mov	r6, r1
  645:Src/util.c    ****     b = (data != 0) ? (b | (1 << bitNum)) : (b & ~(1 << bitNum));
- 1721              		.loc 1 645 5 view .LVU499
- 1722 0012 FFF7FEFF 		bl	i2c_readByte
- 1723              	.LVL118:
+ 1731              		.loc 1 645 5 view .LVU503
+ 1732 0012 FFF7FEFF 		bl	i2c_readByte
+ 1733              	.LVL118:
  646:Src/util.c    ****     return i2c_writeByte(slaveAddr, regAddr, b);
- 1724              		.loc 1 646 5 is_stmt 1 view .LVU500
+ 1734              		.loc 1 646 5 is_stmt 1 view .LVU504
  646:Src/util.c    ****     return i2c_writeByte(slaveAddr, regAddr, b);
- 1725              		.loc 1 646 31 is_stmt 0 view .LVU501
- 1726 0016 04FA08F2 		lsl	r2, r4, r8
- 646:Src/util.c    ****     return i2c_writeByte(slaveAddr, regAddr, b);
- 1727              		.loc 1 646 26 view .LVU502
- 1728 001a 52B2     		sxtb	r2, r2
- 1729 001c 9DF80740 		ldrb	r4, [sp, #7]	@ zero_extendqisi2
- 646:Src/util.c    ****     return i2c_writeByte(slaveAddr, regAddr, b);
- 1730              		.loc 1 646 7 view .LVU503
- 1731 0020 57B1     		cbz	r7, .L109
- 646:Src/util.c    ****     return i2c_writeByte(slaveAddr, regAddr, b);
- 1732              		.loc 1 646 26 discriminator 1 view .LVU504
- 1733 0022 2243     		orrs	r2, r2, r4
- 646:Src/util.c    ****     return i2c_writeByte(slaveAddr, regAddr, b);
- 1734              		.loc 1 646 7 discriminator 1 view .LVU505
- 1735 0024 D2B2     		uxtb	r2, r2
- 1736              	.L110:
-ARM GAS  /tmp/ccPeOSOQ.s 			page 47
+ 1735              		.loc 1 646 31 is_stmt 0 view .LVU505
+ 1736 0016 04FA08F2 		lsl	r2, r4, r8
+ARM GAS  /tmp/cc9tOEVd.s 			page 47
 
 
- 647:Src/util.c    **** }
- 1737              		.loc 1 647 12 discriminator 4 view .LVU506
- 1738 0026 3146     		mov	r1, r6
- 1739 0028 2846     		mov	r0, r5
  646:Src/util.c    ****     return i2c_writeByte(slaveAddr, regAddr, b);
- 1740              		.loc 1 646 7 discriminator 4 view .LVU507
- 1741 002a 8DF80720 		strb	r2, [sp, #7]
+ 1737              		.loc 1 646 26 view .LVU506
+ 1738 001a 52B2     		sxtb	r2, r2
+ 1739 001c 9DF80740 		ldrb	r4, [sp, #7]	@ zero_extendqisi2
+ 646:Src/util.c    ****     return i2c_writeByte(slaveAddr, regAddr, b);
+ 1740              		.loc 1 646 7 view .LVU507
+ 1741 0020 57B1     		cbz	r7, .L109
+ 646:Src/util.c    ****     return i2c_writeByte(slaveAddr, regAddr, b);
+ 1742              		.loc 1 646 26 discriminator 1 view .LVU508
+ 1743 0022 2243     		orrs	r2, r2, r4
+ 646:Src/util.c    ****     return i2c_writeByte(slaveAddr, regAddr, b);
+ 1744              		.loc 1 646 7 discriminator 1 view .LVU509
+ 1745 0024 D2B2     		uxtb	r2, r2
+ 1746              	.L110:
  647:Src/util.c    **** }
- 1742              		.loc 1 647 5 is_stmt 1 discriminator 4 view .LVU508
+ 1747              		.loc 1 647 12 discriminator 4 view .LVU510
+ 1748 0026 3146     		mov	r1, r6
+ 1749 0028 2846     		mov	r0, r5
+ 646:Src/util.c    ****     return i2c_writeByte(slaveAddr, regAddr, b);
+ 1750              		.loc 1 646 7 discriminator 4 view .LVU511
+ 1751 002a 8DF80720 		strb	r2, [sp, #7]
  647:Src/util.c    **** }
- 1743              		.loc 1 647 12 is_stmt 0 discriminator 4 view .LVU509
- 1744 002e FFF7FEFF 		bl	i2c_writeByte
- 1745              	.LVL119:
+ 1752              		.loc 1 647 5 is_stmt 1 discriminator 4 view .LVU512
+ 647:Src/util.c    **** }
+ 1753              		.loc 1 647 12 is_stmt 0 discriminator 4 view .LVU513
+ 1754 002e FFF7FEFF 		bl	i2c_writeByte
+ 1755              	.LVL119:
  648:Src/util.c    **** 
- 1746              		.loc 1 648 1 discriminator 4 view .LVU510
- 1747 0032 02B0     		add	sp, sp, #8
- 1748              	.LCFI22:
- 1749              		.cfi_remember_state
- 1750              		.cfi_def_cfa_offset 24
- 1751              		@ sp needed
- 1752 0034 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
- 1753              	.L109:
- 1754              	.LCFI23:
- 1755              		.cfi_restore_state
+ 1756              		.loc 1 648 1 discriminator 4 view .LVU514
+ 1757 0032 02B0     		add	sp, sp, #8
+ 1758              	.LCFI23:
+ 1759              		.cfi_remember_state
+ 1760              		.cfi_def_cfa_offset 24
+ 1761              		@ sp needed
+ 1762 0034 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 1763              	.L109:
+ 1764              	.LCFI24:
+ 1765              		.cfi_restore_state
  646:Src/util.c    ****     return i2c_writeByte(slaveAddr, regAddr, b);
- 1756              		.loc 1 646 7 discriminator 2 view .LVU511
- 1757 0038 24EA0202 		bic	r2, r4, r2
- 1758 003c F3E7     		b	.L110
- 1759              		.cfi_endproc
- 1760              	.LFE74:
- 1762              		.section	.text.i2c_readBit,"ax",%progbits
- 1763              		.align	1
- 1764              		.global	i2c_readBit
- 1765              		.syntax unified
- 1766              		.thumb
- 1767              		.thumb_func
- 1768              		.fpu softvfp
- 1770              	i2c_readBit:
- 1771              	.LVL120:
- 1772              	.LFB77:
+ 1766              		.loc 1 646 7 discriminator 2 view .LVU515
+ 1767 0038 24EA0202 		bic	r2, r4, r2
+ 1768 003c F3E7     		b	.L110
+ 1769              		.cfi_endproc
+ 1770              	.LFE74:
+ 1772              		.section	.text.i2c_readBit,"ax",%progbits
+ 1773              		.align	1
+ 1774              		.global	i2c_readBit
+ 1775              		.syntax unified
+ 1776              		.thumb
+ 1777              		.thumb_func
+ 1778              		.fpu softvfp
+ 1780              	i2c_readBit:
+ 1781              	.LVL120:
+ 1782              	.LFB77:
  702:Src/util.c    **** }
  703:Src/util.c    **** 
  704:Src/util.c    **** 
+ARM GAS  /tmp/cc9tOEVd.s 			page 48
+
+
  705:Src/util.c    **** /*
  706:Src/util.c    ****  * read 1 bit from chip register
  707:Src/util.c    ****  */
  708:Src/util.c    **** int8_t i2c_readBit(uint8_t slaveAddr, uint8_t regAddr, uint8_t bitNum, uint8_t *data)
  709:Src/util.c    **** {
- 1773              		.loc 1 709 1 is_stmt 1 view -0
- 1774              		.cfi_startproc
- 1775              		@ args = 0, pretend = 0, frame = 8
- 1776              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1783              		.loc 1 709 1 is_stmt 1 view -0
+ 1784              		.cfi_startproc
+ 1785              		@ args = 0, pretend = 0, frame = 8
+ 1786              		@ frame_needed = 0, uses_anonymous_args = 0
  710:Src/util.c    ****     uint8_t b;
- 1777              		.loc 1 710 5 view .LVU513
+ 1787              		.loc 1 710 5 view .LVU517
  711:Src/util.c    ****     int8_t status = i2c_readByte(slaveAddr, regAddr, &b);
- 1778              		.loc 1 711 5 view .LVU514
+ 1788              		.loc 1 711 5 view .LVU518
  709:Src/util.c    ****     uint8_t b;
-ARM GAS  /tmp/ccPeOSOQ.s 			page 48
-
-
- 1779              		.loc 1 709 1 is_stmt 0 view .LVU515
- 1780 0000 37B5     		push	{r0, r1, r2, r4, r5, lr}
- 1781              	.LCFI24:
- 1782              		.cfi_def_cfa_offset 24
- 1783              		.cfi_offset 4, -12
- 1784              		.cfi_offset 5, -8
- 1785              		.cfi_offset 14, -4
+ 1789              		.loc 1 709 1 is_stmt 0 view .LVU519
+ 1790 0000 37B5     		push	{r0, r1, r2, r4, r5, lr}
+ 1791              	.LCFI25:
+ 1792              		.cfi_def_cfa_offset 24
+ 1793              		.cfi_offset 4, -12
+ 1794              		.cfi_offset 5, -8
+ 1795              		.cfi_offset 14, -4
  709:Src/util.c    ****     uint8_t b;
- 1786              		.loc 1 709 1 view .LVU516
- 1787 0002 1546     		mov	r5, r2
- 1788              		.loc 1 711 21 view .LVU517
- 1789 0004 0DF10702 		add	r2, sp, #7
- 1790              	.LVL121:
+ 1796              		.loc 1 709 1 view .LVU520
+ 1797 0002 1546     		mov	r5, r2
+ 1798              		.loc 1 711 21 view .LVU521
+ 1799 0004 0DF10702 		add	r2, sp, #7
+ 1800              	.LVL121:
  709:Src/util.c    ****     uint8_t b;
- 1791              		.loc 1 709 1 view .LVU518
- 1792 0008 1C46     		mov	r4, r3
- 1793              		.loc 1 711 21 view .LVU519
- 1794 000a FFF7FEFF 		bl	i2c_readByte
- 1795              	.LVL122:
+ 1801              		.loc 1 709 1 view .LVU522
+ 1802 0008 1C46     		mov	r4, r3
+ 1803              		.loc 1 711 21 view .LVU523
+ 1804 000a FFF7FEFF 		bl	i2c_readByte
+ 1805              	.LVL122:
  712:Src/util.c    ****     *data = b & (1 << bitNum);
- 1796              		.loc 1 712 5 is_stmt 1 view .LVU520
- 1797              		.loc 1 712 20 is_stmt 0 view .LVU521
- 1798 000e 0121     		movs	r1, #1
- 1799              		.loc 1 712 15 view .LVU522
- 1800 0010 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
- 1801              		.loc 1 712 20 view .LVU523
- 1802 0014 01FA05F2 		lsl	r2, r1, r5
- 1803              		.loc 1 712 15 view .LVU524
- 1804 0018 1A40     		ands	r2, r2, r3
- 1805              		.loc 1 712 11 view .LVU525
- 1806 001a 2270     		strb	r2, [r4]
+ 1806              		.loc 1 712 5 is_stmt 1 view .LVU524
+ 1807              		.loc 1 712 20 is_stmt 0 view .LVU525
+ 1808 000e 0121     		movs	r1, #1
+ 1809              		.loc 1 712 15 view .LVU526
+ 1810 0010 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
+ 1811              		.loc 1 712 20 view .LVU527
+ 1812 0014 01FA05F2 		lsl	r2, r1, r5
+ 1813              		.loc 1 712 15 view .LVU528
+ 1814 0018 1A40     		ands	r2, r2, r3
+ 1815              		.loc 1 712 11 view .LVU529
+ 1816 001a 2270     		strb	r2, [r4]
  713:Src/util.c    ****     return status;
- 1807              		.loc 1 713 5 is_stmt 1 view .LVU526
+ 1817              		.loc 1 713 5 is_stmt 1 view .LVU530
  714:Src/util.c    **** }
- 1808              		.loc 1 714 1 is_stmt 0 view .LVU527
- 1809 001c 03B0     		add	sp, sp, #12
- 1810              	.LCFI25:
- 1811              		.cfi_def_cfa_offset 12
- 1812              		@ sp needed
- 1813 001e 30BD     		pop	{r4, r5, pc}
- 1814              		.loc 1 714 1 view .LVU528
- 1815              		.cfi_endproc
- 1816              	.LFE77:
- 1818              		.global	buffer
- 1819              		.global	i2c_nRABytes
- 1820              		.global	i2c_nDABytes
- 1821              		.global	i2c_rxbuffer
- 1822              		.global	i2c_txbuffer
- 1823              		.global	i2c_slaveAddress
- 1824              		.global	i2c_regAddress
- 1825              		.global	i2c_ReadWriteCmd
- 1826              		.global	i2c_status
- 1827              		.section	.bss.Feedback,"aw",%nobits
- 1828              		.align	1
- 1829              		.set	.LANCHOR9,. + 0
- 1832              	Feedback:
- 1833 0000 00000000 		.space	48
-ARM GAS  /tmp/ccPeOSOQ.s 			page 49
+ 1818              		.loc 1 714 1 is_stmt 0 view .LVU531
+ 1819 001c 03B0     		add	sp, sp, #12
+ 1820              	.LCFI26:
+ 1821              		.cfi_def_cfa_offset 12
+ 1822              		@ sp needed
+ 1823 001e 30BD     		pop	{r4, r5, pc}
+ 1824              		.loc 1 714 1 view .LVU532
+ 1825              		.cfi_endproc
+ 1826              	.LFE77:
+ARM GAS  /tmp/cc9tOEVd.s 			page 49
 
 
- 1833      00000000 
- 1833      00000000 
- 1833      00000000 
- 1833      00000000 
- 1834              		.section	.bss.FeedbackRaw,"aw",%nobits
- 1835              		.align	1
- 1836              		.set	.LANCHOR11,. + 0
- 1839              	FeedbackRaw:
- 1840 0000 00000000 		.space	48
- 1840      00000000 
- 1840      00000000 
- 1840      00000000 
- 1840      00000000 
- 1841              		.section	.bss.buffer,"aw",%nobits
- 1844              	buffer:
- 1845 0000 00000000 		.space	14
- 1845      00000000 
- 1845      00000000 
- 1845      0000
- 1846              		.section	.bss.i2c_ReadWriteCmd,"aw",%nobits
- 1847              		.set	.LANCHOR12,. + 0
- 1850              	i2c_ReadWriteCmd:
- 1851 0000 00       		.space	1
- 1852              		.section	.bss.i2c_nDABytes,"aw",%nobits
- 1853              		.set	.LANCHOR17,. + 0
- 1856              	i2c_nDABytes:
- 1857 0000 00       		.space	1
- 1858              		.section	.bss.i2c_nRABytes,"aw",%nobits
- 1859              		.set	.LANCHOR18,. + 0
- 1862              	i2c_nRABytes:
- 1863 0000 00       		.space	1
- 1864              		.section	.bss.i2c_regAddress,"aw",%nobits
- 1865              		.set	.LANCHOR15,. + 0
- 1868              	i2c_regAddress:
- 1869 0000 00       		.space	1
- 1870              		.section	.bss.i2c_rxbuffer,"aw",%nobits
- 1871              		.align	2
- 1872              		.set	.LANCHOR19,. + 0
- 1875              	i2c_rxbuffer:
- 1876 0000 00000000 		.space	4
- 1877              		.section	.bss.i2c_slaveAddress,"aw",%nobits
- 1878              		.set	.LANCHOR14,. + 0
- 1881              	i2c_slaveAddress:
- 1882 0000 00       		.space	1
- 1883              		.section	.bss.i2c_status,"aw",%nobits
- 1884              		.set	.LANCHOR13,. + 0
- 1887              	i2c_status:
- 1888 0000 00       		.space	1
- 1889              		.section	.bss.i2c_txbuffer,"aw",%nobits
- 1890              		.align	2
- 1891              		.set	.LANCHOR16,. + 0
- 1894              	i2c_txbuffer:
- 1895 0000 00000000 		.space	4
- 1896              		.section	.bss.mpuStatus,"aw",%nobits
- 1897              		.set	.LANCHOR2,. + 0
- 1900              	mpuStatus:
- 1901 0000 00       		.space	1
-ARM GAS  /tmp/ccPeOSOQ.s 			page 50
+ 1828              		.global	buffer
+ 1829              		.global	i2c_nRABytes
+ 1830              		.global	i2c_nDABytes
+ 1831              		.global	i2c_rxbuffer
+ 1832              		.global	i2c_txbuffer
+ 1833              		.global	i2c_slaveAddress
+ 1834              		.global	i2c_regAddress
+ 1835              		.global	i2c_ReadWriteCmd
+ 1836              		.global	i2c_status
+ 1837              		.section	.bss.Feedback,"aw",%nobits
+ 1838              		.align	1
+ 1839              		.set	.LANCHOR9,. + 0
+ 1842              	Feedback:
+ 1843 0000 00000000 		.space	48
+ 1843      00000000 
+ 1843      00000000 
+ 1843      00000000 
+ 1843      00000000 
+ 1844              		.section	.bss.FeedbackRaw,"aw",%nobits
+ 1845              		.align	1
+ 1846              		.set	.LANCHOR11,. + 0
+ 1849              	FeedbackRaw:
+ 1850 0000 00000000 		.space	48
+ 1850      00000000 
+ 1850      00000000 
+ 1850      00000000 
+ 1850      00000000 
+ 1851              		.section	.bss.buffer,"aw",%nobits
+ 1854              	buffer:
+ 1855 0000 00000000 		.space	14
+ 1855      00000000 
+ 1855      00000000 
+ 1855      0000
+ 1856              		.section	.bss.i2c_ReadWriteCmd,"aw",%nobits
+ 1857              		.set	.LANCHOR12,. + 0
+ 1860              	i2c_ReadWriteCmd:
+ 1861 0000 00       		.space	1
+ 1862              		.section	.bss.i2c_nDABytes,"aw",%nobits
+ 1863              		.set	.LANCHOR17,. + 0
+ 1866              	i2c_nDABytes:
+ 1867 0000 00       		.space	1
+ 1868              		.section	.bss.i2c_nRABytes,"aw",%nobits
+ 1869              		.set	.LANCHOR18,. + 0
+ 1872              	i2c_nRABytes:
+ 1873 0000 00       		.space	1
+ 1874              		.section	.bss.i2c_regAddress,"aw",%nobits
+ 1875              		.set	.LANCHOR15,. + 0
+ 1878              	i2c_regAddress:
+ 1879 0000 00       		.space	1
+ 1880              		.section	.bss.i2c_rxbuffer,"aw",%nobits
+ 1881              		.align	2
+ 1882              		.set	.LANCHOR19,. + 0
+ 1885              	i2c_rxbuffer:
+ 1886 0000 00000000 		.space	4
+ 1887              		.section	.bss.i2c_slaveAddress,"aw",%nobits
+ 1888              		.set	.LANCHOR14,. + 0
+ 1891              	i2c_slaveAddress:
+ARM GAS  /tmp/cc9tOEVd.s 			page 50
 
 
- 1902              		.section	.bss.old_pos.0,"aw",%nobits
- 1903              		.align	2
- 1904              		.set	.LANCHOR10,. + 0
- 1907              	old_pos.0:
- 1908 0000 00000000 		.space	4
- 1909              		.section	.bss.rx1_buffer,"aw",%nobits
- 1910              		.set	.LANCHOR1,. + 0
- 1913              	rx1_buffer:
- 1914 0000 00000000 		.space	256
- 1914      00000000 
- 1914      00000000 
- 1914      00000000 
- 1914      00000000 
- 1915              		.section	.bss.sensor1,"aw",%nobits
- 1916              		.set	.LANCHOR5,. + 0
- 1919              	sensor1:
- 1920 0000 00       		.space	1
- 1921              		.section	.bss.sensor1_read,"aw",%nobits
- 1922              		.set	.LANCHOR3,. + 0
- 1925              	sensor1_read:
- 1926 0000 00       		.space	1
- 1927              		.section	.bss.sensor2,"aw",%nobits
- 1928              		.set	.LANCHOR6,. + 0
- 1931              	sensor2:
- 1932 0000 00       		.space	1
- 1933              		.section	.bss.sensor2_read,"aw",%nobits
- 1934              		.set	.LANCHOR4,. + 0
- 1937              	sensor2_read:
- 1938 0000 00       		.space	1
- 1939              		.section	.bss.sideboard_imu,"aw",%nobits
- 1940              		.set	.LANCHOR0,. + 0
- 1943              	sideboard_imu:
- 1944 0000 00000000 		.space	42
- 1944      00000000 
- 1944      00000000 
- 1944      00000000 
- 1944      00000000 
- 1945              		.section	.bss.timeoutCntSerial1,"aw",%nobits
- 1946              		.align	1
- 1947              		.set	.LANCHOR7,. + 0
- 1950              	timeoutCntSerial1:
- 1951 0000 0000     		.space	2
- 1952              		.section	.bss.timeoutFlagSerial1,"aw",%nobits
- 1953              		.set	.LANCHOR8,. + 0
- 1956              	timeoutFlagSerial1:
- 1957 0000 00       		.space	1
- 1958              		.text
- 1959              	.Letext0:
- 1960              		.file 2 "/usr/include/newlib/machine/_default_types.h"
- 1961              		.file 3 "/usr/include/newlib/sys/_stdint.h"
- 1962              		.file 4 "Drivers/CMSIS/Include/gd32f1x0.h"
- 1963              		.file 5 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_dma.h"
- 1964              		.file 6 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_dbg.h"
- 1965              		.file 7 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
- 1966              		.file 8 "Inc/util.h"
- 1967              		.file 9 "Inc/defines.h"
- 1968              		.file 10 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_i2c.h"
-ARM GAS  /tmp/ccPeOSOQ.s 			page 51
+ 1892 0000 00       		.space	1
+ 1893              		.section	.bss.i2c_status,"aw",%nobits
+ 1894              		.set	.LANCHOR13,. + 0
+ 1897              	i2c_status:
+ 1898 0000 00       		.space	1
+ 1899              		.section	.bss.i2c_txbuffer,"aw",%nobits
+ 1900              		.align	2
+ 1901              		.set	.LANCHOR16,. + 0
+ 1904              	i2c_txbuffer:
+ 1905 0000 00000000 		.space	4
+ 1906              		.section	.bss.mpuStatus,"aw",%nobits
+ 1907              		.set	.LANCHOR2,. + 0
+ 1910              	mpuStatus:
+ 1911 0000 00       		.space	1
+ 1912              		.section	.bss.old_pos.0,"aw",%nobits
+ 1913              		.align	2
+ 1914              		.set	.LANCHOR10,. + 0
+ 1917              	old_pos.0:
+ 1918 0000 00000000 		.space	4
+ 1919              		.section	.bss.rx1_buffer,"aw",%nobits
+ 1920              		.set	.LANCHOR1,. + 0
+ 1923              	rx1_buffer:
+ 1924 0000 00000000 		.space	256
+ 1924      00000000 
+ 1924      00000000 
+ 1924      00000000 
+ 1924      00000000 
+ 1925              		.section	.bss.sensor1,"aw",%nobits
+ 1926              		.set	.LANCHOR5,. + 0
+ 1929              	sensor1:
+ 1930 0000 00       		.space	1
+ 1931              		.section	.bss.sensor1_read,"aw",%nobits
+ 1932              		.set	.LANCHOR3,. + 0
+ 1935              	sensor1_read:
+ 1936 0000 00       		.space	1
+ 1937              		.section	.bss.sensor2,"aw",%nobits
+ 1938              		.set	.LANCHOR6,. + 0
+ 1941              	sensor2:
+ 1942 0000 00       		.space	1
+ 1943              		.section	.bss.sensor2_read,"aw",%nobits
+ 1944              		.set	.LANCHOR4,. + 0
+ 1947              	sensor2_read:
+ 1948 0000 00       		.space	1
+ 1949              		.section	.bss.sideboard_imu,"aw",%nobits
+ 1950              		.set	.LANCHOR0,. + 0
+ 1953              	sideboard_imu:
+ 1954 0000 00000000 		.space	42
+ 1954      00000000 
+ 1954      00000000 
+ 1954      00000000 
+ 1954      00000000 
+ 1955              		.section	.bss.timeoutCntSerial1,"aw",%nobits
+ 1956              		.align	1
+ 1957              		.set	.LANCHOR7,. + 0
+ 1960              	timeoutCntSerial1:
+ 1961 0000 0000     		.space	2
+ 1962              		.section	.bss.timeoutFlagSerial1,"aw",%nobits
+ARM GAS  /tmp/cc9tOEVd.s 			page 51
 
 
- 1969              		.file 11 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_gpio.h"
- 1970              		.file 12 "Inc/mpu6050.h"
- 1971              		.file 13 "Inc/setup.h"
- 1972              		.file 14 "Inc/systick.h"
- 1973              		.file 15 "<built-in>"
-ARM GAS  /tmp/ccPeOSOQ.s 			page 52
+ 1963              		.set	.LANCHOR8,. + 0
+ 1966              	timeoutFlagSerial1:
+ 1967 0000 00       		.space	1
+ 1968              		.text
+ 1969              	.Letext0:
+ 1970              		.file 2 "/usr/include/newlib/machine/_default_types.h"
+ 1971              		.file 3 "/usr/include/newlib/sys/_stdint.h"
+ 1972              		.file 4 "Drivers/CMSIS/Include/gd32f1x0.h"
+ 1973              		.file 5 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_dma.h"
+ 1974              		.file 6 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_dbg.h"
+ 1975              		.file 7 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_rcu.h"
+ 1976              		.file 8 "Inc/util.h"
+ 1977              		.file 9 "Inc/defines.h"
+ 1978              		.file 10 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_i2c.h"
+ 1979              		.file 11 "Drivers/GD32F1x0_standard_peripheral/Include/gd32f1x0_gpio.h"
+ 1980              		.file 12 "Inc/mpu6050.h"
+ 1981              		.file 13 "Inc/setup.h"
+ 1982              		.file 14 "Inc/systick.h"
+ 1983              		.file 15 "<built-in>"
+ARM GAS  /tmp/cc9tOEVd.s 			page 52
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 util.c
-     /tmp/ccPeOSOQ.s:16     .text.consoleLog:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:24     .text.consoleLog:0000000000000000 consoleLog
-     /tmp/ccPeOSOQ.s:39     .text.toggle_led:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:46     .text.toggle_led:0000000000000000 toggle_led
-     /tmp/ccPeOSOQ.s:65     .text.intro_demo_led:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:72     .text.intro_demo_led:0000000000000000 intro_demo_led
-     /tmp/ccPeOSOQ.s:223    .text.intro_demo_led:00000000000000cc $d
-     /tmp/ccPeOSOQ.s:228    .text.switch_check:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:235    .text.switch_check:0000000000000000 switch_check
-     /tmp/ccPeOSOQ.s:283    .text.input_init:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:290    .text.input_init:0000000000000000 input_init
-     /tmp/ccPeOSOQ.s:358    .text.input_init:0000000000000040 $d
-     /tmp/ccPeOSOQ.s:367    .text.handle_mpu6050:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:374    .text.handle_mpu6050:0000000000000000 handle_mpu6050
-     /tmp/ccPeOSOQ.s:425    .text.handle_mpu6050:000000000000002c $d
-     /tmp/ccPeOSOQ.s:431    .text.handle_sensors:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:438    .text.handle_sensors:0000000000000000 handle_sensors
-     /tmp/ccPeOSOQ.s:596    .text.handle_sensors:000000000000007c $d
-     /tmp/ccPeOSOQ.s:606    .text.handle_usart:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:613    .text.handle_usart:0000000000000000 handle_usart
-     /tmp/ccPeOSOQ.s:844    .text.handle_usart:0000000000000118 $d
-     /tmp/ccPeOSOQ.s:858    .text.handle_leds:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:865    .text.handle_leds:0000000000000000 handle_leds
-     /tmp/ccPeOSOQ.s:1029   .text.handle_leds:0000000000000094 $d
-     /tmp/ccPeOSOQ.s:1036   .text.usart_process_data:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:1043   .text.usart_process_data:0000000000000000 usart_process_data
-     /tmp/ccPeOSOQ.s:1122   .text.usart_process_data:000000000000004c $d
-     /tmp/ccPeOSOQ.s:1128   .text.usart1_rx_check:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:1135   .text.usart1_rx_check:0000000000000000 usart1_rx_check
-     /tmp/ccPeOSOQ.s:1250   .text.usart1_rx_check:0000000000000070 $d
-     /tmp/ccPeOSOQ.s:1258   .text.usart0_rx_check:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:1265   .text.usart0_rx_check:0000000000000000 usart0_rx_check
-     /tmp/ccPeOSOQ.s:1278   .text.aux_print_to_console:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:1285   .text.aux_print_to_console:0000000000000000 aux_print_to_console
-     /tmp/ccPeOSOQ.s:1296   .text.i2c_writeBytes:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:1303   .text.i2c_writeBytes:0000000000000000 i2c_writeBytes
-     /tmp/ccPeOSOQ.s:1437   .text.i2c_writeBytes:000000000000006c $d
-     /tmp/ccPeOSOQ.s:1450   .text.i2c_writeByte:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:1457   .text.i2c_writeByte:0000000000000000 i2c_writeByte
-     /tmp/ccPeOSOQ.s:1489   .text.i2c_readBytes:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:1496   .text.i2c_readBytes:0000000000000000 i2c_readBytes
-     /tmp/ccPeOSOQ.s:1641   .text.i2c_readBytes:000000000000007c $d
-     /tmp/ccPeOSOQ.s:1654   .text.i2c_readByte:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:1661   .text.i2c_readByte:0000000000000000 i2c_readByte
-     /tmp/ccPeOSOQ.s:1683   .text.i2c_writeBit:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:1690   .text.i2c_writeBit:0000000000000000 i2c_writeBit
-     /tmp/ccPeOSOQ.s:1763   .text.i2c_readBit:0000000000000000 $t
-     /tmp/ccPeOSOQ.s:1770   .text.i2c_readBit:0000000000000000 i2c_readBit
-     /tmp/ccPeOSOQ.s:1844   .bss.buffer:0000000000000000 buffer
-     /tmp/ccPeOSOQ.s:1862   .bss.i2c_nRABytes:0000000000000000 i2c_nRABytes
-     /tmp/ccPeOSOQ.s:1856   .bss.i2c_nDABytes:0000000000000000 i2c_nDABytes
-     /tmp/ccPeOSOQ.s:1875   .bss.i2c_rxbuffer:0000000000000000 i2c_rxbuffer
-     /tmp/ccPeOSOQ.s:1894   .bss.i2c_txbuffer:0000000000000000 i2c_txbuffer
-     /tmp/ccPeOSOQ.s:1881   .bss.i2c_slaveAddress:0000000000000000 i2c_slaveAddress
-     /tmp/ccPeOSOQ.s:1868   .bss.i2c_regAddress:0000000000000000 i2c_regAddress
-ARM GAS  /tmp/ccPeOSOQ.s 			page 53
+     /tmp/cc9tOEVd.s:16     .text.consoleLog:0000000000000000 $t
+     /tmp/cc9tOEVd.s:24     .text.consoleLog:0000000000000000 consoleLog
+     /tmp/cc9tOEVd.s:39     .text.toggle_led:0000000000000000 $t
+     /tmp/cc9tOEVd.s:46     .text.toggle_led:0000000000000000 toggle_led
+     /tmp/cc9tOEVd.s:65     .text.intro_demo_led:0000000000000000 $t
+     /tmp/cc9tOEVd.s:72     .text.intro_demo_led:0000000000000000 intro_demo_led
+     /tmp/cc9tOEVd.s:223    .text.intro_demo_led:00000000000000cc $d
+     /tmp/cc9tOEVd.s:228    .text.switch_check:0000000000000000 $t
+     /tmp/cc9tOEVd.s:235    .text.switch_check:0000000000000000 switch_check
+     /tmp/cc9tOEVd.s:283    .text.input_init:0000000000000000 $t
+     /tmp/cc9tOEVd.s:290    .text.input_init:0000000000000000 input_init
+     /tmp/cc9tOEVd.s:358    .text.input_init:0000000000000040 $d
+     /tmp/cc9tOEVd.s:367    .text.handle_mpu6050:0000000000000000 $t
+     /tmp/cc9tOEVd.s:374    .text.handle_mpu6050:0000000000000000 handle_mpu6050
+     /tmp/cc9tOEVd.s:425    .text.handle_mpu6050:000000000000002c $d
+     /tmp/cc9tOEVd.s:431    .text.handle_sensors:0000000000000000 $t
+     /tmp/cc9tOEVd.s:438    .text.handle_sensors:0000000000000000 handle_sensors
+     /tmp/cc9tOEVd.s:596    .text.handle_sensors:000000000000007c $d
+     /tmp/cc9tOEVd.s:606    .text.handle_usart:0000000000000000 $t
+     /tmp/cc9tOEVd.s:613    .text.handle_usart:0000000000000000 handle_usart
+     /tmp/cc9tOEVd.s:854    .text.handle_usart:0000000000000124 $d
+     /tmp/cc9tOEVd.s:868    .text.handle_leds:0000000000000000 $t
+     /tmp/cc9tOEVd.s:875    .text.handle_leds:0000000000000000 handle_leds
+     /tmp/cc9tOEVd.s:1039   .text.handle_leds:0000000000000094 $d
+     /tmp/cc9tOEVd.s:1046   .text.usart_process_data:0000000000000000 $t
+     /tmp/cc9tOEVd.s:1053   .text.usart_process_data:0000000000000000 usart_process_data
+     /tmp/cc9tOEVd.s:1132   .text.usart_process_data:000000000000004c $d
+     /tmp/cc9tOEVd.s:1138   .text.usart1_rx_check:0000000000000000 $t
+     /tmp/cc9tOEVd.s:1145   .text.usart1_rx_check:0000000000000000 usart1_rx_check
+     /tmp/cc9tOEVd.s:1260   .text.usart1_rx_check:0000000000000070 $d
+     /tmp/cc9tOEVd.s:1268   .text.usart0_rx_check:0000000000000000 $t
+     /tmp/cc9tOEVd.s:1275   .text.usart0_rx_check:0000000000000000 usart0_rx_check
+     /tmp/cc9tOEVd.s:1288   .text.aux_print_to_console:0000000000000000 $t
+     /tmp/cc9tOEVd.s:1295   .text.aux_print_to_console:0000000000000000 aux_print_to_console
+     /tmp/cc9tOEVd.s:1306   .text.i2c_writeBytes:0000000000000000 $t
+     /tmp/cc9tOEVd.s:1313   .text.i2c_writeBytes:0000000000000000 i2c_writeBytes
+     /tmp/cc9tOEVd.s:1447   .text.i2c_writeBytes:000000000000006c $d
+     /tmp/cc9tOEVd.s:1460   .text.i2c_writeByte:0000000000000000 $t
+     /tmp/cc9tOEVd.s:1467   .text.i2c_writeByte:0000000000000000 i2c_writeByte
+     /tmp/cc9tOEVd.s:1499   .text.i2c_readBytes:0000000000000000 $t
+     /tmp/cc9tOEVd.s:1506   .text.i2c_readBytes:0000000000000000 i2c_readBytes
+     /tmp/cc9tOEVd.s:1651   .text.i2c_readBytes:000000000000007c $d
+     /tmp/cc9tOEVd.s:1664   .text.i2c_readByte:0000000000000000 $t
+     /tmp/cc9tOEVd.s:1671   .text.i2c_readByte:0000000000000000 i2c_readByte
+     /tmp/cc9tOEVd.s:1693   .text.i2c_writeBit:0000000000000000 $t
+     /tmp/cc9tOEVd.s:1700   .text.i2c_writeBit:0000000000000000 i2c_writeBit
+     /tmp/cc9tOEVd.s:1773   .text.i2c_readBit:0000000000000000 $t
+     /tmp/cc9tOEVd.s:1780   .text.i2c_readBit:0000000000000000 i2c_readBit
+     /tmp/cc9tOEVd.s:1854   .bss.buffer:0000000000000000 buffer
+     /tmp/cc9tOEVd.s:1872   .bss.i2c_nRABytes:0000000000000000 i2c_nRABytes
+     /tmp/cc9tOEVd.s:1866   .bss.i2c_nDABytes:0000000000000000 i2c_nDABytes
+     /tmp/cc9tOEVd.s:1885   .bss.i2c_rxbuffer:0000000000000000 i2c_rxbuffer
+     /tmp/cc9tOEVd.s:1904   .bss.i2c_txbuffer:0000000000000000 i2c_txbuffer
+     /tmp/cc9tOEVd.s:1891   .bss.i2c_slaveAddress:0000000000000000 i2c_slaveAddress
+     /tmp/cc9tOEVd.s:1878   .bss.i2c_regAddress:0000000000000000 i2c_regAddress
+ARM GAS  /tmp/cc9tOEVd.s 			page 53
 
 
-     /tmp/ccPeOSOQ.s:1850   .bss.i2c_ReadWriteCmd:0000000000000000 i2c_ReadWriteCmd
-     /tmp/ccPeOSOQ.s:1887   .bss.i2c_status:0000000000000000 i2c_status
-     /tmp/ccPeOSOQ.s:1828   .bss.Feedback:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1832   .bss.Feedback:0000000000000000 Feedback
-     /tmp/ccPeOSOQ.s:1835   .bss.FeedbackRaw:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1839   .bss.FeedbackRaw:0000000000000000 FeedbackRaw
-     /tmp/ccPeOSOQ.s:1845   .bss.buffer:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1851   .bss.i2c_ReadWriteCmd:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1857   .bss.i2c_nDABytes:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1863   .bss.i2c_nRABytes:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1869   .bss.i2c_regAddress:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1871   .bss.i2c_rxbuffer:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1882   .bss.i2c_slaveAddress:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1888   .bss.i2c_status:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1890   .bss.i2c_txbuffer:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1900   .bss.mpuStatus:0000000000000000 mpuStatus
-     /tmp/ccPeOSOQ.s:1901   .bss.mpuStatus:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1903   .bss.old_pos.0:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1907   .bss.old_pos.0:0000000000000000 old_pos.0
-     /tmp/ccPeOSOQ.s:1913   .bss.rx1_buffer:0000000000000000 rx1_buffer
-     /tmp/ccPeOSOQ.s:1914   .bss.rx1_buffer:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1919   .bss.sensor1:0000000000000000 sensor1
-     /tmp/ccPeOSOQ.s:1920   .bss.sensor1:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1925   .bss.sensor1_read:0000000000000000 sensor1_read
-     /tmp/ccPeOSOQ.s:1926   .bss.sensor1_read:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1931   .bss.sensor2:0000000000000000 sensor2
-     /tmp/ccPeOSOQ.s:1932   .bss.sensor2:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1937   .bss.sensor2_read:0000000000000000 sensor2_read
-     /tmp/ccPeOSOQ.s:1938   .bss.sensor2_read:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1943   .bss.sideboard_imu:0000000000000000 sideboard_imu
-     /tmp/ccPeOSOQ.s:1944   .bss.sideboard_imu:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1946   .bss.timeoutCntSerial1:0000000000000000 $d
-     /tmp/ccPeOSOQ.s:1950   .bss.timeoutCntSerial1:0000000000000000 timeoutCntSerial1
-     /tmp/ccPeOSOQ.s:1956   .bss.timeoutFlagSerial1:0000000000000000 timeoutFlagSerial1
-     /tmp/ccPeOSOQ.s:1957   .bss.timeoutFlagSerial1:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1860   .bss.i2c_ReadWriteCmd:0000000000000000 i2c_ReadWriteCmd
+     /tmp/cc9tOEVd.s:1897   .bss.i2c_status:0000000000000000 i2c_status
+     /tmp/cc9tOEVd.s:1838   .bss.Feedback:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1842   .bss.Feedback:0000000000000000 Feedback
+     /tmp/cc9tOEVd.s:1845   .bss.FeedbackRaw:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1849   .bss.FeedbackRaw:0000000000000000 FeedbackRaw
+     /tmp/cc9tOEVd.s:1855   .bss.buffer:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1861   .bss.i2c_ReadWriteCmd:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1867   .bss.i2c_nDABytes:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1873   .bss.i2c_nRABytes:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1879   .bss.i2c_regAddress:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1881   .bss.i2c_rxbuffer:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1892   .bss.i2c_slaveAddress:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1898   .bss.i2c_status:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1900   .bss.i2c_txbuffer:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1910   .bss.mpuStatus:0000000000000000 mpuStatus
+     /tmp/cc9tOEVd.s:1911   .bss.mpuStatus:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1913   .bss.old_pos.0:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1917   .bss.old_pos.0:0000000000000000 old_pos.0
+     /tmp/cc9tOEVd.s:1923   .bss.rx1_buffer:0000000000000000 rx1_buffer
+     /tmp/cc9tOEVd.s:1924   .bss.rx1_buffer:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1929   .bss.sensor1:0000000000000000 sensor1
+     /tmp/cc9tOEVd.s:1930   .bss.sensor1:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1935   .bss.sensor1_read:0000000000000000 sensor1_read
+     /tmp/cc9tOEVd.s:1936   .bss.sensor1_read:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1941   .bss.sensor2:0000000000000000 sensor2
+     /tmp/cc9tOEVd.s:1942   .bss.sensor2:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1947   .bss.sensor2_read:0000000000000000 sensor2_read
+     /tmp/cc9tOEVd.s:1948   .bss.sensor2_read:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1953   .bss.sideboard_imu:0000000000000000 sideboard_imu
+     /tmp/cc9tOEVd.s:1954   .bss.sideboard_imu:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1956   .bss.timeoutCntSerial1:0000000000000000 $d
+     /tmp/cc9tOEVd.s:1960   .bss.timeoutCntSerial1:0000000000000000 timeoutCntSerial1
+     /tmp/cc9tOEVd.s:1966   .bss.timeoutFlagSerial1:0000000000000000 timeoutFlagSerial1
+     /tmp/cc9tOEVd.s:1967   .bss.timeoutFlagSerial1:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 gpio_bit_set

@@ -43,7 +43,7 @@
 
 /* ==================================== SETTINGS MPU-6050 ==================================== */
 #define MPU_SENSOR_ENABLE                     // [-] Enable flag for MPU-6050 sensor. Comment-out this flag to Disable the MPU sensor and reduce code size.
-#define MPU_DMP_ENABLE                        // [-] Enable flag for MPU-6050 DMP (Digital Motion Processing) functionality.
+//#define MPU_DMP_ENABLE                        // [-] Enable flag for MPU-6050 DMP (Digital Motion Processing) functionality.
 #define MPU_DEFAULT_HZ            20          // [Hz] Default MPU frequecy: must be between 1Hz and 200Hz.
 #define TEMP_READ_MS              500         // [ms] Temperature read time interval
 #define PEDO_READ_MS              1000        // [ms] Pedometer read time interval
@@ -62,7 +62,7 @@
 /* ==================================== SETTINGS USART ==================================== */
 #define SERIAL_START_FRAME        0xABCD      // [-] Start frame definition for reliable serial communication
 #define SERIAL_BUFFER_SIZE        256          // [bytes] Size of Serial Rx buffer. Make sure it is always larger than the 'Feedback' structure size
-#define SERIAL_TIMEOUT            600         // [-] Number of wrong received data for Serial timeout detection. Depends on DELAY_IN_MAIN_LOOP
+#define SERIAL_TIMEOUT            160         // [-] Number of wrong received data for Serial timeout detection. Depends on DELAY_IN_MAIN_LOOP
 #define USART_MAIN_BAUD           115200      // [bit/s] MAIN Serial Tx/Rx baud rate
 #define USART_AUX_BAUD            115200      // [bit/s] AUX Serial Tx/Rx baud rate
 
