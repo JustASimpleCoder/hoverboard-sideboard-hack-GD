@@ -5,7 +5,7 @@ static double beta_g = 0.1;
 static double q0, q1, q2, q3;
 
 
-void madgwick_init(Quaternion* q) {
+void madgwick_init(QuaternionDouble* q) {
     q->w = 1.0f;
     q->x = 0.0f;
     q->y = 0.0f;
@@ -22,14 +22,14 @@ static double inv_sqrt(double x) {
 	return y;
 }
 
-void madgwick_update(Quaternion* q, double ax, double ay, double az, 
+void madgwick_update(QuaternionDouble* q, double ax, double ay, double az, 
                      double gx, double gy, double gz, double dt) {
     if (dt <= 0.0) return;
 
-    q0 = (double)q->w / q30;
-    q1 = (double)q->x / q30;
-    q2 = (double)q->y / q30;
-    q3 = (double)q->z / q30;
+    q0 = q->w;
+    q1 = q->x ;
+    q2 = q->y ;
+    q3 = q->z ;
 
 
     double recipNorm;
@@ -98,8 +98,8 @@ void madgwick_update(Quaternion* q, double ax, double ay, double az,
     q3 *= recipNorm;
 
 
-    q->w = (long)(q0 * q30);
-    q->x = (long)(q1 * q30);
-    q->y = (long)(q2 * q30);
-    q->z = (long)(q3 * q30);
+    q->w = q0;
+    q->x = q1;
+    q->y = q2;
+    q->z = q3;
 }

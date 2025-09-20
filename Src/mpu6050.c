@@ -45,7 +45,9 @@
  */
 
 MPU_Data mpu;                                       // holds the MPU-6050 data
-Quaternion imu_quaternion;
+//Quaternion imu_quaternion;
+QuaternionDouble imu_quaternion_madgwick;
+
 double last_quat_timestamp;
 
 #ifdef SERIAL_AUX_RX
@@ -657,7 +659,7 @@ int mpu_read_reg(unsigned char reg, unsigned char *data)
 int mpu_init(void)
 {
 
-    madgwick_init(&imu_quaternion);
+    madgwick_init(&imu_quaternion_madgwick);
 
     unsigned char data[6];
 
@@ -3595,7 +3597,7 @@ void mpu_get_data(void)
         last_tick = current_tick;
 
 
-        madgwick_update(&imu_quaternion,
+        madgwick_update(&imu_quaternion_madgwick,
                         (double)mpu.accel.x / ACCEL_TO_G, 
                         (double)mpu.accel.y / ACCEL_TO_G, 
                         (double)mpu.accel.z / ACCEL_TO_G,
@@ -3604,11 +3606,10 @@ void mpu_get_data(void)
                         ( (double)mpu.gyro.z / GYRO_TO_DEG_S )*( M_PI/ 180.00),
                         dt
                     );
-
-        mpu.quat.w = imu_quaternion.w;
-        mpu.quat.x = imu_quaternion.x;
-        mpu.quat.y = imu_quaternion.y;
-        mpu.quat.z = imu_quaternion.z;
+        mpu.quat.w = (int32_t)(imu_quaternion_madgwick.w * q30);
+        mpu.quat.x = (int32_t)(imu_quaternion_madgwick.x * q30);
+        mpu.quat.y = (int32_t)(imu_quaternion_madgwick.y * q30);
+        mpu.quat.z = (int32_t)(imu_quaternion_madgwick.z * q30);
 
         mpu_calc_euler_angles();
     }   

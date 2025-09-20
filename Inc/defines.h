@@ -172,6 +172,14 @@ typedef struct{
     int32_t     z; 
 } Quaternion;
 
+typedef struct {
+    double w;
+    double x; 
+    double y; 
+    double z;
+} QuaternionDouble;
+
+
 typedef struct{
     int16_t     roll;
     int16_t     pitch;

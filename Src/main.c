@@ -46,6 +46,8 @@ int main(void)
     i2c_nvic_config();                                  // I2C interrupt configuration
     input_init();                                       // Input initialization
 
+    delay_1ms(500);                                     // give time for ros to startup
+
     while(1) {
 
         delay_1ms(DELAY_IN_MAIN_LOOP);

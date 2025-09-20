@@ -11,9 +11,9 @@
 
 
 
-void madgwick_init(Quaternion* q);
+void madgwick_init(QuaternionDouble* q);
 
-void madgwick_update(Quaternion* q, double ax, double ay, double az, 
+void madgwick_update(QuaternionDouble* q, double ax, double ay, double az, 
                      double gx, double gy, double gz, double dt);
 
 #endif

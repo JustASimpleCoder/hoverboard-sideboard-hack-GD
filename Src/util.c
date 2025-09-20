@@ -242,7 +242,7 @@ void handle_mpu6050(void) {
     if (SUCCESS == mpuStatus) {
         mpu_get_data();
     } else if (ERROR == mpuStatus && main_loop_counter % 100 == 0) {
-        toggle_led(LED1_GPIO_Port, LED1_Pin);                    // Toggle the Red LED every 100 ms
+        toggle_led(LED1_GPIO_Port, LED1_Pin);                    // Toggle the Red LED every 100 ms if mpu not working
     }
     // Print MPU data to Console
     #ifdef SERIAL_DEBUG
@@ -318,10 +318,10 @@ void handle_usart(void) {
             sideboard_imu.accel_y = (int16_t)mpu.accel.y;
             sideboard_imu.accel_z = (int16_t)mpu.accel.z;
         
-            sideboard_imu.quat_w = (int16_t)mpu.quat.w;
-            sideboard_imu.quat_x = (int16_t)mpu.quat.x;
-            sideboard_imu.quat_y = (int16_t)mpu.quat.y;
-            sideboard_imu.quat_z = (int16_t)mpu.quat.z;
+            sideboard_imu.quat_w = (int16_t)(mpu.quat.w >> 16);
+            sideboard_imu.quat_x = (int16_t)(mpu.quat.x >> 16);
+            sideboard_imu.quat_y = (int16_t)(mpu.quat.y >> 16);
+            sideboard_imu.quat_z = (int16_t)(mpu.quat.z >> 16);
  
             sideboard_imu.euler_pitch = (int16_t)mpu.euler.pitch;
             sideboard_imu.euler_roll = (int16_t)mpu.euler.roll;
