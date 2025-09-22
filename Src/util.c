@@ -317,11 +317,15 @@ void handle_usart(void) {
             sideboard_imu.accel_x = (int16_t)mpu.accel.x;
             sideboard_imu.accel_y = (int16_t)mpu.accel.y;
             sideboard_imu.accel_z = (int16_t)mpu.accel.z;
-        
-            sideboard_imu.quat_w = (int16_t)(mpu.quat.w >> 16);
-            sideboard_imu.quat_x = (int16_t)(mpu.quat.x >> 16);
-            sideboard_imu.quat_y = (int16_t)(mpu.quat.y >> 16);
-            sideboard_imu.quat_z = (int16_t)(mpu.quat.z >> 16);
+
+            sideboard_imu.quat_w_low     = (int16_t)(mpu.quat.w & 0xFFFF);
+            sideboard_imu.quat_w_high    = (int16_t)((mpu.quat.w >> 16) & 0xFFFF);
+            sideboard_imu.quat_x_low     = (int16_t)(mpu.quat.x & 0xFFFF);
+            sideboard_imu.quat_x_high    = (int16_t)((mpu.quat.x >> 16) & 0xFFFF);
+            sideboard_imu.quat_y_low     = (int16_t)(mpu.quat.y & 0xFFFF);
+            sideboard_imu.quat_y_high    = (int16_t)((mpu.quat.y >> 16) & 0xFFFF);
+            sideboard_imu.quat_z_low     = (int16_t)(mpu.quat.z & 0xFFFF);
+            sideboard_imu.quat_z_high    = (int16_t)((mpu.quat.z >> 16) & 0xFFFF);
  
             sideboard_imu.euler_pitch = (int16_t)mpu.euler.pitch;
             sideboard_imu.euler_roll = (int16_t)mpu.euler.roll;
@@ -336,7 +340,8 @@ void handle_usart(void) {
                 sideboard_imu.pitch ^ sideboard_imu.dPitch ^
                 sideboard_imu.gyro_x ^ sideboard_imu.gyro_y ^ sideboard_imu.gyro_z ^
                 sideboard_imu.accel_x ^ sideboard_imu.accel_y ^ sideboard_imu.accel_z ^
-                sideboard_imu.quat_w ^ sideboard_imu.quat_x ^ sideboard_imu.quat_y ^ sideboard_imu.quat_z ^
+                sideboard_imu.quat_w_low ^ sideboard_imu.quat_x_low ^ sideboard_imu.quat_y_low ^ sideboard_imu.quat_z_low ^
+                sideboard_imu.quat_w_high ^ sideboard_imu.quat_x_high ^ sideboard_imu.quat_y_high ^ sideboard_imu.quat_z_high ^
                 sideboard_imu.euler_pitch ^ sideboard_imu.euler_roll ^ sideboard_imu.euler_yaw ^
                 sideboard_imu.temperature ^ sideboard_imu.sensors
             );
