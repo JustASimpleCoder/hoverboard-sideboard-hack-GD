@@ -48,7 +48,7 @@ MPU_Data mpu;                                       // holds the MPU-6050 data
 //Quaternion imu_quaternion;
 QuaternionDouble imu_quaternion_madgwick;
 static unsigned long last_tick_sensor = 0;
-double last_quat_timestamp;
+static double last_quat_timestamp = 0.0;
 
 #ifdef SERIAL_AUX_RX
 uint8_t print_aux = 0;                              // print AUX serial data
@@ -3368,7 +3368,6 @@ void mpu_get_data(void)
         new_temp = 1;
     }
 
-
     if (hal.new_gyro && hal.dmp_on) {
         short gyro[3], accel[3], sensors;
         static long quat[4], temperature;
@@ -3449,7 +3448,12 @@ void mpu_get_data(void)
         }
     }
     
-    if (new_data) {
+    if (new_data) { 
+
+
+        double dt = (double)(sensor_timestamp - last_quat_timestamp) / 1000.00;
+        last_quat_timestamp = sensor_timestamp;
+
         madgwick_update(&imu_quaternion_madgwick,
                         (double)mpu.accel.x / ACCEL_TO_G, 
                         (double)mpu.accel.y / ACCEL_TO_G, 
