@@ -74,24 +74,28 @@ typedef struct{
   int16_t   speedL_meas;
   int16_t   batVoltage;
   int16_t   boardTemp;
-  int16_t   gyro_x;      // mpu.gyro.x
-  int16_t   gyro_y;      // mpu.gyro.y  
-  int16_t   gyro_z;      // mpu.gyro.z
-  int16_t   accel_x;     // mpu.accel.x
-  int16_t   accel_y;     // mpu.accel.y
-  int16_t   accel_z;     // mpu.accel.z
-  int32_t   quat_w;      // mpu.quat.w
-  int32_t   quat_x;      // mpu.quat.x
-  int32_t   quat_y;      // mpu.quat.y
-  int32_t   quat_z;      // mpu.quat.z
-  int16_t   euler_pitch; // mpu.euler.pitch
-  int16_t   euler_roll;  // mpu.euler.roll
-  int16_t   euler_yaw;   // mpu.euler.yaw
-  int16_t   temperature; // mpu.temp
-  uint16_t  sensors;    // sensor status
+  int16_t   gyro_x;      
+  int16_t   gyro_y;      
+  int16_t   gyro_z;     
+  int16_t   accel_x;     
+  int16_t   accel_y;     
+  int16_t   accel_z;     
+  int16_t   quat_w_low; 
+  int16_t   quat_w_high; 
+  int16_t   quat_x_low;     
+  int16_t   quat_x_high;   
+  int16_t   quat_y_low;   
+  int16_t   quat_y_high;
+  int16_t   quat_z_low;   
+  int16_t   quat_z_high; 
+  int16_t   euler_pitch; 
+  int16_t   euler_roll; 
+  int16_t   euler_yaw;  
+  int16_t   temperature;
+  uint16_t  sensors;   
   uint16_t  cmdLed;
   uint16_t  checksum;
-} SerialFeedback;
+} SerialFeedbackMainboard;
 #endif
 
 /* Tx structure USART AUX */
@@ -137,7 +141,7 @@ void usart1_rx_check(void);
 void usart_process_debug(uint8_t *userCommand, uint32_t len);
 #endif
 #ifdef SERIAL_FEEDBACK
-void usart_process_data(SerialFeedback *Feedback_in, SerialFeedback *Feedback_out);
+void usart_process_data(SerialFeedbackMainboard *Feedback_in, SerialFeedbackMainboard *Feedback_out);
 #endif
 
 /* usart0 read functions */

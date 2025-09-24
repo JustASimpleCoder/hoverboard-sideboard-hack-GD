@@ -41,20 +41,23 @@ int main(void)
     usart_config(USART_AUX,  USART_AUX_BAUD);           // USART AUX config
     #endif
     usart_nvic_config();                                // USART interrupt configuration
+    toggle_led(LED1_GPIO_Port, LED3_Pin);
+
 
     i2c_config();                                       // I2C config
     i2c_nvic_config();                                  // I2C interrupt configuration
     input_init();                                       // Input initialization
 
-    //delay_1ms(500);                                     // give time for ros to startup
-
+    //delay(1ms) doesn't work until inner loops, causing demo_led to be stuck forever
+    //gpio_bit_reset(LED3_GPIO_Port, LED3_Pin);
     while(1) {
 
       delay_1ms(DELAY_IN_MAIN_LOOP);
       handle_mpu6050();                               // Handle of the MPU-6050 IMU sensor
       //handle_sensors();                               // Handle of the optical sensors
       handle_usart();                                 // Handle of the USART data
-      // handle_leds();                                  // Handle of the sideboard LEDs
+      //handle_leds();                                  // Handle of the sideboard LEDs
+
       main_loop_counter++;
     }
 }

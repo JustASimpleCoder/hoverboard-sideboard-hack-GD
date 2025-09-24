@@ -40,8 +40,8 @@ static uint32_t rx1_buffer_len = ARRAY_LEN(rx1_buffer);
 #endif
 
 #ifdef SERIAL_FEEDBACK
-static SerialFeedback Feedback;
-static SerialFeedback FeedbackRaw;
+static SerialFeedbackMainboard Feedback;
+static SerialFeedbackMainboard FeedbackRaw;
 static uint16_t timeoutCntSerial1  = 0;         // Timeout counter for UART1 Rx Serial
 static uint8_t  timeoutFlagSerial1 = 0;         // Timeout Flag for UART1 Rx Serial: 0 = OK, 1 = Problem detected (line disconnected or wrong Rx data)
 static uint32_t Feedback_len  = sizeof(Feedback);
@@ -158,13 +158,13 @@ void intro_demo_led(uint32_t tDelay)
     for (i = 0; i < 3; i++) {
         gpio_bit_set(LED1_GPIO_Port, LED1_Pin);
         gpio_bit_reset(LED3_GPIO_Port, LED3_Pin);
-        delay_1ms(tDelay);
+        //delay_1ms(tDelay);
         gpio_bit_set(LED2_GPIO_Port, LED2_Pin);
         gpio_bit_reset(LED1_GPIO_Port, LED1_Pin);
-        delay_1ms(tDelay);
+        //delay_1ms(tDelay);
         gpio_bit_set(LED3_GPIO_Port, LED3_Pin);
         gpio_bit_reset(LED2_GPIO_Port, LED2_Pin);
-        delay_1ms(tDelay);
+        //delay_1ms(tDelay);
     }
 
     for (i = 0; i < 2; i++) {
@@ -173,7 +173,7 @@ void intro_demo_led(uint32_t tDelay)
         gpio_bit_set(LED3_GPIO_Port, LED3_Pin);
         gpio_bit_set(LED4_GPIO_Port, LED4_Pin);
         gpio_bit_set(LED5_GPIO_Port, LED5_Pin);
-        delay_1ms(tDelay);
+        //delay_1ms(tDelay);
         gpio_bit_reset(LED1_GPIO_Port, LED1_Pin);
         gpio_bit_reset(LED2_GPIO_Port, LED2_Pin);
         gpio_bit_reset(LED3_GPIO_Port, LED3_Pin);
@@ -210,7 +210,7 @@ void input_init(void) {
         usart_Rx_DMA_config(USART_AUX, (uint8_t *)rx0_buffer, sizeof(rx0_buffer));
     #endif
 
-    //intro_demo_led(100);                                // Short LEDs intro demo with 100 ms delay. This also gives some time for the MPU-6050 to power-up.	
+    intro_demo_led(100);                                // Short LEDs intro demo with 100 ms delay. This also gives some time for the MPU-6050 to power-up.	
 
     #ifdef MPU_SENSOR_ENABLE
         if(mpu_config()) {                              // IMU MPU-6050 config
@@ -505,12 +505,22 @@ void usart_process_debug(uint8_t *userCommand, uint32_t len)
  * - if the Feedback_in data is valid (correct START_FRAME and checksum) copy the Feedback_in to Feedback_out
  */
 #ifdef SERIAL_FEEDBACK
-void usart_process_data(SerialFeedback *Feedback_in, SerialFeedback *Feedback_out)
+void usart_process_data(SerialFeedbackMainboard *Feedback_in, SerialFeedbackMainboard *Feedback_out)
 {
     uint16_t checksum;
     if (Feedback_in->start == SERIAL_START_FRAME) {
-        checksum = (uint16_t)(Feedback_in->start ^ Feedback_in->cmd1 ^ Feedback_in->cmd2 ^ Feedback_in->speedR_meas ^ Feedback_in->speedL_meas
-                            ^ Feedback_in->batVoltage ^ Feedback_in->boardTemp ^ Feedback_in->cmdLed); 
+        checksum = (uint16_t)(
+            Feedback.start ^ Feedback.cmd1 ^ Feedback.cmd2 ^ 
+            Feedback.speedR_meas ^ Feedback.speedL_meas ^
+            Feedback.batVoltage ^ Feedback.boardTemp ^
+            Feedback.gyro_x  ^ Feedback.gyro_y ^ Feedback.gyro_z ^
+            Feedback.accel_x ^ Feedback.accel_y ^ Feedback.accel_z ^ 
+            Feedback.quat_w_low  ^ Feedback.quat_x_low ^ Feedback.quat_y_low ^ Feedback.quat_z_low ^
+            Feedback.quat_w_high  ^ Feedback.quat_x_high ^ Feedback.quat_y_high ^ Feedback.quat_z_high ^ 
+            Feedback.euler_pitch ^ Feedback.euler_roll ^ Feedback.euler_yaw ^ 
+            Feedback.temperature ^ Feedback.sensors ^ Feedback.cmdLed
+        ); 
+        
         if (Feedback_in->checksum == checksum) {
             *Feedback_out = *Feedback_in;
             timeoutCntSerial1  = 0;     // Reset timeout counter

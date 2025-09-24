@@ -47,7 +47,7 @@
 MPU_Data mpu;                                       // holds the MPU-6050 data
 //Quaternion imu_quaternion;
 QuaternionDouble imu_quaternion_madgwick;
-
+static unsigned long last_tick_sensor = 0;
 double last_quat_timestamp;
 
 #ifdef SERIAL_AUX_RX
@@ -3131,64 +3131,6 @@ int mpu_lp_motion_interrupt(unsigned short thresh, unsigned char time, unsigned 
             mpu_get_fifo_config(&st.chip_cfg.cache.fifo_sensors);
         }
 
-#if defined MPU6500
-        /* Disable hardware interrupts. */
-        set_int_enable(0);
-
-        /* Enter full-power accel-only mode, no FIFO/DMP. */
-        data[0] = 0;
-        data[1] = 0;
-        data[2] = BIT_STBY_XYZG;
-        if (i2c_write(st.hw->addr, st.reg->user_ctrl, 3, data))
-            goto lp_int_restore;
-
-        /* Set motion threshold. */
-        data[0] = thresh_hw;
-        if (i2c_write(st.hw->addr, st.reg->motion_thr, 1, data))
-            goto lp_int_restore;
-
-        /* Set wake frequency. */
-        if (lpa_freq == 1)
-            data[0] = INV_LPA_1_25HZ;
-        else if (lpa_freq == 2)
-            data[0] = INV_LPA_2_5HZ;
-        else if (lpa_freq <= 5)
-            data[0] = INV_LPA_5HZ;
-        else if (lpa_freq <= 10)
-            data[0] = INV_LPA_10HZ;
-        else if (lpa_freq <= 20)
-            data[0] = INV_LPA_20HZ;
-        else if (lpa_freq <= 40)
-            data[0] = INV_LPA_40HZ;
-        else if (lpa_freq <= 80)
-            data[0] = INV_LPA_80HZ;
-        else if (lpa_freq <= 160)
-            data[0] = INV_LPA_160HZ;
-        else if (lpa_freq <= 320)
-            data[0] = INV_LPA_320HZ;
-        else
-            data[0] = INV_LPA_640HZ;
-        if (i2c_write(st.hw->addr, st.reg->lp_accel_odr, 1, data))
-            goto lp_int_restore;
-
-        /* Enable motion interrupt (MPU6500 version). */
-        data[0] = BITS_WOM_EN;
-        if (i2c_write(st.hw->addr, st.reg->accel_intel, 1, data))
-            goto lp_int_restore;
-
-        /* Enable cycle mode. */
-        data[0] = BIT_LPA_CYCLE;
-        if (i2c_write(st.hw->addr, st.reg->pwr_mgmt_1, 1, data))
-            goto lp_int_restore;
-
-        /* Enable interrupt. */
-        data[0] = BIT_MOT_INT_EN;
-        if (i2c_write(st.hw->addr, st.reg->int_enable, 1, data))
-            goto lp_int_restore;
-
-        st.chip_cfg.int_motion_only = 1;
-        return 0;
-#endif
     } else {
         /* Don't "restore" the previous state if no state has been saved. */
         unsigned int ii;
@@ -3258,28 +3200,7 @@ void mpu_start_self_test(void)
         consoleLog("Passed!\r\n");
         /* Test passed. We can trust the gyro data here, so now we need to update calibrated data*/
 
-#ifdef USE_CAL_HW_REGISTERS
-        /*
-         * This portion of the code uses the HW offset registers that are in the MPUxxxx devices
-         * instead of pushing the cal data to the MPL software library
-         */
-        unsigned char i = 0;
 
-        for(i = 0; i<3; i++) {
-            gyro[i] = (long)(gyro[i] * 32.8f); //convert to +-1000dps
-            accel[i] *= 2048.f; //convert to +-16G
-            accel[i] = accel[i] >> 16;
-            gyro[i] = (long)(gyro[i] >> 16);
-        }
-
-        mpu_set_gyro_bias_reg(gyro);
-
-        #if defined (MPU6500) || defined (MPU9250)
-                mpu_set_accel_bias_6500_reg(accel);
-        #elif defined (MPU6050) || defined (MPU9150)
-                mpu_set_accel_bias_6050_reg(accel);
-        #endif
-#endif
     }
     else {
         if (!(result & 0x1))
@@ -3416,65 +3337,6 @@ int mpu_config(void)
     hal.next_pedo_ms        = 0;
     hal.next_temp_ms        = 0;
 
-#ifdef MPU_DMP_ENABLE
-    /* To initialize the DMP:
-     * 1. Call dmp_load_motion_driver_firmware(). This pushes the DMP image in
-     *    inv_mpu_dmp_motion_driver.h into the MPU memory.
-     * 2. Push the gyro and accel orientation matrix to the DMP.
-     * 3. Register gesture callbacks. Don't worry, these callbacks won't be
-     *    executed unless the corresponding feature is enabled.
-     * 4. Call dmp_enable_feature(mask) to enable different features.
-     * 5. Call dmp_set_fifo_rate(freq) to select a DMP output rate.
-     * 6. Call any feature-specific control functions.
-     *
-     * To enable the DMP, just call mpu_set_dmp_state(1). This function can
-     * be called repeatedly to enable and disable the DMP at runtime.
-     *
-     * The following is a short summary of the features supported in the DMP
-     * image provided in inv_mpu_dmp_motion_driver.c:
-     * DMP_FEATURE_LP_QUAT: Generate a gyro-only quaternion on the DMP at
-     * 200Hz. Integrating the gyro data at higher rates reduces numerical
-     * errors (compared to integration on the MCU at a lower sampling rate).
-     * DMP_FEATURE_6X_LP_QUAT: Generate a gyro/accel quaternion on the DMP at
-     * 200Hz. Cannot be used in combination with DMP_FEATURE_LP_QUAT.
-     * DMP_FEATURE_TAP: Detect taps along the X, Y, and Z axes.
-     * DMP_FEATURE_ANDROID_ORIENT: Google's screen rotation algorithm. Triggers
-     * an event at the four orientations where the screen should rotate.
-     * DMP_FEATURE_GYRO_CAL: Calibrates the gyro data after eight seconds of
-     * no motion.
-     * DMP_FEATURE_SEND_RAW_ACCEL: Add raw accelerometer data to the FIFO.
-     * DMP_FEATURE_SEND_RAW_GYRO: Add raw gyro data to the FIFO.
-     * DMP_FEATURE_SEND_CAL_GYRO: Add calibrated gyro data to the FIFO. Cannot
-     * be used in combination with DMP_FEATURE_SEND_RAW_GYRO.
-     */
-        consoleLog(" writing DMP... ");
-        if (dmp_load_motion_driver_firmware()) {
-            consoleLog(" FAIL (DMP)\r\n");
-            return -1;
-        }
-    dmp_set_orientation(inv_orientation_matrix_to_scalar(MPU_ORIENTATION));
-    dmp_register_tap_cb(mpu_tap_func);
-    dmp_register_android_orient_cb(mpu_android_orient_func);
-    /*
-     * Known Bug -
-     * DMP when enabled will sample sensor data at 200Hz and output to FIFO at the rate
-     * specified in the dmp_set_fifo_rate API. The DMP will then sent an interrupt once
-     * a sample has been put into the FIFO. Therefore if the dmp_set_fifo_rate is at 25Hz
-     * there will be a 25Hz interrupt from the MPU device.
-     *
-     * There is a known issue in which if you do not enable DMP_FEATURE_TAP
-     * then the interrupts will be at 200Hz even if fifo rate
-     * is set at a different rate. To avoid this issue include the DMP_FEATURE_TAP
-     *
-     * DMP sensor fusion works only with gyro at +-2000dps and accel +-2G
-     */
-    hal.dmp_features = 	DMP_FEATURE_6X_LP_QUAT | DMP_FEATURE_TAP | DMP_FEATURE_ANDROID_ORIENT |
-                        DMP_FEATURE_SEND_RAW_ACCEL | DMP_FEATURE_SEND_RAW_GYRO | DMP_FEATURE_GYRO_CAL;
-    dmp_enable_feature(hal.dmp_features);
-    dmp_set_fifo_rate(MPU_DEFAULT_HZ);
-    mpu_set_dmp_state(1);
-    hal.dmp_on = 1;
-#endif
 
     consoleLog(" OK\r\n");	
     return 0;
@@ -3588,15 +3450,6 @@ void mpu_get_data(void)
     }
     
     if (new_data) {
-
-        static unsigned long last_tick = 0;
-        unsigned long current_tick;
-        
-        get_tick_count_ms(&current_tick);
-        double dt = (current_tick - last_tick) / 1000.0;  // Convert ms to seconds
-        last_tick = current_tick;
-
-
         madgwick_update(&imu_quaternion_madgwick,
                         (double)mpu.accel.x / ACCEL_TO_G, 
                         (double)mpu.accel.y / ACCEL_TO_G, 
@@ -3604,7 +3457,7 @@ void mpu_get_data(void)
                         ( (double)mpu.gyro.x / GYRO_TO_DEG_S )*( M_PI/ 180.00), 
                         ( (double)mpu.gyro.y / GYRO_TO_DEG_S )*( M_PI/ 180.00),  
                         ( (double)mpu.gyro.z / GYRO_TO_DEG_S )*( M_PI/ 180.00),
-                        dt
+                        sensor_timestamp
                     );
         mpu.quat.w = (int32_t)(imu_quaternion_madgwick.w * q30);
         mpu.quat.x = (int32_t)(imu_quaternion_madgwick.x * q30);
