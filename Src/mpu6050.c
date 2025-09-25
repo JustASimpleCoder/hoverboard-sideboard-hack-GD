@@ -47,8 +47,10 @@
 MPU_Data mpu;                                       // holds the MPU-6050 data
 //Quaternion imu_quaternion;
 QuaternionDouble imu_quaternion_madgwick;
-static unsigned long last_tick_sensor = 0;
+//static unsigned long last_tick_sensor = 0;
 static double last_quat_timestamp = 0.0;
+static bool first_pass_madgwick = TRUE;
+static unsigned long last_tick = 0;
 
 #ifdef SERIAL_AUX_RX
 uint8_t print_aux = 0;                              // print AUX serial data
@@ -56,9 +58,9 @@ uint8_t print_aux = 0;                              // print AUX serial data
 
 #ifdef  MPU_SENSOR_ENABLE
 
-// static signed char MPU_ORIENTATION[9] = {1, 0, 0,   // [-] MPU Sensor orientation matrix: set this according to the sensor installation
-//                                          0, 1, 0,
-//                                          0, 0, 1};
+static signed char MPU_ORIENTATION[9] = {1, 0, 0,   // [-] MPU Sensor orientation matrix: set this according to the sensor installation
+                                         0, 1, 0,
+                                         0, 0, 1};
 
 
 #if !defined MPU6050 && !defined MPU9150 && !defined MPU6500 && !defined MPU9250
@@ -3447,9 +3449,16 @@ void mpu_get_data(void)
             new_data = 1;
         }
     }
+
     
     if (new_data) { 
 
+        if(first_pass_madgwick){
+            first_pass_madgwick = FALSE;
+            last_quat_timestamp = sensor_timestamp;
+            last_tick = last_quat_timestamp;
+            return;
+        }
 
         double dt = (double)(sensor_timestamp - last_quat_timestamp) / 1000.00;
         last_quat_timestamp = sensor_timestamp;
@@ -3461,14 +3470,15 @@ void mpu_get_data(void)
                         ( (double)mpu.gyro.x / GYRO_TO_DEG_S )*( M_PI/ 180.00), 
                         ( (double)mpu.gyro.y / GYRO_TO_DEG_S )*( M_PI/ 180.00),  
                         ( (double)mpu.gyro.z / GYRO_TO_DEG_S )*( M_PI/ 180.00),
-                        sensor_timestamp
+                        dt
                     );
         mpu.quat.w = (int32_t)(imu_quaternion_madgwick.w * q30);
         mpu.quat.x = (int32_t)(imu_quaternion_madgwick.x * q30);
         mpu.quat.y = (int32_t)(imu_quaternion_madgwick.y * q30);
-        mpu.quat.z = (int32_t)(imu_quaternion_madgwick.z * q30);
+        mpu.quat.z = (int32_t)(imu_quaternion_madgwick.z * q30); 
 
         mpu_calc_euler_angles();
+        
     }   
 }
 

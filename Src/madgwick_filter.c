@@ -2,23 +2,22 @@
 #include "madgwick_filter.h"
 
 static double beta_g = 0.1;
-static double q0, q1, q2, q3;
+volatile double q0 = 1.0, q1 = 0 , q2 = 0, q3 = 0;
 
 
 void madgwick_init(QuaternionDouble* q) {
-    q->w = 1.0f;
-    q->x = 0.0f;
-    q->y = 0.0f;
-    q->z = 0.0f;
+    q->w = 1.0;
+    q->x = 0.0;
+    q->y = 0.0;
+    q->z = 0.0;
 }
 
 static double inv_sqrt(double x) {
-	float halfx = 0.5f * x;
-	float y = x;
-
-	long i = *(long*)&y;
-	i = 0x5f3759df - (i>>1);
-	y = *(float*)&i;
+	double halfx = 0.5 * x;
+	double y = x;
+	long long i = *(long long*)&y;
+	i = 0x5fe6eb50c7b537a9 - (i>>1);
+	y = *(double *)&i;
 	y = y * (1.5f - (halfx * y * y));
 	return y;
 }
