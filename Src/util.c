@@ -27,6 +27,15 @@
 #include "setup.h"
 #include "util.h"
 #include "mpu6050.h"
+#include "MadgwickAHRS.h"
+
+
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
+
+// QuaternionFloat imu_quaternion_madgwick;
+// QuaternionDouble imu_quaternion_madgwick;
 
 // USART1 variables
 #ifdef SERIAL_CONTROL
@@ -220,6 +229,7 @@ void input_init(void) {
         else {
             mpuStatus = SUCCESS;
             gpio_bit_set(LED2_GPIO_Port, LED2_Pin);     // Turn on GREEN LED - sensor enabled and ok
+            
         }
     #else
         gpio_bit_set(LED2_GPIO_Port, LED2_Pin);         // Turn on GREEN LED - sensor disabled
@@ -244,6 +254,7 @@ void handle_mpu6050(void) {
     } else if (ERROR == mpuStatus && main_loop_counter % 100 == 0) {
         toggle_led(LED1_GPIO_Port, LED1_Pin);                    // Toggle the Red LED every 100 ms if mpu not working
     }
+
     // Print MPU data to Console
     #ifdef SERIAL_DEBUG
     if (main_loop_counter % 50 == 0) {
@@ -251,6 +262,35 @@ void handle_mpu6050(void) {
     }
     #endif
 #endif
+}
+
+
+static unsigned long madgwick_time_last = 0;
+
+
+void handle_madgwick(void){
+    unsigned long madgwick_time_now;
+    get_tick_count_ms(&madgwick_time_now);
+
+    if(madgwick_time_now - madgwick_time_last >= 10){ // wait at least 100HZ
+        madgwick_time_last = madgwick_time_now;
+
+        MadgwickAHRSupdateIMU(
+            ((float)mpu.gyro.x / GYRO_TO_DEG_S )*( M_PI / 180.0f), 
+            ((float)mpu.gyro.y / GYRO_TO_DEG_S )*( M_PI / 180.0f),  
+            ((float)mpu.gyro.z / GYRO_TO_DEG_S )*( M_PI / 180.0f),
+            (float)mpu.accel.x / ACCEL_TO_G, 
+            (float)mpu.accel.y / ACCEL_TO_G, 
+            (float)mpu.accel.z / ACCEL_TO_G
+        );
+
+        mpu.quat.w = (int32_t)(q0 * q30);
+        mpu.quat.x = (int32_t)(q1 * q30);
+        mpu.quat.y = (int32_t)(q2 * q30);
+        mpu.quat.z = (int32_t)(q3 * q30); 
+
+        mpu_calc_euler_angles();
+    }
 }
 
 /*
@@ -318,13 +358,13 @@ void handle_usart(void) {
             sideboard_imu.accel_y = (int16_t)mpu.accel.y;
             sideboard_imu.accel_z = (int16_t)mpu.accel.z;
 
-            sideboard_imu.quat_w_low     = (int16_t)(mpu.quat.w & 0xFFFF);
+            sideboard_imu.quat_w_low     = (uint16_t)(mpu.quat.w & 0xFFFF);
             sideboard_imu.quat_w_high    = (int16_t)((mpu.quat.w >> 16) & 0xFFFF);
-            sideboard_imu.quat_x_low     = (int16_t)(mpu.quat.x & 0xFFFF);
+            sideboard_imu.quat_x_low     = (uint16_t)(mpu.quat.x & 0xFFFF);
             sideboard_imu.quat_x_high    = (int16_t)((mpu.quat.x >> 16) & 0xFFFF);
-            sideboard_imu.quat_y_low     = (int16_t)(mpu.quat.y & 0xFFFF);
+            sideboard_imu.quat_y_low     = (uint16_t)(mpu.quat.y & 0xFFFF);
             sideboard_imu.quat_y_high    = (int16_t)((mpu.quat.y >> 16) & 0xFFFF);
-            sideboard_imu.quat_z_low     = (int16_t)(mpu.quat.z & 0xFFFF);
+            sideboard_imu.quat_z_low     = (uint16_t)(mpu.quat.z & 0xFFFF);
             sideboard_imu.quat_z_high    = (int16_t)((mpu.quat.z >> 16) & 0xFFFF);
  
             sideboard_imu.euler_pitch = (int16_t)mpu.euler.pitch;
@@ -359,11 +399,11 @@ void handle_usart(void) {
     // Rx USART MAIN
     #ifdef SERIAL_FEEDBACK
         if (timeoutCntSerial1++ >= SERIAL_TIMEOUT) {                // Timeout qualification
-            timeoutFlagSerial1 = 1;                                 // Timeout detected
+            //timeoutFlagSerial1 = 1;                                 // Timeout detected
             timeoutCntSerial1  = SERIAL_TIMEOUT;                    // Limit timout counter value
         }
         if (timeoutFlagSerial1 && main_loop_counter % 100 == 0) {   // In case of timeout bring the system to a Safe State and indicate error if desired
-            //toggle_led(LED3_GPIO_Port, LED3_Pin);                   // Toggle the Yellow LED every 100 ms
+            toggle_led(LED3_GPIO_Port, LED3_Pin);                   // Toggle the Yellow LED every 100 ms
         }
     #endif
 

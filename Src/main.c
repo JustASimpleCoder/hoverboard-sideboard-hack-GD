@@ -29,7 +29,7 @@
 #include "mpu6050.h"
 #include "mpu6050_dmp.h"
 
-uint32_t     main_loop_counter;                         // main loop counter to perform task scheduling inside main()
+uint32_t  main_loop_counter;                         // main loop counter to perform task scheduling inside main()
 
 int main(void)
 {
@@ -54,6 +54,7 @@ int main(void)
 
       delay_1ms(DELAY_IN_MAIN_LOOP);
       handle_mpu6050();                               // Handle of the MPU-6050 IMU sensor
+      handle_madgwick();
       //handle_sensors();                               // Handle of the optical sensors
       handle_usart();                                 // Handle of the USART data
       //handle_leds();                                  // Handle of the sideboard LEDs

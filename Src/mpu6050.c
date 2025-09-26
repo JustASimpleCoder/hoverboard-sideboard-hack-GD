@@ -30,7 +30,6 @@
 #include "util.h"
 #include "mpu6050.h"
 #include "mpu6050_dmp.h"
-#include "madgwick_filter.h"
 
 /* The following functions must be defined for this platform:
  * i2c_write(unsigned char slave_addr, unsigned char reg_addr,
@@ -46,11 +45,13 @@
 
 MPU_Data mpu;                                       // holds the MPU-6050 data
 //Quaternion imu_quaternion;
-QuaternionDouble imu_quaternion_madgwick;
+
+// QuaternionDouble imu_quaternion_madgwick;
+
 //static unsigned long last_tick_sensor = 0;
-static double last_quat_timestamp = 0.0;
-static bool first_pass_madgwick = TRUE;
-static unsigned long last_tick = 0;
+// static double last_quat_timestamp = 0.0;
+// static bool first_pass_madgwick = TRUE;
+// static unsigned long last_tick = 0;
 
 #ifdef SERIAL_AUX_RX
 uint8_t print_aux = 0;                              // print AUX serial data
@@ -661,7 +662,7 @@ int mpu_read_reg(unsigned char reg, unsigned char *data)
 int mpu_init(void)
 {
 
-    madgwick_init(&imu_quaternion_madgwick);
+    //madgwick_init(&imu_quaternion_madgwick);
 
     unsigned char data[6];
 
@@ -3415,7 +3416,7 @@ void mpu_get_data(void)
             new_data = 1;
         }
     } else if (hal.new_gyro) {
-        short gyro[3], accel[3];
+        int16_t gyro[3], accel[3];
         long temperature;
         unsigned char sensors, more;
         /* This function gets new data from the FIFO. The FIFO can contain
@@ -3443,41 +3444,22 @@ void mpu_get_data(void)
             }
         }
         if (sensors & INV_XYZ_ACCEL) {
+
+     
+            new_data = 1;
+
             mpu.accel.x = accel[0];
             mpu.accel.y = accel[1];
             mpu.accel.z = accel[2];
-            new_data = 1;
+            
         }
+
+
     }
 
-    
-    if (new_data) { 
+    if (new_data ) { 
 
-        if(first_pass_madgwick){
-            first_pass_madgwick = FALSE;
-            last_quat_timestamp = sensor_timestamp;
-            last_tick = last_quat_timestamp;
-            return;
-        }
-
-        double dt = (double)(sensor_timestamp - last_quat_timestamp) / 1000.00;
-        last_quat_timestamp = sensor_timestamp;
-
-        madgwick_update(&imu_quaternion_madgwick,
-                        (double)mpu.accel.x / ACCEL_TO_G, 
-                        (double)mpu.accel.y / ACCEL_TO_G, 
-                        (double)mpu.accel.z / ACCEL_TO_G,
-                        ( (double)mpu.gyro.x / GYRO_TO_DEG_S )*( M_PI/ 180.00), 
-                        ( (double)mpu.gyro.y / GYRO_TO_DEG_S )*( M_PI/ 180.00),  
-                        ( (double)mpu.gyro.z / GYRO_TO_DEG_S )*( M_PI/ 180.00),
-                        dt
-                    );
-        mpu.quat.w = (int32_t)(imu_quaternion_madgwick.w * q30);
-        mpu.quat.x = (int32_t)(imu_quaternion_madgwick.x * q30);
-        mpu.quat.y = (int32_t)(imu_quaternion_madgwick.y * q30);
-        mpu.quat.z = (int32_t)(imu_quaternion_madgwick.z * q30); 
-
-        mpu_calc_euler_angles();
+        
         
     }   
 }

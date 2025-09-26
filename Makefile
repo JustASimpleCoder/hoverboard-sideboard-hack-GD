@@ -71,7 +71,7 @@ Src/mpu6050_dmp.c \
 Src/setup.c \
 Src/i2c_it.c \
 Src/gd32f1x0_it.c \
-Src/madgwick_filter.c
+Src/MadgwickAHRS.c
 
 # ASM sources
 ASM_SOURCES =  \

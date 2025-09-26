@@ -22,6 +22,10 @@
 #define UTIL_H
 
 #include <stdint.h>
+#include "defines.h"
+
+
+
 
 /* Tx structure USART MAIN */
 #ifdef SERIAL_CONTROL
@@ -49,11 +53,11 @@ typedef struct{
     int16_t  accel_z;     
     int16_t  quat_w_low; 
     int16_t  quat_w_high; 
-    int16_t  quat_x_low;     
+    uint16_t  quat_x_low;     
     int16_t  quat_x_high;   
-    int16_t  quat_y_low;   
+    uint16_t  quat_y_low;   
     int16_t  quat_y_high;
-    int16_t  quat_z_low;   
+    uint16_t  quat_z_low;   
     int16_t  quat_z_high;  
     int16_t  euler_pitch; 
     int16_t  euler_roll; 
@@ -126,11 +130,16 @@ void toggle_led(uint32_t gpio_periph, uint32_t pin);
 void intro_demo_led(uint32_t tDelay);
 uint8_t switch_check(uint16_t ch, uint8_t type);
 
+
+
 /* input initialization function */
 void input_init(void);
+void madgwick_init(QuaternionFloat* q);
+
 
 /* handle functions */
 void handle_mpu6050(void);
+void handle_madgwick(void);
 void handle_sensors(void);
 void handle_usart(void);
 void handle_leds(void);

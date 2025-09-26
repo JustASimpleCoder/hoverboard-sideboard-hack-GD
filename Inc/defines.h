@@ -25,7 +25,7 @@
 // Includes
 #include "gd32f1x0.h"
 #include "config.h"
-#include "util.h"
+//#include "util.h"
 
 #if defined(PRINTF_FLOAT_SUPPORT) && defined(SERIAL_DEBUG) && defined(__GNUC__)
     asm(".global _printf_float");       // this is the magic trick for printf to support float. Warning: It will increase code considerably! Better to avoid!
@@ -136,10 +136,10 @@ typedef enum {READ = 0, WRITE = !READ} i2c_cmd;
 #endif
 
 /* =========================== Defines MPU-6050 =========================== */
-#define RAD2DEG                     57.295779513082323      // RAD2DEG = 180/pi. Example: angle[deg] = angle[rad] * RAD2DEG
+#define RAD2DEG                     57.295779513082323f      // RAD2DEG = 180/pi. Example: angle[deg] = angle[rad] * RAD2DEG
 #define q30                         1073741824              // 1073741824 = 2^30
-#define ACCEL_TO_G                  16384.00                // convert the RAW hardware units into acceleration in 'g', usewd for madwick filtering
-#define GYRO_TO_DEG_S               16.4                    // convert the RAW hardware units values into dps (�/s) we have to divide according to the 
+#define ACCEL_TO_G                  16384.0f                // convert the RAW hardware units into acceleration in 'g', usewd for madwick filtering
+#define GYRO_TO_DEG_S               16.4f                    // convert the RAW hardware units values into dps (�/s) we have to divide according to the 
                                                             // Full scale value set in FS_SEL, configured to 2000�/s 
                                                             // (check MPU_GYRO_FSR). So we need to divide by 16.4 LSB/�/sfor more details check GYRO_CONFIG Register            
 #define ACCEL_ON                    (0x01)
@@ -173,11 +173,11 @@ typedef struct{
 } Quaternion;
 
 typedef struct {
-    double w;
-    double x; 
-    double y; 
-    double z;
-} QuaternionDouble;
+    float w;
+    float x; 
+    float y; 
+    float z;
+} QuaternionFloat;
 
 
 typedef struct{
